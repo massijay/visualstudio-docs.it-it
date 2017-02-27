@@ -1,8 +1,7 @@
 ---
 title: "Scheda Generale, finestra di dialogo Propriet&#224; thread | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "proprietà thread"
 ms.assetid: 46b6c668-6786-456e-97dc-337bcac0d812
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Scheda Generale, finestra di dialogo Propriet&#224; thread
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

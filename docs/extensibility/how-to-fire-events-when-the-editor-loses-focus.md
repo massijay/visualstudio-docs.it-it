@@ -1,8 +1,7 @@
 ---
 title: "Procedura: generare eventi quando l&#39;Editor non &#232; attivo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "editor [Visual Studio SDK], legacy - generano eventi perde lo stato attivo"
 ms.assetid: 64d40695-6917-468a-8037-a253453ac159
 caps.latest.revision: 8
-caps.handback.revision: 8
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Procedura: generare eventi quando l&#39;Editor non &#232; attivo
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

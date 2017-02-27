@@ -1,8 +1,7 @@
 ---
 title: "CA1064: Le eccezioni devono essere pubbliche | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ExceptionsShouldBePublic"
 ms.assetid: 83eb224c-2456-4368-acf4-3b3378e67759
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 11
 ---
 # CA1064: Le eccezioni devono essere pubbliche
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

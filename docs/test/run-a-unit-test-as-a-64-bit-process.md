@@ -1,8 +1,7 @@
 ---
 title: "Eseguire uno unit test come processo a 64 bit | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "unit test, esecuzione"
 ms.assetid: d23a9ee7-58e3-4e8b-a38c-b2207ea73fea
 caps.latest.revision: 25
-caps.handback.revision: 25
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 25
 ---
 # Eseguire uno unit test come processo a 64 bit
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Caratteristiche della shell di Progettazione flussi di lavoro | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "WFDShellFeatures.UI"
 ms.assetid: 14bfe312-9592-408e-92ce-e98585ad16e7
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 6
 ---
 # Caratteristiche della shell di Progettazione flussi di lavoro
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] è formato da tre principali aree dell'interfaccia utente, ovvero l'area della finestra di progettazione, la barra di navigazione al di sopra di essa e la shell al di sotto di essa.La barra di navigazione, posizionata nella parte superiore dello schermo, viene utilizzata per visualizzare l'elenco di predecessori dell'attività radice corrente.[!INCLUDE[crdefault](../test/includes/crdefault_md.md)][Procedura: utilizzare l'esplorazione tramite la barra di navigazione](../workflow-designer/how-to-use-breadcrumb-navigation.md).L'area della finestra di progettazione, posizionata al centro dello schermo, viene utilizzata per creare flussi di lavoro.La shell, posizionata nella parte inferiore dello schermo, contiene alcuni pulsanti per la gestione della visualizzazione corrente.  

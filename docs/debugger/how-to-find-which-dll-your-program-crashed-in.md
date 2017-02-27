@@ -1,8 +1,7 @@
 ---
 title: "Procedura: individuare la DLL che ha causato l&#39;arresto anomalo del programma | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "finestra Moduli"
 ms.assetid: ecf62568-8b65-4a41-b8a4-e962ff2dfb71
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Procedura: individuare la DLL che ha causato l&#39;arresto anomalo del programma
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

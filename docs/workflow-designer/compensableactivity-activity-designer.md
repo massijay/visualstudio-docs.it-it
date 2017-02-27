@@ -1,8 +1,7 @@
 ---
 title: "ActivityDesigner CompensableActivity | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "System.Activities.Statements.CompensableActivity.UI"
 ms.assetid: e0340d89-d39e-4a52-8557-13e27040d7b5
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 6
 ---
 # ActivityDesigner CompensableActivity
 L'ActivityDesigner **CompensableActivity** viene utilizzato per creare e configurare un'attività <xref:System.Activities.Statements.CompensableActivity>.  

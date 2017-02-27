@@ -1,52 +1,34 @@
 ---
-title: Personalizzare il layout delle finestre in Visual Studio | Microsoft Docs
-ms.custom: 
-ms.date: 01/23/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.windows
-- vs.environment
-helpviewer_keywords:
-- windows [Visual Studio], managing
-- custom window configurations
-- layout [Visual Studio], window management
-- document windows [Visual Studio]
-- interface modes
-- AutoHide windows
-- MDI, window interface modes
-- multiple monitors
-- Tabbed Document mode
-- debug mode
-- custom layouts
+title: "Personalizzazione del layout delle finestre in Visual Studio | Microsoft Docs"
+ms.custom: ""
+ms.date: "01/23/2017"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.windows"
+  - "vs.environment"
+helpviewer_keywords: 
+  - "nascondere automaticamente le finestre"
+  - "layout personalizzati"
+  - "configurazioni finestre personalizzate"
+  - "modalità di debug"
+  - "finestre del documento [Visual Studio]"
+  - "modalità di interfaccia"
+  - "layout [Visual Studio], gestione delle finestre"
+  - "MDI, modalità di interfaccia finestra"
+  - "più monitor"
+  - "Documenti a schede (modalità)"
+  - "finestre [Visual Studio], gestione"
 ms.assetid: 7517ff13-76de-4ecf-9c1b-eb9b7ff4d718
 caps.latest.revision: 27
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 841c635c00aea5e78396f27098a1e64fbe29a421
-ms.openlocfilehash: b2a09ceddbfcbfb8632f777f55229d186f6e5ae9
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 27
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Personalizzare il layout delle finestre in Visual Studio
 In Visual Studio è possibile personalizzare la posizione, la dimensione e il comportamento delle finestre per creare layout di finestra ottimali per i vari flussi di lavoro relativi allo sviluppo. Quando si personalizza il layout, l'IDE memorizza le modifiche apportate. Se, ad esempio, si modifica la posizione di ancoraggio di **Esplora soluzioni** e quindi si chiude Visual Studio, al successivo avvio di **Esplora soluzioni** , anche se si utilizza un altro computer, la finestra risulterà ancorata nella stessa posizione. È anche possibile fornire un nome a un layout personalizzato e salvarlo, quindi passare da un layout all'altro con un unico comando. È ad esempio possibile creare un layout per la modifica e un altro per il debug e passare dall'uno all'altro usando il comando di menu **Finestra &#124; Applica layout finestra**.  

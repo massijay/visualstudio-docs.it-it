@@ -1,8 +1,7 @@
 ---
 title: "Contesto di valutazione dell&#39;espressione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "valutazione dell'espressione, contesto"
 ms.assetid: a2fd3758-09bd-45ae-8ecc-2d276c0036ba
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Contesto di valutazione dell&#39;espressione
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Decisioni di progettazione di controllo di origine | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/08/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "controllo del codice sorgente [Visual Studio SDK], decisioni di progettazione"
 ms.assetid: 5f60ec1a-5a74-4362-8293-817a4dd73872
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Decisioni di progettazione di controllo di origine
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

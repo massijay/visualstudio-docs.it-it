@@ -1,8 +1,7 @@
 ---
 title: "Operatori logici nelle espressioni di ricerca | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "operatori logici nella ricerca [Help Viewer 2.0]"
 ms.assetid: 0c38ae7d-3e20-4d47-a020-9677cd285916
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Operatori logici nelle espressioni di ricerca
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

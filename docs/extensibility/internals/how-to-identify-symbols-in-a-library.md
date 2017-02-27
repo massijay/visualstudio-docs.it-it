@@ -1,8 +1,7 @@
 ---
 title: "Procedura: identificare i simboli in una libreria | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "Strumento Visualizzatore chiamate"
 ms.assetid: 8fb0de61-71e7-42d1-8b41-2ad915474384
 caps.latest.revision: 21
-caps.handback.revision: 21
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Procedura: identificare i simboli in una libreria
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

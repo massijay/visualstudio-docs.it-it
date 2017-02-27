@@ -1,8 +1,7 @@
 ---
 title: "Procedura: ospitare un Editor in un altro Editor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "editor [Visual Studio SDK], legacy - ospitare un editor annidato"
 ms.assetid: 2b0eb705-fe94-4ca8-93e0-9dbd8ce61a44
 caps.latest.revision: 14
-caps.handback.revision: 14
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Procedura: ospitare un Editor in un altro Editor
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

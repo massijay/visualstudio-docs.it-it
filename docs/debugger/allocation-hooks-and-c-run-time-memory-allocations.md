@@ -1,8 +1,7 @@
 ---
 title: "Hook di allocazione e allocazioni di memoria di runtime C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "allocazione di memoria, risoluzione dei problemi degli hook di allocazione"
 ms.assetid: cc34ee96-3d91-41bd-a019-aa3759139e7e
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Hook di allocazione e allocazioni di memoria di runtime C
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Quando un punto di interruzione consente di associare o diventa non associato | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "punto di interruzione associato a eventi"
 ms.assetid: 61bf00b2-8293-49d3-b919-1efb0dec9151
 caps.latest.revision: 7
-caps.handback.revision: 7
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Quando un punto di interruzione consente di associare o diventa non associato
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

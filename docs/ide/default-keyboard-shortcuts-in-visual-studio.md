@@ -1,43 +1,25 @@
 ---
-title: Tasti di scelta rapida predefiniti in Visual Studio | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- shortcut keys [Visual Studio], keyboard binding schemes
-- keyboard binding schemes [Visual Studio]
-- Help [Visual Studio], shortcut keys
-- keyboard shortcuts [Visual Studio], keyboard binding schemes
-- keyboard shortcuts
+title: "Tasti di scelta rapida predefiniti in Visual Studio | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Guida [Visual Studio], tasti di scelta rapida"
+  - "tastiera (schemi di associazione) [Visual Studio]"
+  - "tasti di scelta rapida"
+  - "tasti di scelta rapida [Visual Studio], schemi di associazione della tastiera"
+  - "tasti di scelta rapida [Visual Studio], schemi di associazione della tastiera"
 ms.assetid: c2c64648-00f8-4e48-a8a0-96c67cfd968c
 caps.latest.revision: 55
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b99b15443c652f7a49ca36d701109e1624f1df64
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 51
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Tasti di scelta rapida predefiniti in Visual Studio
 Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è possibile selezionare il tasto di scelta rapida appropriato. In questi argomenti vengono elencati i tasti di scelta rapida predefiniti per il profilo di sviluppo generale, che potrebbe essere stato selezionato durante l'installazione di Visual Studio. Indipendentemente dal profilo scelto, è possibile identificare il tasto di scelta rapida per un comando aprendo la finestra di dialogo **Opzioni**, espandendo il nodo **Ambiente** e scegliendo **Tastiera**. È anche possibile personalizzare i tasti di scelta rapida assegnandone uno diverso per ciascun comando.  

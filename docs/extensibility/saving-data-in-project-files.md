@@ -1,8 +1,7 @@
 ---
 title: "Salvataggio di dati nei file di progetto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "file di progetto, il salvataggio dei dati"
 ms.assetid: a3d4b15b-a91e-41ba-b235-e62632d11bc5
 caps.latest.revision: 28
-caps.handback.revision: 28
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # Salvataggio di dati nei file di progetto
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

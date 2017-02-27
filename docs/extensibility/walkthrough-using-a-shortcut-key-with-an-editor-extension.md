@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: Utilizzo di un tasto di scelta rapida con un&#39;estensione di Editor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "editor [Visual Studio SDK], collegamento new - sequenze di tasti ai comandi"
 ms.assetid: cf6cc6c6-5a65-4f90-8f14-663decf74672
 caps.latest.revision: 32
-caps.handback.revision: 32
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # Procedura dettagliata: Utilizzo di un tasto di scelta rapida con un&#39;estensione di Editor
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

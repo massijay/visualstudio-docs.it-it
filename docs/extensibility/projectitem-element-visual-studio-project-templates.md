@@ -1,8 +1,7 @@
 ---
 title: "Elemento ProjectItem (modelli di progetto Visual Studio) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "ProjectItem (elemento) [modelli di progetto Visual Studio]"
 ms.assetid: 82879fbe-7756-42cd-9a07-c10edf5b4673
 caps.latest.revision: 18
-caps.handback.revision: 18
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Elemento ProjectItem (modelli di progetto Visual Studio)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

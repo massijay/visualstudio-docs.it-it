@@ -1,8 +1,7 @@
 ---
 title: "Riferimenti allo schema dei modelli di Visual Studio | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "VSTEMPLATE (file)"
 ms.assetid: 6f74a2d5-3811-43d6-8b10-eb5823ad8995
 caps.latest.revision: 25
-caps.handback.revision: 25
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # Riferimenti allo schema dei modelli di Visual Studio
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

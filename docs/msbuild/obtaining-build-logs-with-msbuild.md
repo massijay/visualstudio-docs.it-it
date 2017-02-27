@@ -1,8 +1,7 @@
 ---
 title: "Recupero di log di compilazione con MSBuild | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "registrazione [MSBuild]"
 ms.assetid: 6ba9a754-9cc0-4fed-9fc8-4dcd3926a031
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # Recupero di log di compilazione con MSBuild
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

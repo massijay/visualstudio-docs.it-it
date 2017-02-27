@@ -1,8 +1,7 @@
 ---
 title: "Procedura: configurare le propriet&#224; del progetto flusso di lavoro (legacy) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "progetti di flusso di lavoro, configurazione proprietà"
 ms.assetid: 850f5c96-8e5b-4126-bc16-fd2c26e6e656
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # Procedura: configurare le propriet&#224; del progetto flusso di lavoro (legacy)
 Seguire questi passaggi per visualizzare o modificare proprietà associate ai progetti flusso di lavoro.  

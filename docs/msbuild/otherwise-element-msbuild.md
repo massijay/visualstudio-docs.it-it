@@ -1,8 +1,7 @@
 ---
 title: "Otherwise Element (MSBuild) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Otherwise Element [MSBuild]"
 ms.assetid: de3997e9-1595-4263-a886-95530b56a319
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Otherwise Element (MSBuild)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "L&#39;invio di eventi di avvio dopo il lancio di un | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "debug [debug SDK], eventi di avvio"
 ms.assetid: 306ea0b4-6d9e-4871-8d8d-a4032d422940
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # L&#39;invio di eventi di avvio dopo il lancio di un
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

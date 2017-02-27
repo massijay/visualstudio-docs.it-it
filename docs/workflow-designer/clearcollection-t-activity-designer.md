@@ -1,8 +1,7 @@
 ---
 title: "ActivityDesigner ClearCollection&lt;T&gt; | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "System.Activities.Statements.ClearCollection`1.UI"
 ms.assetid: db0e5da2-7b5a-4f1a-864c-f3aeeeeb51a7
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 7
 ---
 # ActivityDesigner ClearCollection&lt;T&gt;
 L'ActivityDesigner **ClearCollection\<T\>** viene utilizzato per creare e configurare un'attività <xref:System.Activities.Statements.ClearCollection%601>.  

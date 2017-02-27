@@ -1,8 +1,7 @@
 ---
 title: "Gestione dei comandi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "editor [Visual Studio SDK], legacy - comandi (gestione)"
 ms.assetid: 78f67d92-77f7-45cb-ad75-6e3346379cc3
 caps.latest.revision: 20
-caps.handback.revision: 20
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Gestione dei comandi
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

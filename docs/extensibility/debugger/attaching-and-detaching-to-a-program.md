@@ -1,8 +1,7 @@
 ---
 title: "Collegamento e scollegamento di un programma | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "motori di debug, la disconnessione da programmi"
 ms.assetid: 79dcbb9b-c7f8-40fc-8a00-f37fe1934f51
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Collegamento e scollegamento di un programma
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

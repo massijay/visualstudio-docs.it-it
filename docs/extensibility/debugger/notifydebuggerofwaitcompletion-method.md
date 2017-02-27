@@ -1,8 +1,7 @@
 ---
 title: "Metodo NotifyDebuggerOfWaitCompletion | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "Metodo NotifyDebuggerOfWaitCompletion, classe di attività [motori di debug di .NET Framework]"
 ms.assetid: 841c5908-4f3f-400b-a7b0-96a95f362817
 caps.latest.revision: 5
-caps.handback.revision: 5
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Metodo NotifyDebuggerOfWaitCompletion
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Eseguire il Debug di un motore di Debug personalizzato | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "debug [debug SDK], motori di debug personalizzati"
 ms.assetid: df27a8d6-3938-45ff-b47f-b684e80b38a0
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Procedura: Eseguire il Debug di un motore di Debug personalizzato
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

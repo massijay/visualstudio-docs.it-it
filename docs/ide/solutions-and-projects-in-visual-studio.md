@@ -1,78 +1,60 @@
 ---
-title: Soluzioni e progetti in Visual Studio | Microsoft Docs
-ms.custom: 
-ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.savedeferredsaveprojectonclose
-- vs.untrustedtemplateopeningdocuments
-- Project Properties.FullPath
-- vs.addnewsolutionitem
-- vs.environment.projects
-- vs.openproject
-- vs.getopenfilename
-- vs.addnewitem
-- vs.encoding
-- vs.addexistingitem
-- Project Properties.URL
-- VS.SolutionExplorer
-- Project Properties.FileName
-- SolutionProperties.Name
-- VS.SaveChangesDlg
-- vs.newproject
-- VS.SolutionExplorer.Selection
-- SolutionProperties.Path
-- vs.getdirectoryname
-- vs.addexistingsolutionitem
-- SolutionProperties.Description
-- vs.environment.solutions
-- vs.saveordiscarddeferredsaveproject
-- VS.SolutionExplorer.Solutions
-helpviewer_keywords:
-- vs.solutionpropertypages
-- vs.solutionpropertypages.startupproject
-- vs.solutionpropertypages.configurationsettings
-- solution items, folder in Solution Explorer
-- solution items, shared
-- solutions [Visual Studio]
-- project items [Visual Studio], about project items
-- workspaces
-- solutions [Visual Studio], designing
-- projects [Visual Studio]
-- solutions [Visual Studio], projects and
-- vs.solutionpropertypages.projectdependencies
-- applications [Visual Studio]
-- projects [Visual Studio], setting up
-- miscellaneous files
+title: "Soluzioni e progetti in Visual Studio | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/16/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.savedeferredsaveprojectonclose"
+  - "vs.untrustedtemplateopeningdocuments"
+  - "Project Properties.FullPath"
+  - "vs.addnewsolutionitem"
+  - "vs.environment.projects"
+  - "vs.openproject"
+  - "vs.getopenfilename"
+  - "vs.addnewitem"
+  - "vs.encoding"
+  - "vs.addexistingitem"
+  - "Project Properties.URL"
+  - "VS.SolutionExplorer"
+  - "Project Properties.FileName"
+  - "SolutionProperties.Name"
+  - "VS.SaveChangesDlg"
+  - "vs.newproject"
+  - "VS.SolutionExplorer.Selection"
+  - "SolutionProperties.Path"
+  - "vs.getdirectoryname"
+  - "vs.addexistingsolutionitem"
+  - "SolutionProperties.Description"
+  - "vs.environment.solutions"
+  - "vs.saveordiscarddeferredsaveproject"
+  - "VS.SolutionExplorer.Solutions"
+helpviewer_keywords: 
+  - "vs.solutionpropertypages"
+  - "vs.solutionpropertypages.startupproject"
+  - "vs.solutionpropertypages.configurationsettings"
+  - "elementi di soluzione cartella in Esplora soluzioni"
+  - "elementi di soluzione condiviso"
+  - "soluzioni [Visual Studio]"
+  - "elementi di progetto [Visual Studio], informazioni sugli elementi di progetto"
+  - "aree di lavoro"
+  - "progettazione di soluzioni [Visual Studio]"
+  - "progetti [Visual Studio]"
+  - "soluzioni [Visual Studio], progetti e"
+  - "vs.solutionpropertypages.projectdependencies"
+  - "applicazioni [Visual Studio]"
+  - "configurazione di progetti [Visual Studio]"
+  - "file esterni"
 ms.assetid: aeaf56cb-c2dd-47f6-b012-23b84b7a7254
 caps.latest.revision: 35
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a88acb10478c5beb68cc6a12334f00145d183b1d
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 35
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Soluzioni e progetti in Visual Studio
 Quando si crea un’app, un’applicazione, un sito Web, uno script, un plug-in e così via in Visual Studio, si comincia con un *progetto*. In senso logico, un progetto contiene di tutti i file di codice sorgente, le icone, le immagini, i file di dati e qualsiasi altro elemento che verrà compilato in un programma eseguibile o in un sito Web in caso contrario, o necessario per eseguire la compilazione.  Un progetto contiene anche tutte le impostazioni del compilatore e altri file di configurazione che potrebbero essere necessari per i vari servizi o componenti con cui il programma comunicherà.

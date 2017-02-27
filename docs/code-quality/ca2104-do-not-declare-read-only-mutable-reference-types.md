@@ -1,8 +1,7 @@
 ---
 title: "CA2104: Non dichiarare tipi di riferimento modificabili in sola lettura | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DoNotDeclareReadOnlyMutableReferenceTypes"
 ms.assetid: 81b83ee5-4db5-4be0-9f8d-90b53894ec3b
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 18
 ---
 # CA2104: Non dichiarare tipi di riferimento modificabili in sola lettura
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

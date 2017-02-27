@@ -1,8 +1,7 @@
 ---
 title: "Errore: accesso remoto al gruppo di lavoro non riuscito | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "debug remoto, accesso non riuscito"
 ms.assetid: 7be2c5bb-40fe-48d6-8cfc-c231fbd3d64e
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Errore: accesso remoto al gruppo di lavoro non riuscito
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

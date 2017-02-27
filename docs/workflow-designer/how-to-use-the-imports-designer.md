@@ -1,8 +1,7 @@
 ---
 title: "Procedura: utilizzare la finestra di progettazione importazioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "System.Activities.Presentation.View.ImportDesigner.UI"
 ms.assetid: 61328ab6-9b66-4e12-8630-22e30ee8c9d1
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 10
 ---
 # Procedura: utilizzare la finestra di progettazione importazioni
 La finestra di progettazione importazioni consente di immettere gli spazi dei nomi per i tipi utilizzati nelle espressioni.Analogamente alle parole chiave **Imports** o **using** in Visual Basic .NET e C\#, la specifica degli spazi dei nomi nella finestra di progettazione importazioni consente di immettere semplicemente il nome di un tipo nell'espressione anziché il nome di un tipo nella versione completa.  

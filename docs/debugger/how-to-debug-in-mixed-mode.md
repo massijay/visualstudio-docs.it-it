@@ -1,8 +1,7 @@
 ---
 title: "Procedura: eseguire il debug in modalit&#224; mista | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "debug in modalità mista"
 ms.assetid: 2859067d-7fcc-46b0-a4df-8c2101500977
 caps.latest.revision: 29
-caps.handback.revision: 29
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # Procedura: eseguire il debug in modalit&#224; mista
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,18 +1,17 @@
 ---
 title: "Condivisione di classi tra DSL utilizzando una libreria DSL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 509bd96b-3e66-47f4-8642-771421d0d0d5
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 7
 ---
 # Condivisione di classi tra DSL utilizzando una libreria DSL
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

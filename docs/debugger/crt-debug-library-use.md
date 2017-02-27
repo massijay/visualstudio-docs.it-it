@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo della libreria di debug CRT | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,10 +31,10 @@ helpviewer_keywords:
   - "MTd (opzione del compilatore) [C++]"
 ms.assetid: 464de16b-4215-4787-9bfa-921aaff9d9f4
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Utilizzo della libreria di debug CRT
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

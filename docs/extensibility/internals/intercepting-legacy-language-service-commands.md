@@ -1,8 +1,7 @@
 ---
 title: "Intercettazione di comandi del servizio di linguaggio Legacy | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "servizi di linguaggio, intercettazione di comandi"
 ms.assetid: eea69f03-349c-44bb-bd4f-4925c0dc3e55
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Intercettazione di comandi del servizio di linguaggio Legacy
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo di set di regole per raggruppare regole di analisi del codice | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "analisi codice, set di regole"
 ms.assetid: ed0f3a2a-1516-42e2-92de-b8986dc75d42
 caps.latest.revision: 36
-caps.handback.revision: 36
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 36
 ---
 # Utilizzo di set di regole per raggruppare regole di analisi del codice
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Marcatori di flag | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ f1_keywords:
   - "vs.cv.markers.flag"
 ms.assetid: f3ec919e-63e5-484b-adbf-8f0e79342e75
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Marcatori di flag
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

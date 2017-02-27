@@ -1,8 +1,7 @@
 ---
 title: "Oggetto VSTextBuffer | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "visualizzazioni [Visual Studio SDK], oggetto VSTextBuffer"
 ms.assetid: c5f94b45-7249-4e1f-a53d-1d2a1c61e0ef
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Oggetto VSTextBuffer
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

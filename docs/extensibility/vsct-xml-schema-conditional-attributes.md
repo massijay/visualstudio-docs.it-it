@@ -1,8 +1,7 @@
 ---
 title: "Attributi condizionali dello Schema XML VSCT | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "attributi condizionali (VSCT XML schema)"
 ms.assetid: 754d4f32-319b-44c9-915f-f7c60e53222e
 caps.latest.revision: 5
-caps.handback.revision: 5
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Attributi condizionali dello Schema XML VSCT
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

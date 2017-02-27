@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Configurare l&#39;analisi codice per un progetto di codice gestito | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "analisi codice, set di regole"
 ms.assetid: 618f6ff3-db0e-46cb-b08d-dfa35e62c9e7
 caps.latest.revision: 33
-caps.handback.revision: 33
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 33
 ---
 # Procedura: Configurare l&#39;analisi codice per un progetto di codice gestito
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

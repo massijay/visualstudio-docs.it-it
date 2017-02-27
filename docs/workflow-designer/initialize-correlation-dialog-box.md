@@ -1,8 +1,7 @@
 ---
 title: "Finestra di dialogo Inizializza correlazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "InitializeCorrelation.UI"
 ms.assetid: 2a0a1cd3-7b9e-493e-9264-fcf85289ffcf
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 6
 ---
 # Finestra di dialogo Inizializza correlazione
 La finestra di dialogo **Inizializza correlazione** viene utilizzata in [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] per modificare la proprietà <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> di un'attività <xref:System.ServiceModel.Activities.InitializeCorrelation>.[!INCLUDE[crdefault](../test/includes/crdefault_md.md)] l'argomento [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md).  

@@ -1,37 +1,19 @@
 ---
-title: Come sbloccare Visual Studio | Microsoft Docs
-ms.custom: 
-ms.date: 01/23/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "Come sbloccare Visual Studio | Microsoft Docs"
+ms.custom: ""
+ms.date: "01/23/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: ffb580a1-8b5d-48f5-b811-87f8036f50ea
 caps.latest.revision: 8
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 89c7ea153dc44342851b43ced5d99ffcd0b52312
-ms.openlocfilehash: 75f0baac767d66ec3c942d26957beed256f45ab3
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
 # <a name="how-to-unlock-visual-studio"></a>Come sbloccare Visual Studio
 È possibile valutare gratuitamente Visual Studio per un massimo di 30 giorni. Quando si accede all'IDE, sarà possibile estendere il periodo di valutazione fino a 90 giorni. Per continuare a usare Visual Studio, è possibile sbloccare l'IDE nei modi seguenti:  

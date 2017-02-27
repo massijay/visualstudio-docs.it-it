@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo di emulatori per isolare gli unit test per le applicazioni di SharePoint 2010 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/11/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: b681164c-c87a-4bd7-be48-ed77e1578471
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 15
 ---
 # Utilizzo di emulatori per isolare gli unit test per le applicazioni di SharePoint 2010
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

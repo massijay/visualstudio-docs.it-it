@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Modificare il punto pivot di un modello tridimensionale | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/17/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c20b4ec8-29f5-4ca5-bc39-d4548ca6f573
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "BrianPeek"
 ms.author: "brpeek"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Procedura: Modificare il punto pivot di un modello tridimensionale
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

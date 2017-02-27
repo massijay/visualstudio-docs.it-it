@@ -1,8 +1,7 @@
 ---
 title: "Propriet&#224; personalizzate dei documenti in un servizio di linguaggio Legacy | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "servizi di linguaggio [framework gestito pacchetto], proprietà personalizzate del documento"
 ms.assetid: cc714a67-b33e-4440-9203-3c90f648bd9c
 caps.latest.revision: 18
-caps.handback.revision: 18
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Propriet&#224; personalizzate dei documenti in un servizio di linguaggio Legacy
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

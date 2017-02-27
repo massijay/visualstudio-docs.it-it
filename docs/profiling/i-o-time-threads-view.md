@@ -1,8 +1,7 @@
 ---
 title: "Tempo di I/O (visualizzazione Thread) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Visualizzatore di concorrenze, Tempo di I/O (visualizzazione thread)"
 ms.assetid: 0c4ec14d-d8dd-49c1-999c-dcbf4e8e1dc8
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Tempo di I/O (visualizzazione Thread)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

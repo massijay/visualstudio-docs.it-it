@@ -1,8 +1,7 @@
 ---
 title: "CA2207: Inizializzare i campi statici dei tipi di valore inline | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "InitializeValueTypeStaticFieldsInline"
 ms.assetid: d1ea9d8b-ecc2-46ca-86e2-c41dd0e76658
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 14
 ---
 # CA2207: Inizializzare i campi statici dei tipi di valore inline
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

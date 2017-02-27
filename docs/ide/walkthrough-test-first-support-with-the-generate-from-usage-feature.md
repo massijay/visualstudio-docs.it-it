@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: supporto test preliminare con la funzionalit&#224; di generazione dall&#39;utilizzo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "sviluppo con test preliminare"
 ms.assetid: 764c17a4-cd95-4c23-bf63-d92d9c5adfb2
 caps.latest.revision: 63
-caps.handback.revision: 63
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 63
 ---
 # Procedura dettagliata: supporto test preliminare con la funzionalit&#224; di generazione dall&#39;utilizzo
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

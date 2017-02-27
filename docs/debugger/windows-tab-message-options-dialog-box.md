@@ -1,8 +1,7 @@
 ---
 title: "Scheda Finestre, finestra di dialogo Opzioni messaggio | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "opzioni messaggio, Finestre"
 ms.assetid: 6e9cc5ca-24cc-49cf-aa22-c89733828f8c
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Scheda Finestre, finestra di dialogo Opzioni messaggio
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

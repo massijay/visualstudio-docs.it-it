@@ -1,8 +1,7 @@
 ---
 title: "Associazione dei punti di interruzione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "punti di interruzione, l'associazione"
 ms.assetid: 70737387-c52f-4dae-8865-77d4b203bf25
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Associazione dei punti di interruzione
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

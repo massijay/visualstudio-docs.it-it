@@ -1,8 +1,7 @@
 ---
 title: "Guida per i test per il Plug-in di controllo codice sorgente | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "origine plug-in del controllo, Guida per i test"
 ms.assetid: 13b74765-0b7c-418e-8cd9-5f2e8db51ae5
 caps.latest.revision: 26
-caps.handback.revision: 26
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # Guida per i test per il Plug-in di controllo codice sorgente
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

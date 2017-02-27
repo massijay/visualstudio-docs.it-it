@@ -1,8 +1,7 @@
 ---
 title: "Riferimenti dell&#39;interfaccia utente di debug | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "debugger, riferimento all'interfaccia utente"
 ms.assetid: 57f1cad8-c908-42bf-8ec5-6eb567df08e9
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Riferimenti dell&#39;interfaccia utente di debug
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

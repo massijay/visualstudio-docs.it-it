@@ -1,8 +1,7 @@
 ---
 title: "Procedura: compilare in una directory di output comune | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "directory di output"
 ms.assetid: 1fcc2c48-07cb-4c4f-9556-36945e7dfc4e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Procedura: compilare in una directory di output comune
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

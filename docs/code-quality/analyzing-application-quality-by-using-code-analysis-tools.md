@@ -1,8 +1,7 @@
 ---
 title: "Analisi della qualit&#224; dell&#39;applicazione tramite gli strumenti di analisi del codice | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "sviluppo basato su team, analisi di qualità dell'applicazione"
 ms.assetid: 21680516-ddb5-446d-90d4-19d94f6ec699
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 24
 ---
 # Analisi della qualit&#224; dell&#39;applicazione tramite gli strumenti di analisi del codice
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

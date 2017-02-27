@@ -1,8 +1,7 @@
 ---
 title: "Aggiornare un&#39;applicazione (JavaScript) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Aggiornamento [applicazioni Windows Store]"
 ms.assetid: fd99ee60-fa94-46df-8b17-369f60bfd908
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Aggiornare un&#39;applicazione (JavaScript)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

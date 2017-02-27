@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: Visualizzazione di completamento delle istruzioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "editor [Visual Studio SDK], nuovo - completamento istruzioni"
 ms.assetid: f3152c4e-7673-4047-a079-2326941d1c83
 caps.latest.revision: 36
-caps.handback.revision: 36
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 36
 ---
 # Procedura dettagliata: Visualizzazione di completamento delle istruzioni
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

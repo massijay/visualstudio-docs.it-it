@@ -1,8 +1,7 @@
 ---
 title: "Interfacce e i campi di propriet&#224; finestra | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "Interfacce, campi e proprietà finestra"
 ms.assetid: 0328f0e5-2380-4a7a-a872-b547cb775050
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Interfacce e i campi di propriet&#224; finestra
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

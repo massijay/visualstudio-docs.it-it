@@ -1,8 +1,7 @@
 ---
 title: "Procedura: aggiungere nodi all&#39;area di lavoro da XML Schema Explorer | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 3b5a5749-9693-4b29-b0c2-8e07e0e55514
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Procedura: aggiungere nodi all&#39;area di lavoro da XML Schema Explorer
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

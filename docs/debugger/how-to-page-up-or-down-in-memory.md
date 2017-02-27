@@ -1,8 +1,7 @@
 ---
 title: "Procedura: spostare verso l&#39;alto o verso il basso una pagina di memoria | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "Finestra Memoria, spostamento verso l'alto o verso il basso in memoria"
 ms.assetid: 50b30a68-66f6-43f8-a48b-59ce12c95471
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Procedura: spostare verso l&#39;alto o verso il basso una pagina di memoria
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

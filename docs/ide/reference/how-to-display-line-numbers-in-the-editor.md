@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Visualizzare i numeri di riga nell&#39;editor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "codice, visualizzazione del numero di riga"
 ms.assetid: 40b38559-b8de-4041-91f2-68986767c976
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # Procedura: Visualizzare i numeri di riga nell&#39;editor
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

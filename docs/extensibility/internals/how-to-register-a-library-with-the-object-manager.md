@@ -1,8 +1,7 @@
 ---
 title: "Procedura: registrare una libreria con il gestore oggetti | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "librerie, strumenti di esplorazione di simbolo"
 ms.assetid: f124dd05-cb0f-44ad-bb2a-7c0b34ef4038
 caps.latest.revision: 26
-caps.handback.revision: 26
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # Procedura: registrare una libreria con il gestore oggetti
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

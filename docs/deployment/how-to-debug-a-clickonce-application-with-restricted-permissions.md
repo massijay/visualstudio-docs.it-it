@@ -1,8 +1,7 @@
 ---
 title: "Procedura: eseguire il debug di un&#39;applicazione ClickOnce con autorizzazioni limitate | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "applicazioni ClickOnce, debug"
 ms.assetid: 6991ea91-5253-451b-923d-22273a3d38b1
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 10
 ---
 # Procedura: eseguire il debug di un&#39;applicazione ClickOnce con autorizzazioni limitate
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

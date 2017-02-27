@@ -1,8 +1,7 @@
 ---
 title: "Debug dei flussi di lavoro mediante Progettazione flussi di lavoro | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,10 +11,10 @@ helpviewer_keywords:
   - "Progettazione flussi di lavoro [WFD], debug dei flussi di lavoro"
 ms.assetid: d71308cf-d464-4536-8711-0d0a8eadb255
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 10
 ---
 # Debug dei flussi di lavoro mediante Progettazione flussi di lavoro
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] consente di eseguire il debug dei flussi di lavoro e delle attività personalizzate.Il processo e il comportamento sono simili a quello del debugger di [!INCLUDE[vs2010](../modeling/includes/vs2010_md.md)] predefinito.Negli argomenti di questa sezione viene descritto come eseguire routine di debug tradizionali nonché il debug di espressioni e codice XAML.  

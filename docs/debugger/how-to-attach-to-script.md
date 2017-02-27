@@ -1,8 +1,7 @@
 ---
 title: "Procedura: connettersi a file script | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "script, connessione a"
 ms.assetid: 82013e9a-ef53-4fd2-b451-a6891cdc6307
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Procedura: connettersi a file script
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

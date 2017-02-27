@@ -1,8 +1,7 @@
 ---
 title: "Elementi di progettazione di VSPackage controllo di origine | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "pacchetti di controllo del codice sorgente, elementi di progettazione"
 ms.assetid: edd3f2ff-ca32-4465-8ace-4330493b67bb
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Elementi di progettazione di VSPackage controllo di origine
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,39 +1,22 @@
 ---
-title: Compilazione e creazione in Visual Studio | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- builds [Visual Studio], about building in Visual Studio
-- custom build steps, types of builds
+title: "Compilazione e creazione in Visual Studio | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "compilazioni [Visual Studio], informazioni sulla compilazione in Visual Studio"
+  - "istruzioni di compilazione personalizzate, tipi di compilazioni"
 ms.assetid: c7958821-285f-4e28-9e7a-b5d8b40336a1
 caps.latest.revision: 28
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 828c61720161b63d19451e32134b2a4765fdfd8d
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 28
 ---
 # <a name="compiling-and-building-in-visual-studio"></a>Compilazione e creazione in Visual Studio
 È possibile utilizzare Visual Studio per sviluppare applicazioni e creare a intervalli frequenti gli assembly e i programmi eseguibili durante il ciclo di sviluppo. Compilando spesso il codice, è possibile identificare più rapidamente errori in fase di compilazione, ad esempio sintassi non corretta, parole chiave non digitate correttamente e tipi non corrispondenti. È inoltre possibile rilevare e risolvere gli errori di runtime, ad esempio errori logici e semantici, compilando frequentemente ed eseguendo le versioni di debug del codice.  

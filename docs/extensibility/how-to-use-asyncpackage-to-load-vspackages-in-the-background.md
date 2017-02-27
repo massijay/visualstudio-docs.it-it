@@ -1,15 +1,15 @@
 ---
 title: "Procedura: utilizzare AsyncPackage per caricare in Background di VSPackage | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: dedf0173-197e-4258-ae5a-807eb3abc952
 caps.latest.revision: 8
-caps.handback.revision: 8
 ms.author: "gregvanl"
+caps.handback.revision: 8
 ---
 # Procedura: utilizzare AsyncPackage per caricare in Background di VSPackage
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

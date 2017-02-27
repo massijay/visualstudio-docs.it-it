@@ -1,8 +1,7 @@
 ---
 title: "Tabella di riferimento del set di regole di analisi del codice | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "analisi codice, set di regole"
 ms.assetid: 5874e854-e298-4d2e-bbe4-95e899d22587
 caps.latest.revision: 43
-caps.handback.revision: 43
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 43
 ---
 # Tabella di riferimento del set di regole di analisi del codice
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

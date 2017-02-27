@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Scegliere eventi di campionamento | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "strumenti per le prestazioni, eventi di esempio"
 ms.assetid: ce7cb734-80ac-4930-a4ef-e24395e1cc07
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Procedura: Scegliere eventi di campionamento
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Canali (visualizzazione Thread) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Visualizzatore di concorrenza, canali (visualizzazione Thread)"
 ms.assetid: 2f798c17-2363-42a4-be94-a5751d208eac
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Canali (visualizzazione Thread)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

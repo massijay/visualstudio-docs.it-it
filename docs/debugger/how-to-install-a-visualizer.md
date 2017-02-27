@@ -1,8 +1,7 @@
 ---
 title: "Procedura: installare un visualizzatore | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "visualizzatori, installazione"
 ms.assetid: 3310ef43-515c-4d97-b0f9-51047247d3da
 caps.latest.revision: 26
-caps.handback.revision: 26
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # Procedura: installare un visualizzatore
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

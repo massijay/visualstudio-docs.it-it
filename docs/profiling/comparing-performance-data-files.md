@@ -1,8 +1,7 @@
 ---
 title: "Confronto di file di dati degli strumenti per la profilatura | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "report degli strumenti per la profilatura, confronto"
 ms.assetid: e6fda144-f21d-4912-9d16-1b8d3555a210
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Confronto di file di dati degli strumenti per la profilatura
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

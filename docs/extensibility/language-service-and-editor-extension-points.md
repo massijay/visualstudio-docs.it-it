@@ -1,8 +1,7 @@
 ---
 title: "Servizio di linguaggio e punti di estensione di Editor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "editor [Visual Studio SDK], nuovo - punti di estensione"
 ms.assetid: 91a6417e-a6fe-4bc2-9d9f-5173c634a99b
 caps.latest.revision: 33
-caps.handback.revision: 33
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # Servizio di linguaggio e punti di estensione di Editor
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

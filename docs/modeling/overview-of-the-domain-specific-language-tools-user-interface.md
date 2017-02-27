@@ -1,8 +1,7 @@
 ---
 title: "Informazioni sull&#39;interfaccia utente degli strumenti di linguaggio specifico di dominio | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "Strumenti del linguaggio specifico di dominio, interfaccia utente"
 ms.assetid: 81ae6b35-6819-41d0-953b-6b4ed81f9227
 caps.latest.revision: 25
-caps.handback.revision: 25
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 25
 ---
 # Informazioni sull&#39;interfaccia utente degli strumenti di linguaggio specifico di dominio
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

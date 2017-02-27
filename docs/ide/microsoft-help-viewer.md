@@ -1,8 +1,7 @@
 ---
 title: "Visualizzatore della Guida Microsoft | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "barra degli strumenti [Visualizzatore della Guida 2.0]"
 ms.assetid: 74e41666-2ce8-4ac0-a0e5-3723d1e322c2
 caps.latest.revision: 25
-caps.handback.revision: 25
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # Visualizzatore della Guida Microsoft
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

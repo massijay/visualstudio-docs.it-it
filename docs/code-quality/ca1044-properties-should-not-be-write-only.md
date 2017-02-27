@@ -1,8 +1,7 @@
 ---
 title: "CA1044: Le propriet&#224; non devono essere in sola scrittura | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "PropertiesShouldNotBeWriteOnly"
 ms.assetid: 8386bf3a-b161-4841-bf8b-92591595aea9
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 15
 ---
 # CA1044: Le propriet&#224; non devono essere in sola scrittura
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

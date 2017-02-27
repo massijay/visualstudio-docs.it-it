@@ -1,8 +1,7 @@
 ---
 title: "Procedura: specificare set di regole di codice gestito per pi&#249; progetti in una soluzione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ f1_keywords:
   - "vs.codeanalysis.propertypages.solution"
 ms.assetid: 92dc3250-a010-4396-b515-f03a0b30cd2a
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 12
 ---
 # Procedura: specificare set di regole di codice gestito per pi&#249; progetti in una soluzione
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

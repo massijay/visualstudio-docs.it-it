@@ -1,8 +1,7 @@
 ---
 title: "Ricerca e sostituzione di testo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -39,10 +38,10 @@ helpviewer_keywords:
   - "testo, ricerca e sostituzione"
 ms.assetid: a62545c3-1570-4d12-99fb-a82607eb35a1
 caps.latest.revision: 31
-caps.handback.revision: 31
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # Ricerca e sostituzione di testo
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

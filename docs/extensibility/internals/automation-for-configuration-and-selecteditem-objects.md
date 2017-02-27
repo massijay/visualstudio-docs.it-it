@@ -1,8 +1,7 @@
 ---
 title: "Automazione per la configurazione e oggetti SelectedItem | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "automazione [Visual Studio SDK], compilazioni"
 ms.assetid: 120377f1-51aa-4445-b2f7-06ab7fc2b47f
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Automazione per la configurazione e oggetti SelectedItem
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

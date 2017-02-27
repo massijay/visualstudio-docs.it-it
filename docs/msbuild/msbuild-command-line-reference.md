@@ -1,8 +1,7 @@
 ---
 title: "MSBuild Command-Line Reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "msbuild.exe"
 ms.assetid: edaa65ec-ab8a-42a1-84cb-d76d5b2f4584
 caps.latest.revision: 57
-caps.handback.revision: 57
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 57
 ---
 # MSBuild Command-Line Reference
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

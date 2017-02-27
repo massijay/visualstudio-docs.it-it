@@ -1,8 +1,7 @@
 ---
 title: "Warning Task | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "MSBuild, Warning task"
 ms.assetid: 96ba5507-8b43-4f54-a1d7-9b15644dd56c
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Warning Task
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

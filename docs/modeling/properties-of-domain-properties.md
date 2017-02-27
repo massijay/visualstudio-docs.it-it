@@ -1,8 +1,7 @@
 ---
 title: "Propriet&#224; delle propriet&#224; di dominio | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "Linguaggio specifico di dominio, proprietà di dominio"
 ms.assetid: a9471562-d6f2-46bf-9872-e0d66ba03150
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 24
 ---
 # Propriet&#224; delle propriet&#224; di dominio
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

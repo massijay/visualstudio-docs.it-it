@@ -1,8 +1,7 @@
 ---
 title: "Elemento di pulsanti | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "Elementi dello schema XML VSCT, pulsanti"
 ms.assetid: 9f2cf94d-dec5-4776-a836-9a89c75f0c87
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Elemento di pulsanti
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

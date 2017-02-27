@@ -1,8 +1,7 @@
 ---
 title: "Procedura: individuare e organizzare modelli di progetto e modelli di elementi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "modelli di Visual Studio, posizioni"
 ms.assetid: 71f9ed52-c9c9-4818-9bce-c279ffaa0438
 caps.latest.revision: 25
-caps.handback.revision: 25
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # Procedura: individuare e organizzare modelli di progetto e modelli di elementi
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

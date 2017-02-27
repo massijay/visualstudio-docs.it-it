@@ -1,8 +1,7 @@
 ---
 title: "Estensione di propriet&#224; e la finestra propriet&#224; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "Proprietà SelectableObjects"
 ms.assetid: 1e925025-3d21-4cdb-a917-78db7bb78fe9
 caps.latest.revision: 23
-caps.handback.revision: 23
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Estensione di propriet&#224; e la finestra propriet&#224;
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

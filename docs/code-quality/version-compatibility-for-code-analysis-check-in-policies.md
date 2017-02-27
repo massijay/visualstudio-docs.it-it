@@ -1,8 +1,7 @@
 ---
 title: "Criteri di archiviazione relativi alla compatibilit&#224; delle versioni per l&#39;analisi del codice | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/12/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "compatibilità tra versioni, analisi del codice (criteri di archiviazione)"
 ms.assetid: 1af376e3-3be7-4445-803b-76a858567a5b
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 15
 ---
 # Criteri di archiviazione relativi alla compatibilit&#224; delle versioni per l&#39;analisi del codice
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: Profilatura dalla riga di comando tramite campionamento | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "strumenti per le prestazioni, strumenti da riga di comando"
 ms.assetid: 1d53972f-6f35-4842-8c74-1b627f18c70a
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Procedura dettagliata: Profilatura dalla riga di comando tramite campionamento
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

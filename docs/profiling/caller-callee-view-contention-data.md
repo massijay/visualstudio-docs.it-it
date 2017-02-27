@@ -1,8 +1,7 @@
 ---
 title: "Visualizzazione Chiamante/chiamato: dati su conflitti del profiler | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "visualizzazione Chiamante/Chiamato"
 ms.assetid: a18a1b1b-9b39-43c7-b1f3-708fd20376f6
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Visualizzazione Chiamante/chiamato: dati su conflitti del profiler
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

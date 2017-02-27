@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: Accesso all&#39;oggetto DTE da un&#39;estensione di Editor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "editor [Visual Studio SDK], nuovo, ottenere l'oggetto DTE"
 ms.assetid: c1f40bab-c6ec-45b0-8333-ea5ceb02a39d
 caps.latest.revision: 22
-caps.handback.revision: 22
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Procedura dettagliata: Accesso all&#39;oggetto DTE da un&#39;estensione di Editor
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

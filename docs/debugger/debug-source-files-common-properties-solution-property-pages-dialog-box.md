@@ -1,8 +1,7 @@
 ---
 title: "Esegui debug dei file di origine, Propriet&#224; comuni, finestra di dialogo Pagine delle propriet&#224; di soluzione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "debugger, file di origine"
 ms.assetid: 0af11464-eeb1-4d0b-87a6-0cc96779afb1
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Esegui debug dei file di origine, Propriet&#224; comuni, finestra di dialogo Pagine delle propriet&#224; di soluzione
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

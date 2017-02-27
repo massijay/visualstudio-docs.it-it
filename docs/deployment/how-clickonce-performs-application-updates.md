@@ -1,8 +1,7 @@
 ---
 title: "How ClickOnce Performs Application Updates | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "deploying applications [ClickOnce], application updates"
 ms.assetid: d54313c2-cf0c-420d-b151-99953a95f0bb
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 9
 ---
 # How ClickOnce Performs Application Updates
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

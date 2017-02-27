@@ -1,8 +1,7 @@
 ---
 title: "File XSD di esempio: relazioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 60126510-b7dd-4cb4-92d3-9883590b92f2
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # File XSD di esempio: relazioni
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

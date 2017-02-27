@@ -1,8 +1,7 @@
 ---
 title: "CA2211: I campi non costanti non devono essere visibili | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "NonConstantFieldsShouldNotBeVisible"
 ms.assetid: e1e42c40-0acd-4312-af29-70133739a304
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 13
 ---
 # CA2211: I campi non costanti non devono essere visibili
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

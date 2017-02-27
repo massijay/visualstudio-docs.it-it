@@ -1,40 +1,22 @@
 ---
-title: Aggiunta di dati di interazione tra livelli dalla riga di comando | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- tier interaction profiling method
-- profiling tools,tier interaction method
+title: "Aggiunta di dati di interazione tra livelli dalla riga di comando | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "metodo di profilatura di interazione tra livelli"
+  - "strumenti per la profilatura, metodo di interazione tra livelli"
 ms.assetid: 5a35647f-03f2-4555-8eeb-fda7e0080e67
 caps.latest.revision: 9
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 6c394dfcf1c0df0cb7d006592b3dc386da328876
-ms.openlocfilehash: 33bef5cc4eb777cb2778b12f919bbcac8f7cc574
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
 # <a name="adding-tier-interaction-data-from-the-command-line"></a>Aggiunta di dati di interazione tra livelli dalla riga di comando
 La profilatura delle interazioni tra livelli offre informazioni aggiuntive sui tempi di esecuzione delle chiamate [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] sincrone nelle funzioni di applicazioni multilivello che comunicano con uno o più database.  

@@ -1,8 +1,7 @@
 ---
 title: "Finestra di dialogo Aggiungi inizializzatori di correlazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/23/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "AddCorrelationInitializers.UI"
 ms.assetid: c0517467-d54a-4ee6-aef0-c19b96b6f395
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # Finestra di dialogo Aggiungi inizializzatori di correlazione
 La finestra di dialogo **Aggiungi inizializzatori di correlazione** viene utilizzata in [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] per configurare le proprietà delle attività **CorrelationInitializers**, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply> e <xref:System.ServiceModel.Activities.ReceiveReply>.[!INCLUDE[crabout](../test/includes/crabout_md.md)] le finestre di progettazione di attività che utilizzano questa casella, vedere gli argomenti di [Send](../workflow-designer/send-activity-designer.md), di [Receive](../workflow-designer/receive-activity-designer.md), di [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md)e di [SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md) .  

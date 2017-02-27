@@ -1,8 +1,7 @@
 ---
 title: "Visualizzazione Dettagli funzione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "strumenti di profilatura, visualizzazione Dettagli funzione"
 ms.assetid: 8806954f-cf28-48d5-81b2-d722ceaf7d27
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Visualizzazione Dettagli funzione
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

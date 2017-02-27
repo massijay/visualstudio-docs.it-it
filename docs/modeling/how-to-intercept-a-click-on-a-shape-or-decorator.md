@@ -1,8 +1,7 @@
 ---
 title: "Procedura: intercettare un clic su una forma o su un elemento Decorator | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "Linguaggio specifico di dominio, programmazione di modelli di dominio"
 ms.assetid: e2bc3124-c0c0-4104-9779-a5bf565d7f51
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 21
 ---
 # Procedura: intercettare un clic su una forma o su un elemento Decorator
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

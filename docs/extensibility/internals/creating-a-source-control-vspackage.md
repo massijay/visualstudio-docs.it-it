@@ -1,8 +1,7 @@
 ---
 title: "Creazione di un pacchetto di controllo di origine | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "pacchetti di controllo di origine"
 ms.assetid: cca0a9ed-48ff-409f-8036-ed8db0f7533e
 caps.latest.revision: 23
-caps.handback.revision: 23
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Creazione di un pacchetto di controllo di origine
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

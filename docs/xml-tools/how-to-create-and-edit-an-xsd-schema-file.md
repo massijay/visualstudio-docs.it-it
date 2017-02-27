@@ -1,8 +1,7 @@
 ---
 title: "Procedura: creare e modificare un file di schema XSD | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 91b10cd7-c0cd-4e5a-a46b-4fed60dff542
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # Procedura: creare e modificare un file di schema XSD
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

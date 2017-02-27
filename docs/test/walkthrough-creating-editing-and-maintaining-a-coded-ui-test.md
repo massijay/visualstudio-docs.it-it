@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: creazione, modifica e gestione di un test codificato dell&#39;interfaccia utente | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f7c25ba7-5c9c-455b-9242-701cda56f90c
 caps.latest.revision: 41
-caps.handback.revision: 41
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 41
 ---
 # Procedura dettagliata: creazione, modifica e gestione di un test codificato dell&#39;interfaccia utente
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "DA0001: Utilizzare StringBuilder per le concatenazioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ f1_keywords:
   - "vs.performance.rules.DA0001"
 ms.assetid: a7cc7613-ad5f-48c8-bd2b-56372cc12dfc
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # DA0001: Utilizzare StringBuilder per le concatenazioni
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

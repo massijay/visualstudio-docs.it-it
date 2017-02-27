@@ -1,8 +1,7 @@
 ---
 title: "GUID e ID del menu di Visual Studio | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,9 +17,9 @@ helpviewer_keywords:
   - "menu"
 ms.assetid: 84639d86-dd21-4b35-9988-6bb654162488
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # GUID e ID del menu di Visual Studio
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

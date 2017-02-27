@@ -1,8 +1,7 @@
 ---
 title: "Procedura: creare un pacchetto del programma di avvio automatico personalizzato | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "prerequisiti, creazione di pacchetti del programma di avvio automatico personalizzati"
 ms.assetid: 66a1bc7e-6540-4164-963d-557196a69d8a
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 15
 ---
 # Procedura: creare un pacchetto del programma di avvio automatico personalizzato
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

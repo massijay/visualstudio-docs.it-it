@@ -1,18 +1,17 @@
 ---
 title: "ActivityDesigner Flusso di controllo | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: ba74af23-5398-4e62-bd90-c50612e3bfef
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 7
 ---
 # ActivityDesigner Flusso di controllo
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] include alcune attività fornite dal sistema che è possibile utilizzare per la costruzione di flussi di lavoro.In questa sezione sono presentate le attività fornite dal sistema utilizzate per controllare il flusso all'interno di un flusso di lavoro.Negli argomenti riportati di seguito vengono illustrate queste attività e vengono fornite indicazioni sulle relative modalità di utilizzo.  

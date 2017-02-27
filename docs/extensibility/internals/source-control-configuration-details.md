@@ -1,8 +1,7 @@
 ---
 title: "Dettagli di configurazione di controllo di origine | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "controllo del codice sorgente [Visual Studio SDK], i dettagli di configurazione"
 ms.assetid: adbee9fc-7a2e-4abe-a3b8-e6615bcd797f
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Dettagli di configurazione di controllo di origine
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

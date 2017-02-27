@@ -1,8 +1,7 @@
 ---
 title: "Build Loggers | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "logging [MSBuild]"
 ms.assetid: fa34810d-185a-4d22-92bd-9852915e5f1d
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Build Loggers
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

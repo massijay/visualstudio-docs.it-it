@@ -1,8 +1,7 @@
 ---
 title: "Creazione di un motore di Debug personalizzato | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "debug [debug SDK], motori di debug personalizzati"
 ms.assetid: 52794238-6fae-451c-bf1c-99f344c6f173
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Creazione di un motore di Debug personalizzato
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

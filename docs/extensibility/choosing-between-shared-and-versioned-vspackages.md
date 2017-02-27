@@ -1,8 +1,7 @@
 ---
 title: "Scelta tra i package VS condivisi e con controllo delle versioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "installazione [Visual Studio SDK], side-by-side"
 ms.assetid: e3128ac3-2e92-48e9-87ab-3b6c9d80e8c9
 caps.latest.revision: 22
-caps.handback.revision: 22
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Scelta tra i package VS condivisi e con controllo delle versioni
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

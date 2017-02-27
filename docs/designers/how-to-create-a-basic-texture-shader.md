@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Creare uno shader con trama di base | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5af113fb-6415-4be0-8b23-10fddb10e80a
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "BrianPeek"
 ms.author: "brpeek"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Procedura: Creare uno shader con trama di base
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

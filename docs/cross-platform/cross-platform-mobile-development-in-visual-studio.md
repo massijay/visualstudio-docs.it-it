@@ -1,38 +1,20 @@
 ---
-title: Sviluppo di app per dispositivi mobili multipiattaforma in Visual Studio | Microsoft Docs
-ms.custom: 
-ms.date: 12/06/2016
-ms.prod: visual-studio-dev15
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "Sviluppo multipiattaforma in Visual Studio | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/06/2016"
+ms.prod: "visual-studio-dev15"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "tgt-pltfrm-cross-plat"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 8202717a-e990-45cf-b092-438651ccb38a
 caps.latest.revision: 64
-author: ghogen
-ms.author: ghogen
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: 0e180e257a6c03a4971207bfa4df422037ef67ec
-
+author: "ghogen"
+ms.author: "ghogen"
+manager: "ghogen"
+caps.handback.revision: 57
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Sviluppo di app per dispositivi mobili multipiattaforma in Visual Studio
 È possibile compilare app per i dispositivi Android, iOS e Windows usando Visual Studio.  Durante la progettazione delle app, usare gli strumenti in Visual Studio per aggiungere facilmente i servizi connessi, ad esempio Office 365, Servizi app di Azure e Application Insights.

@@ -1,8 +1,7 @@
 ---
 title: "Panoramica dei report degli strumenti per la profilatura | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "report di prestazioni, informazioni"
 ms.assetid: 7324c24c-fd09-479b-b2ad-e0c3b613e040
 caps.latest.revision: 45
-caps.handback.revision: 45
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 45
 ---
 # Panoramica dei report degli strumenti per la profilatura
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

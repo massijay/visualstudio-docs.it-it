@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Creare o aggiornare criteri di archiviazione standard dell&#39;analisi del codice | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "analisi codice, migrazione dei criteri di archiviazione"
 ms.assetid: 458eb3b8-bb5e-4056-82b7-7079ce9c4089
 caps.latest.revision: 29
-caps.handback.revision: 29
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 29
 ---
 # Procedura: Creare o aggiornare criteri di archiviazione standard dell&#39;analisi del codice
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

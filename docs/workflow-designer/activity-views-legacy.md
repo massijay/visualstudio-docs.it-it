@@ -1,8 +1,7 @@
 ---
 title: "Visualizzazioni delle attivit&#224; (legacy) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "visualizzazioni, attività"
 ms.assetid: 83dc68cd-2cb2-45c2-9a6e-10d82053171a
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # Visualizzazioni delle attivit&#224; (legacy)
 Per molte delle attività fornite da [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)], dalle quali vengono creati i flussi di lavoro, sono disponibili numerose visualizzazioni Progettazione in [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] legacy.Quando si trascina un ActivityDesigner dalla **Casella degli strumenti** nell'area di progettazione e quando successivamente si seleziona l'attività, è possibile passare tra le diverse visualizzazioni Progettazione utilizzando il menu **Flusso di lavoro** oppure facendo clic con il pulsante destro del mouse sull'attività selezionata.Quando si sposta il puntatore sul nome di un'attività selezionata, viene inoltre visualizzato un insieme a discesa di schede che è possibile utilizzare per passare tra le diverse visualizzazioni.  

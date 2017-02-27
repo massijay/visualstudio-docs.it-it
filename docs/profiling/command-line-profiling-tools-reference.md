@@ -1,8 +1,7 @@
 ---
 title: "Riferimenti agli strumenti di profilatura della riga di comando | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a34ba40e-01b1-4386-90b1-c8e628a8c527
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Riferimenti agli strumenti di profilatura della riga di comando
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

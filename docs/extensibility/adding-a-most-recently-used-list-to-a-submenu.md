@@ -1,8 +1,7 @@
 ---
 title: "Aggiunta di una pi&#249; recente di elenco a un sottomenu usati | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "utilizzati più di recente"
 ms.assetid: 27d4bbcf-99b1-498f-8b66-40002e3db0f8
 caps.latest.revision: 46
-caps.handback.revision: 46
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 46
 ---
 # Aggiunta di una pi&#249; recente di elenco a un sottomenu usati
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

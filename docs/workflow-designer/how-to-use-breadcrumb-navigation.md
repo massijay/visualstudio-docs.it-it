@@ -1,18 +1,17 @@
 ---
 title: "Procedura: utilizzare l&#39;esplorazione tramite la barra di navigazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/23/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 4a688056-37dc-406a-9071-be2141e192fe
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # Procedura: utilizzare l&#39;esplorazione tramite la barra di navigazione
 Il set delle attività visualizzate in [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] può essere modificato in tre modi principali:  

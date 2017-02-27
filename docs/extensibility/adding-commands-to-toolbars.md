@@ -1,8 +1,7 @@
 ---
 title: "Aggiunta di comandi alle barre degli strumenti | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 4f8cfba8-0653-4ccc-a2da-acf064c83aa7
 caps.latest.revision: 3
-caps.handback.revision: 3
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Aggiunta di comandi alle barre degli strumenti
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
