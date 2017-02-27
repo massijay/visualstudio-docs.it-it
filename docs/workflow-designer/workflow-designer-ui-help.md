@@ -1,8 +1,7 @@
 ---
 title: "Guida dell&#39;interfaccia utente della finestra di progettazione dei flussi di lavoro | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,10 +11,10 @@ helpviewer_keywords:
   - "Progettazione flussi di lavoro [WFD], guida dell'interfaccia utente"
 ms.assetid: f7afc443-7c7f-4b0f-9517-c58070a640de
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # Guida dell&#39;interfaccia utente della finestra di progettazione dei flussi di lavoro
 In questa sezione sono inclusi gli argomenti della Guida sensibile al contesto di [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)].Durante l'utilizzo di [!INCLUDE[vs2010](../modeling/includes/vs2010_md.md)] è possibile accedere a tali argomenti dall'interfaccia utente premendo **F1** quando viene visualizzata una finestra di dialogo di [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)].  

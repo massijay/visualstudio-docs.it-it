@@ -1,8 +1,7 @@
 ---
 title: "Finestra di dialogo Asserzione non riuscita | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "Asserzione non riuscita (finestra di dialogo)"
 ms.assetid: 64af5bed-e38b-420f-b9ce-d64f35100aae
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Finestra di dialogo Asserzione non riuscita
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

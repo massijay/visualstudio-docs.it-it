@@ -1,8 +1,7 @@
 ---
 title: "Gruppi, menu e comandi definiti dall&#39;IDE | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "gruppi di comandi definiti dall'ambiente"
 ms.assetid: 86b3af13-7163-48c6-986b-7beeedbc26cc
 caps.latest.revision: 27
-caps.handback.revision: 27
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # Gruppi, menu e comandi definiti dall&#39;IDE
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

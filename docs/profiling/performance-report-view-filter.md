@@ -1,8 +1,7 @@
 ---
 title: "Filtro di visualizzazione dei report degli strumenti per la profilatura | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "filtro di visualizzazione dei report del profiler, strumenti per la profilatura"
 ms.assetid: 35f89d86-4683-4db1-aa0c-ae0ce65fa524
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Filtro di visualizzazione dei report degli strumenti per la profilatura
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

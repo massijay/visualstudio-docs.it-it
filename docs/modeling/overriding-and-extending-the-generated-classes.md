@@ -1,8 +1,7 @@
 ---
 title: "Override ed estensione delle classi generate | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "Linguaggio specifico di dominio, fornitura di classi sottoponibili a override"
 ms.assetid: 30baa60d-a8ea-4611-96c1-8fcc3317cf21
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 15
 ---
 # Override ed estensione delle classi generate
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

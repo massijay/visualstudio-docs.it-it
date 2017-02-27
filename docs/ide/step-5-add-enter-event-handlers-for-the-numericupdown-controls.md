@@ -1,37 +1,19 @@
 ---
-title: 'Passaggio 5: aggiungere gestori di eventi Enter per i controlli NumericUpDown | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "Passaggio 5: aggiungere gestori di eventi Enter per i controlli NumericUpDown | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 45a99a5d-c881-4298-b74d-adb481dec5ee
 caps.latest.revision: 18
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c4060c35d7bfd0f82cb05a7fbb99931fae0d1f1e
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 18
 ---
 # <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>Passaggio 5: aggiungere gestori di eventi Enter per i controlli NumericUpDown
 Nella quinta parte di questa esercitazione si aggiungeranno i gestori eventi Enter per semplificare l'inserimento delle risposte ai problemi del quiz. Con questo codice si selezionerà e si cancellerà il valore corrente di ogni controllo NumericUpDown non appena l'esecutore del quiz sceglie il controllo e inizia a immettere un altro valore.  

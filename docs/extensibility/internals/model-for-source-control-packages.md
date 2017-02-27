@@ -1,8 +1,7 @@
 ---
 title: "Modello per i pacchetti di controllo di origine | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "controllo [Visual Studio SDK], modello di origine"
 ms.assetid: 6164b2d3-a622-4de8-bef3-a6de985e9ebd
 caps.latest.revision: 13
-caps.handback.revision: 13
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Modello per i pacchetti di controllo di origine
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

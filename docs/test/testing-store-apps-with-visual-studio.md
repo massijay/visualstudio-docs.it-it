@@ -1,8 +1,7 @@
 ---
 title: "Test delle applicazioni Store con Visual Studio | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: cf4000b4-91b5-4b3f-a00d-cc8d192467c2
 caps.latest.revision: 20
-caps.handback.revision: 20
 ms.author: "susanno"
 manager: "douge"
+caps.handback.revision: 20
 ---
 # Test delle applicazioni Store con Visual Studio
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

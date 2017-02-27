@@ -1,8 +1,7 @@
 ---
 title: "Guida introduttiva allo sviluppo basato su test con Esplora test | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5161b533-2127-4172-b473-d4ffc76ff05b
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 15
 ---
 # Guida introduttiva allo sviluppo basato su test con Esplora test
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

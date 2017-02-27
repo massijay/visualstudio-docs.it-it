@@ -1,8 +1,7 @@
 ---
 title: "Procedura: abilitare e disabilitare l&#39;analisi automatica del codice gestito | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 7c22d194-5fea-4f23-b02d-19344fa64a64
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 8
 ---
 # Procedura: abilitare e disabilitare l&#39;analisi automatica del codice gestito
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

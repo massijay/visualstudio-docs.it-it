@@ -1,8 +1,7 @@
 ---
 title: "Visualizzazioni dei dati del metodo di strumentazione del profiler | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "strumenti di profilatura, visualizzazioni del metodo di strumentazione"
 ms.assetid: 481f7579-f784-49ef-bb6c-2944e9d6ab42
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Visualizzazioni dei dati del metodo di strumentazione del profiler
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

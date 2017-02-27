@@ -1,8 +1,7 @@
 ---
 title: "Procedura: esaminare il codice di sistema dopo un&#39;eccezione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "eccezioni, debug"
 ms.assetid: a38ad49b-7cf3-483d-91c4-eb3116eba50c
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Procedura: esaminare il codice di sistema dopo un&#39;eccezione
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Procedura: utilizzare la gestione di annullamento collegato | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "editor [Visual Studio SDK], legacy - gestione fase di rollback collegata"
 ms.assetid: af5cc22a-c9cf-45b1-a894-1022d563f3ca
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Procedura: utilizzare la gestione di annullamento collegato
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

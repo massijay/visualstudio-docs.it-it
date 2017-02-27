@@ -1,8 +1,7 @@
 ---
 title: "Procedure consigliate per i test codificati dell&#39;interfaccia utente | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "test codificati dell'interfaccia utente, procedure ottimali"
 ms.assetid: d5aef766-a24c-4f1f-ac9b-e5462b6627d4
 caps.latest.revision: 39
-caps.handback.revision: 39
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 39
 ---
 # Procedure consigliate per i test codificati dell&#39;interfaccia utente
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

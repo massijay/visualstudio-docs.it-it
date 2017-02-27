@@ -1,8 +1,7 @@
 ---
 title: "Propriet&#224; dei documenti XML, finestra Propriet&#224; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 9dbb34d9-02ea-4201-b445-c98a0eb0d6db
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # Propriet&#224; dei documenti XML, finestra Propriet&#224;
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,16 +1,16 @@
 ---
 title: "Catalogo e il servizio di immagine | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
 caps.latest.revision: 37
-caps.handback.revision: 37
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # Catalogo e il servizio di immagine
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

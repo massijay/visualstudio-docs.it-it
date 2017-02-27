@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Rilocare file binari instrumentati | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "strumenti per la profilatura, file binari instrumentati"
 ms.assetid: 258f49e8-4b09-477e-a132-8fad685b66f4
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Procedura: Rilocare file binari instrumentati
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

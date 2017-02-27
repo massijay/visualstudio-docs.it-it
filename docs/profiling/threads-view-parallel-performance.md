@@ -1,8 +1,7 @@
 ---
 title: "Visualizzazione Thread (prestazioni in parallelo) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Visualizzatore di concorrenza, visualizzazione Thread (prestazioni in parallelo)"
 ms.assetid: 2e441103-a266-407b-88c3-fb58716257a3
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Visualizzazione Thread (prestazioni in parallelo)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

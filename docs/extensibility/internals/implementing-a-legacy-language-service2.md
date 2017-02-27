@@ -1,8 +1,7 @@
 ---
-title: "Implementazione di un servizio di linguaggio Legacy | Microsoft Docs"
+title: "Implementazione di un Service2 Language Legacy | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "servizi di linguaggio [framework gestito pacchetto], implementazione"
 ms.assetid: 5bcafdc5-f922-48f6-a12e-6c8507a79a05
 caps.latest.revision: 26
-caps.handback.revision: 26
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 26
 ---
 # Implementazione di un servizio di linguaggio Legacy
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

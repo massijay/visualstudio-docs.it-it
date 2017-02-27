@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Raccogliere dati dei contatori CPU tramite il metodo di strumentazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "strumenti per le prestazioni, contatori della CPU portatili"
 ms.assetid: 102fb6ca-5fbf-4b05-925f-56912ce3f44b
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Procedura: Raccogliere dati dei contatori CPU tramite il metodo di strumentazione
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

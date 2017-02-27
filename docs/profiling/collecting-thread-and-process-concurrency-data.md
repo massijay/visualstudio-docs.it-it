@@ -1,8 +1,7 @@
 ---
 title: "Raccolta di dati di concorrenza di thread e processi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "strumenti per la profilatura, metodo di concorrenza"
 ms.assetid: fa03d381-a9ee-408c-876d-05111e29225b
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Raccolta di dati di concorrenza di thread e processi
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

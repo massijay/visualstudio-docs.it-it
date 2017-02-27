@@ -1,8 +1,7 @@
 ---
 title: "Procedura: creare modelli basati su pi&#249; progetti | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "modelli di Visual Studio, creazione di modelli multiprogetto"
 ms.assetid: 8c7f7065-137e-40ad-868d-37e007270efd
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Procedura: creare modelli basati su pi&#249; progetti
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

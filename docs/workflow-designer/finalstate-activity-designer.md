@@ -1,17 +1,16 @@
 ---
 title: "ActivityDesigner FinalState | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: aa186893-8775-40dd-981f-8593ead831d0
 caps.latest.revision: 5
-caps.handback.revision: 5
 ms.author: "sdanie"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # ActivityDesigner FinalState
 La finestra di progettazione di <xref:System.Activities.Core.Presentation.FinalState> viene utilizzata per creare un <xref:System.Activities.Statements.State> che termina un'istanza della macchina a stati.  

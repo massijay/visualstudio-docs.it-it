@@ -1,8 +1,7 @@
 ---
 title: "Strategia di implementazione dell&#39;analizzatore di espressioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "motori di debug, strategie di implementazione"
 ms.assetid: 1bccaeb3-8109-4128-ae79-16fd8fbbaaa2
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Strategia di implementazione dell&#39;analizzatore di espressioni
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

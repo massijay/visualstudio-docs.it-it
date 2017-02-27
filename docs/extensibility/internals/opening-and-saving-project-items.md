@@ -1,8 +1,7 @@
 ---
 title: "Apertura e salvataggio di elementi di progetto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "editor [Visual Studio SDK], file di persistenza"
 ms.assetid: f71898ad-335f-4c43-a177-4da87078afd1
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Apertura e salvataggio di elementi di progetto
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

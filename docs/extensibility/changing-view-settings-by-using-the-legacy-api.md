@@ -1,8 +1,7 @@
 ---
 title: "Modifica delle impostazioni di visualizzazione tramite l&#39;API Legacy | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "editor [Visual Studio SDK], legacy - modifica delle impostazioni di visualizzazione"
 ms.assetid: 12c9b300-0894-4124-96a1-764326176d77
 caps.latest.revision: 18
-caps.handback.revision: 18
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Modifica delle impostazioni di visualizzazione tramite l&#39;API Legacy
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

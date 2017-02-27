@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Raccogliere dati sulle prestazioni per un sito Web | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "ASP.NET, profilatura delle prestazioni"
 ms.assetid: a62d27fd-a966-4065-bebe-6874195a71fb
 caps.latest.revision: 33
-caps.handback.revision: 33
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # Procedura: Raccogliere dati sulle prestazioni per un sito Web
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

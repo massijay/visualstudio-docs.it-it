@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: utilizzo di un file di configurazione per definire un&#39;origine dati | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "unit test, procedura dettagliata"
 ms.assetid: 95fa5214-b12e-4e1f-84e5-cc4c2d86b0d7
 caps.latest.revision: 32
-caps.handback.revision: 32
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 32
 ---
 # Procedura dettagliata: utilizzo di un file di configurazione per definire un&#39;origine dati
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Informazioni sui valori dei dati di strumentazione negli strumenti per la profilatura | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "metodo di profilatura strumentazione"
 ms.assetid: 2cf94cf9-c317-4a52-bf00-670f1262165e
 caps.latest.revision: 29
-caps.handback.revision: 29
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # Informazioni sui valori dei dati di strumentazione negli strumenti per la profilatura
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

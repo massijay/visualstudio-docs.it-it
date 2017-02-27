@@ -1,8 +1,7 @@
 ---
 title: "Procedura: utilizzare l&#39;editor espressioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "System.Activities.Presentation.View.ExpressionTextBox.UI"
 ms.assetid: b5f961dd-6dda-41a9-9cae-0383d479ef3d
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 13
 ---
 # Procedura: utilizzare l&#39;editor espressioni
 L'editor espressioni è un controllo di [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] usato in molte attività del flusso di lavoro per immettere e valutare queste espressioni.  L'editor espressioni fornisce un'esperienza di modifica IDE completa che include, tra le altre funzionalità, IntelliSense, colorazione, ParamInfo, controllo errori di ortografia durante la digitazione.  Il compilatore convalida l'espressione dopo che è stata immessa.  Se l'espressione non è valida, viene visualizzata un'icona di errore.  È possibile aprire l'editor anche come finestra di dialogo **Editor espressioni**.  

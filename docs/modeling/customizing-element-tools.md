@@ -1,18 +1,17 @@
 ---
 title: "Personalizzazione di strumenti elemento | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 6dac48b6-db68-4bcd-8aa2-422c2ad5d28b
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 6
 ---
 # Personalizzazione di strumenti elemento
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

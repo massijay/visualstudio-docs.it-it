@@ -1,8 +1,7 @@
 ---
 title: "Profilatura della riga di comando di applicazioni autonome | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "profilatura di applicazioni autonome"
 ms.assetid: a47f2bf2-186d-4120-bb79-34e2f3a1ee42
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Profilatura della riga di comando di applicazioni autonome
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

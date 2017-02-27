@@ -1,8 +1,7 @@
 ---
 title: "Decisioni di progettazione di tipo di progetto | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "tipi di progetto, le decisioni di progettazione"
 ms.assetid: f68671fe-fd7a-4e56-a0b5-330b0f1fedb1
 caps.latest.revision: 10
-caps.handback.revision: 10
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Decisioni di progettazione di tipo di progetto
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

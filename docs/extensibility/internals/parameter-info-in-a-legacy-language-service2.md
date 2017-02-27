@@ -1,8 +1,7 @@
 ---
-title: "Informazioni sui parametri in un servizio di linguaggio Legacy | Microsoft Docs"
+title: "Informazioni sui parametri in un Service2 Language Legacy | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "Informazioni parametri (IntelliSense), supporto in servizi di linguaggio [framework pacchetto gestito]"
 ms.assetid: a117365d-320d-4bb5-b61d-3e6457b8f6bc
 caps.latest.revision: 23
-caps.handback.revision: 23
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Informazioni sui parametri in un servizio di linguaggio Legacy
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

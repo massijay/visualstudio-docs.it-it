@@ -1,8 +1,7 @@
 ---
 title: "Risposta alle modifiche e propagazione delle modifiche | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "Linguaggio specifico di dominio, eventi"
 ms.assetid: fc2e9ac5-7a84-44ed-9945-94e45f89c227
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 24
 ---
 # Risposta alle modifiche e propagazione delle modifiche
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

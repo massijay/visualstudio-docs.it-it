@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo di Progettazione flussi di lavoro | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,10 +11,10 @@ helpviewer_keywords:
   - "Progettazione flussi di lavoro [WFD], utilizzo"
 ms.assetid: 991a942f-29bc-4868-9299-ed80c5665ab5
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 13
 ---
 # Utilizzo di Progettazione flussi di lavoro
 In questa sezione viene illustrato nei dettagli come creare nuove attività e nuovi progetti di flusso di lavoro utilizzando le finestre di progettazione incorporate e l'editor espressioni ospitato da diversi ActivityDesigner.  

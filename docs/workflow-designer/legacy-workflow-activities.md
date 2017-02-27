@@ -1,8 +1,7 @@
 ---
 title: "Attivit&#224; del flusso di lavoro legacy | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "flussi di lavoro, attività"
 ms.assetid: 4af7a06b-1e82-43c8-aec8-0dc5fb63d08a
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 8
 ---
 # Attivit&#224; del flusso di lavoro legacy
 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] include un set predefinito di attività che forniscono funzionalità per i flussi di controllo, le condizioni, la gestione degli eventi, la gestione degli stati e la comunicazione con applicazioni e servizi.Durante la progettazione di flussi di lavoro, è possibile utilizzare le attività di sistema che sono fornite dalla [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] oppure è possibile creare attività personalizzate.  

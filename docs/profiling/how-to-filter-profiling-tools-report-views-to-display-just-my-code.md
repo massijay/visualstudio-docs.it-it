@@ -1,22 +1,19 @@
 ---
 title: "Procedura: Filtrare visualizzazioni report degli strumenti per la profilatura per visualizzare Just My Code | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
   - "vs-ide-debug"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-helpviewer_keywords: 
-  - "Visual Studio ALM, report di prestazioni Just My Code"
 ms.assetid: e45c7903-f945-495d-b43b-11cdd09052aa
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Procedura: Filtrare visualizzazioni report degli strumenti per la profilatura per visualizzare Just My Code
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Funzione CvCreateMarkerSeries | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CvCreateMarkerSeriesW (metodo)"
 ms.assetid: e280530b-137a-43a7-8643-aa514ab86ed7
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Funzione CvCreateMarkerSeries
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

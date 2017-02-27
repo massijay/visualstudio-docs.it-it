@@ -1,18 +1,17 @@
 ---
 title: "Utilizzo di soluzioni per un linguaggio specifico di dominio | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 3db02722-5fd5-437f-a789-9acaaa809de8
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 6
 ---
 # Utilizzo di soluzioni per un linguaggio specifico di dominio
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

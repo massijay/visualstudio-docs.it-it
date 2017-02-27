@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Specificare comandi pre- e post-strumentazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "eventi pre-strumentazione, strumenti per le prestazioni"
 ms.assetid: 6a8d5340-1d1b-4d81-88dd-8e1f435eb828
 caps.latest.revision: 28
-caps.handback.revision: 28
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # Procedura: Specificare comandi pre- e post-strumentazione
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

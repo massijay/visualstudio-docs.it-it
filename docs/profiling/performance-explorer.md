@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo degli strumenti di profilatura | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Strumenti di profilatura"
 ms.assetid: df52b717-a55d-4b1d-8c2e-d5a6a38042f4
 caps.latest.revision: 45
-caps.handback.revision: 45
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 45
 ---
 # Utilizzo degli strumenti di profilatura
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

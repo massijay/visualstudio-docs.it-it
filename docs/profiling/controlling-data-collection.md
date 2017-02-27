@@ -1,8 +1,7 @@
 ---
 title: "Controllo della raccolta dei dati negli strumenti di profilatura | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "strumenti di profilatura, attività avanzate"
 ms.assetid: e713ad63-b948-46f3-8db9-59b30922ebe5
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # Controllo della raccolta dei dati negli strumenti di profilatura
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

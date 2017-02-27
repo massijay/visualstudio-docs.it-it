@@ -1,8 +1,7 @@
 ---
 title: "Personalizzazione dei controlli runtime nativi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "runtime_checks (pragma)"
 ms.assetid: 76a365fe-6439-49db-8603-34058b78e5a8
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Personalizzazione dei controlli runtime nativi
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

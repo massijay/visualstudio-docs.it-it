@@ -1,8 +1,7 @@
 ---
 title: "Struttura AsyncTaskMethodBuilder - membri interni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "Struttura AsyncTaskMethodBuilder [motori di debug di .NET Framework]"
 ms.assetid: f32f5857-7ef8-45fd-8b5a-7f644eb98b11
 caps.latest.revision: 5
-caps.handback.revision: 5
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Struttura AsyncTaskMethodBuilder - membri interni
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

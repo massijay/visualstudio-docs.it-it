@@ -1,8 +1,7 @@
 ---
 title: "Visualizzazione struttura ad albero delle chiamate: dati di strumentazione del profiler | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "visualizzazione Struttura ad albero delle chiamate"
 ms.assetid: 306bd176-0ce9-4a10-89ca-20b043d37d4e
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Visualizzazione struttura ad albero delle chiamate: dati di strumentazione del profiler
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

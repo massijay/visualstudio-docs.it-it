@@ -1,8 +1,7 @@
 ---
 title: "CA1712: Non utilizzare nomi di tipo come prefisso nei valori di enumerazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DoNotPrefixEnumValuesWithTypeName"
 ms.assetid: df0e3a12-67bf-48f1-a10b-2ef60484a5c7
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 15
 ---
 # CA1712: Non utilizzare nomi di tipo come prefisso nei valori di enumerazione
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

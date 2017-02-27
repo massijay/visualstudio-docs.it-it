@@ -1,8 +1,7 @@
 ---
 title: "Stack di sblocco | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Visualizzatore di concorrenza, stack di sblocco"
 ms.assetid: 1a4dfd9a-e7e2-4aa3-93e2-4f12c7b0970f
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Stack di sblocco
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

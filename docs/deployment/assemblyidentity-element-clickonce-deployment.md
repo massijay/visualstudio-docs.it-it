@@ -1,8 +1,7 @@
 ---
 title: "&lt;assemblyIdentity&gt; Element (ClickOnce Deployment) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "<assemblyIdentity> element [ClickOnce deployment manifest]"
 ms.assetid: f4a3bb83-c800-47d0-9905-9a5ae2486838
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 23
 ---
 # &lt;assemblyIdentity&gt; Element (ClickOnce Deployment)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

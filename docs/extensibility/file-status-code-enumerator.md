@@ -1,8 +1,7 @@
 ---
 title: "Enumeratore di codice di stato file | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "enumeratore di codice di stato file"
 ms.assetid: 5c37876b-c83c-4ca1-837b-57cd465a879a
 caps.latest.revision: 15
-caps.handback.revision: 15
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Enumeratore di codice di stato file
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

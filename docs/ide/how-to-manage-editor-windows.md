@@ -1,8 +1,7 @@
 ---
 title: "Procedura: gestire le finestre dell&#39;editor | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "finestre, gestione di finestre dell'editor"
 ms.assetid: 340143d4-8a71-490d-823e-162b276f4c6d
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Procedura: gestire le finestre dell&#39;editor
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

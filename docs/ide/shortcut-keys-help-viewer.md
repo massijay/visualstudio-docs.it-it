@@ -1,8 +1,7 @@
 ---
 title: "Tasti di scelta rapida (visualizzatore della Guida) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "tasti di scelta rapida [Visualizzatore della Guida 2.0]"
 ms.assetid: ec14c85d-7efb-441c-a46b-bee34a227e39
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # Tasti di scelta rapida (visualizzatore della Guida)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

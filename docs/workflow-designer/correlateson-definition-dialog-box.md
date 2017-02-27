@@ -1,8 +1,7 @@
 ---
 title: "Finestra di dialogo Definizione di CorrelatesOn | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "CorrelatesOnDefinition.UI"
 ms.assetid: 8b2b627a-f236-4479-aa09-525df65e3413
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 6
 ---
 # Finestra di dialogo Definizione di CorrelatesOn
 La finestra di dialogo **CorrelatesOn** viene utilizzata in [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] per modificare la proprietà <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> di un'attività <xref:System.ServiceModel.Activities.Receive>.[!INCLUDE[crdefault](../test/includes/crdefault_md.md)] l'argomento [Receive](../workflow-designer/receive-activity-designer.md).  

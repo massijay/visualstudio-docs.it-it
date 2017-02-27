@@ -1,8 +1,7 @@
 ---
 title: "Mappare i metodi sullo stack di chiamate durante il debug in Visual Studio | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,10 +31,10 @@ helpviewer_keywords:
   - "debug, mappe codici"
 ms.assetid: d6a72e5e-f88d-46fc-94a3-1789d34805ef
 caps.latest.revision: 39
-caps.handback.revision: 39
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "douge"
+caps.handback.revision: 39
 ---
 # Mappare i metodi sullo stack di chiamate durante il debug in Visual Studio
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Utilizzo degli ActivityDesigner | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,10 +11,10 @@ helpviewer_keywords:
   - "Progettazione flussi di lavoro [WFD], ActivityDesigner"
 ms.assetid: 3c2725c3-091b-49ab-81e7-d4c7028d47a2
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 9
 ---
 # Utilizzo degli ActivityDesigner
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] include alcune attività fornite dal sistema che è possibile utilizzare per la costruzione di attività e flussi di lavoro.In questa sezione vengono descritte le categorie di attività fornite dal sistema e le relative finestre di progettazione disponibili.Negli argomenti relativi alle singole attività e alle rispettive finestre di progettazione all'interno di ciascuna categoria vengono illustrate le operazioni eseguite da tali attività e vengono fornite istruzioni sul relativo utilizzo.  

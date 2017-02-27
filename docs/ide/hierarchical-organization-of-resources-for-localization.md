@@ -1,46 +1,29 @@
 ---
-title: Organizzazione gerarchica di risorse per la localizzazione | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- resource files, localized
-- localization [Visual Studio], resources
-- fallback resources
-- international applications [Visual Studio], storing resources
-- satellite assemblies, resource hierarchies
-- globalization [Visual Studio], resources
-- satellite assemblies
-- resources [Visual Studio], fallback system
-- resource files, fallback processes
+title: "Organizzazione gerarchica di risorse per la localizzazione | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "file di risorse, localizzato"
+  - "localizzazione [Visual Studio], risorse"
+  - "risorse fallback"
+  - "applicazioni internazionali [Visual Studio], risorse di archiviazione"
+  - "assembly satellite, gerarchie di risorse"
+  - "globalizzazione [Visual Studio], risorse"
+  - "assembly satellite"
+  - "risorse [Visual Studio] sistema di fallback"
+  - "file di risorse, processi fallback"
 ms.assetid: dadf8f2c-f74c-44d7-bec0-a1e956d8d38d
 caps.latest.revision: 8
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: a8bc841364ce5fd7c2bd9f3e4ff68257bdc35165
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
 # <a name="hierarchical-organization-of-resources-for-localization"></a>Organizzazione gerarchica di risorse per la localizzazione
 In Visual Studio, le risorse localizzate (dati come stringhe e immagini specifiche di ogni impostazione cultura) vengono archiviate in file separati e caricate in base alle impostazioni cultura dell'interfaccia utente. Per comprendere come vengono caricate le risorse localizzate, è utile pensarle come organizzate in modo gerarchico.  

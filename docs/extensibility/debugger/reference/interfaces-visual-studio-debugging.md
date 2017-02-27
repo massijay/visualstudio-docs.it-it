@@ -1,8 +1,7 @@
 ---
 title: "Interfacce (debug di Visual Studio) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "interfacce di debug [Debugging SDK]"
 ms.assetid: 79875cbb-f946-49d4-94eb-941d0e1a40b2
 caps.latest.revision: 11
-caps.handback.revision: 11
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Interfacce (debug di Visual Studio)
 [!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]

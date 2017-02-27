@@ -1,8 +1,7 @@
 ---
 title: "Uso di dati di metrica del codice | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "finestra Risultati, metrica codice"
 ms.assetid: 988193ec-b4a3-4e11-b5a1-7334979807d5
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "erickson-doug"
 ms.author: "douge"
 manager: "douge"
+caps.handback.revision: 17
 ---
 # Uso di dati di metrica del codice
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

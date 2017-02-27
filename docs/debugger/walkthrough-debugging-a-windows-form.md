@@ -1,8 +1,7 @@
 ---
 title: "Procedura dettagliata: debug di un Windows Form | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "Windows Form, debug"
 ms.assetid: 529db1e2-d9ea-482a-b6a0-7c543d17f114
 caps.latest.revision: 28
-caps.handback.revision: 28
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 28
 ---
 # Procedura dettagliata: debug di un Windows Form
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

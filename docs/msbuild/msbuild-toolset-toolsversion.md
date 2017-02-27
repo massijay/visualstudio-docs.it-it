@@ -1,8 +1,7 @@
 ---
 title: "MSBuild Toolset (ToolsVersion) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "multitargeting [MSBuild]"
 ms.assetid: 40040ee7-4620-4043-a6d8-ccba921421d1
 caps.latest.revision: 30
-caps.handback.revision: 30
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 30
 ---
 # MSBuild Toolset (ToolsVersion)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

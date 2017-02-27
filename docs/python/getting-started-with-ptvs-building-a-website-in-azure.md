@@ -1,8 +1,7 @@
 ---
 title: "Introduzione a PTVS: Compilazione di un sito Web in Azure | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 3bdbda36-14d2-4fde-ba42-d91042777ff6
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "kraigb"
 ms.author: "kraigb"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Introduzione a PTVS: Compilazione di un sito Web in Azure
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

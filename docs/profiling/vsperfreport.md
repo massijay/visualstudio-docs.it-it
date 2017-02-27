@@ -1,8 +1,7 @@
 ---
 title: "VSPerfReport | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "VSPerfReport (strumento)"
 ms.assetid: dbfd8d91-4430-4b82-81b9-97ac61412a6c
 caps.latest.revision: 32
-caps.handback.revision: 32
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # VSPerfReport
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Estensione Excel di esempio: classe TechnologyManager | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/08/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,9 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 8a7b760d-b5ac-4451-9593-6ac1a0b95cdb
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "mlearned"
 manager: "douge"
+caps.handback.revision: 9
 ---
 # Estensione Excel di esempio: classe TechnologyManager
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Procedura: aggiungere un comando al menu di scelta rapida | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -12,10 +11,10 @@ helpviewer_keywords:
   - "procedure dettagliate [strumenti del linguaggio specifico di dominio]"
 ms.assetid: cd550399-05fc-4dbf-be4c-f5094bb752ce
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 22
 ---
 # Procedura: aggiungere un comando al menu di scelta rapida
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

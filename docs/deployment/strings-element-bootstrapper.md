@@ -1,8 +1,7 @@
 ---
 title: "Elemento &lt;Strings&gt; (programma di avvio automatico) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "<Strings> (elemento) [programma di avvio automatico]"
 ms.assetid: d5ea3613-5fc9-4a11-bef3-46a01178bf60
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 4
 ---
 # Elemento &lt;Strings&gt; (programma di avvio automatico)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

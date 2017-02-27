@@ -1,8 +1,7 @@
 ---
 title: "Raccolta di dati di intervallo dettagliati tramite la strumentazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "metodo di profilatura strumentazione"
 ms.assetid: e9deb370-c459-45ac-84d3-14d646590d05
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Raccolta di dati di intervallo dettagliati tramite la strumentazione
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Visualizzazione struttura ad albero delle chiamate: dati su conflitti del profiler | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "visualizzazione Struttura ad albero delle chiamate"
 ms.assetid: 9bd4bde2-2ca3-446c-9ccc-7421522e03ae
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Visualizzazione struttura ad albero delle chiamate: dati su conflitti del profiler
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

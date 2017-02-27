@@ -1,8 +1,7 @@
 ---
 title: "Elemento ProvideDefaultName (modelli di Visual Studio) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "ProvideDefaultName (elemento) [modelli di progetto Visual Studio]"
 ms.assetid: 7b0e7b20-fd6b-42e2-81d0-e5100cea0528
 caps.latest.revision: 12
-caps.handback.revision: 12
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Elemento ProvideDefaultName (modelli di Visual Studio)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

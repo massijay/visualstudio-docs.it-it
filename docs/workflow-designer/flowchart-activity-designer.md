@@ -1,8 +1,7 @@
 ---
 title: "ActivityDesigner Diagramma di flusso | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,10 +12,10 @@ f1_keywords:
   - "System.Activities.Core.Presentation.FlowStart.UI"
 ms.assetid: d5af2276-5215-4138-880a-cf2b90bbf3a0
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # ActivityDesigner Diagramma di flusso
 L'attività <xref:System.Activities.Statements.Flowchart> viene utilizzata per creare flussi di lavoro che definiscono e gestiscono controlli di flusso complessi.È possibile creare un'attività <xref:System.Activities.Statements.Flowchart> tramite codice o utilizzando [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)].In questo argomento viene descritto come utilizzare [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] a tale scopo.L'ActivityDesigner per i flussi di lavoro di [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] consente agli sviluppatori di creare flussi di lavoro in modo naturale.  

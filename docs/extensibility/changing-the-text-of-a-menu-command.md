@@ -1,8 +1,7 @@
 ---
 title: "Modifica del testo di un comando di Menu | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "comandi, cambiare il testo"
 ms.assetid: 5cb676a0-c6e2-47e5-bd2b-133dc8842e46
 caps.latest.revision: 25
-caps.handback.revision: 25
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # Modifica del testo di un comando di Menu
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

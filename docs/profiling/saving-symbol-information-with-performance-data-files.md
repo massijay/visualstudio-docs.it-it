@@ -1,8 +1,7 @@
 ---
 title: "Salvataggio delle informazioni sui simboli con i file di dati di profilatura | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "strumenti per la profilatura, packsymbols"
 ms.assetid: 8b802505-e94d-4ee0-83e4-fdd790a332c1
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Salvataggio delle informazioni sui simboli con i file di dati di profilatura
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

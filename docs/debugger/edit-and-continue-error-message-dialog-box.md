@@ -1,8 +1,7 @@
 ---
 title: "Finestra di dialogo di errore di Modifica e continuazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Modifica e continuazione (finestra di dialogo di errore)"
 ms.assetid: f98c91c0-447a-4533-85b6-87170a0dc4c3
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Finestra di dialogo di errore di Modifica e continuazione
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

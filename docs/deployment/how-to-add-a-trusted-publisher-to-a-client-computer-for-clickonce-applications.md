@@ -1,8 +1,7 @@
 ---
 title: "Procedura: aggiungere un autore attendibile a un computer client per applicazioni ClickOnce | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "distribuzione di applicazioni attendibili, autori attendibili"
 ms.assetid: 35fe324c-45a1-4509-b7be-5c18b4b1b4ab
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 10
 ---
 # Procedura: aggiungere un autore attendibile a un computer client per applicazioni ClickOnce
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

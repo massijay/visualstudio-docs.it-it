@@ -1,8 +1,7 @@
 ---
 title: "Flag di bit utilizzati dai comandi specifici | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "plug-in, flag di bit utilizzati dai comandi specifici controllo del codice sorgente"
 ms.assetid: 37969977-6f7d-45c9-ba03-1306ae71f5d1
 caps.latest.revision: 24
-caps.handback.revision: 24
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # Flag di bit utilizzati dai comandi specifici
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

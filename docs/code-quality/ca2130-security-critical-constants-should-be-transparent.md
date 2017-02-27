@@ -1,8 +1,7 @@
 ---
 title: "CA2130: Le costanti SecurityCritical devono essere Transparent | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ f1_keywords:
   - "CA2130"
 ms.assetid: 344c7f7b-9130-4675-ae7f-9fa260cc9789
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 10
 ---
 # CA2130: Le costanti SecurityCritical devono essere Transparent
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

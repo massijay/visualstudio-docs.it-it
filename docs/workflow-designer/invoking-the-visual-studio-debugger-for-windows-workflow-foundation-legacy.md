@@ -1,8 +1,7 @@
 ---
 title: "Richiamo del debugger di Visual Studio per Windows Workflow Foundation (legacy) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "flussi di lavoro, debugger"
 ms.assetid: d6f58e35-5cce-4ff2-9afc-b2d9d0f819cf
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 6
 ---
 # Richiamo del debugger di Visual Studio per Windows Workflow Foundation (legacy)
 In questo argomento viene descritto come utilizzare il Debugger di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] per eseguire il debug di applicazioni [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] in [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] legacy.Utilizzare la [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] legacy quando è necessario fare riferimento a [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] o [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)].  

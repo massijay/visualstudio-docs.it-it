@@ -1,8 +1,7 @@
 ---
 title: "Procedura: filtrare le visualizzazioni rapporto degli strumenti di profilatura dalla sequenza temporale di riepilogo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 056b10a0-952b-4790-89e0-02aebe902e87
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Procedura: filtrare le visualizzazioni rapporto degli strumenti di profilatura dalla sequenza temporale di riepilogo
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

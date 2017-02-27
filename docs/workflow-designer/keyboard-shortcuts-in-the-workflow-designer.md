@@ -1,8 +1,7 @@
 ---
 title: "Tasti di scelta rapida di Progettazione flussi di lavoro | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "WFDKeyboardShortcuts.UI"
 ms.assetid: 9be75438-a4a3-4781-94e5-45b7ec082358
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 4
 ---
 # Tasti di scelta rapida di Progettazione flussi di lavoro
 È possibile accedere a tutte le principali funzionalità di [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] dalla tastiera.  

@@ -1,8 +1,7 @@
 ---
 title: "Comandi di menu di Spy | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "Spy (comandi di menu)"
 ms.assetid: 802549be-dbd8-4df0-a18b-971900eaa769
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Comandi di menu di Spy
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

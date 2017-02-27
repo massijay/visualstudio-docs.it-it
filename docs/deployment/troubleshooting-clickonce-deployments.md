@@ -1,8 +1,7 @@
 ---
 title: "Troubleshooting ClickOnce Deployments | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "deploying applications [ClickOnce], troubleshooting"
 ms.assetid: 58e90012-f68b-4852-8ae9-58e361cbcc32
 caps.latest.revision: 32
-caps.handback.revision: 32
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 32
 ---
 # Troubleshooting ClickOnce Deployments
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

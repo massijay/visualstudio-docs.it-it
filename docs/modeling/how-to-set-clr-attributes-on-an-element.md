@@ -1,8 +1,7 @@
 ---
 title: "Procedura: impostare gli attributi CLR in un elemento | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "Linguaggio specifico di dominio, attributi personalizzati"
 ms.assetid: b3db3c74-920c-4701-9544-6f75cbe8b7c9
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 19
 ---
 # Procedura: impostare gli attributi CLR in un elemento
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

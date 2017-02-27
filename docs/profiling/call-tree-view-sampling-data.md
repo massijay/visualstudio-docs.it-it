@@ -1,8 +1,7 @@
 ---
 title: "Visualizzazione albero delle chiamate: dati di campionamento del profiler | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "albero delle chiamate, visualizzazione"
 ms.assetid: 5c4e8ec3-d0d3-485a-93bd-9060df4eb739
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Visualizzazione albero delle chiamate: dati di campionamento del profiler
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Scheda File di paging, finestra di dialogo Propriet&#224; processo | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "Proprietà processo per Windows NT"
 ms.assetid: daf41a06-8a55-48f6-95f5-49a8416bd308
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Scheda File di paging, finestra di dialogo Propriet&#224; processo
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

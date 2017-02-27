@@ -1,8 +1,7 @@
 ---
 title: "Ca1003: Utilizzare istanze di gestori eventi generici | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "UseGenericEventHandlerInstances"
 ms.assetid: 402101b6-555d-4cf7-b223-1d9fdfaaf1cd
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 22
 ---
 # Ca1003: Utilizzare istanze di gestori eventi generici
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Scegliere un metodo di raccolta | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "metodi di raccolta di prestazioni"
 ms.assetid: c87cfd3a-0fc7-49ae-9c05-d8480891cc63
 caps.latest.revision: 34
-caps.handback.revision: 34
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 34
 ---
 # Procedura: Scegliere un metodo di raccolta
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

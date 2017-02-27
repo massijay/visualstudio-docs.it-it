@@ -1,53 +1,36 @@
 ---
-title: Classi specifiche delle impostazioni cultura per Windows Form e Web Form globali | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- globalization [Windows Forms], classes
-- Web applications [.NET Framework], globalization
-- culture, culture-specific classes
-- numbers, international
-- localization [Windows Forms], classes
-- globalization [Visual Studio], culture-specific classes
-- Windows Forms, localization
-- international applications [Visual Studio], data formats
-- time [Visual Studio], international
-- dates [Visual Studio], international
-- culture
-- international characters
-- currency formats
-- ASP.NET, globalization
-- classes [Visual Studio], culture-specific
-- localization [Visual Studio], culture-specific classes
+title: "Classi specifiche delle impostazioni cultura per Windows Form e Web Form globali | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-general"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "globalizzazione [Windows Form], classi"
+  - "applicazioni Web [.NET Framework], globalizzazione"
+  - "classi specifiche delle impostazioni cultura, impostazioni cultura"
+  - "numeri, internazionale"
+  - "localizzazione [Windows Form], classi"
+  - "globalizzazione [Visual Studio], classi specifiche delle impostazioni cultura"
+  - "Windows Form, localizzazione"
+  - "applicazioni internazionali [Visual Studio], formati di dati"
+  - "ora [Visual Studio], internazionale"
+  - "date [Visual Studio], internazionale"
+  - "impostazioni cultura"
+  - "caratteri internazionali"
+  - "formati valuta"
+  - "ASP.NET, globalizzazione"
+  - "classi [Visual Studio], impostazioni cultura"
+  - "localizzazione [Visual Studio], classi specifiche delle impostazioni cultura"
 ms.assetid: 0d06a0a4-f887-4f7c-bde7-1d543c06f803
 caps.latest.revision: 10
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 3fb3b66548077a2f92289f1a2f02cc8ae77544cc
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
 # <a name="culture-specific-classes-for-global-windows-forms-and-web-forms"></a>Classi specifiche delle impostazioni cultura per Windows Form e Web Form globali
 Le impostazioni cultura hanno diverse convenzioni per la visualizzazione di date, ore, numeri, valute e altre informazioni. Lo spazio dei nomi <xref:System.Globalization> contiene classi che possono essere usate per modificare il modo in cui i valori specifici delle impostazioni cultura vengono visualizzati, ad esempio <xref:System.Globalization.DateTimeFormatInfo>, **Calendar** e <xref:System.Globalization.NumberFormatInfo>.  

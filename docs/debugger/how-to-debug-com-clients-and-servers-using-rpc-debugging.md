@@ -1,8 +1,7 @@
 ---
 title: "Procedura: eseguire il debug di client e server COM mediante il debug RPC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "RPC (Remote Procedure Call), debug di client e server COM"
 ms.assetid: 3e8526c8-43b5-4b87-8e0d-b22c24f0a3ea
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Procedura: eseguire il debug di client e server COM mediante il debug RPC
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,18 +1,17 @@
 ---
 title: "ActivityDesigner Primitive | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 0a2b613e-dc04-49a1-a787-caec2ec63b90
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 7
 ---
 # ActivityDesigner Primitive
 Gli ActivityDesigner primitivi consentono di creare e configurare diverse attività nello spazio dei nomi <xref:System.Activities.Statement>, quali Assign e Delay.Gli argomenti contenuti in questa sezione forniscono istruzioni sull'utilizzo degli ActivityDesigner e delle finestre di progettazione dei modelli di [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)].  

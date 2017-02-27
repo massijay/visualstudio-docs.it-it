@@ -1,8 +1,7 @@
 ---
 title: "Riferimento (API di debug di Visual Studio) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "Il debug di SDK, fare riferimento"
 ms.assetid: 9810fc50-43c7-4916-9916-1cf333037b51
 caps.latest.revision: 9
-caps.handback.revision: 9
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Riferimento (API di debug di Visual Studio)
 [!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]

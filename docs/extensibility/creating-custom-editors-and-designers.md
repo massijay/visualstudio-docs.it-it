@@ -1,8 +1,7 @@
 ---
 title: "Creazione di finestre di progettazione ed editor personalizzati | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "editor [Visual Studio SDK], personalizzato"
 ms.assetid: b6a5e8b2-0ae1-4fc3-812d-09d40051b435
 caps.latest.revision: 31
-caps.handback.revision: 31
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # Creazione di finestre di progettazione ed editor personalizzati
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

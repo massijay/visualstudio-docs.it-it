@@ -1,8 +1,7 @@
 ---
 title: "ActivityDesigner While | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ f1_keywords:
   - "System.Activities.Statements.While.UI"
 ms.assetid: ea008091-2e4c-4f64-bfa5-afb919552446
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "ErikRe"
 ms.author: "erikre"
 manager: "erikre"
+caps.handback.revision: 5
 ---
 # ActivityDesigner While
 L'attività <xref:System.Activities.Statements.While> esegue l'attività contenuta nel relativo <xref:System.Activities.Statements.While.Body%2A>, mentre l'elemento <xref:System.Activities.Statements.Condition%2A> specificato restituisce **true**.L'attività contenuta potrebbe non essere mai eseguita.Se si desidera eseguirla almeno una volta, utilizzare l'attività <xref:System.Activities.Statements.DoWhile>.  

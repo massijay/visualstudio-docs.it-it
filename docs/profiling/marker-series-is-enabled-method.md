@@ -1,8 +1,7 @@
 ---
 title: "Metodo marker_series::is_enabled | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Concurrency::diagnostic::marker_series::is_enabled (metodo)"
 ms.assetid: 8ce4dd50-ca29-4c72-98d6-582693f7d501
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Metodo marker_series::is_enabled
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

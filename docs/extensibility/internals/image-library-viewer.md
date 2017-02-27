@@ -1,16 +1,16 @@
 ---
 title: "Visualizzatore della libreria di immagini | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 9d9c7fbb-ebae-4b20-9dd8-3c9070c0d0d1
 caps.latest.revision: 6
-caps.handback.revision: 6
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Visualizzatore della libreria di immagini
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Gestori di modifica del valore delle propriet&#224; del dominio | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "Linguaggio specifico di dominio, esecuzione di override sui gestori di eventi."
 ms.assetid: 96d8f392-045e-4bc5-b165-fbaa470a3e16
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 24
 ---
 # Gestori di modifica del valore delle propriet&#224; del dominio
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

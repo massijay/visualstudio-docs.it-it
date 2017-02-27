@@ -1,8 +1,7 @@
 ---
 title: "La registrazione di verbi di estensioni di File | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "verbi di registrazione"
 ms.assetid: 81a58e40-7cd0-4ef4-a475-c4e1e84d6e06
 caps.latest.revision: 16
-caps.handback.revision: 16
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # La registrazione di verbi di estensioni di File
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Visualizzazione dei puntatori all&#39;istruzione (IP, Instruction Pointer): dati di campionamento del profiler | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "Puntatori all'istruzione (visualizzazione)"
 ms.assetid: c7f647bb-c5a3-4708-9f9d-33c0fd6e2e96
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Visualizzazione dei puntatori all&#39;istruzione (IP, Instruction Pointer): dati di campionamento del profiler
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

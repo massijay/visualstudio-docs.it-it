@@ -1,18 +1,17 @@
 ---
 title: "Distribuzione MSI e VSIX di un linguaggio DSL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 6ce16f06-1978-4e19-8cdc-441ee65a3fb2
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 2
 ---
 # Distribuzione MSI e VSIX di un linguaggio DSL
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

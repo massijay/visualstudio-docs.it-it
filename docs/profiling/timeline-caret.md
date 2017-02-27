@@ -1,8 +1,7 @@
 ---
 title: "Punto di inserimento della cronologia | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Visualizzatore di concorrenza, punto di inserimento della cronologia"
 ms.assetid: cc7d567f-b655-4539-810c-6506e7852121
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Punto di inserimento della cronologia
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

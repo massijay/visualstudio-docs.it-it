@@ -1,8 +1,7 @@
 ---
 title: "Organizzare gli oggetti in contenitori nella finestra di progettazione XAML | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 29c80c38-0fa3-48d6-b3a8-3b864f482e44
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Organizzare gli oggetti in contenitori nella finestra di progettazione XAML
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

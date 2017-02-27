@@ -1,8 +1,7 @@
 ---
 title: "Eseguire unit test per le app dello Store in Visual Studio | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,10 +10,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5a6f5b32-bfce-4a63-81e9-02d54c592539
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "alexhomer1"
 ms.author: "ahomer"
 manager: "robinr"
+caps.handback.revision: 12
 ---
 # Eseguire unit test per le app dello Store in Visual Studio
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

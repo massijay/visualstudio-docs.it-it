@@ -1,8 +1,7 @@
 ---
 title: "Versioni di debug di funzioni di allocazione heap | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "perdite di memoria, funzioni della libreria di debug CRT"
 ms.assetid: 91748bdc-f4cd-4d8b-ab98-0493dab7ed0d
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Versioni di debug di funzioni di allocazione heap
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

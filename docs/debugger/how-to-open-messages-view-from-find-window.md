@@ -1,8 +1,7 @@
 ---
 title: "Procedura: aprire la visualizzazione messaggi dalla finestra Trova | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "apertura della visualizzazione messaggi in Spy++"
 ms.assetid: 601a193e-432a-417b-9406-6fec9e401264
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Procedura: aprire la visualizzazione messaggi dalla finestra Trova
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

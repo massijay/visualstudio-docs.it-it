@@ -1,8 +1,7 @@
 ---
 title: "Procedura: sospendere e riprendere la profilatura | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ helpviewer_keywords:
   - "strumenti di profilatura, profilatura remota"
 ms.assetid: b8e76363-65cd-424d-8173-3e2b5f54203b
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Procedura: sospendere e riprendere la profilatura
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

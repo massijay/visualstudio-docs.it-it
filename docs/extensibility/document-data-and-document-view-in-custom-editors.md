@@ -1,8 +1,7 @@
 ---
 title: "Dati del documento e visualizzazione di documento nell&#39;editor personalizzati | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "editor [Visual Studio SDK], personalizzato - i dati del documento e visualizzazione del documento"
 ms.assetid: 71eea623-f566-4feb-84cd-ca1ba71bc493
 caps.latest.revision: 23
-caps.handback.revision: 23
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # Dati del documento e visualizzazione di documento nell&#39;editor personalizzati
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

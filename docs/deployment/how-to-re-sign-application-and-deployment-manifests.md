@@ -1,8 +1,7 @@
 ---
 title: "How to: Re-sign Application and Deployment Manifests | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Office development in Visual Studio, signing manifests"
 ms.assetid: d53bceb9-4d3b-4c22-b909-8f370e7231fb
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 17
 ---
 # How to: Re-sign Application and Deployment Manifests
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Procedura: eseguire il debug di codice inserito | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "Mostra codice sorgente (comando) [debugger]"
 ms.assetid: a1b4104d-d49e-451f-a91e-e39ceaf35875
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # Procedura: eseguire il debug di codice inserito
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

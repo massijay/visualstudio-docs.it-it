@@ -1,8 +1,7 @@
 ---
 title: "CA2146: I tipi devono essere Critical almeno come le interfacce e i tipi base relativi | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ f1_keywords:
   - "CA2146"
 ms.assetid: 241fb784-1f6b-46e5-8ceb-c438e341d38e
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 11
 ---
 # CA2146: I tipi devono essere Critical almeno come le interfacce e i tipi base relativi
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

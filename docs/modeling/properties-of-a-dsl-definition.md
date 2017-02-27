@@ -1,8 +1,7 @@
 ---
 title: "Propriet&#224; di una definizione DSL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-tfs-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,10 +10,10 @@ helpviewer_keywords:
   - "Linguaggio specifico di dominio, file di definizione"
 ms.assetid: 38debcfe-e1a6-4a3f-9d69-3ab07520f2b6
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "alancameronwills"
 ms.author: "awills"
 manager: "douge"
+caps.handback.revision: 13
 ---
 # Propriet&#224; di una definizione DSL
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

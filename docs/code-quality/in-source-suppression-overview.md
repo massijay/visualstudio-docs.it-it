@@ -1,8 +1,7 @@
 ---
 title: "Panoramica dell&#39;eliminazione nell&#39;origine | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,10 +13,10 @@ helpviewer_keywords:
   - "analisi codice, eliminazione origine"
 ms.assetid: f1a2dc6a-a9eb-408c-9078-2571e57d207d
 caps.latest.revision: 40
-caps.handback.revision: 40
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 40
 ---
 # Panoramica dell&#39;eliminazione nell&#39;origine
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

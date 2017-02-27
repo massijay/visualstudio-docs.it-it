@@ -1,8 +1,7 @@
 ---
 title: "ClickOnce Unmanaged API Reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "GetDeploymentDataFromManifest [ClickOnce unmanaged]"
 ms.assetid: ec002138-4054-456d-bcc1-79ac2f4a4fd7
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 6
 ---
 # ClickOnce Unmanaged API Reference
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

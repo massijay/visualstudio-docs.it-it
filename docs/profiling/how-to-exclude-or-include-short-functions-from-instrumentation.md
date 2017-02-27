@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Escludere o includere funzioni brevi nella strumentazione | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "strumenti per la profilatura, escludere funzioni brevi"
 ms.assetid: eaeead79-aafe-4490-86ff-6ed4cad9c15f
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikejo5000"
 ms.author: "mikejo"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Procedura: Escludere o includere funzioni brevi nella strumentazione
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Tastiera, Ambiente, finestra di dialogo Opzioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ f1_keywords:
   - "VS.ToolsOptionsPages.Environment.Keyboard"
 ms.assetid: 038da8dc-6126-4f3e-a361-a58cc04cafb3
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "kempb"
 ms.author: "kempb"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # Tastiera, Ambiente, finestra di dialogo Opzioni
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

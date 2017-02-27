@@ -1,8 +1,7 @@
 ---
 title: "&lt;Signature&gt; Element (ClickOnce Deployment) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "<Signature> element [ClickOnce deployment manifest]"
 ms.assetid: c99b07ad-e8ba-43f2-b0d6-3745e7a7c8b3
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 13
 ---
 # &lt;Signature&gt; Element (ClickOnce Deployment)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

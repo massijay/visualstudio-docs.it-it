@@ -1,8 +1,7 @@
 ---
 title: "Procedura: Personalizzare il dizionario di analisi del codice | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "dizionario, analisi codice"
 ms.assetid: 667e3b4e-beff-48be-b3d1-376e1716a895
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 21
 ---
 # Procedura: Personalizzare il dizionario di analisi del codice
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]

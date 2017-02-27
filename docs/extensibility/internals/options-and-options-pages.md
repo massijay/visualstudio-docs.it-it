@@ -1,8 +1,7 @@
 ---
 title: "Opzioni e le pagine di opzioni | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "Pagine delle opzioni degli strumenti [Visual Studio SDK], gli attributi"
 ms.assetid: e6c0e636-5ec3-450e-b395-fc4bb9d75918
 caps.latest.revision: 34
-caps.handback.revision: 34
 ms.author: "gregvanl"
 manager: "ghogen"
+caps.handback.revision: 34
 ---
 # Opzioni e le pagine di opzioni
 [!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]

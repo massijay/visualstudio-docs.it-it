@@ -1,8 +1,7 @@
 ---
 title: "How to: Specify an Alternate Location for Deployment Updates | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "deployment update, alternative locations"
 ms.assetid: 7faacd35-2638-492d-80f6-6b57e5f820de
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "stevehoag"
 ms.author: "shoag"
 manager: "wpickett"
+caps.handback.revision: 15
 ---
 # How to: Specify an Alternate Location for Deployment Updates
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
