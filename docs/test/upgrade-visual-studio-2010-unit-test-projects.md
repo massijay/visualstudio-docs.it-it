@@ -28,9 +28,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: c5b99a1f1661e412ae097660298942ebb89b15b1
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
+ms.openlocfilehash: 806f5004a4ab3d33d4be86cd4784de989c5fd282
+ms.lasthandoff: 03/03/2017
 
 ---
 # <a name="upgrade-visual-studio-2010-unit-test-projects"></a>Aggiornare progetti di unit test di Visual Studio 2010
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/22/2017
 |Condivisione dei risultati delle esecuzioni tramite log TRX da Esplora test.||È ancora possibile ottenere i log TRX sia dalla riga di comando che da Team Build.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Portabilità, migrazione e aggiornamento dei progetti di Visual Studio](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)   
+ [Portabilità, migrazione e aggiornamento dei progetti di Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md)   
  [Eseguire unit test del codice](../test/unit-test-your-code.md)   
  [Aggiornamento dei test da versioni precedenti di Visual Studio](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)   
  [Aggiornamento dei test codificati dell'interfaccia utente da Visual Studio 2010](../test/upgrading-coded-ui-tests-from-visual-studio-2010.md)
