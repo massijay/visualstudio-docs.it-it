@@ -28,9 +28,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 09f14e5b28a506d4f2112f82ee4fd6b0855a8f93
-ms.openlocfilehash: 67e143e1b95a0e4d881d7d6bccae0d7445897aa2
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 4f93b8c1db59dd8d8a407c82002240641be43018
+ms.openlocfilehash: 1f9248442357c4447703ac6d6dac8a27934904e8
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Procedura: eseguire la migrazione di progetti di estendibilità di Visual Studio 2017
@@ -76,6 +76,8 @@ Per aggiornare i riferimenti NuGet Microsoft.VSSDK.BuildTools:
 ## <a name="make-changes-to-the-vsix-extension-manifest"></a>Apportare le modifiche al manifesto dell'estensione VSIX
 
 Per garantire che l'installazione dell'utente di Visual Studio ha tutti gli assembly necessari per eseguire l'estensione, specificare tutti i componenti dei prerequisiti o i pacchetti nel file manifesto dell'estensione. Quando un utente tenta di installare l'estensione, il VSIXInstaller controllerà per verificare se tutti i prerequisiti sono installati. Se mancano alcuni nodi, l'utente verrà richiesto di installare i componenti mancanti come parte del processo di installazione di estensione.
+
+>**Nota:** , tutte le estensioni devono specificare almeno il componente editor principale di Visual Studio come prerequisito.
 
 * Modificare il file manifesto dell'estensione (in genere chiamato source.extension.vsixmanifest).
 * Verificare `InstallationTarget` include 15.0.
@@ -145,7 +147,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\deven
 * Compilare il progetto VSIX.
 * Decomprimere il progetto VSIX generato.
   * Per impostazione predefinita, la vita file VSIX in bin/Debug o bin/Release come VSIX [YourCustomExtension].
-  * Rinominare VSIX come ZIP visualizzare facilmente il contenuto.
+  * Rinominare con estensione VSIX come ZIP visualizzare facilmente il contenuto.
 * Verificare l'esistenza di tre file:
   * Extension. vsixmanifest
   * manifest
@@ -215,3 +217,4 @@ Esempi:
 
 * Se si dispone di un'estensione del debugger e che il progetto ha un riferimento a VSDebugEng.dll e VSDebug.dll, fare clic sul pulsante filtro nel **file binari o nomi di file** intestazione.  Cercare "VSDebugEng.dll" e fare clic su OK.  Fare clic sul pulsante del filtro nel **file binari o nomi di file** intestazione nuovamente e cercare "VSDebug.dll".  Selezionare la casella di controllo "Aggiungi selezione corrente al filtro" e fare clic su OK.  Ora esaminare il **nome componente** per trovare un componente più correlati per il tipo di estensione. In questo esempio, scelto Just-In-Time del debugger e verrà aggiunto il vsixmanifest.
 * Se si conosce che gestisce il progetto con gli elementi del debugger, è possibile cercare "debugger" nella casella di ricerca del filtro per vedere quali componenti contengono debugger nel relativo nome.
+
