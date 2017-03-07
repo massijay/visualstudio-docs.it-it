@@ -9,6 +9,7 @@
 ### [Variabile temporanea inline](refactoring/inline-temporary-variable.md)
 ### [Spostamento di un tipo nel file corrispondente](refactoring/move-type-to-matching-file.md)
 ### [Rinomina](refactoring/rename.md)
+### [Sincronizzare tipo e nome file](refactoring/sync-type-and-file.md)
 ## [Generazione codice](code-generation-csharp.md)
 ### [Genera classe/tipo](code-generation/generate-class-type.md)
 ### [Genera metodo](code-generation/generate-method.md)
