@@ -1,5 +1,5 @@
-<Window 
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    x:Class="SDKSample.ButtonContentWindow"
-    Title="Button Content">
+      <MediaElement 
+        Name="myMediaElement" 
+        Source="media/wpf.wmv" 
+        LoadedBehavior="Manual" 
+        Width="350" Height="250" />

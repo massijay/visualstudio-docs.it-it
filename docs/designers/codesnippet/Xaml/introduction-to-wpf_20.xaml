@@ -1,8 +1,14 @@
-    <!-- This button will have the style applied to it -->
-    <Button>Click Me!</Button>
+  <!-- UI -->
+  <DockPanel>
+    <!-- Title -->
+    <Label DockPanel.Dock="Top" FontSize="18" Margin="5" Content="My Task List:"/>
+    
+    <!-- Data template is specified by the ItemTemplate attribute -->
+    <ListBox 
+      ItemsSource="{Binding}" 
+      ItemTemplate="{StaticResource myTaskTemplate}" 
+      HorizontalContentAlignment="Stretch" 
+      IsSynchronizedWithCurrentItem="True" 
+      Margin="5,0,5,5" />
 
-    <!-- This label will not have the style applied to it -->
-    <Label>Don't Click Me!</Label>
-
-    <!-- This button will have the style applied to it -->
-    <Button>Click Me!</Button>
+  </DockPanel>

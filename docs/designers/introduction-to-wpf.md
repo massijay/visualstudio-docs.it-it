@@ -203,7 +203,7 @@ End Namespace
   
  L'esempio seguente descrive come usare un oggetto <xref:System.Windows.Controls.DockPanel> per applicare il layout a più controlli <xref:System.Windows.Controls.TextBox>.  
   
- [!CODE [IntroToWPFSnippets#LayoutMARKUP](../CodeSnippet/VS_Snippets_Wpf/IntroToWPFSnippets#layoutmarkup)]  
+ [!code-xml[IntroToWPFSnippets#LayoutMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_1.xaml)]  
   
  <xref:System.Windows.Controls.DockPanel> consente ai controlli <xref:System.Windows.Controls.TextBox> figlio di indicare la modalità di disposizione. A tale scopo, <xref:System.Windows.Controls.DockPanel> implementa una proprietà <xref:System.Windows.Controls.DockPanel.Dock%2A> esposta ai controlli figlio per consentire a ognuno di essi di specificare uno stile di ancoraggio.  
   
@@ -263,9 +263,10 @@ End Namespace
   
  La caratteristica interessante delle forme è che non vengono usate solo per la visualizzazione. Le forme, infatti, implementano molte delle funzionalità fornite dai controlli, incluso l'input della tastiera e del mouse. L'esempio seguente illustra la gestione dell'evento <xref:System.Windows.UIElement.MouseUp> di un oggetto <xref:System.Windows.Shapes.Ellipse>.  
   
- [!CODE [IntroToWPFSnippets#HandleEllipseMouseUpEventMARKUP](../CodeSnippet/VS_Snippets_Wpf/IntroToWPFSnippets#handleellipsemouseupeventmarkup)]  
+ [!code-xml[IntroToWPFSnippets#HandleEllipseMouseUpEventMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_7.xaml)]  
   
- [!CODE [IntroToWPFSnippets#HandleEllipseMouseUpEventCODEBEHIND](../CodeSnippet/VS_Snippets_Wpf/IntroToWPFSnippets#handleellipsemouseupeventcodebehind)]  
+ [!code-vb[IntroToWPFSnippets#HandleEllipseMouseUpEventCODEBEHIND](../designers/codesnippet/VisualBasic/introduction-to-wpf_8.vb)]
+ [!code-cs[IntroToWPFSnippets#HandleEllipseMouseUpEventCODEBEHIND](../designers/codesnippet/CSharp/introduction-to-wpf_8.cs)]  
   
  La figura seguente illustra il risultato del codice precedente.  
   
@@ -318,7 +319,7 @@ End Namespace
 ### Video e audio  
  Il controllo <xref:System.Windows.Controls.MediaElement> consente di riprodurre video e audio e, grazie alle caratteristiche di flessibilità, può essere usato come base per un lettore multimediale personalizzato. Il markup XAML seguente implementa un lettore multimediale.  
   
- [!CODE [IntroToWPFSnippets#MediaElementMARKUP](../CodeSnippet/VS_Snippets_Wpf/IntroToWPFSnippets#mediaelementmarkup)]  
+ [!code-xml[IntroToWPFSnippets#MediaElementMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_9.xaml)]  
   
  La finestra nella figura seguente illustra il funzionamento del controllo <xref:System.Windows.Controls.MediaElement>.  
   
@@ -481,10 +482,7 @@ End Namespace
  [!code-xml[IntroToWPFSnippets#UserControlMARKUP](../designers/codesnippet/Xaml/introduction-to-wpf_29.xaml)]  
   
  [!code-cs[IntroToWPFSnippets#UserControlCODEBEHIND1](../designers/codesnippet/CSharp/introduction-to-wpf_30.cs)]
- [!code-vb[IntroToWPFSnippets#UserControlCODEBEHIND1](../designers/codesnippet/VisualBasic/introduction-to-wpf_30.vb)]  
-[!code-cs[IntroToWPFSnippets#UserControlCODEBEHIND2](../designers/codesnippet/CSharp/introduction-to-wpf_31.cs)]
-[!code-vb[IntroToWPFSnippets#UserControlCODEBEHIND2](../designers/codesnippet/VisualBasic/introduction-to-wpf_31.vb)]  
-[!CODE [IntroToWPFSnippets#UserControlCODEBEHIND3](../CodeSnippet/VS_Snippets_Wpf/IntroToWPFSnippets#usercontrolcodebehind3)]  
+ [!code-vb[IntroToWPFSnippets#UserControlCODEBEHIND1](../designers/codesnippet/VisualBasic/introduction-to-wpf_30.vb)]   
   
  L'esempio seguente illustra il codice XAML necessario per incorporare il controllo utente in un oggetto <xref:System.Windows.Window>.  
   
