@@ -78,7 +78,7 @@ MSBuild /nologo /noconsolelogger /logger:SimpleLogger.dll /verbosity:Detailed
  Nell'esempio riportato di seguito viene illustrata l'implementazione di un logger che scrive il log in un file anziché visualizzarlo nella finestra di console.  
   
 ### Codice  
- [!CODE [msbuild_BasicLogger#1](../CodeSnippet/VS_Snippets_Misc/msbuild_BasicLogger#1)]  
+ [!code-cs[msbuild_BasicLogger#1](../msbuild/codesnippet/CSharp/build-loggers_5.cs)]  
   
 ### Commenti  
   
