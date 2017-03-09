@@ -50,7 +50,7 @@
 #### [Raccogliere dati di concorrenza di thread e processi](collecting-thread-and-process-concurrency-data.md)
 #### [Raccogliere dati di interazione tra livelli](collecting-tier-interaction-data.md)
 #### [Raccogliere dati aggiuntivi relativi alle prestazioni](collecting-additional-performance-data.md)
-##### [How to: Collect Windows Counter Data](how-to-collect-windows-counter-data.md) (Procedura: Raccogliere i dati dei contatori Windows)
+##### [Procedura: Raccogliere i dati dei contatori Windows](how-to-collect-windows-counter-data.md)
 ##### [Procedura: Raccogliere dati ETW (Event Tracing for Windows)](how-to-collect-event-tracing-for-windows-etw-data.md)
 #### [Procedura: Serializzare le informazioni sui simboli](how-to-serialize-symbol-information.md)
 #### [Impostare le opzioni generali della sessione di prestazioni](setting-general-performance-session-options.md)
