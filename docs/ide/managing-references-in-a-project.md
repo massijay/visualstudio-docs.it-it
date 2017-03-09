@@ -43,9 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4b82b8583ec54af9eee383255d20b40674e7c2c1
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
+ms.openlocfilehash: 99a485f2b7ebda9169797db06212ae56dc4d9eb1
+ms.lasthandoff: 03/03/2017
 
 ---
 # <a name="managing-references-in-a-project"></a>Gestione dei riferimenti in un progetto
@@ -72,7 +72,7 @@ Prima di scrivere codice per un componente esterno o servizio connesso, il proge
 ### <a name="project-references"></a>Riferimenti al progetto  
  I progetti della piattaforma UWP (Universal Windows Platform) destinati a Windows 10 possono creare riferimenti ad altri progetti UWP nella soluzione oppure a progetti o file binari di Windows Store destinati a [!INCLUDE[win81](../debugger/includes/win81_md.md)], a condizione che tali progetti non usino API deprecate in Windows 10. Per altre informazioni vedere la pagina relativa al [passaggio da Windows Runtime 8 alla piattaforma UWP](https://msdn.microsoft.com/en-us/library/windows/apps/dn954974.aspx).  
 
- Se si sceglie di destinare di nuovo i progetti di [!INCLUDE[win81](../debugger/includes/win81_md.md)] per Windows 10, vedere [Portabilità, migrazione e aggiornamento dei progetti di Visual Studio](../porting/porting-migrating-and-upgrading-visual-studio-projects.md)  
+ Se si sceglie di destinare di nuovo i progetti di [!INCLUDE[win81](../debugger/includes/win81_md.md)] per Windows 10, vedere [Portabilità, migrazione e aggiornamento dei progetti di Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md)  
 
 ### <a name="extension-sdk-references"></a>Riferimenti all'SDK di estensione  
  I progetti di Windows Store in Visual Basic, C#, C++ e JavaScript destinati alla piattaforma UWP (Universal Windows Platform) possono fare riferimento a SDK di estensione destinati a [!INCLUDE[win81](../debugger/includes/win81_md.md)], a condizione che tali SDK non usino API deprecate in Windows 10. Controllare il sito del fornitore dell'SDK di estensione per verificare se i progetti Windows Store destinati a UWP possono farvi riferimento.  
