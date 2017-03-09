@@ -1,4 +1,4 @@
-# [Strumenti di profilatura](index.md)
+# [Strumenti di profilatura](profiling-tools.md)
 ## [Tour delle funzionalità di profilatura](profiling-feature-tour.md)
 ## [Guida per principianti alla profilatura delle prestazioni](beginners-guide-to-performance-profiling.md)
 ## [Novità negli strumenti di profilatura](what-s-new-in-profiling-tools.md)
