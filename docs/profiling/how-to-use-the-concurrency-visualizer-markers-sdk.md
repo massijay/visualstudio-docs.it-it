@@ -1,42 +1,58 @@
 ---
-title: "Procedura: utilizzare l&#39;SDK dei marcatori del visualizzatore di concorrenza | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: Usare l&quot;SDK del visualizzatore di concorrenza per creare marcatori | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 19a45032-f8a7-4137-890e-2ceeec938b8d
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Procedura: utilizzare l&#39;SDK dei marcatori del visualizzatore di concorrenza
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 1a51a8dbf28be35febf4a0954a997e542ffd0f09
+ms.openlocfilehash: a05e0509ec092f810e0990fbc838707d126595e1
+ms.lasthandoff: 02/22/2017
 
-In questo argomento viene illustrato come utilizzare il Visualizzatore di concorrenza SDK per creare intervalli e scrivere i flag, messaggi e avvisi.  
+---
+# <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>Procedura: utilizzare l'SDK dei marcatori del visualizzatore di concorrenza
+Questo argomento illustra come usare l'SDK del visualizzatore di concorrenza per creare intervalli e scrivere flag, messaggi e avvisi.  
   
-### <a name="to-use-c"></a>Utilizzo di C++  
+### <a name="to-use-c"></a>Per usare C++  
   
-1.  Aggiungere il supporto di Visualizzatore di concorrenza SDK all'applicazione. Per ulteriori informazioni, vedere [Visualizzatore di concorrenza SDK](../profiling/concurrency-visualizer-sdk.md).  
+1.  Aggiungere il supporto dell'SDK del visualizzatore di concorrenza all'applicazione. Per altre informazioni, vedere [SDK del visualizzatore di concorrenza](../profiling/concurrency-visualizer-sdk.md).  
   
-2.  Aggiungere un `include` istruzione e una `using` istruzione per il SDK.  
+2.  Aggiungere un'istruzione `include` e un'istruzione `using` per l'SDK.  
   
-    ```cpp  
+    ```C++  
   
     #include <cvmarkersobj.h>  
     using namespace Concurrency::diagnostic;  
   
     ```  
   
-3.  Aggiungere il codice per creare tre intervalli nella serie marcatore predefinito e la scrittura di un flag, un messaggio e un avviso, uno per ogni intervallo. I metodi per scrivere i flag, messaggi e gli avvisi sono membri di [marker_series](../profiling/marker-series-class.md) (classe). Il costruttore per il [span](../profiling/span-class.md) classe richiede un `marker_series` dell'oggetto, in modo che ogni estensione è associata a una serie di marcatori specifico. Oggetto `span` termina quando viene eliminata.  
+3.  Aggiungere il codice per creare tre intervalli nella serie di marcatori predefiniti e scrivere un flag, un messaggio e un avviso, uno per ogni intervallo. I metodi per la scrittura di flag, messaggi e avvisi sono membri della classe [marker_series](../profiling/marker-series-class.md). Il costruttore per la classe [span](../profiling/span-class.md) richiede un oggetto `marker_series`, in modo che ogni intervallo sia associato a una serie di marcatori specifica. Una classe `span` termina quando viene eliminata.  
   
-    ```cpp  
+    ```C++  
   
     marker_series series;  
     span *flagSpan = new span(series, 1, _T("flag span"));  
@@ -53,13 +69,13 @@ In questo argomento viene illustrato come utilizzare il Visualizzatore di concor
   
     ```  
   
-4.  Nella barra dei menu, scegliere **Analizza**, **concorrenze**, **inizia con il progetto corrente** per eseguire l'applicazione e visualizzare il Visualizzatore di concorrenza. Nella figura seguente mostra gli intervalli di tre e tre i marcatori nel Visualizzatore di concorrenza.  
+4.  Nella barra dei menu scegliere **Analizza**, **Visualizzatore di concorrenza**, **Avvio con progetto corrente** per eseguire l'app e visualizzare il visualizzatore di concorrenza. La figura seguente mostra i tre intervalli e i tre marcatori nel visualizzatore di concorrenza.  
   
-     ![Visualizzatore di concorrenza con 3 marcatori e avvisi](../profiling/media/cvmarkersnative.png "CvMarkersNative")  
+     ![Visualizzatore di concorrenza con tre marcatori e avvisi](../profiling/media/cvmarkersnative.png "CvMarkersNative")  
   
-5.  Aggiungere codice per creare una serie di marcatori personalizzate chiamando il costruttore per `marker_series` che accetta un nome di stringa per la serie di marcatore.  
+5.  Aggiungere il codice per creare un'altra serie di marcatori personalizzati chiamando il costruttore per `marker_series` che accetta un nome di stringa per la serie di marcatori.  
   
-    ```cpp  
+    ```C++  
   
     marker_series flagSeries(_T("flag series"));  
     span *flagSeriesSpan = new span(flagSeries, 1, _T("flag span"));  
@@ -77,28 +93,28 @@ In questo argomento viene illustrato come utilizzare il Visualizzatore di concor
   
     ```  
   
-6.  Avviare il progetto corrente per visualizzare il Visualizzatore di concorrenza. La serie di due marcatori vengono visualizzati nella propria corsie nella visualizzazione thread. La figura seguente mostra due nuovi intervalli.  
+6.  Avviare il progetto corrente per visualizzare il visualizzatore di concorrenza. Le due serie di marcatori vengono visualizzate nelle rispettive corsie nella visualizzazione Thread. La figura seguente mostra i due nuovi intervalli.  
   
-     ![Visualizzatore di concorrenza con 3 serie di marcatori personalizzati](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")  
+     ![Visualizzatore di concorrenza con tre serie di marcatori personalizzati](../profiling/media/cvmarkerseriesnative.png "CvMarkerSeriesNative")  
   
-### <a name="to-use-visual-basic-or-c"></a>Per utilizzare Visual Basic o C#  
+### <a name="to-use-visual-basic-or-c"></a>Per usare Visual Basic o C# #
   
-1.  Aggiungere il supporto di Visualizzatore di concorrenza SDK all'applicazione. Per ulteriori informazioni, vedere [Visualizzatore di concorrenza SDK](../profiling/concurrency-visualizer-sdk.md).  
+1.  Aggiungere il supporto dell'SDK del visualizzatore di concorrenza all'applicazione. Per altre informazioni, vedere [SDK del visualizzatore di concorrenza](../profiling/concurrency-visualizer-sdk.md).  
   
-2.  Aggiungere un `using` o `Imports` istruzione per il SDK.  
+2.  Aggiungere un'istruzione `using` o `Imports` per l'SDK.  
   
-    ```vb  
+    ```VB  
     Imports Microsoft.ConcurrencyVisualizer.Instrumentation  
   
     ```  
   
-    ```c#  
+    ```CSharp  
     using Microsoft.ConcurrencyVisualizer.Instrumentation;  
     ```  
   
-3.  Aggiungere il codice per creare tre intervalli sulla serie marcatore predefinito e la scrittura di un flag, un messaggio e un avviso, uno per ogni intervallo. Si crea un <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Span> oggetto chiamando il metodo statico [EnterSpan](assetId:///EnterSpan?qualifyHint=False&autoUpgrade=True) metodo. Per scrivere la serie predefinita, utilizzare i metodi statici di scrittura del <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers> (classe).  
+3.  Aggiungere il codice per creare tre intervalli nella serie di marcatori predefiniti e scrivere un flag, un messaggio e un avviso, uno per ogni intervallo. Viene creato un oggetto <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Span> chiamando il metodo statico [EnterSpan](assetId:///EnterSpan?qualifyHint=False&autoUpgrade=True). Per scrivere nella serie predefinita, è possibile usare i metodi di scrittura statici della classe <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers>.  
   
-    ```vb  
+    ```VB  
   
     Dim flagSpan As Span = Markers.EnterSpan("flag span")  
     Markers.WriteFlag("Here is the flag.")  
@@ -118,7 +134,7 @@ In questo argomento viene illustrato come utilizzare il Visualizzatore di concor
   
     ```  
   
-    ```c#  
+    ```CSharp  
   
     Span flagSpan = Markers.EnterSpan("flag span");  
     Markers.WriteFlag("Here is the flag.");  
@@ -137,13 +153,13 @@ In questo argomento viene illustrato come utilizzare il Visualizzatore di concor
     alertSpan.Leave();  
     ```  
   
-4.  Nella barra dei menu, scegliere **Analizza**, **concorrenze**, **inizia con il progetto corrente** per eseguire l'applicazione e visualizzare il Visualizzatore di concorrenza. Nella figura seguente mostra gli intervalli di tre e tre i marcatori nella visualizzazione thread del Visualizzatore di concorrenza.  
+4.  Nella barra dei menu scegliere **Analizza**, **Visualizzatore di concorrenza**, **Avvio con progetto corrente** per eseguire l'app e visualizzare il visualizzatore di concorrenza. La figura seguente mostra i tre intervalli e i tre marcatori nella visualizzazione Thread del visualizzatore di concorrenza.  
   
      ![Visualizzatore di concorrenza con marcatori e avvisi](../profiling/media/cvmarkersmanaged.png "CvMarkersManaged")  
   
-5.  Aggiungere codice per creare una serie di marcatori cliente tramite il metodo statico <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.CreateMarkerSeries%2A> metodo. Il <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerSeries> classe contiene metodi per la creazione di intervalli e la scrittura di flag, messaggi e avvisi.  
+5.  Aggiungere il codice per creare una serie di marcatori personalizzati con il metodo statico <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.CreateMarkerSeries%2A>. La classe <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerSeries> contiene metodi per la creazione di intervalli e la scrittura di flag, messaggi e avvisi.  
   
-    ```vb  
+    ```VB  
   
     Dim flagSeries As MarkerSeries = Markers.DefaultWriter.CreateMarkerSeries("flag series")  
     Dim flagSeriesSpan As Span = flagSeries.EnterSpan("flag span")  
@@ -159,7 +175,7 @@ In questo argomento viene illustrato come utilizzare il Visualizzatore di concor
     messageSeriesSpan.Leave()  
     ```  
   
-    ```c#  
+    ```CSharp  
   
     MarkerSeries flagSeries = Markers.DefaultWriter.CreateMarkerSeries("flag series");  
     Span flagSeriesSpan = flagSeries.EnterSpan("flag span");  
@@ -175,9 +191,10 @@ In questo argomento viene illustrato come utilizzare il Visualizzatore di concor
     messageSeriesSpan.Leave();  
     ```  
   
-6.  Avviare il progetto corrente per visualizzare il Visualizzatore di concorrenza. La serie di tre marcatore vengono visualizzati nella propria corsie nella visualizzazione thread. La figura seguente mostra tre nuovi intervalli.  
+6.  Avviare il progetto corrente per visualizzare il visualizzatore di concorrenza. Le tre serie di marcatori vengono visualizzate nelle rispettive corsie nella visualizzazione Thread. La figura seguente mostra i tre nuovi intervalli.  
   
-     ![Visualizzatore di concorrenza con 3 serie di marcatori personalizzati](../profiling/media/cvmarkerseriesmanaged.png "CvMarkerSeriesManaged")  
+     ![Visualizzatore di concorrenza con tre serie di marcatori personalizzati](../profiling/media/cvmarkerseriesmanaged.png "CvMarkerSeriesManaged")  
   
 ## <a name="see-also"></a>Vedere anche  
- [SDK del Visualizzatore di concorrenza](../profiling/concurrency-visualizer-sdk.md)
+ [Concurrency Visualizer SDK](../profiling/concurrency-visualizer-sdk.md) (SDK del visualizzatore di concorrenza)
+

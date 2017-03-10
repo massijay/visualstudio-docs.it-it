@@ -1,48 +1,63 @@
 ---
-title: "How to: Configure Targets and Tasks | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Procedura: Configurare destinazioni e attività | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 92814100-392a-471d-96fd-e26f637d6cc2
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# How to: Configure Targets and Tasks
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: ac979e7287046164db37848778f648656f7230a6
+ms.lasthandoff: 02/22/2017
 
-Le attività MSBuild selezionati possono essere impostati l ' ambiente che riguardano, indipendentemente dall' ambiente del computer di sviluppo.  Ad esempio, quando si utilizza un computer a 64 bit per compilare un'applicazione destinata all'architettura a 32 bit, le attività selezionate vengono eseguite in un processo a 32 bit.  
+---
+# <a name="how-to-configure-targets-and-tasks"></a>Procedura: Configurare destinazioni e attività
+Alcune attività MSBuild possono essere impostate in modo da essere eseguite nell'ambiente a cui sono destinate, indipendentemente dall'ambiente del computer di sviluppo. Se ad esempio si usa un computer a 64 bit per creare un'applicazione destinata a un'architettura a 32 bit, le attività selezionate vengono eseguite in un processo a 32 bit.  
   
 > [!NOTE]
->  Se un'attività di compilazione viene scritta in un linguaggio.NET, ad esempio Visual c\# o Visual Basic e non utilizzano risorse native o strumenti, quindi verrà eseguita nel contesto di destinazione senza adattamento.  
+>  Se un'attività di compilazione è scritta in un linguaggio .NET, ad esempio in Visual C# o Visual Basic, e non usa strumenti o risorse native, potrà essere eseguita in qualsiasi contesto di destinazione senza adattamento.  
   
-## Attributi e parametri di attività UsingTask  
- I seguenti attributi di `UsingTask` influiscono su tutte le operazioni di un'attività in un processo di compilazione specifico:  
+## <a name="usingtask-attributes-and-task-parameters"></a>Attributi UsingTask e parametri dell'attività  
+ Gli attributi `UsingTask` seguenti interessano tutte le operazioni di un'attività in un determinato processo di compilazione:  
   
--   L'attributo di `Runtime` , se presente, impostare la versione \(CLR\) di Common Language Runtime e può eseguire uno di questi valori: `CLR2`, `CLR4`, `CurrentRuntime`, o `*` \(qualsiasi runtime\).  
+-   L'attributo `Runtime`, se presente, imposta la versione CLR (Common Language Runtime) e può assumere uno dei valori seguenti: `CLR2`, `CLR4`, `CurrentRuntime` o `*` (qualsiasi runtime).  
   
--   L'attributo di `Architecture` , se presente, impostare la piattaforma e il numero di bit e può eseguire uno di questi valori: `x86`, `x64`, `CurrentArchitecture`, o `*` \(qualsiasi architettura\).  
+-   L'attributo `Architecture`, se presente, imposta la piattaforma e il numero di bit e può assumere uno dei valori seguenti: `x86`, `x64`, `CurrentArchitecture` o `*` (qualsiasi architettura).  
   
--   L'attributo di `TaskFactory` , se presente, impostare la factory delle attività che crea ed esegue l'istanza dell' attività e accetta solo il valore `TaskHostFactory`.  Per ulteriori informazioni, vedere le factory delle attività più avanti in questo documento.  
+-   L'attributo `TaskFactory`, se presente, imposta la factory delle attività che crea ed esegue l'istanza dell'attività e può assumere solo il valore `TaskHostFactory`. Per altre informazioni, vedere la sezione Factory delle attività più avanti in questo documento.  
   
-```  
+```xml  
 <UsingTask TaskName="SimpleTask"   
    Runtime="CLR2"  
    Architecture="x86"  
    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v3.5.dll" />  
 ```  
   
- È inoltre possibile utilizzare i parametri di `MSBuildArchitecture` e di `MSBuildRuntime` per impostare il contesto di destinazione di una singola attività.  
+ Per impostare il contesto di destinazione di una singola attività è possibile usare anche i parametri `MSBuildRuntime` e `MSBuildArchitecture`.  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
    <Target Name="MyTarget">  
       <SimpleTask MSBuildRuntime="CLR2" MSBuildArchitecture= "x86"/>  
@@ -50,14 +65,14 @@ Le attività MSBuild selezionati possono essere impostati l ' ambiente che rigua
 </Project>  
 ```  
   
- Prima di MSBuild esegue un'attività, cerca una corrispondenza `UsingTask` con lo stesso contesto di destinazione.  I parametri specificati in `UsingTask` ma non nell' attività corrispondente vengono considerati essere individuati.  I parametri specificati nell' attività ma non in `UsingTask` corrispondente vengono considerati essere individuati.  Se i valori dei parametri non sono specificati in `UsingTask` o nell' attività, l'impostazione predefinita di valori a `*` \(qualsiasi parametro\).  
+ Prima di eseguire un'attività, MSBuild cerca un attributo `UsingTask` corrispondente con lo stesso contesto di destinazione.  Deve essere trovata una corrispondenza anche per i parametri specificati in `UsingTask` ma non nell'attività corrispondente,  così come per i parametri specificati nell'attività ma non nell'attributo `UsingTask` corrispondente. Se non sono stati specificati valori di parametro né per `UsingTask` né per l'attività, l'impostazione predefinita dei valori è `*` (qualsiasi parametro).  
   
 > [!WARNING]
->  Se più di un `UsingTask` esiste e includono tutti `TaskName`corrispondente, `Runtime`e attributi di `Architecture` , l'ultimo da valutare sostituire gli altri.  
+>  Se sono presenti più elementi `UsingTask` e hanno tutti attributi `TaskName`, `Runtime` e `Architecture` corrispondenti, l'ultimo da valutare sostituisce gli altri.  
   
- Se i parametri vengono impostati sull' attività, MSBuild tenta di trovare almeno `UsingTask` corrispondente ai parametri o, non in conflitto tra loro.  Più di un `UsingTask` possibile specificare il contesto della stessa attività.  Ad esempio, un'attività che presenta eseguibili differenti per gli ambienti di destinazione diversi potrebbe essere simile al seguente:  
+ Se sono stati impostati parametri nell'attività, MSBuild tenta di trovare un elemento `UsingTask` che corrisponda, o almeno non sia in conflitto, con i parametri impostati.  È possibile che più elementi `UsingTask` specifichino il contesto di destinazione per la stessa attività.  Un'attività con vari file eseguibili per diversi ambienti di destinazione, ad esempio, avrebbe un aspetto simile al seguente:  
   
-```  
+```xml  
 <UsingTask TaskName="MyTool"   
    Runtime="CLR2"  
    Architecture="x86"  
@@ -76,20 +91,20 @@ Le attività MSBuild selezionati possono essere impostati l ' ambiente che rigua
   
 ```  
   
-## Factory delle attività  
- Prima di eseguire un'attività, controlli MSBuild da verificare se è definita da eseguire nel contesto corrente del software.  Se l'attività viene così definita, MSBuild la passa al AssemblyTaskFactory, che viene quindi eseguito nel processo corrente; in caso contrario, MSBuild passa l'attività a TaskHostFactory, che esegue l'attività in un processo corrispondente al contesto di destinazione.  Anche se il contesto corrente e la corrispondenza di destinazione di contesto, è possibile forzare un'attività eseguire out\-of\-process \(per l'isolamento, sicurezza, o altri motivi\) impostando `TaskFactory` a `TaskHostFactory`.  
+## <a name="task-factories"></a>Factory delle attività  
+ Prima di eseguire un'attività, MSBuild verifica di essere stato designato per l'esecuzione nel contesto software corrente.  In questo caso, MSBuild passa l'attività a AssemblyTaskFactory, che la esegue nel processo corrente; in caso contrario, MSBuild passa l'attività a TaskHostFactory, che la esegue in un processo corrispondente al contesto di destinazione. Anche se il contesto corrente e il contesto di destinazione corrispondono, è possibile imporre l'esecuzione out-of-process di un'attività (per motivi di isolamento, sicurezza o di altri tipo) impostando `TaskFactory` su `TaskHostFactory`.  
   
-```  
+```xml  
 <UsingTask TaskName="MisbehavingTask"   
    TaskFactory="TaskHostFactory"  
    AssemblyFile="$(MSBuildToolsPath)\MyTasks.dll">  
 </UsingTask>  
 ```  
   
-## Parametri dell' attività fittizi  
- Come tutti gli altri parametri dell' attività, `MSBuildRuntime` e `MSBuildArchitecture` è possibile impostare le proprietà di compilazione.  
+## <a name="phantom-task-parameters"></a>Parametri fantasma dell'attività  
+ Come qualsiasi altro parametro dell'attività, `MSBuildRuntime` e `MSBuildArchitecture` possono essere impostati dalle proprietà di compilazione.  
   
-```  
+```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
    <PropertyGroup>  
       <FrameworkVersion>3.0</FrameworkVersion>  
@@ -98,17 +113,17 @@ Le attività MSBuild selezionati possono essere impostati l ' ambiente che rigua
       <SimpleTask MSBuildRuntime="$(FrameworkVerion)" MSBuildArchitecture= "x86"/>  
    </Target>  
 </Project>  
-```  
+```xml  
   
- A differenza di altri parametri delle attività, `MSBuildRuntime` e `MSBuildArchitecture` non sono evidenti all' attività stessa.  Per scrivere un'attività che è consapevole del contesto in cui è in esecuzione, è necessario verificare il contesto chiamando .NET Framework, o utilizzare le proprietà di compilazione per comunicare le informazioni sul contesto con altri parametri delle attività.  
-  
-> [!NOTE]
->  gli attributi di`UsingTask` possono essere impostate le proprietà dell' ambiente e set di strumenti.  
-  
- I parametri di `MSBuildArchitecture` e di `MSBuildRuntime` forniscono una modalità più flessibile impostare il contesto di destinazione, ma anche il più ristretto in.  Da un lato, perché sono impostati sull' istanza stessa di attività e non vengono valutati finché l'attività non è accinga per ' esecuzione, possono derivare il relativo valore dall' ambito completo delle proprietà disponibili sia in valutazione\-ora che in fase di compilazione.  Di altra parte, questi parametri vengono applicate solo a una determinata istanza di un'attività in una particolare destinazione.  
+ Unlike other task parameters, `MSBuildRuntime` and `MSBuildArchitecture` are not apparent to the task itself.  To write a task that is aware of the context in which it runs, you must either test the context by calling the .NET Framework, or use build properties to pass the context information through other task parameters.  
   
 > [!NOTE]
->  I parametri delle attività vengono valutati nel contesto del nodo padre, non nel contesto dell' host delle attività. Le variabili di ambiente che sono tempo di esecuzione o dipendente di architettura \(come il percorso dei file di programma\) valuteranno al valore corrispondente al nodo padre.  Tuttavia, se la stessa variabile di ambiente viene eseguita direttamente dall' attività, correttamente verranno valutati nel contesto dell' host delle attività.  
+>  `UsingTask` attributes can be set from toolset and environment properties.  
   
-## Vedere anche  
+ The `MSBuildRuntime` and `MSBuildArchitecture` parameters provide the most flexible way to set the target context, but also the most limited in scope.  On the one hand, because they are set on the task instance itself and are not evaluated until the task is about to run, they can derive their value from the full scope of properties available at both evaluation-time and build-time.  On the other hand, these parameters only apply to a particular instance of a task in a particular target.  
+  
+> [!NOTE]
+>  Task parameters are evaluated in the context of the parent node, not in the context of the task host.Environment variables that are runtime- or architecture- dependent (such as the Program files location) will evaluate to the value that matches the parent node.  However, if the same environment variable is read directly by the task, it will correctly be evaluated in the context of the task host.  
+  
+## See Also  
  [Configuring Targets and Tasks](../msbuild/configuring-targets-and-tasks.md)

@@ -1,54 +1,69 @@
 ---
-title: "Procedura: Ignorare gli errori nelle attivit&#224; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild, ignorando gli errori"
-  - "ContinueOnError (attributo) [MSBuild]"
+title: "Procedura: Ignorare gli errori nelle attività | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, ignoring errors
+- ContinueOnError attribute [MSBuild]
 ms.assetid: e2f1ca4f-787b-44bd-bc64-81a036025e96
 caps.latest.revision: 18
-caps.handback.revision: 18
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Procedura: Ignorare gli errori nelle attivit&#224;
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
+ms.openlocfilehash: 263a2cdc87b46a70d9114a830955a54cde85d527
+ms.lasthandoff: 02/22/2017
 
-Talvolta una compilazione per la tolleranza di errore di errori in determinate attività. Se tali attività non critici per l'esito negativo, si desidera che la compilazione continuare poiché è ancora possibile produrre l'output desiderato. Ad esempio, se un progetto utilizza un `SendMail` attività per inviare un messaggio di posta elettronica dopo ogni componente viene compilato, può essere ritenuto accettabile per la generazione proceda fino al completamento anche quando il server di posta elettronica non sono disponibili e non possono essere inviati i messaggi di stato. In alternativa, ad esempio, se i file intermedi vengono generalmente eliminati durante la compilazione, può essere ritenuto accettabile per la generazione proceda fino al completamento anche quando tali file non possono essere eliminati.  
+---
+# <a name="how-to-ignore-errors-in-tasks"></a>Procedura: Ignorare gli errori nelle attività
+A volte è necessario che una compilazione sia a tolleranza di errore in determinate attività. Se tali attività non critiche hanno esito negativo, si vuole che la compilazione prosegua perché può ugualmente produrre l'output necessario. Se, ad esempio, un progetto usa un'attività `SendMail` per inviare un messaggio di posta elettronica dopo che ogni componente è stato compilato, si può considerare accettabile che la compilazione continui fino al completamento anche quando i server di posta non sono disponibili e i messaggi di stato non possono essere inviati. O anche, ad esempio, se di solito i file intermedi vengono eliminati durante la compilazione, si può considerare accettabile che la compilazione continui fino al completamento anche quando tali file non possono essere eliminati.  
   
-## <a name="using-the-continueonerror-attribute"></a>Utilizzo dell'attributo ContinueOnError  
- Il `ContinueOnError` attributo il `Task` elemento controlla se una compilazione si interrompe o continua quando si verifica un errore in un'attività. Questo attributo controlla inoltre se gli errori vengono considerati come errori o avvisi durante la compilazione continua.  
+## <a name="using-the-continueonerror-attribute"></a>Uso dell'attributo ContinueOnError  
+ L'attributo `ContinueOnError` dell'elemento `Task` controlla se una compilazione si arresta o continua quando si verifica un errore dell'attività. Questo attributo controlla anche se gli errori vengono considerati errori o avvisi quando la compilazione continua.  
   
- Il `ContinueOnError` attributo può contenere uno dei valori seguenti:  
+ L'attributo `ContinueOnError` può contenere uno dei valori seguenti:  
   
--   **WarnAndContinue** o **true**. Quando un'attività non riesce, le successive attività di [destinazione](../msbuild/target-element-msbuild.md) elemento e la compilazione continua l'esecuzione, mentre tutti gli errori dall'attività vengono considerati come avvisi.  
+-   **WarnAndContinue** o **true**. Quando un'attività ha esito negativo, l'esecuzione delle attività successive nell'elemento [Target](../msbuild/target-element-msbuild.md) e della compilazione continua e tutti gli errori delle attività vengono considerati avvisi.  
   
--   **ErrorAndContinue**. Quando un'attività non riesce, le successive attività di `Target` elemento e la compilazione continua l'esecuzione, mentre tutti gli errori dall'attività vengono considerati come errori.  
+-   **ErrorAndContinue**. Quando un'attività ha esito negativo, l'esecuzione delle attività successive nell'elemento `Target` e della compilazione continua e tutti gli errori delle attività vengono considerati errori.  
   
--   **ErrorAndStop** o **false** (impostazione predefinita). Quando un'attività non riesce, le attività rimanenti di `Target` elemento e la compilazione non vengono eseguite e l'intero `Target` elemento e la compilazione è considerato non riuscito.  
+-   **ErrorAndStop** o **false** (impostazione predefinita). Quando un'attività ha esito negativo, le attività rimanenti nell'elemento `Target` e la compilazione non vengono eseguite e l'intero elemento `Target` e la compilazione vengono considerati come non riusciti.  
   
- Versioni di .NET Framework precedenti alla 4.5 supportato solo il `true` e `false` valori.  
+ Le versioni di .NET Framework precedenti alla 4.5 supportano solo i valori `true` e `false`.  
   
- Il valore predefinito di `ContinueOnError` è `ErrorAndStop`. Se si imposta l'attributo su `ErrorAndStop`, rendere esplicito il comportamento per chiunque legga il file di progetto.  
+ Il valore predefinito di `ContinueOnError` è `ErrorAndStop`. Se si imposta l'attributo su `ErrorAndStop`, il comportamento diventa esplicito per chiunque legga il file di progetto.  
   
 #### <a name="to-ignore-an-error-in-a-task"></a>Per ignorare un errore in un'attività  
   
--   Utilizzare il `ContinueOnError` attributo dell'attività. Ad esempio:  
+-   Usare l'attributo `ContinueOnError` dell'attività. Ad esempio:  
   
      `<Delete Files="@(Files)" ContinueOnError="WarnAndContinue"/>`  
   
 ## <a name="example"></a>Esempio  
- Esempio di codice riportato di seguito viene illustrato che il `Build` destinazione continui a essere eseguita e la compilazione viene considerata un esito positivo, anche se il `Delete` attività ha esito negativo.  
+ L'esempio di codice seguente mostra che la destinazione `Build` è ancora in esecuzione e che la compilazione è considerata riuscita, anche se l'attività `Delete` ha esito negativo.  
   
-```  
+```xml  
 <Project DefaultTargets="FakeBuild"  
     xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <ItemGroup>  
@@ -65,6 +80,6 @@ Talvolta una compilazione per la tolleranza di errore di errori in determinate a
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[MSBuild](../msbuild/msbuild1.md)  
- [Riferimento di attività](../msbuild/msbuild-task-reference.md)   
+[MSBuild](../msbuild/msbuild.md)  
+ [Riferimento alle attività](../msbuild/msbuild-task-reference.md)   
  [Attività](../msbuild/msbuild-tasks.md)
