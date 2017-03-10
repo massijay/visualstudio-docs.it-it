@@ -1,45 +1,61 @@
 ---
-title: "Introduzione agli strumenti per la profilatura | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "introduzione, prestazioni"
-  - "introduzione, strumenti per la profilatura"
+title: Introduzione agli strumenti per le prestazioni | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- getting started, performance
+- getting started, profiling tools
 ms.assetid: 02085214-a8e4-40fd-9b26-32391a7a7082
 caps.latest.revision: 28
-caps.handback.revision: 25
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Introduzione agli strumenti per la profilatura
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 6bab61ca406ec487d8ee9a75d35bfdd6dd7f7850
+ms.lasthandoff: 02/22/2017
 
-In questa sezione viene fornita una panoramica dei concetti e delle attività che verranno applicati in fase di raccolta, visualizzazione e analisi delle prestazioni del codice mediante gli strumenti di profilatura di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+---
+# <a name="getting-started-with-performance-tools"></a>Introduzione agli strumenti per le prestazioni
+Questa sezione fornisce una panoramica dei concetti e delle attività applicabili in fase di raccolta, visualizzazione e analisi delle prestazioni del codice mediante gli strumenti per le prestazioni di Visual Studio.  
   
- Negli strumenti di profilatura di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sono disponibili diverse modalità per raccogliere e analizzare dati relativi alle prestazioni.  In molti casi, tuttavia, la procedura migliore per iniziare consiste nell'utilizzare le impostazioni predefinite della Creazione guidata sessione di prestazioni.  Con la Creazione guidata sessione di prestazioni è possibile raccogliere statistiche dell'applicazione che consentono di individuare eventuali problemi di prestazioni nel codice.  
+ Questi strumenti offrono diverse modalità per la raccolta e l'analisi dei dati relativi alle prestazioni. In molti casi, tuttavia, la procedura migliore per iniziare consiste nell'usare le impostazioni predefinite della Creazione guidata sessione di prestazioni, che consente di raccogliere statistiche dell'applicazione che possono indicare eventuali problemi di prestazioni nel codice.  
   
--   *Gli avvisi di prestazione* notificano i problemi comuni relativi alla codifica.  Gli avvisi vengono visualizzati nella finestra Errori di Visual Studio.  È possibile passare dall'avviso al codice sorgente e ad argomenti dettagliati della Guida che consentono di scrivere un codice più efficace.  
+-   Gli *avvisi di prestazioni* notificano i problemi comuni relativi alla codifica. Gli avvisi vengono visualizzati nella finestra Errori di Visual Studio. È possibile passare dall'avviso al codice sorgente e ad argomenti dettagliati della Guida che consentono di scrivere un codice più efficace.  
   
--   I rapporti degli strumenti di profilatura consentono di visualizzare diversi livelli della struttura dell'applicazione, dalle righe del codice sorgente ai processi, nonché dati di esecuzione dei programmi, dalle funzioni chiamanti e chiamate di una funzione specifica alla struttura ad albero delle chiamate dell'intera applicazione.  
+-   I rapporti di prestazioni offrono visualizzazioni dei diversi livelli della struttura dell'applicazione, dalle righe di codice sorgente ai processi, e dei dati di esecuzione dei programmi, dalle funzioni chiamanti e chiamate di una funzione specifica all'albero delle chiamate dell'intera applicazione.  
   
-## Attività comuni  
+## <a name="common-tasks"></a>Attività comuni  
   
-|Task|Contenuto correlato|  
-|----------|-------------------------|  
-|**Profilare in modo rapido un'applicazione o un sito Web:** utilizzare la Creazione guidata sessione di prestazioni per configurare ed eseguire una sessione di analisi per una soluzione Visual Studio o un sito Web.|-   [Guida per principianti alla profilatura delle prestazioni](../profiling/beginners-guide-to-performance-profiling.md)<br />-   [Procedura: Raccogliere dati sulle prestazioni per un sito Web](../profiling/how-to-collect-performance-data-for-a-web-site.md)|  
-|**Profilare un'applicazione senza la procedura guidata:** imparare a utilizzare le pagine delle proprietà della sessione di prestazioni per creare una sessione di prestazioni.|-   [Procedura: Creare manualmente sessioni di prestazioni](../profiling/how-to-manually-create-performance-sessions.md)|  
-|**Procedura:** Acquisire dimestichezza e pratica profilando un'applicazione di esempio.|-   [Procedura dettagliata: Profilatura di applicazioni](../profiling/walkthrough-identifying-performance-problems.md)<br />-   [Esempio PeopleTrax](../profiling/peopletrax-sample-profiling-tools.md)|  
+|Attività|Contenuto correlato|  
+|----------|---------------------|  
+|**Profilare in modo rapido un'applicazione o un sito Web:** usare la Creazione guidata sessione di prestazioni per configurare ed eseguire una sessione di profilatura per una soluzione Visual Studio o un sito Web.|-   [Guida per principianti alla profilatura delle prestazioni](../profiling/beginners-guide-to-cpu-sampling.md)<br />-   [Procedura: Raccogliere dati sulle prestazioni per un sito Web](../profiling/how-to-collect-performance-data-for-a-web-site.md)|  
+|**Profilare un'applicazione senza la procedura guidata:** imparare a usare le pagine delle proprietà della sessione di prestazioni per creare una sessione di prestazioni.|-   [Procedura: Creare manualmente sessioni di prestazioni](../profiling/how-to-manually-create-performance-sessions.md)|  
+|**Esercitazione:** acquisire esperienza pratica profilando un'applicazione di esempio.|-   [Procedura dettagliata: Identificazione dei problemi di prestazioni](../profiling/walkthrough-identifying-performance-problems.md)<br />-   [Esempio PeopleTrax](../profiling/peopletrax-sample-profiling-tools.md)|  
   
-## Vedere anche  
- [Cenni preliminari](../profiling/overviews-performance-tools.md)   
- [Analisi dei dati degli strumenti per la profilatura](../profiling/analyzing-performance-tools-data.md)   
- [Utilizzo di regole per le prestazioni per analizzare dati](../profiling/using-performance-rules-to-analyze-data.md)   
- [Configurazione di sessioni di prestazioni](../profiling/configuring-performance-sessions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Overviews](../profiling/overviews-performance-tools.md)  (Panoramiche)  
+ [Analisi dei dati degli strumenti per le prestazioni](../profiling/analyzing-performance-tools-data.md)   
+ [Uso di regole per le prestazioni per analizzare dati](../profiling/using-performance-rules-to-analyze-data.md)   
+ [Configuring Performance Sessions](../profiling/configuring-performance-sessions.md) (Configurazione di sessioni di prestazioni)

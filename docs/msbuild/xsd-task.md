@@ -1,74 +1,89 @@
 ---
-title: "Attivit&#224; XSD | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.task.xsd"
-  - "VC.Project.VCXMLDataGeneratorTool.Namespace"
-  - "VC.Project.VCXMLDataGeneratorTool.GenerateFromSchema"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "XSD (attività MSBuild) (Visual C++)"
-  - "MSBuild (Visual C++), XSD (attività)"
+title: "Attività XSD | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.task.xsd
+- VC.Project.VCXMLDataGeneratorTool.Namespace
+- VC.Project.VCXMLDataGeneratorTool.GenerateFromSchema
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- XSD task (MSBuild (Visual C++))
+- MSBuild (Visual C++), XSD task
 ms.assetid: 15c99f5c-7124-4bbc-bc03-70c7bcce8893
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Attivit&#224; XSD
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 9b49f1d51771700c7203f61203575e075c94ae1b
+ms.lasthandoff: 02/22/2017
 
-Esegue il wrapping dello strumento XML Schema Definition (xsd.exe), che genera file di classe o dello schema da un'origine.  
+---
+# <a name="xsd-task"></a>Attività XSD
+Esegue il wrapping dello strumento XML Schema Definition (xsd.exe), che genera file di schema o di classe da un'origine.  
   
 ## <a name="parameters"></a>Parametri  
- Nella tabella seguente vengono descritti i parametri del **XSD** attività.  
+ La tabella seguente descrive i parametri dell'attività **XSD**.  
   
 -   **AdditionalOptions**  
   
-     Facoltativo **stringa** parametro.  
+     Parametro **String** facoltativo.  
   
-     Un elenco di opzioni come specificato sulla riga di comando. Ad esempio, "*/option1 /option2 /opzione #*". Utilizzare questo parametro per specificare le opzioni che non sono rappresentate da qualsiasi altro **XSD** parametro dell'attività.  
+     Un elenco di opzioni come specificato sulla riga di comando. Ad esempio, "*/opzione1 /opzione2 /opzione#*". Usare questo parametro per specificare le opzioni che non sono rappresentate da altri parametri dell'attività **XSD**.  
   
 -   **GenerateFromSchema**  
   
-     Facoltativo **stringa** parametro.  
+     Parametro **String** facoltativo.  
   
      Specifica i tipi generati dallo schema specificato.  
   
-     Specificare uno dei seguenti valori, ognuno dei quali corrisponde a un'opzione di XSD.  
+     Specificare uno dei valori seguenti, ognuno dei quali corrisponde a un'opzione XSD.  
   
-    -   **classi** - **/classi**  
+    -   **classes** - **/classes**  
   
-    -   **set di dati** - **/dataset**  
+    -   **dataset** - **/dataset**  
   
 -   **Lingua**  
   
-     Facoltativo **stringa** parametro.  
+     Parametro **String** facoltativo.  
   
-     Specifica il linguaggio di programmazione da utilizzare per il codice generato.  
+     Specifica il linguaggio di programmazione da usare per il codice generato.  
   
-     Scegliere **CS** (c#, ovvero l'impostazione predefinita), **VB** (Visual Basic), o **JS** (JScript). È anche possibile specificare un nome completo per una classe che implementa `System.CodeDom.Compiler.CodeDomProvider Class`.  
+     È possibile scegliere tra **CS** (C#, il linguaggio predefinito), **VB** (Visual Basic) o **JS** (JScript). È anche possibile specificare un nome completo per una classe che implementa `System.CodeDom.Compiler.CodeDomProvider Class`.  
   
--   **Spazio dei nomi**  
+-   **Namespace**  
   
-     Facoltativo **stringa** parametro.  
+     Parametro **String** facoltativo.  
   
      Specifica lo spazio dei nomi del runtime per i tipi generati.  
   
--   **Origini**  
+-   **Sources**  
   
      Parametro `ITaskItem[]` obbligatorio.  
   
@@ -76,15 +91,15 @@ Esegue il wrapping dello strumento XML Schema Definition (xsd.exe), che genera f
   
 -   **SuppressStartupBanner**  
   
-     Facoltativo **booleano** parametro.  
+     Parametro **Boolean** facoltativo.  
   
      Se `true`, impedisce la visualizzazione del messaggio sul copyright e sul numero di versione all'avvio dell'attività.  
   
 -   **TrackerLogDirectory**  
   
-     Facoltativo **stringa** parametro.  
+     Parametro **String** facoltativo.  
   
      Specifica la directory per il log di Tracker.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento di attività](../msbuild/msbuild-task-reference.md)
+ [Riferimenti alle attività](../msbuild/msbuild-task-reference.md)
