@@ -1,4 +1,4 @@
-# [IDE di Visual Studio](visual-studio-ide.md)
+# [Panoramica delle funzionalità IDE di Visual Studio](visual-studio-ide.md)
 # [Introduzione a Visual Studio](get-started-with-visual-studio.md)
 # [Account utente e aggiornamenti](user-accounts-and-updates.md)
 ## [Accesso a Visual Studio](signing-in-to-visual-studio.md)
@@ -111,6 +111,7 @@
 ### [Procedura: Modificare maiuscole/minuscole nell'editor](how-to-change-text-case-in-the-editor.md)
 ### [Procedura: Gestire le modalità dell'editor](how-to-manage-editor-modes.md)
 ### [Procedura: Gestire le finestre dell'editor](how-to-manage-editor-windows.md)
+## [Sviluppare codice in Visual Studio senza progetti o soluzioni](develop-code-in-visual-studio-without-projects-or-solutions.md)
 ## [Creare impostazioni personalizzate e portabili per l'editor](create-portable-custom-editor-options.md)
 ## [Procedura: Tenere traccia del codice personalizzando la barra di scorrimento](how-to-track-your-code-by-customizing-the-scrollbar.md)
 ## Navigazione nel codice

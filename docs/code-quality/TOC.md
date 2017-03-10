@@ -267,15 +267,15 @@
 ##### [CA2242: Testare i valori NaN in modo corretto](ca2242-test-for-nan-correctly.md)
 ##### [CA2243: Valori letterali stringa di attributo devono essere analizzate correttamente](ca2243-attribute-string-literals-should-parse-correctly.md)
 #### [Errori dei criteri per l'analisi del codice](code-analysis-policy-errors.md)
-## [Verifica della qualità del codice C-C++ tramite analisi del codice](analyzing-c-cpp-code-quality-by-using-code-analysis.md)
-### [Guida introduttiva all'analisi del codice per C-C++](quick-start-code-analysis-for-c-cpp.md)
+## [Analisi della qualità del codice C/C++ tramite l'analisi codice](analyzing-c-cpp-code-quality-by-using-code-analysis.md)
+### [Guida introduttiva all'analisi codice per C/C++](quick-start-code-analysis-for-c-cpp.md)
 ### [Uso di set di regole per specificare le regole C++ da eseguire](using-rule-sets-to-specify-the-cpp-rules-to-run.md)
 ### [Uso dei correttori linee guida di base di C++](using-the-cpp-core-guidelines-checkers.md)
-### [Panoramica dell'analisi del codice per C-C++](code-analysis-for-c-cpp-overview.md)
-### [Procedura: Impostare le proprietà di analisi del codice per progetti C-C++](how-to-set-code-analysis-properties-for-c-cpp-projects.md)
-### [Procedura dettagliata: analisi del codice C-C++ per l'identificazione degli errori](walkthrough-analyzing-c-cpp-code-for-defects.md)
+### [Panoramica dell'analisi codice per C/C++](code-analysis-for-c-cpp-overview.md)
+### [Procedura: Impostare le proprietà dell'analisi codice per progetti C/C++](how-to-set-code-analysis-properties-for-c-cpp-projects.md)
+### [Procedura dettagliata: analisi del codice C/C++ per l'identificazione degli errori](walkthrough-analyzing-c-cpp-code-for-defects.md)
 #### [Esempio dimostrativo](demo-sample.md)
-### [Uso delle annotazioni SAL per ridurre gli errori del codice C-C++](using-sal-annotations-to-reduce-c-cpp-code-defects.md)
+### [Uso delle annotazioni SAL per ridurre gli errori del codice C/C++](using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 #### [Informazioni su SAL](understanding-sal.md)
 #### [Annotazione di parametri di funzione e valori restituiti](annotating-function-parameters-and-return-values.md)
 #### [Annotazione del comportamento delle funzioni](annotating-function-behavior.md)
@@ -285,7 +285,7 @@
 #### [Funzioni intrinseche](intrinsic-functions.md)
 #### [Procedure consigliate ed esempi (SAL)](best-practices-and-examples-sal.md)
 ### [Procedura: Specificare informazioni aggiuntive sul codice usando __analysis_assume](how-to-specify-additional-code-information-by-using-analysis-assume.md)
-### [Avvisi dell'analisi codice per il linguaggio C-C++](code-analysis-for-c-cpp-warnings.md)
+### [Avvisi dell'analisi codice per C/C++](code-analysis-for-c-cpp-warnings.md)
 #### [C1250](c1250.md)
 #### [C1251](c1251.md)
 #### [C1252](c1252.md)
@@ -609,8 +609,3 @@
 # [Risoluzione dei problemi degli strumenti di qualità](troubleshooting-quality-tools.md)
 ## [Risoluzione dei problemi di analisi del codice](troubleshooting-code-analysis-issues.md)
 ## [Risoluzione dei problemi relativi alla metrica del codice](troubleshooting-code-metrics-issues.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

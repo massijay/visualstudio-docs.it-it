@@ -199,7 +199,7 @@
 ### [Preparazione al debug: tipi di progetto Visual C++](debugging-preparation-visual-cpp-project-types.md)
 ### [Procedura: Eseguire il debug di codice ottimizzato](how-to-debug-optimized-code.md)
 ### [DebugBreak e __debugbreak](debugbreak-and-debugbreak.md)
-### [Asserzioni C-C++](c-cpp-assertions.md)
+### [Asserzioni C/C++](c-cpp-assertions.md)
 ### [Procedura: Eseguire il debug di codice assembly inline](how-to-debug-inline-assembly-code.md)
 ### [Tecniche di debug MFC](mfc-debugging-techniques.md)
 ### [Tecniche di debug CRT](crt-debugging-techniques.md)
