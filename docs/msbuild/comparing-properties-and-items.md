@@ -1,39 +1,54 @@
 ---
-title: "Confronto di propriet&#224; ed elementi | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild, proprietà di msbuild"
+title: "Confronto di proprietà ed elementi | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- msbuild, msbuild properties
 ms.assetid: b9da45ae-d6a6-4399-8628-397deed31486
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Confronto di propriet&#224; ed elementi
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
+ms.openlocfilehash: cf04644c98062ffb2aee5b4b826f8426070c3d60
+ms.lasthandoff: 02/22/2017
 
-Proprietà di MSBuild e gli elementi vengono utilizzati per passare informazioni alle attività, valutare le condizioni e archiviare i valori che possono essere utilizzati in tutto il file di progetto.  
+---
+# <a name="comparing-properties-and-items"></a>Confronto di proprietà ed elementi
+Le proprietà e gli elementi MSBuild vengono usati per passare informazioni ad attività, valutare condizioni e archiviare valori a cui poter fare riferimento nel file di progetto.  
   
--   Le proprietà sono coppie nome-valore. Per ulteriori informazioni, vedere [proprietà MSBuild](../msbuild/msbuild-properties.md).  
+-   Le proprietà sono coppie nome-valore. Per altre informazioni, vedere [MSBuild Properties](../msbuild/msbuild-properties.md) (Proprietà MSBuild).  
   
--   Gli elementi sono oggetti che rappresentano in genere i file. Oggetti elemento è possono associare insiemi di metadati. I metadati sono coppie nome-valore. Per ulteriori informazioni, vedere [elementi](../msbuild/msbuild-items.md).  
+-   Gli elementi sono oggetti che rappresentano in genere i file. Agli oggetti elemento possono essere associate raccolte di metadati. I metadati sono coppie nome-valore. Per altre informazioni, vedere [Items](../msbuild/msbuild-items.md) (Elementi).  
   
 ## <a name="scalars-and-vectors"></a>Valori scalari e vettori  
- Poiché le proprietà MSBuild sono coppie nome-valore con un solo valore di stringa, sono spesso descritti come *scalare*. Poiché i tipi di elemento MSBuild sono elenchi di elementi, sono spesso descritti come *vettore*. Tuttavia, in pratica, le proprietà possono rappresentare più valori e tipi di elemento possono avere zero o più elementi.  
+ Poiché le proprietà MSBuild sono coppie nome-valore con un solo valore di stringa, sono spesso descritte come *valori scalari*. I tipi di elemento MSBuild sono invece elenchi di elementi e sono pertanto spesso descritti come *vettori*. In realtà le proprietà possono comunque rappresentare più valori, mentre i tipi di elemento possono non avere elementi o aver uno.  
   
-### <a name="target-dependency-injection"></a>Inserimento di dipendenze di destinazione  
- Per comprendere come le proprietà possono rappresentare più valori, si consideri un modello di utilizzo comune per l'aggiunta di una destinazione per un elenco di destinazioni da compilare. Questo elenco è in genere rappresentato da un valore della proprietà, con i nomi di destinazione, separati da punti e virgola.  
+### <a name="target-dependency-injection"></a>Inserimento delle dipendenze di destinazione  
+ Per comprendere come le proprietà possono rappresentare più valori, considerare un modello di utilizzo comune per aggiungere una destinazione a un elenco di destinazioni da compilare. Questo elenco è in genere rappresentato da un valore della proprietà, con i nomi di destinazione separati da punti e virgola.  
   
-```  
+```xml  
 <PropertyGroup>  
     <BuildDependsOn>  
         BeforeBuild;  
@@ -43,9 +58,9 @@ Proprietà di MSBuild e gli elementi vengono utilizzati per passare informazioni
 </PropertyGroup>  
 ```  
   
- Il `BuildDependsOn` proprietà viene in genere utilizzata come argomento di una destinazione `DependsOnTargets` attributo, in modo efficace convertirlo in un elenco di elementi. Questa proprietà può essere sottoposto a override per aggiungere una destinazione o per modificare l'ordine di esecuzione di destinazione. Di seguito è riportato un esempio:  
+ La proprietà `BuildDependsOn` viene in genere usata come argomento di un attributo di destinazione `DependsOnTargets` che lo converte in modo efficace in un elenco di elementi. Questa proprietà può essere sottoposta a override per aggiungere una destinazione o per modificare l'ordine di esecuzione della destinazione. Di seguito è riportato un esempio:  
   
-```  
+```xml  
 <PropertyGroup>  
     <BuildDependsOn>  
         $(BuildDependsOn);  
@@ -54,14 +69,14 @@ Proprietà di MSBuild e gli elementi vengono utilizzati per passare informazioni
 </PropertyGroup>  
 ```  
   
- Aggiunge la destinazione CustomBuild all'elenco di destinazione, dando `BuildDependsOn` il valore `BeforeBuild;CoreBuild;AfterBuild;CustomBuild`.  
+ La destinazione CustomBuild viene aggiunta all'elenco di destinazione, attribuendo `BuildDependsOn` al valore `BeforeBuild;CoreBuild;AfterBuild;CustomBuild`.  
   
- Inserimento di dipendenze di destinazione a partire da MSBuild 4.0, è deprecata. Utilizzare il `AfterTargets` e `BeforeTargets` invece di attributi. Per ulteriori informazioni, vedere [Target Build Order](../msbuild/target-build-order.md).  
+ A partire da MSBuild 4.0, l'inserimento delle dipendenze di destinazione è deprecato. Al suo posto usare gli attributi `AfterTargets` e `BeforeTargets`. Per altre informazioni, vedere [Target Build Order](../msbuild/target-build-order.md) (Ordine di compilazione delle destinazioni).  
   
-### <a name="conversions-between-strings-and-item-lists"></a>Conversioni fra stringhe e gli elenchi di elementi  
- MSBuild esegue conversioni da e verso tipi di elemento e i valori stringa in base alle esigenze. Per vedere come un elenco di elementi può diventare un valore stringa, si consideri cosa succede quando un tipo di elemento viene utilizzato come valore di proprietà MSBuild:  
+### <a name="conversions-between-strings-and-item-lists"></a>Conversioni fra stringhe ed elenchi di elementi  
+ Se necessario MSBuild esegue la conversione da e in tipi di elemento e valori stringa. Per vedere come un elenco di elementi può diventare un valore stringa, considerare cosa succede quando un tipo di elemento viene usato come valore di una proprietà MSBuild:  
   
-```  
+```xml  
 <ItemGroup>  
     <OutputDir Include="KeyFiles\;Certificates\" />  
   </ItemGroup>  
@@ -70,46 +85,46 @@ Proprietà di MSBuild e gli elementi vengono utilizzati per passare informazioni
 </PropertyGroup>  
 ```  
   
- Il tipo di elemento OutputDir presenta un `Include` attributo con il valore "KeyFiles\\; I certificati\\". MSBuild analizza questa stringa in due elementi: i certificati e KeyFiles\\\. Quando il tipo di elemento OutputDir viene utilizzato come valore della proprietà OutputDirList, MSBuild converte o "appiattisce" il tipo di elemento nella stringa separati da punto e virgola "KeyFiles\\; I certificati\\".  
+ Il tipo di elemento OutputDir presenta un attributo `Include` con il valore "KeyFiles\\;Certificates\\". MSBuild analizza questa stringa suddividendola in due elementi, KeyFiles\ e Certificates\\. Quando il tipo di elemento OutputDir viene usato come valore della proprietà OutputDirList, MSBuild converte o "rende flat" il tipo di elemento nella stringa "KeyFiles\\;Certificates\\" con elementi separati da punto e virgola.  
   
-## <a name="properties-and-items-in-tasks"></a>Proprietà e gli elementi in attività  
- Proprietà e gli elementi vengono utilizzati come input e output per le attività MSBuild. Per ulteriori informazioni, vedere [attività](../msbuild/msbuild-tasks.md).  
+## <a name="properties-and-items-in-tasks"></a>Proprietà ed elementi in attività  
+ Le proprietà e gli elementi vengono usati come input e output nelle attività MSBuild. Per altre informazioni, vedere [Tasks](../msbuild/msbuild-tasks.md) (Attività).  
   
- Le proprietà vengono passate alle attività come attributi. All'interno dell'attività, una proprietà di MSBuild è rappresentata da un tipo di proprietà il cui valore può essere convertito in e da una stringa. I tipi di proprietà supportati includono `bool`, `char`, `DateTime`, `Decimal`, `Double`, `int`, `string`, e qualsiasi tipo che <xref:System.Convert.ChangeType%2A> in grado di gestire.  
+ Le proprietà vengono passate alle attività sotto forma di attributi. All'interno dell'attività una proprietà MSBuild viene rappresentata da un tipo di proprietà il cui valore può essere convertito in e da una stringa. I tipi di proprietà supportati sono `bool`, `char`, `DateTime`, `Decimal`, `Double`, `int`, `string` e qualsiasi altro tipo che <xref:System.Convert.ChangeType%2A> può gestire.  
   
- Gli elementi vengono passati all'attività, come <xref:Microsoft.Build.Framework.ITaskItem> oggetti. All'interno dell'attività, <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> rappresenta il valore dell'elemento e <xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A> Recupera i metadati.  
+ Gli elementi vengono passati all'attività sotto forma di oggetti <xref:Microsoft.Build.Framework.ITaskItem>. All'interno dell'attività <xref:Microsoft.Build.Framework.ITaskItem.ItemSpec%2A> rappresenta il valore dell'elemento e <xref:Microsoft.Build.Framework.ITaskItem.GetMetadata%2A> ne recupera i metadati.  
   
- Elenco di elementi di un tipo di elemento può essere passato come matrice di `ITaskItem` oggetti. A partire da .NET Framework 3.5, gli elementi possono essere rimossi da un elenco di elementi in una destinazione utilizzando il `Remove` attributo. Poiché gli elementi possono essere rimossi da un elenco di elementi, è possibile che un tipo di elemento presenti zero elementi. Se un elenco di elementi viene passato a un'attività, il codice dell'attività deve verificare questa possibilità.  
+ È possibile passare l'elenco di elementi di un tipo di elemento sotto forma di matrice di oggetti `ITaskItem`. A partire da .NET Framework 3.5, gli elementi possono essere rimossi da un elenco di elementi in una destinazione usando l'attributo `Remove`. Poiché gli elementi possono essere rimossi da un elenco di elementi, è possibile che un tipo di elemento non contenta elementi. Se un elenco di elementi viene passato a un'attività, il codice dell'attività deve verificare questa possibilità.  
   
-## <a name="property-and-item-evaluation-order"></a>Proprietà e l'ordine di valutazione di articolo  
- Durante la fase di valutazione di una compilazione, i file importati vengono incorporati nella build nell'ordine in cui appaiono. Proprietà e gli elementi sono definiti in tre passaggi nell'ordine seguente:  
+## <a name="property-and-item-evaluation-order"></a>Proprietà e ordine di valutazione degli elementi  
+ Durante la fase di valutazione di una build, i file importati vengono incorporati nella build nell'ordine in cui vengono visualizzati. Le proprietà e gli elementi sono definiti in tre passaggi nell'ordine seguente:  
   
--   Le proprietà sono definite e modificate nell'ordine in cui appaiono.  
+-   Le proprietà vengono definite e modificate nell'ordine in cui vengono visualizzate.  
   
--   Le definizioni di elemento vengono definite e modificate nell'ordine in cui appaiono.  
+-   Le definizioni dell'elemento vengono definite e modificate nell'ordine in cui vengono visualizzate.  
   
--   Gli elementi vengono definiti e modificati nell'ordine in cui appaiono.  
+-   Gli elementi vengono definiti e modificati nell'ordine in cui vengono visualizzati.  
   
- Durante la fase di esecuzione di una compilazione, proprietà e gli elementi definiti all'interno di destinazioni vengono valutati insieme in un'unica fase nell'ordine in cui appaiono.  
+ Durante la fase di esecuzione di una build, le proprietà e gli elementi definiti all'interno di destinazioni vengono valutati insieme in un'unica fase nell'ordine in cui vengono visualizzati.  
   
- Tuttavia, non è questo l'intera storia. Quando si definisce una proprietà, una definizione dell'elemento o un elemento, viene valutato il relativo valore. L'analizzatore di espressioni espande la stringa che specifica il valore. Espansione della stringa dipende dalla fase di compilazione. Ecco un ordine di valutazione di proprietà e degli elementi più dettagliato:  
+ Non è tuttavia l'unico approccio. Quando si definisce una proprietà, una definizione dell'elemento o un elemento, viene valutato il relativo valore. L'analizzatore di espressioni espande la stringa che specifica il valore. L'espansione della stringa dipende dalla fase di compilazione. Di seguito viene riportato un ordine di valutazione di proprietà ed elementi più dettagliato:  
   
--   Durante la fase di valutazione di una compilazione:  
+-   Durante la fase di valutazione di una build:  
   
-    -   Le proprietà sono definite e modificate nell'ordine in cui appaiono. Le funzioni di proprietà vengono eseguite. I valori di proprietà di $ (NomeProprietà) form vengono espansi all'interno di espressioni. Il valore della proprietà è impostato sull'espressione espansa.  
+    -   Le proprietà vengono definite e modificate nell'ordine in cui vengono visualizzate. Vengono eseguite le funzioni di proprietà. I valori di proprietà nel formato $(PropertyName) vengono espansi all'interno di espressioni. Il valore della proprietà viene impostato sull'espressione espansa.  
   
-    -   Le definizioni di elemento vengono definite e modificate nell'ordine in cui appaiono. Funzioni di proprietà sono già stati espansi all'interno di espressioni. Valori di metadati vengono impostati sulle espressioni espanse.  
+    -   Le definizioni dell'elemento vengono definite e modificate nell'ordine in cui vengono visualizzate. Le funzioni di proprietà sono già state espanse all'interno di espressioni. I valori di metadati vengono impostati sulle espressioni espanse.  
   
-    -   Tipi di elemento vengono definiti e modificati nell'ordine in cui appaiono. I valori sotto forma di elemento @(ItemType) vengono espanse. Vengono espansi anche le trasformazioni degli elementi. I valori e le funzioni di proprietà sono già stati espansi all'interno di espressioni. I valori di elenco e i metadati di elemento vengono impostati sulle espressioni espanse.  
+    -   I tipi di elemento vengono definiti e modificati nell'ordine in cui vengono visualizzati. I valori di elemento nel formato @(ItemType) vengono espansi. Anche le trasformazioni degli elementi vengono espanse. Le funzioni di proprietà e i valori sono già stati espansi all'interno di espressioni. L'elenco di elementi e i valori di metadati vengono impostati sulle espressioni espanse.  
   
--   Durante la fase di esecuzione di una compilazione:  
+-   Durante la fase di esecuzione di una build:  
   
-    -   Proprietà e gli elementi definiti all'interno di destinazioni vengono valutati insieme nell'ordine in cui appaiono. Vengono eseguite le funzioni di proprietà e i valori delle proprietà vengono espansi all'interno di espressioni. Vengono espansi anche i valori degli elementi e le trasformazioni degli elementi. I valori delle proprietà dei tipi di elemento e i valori dei metadati vengono impostati sulle espressioni espanse.  
+    -   Le proprietà e gli elementi definiti all'interno di destinazione vengono valutati insieme nell'ordine in cui vengono visualizzati. Vengono eseguite le funzioni di proprietà e i valori della proprietà vengono espansi all'interno di espressioni. Anche i valori e le trasformazioni degli elementi vengono espansi. I valori di proprietà, i valori del tipo di elemento e i valori di metadati vengono impostati sulle espressioni espanse.  
   
 ### <a name="subtle-effects-of-the-evaluation-order"></a>Effetti meno evidenti dell'ordine di valutazione  
- In fase di valutazione di una compilazione, proprietà valutate prima degli elementi. Tuttavia, le proprietà possono avere valori che sembrano dipendono dai valori di elemento. Si consideri il seguente script.  
+ Nella fase di valutazione di una build la valutazione delle proprietà precede la valutazione degli elementi. È tuttavia possibile che le proprietà abbiano valori visualizzati che devono dipendere da valori elemento. Considerare lo script seguente.  
   
-```  
+```xml  
 <ItemGroup>  
     <KeyFile Include="KeyFile.cs">  
         <Version>1.0.0.3</Version>  
@@ -123,21 +138,21 @@ Proprietà di MSBuild e gli elementi vengono utilizzati per passare informazioni
 </Target>  
 ```  
   
- L'esecuzione dell'attività Message Visualizza questo messaggio:  
+ Eseguendo l'attività Message viene visualizzato il messaggio seguente:  
   
 ```  
 KeyFileVersion: 1.0.0.3  
 ```  
   
- Infatti, il valore di `KeyFileVersion` è la stringa "@(KeyFile->'%(Version)')". elemento e le trasformazioni degli elementi non sono stati espansi quando la proprietà è stata definita, in modo che il `KeyFileVersion` proprietà è stato assegnato il valore della stringa non espansa.  
+ Infatti il valore di `KeyFileVersion` è la stringa "@(KeyFile->'%(Version)')". L'elemento e le trasformazioni dell'elemento non sono stati espansi quando la proprietà è stata definita. Alla proprietà `KeyFileVersion` è stato quindi assegnato il valore della stringa non espansa.  
   
- Durante la fase di esecuzione della compilazione, durante l'elaborazione dell'attività Message, MSBuild espande la stringa "@(KeyFile->'%(Version)')" in "1.0.0.3".  
+ Durante la fase di esecuzione della build, nel corso dell'elaborazione dell'attività Message, MSBuild espande la stringa "@(KeyFile->'%(Version)')" per ottenere "1.0.0.3".  
   
- Si noti che lo stesso messaggio verrà visualizzato anche se sono stati annullati i gruppi di proprietà e degli elementi in ordine.  
+ Si noti che lo stesso messaggio viene visualizzato anche se l'ordine dei gruppi di proprietà ed elementi è stato invertito.  
   
- Come secondo esempio, si consideri cosa può accadere quando i gruppi di proprietà e degli elementi si trovano all'interno di destinazioni:  
+ Come secondo esempio considerare cosa può accadere quando i gruppi di proprietà ed elementi si trovano all'interno di destinazioni:  
   
-```  
+```xml  
 <Target Name="AfterBuild">  
     <PropertyGroup>  
         <KeyFileVersion>@(KeyFile->'%(Version)')</KeyFileVersion>  
@@ -151,17 +166,17 @@ KeyFileVersion: 1.0.0.3
 </Target>  
 ```  
   
- L'attività Message Visualizza questo messaggio:  
+ L'attività Message visualizza il messaggio seguente:  
   
 ```  
 KeyFileVersion:   
 ```  
   
- In questo modo durante la fase di esecuzione della compilazione, i gruppi di proprietà e degli elementi definiti all'interno di destinazioni vengono valutati dall'alto verso il basso nello stesso momento. Quando `KeyFileVersion` è definito, `KeyFile` è sconosciuto. Pertanto, la trasformazione dell'elemento si espande in una stringa vuota.  
+ Durante la fase di esecuzione della build, i gruppi di proprietà ed elementi definiti all'interno di destinazioni vengono infatti valutati dall'alto verso il basso nello stesso momento. Quando viene definito `KeyFileVersion`, il valore `KeyFile` è sconosciuto. La trasformazione dell'elemento si espande quindi in una stringa vuota.  
   
- In questo caso, invertendo l'ordine dei gruppi di proprietà e l'elemento consente di ripristinare il messaggio originale:  
+ In questo caso, invertendo l'ordine dei gruppi di proprietà ed elemento è possibile ripristinare il messaggio originale:  
   
-```  
+```xml  
 <Target Name="AfterBuild">  
     <ItemGroup>  
         <KeyFile Include="KeyFile.cs">  
@@ -175,11 +190,11 @@ KeyFileVersion:
 </Target>  
 ```  
   
- Il valore di `KeyFileVersion` è impostato su "1.0.0.3" e non a "@(KeyFile->'%(Version)')". messaggio dell'attività consente di visualizzare questo messaggio:  
+ Il valore di `KeyFileVersion` è impostato su "1.0.0.3" e non su "@(KeyFile->'%(Version)')". L'attività Message visualizza il messaggio seguente:  
   
 ```  
 KeyFileVersion: 1.0.0.3  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti avanzati](../msbuild/msbuild-advanced-concepts.md)
+ [Advanced Concepts](../msbuild/msbuild-advanced-concepts.md) (Concetti avanzati)
