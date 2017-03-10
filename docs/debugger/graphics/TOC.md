@@ -13,7 +13,7 @@
 ## [Variante delle dimensioni della trama ridotte a metà o un quarto](half-quarter-texture-dimensions-variant.md)
 ## [Variante di compressione della trama BC](bc-texture-compression-variant.md)
 # [Elenco eventi](graphics-event-list.md)
-# [Stato](graphics-state.md)
+# [Stato grafica](graphics-state.md)
 # [Fasi della pipeline](graphics-pipeline-stages.md)
 # [Stack di chiamate a eventi](graphics-event-call-stack.md)
 # [Cronologia Pixel](graphics-pixel-history.md)
