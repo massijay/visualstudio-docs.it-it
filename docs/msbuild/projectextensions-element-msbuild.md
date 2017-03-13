@@ -1,7 +1,7 @@
 ---
 title: Elemento ProjectExtensions (MSBuild) | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 03/13/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -45,39 +45,39 @@ ms.lasthandoff: 02/22/2017
 ---
 # <a name="projectextensions-element-msbuild"></a>Elemento ProjectExtensions (MSBuild)
 Consente ai file di progetto di [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] di contenere informazioni non di [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Tutto ciò che è contenuto in un elemento `ProjectExtensions` verrà ignorato da [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].  
-  
+
  \<Project>  
  \<ProjectExtensions>  
-  
+
 ## <a name="syntax"></a>Sintassi  
-  
-```xml  
+
+```  
 <ProjectExtensions>  
     Non-MSBuild information to include in file.  
 </ProjectExtensions>  
 ```  
-  
+
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
-  
+
 ### <a name="attributes"></a>Attributi  
  Nessuna  
-  
+
 ### <a name="child-elements"></a>Elementi figlio  
  None  
-  
+
 ### <a name="parent-elements"></a>Elementi padre  
-  
+
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |[Progetto](../msbuild/project-element-msbuild.md)|Elemento radice obbligatorio di un file di progetto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].|  
-  
+
 ## <a name="remarks"></a>Note  
  È possibile usare un solo elemento `ProjectExtensions` in un progetto [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].  
-  
+
 ## <a name="example"></a>Esempio  
  L'esempio di codice seguente illustra l'archiviazione di informazioni provenienti dall'ambiente di sviluppo integrato in un elemento `ProjectExtensions`.  
-  
+
 ```xml  
 <ProjectExtensions>  
     <VSIDE>  
@@ -89,7 +89,8 @@ Consente ai file di progetto di [!INCLUDE[vstecmsbuild](../extensibility/interna
     </VSIDE>  
 </ProjectExtensions>  
 ```  
-  
+
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sullo schema del file di progetto](../msbuild/msbuild-project-file-schema-reference.md)  
  [MSBuild](../msbuild/msbuild.md)
+
