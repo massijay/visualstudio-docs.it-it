@@ -1,0 +1,51 @@
+---
+title: "ActivityDesigner ParallelForEach&lt;T&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "System.Activities.Statements.ParallelForEach`1.UI"
+ms.assetid: e93a4843-aef2-4d3e-9a0a-a2d3d1411aa7
+caps.latest.revision: 9
+author: "ErikRe"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 9
+---
+# ActivityDesigner ParallelForEach&lt;T&gt;
+L'attività <xref:System.Activities.Statements.ParallelForEach%601> enumera gli elementi di una raccolta ed esegue in parallelo un'istruzione incorporata per ogni elemento della raccolta, ovvero in modo asincrono sullo stesso thread.Utilizzare questa attività di controllo del flusso anziché l'attività <xref:System.Activities.Statements.Sequence> se si prevede che le relative attività figlio diventeranno inattive.  
+  
+ L'attività <xref:System.Activities.Statements.ParallelForEach%601> include una proprietà <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> contenente un'espressione [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] specificata dall'utente.L'attività <xref:System.Activities.Statements.ParallelForEach%601> valuta tale proprietà in seguito al completamento di ogni ramo.Se restituisce **true**, l'attività <xref:System.Activities.Statements.ParallelForEach%601> viene completata senza eseguire gli altri rami.Se <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> non restituisce **true**, l'attività <xref:System.Activities.Statements.ParallelForEach%601> viene completata al termine di tutte le relative attività figlio.  
+  
+## Attività ParallelForEach\<T\>  
+ <xref:System.Activities.Statements.ParallelForEach%601> enumera i propri valori e pianifica l'elemento <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> per ogni valore in cui viene enumerata.Esegue la pianificazione solo per l'elemento <xref:System.Activities.Statements.ParallelForEach%601.Body%2A>.La modalità di esecuzione del corpo varia a seconda che <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> diventi o meno inattivo.  
+  
+ Se <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> non diventa inattivo, viene eseguito in ordine inverso in quanto le attività pianificate vengono gestite come uno stack, con l'ultima attività pianificata eseguita per prima.Si supponga, ad esempio, di disporre della raccolta {1,2,3,4} in <xref:System.Activities.Statements.ParallelForEach%601> e di utilizzare un elemento **WriteLine** come corpo in cui scrivere il valore.Nella console l'ordine di stampa sarà 4, 3, 2, 1in quanto **WriteLine** non diventa inattivo e pertanto, dopo la pianificazione delle quattro attività **WriteLine**, queste vengono eseguite in base al comportamento tipico di uno stack \(first\-in last\-out\).  
+  
+ Il processo cambia se invece le attività incluse in <xref:System.Activities.Statements.ParallelForEach%601.Body%2A> possono diventare inattive, come nel caso delle attività <xref:System.ServiceModel.Activities.Receive> o <xref:System.Activities.Statements.Delay>.Quindi non è necessario attenderne il completamento.<xref:System.Activities.Statements.ParallelForEach%601> passa all'attività corpo pianificata successiva e prova a eseguirla.Se anche questa attività diventa inattiva, <xref:System.Activities.Statements.ParallelForEach%601> passa ancora alla successiva attività Body.  
+  
+### Utilizzo dell'ActivityDesigner ParallelForEach\<T\>  
+ L'ActivityDesigner **ParallelForEach\<T\>** è disponibile nella categoria **Flusso di controllo** della **Casella degli strumenti**, accessibile facendo clic sulla scheda **Casella degli strumenti** a sinistra di [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]. In alternativa, scegliere **Barra degli strumenti** dal menu **Visualizza** o premere CTRL\+ALT\+X.  
+  
+ È possibile trascinare l'ActivityDesigner **ParallelForEach\<T\>** dalla **Casella degli strumenti** e rilasciarlo nell'area di [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)], nel punto in cui vengono in genere posizionate le attività, ad esempio all'interno di un ActivityDesigner **Sequence**.Dopo averlo rilasciato in [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)], viene creata un'attività <xref:System.Activities.Statements.ParallelForEach%601>, la cui proprietà <xref:System.Activities.Activity.DisplayName%2A> ha, per impostazione predefinita, il valore **ParallelForEach\<Int32\>.**  
+  
+### Proprietà di ParallelForEach\<T\> in Progettazione flussi di lavoro  
+ Nella tabella seguente sono elencate le proprietà più utili dell'attività <xref:System.Activities.Statements.ParallelForEach%601> e ne viene descritta la modalità di utilizzo nella finestra di progettazione.  
+  
+|Nome proprietà|Obbligatoria|Utilizzo|  
+|--------------------|------------------|--------------|  
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Specifica il nome descrittivo visualizzato nell'intestazione dell'ActivityDesigner.Il valore predefinito è **ParallelForEach\<Int32\>**.Facoltativamente, è possibile modificare il valore nella griglia **Proprietà** o direttamente nell'intestazione dell'ActivityDesigner.|  
+|<xref:System.Activities.Statements.ParallelForEach%601.Body%2A>|False|Attività da eseguire per ogni elemento della raccolta.Per aggiungere l'attività <xref:System.Activities.Statements.ParallelForEach%601.Body%2A>, trascinare un'attività dalla casella degli strumenti e rilasciarla nella casella **Body** dell'ActivityDesigner **ParallelForEach\<T\>** con il testo di suggerimento "Rilasciare l'attività".|  
+|**TypeArgument**|True|Tipo degli elementi della raccolta <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> specificato dal parametro generico *T*.Per impostazione predefinita, la proprietà **TypeArgument** è impostata su **Int32**.Per cambiare il tipo T nell'ActivityDesigner **ParallelForEach\<T\>**, modificare il valore della casella combinata **TypeArgument** nella griglia delle proprietà.|  
+|<xref:System.Activities.Statements.ParallelForEach%601.Values%2A>|True|Raccolta di elementi da scorrere.Per impostare <xref:System.Activities.Statements.ParallelForEach%601.Values%2A>, digitare un'espressione [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] nella casella **Valori** dell'ActivityDesigner **ForEach\<T\>** all'interno della casella con il testo di suggerimento "Immettere un'espressione VB" o nella casella **Valori** della finestra **Proprietà**.|  
+|<xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>||Valutato al termine di ogni iterazione.Se restituisce true, le iterazioni in sospeso pianificate sono annullate.Se questa proprietà non è impostata, tutte le istruzioni pianificate vengono eseguite fino al completamento.|  
+  
+ Per impostazione predefinita, l'iteratore del ciclo è denominato item.È possibile modificare il nome della variabile di iteratore nella casella **ForEach** dell'ActivityDesigner **ParallelForEach\<T\>**.L'iteratore del ciclo può essere utilizzato nelle espressioni contenute in elementi figlio dell'attività <xref:System.Activities.Statements.ParallelForEach%601>.  
+  
+## Vedere anche  
+ [Sequence](../workflow-designer/sequence-activity-designer.md)   
+ [Parallel](../workflow-designer/parallel-activity-designer.md)   
+ [Flusso di controllo](../workflow-designer/control-flow-activity-designers.md)

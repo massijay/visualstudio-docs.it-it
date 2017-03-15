@@ -1,0 +1,8 @@
+# [Installare Visual Studio](install-visual-studio.md)
+# [Modificare Visual Studio](modify-visual-studio.md)
+# [Disinstallare Visual Studio](uninstall-visual-studio.md)
+# [Guida di Visual Studio Administrator](visual-studio-administrator-guide.md)
+## [Usare i parametri della riga di comando per installare Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+## [Creare un'installazione offline di Visual Studio](create-an-offline-installation-of-visual-studio.md)
+## [Applicare automaticamente i codici Product Key durante la distribuzione di Visual Studio](automatically-apply-product-keys-when-deploying-visual-studio.md)
+## [ID dei carichi di lavoro e dei componenti di Visual Studio](workload-and-component-ids.md)
