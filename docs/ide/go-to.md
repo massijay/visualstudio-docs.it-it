@@ -27,16 +27,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: b259c5d02a452bfaa3bd59f2096b43ee1c1c5942
-ms.openlocfilehash: 352de7f71f8a6c16439061c9815219e5f2b3840a
+ms.sourcegitcommit: 3b812629bf0f655f39c35a56eb1b3ca9113303a6
+ms.openlocfilehash: 8bf6d49b21d128d15f5312fb230d4a8e7a8195af
+ms.lasthandoff: 03/01/2017
 
 ---
 
 # <a name="go-to"></a>Vai
 Esistono molti modi per esplorare con facilità il codice all'interno dell'IDE di Visual Studio, sia usando la tastiera che il mouse.
 
+<!-- VERSIONLESS -->
 ## <a name="go-to-all"></a>Vai a tutti
-È possibile esplorare il codice per trovare i bit specifici necessari.  Da una semplice interfaccia si possono cercare una riga, un tipo, un simbolo, un file specifico e altro ancora.
+Questa funzionalità esiste in Visual Studio 2017 e versioni successive.  Consente di esplorare il codice per trovare i bit specifici che si stanno cercando.  Da una semplice interfaccia unificata si possono cercare una riga, un tipo, un simbolo, un file specifico e altro ancora.
 
 ### <a name="how-to-use"></a>Uso
 * **Tastiera**
@@ -81,6 +83,7 @@ Impostazione | Descrizione
 Utilizza scheda anteprima | Visualizza immediatamente l'elemento selezionato nella scheda anteprima dell'IDE
 Mostra dettagli    | Visualizza informazioni relative a progetto, file, riga e riepilogo recuperando i commenti della documentazione nella finestra
 Centra la finestra   | Sposta la finestra al centro dell'IDE anziché in alto a destra
+<!-- END VERSIONLESS -->
 
 ## <a name="go-to-definition"></a>Vai a definizione
 È possibile passare all'origine di un tipo e visualizzare il risultato in una nuova scheda:
@@ -125,8 +128,3 @@ Input        | Funzione
 **CTRL+MAIUSC+-**    | Passare alla posizione successiva usando la pila
 
 È anche possibile usare le voci di menu **Visualizza > Posizione precedente** e **Visualizza > Posizione successiva**.
-
-
-<!--HONumber=Feb17_HO4-->
-
-
