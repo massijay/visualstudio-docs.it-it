@@ -31,9 +31,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5ec205ee98f61b400112a39197e1f2aa9dddbd7d
-ms.openlocfilehash: 2d6ec94f7e68a84a4bb4a606882997fadec49e01
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8f844c2d7d975476bc4c059d211a1d6cb0df64eb
+ms.openlocfilehash: 4c995fb6df6316ce7f84fae7075b81063b54ebf7
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="profiling-tools"></a>Strumenti di profilatura
@@ -62,12 +62,12 @@ Gli strumenti di profilatura e diagnostica consentono di diagnosticare l'utilizz
 ## <a name="gpu-usage"></a>Utilizzo GPU  
  ![DiagGPUUsage](../profiling/media/diaggpuusage.png "DiagGPUUsage")  
   
- Usare lo strumento [Utilizzo GPU](../debugger/gpu-usage.md) per comprendere meglio l'utilizzo dell'hardware di alto livello dell'app Direct3D. È possibile usare questo strumento sia con le applicazioni desktop che con le app universali di Windows, ma non con le applicazioni ASP.NET. Lo strumento **Utilizzo CGU** può essere eseguito dalla finestra **Strumenti di diagnostica** durante il debug (**Debug / Mostra strumenti di diagnostica**) o all'esterno del debugger (**Debug / Profiler prestazioni**).  
+ Usare lo strumento [Utilizzo GPU](../debugger/gpu-usage.md) per comprendere meglio l'utilizzo dell'hardware di alto livello dell'app Direct3D. È possibile usare questo strumento sia con le applicazioni desktop che con le app universali di Windows, ma non con le applicazioni ASP.NET. Lo strumento **Utilizzo GPU** può essere eseguito all'esterno del debugger (**Debug / Profiler prestazioni**).  
   
 ## <a name="application-timeline"></a>Sequenza temporale applicazione  
  ![DiagAppTimeline](../profiling/media/diagapptimeline.png "DiagAppTimeline")  
   
- Lo strumento [Sequenza temporale applicazione](../profiling/application-timeline.md) consente di migliorare le prestazioni delle applicazioni XAML offrendo una visualizzazione dettagliata dell'utilizzo delle risorse. È possibile usare lo strumento **Sequenza temporale applicazione** sia con le applicazioni desktop che con le app universali di Windows, ma non con le applicazioni ASP.NET. Lo strumento **Sequenza temporale applicazione** può essere eseguito dalla finestra **Strumenti di diagnostica** (**Debug / Profiler prestazioni**).
+ Lo strumento [Sequenza temporale applicazione](../profiling/application-timeline.md) consente di migliorare le prestazioni delle applicazioni XAML offrendo una visualizzazione dettagliata dell'utilizzo delle risorse. È possibile usare lo strumento **Sequenza temporale applicazione** sia con le applicazioni desktop che con le app universali di Windows, ma non con le applicazioni ASP.NET. Lo strumento **Sequenza temporale applicazioni** può essere eseguito all'esterno del debugger (**Debug / Profiler prestazioni**).
   
 ## <a name="perftips"></a>PerfTips  
  ![DiagPerfTips](../profiling/media/diagperftips.png "DiagPerfTips")  
@@ -85,12 +85,12 @@ Gli strumenti di profilatura e diagnostica consentono di diagnosticare l'utilizz
 ## <a name="javascript-memory"></a>Memoria JavaScript  
  ![DiagJSMemory](../profiling/media/diagjsmemory.png "DiagJSMemory")  
   
- Lo strumento [Memoria JavaScript](../profiling/javascript-memory.md) consente di misurare, valutare e definire la destinazione dei problemi relativi alle prestazioni del codice raccogliendo informazioni sulla temporizzazione all'entrata e all'uscita di ogni funzione nell'app. È possibile usare questo strumento con le app HTML universali di Windows. Lo strumento **Temporizzazione funzione JavaScript** può essere eseguito dalla finestra **Strumenti di diagnostica** (**Debug / Profiler prestazioni**).  
+ Lo strumento [Memoria JavaScript](../profiling/javascript-memory.md) consente di individuare le perdite di memoria e i problemi di utilizzo inefficiente della memoria nelle app. Lo strumento consente di creare snapshot dell'heap JavaScript. È possibile usare questo strumento con le app HTML universali di Windows. Lo strumento **Memoria JavaScript** può essere eseguito all'esterno del debugger (**Debug / Profiler prestazioni**).  
   
 ## <a name="html-ui-responsiveness"></a>Velocità di risposta interfaccia utente HTML  
  ![DiagHTMLResp](../profiling/media/diaghtmlresp.png "DiagHTMLResp")  
   
- Lo strumento [Velocità di risposta interfaccia utente HTML](../profiling/html-ui-responsiveness.md) consente di isolare i problemi di prestazioni delle app, inclusi velocità di risposta insufficiente, tempo di caricamento lento e aggiornamenti visivi meno frequenti del previsto. È possibile usare questo strumento con le app HTML universali di Windows. Lo strumento **Velocità di risposta interfaccia utente HTML** può essere eseguito dalla finestra **Strumenti di diagnostica** (**Debug / Profiler prestazioni**).  
+ Lo strumento [Velocità di risposta interfaccia utente HTML](../profiling/html-ui-responsiveness.md) consente di isolare i problemi di prestazioni delle app, inclusi velocità di risposta insufficiente, tempo di caricamento lento e aggiornamenti visivi meno frequenti del previsto. È possibile usare questo strumento con le app HTML universali di Windows. Lo strumento **Velocità di risposta interfaccia utente HTML** può essere eseguito all'esterno del debugger (**Debug / Profiler prestazioni**).  
   
 ## <a name="intellitrace"></a>IntelliTrace  
  ![DiagIntelliTrace](../profiling/media/diagintellitrace.png "DiagIntelliTrace")  
