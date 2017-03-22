@@ -481,7 +481,7 @@ csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 
 | Valore | Descrizione | Applicazione 
 | ------------- |:-------------|:-------------|
-| True | Preferisce che le variabili `out` siano dichiarate inline, quando possibile. | **C#:** <br>`if (int.TryParse(value out int i) {...}`
+| True | Preferisce che le variabili `out` siano dichiarate inline, quando possibile. | **C#:** <br>`if (int.TryParse(value, out int i) {...}`
 | False | Preferisce che le variabili `out` siano dichiarate esplicitamente.| **C#:** <br>`int i; if (int.TryParse(value, out i) {...}`
 
 #### <a name="example-editorconfig-file"></a>Esempio di file editorconfig:
