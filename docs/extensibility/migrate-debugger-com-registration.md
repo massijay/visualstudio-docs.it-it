@@ -28,14 +28,12 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e273f31cb1f43ff79fd9a4ade37d112351dea9b5
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 19ce2d4cc1ff92240529f35f42845778ded49fdf
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="migrate-64-bit-debugger-com-class-registration"></a>Eseguire la migrazione a 64 bit debugger registrazione della classe COM
-
->**Nota:** questa documentazione è preliminare e in base alla versione di Visual Studio 2017 RC.
 
 Per le estensioni del debugger registrare le classi COM in HKEY_CLASSES_ROOT (da utilizzare regasm, regsvr32, o direttamente la scrittura nel Registro di sistema) e caricati in msvsmon.exe (il debugger remoto), è ora possibile fornire la registrazione a msvsmon senza la necessità di scrivere in HKEY_CLASSES_ROOT. Ciò influisce sul analizzatori di espressioni del debugger .NET legacy o motori di debug che sono configurati per il caricamento nel processo di msvsmon.exe.
 

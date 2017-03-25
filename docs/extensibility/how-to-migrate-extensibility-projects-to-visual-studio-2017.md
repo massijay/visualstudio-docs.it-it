@@ -28,18 +28,16 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 4f93b8c1db59dd8d8a407c82002240641be43018
-ms.openlocfilehash: 1f9248442357c4447703ac6d6dac8a27934904e8
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: efd17a3317302fedcb9bd42aded7a38adee2f75f
+ms.lasthandoff: 03/22/2017
 
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Procedura: eseguire la migrazione di progetti di estendibilità di Visual Studio 2017
 
->**Nota:** questa documentazione è preliminare e in base alla versione di Visual Studio 2017 RC.
-
 In questo documento viene illustrato come aggiornare i progetti di estendibilità di Visual Studio 2017. Oltre a descrivere come aggiornare i file di progetto, viene inoltre descritto come eseguire l'aggiornamento dalla versione del manifesto dell'estensione 2 (VSIX v2) per il nuova versione 3 del manifesto formato VSIX (VSIX v3).
 
-## <a name="install-visual-studio-2017-rc-with-required-workloads"></a>Installare Visual Studio 2017 RC con carichi di lavoro richiesti
+## <a name="install-visual-studio-2017-with-required-workloads"></a>Installare Visual Studio 2017 con carichi di lavoro richiesti
 
 Verificare che l'installazione include carichi di lavoro seguenti:
 
@@ -59,19 +57,16 @@ Il file di progetto (ad esempio *. csproj) verrà aggiornato:
 
 >**Nota:** se la soluzione non fa riferimento il pacchetto Microsoft.VSSDK.BuildTools NuGet, è possibile ignorare questo passaggio.
 
-Per compilare l'estensione nella nuova v3 VSIX formato (versione 3), è necessario compilare con i nuovi strumenti di compilazione VSSDK la soluzione. Verrà installata con Visual Studio RC 2017, ma l'estensione v2 VSIX potrebbe contenere un riferimento a una versione precedente tramite NuGet. In questo caso, è necessario installare manualmente un aggiornamento del pacchetto Microsoft.VSSDK.BuildTools NuGet per la soluzione. Al momento della versione RC, questo pacchetto sarà in stato "Versione preliminare".
+Per compilare l'estensione nella nuova v3 VSIX formato (versione 3), è necessario compilare con i nuovi strumenti di compilazione VSSDK la soluzione. Verrà installata con Visual Studio 2017, ma l'estensione v2 VSIX potrebbe contenere un riferimento a una versione precedente tramite NuGet. In questo caso, è necessario installare manualmente un aggiornamento del pacchetto Microsoft.VSSDK.BuildTools NuGet per la soluzione.
 
 Per aggiornare i riferimenti NuGet Microsoft.VSSDK.BuildTools:
 
 * Fare clic sulla soluzione e scegliere **Manage NuGet Packages for Solution...**
 * Individuare il **aggiornamenti** scheda.
-* Selezionare la casella per **Includi versione preliminare**.
 * Selezionare Microsoft.VSSDK.BuildTools (versione più recente).
 * Premere **aggiornamento**.
 
 ![Strumenti di compilazione VSSDK](media/vssdk-build-tools.png)
-
->**Nota:** la schermata mostra una versione diversa di BuildTools. Selezionare la versione RC.
 
 ## <a name="make-changes-to-the-vsix-extension-manifest"></a>Apportare le modifiche al manifesto dell'estensione VSIX
 
@@ -147,7 +142,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\deven
 * Compilare il progetto VSIX.
 * Decomprimere il progetto VSIX generato.
   * Per impostazione predefinita, la vita file VSIX in bin/Debug o bin/Release come VSIX [YourCustomExtension].
-  * Rinominare con estensione VSIX come ZIP visualizzare facilmente il contenuto.
+  * Rinominare VSIX come ZIP visualizzare facilmente il contenuto.
 * Verificare l'esistenza di tre file:
   * Extension. vsixmanifest
   * manifest
@@ -161,7 +156,7 @@ Verificare che il progetto VSIX viene installato correttamente in un computer co
 
 Tenta di installare l'estensione:
 
-* In Visual Studio 2017 RC
+* In Visual Studio 2017
 
 ![Programma di installazione VSIX in Visual Studio 2017](media/vsixinstaller-vs-2017.png)
 
@@ -170,7 +165,7 @@ Tenta di installare l'estensione:
   * Dovrebbe funzionare per Visual Studio 2012, Visual Studio 2013, Visual Studio 2015.
 * Facoltativo: Verificare che il controllo di versione programma di installazione di VSIX offre una gamma di versioni.
   * Include le versioni precedenti di Visual Studio (se installato).
-  * Include Visual Studio 2017 RC.
+  * Include 2017 di Visual Studio.
 
 Se Visual Studio è stato aperto di recente, è possibile visualizzare una finestra di dialogo simile alla seguente:
 
@@ -182,7 +177,7 @@ Attendere l'arresto dei processi o terminare manualmente le attività. È possib
 
 ## <a name="check-when-missing-the-required-prerequisites"></a>Verificare se mancano i prerequisiti necessari
 
-* Tenta di installare l'estensione in un computer con Visual Studio 2017 RC che non contengono tutti i componenti definiti nei prerequisiti (sopra).
+* Tenta di installare l'estensione in un computer con Visual Studio 2017 che non contengono tutti i componenti definiti nei prerequisiti (sopra).
 * Verificare che l'installazione identifica il componente mancante/s e li elenca come prerequisito nel VSIXInstaller.
 * Nota: L'elevazione dei privilegi è richiesto se tutti i prerequisiti devono essere installati con l'estensione.
 
@@ -196,7 +191,7 @@ Per fornire ulteriori indicazioni, abbiamo identificato alcuni tipi di estension
 
 Tipo di estensione | Nome visualizzato |    Id
 --- | --- | ---
-Editor | Editor di Visual Studio core    | Microsoft.VisualStudio.CoreEditor
+Editor | Editor di Visual Studio core    | Microsoft.VisualStudio.Component.CoreEditor
 Roslyn | C# e Visual Basic | Microsoft.VisualStudio.Component.Roslyn.LanguageServices
 WPF | Componenti di base del carico di lavoro Desktop gestiti | Microsoft.VisualStudio.Component.ManagedDesktop.Core
 Debugger | Debugger-In-Time | Microsoft.VisualStudio.Component.Debugger.JustInTime
