@@ -1,25 +1,44 @@
 ---
-title: "Frammenti di codice Visual C# | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "frammenti [C#], frammenti predefiniti"
-  - "frammenti [C#], Code Snippet Inserter"
-  - "Code Snippet Inserter [J#]"
-  - "Code Snippet Inserter [C#]"
-  - "Visual C#, frammenti predefiniti"
+title: Frammenti di codice Visual C# | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snippets [C#], default snippets
+- snippets [C#], Code Snippet Inserter
+- Code Snippet Inserter [J#]
+- Code Snippet Inserter [C#]
+- Visual C#, default snippets
 ms.assetid: dbea3dd6-e650-4190-b874-c9f097d7de6e
 caps.latest.revision: 33
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 33
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: 01c13c4e0c9107f07580fb1701f81eac74a5022f
+ms.lasthandoff: 03/22/2017
+
 ---
 # <a name="visual-c-code-snippets"></a>Frammenti di codice Visual C#
 I frammenti di codice sono piccole porzioni di codice pronte all'uso che si possono inserire rapidamente nel codice. Ad esempio, il frammento di codice `for` crea un ciclo `for` vuoto. Alcuni frammenti di codice sono frammenti racchiusi, che consentono di selezionare righe di codice e quindi scegliere un frammento di codice che incorpora le righe di codice selezionate. Ad esempio, quando si selezionano righe di codice e si attiva il frammento di codice `for`, viene creato un ciclo `for` con le righe di codice all'interno del blocco del ciclo. I frammenti di codice possono rendere la scrittura del codice dei programmi più veloce, più semplice e più affidabile.  
@@ -59,7 +78,7 @@ I frammenti di codice sono piccole porzioni di codice pronte all'uso che si poss
 |mbox|Crea una chiamata a <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName>. Può essere necessario aggiungere un riferimento a System.Windows.Forms.dll.|All'interno di un metodo, un indicizzatore, una funzione di accesso proprietà o una funzione di accesso eventi.|  
 |namespace|Crea una dichiarazione [namespace](/dotnet/csharp/language-reference/keywords/namespace).|All'interno di uno spazio dei nomi (incluso lo spazio dei nomi globale).|  
 |prop|Crea una dichiarazione di [proprietà implementata automaticamente](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties).|All'interno di una classe o uno struct.|  
-ropfull|Crea una dichiarazione di proprietà con le funzioni di accesso get e set.|All'interno di una classe o uno struct.|  
+propfull|Crea una dichiarazione di proprietà con le funzioni di accesso get e set.|All'interno di una classe o uno struct.|  
 |propg|Crea una [proprietà implementata automaticamente](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties) di sola lettura con una funzione di accesso "set" privata.|All'interno di una classe o uno struct.|  
 |sim|Crea una dichiarazione [static](/dotnet/csharp/language-reference/keywords/static)[int](/dotnet/csharp/language-reference/keywords/int) del metodo Main.|All'interno di una classe o uno struct.|  
 |struct|Crea una dichiarazione [struct](/dotnet/csharp/language-reference/keywords/struct).|All'interno di uno spazio dei nomi (incluso lo spazio dei nomi globale), una classe o uno struct.|  
@@ -79,8 +98,4 @@ ropfull|Crea una dichiarazione di proprietà con le funzioni di accesso get e se
  [Parametri di modello](../ide/template-parameters.md)   
  [Procedura: Usare frammenti di codice racchiusi](../ide/how-to-use-surround-with-code-snippets.md)   
  
-
-
-<!--HONumber=Feb17_HO4-->
-
 
