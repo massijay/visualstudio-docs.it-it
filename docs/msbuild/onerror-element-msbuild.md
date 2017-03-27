@@ -1,70 +1,90 @@
 ---
-title: "OnError Element (MSBuild) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/msbuild/2003#OnError"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "OnError Element [MSBuild]"
-  - "<OnError Element [MSBuild]"
+title: Elemento OnError (MSBuild) | Microsoft Docs
+ms.custom: 
+ms.date: 03/13/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/developer/msbuild/2003#OnError
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- OnError Element [MSBuild]
+- <OnError Element [MSBuild]
 ms.assetid: 765767d3-ecb7-4cd9-ba1e-d9468964dddc
 caps.latest.revision: 14
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# OnError Element (MSBuild)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
+ms.openlocfilehash: 710eecad79b43c7544565d51536136e39c080d5f
+ms.lasthandoff: 03/13/2017
 
-Determina l'esecuzione di una o più destinazioni se l'attributo `ContinueOnError` è impostato su `false` per un'attività non riuscita.  
-  
-## Sintassi  
-  
+---
+# <a name="onerror-element-msbuild"></a>Elemento OnError (MSBuild)
+Fa in modo che vengano eseguite una o più destinazioni se l'attributo `ContinueOnError` è `false` per un'attività non riuscita.  
+
+ \<Project>  
+ \<Target>  
+ \<OnError>  
+
+## <a name="syntax"></a>Sintassi  
+
 ```  
 <OnError ExecuteTargets="TargetName"  
     Condition="'String A'=='String B'" />  
 ```  
-  
-## Attributi ed elementi  
+
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
-  
-### Attributi  
-  
+
+### <a name="attributes"></a>Attributi  
+
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`Condition`|Attributo facoltativo.<br /><br /> Condizione da valutare.  Per ulteriori informazioni, vedere [Conditions](../msbuild/msbuild-conditions.md).|  
-|`ExecuteTargets`|Attributo obbligatorio.<br /><br /> Destinazioni da eseguire se un'attività ha esito negativo.  Se sono specificate più destinazioni, separarle con punti e virgola.  Le diverse destinazioni vengono eseguite nell'ordine specificato.|  
-  
-### Elementi figlio  
+|`Condition`|Attributo facoltativo.<br /><br /> Condizione da valutare. Per altre informazioni, vedere [Condizioni](../msbuild/msbuild-conditions.md).|  
+|`ExecuteTargets`|Attributo obbligatorio.<br /><br /> Le destinazioni da eseguire se un'attività non riesce. Se si specificano più destinazioni, separarle con punto e virgola. Le destinazioni vengono eseguite nell'ordine specificato.|  
+
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
-  
-### Elementi padre  
-  
+
+### <a name="parent-elements"></a>Elementi padre  
+
 |Elemento|Descrizione|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |[Destinazione](../msbuild/target-element-msbuild.md)|Elemento contenitore per le attività [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].|  
-  
-## Note  
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] esegue l'elemento `OnError` se una delle attività dell'elemento `Target` non riesce con l'attributo `ContinueOnError` a `ErrorAndStop` o a `false`\).  Se l'attività ha esito negativo, vengono eseguite le destinazioni specificate nell'attributo `ExecuteTargets`.  Se nella destinazione sono presenti più elementi `OnError`, gli elementi `OnError` vengono eseguiti in sequenza quando l'attività ha esito negativo.  
-  
- Per informazioni sull'attributo `ContinueOnError`, vedere [Task Element \(MSBuild\)](../msbuild/task-element-msbuild.md).  Per informazioni sulle destinazioni, vedere [Targets](../msbuild/msbuild-targets.md).  
-  
-## Esempio  
- Nell'esempio di codice riportato di seguito vengono eseguite le attività `TaskOne` e `TaskTwo`.  Se `TaskOne` ha esito negativo, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] valuta l'elemento `OnError` ed esegue la destinazione `OtherTarget`.  
-  
-```  
+
+## <a name="remarks"></a>Note  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] esegue l'elemento `OnError` se una delle attività dell'elemento `Target` ha esito negativo con l'attributo `ContinueOnError` impostato su `ErrorAndStop` (o `false`). Quando l'attività ha esito negativo, vengono eseguite le destinazioni specificate nell'attributo `ExecuteTargets`. Se la destinazione include più di un elemento `OnError`, gli elementi `OnError` vengono eseguiti in sequenza quando l'attività ha esito negativo.  
+
+ Per altre informazioni sull'attributo `ContinueOnError`, vedere [Elemento Task (MSBuild)](../msbuild/task-element-msbuild.md). Per informazioni sulle destinazioni, vedere [Destinazioni](../msbuild/msbuild-targets.md).  
+
+## <a name="example"></a>Esempio  
+ Il codice seguente esegue le attività `TaskOne` e `TaskTwo`. Se `TaskOne` ha esito negativo, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] valuta l'elemento `OnError` ed esegue la destinazione `OtherTarget`.  
+
+```xml  
 <Target Name="ThisTarget">  
     <TaskOne ContinueOnError="ErrorAndStop">  
     </TaskOne>  
@@ -73,7 +93,8 @@ Determina l'esecuzione di una o più destinazioni se l'attributo `ContinueOnErro
     <OnError ExecuteTargets="OtherTarget" />  
 </Target>  
 ```  
-  
-## Vedere anche  
- [Project File Schema Reference](../msbuild/msbuild-project-file-schema-reference.md)   
- [Targets](../msbuild/msbuild-targets.md)
+
+## <a name="see-also"></a>Vedere anche  
+ [Informazioni di riferimento sullo schema del file di progetto](../msbuild/msbuild-project-file-schema-reference.md)   
+ [Destinazioni](../msbuild/msbuild-targets.md)
+

@@ -1,77 +1,98 @@
 ---
-title: "TaskBody Element (MSBuild) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "TaskBody element [MSBuild]"
-  - "<TaskBody> element [MSBuild]"
+title: Elemento TaskBody (MSBuild) | Microsoft Docs
+ms.custom: 
+ms.date: 03/13/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- TaskBody element [MSBuild]
+- <TaskBody> element [MSBuild]
 ms.assetid: 49d8741b-f1ea-4470-94fd-a1ac27341a6a
 caps.latest.revision: 7
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# TaskBody Element (MSBuild)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
+ms.openlocfilehash: 83e34546141a69cf93fb0cbbf86393b8fa749ef4
+ms.lasthandoff: 03/13/2017
 
-Contiene i dati che vengono passati a un oggetto `UsingTask` `TaskFactory`. Per ulteriori informazioni, vedere [UsingTask Element \(MSBuild\)](../msbuild/usingtask-element-msbuild.md).  
-  
-## Sintassi  
-  
+---
+# <a name="taskbody-element-msbuild"></a>Elemento TaskBody (MSBuild)
+Contiene i dati passati a `UsingTask``TaskFactory`. Per altre informazioni, vedere [Elemento UsingTask (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
+
+ \<Project>  
+ \<UsingTask>  
+ \<TaskBody>  
+
+## <a name="syntax"></a>Sintassi  
+
 ```  
 <TaskBody Evaluate="true/false" />  
 ```  
-  
-## Attributi ed elementi  
+
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
-  
-### Attributi  
-  
+
+### <a name="attributes"></a>Attributi  
+
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`Evaluate`|Attributo booleano facoltativo.<br /><br /> Se `true`, tramite MSBuild viene valutato qualsiasi elemento interno e vengono espansi elementi e proprietà prima che tale oggetto consenta il passaggio delle informazioni all'oggetto `TaskFactory` quando viene creata un'istanza dell'attività.|  
-  
-### Elementi figlio  
-  
+|`Evaluate`|Attributo booleano facoltativo.<br /><br /> Se `true`, MSBuild valuta tutti gli elementi interni ed espande gli elementi e le proprietà prima di passare le informazioni a `TaskFactory` quando viene creata un'istanza dell'attività.|  
+
+### <a name="child-elements"></a>Elementi figlio  
+
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|Dati|Il testo tra i tag `TaskBody` viene inviato alla lettera all'oggetto `TaskFactory`.|  
-  
-### Elementi padre  
-  
+|-------------|-----------------|  
+|Dati|Il testo compreso tra i tag `TaskBody` viene inviato testualmente a `TaskFactory`.|  
+
+### <a name="parent-elements"></a>Elementi padre  
+
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[UsingTask](../msbuild/usingtask-element-msbuild.md)|Consente di registrare le attività in [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].  In un progetto possono essere presenti zero o più elementi `UsingTask`.|  
-  
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come utilizzare l'elemento `TaskBody` con un attributo `Evaluate`.  
-  
-```  
+|-------------|-----------------|  
+|[UsingTask](../msbuild/usingtask-element-msbuild.md)|Consente di registrare attività in [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Possono esistere zero o più elementi `UsingTask` in un progetto.|  
+
+## <a name="example"></a>Esempio  
+ L'esempio seguente illustra come usare l'elemento `TaskBody` con un attributo `Evaluate`.  
+
+```xml  
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">  
-       <ParameterGroup>  
-              <Parameter1 ParameterType="System.String" Required="False" Output="False"/>  
-              <Parameter2 ParameterType="System.Int" Required="True" Output="False"/>  
-              ...  
+       <ParameterGroup>  
+              <Parameter1 ParameterType="System.String" Required="False" Output="False"/>  
+              <Parameter2 ParameterType="System.Int" Required="True" Output="False"/>  
+              ...  
 </ParameterGroup>  
-       <TaskBody Evaluate="true">  
-      ... Task factory-specific data ...  
-       </TaskBody>  
+       <TaskBody Evaluate="true">  
+      ... Task factory-specific data ...  
+       </TaskBody>  
 </UsingTask>  
 ```  
-  
-## Vedere anche  
- [Tasks](../msbuild/msbuild-tasks.md)   
- [Task Reference](../msbuild/msbuild-task-reference.md)   
- [Project File Schema Reference](../msbuild/msbuild-project-file-schema-reference.md)
+
+## <a name="see-also"></a>Vedere anche  
+ [Attività](../msbuild/msbuild-tasks.md)   
+ [Riferimento alle attività](../msbuild/msbuild-task-reference.md)   
+ [Informazioni di riferimento sullo schema del file di progetto](../msbuild/msbuild-project-file-schema-reference.md)
+

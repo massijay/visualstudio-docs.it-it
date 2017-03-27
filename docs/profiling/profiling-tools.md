@@ -1,5 +1,5 @@
 ---
-title: Strumenti di profilatura | Microsoft Docs
+title: Strumenti di profilatura in Visual Studio | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8f844c2d7d975476bc4c059d211a1d6cb0df64eb
-ms.openlocfilehash: 4c995fb6df6316ce7f84fae7075b81063b54ebf7
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 0d129b4820944f5717c63243cb8550bc4fed3385
+ms.openlocfilehash: 380b65540d8f5c6ea6d8a8adf1f3c5575f5dd9dc
+ms.lasthandoff: 03/20/2017
 
 ---
 # <a name="profiling-tools"></a>Strumenti di profilatura
@@ -103,15 +103,16 @@ Gli strumenti di profilatura e diagnostica consentono di diagnosticare l'utilizz
 ## <a name="which-tool-should-i-use"></a>Quale strumento utilizzare?  
  Nella tabella seguente sono riportati i diversi strumenti offerti da Visual Studio e i diversi tipi di progetto con cui possono essere usati:  
   
-|Strumento di prestazioni|Desktop di Windows|Windows Store/universale|ASP.NET|  
+|Strumento di prestazioni|Desktop di Windows|Windows Store/universale|ASP.NET/ASP.NET Core|  
 |----------------------|---------------------|------------------------------|-------------|  
 |[Utilizzo memoria](../profiling/memory-usage.md)|sì|sì|sì|  
 |[Utilizzo della CPU](../profiling/cpu-usage.md)|sì|sì|sì|  
 |[Utilizzo GPU](../debugger/gpu-usage.md)|sì|sì|no|  
 |[Sequenza temporale applicazione](../profiling/application-timeline.md)|sì|sì|no|  
-|[PerfTips](../profiling/perftips.md)|sì|Sì per XAML, no per HTML|no|  
-|[Esplora prestazioni](../profiling/performance-explorer.md)|sì|no|sì|  
-|[IntelliTrace](../debugger/intellitrace.md)|Solo .NET Enterprise|Solo .NET Enterprise|Solo .NET Enterprise|  
+|[PerfTips](../profiling/perftips.md)|sì|Sì per XAML, no per HTML|sì|  
+|[Performance Explorer](../profiling/performance-explorer.md) (Esplora prestazioni)|sì|no|sì (no per ASP.NET Core)|  
+|[IntelliTrace](../debugger/intellitrace.md)|Solo .NET Enterprise|Solo .NET Enterprise|Solo .NET Enterprise|
+|[Utilizzo della rete](../profiling/network-usage.md)|no|sì|no| 
 |[Velocità di risposta interfaccia utente HTML](../profiling/html-ui-responsiveness.md)|no|Sì per HTML, no per XAML|no|  
 |[Memoria JavaScript](../profiling/javascript-memory.md)|no|Sì per HTML, no per XAML|no|  
   

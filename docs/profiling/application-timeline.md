@@ -1,6 +1,6 @@
 ---
-title: Sequenza temporale applicazione | Microsoft Docs
-ms.custom: 
+title: Analizzare il consumo delle risorse nelle app XAML in Visual Studio | Microsoft Docs
+ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
@@ -29,12 +29,12 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: bdfe341252a7c4340a8c0a624d4394124c3efada
-ms.openlocfilehash: 03ac5f6c12163ff56f0a77a4922cc4366d463e07
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 5455d9a16004fef1aec02fbaf856f336c67dfb05
+ms.lasthandoff: 03/07/2017
 
 ---
-# <a name="application-timeline"></a>Sequenza temporale applicazione
+# <a name="analyze-resource-consumption-and-ui-thread-acitivity-xaml"></a>Analizzare il consumo delle risorse e l'attività del thread dell'interfaccia utente (XAML)
 Utilizzare il profiler **Sequenza temporale applicazione** per individuare e correggere problemi di prestazioni correlati all’interazione dell’applicazione nelle applicazioni XAML. Questo strumento consente di migliorare le prestazioni delle applicazioni XAML fornendo una visualizzazione dettagliata dell’utilizzo delle risorse delle applicazioni. È possibile analizzare il tempo impiegato dall'applicazione nella preparazione dei fotogrammi dell'interfaccia utente (layout e rendering), per soddisfare le richieste di rete e disco e in scenari come l’avvio dell’applicazione, il caricamento delle pagine e il ridimensionamento di Windows.  
   
  **Sequenza temporale applicazione** è uno degli strumenti che possono essere avviati con il comando **Debug/Profiler prestazioni**.  
@@ -56,7 +56,7 @@ Utilizzare il profiler **Sequenza temporale applicazione** per individuare e cor
 > [!NOTE]
 >  È possibile raccogliere e analizzare i dati sull’utilizzo della CPU e sul consumo di energia insieme ai dati della **Sequenza temporale applicazione** . Vedere [Esecuzione degli strumenti di profilatura con o senza il debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
   
-##  <a name="a-namebkmkcollecttimelinedataforyourappa-collect-application-timeline-data"></a><a name="BKMK_Collect_Timeline_data_for_your_app"></a> Raccogliere dati sulla sequenza temporale applicazione  
+##  <a name="BKMK_Collect_Timeline_data_for_your_app"></a> Raccogliere dati sulla sequenza temporale applicazione  
  È possibile profilare la velocità di risposta dell'app nel computer locale, nel dispositivo connesso, negli emulatori o nel simulatore Visual Studio o in un dispositivo remoto. Vedere [Esecuzione degli strumenti di profilatura con o senza il debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
   
 > [!TIP]
@@ -81,34 +81,34 @@ Utilizzare il profiler **Sequenza temporale applicazione** per individuare e cor
   
      ![Report del profiler della sequenza temporale](../profiling/media/timeline_base.png "TIMELINE_Base")  
   
-##  <a name="a-namebkmkanalyzetimelineprofilingdataa-analyze-timeline-profiling-data"></a><a name="BKMK_Analyze_Timeline_profiling_data"></a> Analizzare i dati di profilatura della sequenza temporale  
+##  <a name="BKMK_Analyze_Timeline_profiling_data"></a> Analizzare i dati di profilatura della sequenza temporale  
  Dopo aver raccolto i dati di profilatura, è possibile utilizzare la procedura indicata di seguito per avviare l'analisi:  
   
 1.  Esaminare le informazioni nei grafici **Utilizzo thread UI** e **Velocità effettiva visuale (FPS)** , quindi utilizzare le barre di navigazione della sequenza temporale per selezionare un intervallo di tempo da analizzare.  
   
 2.  Usando le informazioni contenute nel grafico **Utilizzo thread UI** o **Velocità effettiva visuale (FPS)** , esaminare i dettagli nella visualizzazione **Dettagli sequenza temporale** per individuare le possibili cause di qualsiasi mancanza apparente di velocità di risposta.  
   
-###  <a name="a-namebkmkreportscenarioscategoriesandeventsa-report-scenarios-categories-and-events"></a><a name="BKMK_Report_scenarios_categories_and_events"></a> Creare report su scenari, categorie ed eventi  
+###  <a name="BKMK_Report_scenarios_categories_and_events"></a> Creare report su scenari, categorie ed eventi  
  Lo strumento **Sequenza temporale dell’applicazione** visualizza i dati temporali per scenari, categorie ed eventi correlati alle prestazioni di XAML.  
   
-###  <a name="a-namebkmkdiagnosticsessiontimelinea-diagnostic-session-timeline"></a><a name="BKMK_Diagnostic_session_timeline"></a> Sequenza temporale della sessione di diagnostica  
+###  <a name="BKMK_Diagnostic_session_timeline"></a> Sequenza temporale della sessione di diagnostica  
  ![Sequenza temporale di prestazioni e diagnostica](../profiling/media/diaghub_timelinewithusermarks.png "DIAGHUB_TimelineWithUserMarks")  
   
  Il righello nella parte superiore della pagina mostra la sequenza temporale per le informazioni profilate. Questa sequenza temporale si applica sia al grafico **Utilizzo di thread UI** che al grafico **Velocità effettiva visuale** . Puoi limitare l'ambito del rapporto trascinando le barre di navigazione sulla sequenza temporale per selezionare un segmento della stessa.  
   
  Nella sequenza temporale vengono inoltre visualizzati tutti i contrassegni utente inseriti e gli eventi del ciclo di vita di attivazione dell'applicazione.  
   
-###  <a name="a-namebkmkuithreadutilizationgrapha-ui-thread-utilization-graph"></a><a name="BKMK_UI_thread_utilization_graph"></a> Grafico Utilizzo thread interfaccia utente  
+###  <a name="BKMK_UI_thread_utilization_graph"></a> Grafico Utilizzo thread interfaccia utente  
  ![Grafico Utilizzo CPU](../profiling/media/timeline_cpuutilization.png "TIMELINE_CpuUtilization")  
   
  Il grafico **Utilizzo thread UI (%)** è un grafico a barre che visualizza la quantità relativa di tempo impiegato in una categoria durante l'estensione di una raccolta.  
   
-###  <a name="a-namebkmkvisualthroughputfpsgrapha-visual-throughput-fps-graph"></a><a name="BKMK_Visual_throughput_FPS_graph"></a> Grafico Velocità effettiva elementi visivi  
+###  <a name="BKMK_Visual_throughput_FPS_graph"></a> Grafico Velocità effettiva elementi visivi  
  ![Grafico Velocità effettiva elementi visivi](../profiling/media/timeline_visualthroughput.png "TIMELINE_VisualThroughput")  
   
  Nel grafico a linee **Velocità effettiva visuale (FPS)** vengono visualizzati i frame al secondo (FPS) nel thread UI e di composizione dell'applicazione.  
   
-###  <a name="a-namebkmktimelinedetailsa-timeline-details"></a><a name="BKMK_Timeline_details_"></a> Dettagli sequenza temporale  
+###  <a name="BKMK_Timeline_details_"></a> Dettagli sequenza temporale  
  Dedicare tempo all’analisi del report fornito nella visualizzazione dei dettagli. Viene fornita una visualizzazione dettagliata dell'utilizzo della CPU dell'applicazione classificata in base al sottosistema di Framework dell'interfaccia utente o al componente del sistema che ha utilizzato la CPU.  
   
  Sono supportati i seguenti eventi:  
@@ -125,7 +125,7 @@ Utilizzare il profiler **Sequenza temporale applicazione** per individuare e cor
 > [!TIP]
 >  Scegliere lo strumento **Utilizzo CPU** insieme allo strumento **Sequenza temporale applicazione** quando si avvia la profilatura per visualizzare metodi di app eseguiti nel thread dell'interfaccia utente. Lo spostamento di codice di app a esecuzione prolungata in un thread in background può migliorare la velocità di risposta dell'interfaccia utente.  
   
-####  <a name="a-namebkmkcustomizingtimelinedetailsa-customizing-timeline-details"></a><a name="BKMK_Customizing_Timeline_details_"></a> Personalizzazione dei dettagli della sequenza temporale  
+####  <a name="BKMK_Customizing_Timeline_details_"></a> Personalizzazione dei dettagli della sequenza temporale  
  Usare la barra degli strumenti **Dettagli sequenza temporale** per ordinare, filtrare e specificare le annotazioni delle voci della visualizzazione **Dettagli sequenza temporale** .  
   
 |||  

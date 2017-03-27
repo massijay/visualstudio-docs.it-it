@@ -30,9 +30,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7a282fc04c1eb01f0c56b1d76880276fc270686d
-ms.openlocfilehash: df5195e7cc435f6da8ebfee4589d7c6258018993
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 2fa87621ed76fb93a9e92d558be5519d783274c5
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="improve-code-quality"></a>Migliorare la qualità del codice
@@ -48,6 +48,7 @@ Che cos'è la qualità del codice? Precisione, manutenibilità e anche eleganza 
 |||  
 |-|-|  
 |[Eseguire unit test del codice](../test/unit-test-your-code.md)|Esplora test facilita l'integrazione degli unit test nelle procedure di sviluppo. È possibile utilizzare il framework per unit test di Microsoft o uno tra i diversi framework di terze parti o open source.|  
+|[Live Unit Testing con Visual Studio](../test/live-unit-testing.md)|Live Unit Testing consente di eseguire automaticamente unit test in background e di visualizzare graficamente i risultati di code coverage e test nell'editor del codice di Visual Studio.|  
 |[Analisi della qualità delle applicazioni](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)|Gli strumenti di analisi del codice statico trovano errori di progettazione, utilizzo, gestibilità e stile nel codice C++ e gestito. Molti di questi problemi possono causare bug che sono difficili da riprodurre nell'ambiente di test standard.|  
 |[Misurazione della complessità e della manutenibilità del codice gestito](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|La metrica del codice è un insieme di misure del software in grado di fornire agli sviluppatori una migliore comprensione del codice che stanno sviluppando. Le metriche includono un indice di manutenibilità per funzioni e classi, complessità ciclomatica di funzioni, profondità dell'ereditarietà delle classi e quantità di accoppiamenti tra le classi.|  
   

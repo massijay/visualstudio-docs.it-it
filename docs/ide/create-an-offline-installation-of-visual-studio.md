@@ -2,7 +2,7 @@
 title: Creare un&quot;installazione offline di Visual Studio | Microsoft Docs
 description: Scegliere una versione e apprendere come creare un&quot;installazione offline di Visual Studio.
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 03/07/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -33,8 +33,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6ac5d1459a89830653b877a35b12042ecfbc8157
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 305402c28998de265549715356c93840f3f2f09e
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Creare un'installazione offline di Visual Studio
@@ -44,10 +45,5 @@ Se si vuole creare un layout di installazione offline di Visual Studio in modo c
 Scegliere la versione di Visual Studio di proprio interesse e visualizzare i dettagli in una delle pagine seguenti.
 
 * Per **Visual Studio 2015**, vedere la pagina [Create an Offline Installation of Visual Studio 2015](https://msdn.microsoft.com/library/mt706497.aspx) (Creare un'installazione offline di Visual Studio 2015) in MSDN.
-* Per **Visual Studio 2017 RC**, vedere la pagina [Create an Offline Installation of Visual Studio 2017](../install/create-an-offline-installation-of-visual-studio.md) (Creare un'installazione offline di Visual Studio 2017) in docs.microsoft.com.
-
-
-
-<!--HONumber=Feb17_HO4-->
-
+* Per **Visual Studio 2017**, vedere la pagina [Creare un'installazione offline di Visual Studio 2017](../install/create-an-offline-installation-of-visual-studio.md) in docs.microsoft.com.
 

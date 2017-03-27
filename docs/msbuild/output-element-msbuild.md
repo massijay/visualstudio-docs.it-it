@@ -1,68 +1,89 @@
 ---
-title: "Output Element (MSBuild) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/developer/msbuild/2003#Output"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<Output> Element [MSBuild]"
-  - "Output Element [MSBuild]"
+title: Elemento Output (MSBuild) | Microsoft Docs
+ms.custom: 
+ms.date: 03/13/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/developer/msbuild/2003#Output
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- <Output> Element [MSBuild]
+- Output Element [MSBuild]
 ms.assetid: 34bc7cd1-efd3-4b57-b691-4584eeb6a0e9
 caps.latest.revision: 13
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Output Element (MSBuild)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
+ms.openlocfilehash: 7a72f1faa5cfda2efb650f037ffdfcab072760c7
+ms.lasthandoff: 03/13/2017
 
+---
+# <a name="output-element-msbuild"></a>Elemento Output (MSBuild)
 Archivia i valori di output dell'attività in elementi e proprietà.  
-  
-## Sintassi  
-  
+
+ \<Project>  
+ \<Target>  
+ \<Task>  
+ \<Output>  
+
+## <a name="syntax"></a>Sintassi  
+
 ```  
 <Output TaskParameter="Parameter"  
     PropertyName="PropertyName"   
     Condition = "'String A' == 'String B'" />  
 ```  
-  
-## Attributi ed elementi  
+
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
-  
-### Attributi  
-  
+
+### <a name="attributes"></a>Attributi  
+
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |`TaskParameter`|Attributo obbligatorio.<br /><br /> Nome del parametro di output dell'attività.|  
-|`PropertyName`|L'attributo `PropertyName` o `ItemName` è obbligatorio.<br /><br /> Proprietà che riceve il valore del parametro di output dell'attività.  Il progetto può quindi fare riferimento alla proprietà mediante la sintassi `$(`*PropertyName*`)`.  È possibile assegnare alla proprietà un nuovo nome o un nome già definito nel progetto.<br /><br /> Non è possibile utilizzare questo attributo se è già presente l'attributo `ItemName`.|  
-|`ItemName`|L'attributo `PropertyName` o `ItemName` è obbligatorio.<br /><br /> Elemento che riceve il valore del parametro di output dell'attività.  Il progetto può quindi fare riferimento all'elemento mediante la sintassi `@(`*ItemName*`)`.  È possibile assegnare all'elemento un nuovo nome o un nome già definito nel progetto.<br /><br /> Non è possibile utilizzare questo attributo se è già presente l'attributo `PropertyName`.|  
-|`Condition`|Attributo facoltativo.<br /><br /> Condizione da valutare.  Per ulteriori informazioni, vedere [Conditions](../msbuild/msbuild-conditions.md).|  
-  
-### Elementi figlio  
+|`PropertyName`|È obbligatorio l'attributo `PropertyName` o l'attributo `ItemName`.<br /><br /> Proprietà che riceve il valore del parametro di output dell'attività. Il progetto può quindi fare riferimento alla proprietà con la sintassi `$(`*NomeProprietà*`)`. Questo nome di proprietà può essere il nome di una nuova proprietà o un nome già definito nel progetto.<br /><br /> Non è possibile usare questo attributo se si usa anche `ItemName`.|  
+|`ItemName`|È obbligatorio l'attributo `PropertyName` o l'attributo `ItemName`.<br /><br /> Elemento che riceve il valore del parametro di output dell'attività. Il progetto può quindi fare riferimento all'elemento con la sintassi `@(`*NomeElemento*`)`. Il nome dell'elemento può essere il nome di un nuovo elemento o un nome già definito nel progetto.<br /><br /> Non è possibile usare questo attributo se si usa anche `PropertyName`.|  
+|`Condition`|Attributo facoltativo.<br /><br /> Condizione da valutare. Per altre informazioni, vedere [Condizioni](../msbuild/msbuild-conditions.md).|  
+
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
-  
-### Elementi padre  
-  
+
+### <a name="parent-elements"></a>Elementi padre  
+
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[Task](../msbuild/task-element-msbuild.md)|Crea ed esegue un'istanza di un'attività [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].|  
-  
-## Esempio  
- Nell'esempio di codice riportato di seguito viene illustrata l'esecuzione dell'attività `Csc` all'interno di un elemento `Target`.  Gli elementi e le proprietà passati all'attività vengono dichiarati al di fuori dell'ambito dell'esempio.  Il valore del parametro di output `OutputAssembly` viene archiviato nell'elemento `FinalAssemblyName` e quello del parametro di output `BuildSucceeded` viene archiviato nella proprietà `BuildWorked`.  Per ulteriori informazioni, vedere [Tasks](../msbuild/msbuild-tasks.md).  
-  
-```  
+|-------------|-----------------|  
+|[Task](../msbuild/task-element-msbuild.md)|Crea ed esegue un'istanza di un'attività di [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].|  
+
+## <a name="example"></a>Esempio  
+ L'esempio di codice seguente mostra l'attività `Csc` eseguita all'interno di un elemento `Target`. Gli elementi e le proprietà passati ai parametri dell'attività vengono dichiarati al di fuori dell'ambito di questo esempio. Il valore dal parametro di output `OutputAssembly` viene archiviato nell'elemento `FinalAssemblyName` e il valore del parametro di output `BuildSucceeded` viene archiviato nella proprietà `BuildWorked`. Per altre informazioni, vedere [Tasks](../msbuild/msbuild-tasks.md) (Attività).  
+
+```xml  
 <Target Name="Compile" DependsOnTargets="Resources">  
     <Csc  Sources="@(CSFile)"  
             TargetType="library"  
@@ -78,7 +99,8 @@ Archivia i valori di output dell'attività in elementi e proprietà.
     </Csc>  
 </Target>  
 ```  
-  
-## Vedere anche  
- [Project File Schema Reference](../msbuild/msbuild-project-file-schema-reference.md)   
- [Tasks](../msbuild/msbuild-tasks.md)
+
+## <a name="see-also"></a>Vedere anche  
+ [Informazioni di riferimento sullo schema del file di progetto](../msbuild/msbuild-project-file-schema-reference.md)   
+ [Attività](../msbuild/msbuild-tasks.md)
+

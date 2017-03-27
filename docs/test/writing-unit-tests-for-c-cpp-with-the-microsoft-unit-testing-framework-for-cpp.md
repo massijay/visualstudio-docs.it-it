@@ -1,5 +1,5 @@
 ---
-title: Scrittura di unit test per C/C++ con il framework unit test di Microsoft per C++ | Microsoft Docs
+title: "Scrittura di unit test per C/C++ con il framework di testing unità Microsoft per C++ | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,9 +28,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: dd88409bb0774342e0a9f50178e1204cabf72e46
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 76721dbf816cf7b7b8691efc10d22aac6b69cb05
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="writing-unit-tests-for-cc-with-the-microsoft-unit-testing-framework-for-c"></a>Scrittura di unit test per C/C++ con il framework di testing unità Microsoft per C++.
@@ -98,7 +98,7 @@ In Visual Studio, è possibile creare unit test per il codice non gestito scritt
   
         3.  Dal menu di scelta rapida di un test, scegliere **Debug del test selezionato** per eseguire il test nel debugger  
   
-##  <a name="a-namewalkthrougha-walkthrough-developing-an-unmanaged-dll-with-test-explorer"></a><a name="walkthrough"></a> Procedura dettagliata: Compilare una DLL non gestita con Esplora test  
+##  <a name="walkthrough"></a> Procedura dettagliata: Compilare una DLL non gestita con Esplora test  
  È possibile adattare questa procedura dettagliata per compilare la propria DLL. La procedura principale è la seguente:  
   
 1.  [Creare un progetto di test nativo](#unitTestProject). I test vengono creati in un progetto separato dalla DLL che si sta sviluppando.  
@@ -117,7 +117,7 @@ In Visual Studio, è possibile creare unit test per il codice non gestito scritt
   
 8.  [Unità isolate da risorse esterne](https://msdn.microsoft.com/library/hh549174.aspx). In genere, una DLL dipende da altri componenti del sistema che si sta sviluppando, come altre DLL, i database, o dei sottosistemi remoti. È utile verificare ogni unità in isolamento dalle relative dipendenze. I componenti esterni possono provocare un rallentamento dell'esecuzione dei test. Durante lo sviluppo, gli altri componenti potrebbero non essere completati.  
   
-###  <a name="a-nameunittestprojecta-create-a-native-unit-test-project"></a><a name="unitTestProject"></a> Creare un progetto nativo di unit test  
+###  <a name="unitTestProject"></a> Creare un progetto nativo di unit test  
   
 1.  Nel menu **File** , scegliere **Nuovo**, **Progetto**.  
   
@@ -166,7 +166,7 @@ In Visual Studio, è possibile creare unit test per il codice non gestito scritt
   
          ![Esplora unit test con un test superato](../test/media/utecpp04.png "UteCpp04")  
   
-###  <a name="a-namecreatedllprojecta-create-an-unmanaged-dll-project"></a><a name="createDllProject"></a> Creare un progetto DLL non gestito  
+###  <a name="createDllProject"></a> Creare un progetto DLL non gestito  
   
 1.  Creare un progetto **Visual C++** tramite il modello **Progetto Win32** .  
   
@@ -196,7 +196,7 @@ In Visual Studio, è possibile creare unit test per il codice non gestito scritt
     }  
     ```  
   
-###  <a name="a-namecoupleprojectsa-couple-the-test-project-to-the-dll-project"></a><a name="coupleProjects"></a> Unire il progetto di test al progetto DLL  
+###  <a name="coupleProjects"></a> Unire il progetto di test al progetto DLL  
   
 1.  Aggiungere il progetto DLL ai riferimenti del progetto di test:  
   
@@ -246,7 +246,7 @@ In Visual Studio, è possibile creare unit test per il codice non gestito scritt
   
  È stato installato il test e i progetti di codice, e verificato che sia possibile eseguire test che eseguono funzioni nel progetto di codice. Ora è possibile iniziare a scrivere test e codici reali.  
   
-###  <a name="a-nameiteratea-iteratively-augment-the-tests-and-make-them-pass"></a><a name="iterate"></a> Aumentare i test in maniera iterativa e farli passare  
+###  <a name="iterate"></a> Aumentare i test in maniera iterativa e farli passare  
   
 1.  Aggiungere un nuovo test:  
   
@@ -304,7 +304,7 @@ In Visual Studio, è possibile creare unit test per il codice non gestito scritt
     > [!TIP]
     >  Sviluppare il codice aggiungendo un test alla volta. Assicurarsi che tutti i test vengano superati dopo ogni iterazione.  
   
-###  <a name="a-namedebuga-debug-a-failing-test"></a><a name="debug"></a> Debug di un test non superato  
+###  <a name="debug"></a> Debug di un test non superato  
   
 1.  Aggiungere un altro test:  
   
@@ -379,7 +379,7 @@ In Visual Studio, è possibile creare unit test per il codice non gestito scritt
 > [!TIP]
 >  Se i singoli test non hanno dipendenze che ne impediscono l'esecuzione in qualsiasi ordine, attivare l'esecuzione parallela dei test con l'interruttore ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") sulla barra degli strumenti. Questo può ridurre notevolmente il tempo impiegato per eseguire tutti i test.  
   
-###  <a name="a-namerefactora-refactor-the-code-without-changing-tests"></a><a name="refactor"></a> Eseguire il refactoring del codice senza modificare i test  
+###  <a name="refactor"></a> Eseguire il refactoring del codice senza modificare i test  
   
 1.  Semplificare il calcolo centrale nella funzione SquareRoot:  
   
