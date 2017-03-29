@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 9f888c27357a5e13fd5e1977bd51a200e928be64
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: 746dd25dde790d5e262e25a3702b49721edc3510
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -127,7 +127,7 @@ Funzionalità supportate in base alla versione e all'edizione di Visual Studio:
 
 | Web | 2017 | 2015 | 2013 Community | 2013 Desktop | 2013 Web | 2013 Professional e successive | 2012 Professional e successive | 2010 SP1 Professional e successive |
 | --- | --- | --- | --- | --- | --- | --- | --- | ---|
-| Progetto Web Djano | &#10004; | &#10004; | &#10004; | &#10007; | &#10004; | &#10004; | &#10004; | &#10004; |
+| Progetto Web Django | &#10004; | &#10004; | &#10004; | &#10007; | &#10004; | &#10004; | &#10004; | &#10004; |
 | Progetto Web Bottle | &#10004; | &#10004; | &#10004; | &#10007; | &#10004; | &#10004; | &#10004; | &#10004; |
 | Progetto Web Flask | &#10004; | &#10004; | &#10004; | &#10007; | &#10004; | &#10004; | &#10004; | &#10004; |
 | Progetto Web generico | &#10004; | &#10004; | &#10004; | &#10007; | &#10004; | &#10004; | &#10004; | &#10004; |
@@ -192,3 +192,4 @@ Funzionalità supportate in base alla versione e all'edizione di Visual Studio:
 
 - [Writing Kinect games with Python using PyKinect](https://github.com/Microsoft/PTVS/wiki/PyKinect) (Uso di PyKinect per scrivere di giochi Kinect con Python) (wiki GitHub)
 - [WFastCGI bridge between IIS and Python](https://pypi.python.org/pypi/wfastcgi) (Ponte WFastCGI tra IIS e Python) (python.org)
+
