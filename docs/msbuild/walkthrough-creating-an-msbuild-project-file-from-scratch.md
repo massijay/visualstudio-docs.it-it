@@ -279,7 +279,7 @@ I linguaggi di programmazione destinati a .NET Framework usano i file di progett
   
      Questo comando crea la cartella \Bin\, quindi richiama il compilatore di Visual C# per creare l'applicazione MSBuildSample e la inserisce nella cartella \Bin\.  
   
-2.  Per verificare che la cartella \Bin\ sia stata creata e che contenga l'applicazione MSBuildSample, digitare ** dir Bin**.  
+2.  Per verificare che la cartella \Bin\ sia stata creata e che contenga l'applicazione MSBuildSample, digitare **dir Bin**.  
   
 3.  Testare l'applicazione digitando **Bin\MSBuildSample**.  
   

@@ -59,7 +59,7 @@ ms.lasthandoff: 02/22/2017
 Esegue il wrapping dello strumento linker di Visual C++, link.exe. Lo strumento linker consente di collegare file in formato COFF (Common Object File Format ) e librerie per creare un file eseguibile (con estensione exe) o una libreria di collegamento dinamico (DLL). Per altre informazioni, vedere [Opzioni linker](/visual-cpp/build/reference/linker-options).  
   
 ## <a name="parameters"></a>Parametri  
- Nella tabella che segue vengono descritti i parametri dell'attività ** Link**. La maggior parte dei parametri di attività e alcuni set di parametri corrispondono a un'opzione della riga di comando.  
+ Nella tabella che segue vengono descritti i parametri dell'attività **Link**. La maggior parte dei parametri di attività e alcuni set di parametri corrispondono a un'opzione della riga di comando.  
   
 -   **AdditionalDependencies**  
   

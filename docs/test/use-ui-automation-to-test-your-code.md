@@ -81,13 +81,13 @@ I test automatizzati che eseguono operazioni sull'applicazione tramite l'interfa
   
 -   [Passaggi successivi](#VerifyCodeUsingCUITWhatsNext)  
   
-##  <a name="a-nameverifyingcodeusingcuitcreatea-creating-coded-ui-tests"></a><a name="VerifyingCodeUsingCUITCreate"></a> Creazione di test codificati dell'interfaccia utente  
+##  <a name="VerifyingCodeUsingCUITCreate"></a> Creazione di test codificati dell'interfaccia utente  
   
 1.  **Creare un progetto di test codificato dell'interfaccia utente.**  
   
      I test codificati dell'interfaccia utente devono essere contenuti in un progetto di test codificato dell'interfaccia utente. Se non si dispone già di un progetto di test codificato dell'interfaccia utente, crearne uno. In **Esplora soluzioni** scegliere **Aggiungi**, **Nuovo progetto** dal menu di scelta rapida della soluzione e quindi selezionare **Visual Basic** o **Visual C#**. Scegliere quindi **Test**, **Test codificato dell'interfaccia utente**.  
   
-    -   *I modelli di **Test codificato dell'interfaccia utente** non sono disponibili.*  
+    -   *I modelli di**Test codificato dell'interfaccia utente**non sono disponibili.*  
   
          È possibile che si usi una versione di Visual Studio che non supporta i test codificati dell'interfaccia utente. Per creare test codificati dell'interfaccia utente, è necessario usare Visual Studio Enterprise.  
   
@@ -172,7 +172,7 @@ I test automatizzati che eseguono operazioni sull'applicazione tramite l'interfa
   
  Per un esempio più dettagliato, vedere [Procedura dettagliata: Creazione, modifica e gestione di un test codificato dell'interfaccia utente](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md). In questa procedura dettagliata verrà creata una semplice applicazione Windows Presentation Foundation (WPF) per dimostrare come creare, modificare e gestire un test codificato dell'interfaccia utente. Nella procedura dettagliata vengono fornite le soluzioni per correggere i test interrotti da vari problemi di temporizzazione e dal refactoring del controllo.  
   
-###  <a name="a-namestartinga-starting-and-stopping-the-application-under-test"></a><a name="starting"></a> Avvio e arresto dell'applicazione sottoposta a test  
+###  <a name="starting"></a> Avvio e arresto dell'applicazione sottoposta a test  
  *Non si vuole avviare e interrompere separatamente l'applicazione, il browser o il database. Come evitare il problema.*  
   
 -   ![Prerequisito](../test/media/prereq.png "Prereq") Se non si vogliono registrare le azioni per avviare l'applicazione sottoposta a test, è necessario avviare l'applicazione prima di fare clic sull'icona **Registra**.  
@@ -183,7 +183,7 @@ I test automatizzati che eseguono operazioni sull'applicazione tramite l'interfa
   
 -   ![Prerequisito](../test/media/prereq.png "Prereq") È possibile aggiungere un metodo Cleanup del test, identificato da un attributo [TestCleanup], che esegua il codice alla fine di ogni metodo di test. Ad esempio, il metodo per chiudere l'applicazione potrebbe essere chiamato dal metodo TestCleanup.  
   
-###  <a name="a-nameverifyingcodeusingcuitgenerateassertionsa-validating-the-properties-of-ui-controls"></a><a name="VerifyingCodeUsingCUITGenerateAssertions"></a> Convalida delle proprietà dei controlli dell'interfaccia utente  
+###  <a name="VerifyingCodeUsingCUITGenerateAssertions"></a> Convalida delle proprietà dei controlli dell'interfaccia utente  
  Si può usare il **Generatore di test codificati dell'interfaccia utente** per aggiungere un controllo dell'interfaccia utente a <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> per il test o per generare codice per un metodo di convalida che usa un'asserzione per un controllo dell'interfaccia utente.  
   
  Per generare asserzioni per i controlli dell'interfaccia utente, scegliere lo strumento **Aggiungi asserzioni** nel Generatore di test codificati dell'interfaccia utente e trascinarlo sul controllo dell'applicazione sottoposta a test da verificare. Quando il controllo risulta delimitato da una casella, rilasciare il mouse. Il codice della classe di controllo viene creato immediatamente nel file `UIMap.Designer.cs`.  
@@ -304,7 +304,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
 ```  
   
-##  <a name="a-nameverifyingcodecuitmodifya-customizing-your-coded-ui-test"></a><a name="VerifyingCodeCUITModify"></a> Personalizzazione del test codificato dell'interfaccia utente  
+##  <a name="VerifyingCodeCUITModify"></a> Personalizzazione del test codificato dell'interfaccia utente  
  Dopo aver creato il test codificato dell'interfaccia utente, è possibile modificarlo usando uno qualsiasi degli strumenti seguenti in Visual Studio:  
   
 -   **Generatore di test codificati dell'interfaccia utente:** usare il Generatore di test codificati dell'interfaccia utente per aggiungere controlli e convalida ai test. Vedere la sezione [Aggiunta di controlli e la convalida delle proprietà](#VerifyingCodeUsingCUITGenerateAssertions) in questo argomento.  
@@ -331,7 +331,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
         -   [Configurazioni e piattaforme supportate per i test codificati dell'interfaccia utente e le registrazioni delle azioni](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)  
   
-###  <a name="a-namegeneratedcodea-the-generated-code"></a><a name="generatedCode"></a> Codice generato  
+###  <a name="generatedCode"></a> Codice generato  
  Quando si sceglie **Genera codice**, vengono create diverse parti di codice:  
   
 -   **Una riga nel metodo di test.**  
@@ -399,7 +399,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
  Per altre informazioni sul codice generato, vedere [Composizione di un test codificato dell'interfaccia utente](../test/anatomy-of-a-coded-ui-test.md).  
   
-###  <a name="a-nameactionsa-coding-ui-control-actions-and-properties"></a><a name="actions"></a> Codifica di azioni e proprietà del controllo dell'interfaccia utente  
+###  <a name="actions"></a> Codifica di azioni e proprietà del controllo dell'interfaccia utente  
  Quando si usano i controlli di test dell'interfaccia utente nei test codificati dell'interfaccia utente, questi sono suddivisi in due parti: azioni e proprietà.  
   
 -   La prima parte consiste in azioni che è possibile eseguire sui controlli di test dell'interfaccia utente. Ad esempio, i test codificati dell'interfaccia utente possono simulare i clic del mouse su un controllo di test dell'interfaccia utente o i tasti premuti sulla tastiera per agire su un controllo di test dell'interfaccia utente.  
@@ -455,10 +455,10 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
   
      `SetProperty(myWinCheckBox.PropertyNames.Checked, true);`  
   
-###  <a name="a-namedebugginga-debugging"></a><a name="debugging"></a> Debug  
+###  <a name="debugging"></a> Debug  
  È possibile analizzare i test codificati dell'interfaccia utente usando i log dei test codificati dell'interfaccia utente. I log dei test codificati dell'interfaccia utente filtrano e registrano informazioni importanti sulle esecuzioni dei test codificati dell'interfaccia utente. Il formato dei log consente di eseguire rapidamente il debug dei problemi. Per altre informazioni, vedere [Analisi dei test codificati dell'interfaccia utente usando i log dei test codificati dell'interfaccia utente](../test/analyzing-coded-ui-tests-using-coded-ui-test-logs.md).  
   
-##  <a name="a-nameverifycodeusingcuitwhatsnexta-whats-next"></a><a name="VerifyCodeUsingCUITWhatsNext"></a> Passaggi successivi  
+##  <a name="VerifyCodeUsingCUITWhatsNext"></a> Passaggi successivi  
  **Opzioni aggiuntive per l'esecuzione di test codificati dell'interfaccia utente:** come descritto in precedenza in questo argomento, è possibile eseguire test codificati dell'interfaccia utente direttamente da Visual Studio. In più, è possibile eseguire test automatizzati dell'interfaccia utente da [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] o da [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]. A differenza di altri test automatizzati, i test codificati dell'interfaccia utente automatizzati devono interagire con il desktop quando vengono eseguiti.  
   
 -   [Procedura: Eseguire test da Microsoft Visual Studio](http://msdn.microsoft.com/Library/1a1207a9-2a33-4a1e-a1e3-ddf0181b1046)  

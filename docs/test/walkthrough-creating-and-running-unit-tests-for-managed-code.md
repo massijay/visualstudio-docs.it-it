@@ -72,7 +72,7 @@ Questa procedura dettagliata illustra come creare, eseguire e personalizzare una
   
 -   Il progetto Bank. Vedere [Progetto di esempio per la creazione di unit test](../test/sample-project-for-creating-unit-tests.md).  
   
-##  <a name="a-namebkmkpreparethewalkthrougha-prepare-the-walkthrough"></a><a name="BKMK_Prepare_the_walkthrough"></a> Preparare la procedura dettagliata  
+##  <a name="BKMK_Prepare_the_walkthrough"></a> Preparare la procedura dettagliata  
   
 1.  Aprire Visual Studio.  
   
@@ -123,7 +123,7 @@ public void Debit(double amount)
   
 ```  
   
-##  <a name="a-namebkmkcreateaunittestprojecta-create-a-unit-test-project"></a><a name="BKMK_Create_a_unit_test_project"></a> Creare un progetto di unit test  
+##  <a name="BKMK_Create_a_unit_test_project"></a> Creare un progetto di unit test  
  **Prerequisito**: attenersi alla procedura [Preparare la procedura dettagliata](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Prepare_the_walkthrough).  
   
 #### <a name="to-create-a-unit-test-project"></a>Per creare un progetto di unit test  
@@ -144,7 +144,7 @@ public void Debit(double amount)
   
 6.  Nella finestra di dialogo Gestione riferimenti espandere **Soluzione** , quindi selezionare l'elemento **Bank** .  
   
-##  <a name="a-namebkmkcreatethetestclassa-create-the-test-class"></a><a name="BKMK_Create_the_test_class"></a> Creare la classe di test  
+##  <a name="BKMK_Create_the_test_class"></a> Creare la classe di test  
  È necessaria una classe di test per verificare la classe `BankAccount` . È possibile usare UnitTest1.cs generato dal modello del progetto, ma è necessario fornire nomi più descrittivi per il file e la classe. È possibile eseguire questa operazione in un unico passaggio rinominando il file in Esplora soluzioni.  
   
  **Ridenominazione di un file di classe**  
@@ -179,7 +179,7 @@ namespace BankTests
 using BankAccountNS;  
 ```  
   
-###  <a name="a-namebkmktestclassrequirementsa-test-class-requirements"></a><a name="BKMK_Test_class_requirements"></a> Requisiti della classe di test  
+###  <a name="BKMK_Test_class_requirements"></a> Requisiti della classe di test  
  I requisiti minimi per una classe di test sono i seguenti:  
   
 -   L'attributo `[TestClass]` è obbligatorio nel framework per unit test di Microsoft per il codice gestito per qualsiasi classe che contiene metodi di unit test che si desidera eseguire in Esplora test.  
@@ -188,7 +188,7 @@ using BankAccountNS;
   
  È possibile avere altre classi in un progetto di unit test che non presentano l'attributo `[TestClass]` ed è possibile avere altri metodi nelle classi di test che non presentano l'attributo `[TestMethod]` . È possibile usare questi altri metodi e classi nei metodi di test.  
   
-##  <a name="a-namebkmkcreatethefirsttestmethoda-create-the-first-test-method"></a><a name="BKMK_Create_the_first_test_method"></a> Creare il primo metodo di test  
+##  <a name="BKMK_Create_the_first_test_method"></a> Creare il primo metodo di test  
  In questa routine viene illustrato come scrivere i metodi di unit test per verificare il comportamento del metodo `Debit` della classe `BankAccount` . Il metodo è elencato sopra.  
   
  Analizzando il metodo sottoposto a test, si determina che esistono almeno tre comportamenti che devono essere controllati:  
@@ -229,7 +229,7 @@ using BankAccountNS;
   
  Il metodo è piuttosto semplice. Verrà configurato un nuovo oggetto `BankAccount` con un saldo iniziale e quindi verrà prelevato un importo valido. Verrà usato il framework di unit test di Microsoft per il codice gestito dal metodo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A> per verificare che il saldo finale sia quello previsto.  
   
-###  <a name="a-namebkmktestmethodrequirementsa-test-method-requirements"></a><a name="BKMK_Test_method_requirements"></a> Requisiti del metodo di test  
+###  <a name="BKMK_Test_method_requirements"></a> Requisiti del metodo di test  
  Un metodo di test deve soddisfare i seguenti requisiti:  
   
 -   Il metodo deve essere provvisto dell'attributo `[TestMethod]` .  
@@ -238,7 +238,7 @@ using BankAccountNS;
   
 -   Il metodo non può avere parametri.  
   
-##  <a name="a-namebkmkbuildandrunthetesta-build-and-run-the-test"></a><a name="BKMK_Build_and_run_the_test"></a> Compilare ed eseguire il test  
+##  <a name="BKMK_Build_and_run_the_test"></a> Compilare ed eseguire il test  
   
 #### <a name="to-build-and-run-the-test"></a>Per compilare ed eseguire il test  
   
@@ -250,10 +250,10 @@ using BankAccountNS;
   
 3.  In questo caso, il test non riesce. Il metodo di test viene spostato nel gruppo **Test non superati** . Selezionare il metodo in Esplora test per visualizzare i dettagli nella parte inferiore della finestra.  
   
-##  <a name="a-namebkmkfixyourcodeandrerunyourtestsa-fix-your-code-and-rerun-your-tests"></a><a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> Correggere il codice e rieseguire i test  
+##  <a name="BKMK_Fix_your_code_and_rerun_your_tests"></a> Correggere il codice e rieseguire i test  
  **Analizzare i risultati dei test**  
   
- Il risultato del test contiene un messaggio che descrive l'errore. Per il metodo `AreEquals`, il messaggio mostra il contenuto previsto (il parametro **\<*XXX*>** previsto) e ciò che è stato ricevuto (il parametro **\<*YYY*>** effettivo). Si prevedeva che il saldo venisse detratto dal saldo iniziale, ma è stato invece aumentato dell'importo del prelievo.  
+ Il risultato del test contiene un messaggio che descrive l'errore. Per il metodo `AreEquals`, il messaggio mostra il contenuto previsto (il parametro **\<*XXX*>**previsto) e ciò che è stato ricevuto (il parametro**\<*YYY*>** effettivo). Si prevedeva che il saldo venisse detratto dal saldo iniziale, ma è stato invece aumentato dell'importo del prelievo.  
   
  Il riesame del codice di Debit mostra che lo unit test ha trovato un bug. La quantità da ritirare viene aggiunta al saldo del conto quando dovrebbe essere sottratta.  
   
@@ -275,7 +275,7 @@ m_balance -= amount;
   
  In Esplora test scegliere **Esegui tutto** per rieseguire il test. La barra verde/rossa diventa verde e il test viene spostato nel gruppo **Test superati** .  
   
-##  <a name="a-namebkmkuseunitteststoimproveyourcodea-use-unit-tests-to-improve-your-code"></a><a name="BKMK_Use_unit_tests_to_improve_your_code"></a> Usare gli unit test per migliorare il codice  
+##  <a name="BKMK_Use_unit_tests_to_improve_your_code"></a> Usare gli unit test per migliorare il codice  
  In questa sezione viene descritto come un processo iterativo di analisi, di sviluppo di unit test e di refactoring può aiutare a rendere il codice di produzione più affidabile ed efficace.  
   
  **Analizzare i problemi**  
