@@ -4,6 +4,7 @@
 ### [Azure SDK per Python](azure-sdk-for-python.md)
 ## [Introduzione a Python](getting-started.md)
 ### [Pubblicazione in Azure](publishing-to-azure.md)
+### [Creazione di un'estensione di C++ per Python](cpp-and-python.md)
 ## [Progetti Python](python-projects.md)
 ### [Modelli di progetti Web](template-web.md)
 ### [Modelli di progetti Web Django](template-django.md)
