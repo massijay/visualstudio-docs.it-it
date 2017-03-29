@@ -1,25 +1,44 @@
 ---
-title: "Application Page, Project Designer (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ProjectPropertiesApplicationWPF"
-  - "vb.ProjectPropertiesApplication"
-helpviewer_keywords: 
-  - "Creazione progetti, pagina Applicazione"
-  - "Applicazione (pagina) in Creazione progetti"
+title: Pagina Applicazione, Creazione progetti (Visual Basic) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vb.ProjectPropertiesApplicationWPF
+- vb.ProjectPropertiesApplication
+helpviewer_keywords:
+- Project Designer, Application page
+- Application page in Project Designer
 ms.assetid: 8cec9fea-cd92-47ff-88dd-7c928f0b4a74
 caps.latest.revision: 64
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 64
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: d95f62f61261c9c5c9af36e3bb2ee6fe66d63d2a
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Application Page, Project Designer (Visual Basic)
 Usare la pagina **Applicazione** di Creazione progetti per specificare le impostazioni e le proprietà dell'applicazione del progetto.  
@@ -71,7 +90,7 @@ Usare la pagina **Applicazione** di Creazione progetti per specificare le impost
  Per altre informazioni sulla proprietà **Tipo di applicazione**, vedere [/target (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/target). Per informazioni su come accedere a questa proprietà a livello di codice, vedere <xref:VSLangProj.ProjectProperties.OutputType%2A>.  
   
  **Icona**  
- Consente di impostare il file con estensione ico che si vuole usare come icona di programma. Selezionare ** \<Sfoglia...>** per individuare un elemento grafico esistente. Per altre informazioni, vedere [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) o [/win32icon (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option) (/win32icon (opzioni del compilatore C#)). Per accedere a questa proprietà a livello di codice, vedere <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.  
+ Consente di impostare il file con estensione ico che si vuole usare come icona di programma. Selezionare **\<Sfoglia...>** per individuare un elemento grafico esistente. Per altre informazioni, vedere [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) o [/win32icon (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option) (/win32icon (opzioni del compilatore C#)). Per accedere a questa proprietà a livello di codice, vedere <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.  
   
  **Modulo di avvio/oggetto di avvio/URI di avvio**  
  Consente di specificare il modulo di avvio o il punto di ingresso dell'applicazione.  
@@ -158,8 +177,3 @@ Usare la pagina **Applicazione** di Creazione progetti per specificare le impost
 ## <a name="see-also"></a>Vedere anche  
 [Managing Application Properties](../../ide/application-properties.md) (Gestione delle proprietà dell'applicazione) 
  [Writing Code in Office Solutions](/office-dev/office-dev/writing-code-in-office-solutions) (Scrittura di codice nelle soluzioni Office)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

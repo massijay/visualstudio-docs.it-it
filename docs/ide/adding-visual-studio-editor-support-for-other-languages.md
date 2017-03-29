@@ -22,6 +22,7 @@ manager: ghogen
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 1901f0dde22fb44ecf3d1b549505590125999700
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="adding-visual-studio-editor-support-for-other-languages"></a>Aggiunta del supporto di altri linguaggi all'editor di Visual Studio
@@ -74,7 +75,7 @@ Informazioni su come l'editor di Visual Studio supporti la lettura e il passaggi
   
 |Nome cartella|Descrizione|  
 |-----------------|-----------------|  
-|\\*\<nome linguaggio>*|Cartella del linguaggio. Sostituire * \<nome linguaggio>* con il nome del linguaggio, ad esempio, **\Matlab**.|  
+|\\*\<nome linguaggio>*|Cartella del linguaggio. Sostituire *\<nome linguaggio>* con il nome del linguaggio, ad esempio, **\Matlab**.|  
 |\Syntaxes|Cartella della grammatica. Contiene i file della grammatica con estensione json per il linguaggio, ad esempio **Matlab.json**.|  
 |\Snippets|Cartella dei frammenti. Contiene frammenti di codice per il linguaggio.|  
   
@@ -86,8 +87,3 @@ Informazioni su come l'editor di Visual Studio supporti la lettura e il passaggi
  [Visual Studio 2013 Navigate To Improvements](https://blogs.msdn.microsoft.com/mvpawardprogram/2013/10/22/visual-studio-2013-navigate-to-improvements/)  (Miglioramenti della funzione Navigate To (Passa a) di Visual Studio 2013)  
  [Walkthrough: Creating a Code Snippet](../ide/walkthrough-creating-a-code-snippet.md)  (Procedura dettagliata: Creazione di un frammento di codice)  
  [Walkthrough: Displaying Statement Completion](../extensibility/walkthrough-displaying-statement-completion.md) (Procedura dettagliata: Visualizzazione del completamento istruzioni)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

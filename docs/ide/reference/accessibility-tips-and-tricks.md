@@ -1,21 +1,39 @@
 ---
-title: "Suggerimenti sull&#39;accessibilit&#224; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "accessibilità [Visual Studio]"
+title: "Suggerimenti sull&quot;accessibilità | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- accessibility [Visual Studio]
 ms.assetid: 6b491d88-f79e-4686-8841-857624bdcfda
 caps.latest.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: c1e4fdf79ac11095501ca8823ff247cb48374824
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="accessibility-tips-and-tricks"></a>Suggerimenti sull'accessibilità
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] include funzionalità di accessibilità incorporate che consentono di operare facilmente dalla tastiera e usare utilità per la lettura o altri dispositivi di assistenza per utenti disabili. In questo argomento sono riportati alcuni suggerimenti per l'ottimizzazione di [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] relativamente all'accessibilità, nonché alcune utili combinazioni di tasti.  
@@ -44,14 +62,9 @@ caps.handback.revision: 21
 |-------------|-----------------|---------------------|  
 |Finestra della casella degli strumenti|Consente di passare da una scheda all'altra della casella degli strumenti|**CTRL** + **Freccia SU**<br /><br /> e<br /><br /> **CTRL** + **Freccia GIÙ**|  
 |Finestra della casella degli strumenti|Consente di aggiungere un controllo della casella degli strumenti a un modulo o una finestra di progettazione|**INVIO**|  
-|Tastiera, Ambiente, finestra di dialogo Opzioni|Consente di eliminare una combinazione di tasti immessa nell'opzione ** 	Premi tasti di scelta rapida**|**BACKSPACE**|  
+|Tastiera, Ambiente, finestra di dialogo Opzioni|Consente di eliminare una combinazione di tasti immessa nell'opzione **	Premi tasti di scelta rapida**|**BACKSPACE**|  
 |Tutte le finestre degli strumenti|Consente di selezionare il primo pulsante della barra degli strumenti della finestra|**MAIUSC** + **ALT**|  
 |Barre degli strumenti dell'IDE|Consente di selezionare il primo pulsante della barra degli strumenti Standard|**ALT**, **CTRL** + **TAB** **Nota:** premere nuovamente **CTRL** + **TAB** per selezionare il primo pulsante della successiva barra degli strumenti dell'IDE.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Accessibility Features of Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md) (Funzionalità di accessibilità di Visual Studio)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

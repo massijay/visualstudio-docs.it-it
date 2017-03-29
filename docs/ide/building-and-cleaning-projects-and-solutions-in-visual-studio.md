@@ -1,33 +1,52 @@
 ---
-title: "Compilazione e pulizia di progetti e soluzioni in Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.BuildProjectPicker"
-  - "vs.batchbuild"
-helpviewer_keywords: 
-  - "Pulisci soluzione (comando)"
-  - "compilazioni [Visual Studio], gestione"
-  - "configurazioni di compilazione soluzioni, avvio"
-  - "Compila soluzione (comando)"
-  - "configurazioni di compilazione progetti, avvio"
-  - "configurazioni di compilazione, avvio"
-  - "configurazioni di compilazione progetti, dipendenze"
-  - "Ricompila soluzione (comando)"
-  - "configurazioni di compilazione soluzioni, ordine di compilazione"
-  - "compilazioni [Visual Studio], preparazione"
+title: Compilazione e pulizia di progetti e soluzioni in Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.BuildProjectPicker
+- vs.batchbuild
+helpviewer_keywords:
+- Clean Solution command
+- builds [Visual Studio], managing
+- solution build configurations, starting
+- Build Solution command
+- project build configurations, starting
+- build configurations, starting
+- project build configurations, dependencies
+- Rebuild Solution command
+- solution build configurations, build order
+- builds [Visual Studio], preparing
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
 caps.latest.revision: 35
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 35
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 96fad179fb30f3b5e8fe6ddfd041c8e289dde48a
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="building-and-cleaning-projects-and-solutions-in-visual-studio"></a>Compilazione e pulizia di progetti e soluzioni in Visual Studio
 Tramite le procedure descritte in questo argomento è possibile compilare, ricompilare o pulire tutti o alcuni progetti o elementi di progetto di una soluzione. Per un'esercitazione dettagliata, vedere [Walkthrough: Building an Application](../ide/walkthrough-building-an-application.md) (Procedura dettagliata: Compilazione di un'applicazione).  
@@ -37,7 +56,7 @@ Tramite le procedure descritte in questo argomento è possibile compilare, ricom
   
 ### <a name="to-build-rebuild-or-clean-an-entire-solution"></a>Per compilare, ricompilare o pulire un'intera soluzione  
   
-1.  In **Esplora soluzioni ** scegliere una soluzione o aprire la soluzione voluta.  
+1.  In **Esplora soluzioni** scegliere una soluzione o aprire la soluzione voluta.  
   
 2.  Nella barra dei menu, scegliere **Compila** e quindi scegliere uno dei comandi seguenti:  
   
@@ -52,7 +71,7 @@ Tramite le procedure descritte in questo argomento è possibile compilare, ricom
   
 ### <a name="to-build-or-rebuild-a-single-project"></a>Per compilare o ricompilare un progetto singolo  
   
-1.  In **Esplora soluzioni ** scegliere un progetto o aprire il progetto voluto.  
+1.  In **Esplora soluzioni** scegliere un progetto o aprire il progetto voluto.  
   
 2.  Sulla barra dei menu scegliere **Compila** e quindi scegliere **Compila***NomeProgetto* o **Ricompila***NomeProgetto*.  
   
@@ -115,8 +134,3 @@ Tramite le procedure descritte in questo argomento è possibile compilare, ricom
  [C/C++ Building Reference](/visual-cpp/build/reference/c-cpp-building-reference)  (Informazioni di riferimento per la compilazione in C/C++)  
  [Devenv Command Line Switches](../ide/reference/devenv-command-line-switches.md)  (Opzioni della riga di comando di Devenv)  
  [Solutions and Projects](../ide/solutions-and-projects-in-visual-studio.md) (Soluzioni e progetti)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
