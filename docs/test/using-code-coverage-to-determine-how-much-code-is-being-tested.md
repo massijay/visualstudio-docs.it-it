@@ -271,7 +271,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
   
      Se si dispone di più di una definizione di origine del test, ripetere questo passaggio per ciascuna di esse.  
   
-    -   *Non è presente alcun campo denominato **Tipo di file di impostazioni esecuzione test**.*  
+    -   *Non è presente alcun campo denominato**Tipo di file di impostazioni esecuzione test**.*  
   
          In **Test automatizzati** selezionare **Assembly di test** e premere il pulsante con i puntini di sospensione **[...]** alla fine della riga. Nella finestra di dialogo **Aggiungi/Modifica esecuzione dei test** in **Test Runner** scegliere **Visual Studio Test Runner**.  
   

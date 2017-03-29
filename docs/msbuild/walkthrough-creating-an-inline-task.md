@@ -55,7 +55,7 @@ Le attività MSBuild vengono in genere create mediante la compilazione di una cl
   
 -   Modificare il file di progetto in Visual Studio per creare l'attività inline.  
   
--   Usare la **finestra del prompt dei comandi ** per compilare il progetto ed esaminare i risultati.  
+-   Usare la **finestra del prompt dei comandi** per compilare il progetto ed esaminare i risultati.  
   
 ## <a name="creating-and-modifying-an-msbuild-project"></a>Creazione e modifica di un progetto MSBuild  
  Il sistema dei progetti di Visual Studio si basa su MSBuild. È pertanto possibile creare un file di progetto di compilazione usando Visual Studio. In questa sezione si crea un file di progetto Visual C#. In alternativa, è possibile creare un file di progetto di Visual Basic. Nel contesto di questa esercitazione, le differenze tra i due file di progetto sono trascurabili.  
@@ -108,7 +108,7 @@ Le attività MSBuild vengono in genere create mediante la compilazione di una cl
   
 ##### <a name="to-run-the-hello-task"></a>Per eseguire l'attività Hello  
   
-1.  Fare clic su **Start**, scegliere **Tutti i programmi, **, quindi individuare la cartella **Strumenti di Visual Studio** e infine fare clic su **Prompt dei comandi di Visual Studio**.  
+1.  Fare clic su **Start**, scegliere **Tutti i programmi,**, quindi individuare la cartella **Strumenti di Visual Studio** e infine fare clic su **Prompt dei comandi di Visual Studio**.  
   
 2.  Nella **finestra del prompt dei comandi** individuare la cartella contenente il file di progetto, in questo caso D:\InlineTasks\InlineTasks\\.  
   
