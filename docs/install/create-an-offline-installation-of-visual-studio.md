@@ -2,7 +2,7 @@
 title: Creare un programma di installazione offline per Visual Studio 2017 | Microsoft Docs
 description: Informazioni su come creare un programma di installazione offline per Visual Studio.
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 03/21/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 91fde66abf2f325ef0a6a0a2fd30e36981f44033
-ms.openlocfilehash: acb47946c29d99cb53b34d67fe8a26f5611307f9
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
+ms.openlocfilehash: 563c78a49eb55886b1ddbd4f437951c99c6568e5
+ms.lasthandoff: 03/22/2017
 
 ---
 # <a name="create-an-offline-installer-for-visual-studio-2017"></a>Creare un programma di installazione offline per Visual Studio 2017
@@ -54,6 +54,8 @@ Il file di installazione o, per essere più specifici, il file di un programma d
 |Visual Studio Enterprise |**vs_enterprise.exe**|  
 |Visual Studio Professional |**vs_professional.exe**|  
 |Community di Visual Studio |**vs_community.exe**|
+
+Altri programmi di avvio automatico supportati includono vs_buildtools.exe, vs_feedbackclient.exe, vs_teamexplorer.exe, vs_testagent.exe, vs_testcontroller.exe e vs_testprofessional.exe.
 
 ## <a name="create-an-offline-installation-folder"></a>Creare una cartella di installazione offline
 Per creare un'installazione offline con tutte le lingue e tutte le funzionalità, usare uno dei comandi degli esempi seguenti.
@@ -90,8 +92,6 @@ Può diventare necessario aggiornare il programma di installazione offline in un
 * Per aggiornare un'istanza di Visual Studio installata da una cartella di installazione offline, eseguire il programma di installazione di Visual Studio e quindi fare clic su **Aggiorna**.
 * Per aggiornare la cartella di installazione offline in modo che includa gli aggiornamenti più recenti, eseguire di nuovo il comando ```--layout```. Assicurarsi di scegliere la stessa cartella usata in precedenza. In questo modo, verranno scaricati solo i componenti aggiornati dopo l'ultima esecuzione di ```--layout```.
 
-
-Per aggiornare l'installazione offline, eseguire di nuovo il comando `--layout`. Assicurarsi di scegliere la stessa cartella usata in precedenza. In questo modo, verranno scaricati solo i componenti aggiornati dopo l'ultima esecuzione di `--layout`.
 
 ### <a name="how-to-troubleshoot-an-offline-installer"></a>Come risolvere i problemi di un programma di installazione offline
 Non sempre tutto funziona correttamente. Ecco una tabella dei problemi noti e di alcune soluzioni che potrebbero essere utili.
