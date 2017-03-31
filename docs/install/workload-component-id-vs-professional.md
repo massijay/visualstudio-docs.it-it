@@ -1,14 +1,10 @@
 ---
-title:
-- ID dei carichi di lavoro e dei componenti di Visual Studio Professional 2017 | Microsoft Docs
+title: ID dei carichi di lavoro e dei componenti di Visual Studio Professional 2017 | Microsoft Docs
 description: Usare gli ID dei carichi di lavoro e dei componenti per installare Visual Studio tramite la riga di comando o per specificarli come dipendenza in un manifesto VSIX
 keywords: 
-author:
-- TerryGLee
-ms.author:
-- tglee
-manager:
-- ghogen
+author: TerryGLee
+ms.author: tglee
+manager: ghogen
 ms.date: 03/07/2017
 ms.topic: article
 helpviewer_keywords:

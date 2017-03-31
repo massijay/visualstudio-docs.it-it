@@ -1,14 +1,10 @@
 ---
-title:
-- ID dei carichi di lavoro e dei componenti di Visual Studio Test Controller 2017 | Microsoft Docs
+title: ID dei carichi di lavoro e dei componenti di Visual Studio Test Controller 2017 | Microsoft Docs
 description: "Usare gli ID dei carichi di lavoro e dei componenti di Visual Studio per distribuire testi automatizzati su più computer"
 keywords: 
-author:
-- TerryGLee
-ms.author:
-- tglee
-manager:
-- ghogen
+author: TerryGLee
+ms.author: tglee
+manager: ghogen
 ms.date: 03/07/2017
 ms.topic: article
 helpviewer_keywords:
