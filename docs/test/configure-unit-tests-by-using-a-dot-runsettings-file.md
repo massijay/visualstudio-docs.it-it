@@ -10,7 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f7e9e4a2-5d01-4f78-b408-5be3892bd162
 caps.latest.revision: 25
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -30,6 +30,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: 04c981d458912aaf3802e727369893759faab3a5
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Configurazione di unit test usando un file con estensione runsettings
@@ -58,7 +59,7 @@ Gli unit test in Visual Studio possono essere configurati usando un file di tipo
   
  ![Abilitazione di un file di impostazioni di esecuzione](../test/media/runsettings-1.png "RunSettings-1")  
   
-##  <a name="a-nameexamplea-copy-this-example-runsettings-file"></a><a name="example"></a> Copiare il file di esempio con estensione runsettings  
+##  <a name="example"></a> Copiare il file di esempio con estensione runsettings  
  Di seguito è riportato un tipico file di tipo *.runsettings. Ogni elemento del file è facoltativo, perché ogni valore ha un'impostazione predefinita.  
   
 ```xml  
@@ -180,8 +181,4 @@ Gli unit test in Visual Studio possono essere configurati usando un file di tipo
 ## <a name="see-also"></a>Vedere anche  
  [Customizing Code Coverage Analysis](../test/customizing-code-coverage-analysis.md)  (Personalizzazione dell'analisi del code coverage)  
  [Specifica delle impostazioni test di Visual Studio](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests)
-
-
-<!--HONumber=Feb17_HO4-->
-
 

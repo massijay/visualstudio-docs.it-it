@@ -15,7 +15,7 @@ helpviewer_keywords:
 - unit tests, running
 ms.assetid: dd3e8a6a-b366-433e-a409-b9a9b89da89a
 caps.latest.revision: 21
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - de-de
@@ -166,3 +166,4 @@ In Visual Studio sono inclusi il supporto per gli unit test di app di [!INCLUDE[
 ## <a name="see-also"></a>Vedere anche  
  [Test delle applicazioni Store con Visual Studio](../test/testing-store-apps-with-visual-studio.md)   
  [Eseguire la compilazione e il test di un'applicazione Windows Store mediante Team Foundation Build](http://msdn.microsoft.com/Library/d0ca17bb-deae-4f3d-a18d-1a99bebceaa9)
+
