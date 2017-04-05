@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: dbedb933ce3cabf000e7487fcf03133db3a326b4
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: e0a51155a42fb51244114da86a292381a7a28a21
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -52,13 +52,13 @@ Per testare rapidamente il supporto Python dopo aver eseguito la procedura di in
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. Installare [Visual Studio 2017 Preview](https://www.visualstudio.com/vs/preview). Questo è attualmente l'unico modo per installare il carico di lavoro Python per Visual Studio 2017.
+1. Installare ["Visual Studio 2017 Preview" da https://www.visualstudio.com/vs/preview](https://www.visualstudio.com/vs/preview). **Nota:** questo canale di anteprima è *separato* dalla versione rilasciata di Visual Studio 2017 e include funzionalità in fase di sviluppo per gli aggiornamenti futuri di Visual Studio 2017, incluso il supporto di Python.
 
 1. Nel programma di installazione della versione Preview selezionare il carico di lavoro **Web e cloud > Sviluppo Python**:
 
     ![Carico di lavoro Sviluppo Python nel programma di installazione di Visual Studio](media/installation-python-workload.png)
 
-1. Sul lato destro del programma di installazione selezionare gli interpreti Python e altri strumenti correlati da includere.
+1. Sul lato destro del programma di installazione selezionare gli interpreti Python e altri strumenti correlati da includere. Ad esempio, se si prevede di sviluppare estensioni C++ per Python, includere l'opzione **Strumenti di sviluppo nativi Python**.
 
     ![Opzioni di sviluppo Python nel programma di installazione di Visual Studio](media/installation-python-options.png)
 

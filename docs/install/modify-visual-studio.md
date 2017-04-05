@@ -2,7 +2,7 @@
 title: Modificare Visual Studio 2017 | Microsoft Docs
 description: Informazioni dettagliate su come modificare Visual Studio.
 ms.custom: H1Hack27Feb2017
-ms.date: 03/07/2017
+ms.date: 03/27/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,24 +34,27 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 7ba87c0ba023b76a1f992eb9af660decd0b80ccd
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 9e635a28d3338bcf518a0aec69c476280eedf6e2
+ms.openlocfilehash: 183f5761e0b3159412d1da6bb4f30d716a4c41db
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="modify-visual-studio-2017-by-adding-or-removing-workloads-and-components"></a>Modificare Visual Studio 2017 aggiungendo o rimuovendo carichi di lavoro e componenti
-Oltre ad aver semplificato la personalizzazione di Visual Studio in base alle attività da eseguire, è stata semplificata anche la modifica di Visual Studio. Per eseguire questa operazione non è più necessario eseguire una ricerca nel Pannello di controllo, ma è sufficiente avviare il programma di installazione di Visual Studio ed effettuare le modifiche desiderate.  
+Oltre ad aver semplificato la personalizzazione di Visual Studio in base alle attività da eseguire, è stata semplificata anche la modifica di Visual Studio. Per eseguire questa operazione non è più necessario eseguire una ricerca nel Pannello di controllo, ma è sufficiente avviare il nuovo programma di installazione di Visual Studio ed effettuare le modifiche desiderate.  
 
 Ecco come fare.  
 
 ## <a name="modify-workloads"></a>Modificare i carichi di lavoro  
  I carichi di lavoro contengono le funzionalità necessarie per il linguaggio di programmazione o piattaforma in uso. Usare i carichi di lavoro per modificare Visual Studio in modo che supporti il lavoro da eseguire quando desiderato.  
 
-1.  Individuare il programma di installazione di Visual Studio nel computer.  
+1.  Individuare il programma di installazione di Visual Studio all'interno del computer in uso.  
 
      Ad esempio, in un computer che esegue l'Aggiornamento dell'anniversario di Windows 10, selezionare **Start** e scorrere fino alla lettera **P** in cui viene visualizzato come **Programma di installazione di Visual Studio**.  
 
      ![Programma di installazione di Visual Studio](media/vs2017-locate-the-visual-studio-installer.PNG "Individuare il programma di installazione di Microsoft Visual Studio")
+
+     >[!NOTE]
+     In alcuni computer il programma di installazione di Visual Studio potrebbe trovarsi sotto la lettera **"M"** come **Microsoft Visual Studio: programma di installazione**.
 
 2.  Fare clic o toccare per avviare il programma di installazione e quindi selezionare **Modifica**.  
 

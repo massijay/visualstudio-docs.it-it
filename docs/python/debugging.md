@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: b0d84db6a16861fb9554af2a644423f906784748
-ms.openlocfilehash: 3ca6c45cd1f61dc4a4419ab01794e24c0c19d44a
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: b5d72a83092c2b97b30b7a8af539a0b1aca50418
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -67,7 +67,7 @@ Vedere anche gli argomenti seguenti sul debug nei vari scenari:
 
 Il flusso di lavoro del debug di base include l'impostazione dei punti di interruzione, l'esecuzione di codice istruzione per istruzione, il controllo dei valori e la gestione delle eccezioni, come descritto nelle sezioni seguenti. Per informazioni dettagliate sul debugger di Visual Studio, vedere [Debug in Visual Studio](../debugger/debugging-in-visual-studio.md).
 
-È possibile avviare una sessione di debug in diversi modi, ovvero scegliendo **Debug > Avvia debug**, facendo clic sul pulsante **Avvia** sulla barra degli strumenti oppure premendo F5. Verrà quindi eseguito il file di avvio del progetto (visualizzato in grassetto in Esplora soluzioni) con l'ambiente attivo del progetto ed eventuali argomenti della riga di comando o percorsi di ricerca specificati in Proprietà progetto (vedere [Opzioni di debug del progetto](#project-debugging-options)).
+È possibile avviare una sessione di debug in diversi modi, ovvero scegliendo **Debug > Avvia debug**, facendo clic sul pulsante **Avvia** sulla barra degli strumenti oppure premendo F5. Verrà quindi eseguito il file di avvio del progetto (visualizzato in grassetto in Esplora soluzioni) con l'ambiente attivo del progetto ed eventuali argomenti della riga di comando o percorsi di ricerca specificati in Proprietà progetto (vedere [Opzioni di debug del progetto](#project-debugging-options)). Se per qualche motivo non è stato impostato un file di avvio, tuttavia, verrà visualizzata una finestra di output Python per un breve periodo di tempo. In tal caso, fare clic con il pulsante destro del mouse sul file appropriato e selezionare **Imposta come file di avvio**.
 
 > [!Note]
 > Il debugger viene sempre avviato con l'ambiente Python attivo per il progetto. Per cambiare ambiente, attivarne uno diverso come descritto in [Ambienti Python](python-environments.md).

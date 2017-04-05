@@ -28,9 +28,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 0b87d25195b8e288252e6c53279897d1edff93bd
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: 2659c1a3b1adfc3f462971205460942c5fe5171f
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -230,6 +230,8 @@ Oltre a consentire di gestire i progetti, rendendo disponibili un'esperienza di 
     > if __name__ == "__main__":  
     >     sys.exit(int(main() or 0))      
     > ```
+    > 
+    > In alternativa, se si verificano situazioni in cui la finestra di output si chiude automaticamente quando non lo si vuole, fare clic con il pulsante destro del mouse sul progetto, selezionare **Proprietà**, selezionare la scheda **Debug** e quindi aggiungere `-i` al campo **Argomenti dell'interprete**. In questo modo l'interprete passa in modalità interattiva dopo il completamento di un programma mantenendo la finestra aperta fino a quando non viene premuto CTRL+Z, INVIO per uscire.
 
 1. Impostare un punto di interruzione sulla prima riga della funzione `main` facendo clic nel margine grigio a sinistra della riga oppure posizionare il cursore nella riga e usare il comando *Debug > Attiva/Disattiva punto di interruzione** (F9). Verrà visualizzato un punto rosso nel margine grigio per indicare il punto di interruzione, come indicato dalla freccia blu di seguito:
 

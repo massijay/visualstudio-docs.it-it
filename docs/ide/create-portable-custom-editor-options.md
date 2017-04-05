@@ -1,5 +1,5 @@
 ---
-title: Creare impostazioni personalizzate e portabili per l&quot;editor | Microsoft Docs
+title: Creare impostazioni personalizzate e portabili per l&quot;editor con EditorConfig | Microsoft Docs
 ms.custom: 
 ms.date: 02/17/2017
 ms.reviewer: 
@@ -33,12 +33,12 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 203e1e27cc892e96b103fc6cb22a73672a8e16af
-ms.openlocfilehash: 70f3c6c7e4356a698aa6c1dd265f6c79c662673e
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
+ms.openlocfilehash: f377ada139d9c0e8b01b640cf603cf349dc1c3c3
+ms.lasthandoff: 03/27/2017
 
 ---
-# <a name="create-portable-custom-editor-settings"></a>Creare impostazioni personalizzate e portabili per l'editor
+# <a name="create-portable-custom-editor-settings-with-editorconfig"></a>Creare impostazioni personalizzate e portabili per l'editor con EditorConfig
 In Visual Studio le impostazioni dell'editor di testo si applicano a tutti i progetti di un tipo specifico. Quindi, ad esempio, se si modifica un'impostazione dell'editor di testo C#, la modifica viene applicata a *tutti* i progetti C# in Visual Studio. In alcuni casi, tuttavia, potrebbe essere necessario usare convenzioni diverse dalle preferenze personali per l'editor. I file di [EditorConfig](http://editorconfig.org/) consentono di usare tali convenzioni impostando per l'editor di testo opzioni comuni diverse a seconda del progetto. Le impostazioni di EditorConfig, contenute in un file con estensione editorconfig aggiunto alla codebase, sostituiscono le impostazioni globali di Visual Studio per l'editor di testo. Questo significa che è possibile usare codebase su misura con le impostazioni per l'editor di testo preferite. Per usare questa funzionalità in Visual Studio non è necessario alcun plug-in.
 
 ## <a name="coding-consistency"></a>Coerenza del codice
@@ -99,3 +99,5 @@ Nella tabella seguente sono elencate le modifiche necessarie per aggiornare un s
 | Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.uIndentSize o Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs.IndentSize | textBufferOptions.GetOptionValue(DefaultOptions. IndentSizeOptionId) o textView.Options.GetOptionValue(DefaultOptions. IndentSizeOptionId) |
 | Microsoft.VisualStudio.TextManager.Interop.LANGPREFERENCES.uTabSize o Microsoft.VisualStudio.Package.LanguagePreferences.InsertTabs.TabSize | textBufferOptions.GetOptionValue(DefaultOptions.TabSizeOptionId) o textView.Options.GetOptionValue(DefaultOptions.TabSizeOptionId) |
 
+# <a name="see-also"></a>Vedere anche
+[Creare impostazioni personalizzate e portabili per l'editor con EditorConfig](create-portable-custom-editor-options.md)
