@@ -1,54 +1,72 @@
 ---
-title: "Estensione Excel di esempio: classi Element | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Estensione Excel di esempio: classi Element | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7c251098-00aa-49cf-9e37-5717c0c6b3f1
 caps.latest.revision: 9
-ms.author: "mlearned"
-manager: "douge"
-caps.handback.revision: 9
----
-# Estensione Excel di esempio: classi Element
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
+ms.openlocfilehash: 396960f31c60318833b8171a4e17595db6ff9fca
+ms.lasthandoff: 04/04/2017
 
-L'estensione utilizza classi derivate da <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> e rappresenta i controlli di cella e di foglio di lavoro in [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)].  
+---
+# <a name="sample-excel-extension-element-classes"></a>Estensione Excel di esempio: classi Element
+L'estensione usa le classi derivate da <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> e rappresenta il controllo Worksheet e il controllo Cell in [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)].  
   
- L'elemento base per questa estensione è `ExcelElement`.  La classe `ExcelWorksheetElement` e la classe `ExcelCellElement` ereditano entrambe da tale elemento.  
+ L'elemento di base per questa estensione è `ExcelElement`. La classe `ExcelWorksheetElement` e la classe `ExcelCellElement` ereditano da tale elemento.  
   
-## Classi Element ed ElementInformation  
- La classe `Element` è la classe base per tutti gli elementi dell'interfaccia utente per l'estensione di Excel ed eredita dalla classe <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>.  In questo esempio, `ElementInformation` è la classe base per le classi delle informazioni sugli elementi e non dispone di membri.  
+## <a name="element-and-elementinformation-classes"></a>Classi Element ed ElementInformation  
+ `Element` è la classe di base per tutti gli elementi dell'interfaccia utente per l'estensione di Excel ed eredita dalla classe <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>. `ElementInformation` è la classe di base per le classi di informazioni dell'elemento nell'esempio e non contiene membri.  
   
-#### Proprietà e metodi semplici  
- Questi membri restituiscono valori semplici, ad esempio il valore della proprietà `Name` o il valore della proprietà `ClassName` e il codice risulta semplice e di facile lettura.  Alcuni valori vengono restituiti tramite la classe `Utility`, illustrata più avanti.  Altri restituiscono `null` poiché non sono attinenti in questa estensione di esempio.  Due membri sono più interessanti degli altri: la proprietà <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A> e il metodo <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.CacheProperties%2A>.  
+#### <a name="simple-properties-and-methods"></a>Proprietà e metodi semplici  
+ Questi membri restituiscono valori semplici, ad esempio il valore della proprietà `Name` o il valore della proprietà `ClassName`, e il codice è chiaro e semplice da leggere. Alcuni valori vengono restituiti tramite la classe `Utility`, illustrata più avanti. Altri restituiscono `null` perché non sono pertinenti in questa estensione di esempio. Due membri sono più interessanti rispetto agli altri: la proprietà <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A> e il metodo <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.CacheProperties%2A>.  
   
-#### Proprietà QueryId  
- Questa proprietà restituisce una condizione formata da coppie nome\/valore della proprietà che identificano in modo univoco il controllo durante la riproduzione.  Per ogni classe del controllo derivata, lo sviluppatore deve eseguire l'override di questa proprietà per restituire un oggetto <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement> che il framework possa utilizzare per trovare il controllo nell'Interfaccia utente.  
+#### <a name="queryid-property"></a>Proprietà QueryId  
+ Questa proprietà restituisce una condizione costituita da coppie nome-valore di proprietà, che identificano in modo univoco il controllo durante la riproduzione. Per ogni classe del controllo derivata, lo sviluppatore deve eseguire l'override di questa proprietà per restituire un oggetto <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement> che il framework può usare per trovare il controllo nell'interfaccia utente.  
   
-#### Metodo CacheProperties  
- Questo metodo viene chiamato dal framework di test durante il processo di registrazione per fare in modo che l'elemento salvi uno snapshot delle proprietà importanti.  Ciò consente di mantenere le proprietà disponibili anche quando il controllo effettivo dell'interfaccia utente non è più sullo schermo.  
+#### <a name="cacheproperties-method"></a>Metodo CacheProperties  
+ Questo metodo viene chiamato dal framework di test durante il processo di registrazione per comunicare all'elemento di salvare uno snapshot di proprietà importanti. In questo modo, le proprietà sono disponibili anche quando l'effettivo controllo dell'interfaccia utente non è più sullo schermo.  
   
-## Classi WorksheetElement e WorksheetInformation  
- La classe `WorksheetElement` rappresenta un foglio di lavoro di Excel nel framework di test ed eredita dalla classe base `Element`.  Viene eseguito l'override di tre proprietà per fornire informazioni specifiche sull'oggetto foglio di lavoro di Excel: <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.ClassName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.ControlTypeName%2A>e <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.Name%2A>.  
+## <a name="worksheetelement-and-worksheetinformation-classes"></a>Classi WorksheetElement e WorksheetInformation  
+ La classe `WorksheetElement` rappresenta un foglio di lavoro di Excel nel framework di test ed eredita dalla classe di base `Element`. Tre proprietà vengono sottoposte a override per fornire informazioni specifiche sull'oggetto foglio di lavoro di Excel: <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.ClassName%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.ControlTypeName%2A> e <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.Name%2A>.  
   
- L'oggetto <xref:System.Runtime.InteropServices.ComVisibleAttribute> viene applicato anche a questa classe per renderlo visibile a COM.  
+ A questa classe viene applicato anche <xref:System.Runtime.InteropServices.ComVisibleAttribute> per renderla visibile a COM.  
   
- La classe `WorksheetInformation` rappresenta le informazioni su un foglio di lavoro di Excel.  Dispone di solo un membro, la proprietà `SheetName` che è sufficiente ai fini di questo esempio.  
+ La classe `WorksheetInformation` rappresenta le informazioni su un foglio di lavoro di Excel. Dispone di un solo membro, la proprietà `SheetName`, che è sufficiente per questo esempio.  
   
-## Classi CellElement e CellInformation  
- La classe `CellElement` rappresenta una cella di Excel ed eredita dalla classe base `Element`.  L'unico membro ignorato è la proprietà <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A> che restituisce un oggetto <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement> che utilizza le proprietà `RowIndex` e `ColumnIndex` per identificare la cella.  
+## <a name="cellelement-and-cellinformation-classes"></a>Classi CellElement e CellInformation  
+ La classe `CellElement` rappresenta una cella di Excel ed eredita dalla classe di base `Element`. L'unico membro sottoposto a override è la proprietà <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A>, che restituisce un oggetto <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement> che usa le proprietà `RowIndex` e `ColumnIndex` per identificare la cella.  
   
-## Classi Utilities e ExcelUtilities  
- La classe `ExcelUtilities` interna fornisce alcuni valori costanti, quali il nome di tecnologia e un metodo che determina se l'handle della finestra fornito rappresenta un foglio di lavoro di Excel.  
+## <a name="utilities-and-excelutilities-classes"></a>Classi Utilities ed ExcelUtilities  
+ La classe interna `ExcelUtilities` fornisce alcuni valori costanti, ad esempio il nome della tecnologia, e un metodo che determina se l'handle di finestra fornito rappresenta un foglio di lavoro di Excel.  
   
- La classe `Utilities` dispone di metodi di supporto che restituiscono una varietà di informazioni sull'interfaccia utente.  Alcuni metodi utilizzano chiamate dirette in DLL di sistema esterne, quali **USER32.DLL** e **OLEACC.DLL**, per ottenere handle della finestra dall'interfaccia utente**.**  
+ La classe `Utilities` dispone di metodi helper che restituiscono un'ampia varietà di informazioni sull'interfaccia utente. Alcuni metodi usano chiamate dirette a DLL di sistema esterne, ad esempio **USER32.DLL** e **OLEACC.DLL**, per ottenere gli handle di finestra dall'interfaccia utente**.**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.IQueryElement>   
  [Estensione di test codificati dell'interfaccia utente e registrazioni delle azioni per supportare Microsoft Excel](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
+
