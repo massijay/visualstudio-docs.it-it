@@ -1,62 +1,78 @@
 ---
-title: "IDebugDocumentTextEvents2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentTextEvents2"
-helpviewer_keywords: 
-  - "Interfaccia IDebugDocumentTextEvents2"
+title: IDebugDocumentTextEvents2 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugDocumentTextEvents2
+helpviewer_keywords:
+- IDebugDocumentTextEvents2 interface
 ms.assetid: a10cbb6b-11a8-4056-b42a-2ecebf0e690d
 caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# IDebugDocumentTextEvents2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 242c15cc456c3a27ba7b7da45a11031b026c02d3
+ms.lasthandoff: 04/05/2017
 
-Questa interfaccia viene utilizzata per notificare a Visual Studio sulle modifiche al documento di origine disponibili nel motore di debug.  
+---
+# <a name="idebugdocumenttextevents2"></a>IDebugDocumentTextEvents2
+Questa interfaccia viene utilizzata per notificare le modifiche al documento di origine che vengono fornite dal motore di debug di Visual Studio.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 IDebugDocumentTextEvents2 : IUnknown  
 ```  
   
-## Note per gli implementatori  
- Il DE implementa questa interfaccia per supportare apportare modifiche al codice sorgente.  Questa interfaccia in genere viene implementata nello stesso oggetto che implementa [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) l'interfaccia.  
+## <a name="notes-for-implementers"></a>Note per gli implementatori  
+ La Germania implementa questa interfaccia per supportare le modifiche al codice sorgente. Questa interfaccia viene implementata in genere sullo stesso oggetto che implementa il [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) interfaccia.  
   
-## Note per i chiamanti  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] ottiene questa interfaccia con una chiamata al metodo di <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise%2A> .  L'interfaccia di <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> viene ottenuta da una chiamata al metodo di <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.EnumConnectionPoints%2A> .  L'interfaccia di <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer> si ottiene chiamando [QueryInterface](/visual-cpp/atl/queryinterface) il [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) metodo su un'interfaccia.  
+## <a name="notes-for-callers"></a>Note per i chiamanti  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]Ottiene l'interfaccia tramite una chiamata al <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise%2A>metodo.</xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise%2A> Il <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint>interfaccia viene ottenuta da una chiamata al <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.EnumConnectionPoints%2A>metodo.</xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.EnumConnectionPoints%2A> </xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> Il <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer>interfaccia viene ottenuta chiamando il [QueryInterface](/cpp/atl/queryinterface) metodo su un [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) interfaccia.</xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer>  
   
-## Metodi nell'ordine di Vtable  
- Nella tabella seguente sono elencati i metodi di `IDebugDocumentTextEvents2`.  
+## <a name="methods-in-vtable-order"></a>Metodi nell'ordine Vtable  
+ Nella tabella seguente sono illustrati i metodi di `IDebugDocumentTextEvents2`.  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[onDestroy](../../../extensibility/debugger/reference/idebugdocumenttextevents2-ondestroy.md)|Indica che l'intero documento è stato eliminato.|  
-|[onInsertText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-oninserttext.md)|Notifica al pacchetto di debug che il testo è stato immesso nel documento.|  
-|[onRemoveText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onremovetext.md)|Notifica al pacchetto di debug che il testo è stato rimosso dal documento.|  
-|[onReplaceText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onreplacetext.md)|Notifica al pacchetto di debug che il testo è stato sostituito nel documento.|  
-|[onUpdateTextAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatetextattributes.md)|Notifica al pacchetto di debug che gli attributi di testo sono stati aggiornati nel documento.|  
-|[onUpdateDocumentAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatedocumentattributes.md)|Notifica al ricevitore dell'evento che gli attributi del documento sono stati aggiornati.|  
+|[onDestroy](../../../extensibility/debugger/reference/idebugdocumenttextevents2-ondestroy.md)|Indica che è stato eliminato l'intero documento.|  
+|[onInsertText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-oninserttext.md)|Notifica il pacchetto di debug che il testo è stato inserito nel documento.|  
+|[onRemoveText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onremovetext.md)|Notifica il pacchetto di debug che il testo è stato rimosso dal documento.|  
+|[onReplaceText](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onreplacetext.md)|Notifica il pacchetto di debug che è stato sostituito il testo nel documento.|  
+|[onUpdateTextAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatetextattributes.md)|Notifica il pacchetto di debug che sono stati aggiornati gli attributi di testo nel documento.|  
+|[onUpdateDocumentAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatedocumentattributes.md)|Notifica al destinatario dell'evento che sono stati aggiornati gli attributi del documento.|  
   
-## Note  
- Solo i motori di debug che forniscono i propri documenti approfitterebbero dell'interfaccia di `IDebugDocumentTextEvent2` .  Un esempio è dato da un motore di debug di script.  Nel corso dell'interpretazione degli script, il nuovo codice sorgente può essere generato non presente in un file su disco e è noto solo a DE.  
+## <a name="remarks"></a>Note  
+ Solo i motori di debug che forniscono i propri documenti potrebbero sfruttare il `IDebugDocumentTextEvent2` interfaccia. Un esempio di questo sarebbe un motore di debug di script. In corso l'interpretazione degli script, può essere generato il nuovo codice sorgente che non è presente in qualsiasi file su disco ed è noto solo per la Germania.  
   
-## Requisiti  
- intestazione: msdbg.h  
+## <a name="requirements"></a>Requisiti  
+ Intestazione: msdbg.h  
   
- Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)   
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

@@ -12,7 +12,7 @@ helpviewer_keywords:
 - code coverage
 ms.assetid: 800fc739-acd2-4242-84cb-1d83b4d82cf9
 caps.latest.revision: 36
-ms.author: mlearned
+ms.author: douge
 manager: douge
 translation.priority.ht:
 - cs-cz
@@ -271,7 +271,7 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
   
      Se si dispone di più di una definizione di origine del test, ripetere questo passaggio per ciascuna di esse.  
   
-    -   *Non è presente alcun campo denominato **Tipo di file di impostazioni esecuzione test**.*  
+    -   *Non è presente alcun campo denominato**Tipo di file di impostazioni esecuzione test**.*  
   
          In **Test automatizzati** selezionare **Assembly di test** e premere il pulsante con i puntini di sospensione **[...]** alla fine della riga. Nella finestra di dialogo **Aggiungi/Modifica esecuzione dei test** in **Test Runner** scegliere **Visual Studio Test Runner**.  
   
@@ -302,3 +302,4 @@ ExcludeSourceFromCodeCoverage(Exclusion4, L"*\\unittest1.cpp");
  [Customizing Code Coverage Analysis](../test/customizing-code-coverage-analysis.md)  (Personalizzazione dell'analisi del code coverage)  
  [Risoluzione dei problemi di code coverage](../test/troubleshooting-code-coverage.md)   
  [Eseguire unit test del codice](../test/unit-test-your-code.md)
+

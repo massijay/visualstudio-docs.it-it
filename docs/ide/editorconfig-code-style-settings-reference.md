@@ -31,9 +31,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 31f433b28b67dc6f3179be87cb5894b5b3f0aa4f
-ms.openlocfilehash: e0fcd94f2e42f2ce8d454b9d754cfa4ad063d9e0
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
+ms.openlocfilehash: a5b26ed093ed86c8c438b2024f69d371fde2de36
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -481,7 +481,7 @@ csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 
 | Valore | Descrizione | Applicazione 
 | ------------- |:-------------|:-------------|
-| True | Preferisce che le variabili `out` siano dichiarate inline, quando possibile. | **C#:** <br>`if (int.TryParse(value out int i) {...}`
+| True | Preferisce che le variabili `out` siano dichiarate inline, quando possibile. | **C#:** <br>`if (int.TryParse(value, out int i) {...}`
 | False | Preferisce che le variabili `out` siano dichiarate esplicitamente.| **C#:** <br>`int i; if (int.TryParse(value, out i) {...}`
 
 #### <a name="example-editorconfig-file"></a>Esempio di file editorconfig:

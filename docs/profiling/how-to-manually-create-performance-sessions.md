@@ -1,43 +1,60 @@
 ---
-title: "Procedura: Creare manualmente sessioni di prestazioni con gli strumenti per la profilatura | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.wizard.dllpage"
-  - "vs.performance.wizard.exepage"
-helpviewer_keywords: 
-  - "sessioni di prestazioni, creazione"
-  - "strumenti per le prestazioni, creazione di sessioni di prestazioni"
+title: 'Procedura: Creare manualmente sessioni di prestazioni | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.wizard.dllpage
+- vs.performance.wizard.exepage
+helpviewer_keywords:
+- performance sessions, creating
+- performance tools, creating performance sessions
 ms.assetid: ee2b3e0c-0990-46d9-8de6-c29fa386b15b
 caps.latest.revision: 18
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# Procedura: Creare manualmente sessioni di prestazioni con gli strumenti per la profilatura
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 0a9bdb4b2301274435305e3b67cbbdc0de8ba019
+ms.lasthandoff: 03/07/2017
 
-Una sessione di prestazioni può essere creata manualmente.  Per eseguire questa operazione, non è necessario aprire un progetto in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  Per ulteriori informazioni, vedere [Configurazione di sessioni di prestazioni](../profiling/configuring-performance-sessions.md).  
+---
+# <a name="how-to-manually-create-performance-sessions"></a>Procedura: Creare manualmente sessioni di prestazioni
+Una sessione di prestazioni può essere creata manualmente. Per eseguire questa operazione, non è necessario aprire un progetto in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Per altre informazioni, vedere [Configurazione di sessioni di prestazioni](../profiling/configuring-performance-sessions.md).  
   
-### Per creare manualmente una sessione di prestazioni  
+### <a name="to-manually-create-a-performance-session"></a>Per creare manualmente una sessione di prestazioni  
   
-1.  Scegliere **Profiler** dal menu **Analizza**, quindi **Nuova sessione di prestazioni**.  
+1.  Nel menu **Debug** scegliere **Profiler**, **Esplora prestazioni** e quindi fare clic su **Nuova sessione di prestazioni**.  
   
-     Verrà aggiunta una sessione di prestazioni vuota a **Esplora prestazioni**.  
+     Verrà aggiunta una sessione di prestazioni vuota in **Esplora prestazioni**.  
   
-2.  Fare clic con il pulsante destro del mouse su **Destinazioni** e quindi scegliere **Aggiungi binario di destinazione**.  
+2.  Fare clic con il pulsante destro del mouse su **Destinazioni** e quindi fare clic su **Aggiungi binario di destinazione**.  
   
-3.  Nella finestra di dialogo **Aggiungi binario di destinazione** selezionare il nome file e scegliere **Apri**.  
+3.  Nella finestra di dialogo **Aggiungi binario di destinazione** selezionare il nome del file e quindi fare clic su **Apri**.  
   
-     In questo modo verrà aggiunto un nuovo binario.  
+     Verrà aggiunto un nuovo file binario.  
   
-## Vedere anche  
- [Utilizzo degli strumenti di profilatura](../profiling/performance-explorer.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Esplora prestazioni](../profiling/performance-explorer.md)   
  [Introduzione](../profiling/getting-started-with-performance-tools.md)

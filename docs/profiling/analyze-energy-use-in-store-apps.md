@@ -164,7 +164,7 @@ if (performance && performance.mark) {
   
 ##  <a name="BKMK_Other_resources"></a> Altre risorse  
   
--   Nelle sezioni **Stato della connessione e gestione dei costi ** per [C#/VB/C++ e XAML](http://msdn.microsoft.com/en-us/0ee0b706-8432-4d49-9801-306ed90764e1) e per [JavaScript e HTML](http://msdn.microsoft.com/en-us/372afa6a-1c7c-4657-967d-03a77cd8e933) di Windows Dev Center vengono descritte le API di Windows che forniscono informazioni sulla connettività di rete. Tali informazioni possono essere usate dall'app per ridurre il costo del traffico di rete.  
+-   Nelle sezioni **Stato della connessione e gestione dei costi** per [C#/VB/C++ e XAML](http://msdn.microsoft.com/en-us/0ee0b706-8432-4d49-9801-306ed90764e1) e per [JavaScript e HTML](http://msdn.microsoft.com/en-us/372afa6a-1c7c-4657-967d-03a77cd8e933) di Windows Dev Center vengono descritte le API di Windows che forniscono informazioni sulla connettività di rete. Tali informazioni possono essere usate dall'app per ridurre il costo del traffico di rete.  
   
      Il simulatore di Visual Studio per le app di Windows Store consente di simulare le proprietà di connessione dati delle API delle informazioni di rete. Vedere [Eseguire applicazioni Windows Store nel simulatore](../debugger/run-windows-store-apps-in-the-simulator.md).  
   

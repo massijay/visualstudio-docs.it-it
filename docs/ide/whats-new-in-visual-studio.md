@@ -1,7 +1,7 @@
 ---
-title: "Novità di Visual Studio 2017 RC | Microsoft Docs"
+title: "Novità di Visual Studio 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 12/13/2016
+ms.date: 03/08/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -31,147 +31,146 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 4fb097ab0ee0d45fd5727e3170db3393392abf23
-ms.openlocfilehash: dc1941fd755c28039560b608733067b1da365c3a
+ms.sourcegitcommit: 8c4e45eadd81c54a372885ce89ccced1256d3b3d
+ms.openlocfilehash: 14a06f4344989052b0a020570dc87d9697ba95d0
+ms.lasthandoff: 03/09/2017
 
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Novità di Visual Studio 2017
-Visual Studio 2017 RC è una suite integrata di strumenti di produttività per sviluppatori, servizi cloud ed estensioni che consentono all'utente e al suo team di creare app e giochi di grande impatto per il Web, Windows Store, il desktop, Android e iOS.  
+Produttività senza precedenti per qualsiasi sviluppatore, qualsiasi app e qualsiasi piattaforma. Visual Studio 2017 è perfetto per lo sviluppo di app per Android, iOS, Windows, Linux, Web e cloud. Consente la rapida scrittura del codice, assicura facilità di debug e diagnosi e permette l'esecuzione frequente di test per il rilascio di app affidabili. È inoltre possibile rendere Visual Studio un ambiente "su misura" grazie alla possibilità di creare estensioni personalizzate. Questa nuova versione offre eccezionali vantaggi, inclusi controllo della versione, strumenti e processi Agile ed efficienti funzionalità di collaborazione.
 
-In questa versione finale candidata (RC) della versione più recente di Visual Studio l'attenzione si è concentrata sui miglioramenti delle prestazioni e della produttività. In termini di prestazioni, Visual Studio si avvia più rapidamente, ha una maggiore capacità di risposta e usa meno memoria rispetto al passato. In termini di produttività, sono state aggiunte o aggiornate funzionalità che consentono di essere più efficienti quando si usa Visual Studio.
-
-> [!TIP]
-> Per un esempio della nuova versione RC, guardare il video sulle [novità di Visual Studio](https://channel9.msdn.com/events/connect/2016/159) su Channel 9.   
+> [!NOTE]
+> Per un elenco completo delle nuove funzionalità in Visual Studio 2017, vedere le [Note sulla versione](https://www.visualstudio.com/news/vs2015-vs).
 
 Di seguito è riportato un riepilogo generale delle modifiche apportate:
 
-* **Produttività ottimizzata**. I miglioramenti di esplorazione del codice, IntelliSense, refactoring, correzioni del codice e debug consentono di risparmiare tempo e sforzi nelle attività quotidiane, indipendentemente dal linguaggio o dalla piattaforma. Per i team che adottano DevOps, Visual Studio 2017 semplifica inoltre il ciclo interno per gli sviluppatori, accelerando il flusso del codice con le nuovissime funzionalità in tempo reale, come Live Unit Testing e convalida delle dipendenze architetturali in tempo reale.
-* **Concetti fondamentali ridefiniti**.  C'è una rinnovata attenzione al miglioramento dell'efficienza delle attività fondamentali che gli sviluppatori incontrano quotidianamente. Da una nuovissima installazione leggera e modulare, personalizzata in base alle esigenze dell'utente, un IDE più veloce dall'avvio all'arresto, fino a un nuovo modo di visualizzare, modificare ed eseguire il debug di qualsiasi codice senza progetti e soluzioni, Visual Studio 2017 consente agli sviluppatori di concentrarsi sul quadro generale.
-* **Sviluppo di Azure semplificato**. Una suite di strumenti Azure predefiniti consente agli sviluppatori di creare facilmente applicazioni per cloud con tecnologia Microsoft Azure. Visual Studio facilita la configurazione, la creazione, il debug, l'inserimento in pacchetti e la distribuzione di applicazioni e servizi in Microsoft Azure direttamente dall'IDE.
-* **Sviluppo di app di alto livello per dispositivi mobili**. Con gli strumenti avanzati di debug e profilatura e le funzionalità di generazione di unit test, Visual Studio 2017 con Xamarin facilita e accelera più che mai la creazione, la connessione e l'ottimizzazione delle app per dispositivi mobili per Android, iOS e Windows. Gli sviluppatori possono anche scegliere di sviluppare app per dispositivi mobili con lo sviluppo di librerie multipiattaforma di Apache Cordova o Visual C++ in Visual Studio.  
+* **Prestazioni e produttività**. Microsoft si è concentrata non solo sulle funzionalità nuove e moderne di sviluppo per dispositivi mobili, cloud e desktop, ma anche sul miglioramento complessivo dell'acquisizione, delle prestazioni e delle esperienze di produttività generali per gli sviluppatori. Visual Studio si avvia più velocemente, offre tempi di risposta migliori e usa meno memoria rispetto a prima.
+* **Concetti fondamentali ridefiniti**. Una nuova esperienza di installazione offre la possibilità di completare l'installazione più rapidamente e di installare quello che serve all'occorrenza. L'avvio di Visual Studio è più veloce, indipendentemente dal fatto che si vogliano caricare soluzioni e progetti di grandi dimensioni o lavorare su alcune cartelle di codice o persino su un singolo file di codice. Visual Studio permette anche di rimanere concentrati sul quadro generale, in particolare per i team che adottano la metodologia DevOps.
+* **Sviluppo di app cloud con Azure**. Un gruppo di strumenti Azure incorporati consentono di creare facilmente app per cloud con tecnologia Microsoft Azure. Visual Studio facilita la configurazione, la compilazione, il debug, l'inserimento in pacchetti e la distribuzione di app e servizi in Azure.
+* **Sviluppo di app per dispositivi mobili**. Visual Studio 2017 supporta l'innovazione e permette di ottenere risultati rapidamente con Xamarin, che unifica i requisiti per dispositivi mobili multipiattaforma usando un'unica codebase principale e un singolo set di competenze. È possibile passare allo sviluppo per dispositivi mobili avvalendosi dei team, degli investimenti tecnologici e del codice C# esistenti, per offrire esperienze per consumatori in tempi più brevi e con costi minori del previsto. Ogni passaggio del ciclo di vita dei dispositivi mobili può essere velocizzato per realizzare esperienze per consumatori di alto livello o un portfolio di app di produttività per supportare e agevolare la forza lavoro.
 
-Di seguito sono riportate altre informazioni sulle modifiche più significative.
-
-> [!NOTE]
-> Per un elenco completo delle nuove funzionalità in Visual Studio 2017 RC e nel relativo aggiornamento RC successivo, vedere le [Note sulla versione](https://www.visualstudio.com/news/vs2015-vs). Per un elenco di problemi e soluzioni alternative, vedere la sezione [Problemi noti](https://www.visualstudio.com/news/vs2015-vs#knownissues) delle Note sulla versione.   
+Di seguito sono riportate altre informazioni su alcune delle modifiche più significative.
 
 ## <a name="performance-improvements"></a>Miglioramenti delle prestazioni
 
 ### <a name="a-new-setup-experience"></a>Una nuova esperienza di installazione  
-[Scaricare Visual Studio Enterprise 2017 RC](https://aka.ms/vs/15/preview/vs_enterprise) o [verificare i requisiti di sistema di Visual Studio](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs)
+[Scaricare Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) o [verificare i requisiti di sistema di Visual Studio](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs)
 
- L'esperienza di installazione di Visual Studio è stata riprogettata ed è ancora più semplice installare solo le funzionalità necessarie, quando è necessario. È anche stato ridotto il footprint minimo, in modo che sia possibile installare Visual Studio più rapidamente con un minore impatto sul sistema. E in più la disinstallazione non presenta problemi.
+ Con Visual Studio è ancora più semplice e veloce installare solo le funzionalità necessarie, all'occorrenza. E in più la disinstallazione non presenta problemi.
 
- La modifica più importante che si nota quando si installa Visual Studio è la nuova esperienza di installazione. Nella scheda **Carichi di lavoro** sono visualizzate le opzioni di installazione raggruppate in modo da rappresentare i framework, i linguaggi e le piattaforme più comuni, in grado di supportare qualsiasi attività, dallo sviluppo desktop .NET all'analisi scientifica dei dati con R, Python e F#.  
+ La modifica più importante che si nota quando si installa Visual Studio è la nuova esperienza di installazione. Nella scheda **Carichi di lavoro** sono visualizzate le opzioni di installazione raggruppate in modo da rappresentare i framework, i linguaggi e le piattaforme più comuni, in grado di supportare qualsiasi attività, dallo sviluppo desktop .NET allo sviluppo di applicazioni C++ in Windows, Linux e iOS.   
 
- ![Finestra di dialogo di installazione di Visual Studio 2017 RC](../ide/media/willow1.png "VS2017RC_Setup_screen")
+ ![Finestra di dialogo di installazione di Visual Studio 2017](../install/media/vs2017-workloads.PNG "Schermata dell'installazione di Visual Studio 2017")
 
-Scegliere i carichi di lavoro necessari e modificarli quando è necessario. L'installazione minima ha una dimensione di poche centinaia di megabyte, ma contiene comunque il supporto per le modifiche di base del codice per più di venti linguaggi, oltre alle funzionalità di controllo del codice sorgente.
+Scegliere i carichi di lavoro necessari e modificarli all'occorrenza.
 
-Sono state anche aggiunte modalità di installazione diverse per Visual Studio. Si vuole scegliere i propri componenti anziché usare i carichi di lavoro? Basta selezionare la scheda **Singoli componenti** nel programma di installazione. Si vuole installare i Language Pack anche senza modificare l'opzione lingua di Windows? Scegliere la scheda **Language Pack** del programma di installazione.  
+Si vuole scegliere i propri componenti anziché usare i carichi di lavoro? Basta selezionare la scheda **Singoli componenti** nel programma di installazione. Si vuole installare i Language Pack anche senza modificare l'opzione lingua di Windows? Scegliere la scheda **Language Pack** del programma di installazione.  
 
 Per altre informazioni sulla nuova esperienza di installazione, incluse le istruzioni dettagliate per eseguirla, vedere la pagina [Installare Visual Studio](../install/install-visual-studio.md).
 
-
 ### <a name="start-visual-studio-faster"></a>Avviare Visual Studio più rapidamente
-Se Visual Studio rileva che l'avvio dell'IDE è lento, offre un Controllo prestazioni per Visual Studio che consente di velocizzare le operazioni. In Controllo prestazioni sono elencate tutte le estensioni e le finestre degli strumenti che rallentano l'avvio dell'IDE. È possibile usare la funzionalità per migliorare le prestazioni di avvio, stabilendo quando avviare le estensioni o se le finestre degli strumenti vengono aperte all'avvio.
+Il nuovo strumento Controllo prestazioni di Visual Studio può essere utile per ottimizzare i tempi di avvio dell'IDE. In Controllo prestazioni sono elencate tutte le estensioni e le finestre degli strumenti che potrebbero rallentare l'avvio dell'IDE. È possibile usare la funzionalità per migliorare le prestazioni di avvio, stabilendo quando avviare le estensioni o se le finestre degli strumenti vengono aperte all'avvio.
 
 ### <a name="decrease-solution-load-time"></a>Ridurre i tempi di caricamento delle soluzioni
-Lavorare su soluzioni che contengono fino a 100 progetti non significa che è necessario usare tutti i file o progetti contemporaneamente. Ora è possibile modificare ed eseguire il debug senza attendere che Visual Studio carichi ogni progetto. Per provare questa procedura con i progetti gestiti, attivare il **caricamento leggero delle soluzioni** da Strumenti-> Opzioni-> Progetti e soluzioni.
+Lavorare su soluzioni che contengono molti progetti non significa che sia necessario usare tutti i file o progetti contemporaneamente. Ora è possibile modificare ed eseguire il debug senza attendere che Visual Studio carichi ogni progetto. Per provare questa procedura con i progetti gestiti, attivare il **caricamento leggero delle soluzioni** da Strumenti-> Opzioni-> Progetti e soluzioni.
 
-  ![Finestra di dialogo Opzioni in Visual Studio 2017 RC](../ide/media/vs2017ide-LightweightSolutionLoad.PNG "Finestra di dialogo Opzioni VS2017RC - Caricamento leggero soluzioni")
+  ![Finestra di dialogo Opzioni in Visual Studio 2017](../ide/media/vs2017ide-LightweightSolutionLoad.PNG "Visual Studio 2017 - Finestra di dialogo Opzioni - Caricamento leggero delle soluzioni")
 
 ### <a name="faster-on-demand-loading-of-extensions"></a>Caricamento su richiesta delle estensioni più rapido
-L'idea è semplice: caricare le estensioni quando sono necessarie anziché all'avvio di Visual Studio. Per prima cosa, le estensioni Python e Xamarin sono state spostate nel caricamento su richiesta ed è in corso lo spostamento in questo modello di tutte le estensioni accluse a Visual Studio e delle estensioni di fornitori di terze parti. Le informazioni sulle estensioni che hanno un impatto sulle prestazioni di avvio, caricamento delle soluzioni e digitazione, sono disponibili in ? -> Gestisci prestazioni di Visual Studio.
+Le estensioni di Visual Studio (così come le estensioni di terze parti) sono state spostate in modo da poter essere caricate su richiesta, invece che all'avvio dell'IDE. Le informazioni sulle estensioni che hanno un impatto sulle prestazioni di avvio, caricamento delle soluzioni e digitazione, sono disponibili in ? -> Gestisci prestazioni di Visual Studio.
 
-  ![Finestra di dialogo Opzioni in Visual Studio 2017 RC](../ide/media/vs2017ide-ManageVSperf.png "Finestra di dialogo Guida di VS2017RC - Gestisci prestazioni")
+  ![Finestra di dialogo Opzioni in Visual Studio 2017](../ide/media/vs2017ide-manage-vs-perf.png "Finestra di dialogo Guida di Visual Studio - Gestisci prestazioni")
 
 ## <a name="productivity-improvements"></a>Miglioramenti della produttività
 
 ### <a name="sign-in-across-multiple-accounts"></a>Accedere a più account  
-È stato introdotto in Visual Studio 2017 RC un nuovo servizio di identità che consente di condividere gli account utente in più strumenti di sviluppo Microsoft, ad esempio Team Explorer, strumenti di Azure, pubblicazione in Windows Store e altri.
+È stato introdotto in Visual Studio un nuovo servizio di identità che consente di condividere gli account utente in Team Explorer, strumenti di Azure, pubblicazione in Windows Store e altri strumenti.
 
-È anche possibile restare connessi più a lungo: non verrà chiesto di accedere nuovamente ogni 12 ore. Per altre informazioni, vedere il post del blog relativo alla [riduzione del numero di richieste di accesso a Visual Studio](https://blogs.msdn.microsoft.com/visualstudio/2016/08/15/fewer-visual-studio-sign-in-prompts/).
+È anche possibile rimanere connessi più a lungo. Non verrà richiesto di accedere nuovamente ogni 12 ore. Per altre informazioni, vedere il post del blog relativo alla [riduzione del numero di richieste di accesso a Visual Studio](https://blogs.msdn.microsoft.com/visualstudio/2016/08/15/fewer-visual-studio-sign-in-prompts/).
 
 ### <a name="manage-your-extensions-with-roaming-extensions-manager"></a>Gestire le estensioni con Gestione roaming estensioni
-Ora è ancora più semplice configurare ogni ambiente di sviluppo usando le estensioni preferite quando si accede a Visual Studio. Il nuovo strumento Gestione roaming estensioni tiene traccia di tutte le estensioni preferite creando un elenco sincronizzato nel cloud.  
+È ancora più semplice configurare ogni ambiente di sviluppo usando le estensioni preferite quando si accede a Visual Studio. Il nuovo strumento Gestione roaming estensioni tiene traccia di tutte le estensioni preferite creando un elenco sincronizzato nel cloud.  
 
 Per visualizzare rapidamente un elenco delle estensioni in Visual Studio, fare clic su Strumenti > Estensioni e aggiornamenti e quindi scegliere Gestione roaming estensioni.
 
-![Visual Studio 2017 - Finestra di dialogo Estensioni e aggiornamenti](../ide/media/vs2017ide-ExtensionsAndUpdates.png "Visual Studio 2017 - Strumenti > finestra di dialogo Estensioni e aggiornamenti")
+![Visual Studio 2017 - Finestra di dialogo Estensioni e aggiornamenti](../ide/media/vs2017ide-extensions-and-updates.png "Visual Studio 2017 - Strumenti > finestra di dialogo Estensioni e aggiornamenti")
 
 Gestione roaming estensioni tiene traccia di tutte le estensioni installate, ma è possibile scegliere quelle che si vuole aggiungere all'elenco di roaming.
 
 ![Visual Studio 2017 - Finestra di dialogo Estensioni e aggiornamenti](../ide/media/vs2017ide-RoamingExtensionManager.png "Visual Studio 2017 - Gestione roaming estensioni")
 
 Quando si usa Gestione roaming estensioni si noteranno tre tipi di icona nell'elenco:
-* ![Icona con roaming](../ide/media/vs2017ide-roamedicon.png "Icona con roaming") ***Icona con roaming***: un'estensione che fa parte dell'elenco di roaming, ma non è installata nel computer.
+* ![Icona In roaming](../ide/media/vs2017ide-roamedicon.png "Icona In roaming") ***In roaming***: un'estensione che fa parte dell'elenco di roaming, ma non è installata nel computer.
   Per eseguire l'installazione usare il pulsante **Download**.
-* ![Icona con roaming e installazione](../ide/media/vs2017ide-roamedinstalledicon.png "Icona con roaming e installazione") ***Icona con roaming e installazione***: tutte le estensioni incluse nell'elenco di roaming e installate nell'ambiente di sviluppo.
+* ![Icona In roaming e installata](../ide/media/vs2017ide-roamedinstalledicon.png "Icona In roaming e installata") ***In roaming e installata***: tutte le estensioni incluse nell'elenco di roaming e installate nell'ambiente di sviluppo.
   Se si decide di evitare il roaming, è possibile rimuovere le estensioni usando il pulsante **Arresta roaming**.
-* ![Icona con installazione](../ide/media/vs2017ide-installedicon.png "Icona con installazione") ***Icona con installazione***: tutte le estensioni installate nell'ambiente, ma non incluse nell'elenco di roaming.
+* ![Icona Installata](../ide/media/vs2017ide-installedicon.png "Icona Installata") ***Installata***: tutte le estensioni installate nell'ambiente, ma non incluse nell'elenco di roaming.
   Per aggiungere le estensioni all'elenco di roaming, usare il pulsante **Avvia roaming**.
 
-Queste icone indicano lo stato corrente dell'elenco. È possibile includere qualsiasi estensione con qualsiasi stato, personalizzandole in base alle proprie esigenze. In alternativa, è possibile usare le procedure automatiche. Qualsiasi estensione scaricata quando si è connessi verrà aggiunta all'elenco come **con roaming e installazione** e sarà inclusa nell'elenco di roaming. In questo modo sarà possibile accedere all'estensione da qualsiasi altro computer.
+Qualsiasi estensione scaricata quando si è connessi verrà aggiunta all'elenco come **in roaming e installata** e sarà inclusa nell'elenco di roaming. In questo modo sarà possibile accedere all'estensione da qualsiasi computer.
 
 ### <a name="experience-live-architecture-dependency-validation-and-live-unit-testing"></a>Convalida delle dipendenze architetturali in tempo reale e Live Unit Testing
 
-In Visual Studio Enterprise 2017 RC, se sono stati configurati diagrammi di convalida delle dipendenze, detti anche diagrammi di livello, è ora possibile ricevere notifiche tempo reale in caso di violazioni delle regole di dipendenza architetturale durante la digitazione di codice nell'Editor del codice.
+Visual Studio può ora inviare notifiche tempo reale in caso di violazioni delle regole di dipendenza architetturale durante la digitazione di codice nell'Editor del codice, usando diagrammi di Convalida delle dipendenze, noti anche come diagrammi di livello.
 
-Gli errori vengono visualizzati nell'Elenco errori e le linee a zigzag nell'editor di testo indicano la posizione esatta di una violazione. Ora le probabilità di introdurre dipendenze indesiderate sono più ridotte.
+Gli errori vengono visualizzati nell'Elenco errori e le sottolineature ondulate nell'editor di testo mostrano la posizione esatta della violazione. In questo modo si riducono le probabilità di introdurre dipendenze indesiderate.
 
 ![Convalida dell'architettura in tempo reale](../ide/media/vs2017ide-LiveArchitectureDepedendencyValidation.png "Convalida dell'architettura in tempo reale")
 
 #### <a name="live-unit-testing"></a>Live Unit Testing:
 
-Live Unit Testing è una nuova funzionalità appena introdotta che è presente solo nell'edizione Enterprise di Visual Studio. Questa funzionalità mostra i risultati dei test unità e del code coverage direttamente nell'editor mentre si scrive il codice. Funziona con i progetti C#/VB per .NET Framework e supporta tre framework di test di MSTest, xUnit e NUnit.
+In Visual Studio Enterprise 2017, questa funzionalità mostra i risultati dei live unit test e del code coverage direttamente nell'editor mentre si scrive il codice. Funziona con i progetti C# e Visual Basic per .NET Framework e supporta tre framework di test di MSTest, xUnit e NUnit.
+
+![Live Unit Testing](../ide/media/lut-codewindow.png "Esempio della nuova funzionalità Live Unit Testing nell'edizione Enterprise di Visual Studio")
 
 ### <a name="visual-studio-ide-enhancements"></a>Miglioramenti dell'IDE di Visual Studio
 #### <a name="interact-with-git"></a>Interagire con Git:
-I controlli nell'angolo inferiore dell'IDE di Visual Studio consentono di eseguire il commit e pubblicare rapidamente i progetti Git e di gestire i repository Git.
+Quando si lavora con un progetto in Visual Studio, è possibile configurare il codice ed eseguirne rapidamente il commit e la pubblicazione in un servizio GIT. È anche possibile gestire i repository GIT tramite i menu visualizzati facendo clic sui pulsanti nell'angolo inferiore destro dell'IDE.
 
-![Finestra di dialogo di installazione di Visual Studio 2017 RC](../ide/media/vsIDE-GitInteraction.png "Git-tools-in-the-VS2017RC-IDE")
+![Finestra di dialogo di interazione di Visual Studio 2017 con GIT](../ide/media/vsIDE-GitInteraction.png "Strumenti GIT nell'IDE di Visual Studio")
 
 #### <a name="view-and-navigate-code-with-structure-visualizer"></a>Visualizzare ed esplorare il codice con il visualizzatore di struttura:
-Nell'editor del codice di Visual Studio è disponibile una nuova funzionalità per la visualizzazione della struttura. La funzionalità consente di visualizzare linee guida verticali tra le aree annidate del codice, rendendo più semplici la visualizzazione e l'esplorazione del codice. Questa funzionalità è disponibile per tutti i linguaggi supportati da TextMate e per Visual C#, Visual Basic e XAML.
+Il visualizzatore della struttura disegna linee guida di struttura (note anche come guide di rientro) nel codice. È possibile usarle per visualizzare e individuare il blocco di codice attivo in qualsiasi momento, senza dover scorrere. Al passaggio del mouse sulle linee vengono visualizzate descrizioni comando che consentono di visualizzare il blocco e i relativi elementi padre aperti. Questa funzionalità è disponibile per tutti i linguaggi supportati da grammatiche TextMate e per C#, Visual Basic e XAML.
 
-![Finestra di dialogo installazione di Visual Studio 2017 RC](../ide/media/vsIDE-StructureVisualizer.png "struttura visualizzatore in VS2017RC")
+![Visualizzatore della struttura di Visual Studio 2017](../ide/media/vsIDE-StructureVisualizer.png "Visualizzatore della struttura in Visual Studio")
 
-#### <a name="experience-an-improved-navigate-to"></a>Miglioramento della funzione Passa a:
-La funzione Passa a è stata migliorata. La finestra Passa a è stata semplificata ed è stato aggiunto il supporto per caratteri di filtro aggiuntivi che consentono di limitare le ricerche di codice.
+#### <a name="experience-improved-navigation-controls"></a>Controlli di spostamento migliorati:
+L'esperienza è stata aggiornata per consentire spostamenti più efficienti e con meno distrazioni.
 
-#### <a name="create-apps-in-even-more-programming-languages"></a>Creare app con ancora più linguaggi di programmazione:
-È possibile creare app in Visual Studio usando una gamma più ampia di linguaggi di programmazione rispetto alle versioni precedenti e soluzioni e progetti non sono più necessari. Il codice ottiene la colorazione della sintassi, il completamento delle istruzioni di base e, in alcuni casi, la funzione Passa a e altri tipi di supporto. Se il linguaggio preferito non è supportato, è possibile creare il relativo supporto usando le grammatiche TextMate.
+* **Vai a** (CTRL+F12) &ndash; consente di spostarsi da qualsiasi tipo o membro di base alle varie implementazioni corrispondenti.
+
+* **Vai a tutti** (CTRL+T o CTRL+,) &ndash; consente di passare direttamente a qualsiasi dichiarazione di file/tipo/membro/simbolo. È possibile filtrare l'elenco dei risultati o usare la sintassi di query ad esempio, "f termineRicerca" per i file, "t termineRicerca" per i tipi e così via.
+
+ ![Vai a tutti migliorato](../ide/media/vs2017ide-navigation-go-to.png "Esempio della funzionalità Vai a tutti migliorata")
+
+* **Trova tutti i riferimenti (MAIUSC+F12)** &ndash; con colorazione della sintassi, consente di raggruppare i risultati di Trova tutti i riferimenti in base a una combinazione di progetto, definizione e percorso. È anche possibile "bloccare" i risultati in modo da poter continuare la ricerca di altri riferimenti senza perdere i risultati originali.
+
+ ![Nuovo strumento Trova tutti i riferimenti](../ide/media/vs2017ide-find-all-references.png "Esempio del nuovo strumento Trova tutti i riferimenti")
+
+* **Guide di rientro**&ndash;, ovvero linee grigie verticali punteggiate che fungono da punti di riferimento nel codice per fornire informazioni di contesto all'interno del frame di visualizzazione. Queste guide sono incluse nei famosi Productivity Power Tools.
+
+Per altre informazioni sulle nuove funzionalità per la produttività, vedere il post di blog [Productivity in Visual Studio 2017](https://blogs.msdn.microsoft.com/visualstudio/2016/11/28/productivity-in-visual-studio-2017-rc/) (Produttività in Visual Studio 2017) di Mark Wilson-Thomas.
 
 ### <a name="visual-c"></a>Visual C++
-In Visual Studio 2017 RC sono stati inclusi numerosi aggiornamenti e correzioni per l'ambiente Visual C++. Sono stati corretti più di 250 bug e problemi nel compilatore e negli strumenti, molti dei quali sono stati segnalati dai clienti attraverso [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect").
+Sono stati introdotti numerosi miglioramenti in Visual Studio, tra cui la distribuzione delle istruzioni di base di C++ con Visual Studio, l'aggiornamento del compilatore aggiungendo il supporto avanzato per le funzionalità di C++11 e C++, l'aggiunta e l'aggiornamento di funzionalità nelle librerie di C++. Sono stati anche migliorati i carichi di lavoro di installazione, le prestazioni dell'IDE di C++ e altro.
 
-Sono stati inoltre apportati numerosi miglioramenti, tra cui la distribuzione delle istruzioni di base di C++ con Visual Studio, l'aggiornamento del compilatore aggiungendo un supporto avanzato per le funzionalità di C++11 e C++, l'aggiunta e l'aggiornamento di funzionalità nelle librerie di C++, il miglioramento delle prestazioni dell'IDE e dei carichi di lavoro di installazione di C++ e altro ancora.
+Sono stati anche corretti più di 250 bug e problemi nel compilatore e negli strumenti, molti dei quali sono stati segnalati dai clienti attraverso [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect").
 
-Per informazioni dettagliate, vedere la pagina [Novità di Visual C++ in Visual 2017 RC](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio).  
-
+Per informazioni dettagliate, vedere la pagina [Novità di Visual C++ in Visual Studio 2017](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio).  
 
 ### <a name="debugging-and-diagnostics"></a>Debug e diagnostica
-Il debug ora è più rapido e non causa ritardi durante la modifica.
-
-Ad esempio, in una versione precedente di Visual Studio è stato introdotto il cosiddetto processo di hosting per i progetti di WPF, Windows Form e console gestita per rendere il debug più rapido creando un processo in background da usare nella sessione di debug successiva. Sebbene la funzionalità in sé sia corretta, Visual Studio non rispondeva per alcuni secondi quando si interrompeva il debug o si usava Visual Studio al termine della sessione di debug.
-
-In Visual Studio 2017 il processo di hosting è stato disattivato e il debug è stato ottimizzato in modo da essere altrettanto rapido senza il processo di hosting e ancora più rapido per i progetti che non hanno mai usato il processo di hosting, ad esempio i progetti ASP.NET, Universale di Windows e C++.
 
 #### <a name="run-to-click"></a>Eseguire fino alla riga selezionata:
-Durante il debug è ora sufficiente fare clic sull'icona accanto a una riga di codice per eseguire tale riga. Non è più necessario impostare punti di interruzione temporanei ed eseguire diversi passaggi per eseguire il codice fino a una determinata riga.
 
-![Visual Studio 2017 RC Debug - Esecuzione fino alla riga selezionata](../ide/media/vs2017ide-RunToClick.png "Esecuzione fino alla riga selezionata in debug e diagnostica di Visual Studio 2017")
+È ora possibile spostarsi più facilmente in avanti durante il debug senza impostare un punto di interruzione in corrispondenza della riga desiderata. Quando il debugger è interrotto, è sufficiente fare clic sull'icona visualizzata accanto alla riga di codice su cui si trova il mouse. Il codice verrà eseguito e si interromperà in corrispondenza di tale riga la volta successiva che viene raggiunta nel percorso del codice.
+
+![Debug in Visual Studio 2017 - Esecuzione fino alla riga selezionata](../ide/media/vs2017ide-RunToClick.png "Esecuzione fino alla riga selezionata in debug e diagnostica di Visual Studio")
 
 #### <a name="the-new-exception-helper"></a>Nuovo supporto eccezione:
 
-Il nuovo supporto eccezione consente di visualizzare rapidamente le informazioni relative alle eccezioni in una finestra di dialogo compatta, non modale e con accesso immediato alle eccezioni interne.
+Il nuovo Helper eccezioni consente di visualizzare immediatamente informazioni sulle eccezioni. Le informazioni vengono visualizzate in un formato compatto con accesso immediato alle eccezioni interne. Durante la diagnostica di NullReferenceException è possibile individuare rapidamente i riferimenti Null direttamente nell'Helper eccezioni.
 
-È possibile individuare rapidamente i riferimenti Null direttamente nel supporto eccezione durante la diagnostica di NullReferenceException.
-
-Ora si può escludere l'interruzione per i tipi di eccezione generati da moduli specifici facendo clic sulla casella di controllo per aggiungere una condizione durante l'arresto in corrispondenza di un'eccezione generata.
-
-![Nuova finestra di dialogo del supporto eccezioni](../ide/media/vs2017ide-ExceptionHelper.png "Nuova finestra di dialogo del supporto eccezioni")
+![Finestra di dialogo del nuovo Helper eccezioni in Visual Studio](../ide/media/vs2017ide-ExceptionHelper.png "Finestra di dialogo del nuovo Helper eccezioni")
 
 Per altre informazioni, vedere il post del blog relativo all'[uso del nuovo supporto eccezione in Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/).
 
@@ -191,9 +190,4 @@ Per inoltrare suggerimenti su come migliorare Visual Studio o per segnalare un p
 * [Novità di C#](https://docs.microsoft.com/en-us/dotnet/articles/csharp/csharp-7)  
 * [What's New for Team Foundation Server](https://www.visualstudio.com/en-us/docs/whats-new) (Novità per Team Foundation Server)
 * [Note sulla versione di Visual Studio](https://www.visualstudio.com/news/vs2015-vs)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

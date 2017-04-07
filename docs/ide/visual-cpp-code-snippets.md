@@ -31,6 +31,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 202d6bda9bab5f21e3ee5243d254c63c67b0f066
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="visual-c-code-snippets"></a>Frammenti di codice Visual C#
@@ -126,7 +127,7 @@ private:
 ## <a name="for-vs-foreach-vs-forr-vs-rfor"></a>For, foreach, forr e rfor  
  Sono disponibili quattro diversi frammenti for che forniscono tipi diversi di cicli for.  
   
- Il frammento **for`size_t` rende disponibile un ciclo ** in cui la condizione è basata sulla lunghezza (in `for`) di un oggetto:  
+ Il frammento **for`size_t` rende disponibile un ciclo** in cui la condizione è basata sulla lunghezza (in `for`) di un oggetto:  
   
 ```cpp  
 for (size_t i = 0; i < length; i++)  
@@ -189,8 +190,3 @@ class SomeClass {
 {  
   
 ```
-
-
-<!--HONumber=Feb17_HO4-->
-
-

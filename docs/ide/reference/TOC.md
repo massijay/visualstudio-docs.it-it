@@ -153,7 +153,7 @@
 ## [Comando Imposta/Rimuovi punto di interruzione](toggle-breakpoint-command.md)
 ## [Comando Espressioni di controllo](watch-command.md)
 # [Strumenti XML in Visual Studio](../../xml-tools/xml-tools-in-visual-studio.md)
-# [MSBuild](../../msbuild/msbuild1.md)
+# [MSBuild](../../msbuild/msbuild.md)
 # [Accessibilità per utenti con particolari esigenze](accessibility-for-people-with-disabilities.md)
 ## [Funzionalità di accessibilità di Visual Studio](accessibility-features-of-visual-studio.md)
 ### [Procedura: Impostare le opzioni di accessibilità IDE](how-to-set-ide-accessibility-options.md)

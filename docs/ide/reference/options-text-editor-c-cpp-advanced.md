@@ -34,8 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a1edc88394193474b273968d8435e8df06415044
-ms.openlocfilehash: 6169b6d1805808c96647425706bf555e379679a8
+ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
+ms.openlocfilehash: ba9c9b60de651eecc92ea10ba44579a7dadc36df
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="options-text-editor-cc-advanced"></a>Opzioni, Editor di testo, C/C++, Avanzate
@@ -139,7 +140,10 @@ Modificando queste opzioni è possibile modificare il comportamento correlato a 
  Il numero massimo di unità di conversione che saranno mantenute attive alla volta per le richieste IntelliSense. Il valore deve essere compreso tra 2 e 15. Questo numero è direttamente correlato al numero massimo di processi VCPkgSrv.exe che verrà eseguito (per una determinata istanza di Visual Studio). Il valore predefinito è 2, ma in presenza di memoria disponibile è possibile aumentare questo valore e verosimilmente garantire prestazioni leggermente migliori in IntelliSense.  
   
  Per altre informazioni sulle unità di conversione, vedere [Phases of Translation](/visual-cpp/preprocessor/phases-of-translation) (Fasi di conversione).  
-  
+
+ **Abilita sostituzione punto con freccia per elenco di membri**  
+ sostituisce '.' con '->' quando applicabile per l'elenco membri.
+
  **Disabilita elenco di membri aggressivi**  
  L'elenco di membri non viene visualizzato quando si digita il nome di un tipo o variabile. L'elenco viene visualizzato solo dopo aver digitato uno dei caratteri di commit, come definito nell'opzione **Caratteri commit elenco membri**.  
   
@@ -169,12 +173,14 @@ Modificando queste opzioni è possibile modificare il comportamento correlato a 
  Nasconde gli elementi non confermati nei risultati 'Trova tutti i riferimenti'. Se non si imposta l'opzione "Disabilita risoluzione", questa opzione può essere usata per nascondere gli elementi non confermati nei risultati.  
   
  **Disabilita evidenziazione riferimento**  
+
+ ## <a name="text-editor"></a>Editor di testo
+ **Abilita espansione degli ambiti**  
+ Se abilitata, è possibile racchiudere il testo selezionato tra parentesi graffe digitando '{' nell'editor di testo.  
+  
+ **Abilita espansione della precedenza**  
+ Se abilitata, è possibile racchiudere il testo selezionato tra parentesi digitando '(' nell'editor di testo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Setting Language-Specific Editor Options](../../ide/reference/setting-language-specific-editor-options.md) (Impostazione delle opzioni dell'editor specifiche del linguaggio)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugMessageEvent2 | Documenti di Microsoft
+title: IDebugMessageEvent2 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 0f033c5793dc3b89a1f2bd74a2bc4857730fb746
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: dfbe6b139a823fa13e9ce58284026c163cc07ffa
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugmessageevent2"></a>IDebugMessageEvent2
@@ -46,25 +46,25 @@ IDebugMessageEvent2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Note per gli implementatori  
- Il DE implementa questa interfaccia per inviare un messaggio a Visual Studio che richiede una risposta dell'utente. Il [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interfaccia deve essere implementata sullo stesso oggetto di questa interfaccia. Utilizza il modello SDM [QueryInterface](/visual-cpp/atl/queryinterface) accesso il `IDebugEvent2` interfaccia.  
+ La Germania implementa questa interfaccia per inviare un messaggio a Visual Studio che richiede una risposta dell'utente. Il [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interfaccia deve essere implementata sullo stesso oggetto di questa interfaccia. Usa il SDM [QueryInterface](/cpp/atl/queryinterface) per l'accesso di `IDebugEvent2` interfaccia.  
   
- L'implementazione di questa interfaccia deve comunicare la chiamata di Visual Studio di [metodo {1>setresponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md) per il DE. Ad esempio, questa operazione può essere eseguita con un messaggio inviato al messaggio del DE thread di gestione o l'oggetto che implementa questa interfaccia può mantenere un riferimento per il DE e richiamare il DE con la risposta passata `IDebugMessageEvent2::SetResponse`.  
+ L'implementazione di questa interfaccia deve comunicare la chiamata di Visual Studio di [SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md) per la Germania. Ad esempio, questa operazione può essere eseguita con un messaggio inviato al messaggio del DE thread di gestione o l'oggetto che implementa questa interfaccia potrebbe contenere un riferimento per la Germania e richiamare la Germania con la risposta passata `IDebugMessageEvent2::SetResponse`.  
   
-## <a name="notes-for-callers"></a>Note per chiamanti  
- La dice crea e invia l'oggetto evento per visualizzare un messaggio per l'utente che richiede una risposta. L'evento viene inviato tramite il [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) funzione di callback che viene fornito dal suo SDM quando è associato al programma in fase di debug.  
+## <a name="notes-for-callers"></a>Note per i chiamanti  
+ La Germania crea e invia l'oggetto evento per visualizzare un messaggio all'utente che richiede una risposta. L'evento viene inviato tramite il [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) funzione di callback che viene fornito dal suo SDM quando è associato al programma in fase di debug.  
   
 ## <a name="methods-in-vtable-order"></a>Metodi nell'ordine Vtable  
- Nella tabella seguente vengono illustrati i metodi di `IDebugMessageEvent2`.  
+ Nella tabella seguente sono illustrati i metodi di `IDebugMessageEvent2`.  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md)|Ottiene il messaggio da visualizzare.|  
-|[Metodo {1>setresponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md)|Imposta la risposta, se presente, dalla finestra di messaggio.|  
+|[SetResponse](../../../extensibility/debugger/reference/idebugmessageevent2-setresponse.md)|Imposta la risposta, se presente, nella finestra di messaggio.|  
   
 ## <a name="remarks"></a>Note  
- Se è necessaria una risposta specifica da parte dell'utente per un determinato messaggio, il DE utilizzerà questa interfaccia. Ad esempio, se il DE Ottiene un messaggio "Accesso negato" dopo un tentativo di connettersi in modalità remota a un programma, il DE invia il messaggio specifico per Visual Studio in un `IDebugMessageEvent2` evento con lo stile di finestra di messaggio `MB_RETRYCANCEL`. Ciò consente all'utente di ripetere oppure annullare l'operazione di collegamento.  
+ Se richiede una risposta specifica da parte dell'utente per un determinato messaggio, la Germania utilizzerà questa interfaccia. Ad esempio, se la Germania Ottiene un messaggio "Accesso negato" dopo un tentativo di connettersi a un programma in modalità remota, la Germania invia il messaggio specifico per Visual Studio in un `IDebugMessageEvent2` evento con lo stile di finestra di messaggio `MB_RETRYCANCEL`. Ciò consente all'utente di ripetere oppure annullare l'operazione di collegamento.  
   
- Il DE specifica la modalità questo messaggio di essere gestiti seguendo le convenzioni della funzione Win32 `MessageBox` (vedere [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8) per informazioni dettagliate).  
+ La Germania specifica come il messaggio è da gestire seguendo le convenzioni della funzione Win32 `MessageBox` (vedere [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8) per informazioni dettagliate).  
   
  Utilizzare il [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md) interfaccia per inviare messaggi a Visual Studio che non richiedono una risposta da parte dell'utente.  
   

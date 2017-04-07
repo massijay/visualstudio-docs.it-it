@@ -1,5 +1,5 @@
 ---
-title: Convalidare il codice con diagrammi di dipendenza | Documenti di Microsoft
+title: Convalidare il codice con diagrammi di dipendenza | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 831452f0c06a42550f64c84e88395ca7a1d3c85e
-ms.openlocfilehash: 0c4368d0f88f6f5c508b9945abd89c5e94a53d8a
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 5581224b17a7b42f65b69f741f984a144d78fc26
+ms.openlocfilehash: 53c623ce7ab7126c22aaab856a439862252a5d56
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>Convalidare il codice con diagrammi di dipendenza
@@ -49,15 +49,15 @@ ms.lasthandoff: 02/22/2017
 
 [Video: Convalidare le dipendenze di architettura in tempo reale](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4) 
 
-## <a name="why-use-dependency-diagrams"></a>Perché utilizzare diagrammi di dipendenza?
+## <a name="why-use-dependency-diagrams"></a>Perché utilizzare diagrammi dipendenza?
 
-Per assicurarsi che il codice non conflitto con la progettazione, convalidare il codice con diagrammi di dipendenza in Visual Studio. In questo modo è possibile effettuare le operazioni seguenti:  
+Per assicurarsi che non siano in conflitto con la progettazione codice, è possibile convalidare il codice con diagrammi di dipendenza in Visual Studio. In questo modo è possibile effettuare le operazioni seguenti:  
   
--   Trovare conflitti tra le dipendenze nel codice e le dipendenze nel diagramma delle dipendenze.  
+-   Trovare conflitti tra le dipendenze nel codice e le dipendenze nel diagramma di dipendenza.  
   
 -   Trovare le dipendenze sulle quali potrebbero influire le modifiche proposte.  
   
-     Ad esempio, è possibile modificare il diagramma delle dipendenze per mostrare le potenziali modifiche di architettura e quindi convalidare il codice per visualizzare le dipendenze interessate.  
+     Ad esempio, è possibile modificare il diagramma di dipendenze per mostrare le potenziali modifiche all'architettura e quindi convalidare il codice per visualizzare le dipendenze interessate.  
   
 -   Effettuare il refactoring o la migrazione del codice in una progettazione diversa.  
   
@@ -69,9 +69,9 @@ Per assicurarsi che il codice non conflitto con la progettazione, convalidare il
   
 -   Visual Studio sul server Team Foundation Build in uso per convalidare il codice automaticamente con Team Foundation Build  
   
--   Una soluzione che contiene un progetto di modellazione con un diagramma di dipendenze. Questo diagramma di dipendenza deve essere collegato agli elementi nei progetti Visual c# .NET o Visual Basic .NET che si desidera convalidare. Vedere [creare diagrammi di dipendenza dal codice](../modeling/create-layer-diagrams-from-your-code.md).  
+-   Una soluzione che include un progetto di modellazione con un diagramma di dipendenze. Questo diagramma dipendenza deve essere collegato agli elementi nei progetti Visual c# .NET o Visual Basic .NET che si desidera convalidare. Vedere [creare diagrammi dipendenza dal codice](../modeling/create-layer-diagrams-from-your-code.md).  
   
- Per informazioni sulle versioni di Visual Studio che supportano questa funzionalità, vedere [supporto della versione per l'architettura e strumenti di modellazione](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
+ Per le versioni di Visual Studio che supportano questa funzionalità, vedere [supporto della versione per l'architettura e strumenti di modellazione](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
   
  È possibile convalidare il codice manualmente da un diagramma di dipendenza aperto in Visual Studio o da un prompt dei comandi. È inoltre possibile convalidare il codice automaticamente quando sono in esecuzione compilazioni locali o Team Foundation Build. Vedere [Video di Channel 9: progettazione e convalidare l'architettura con diagrammi di dipendenza](http://go.microsoft.com/fwlink/?LinkID=252073).  
   
@@ -80,62 +80,62 @@ Per assicurarsi che il codice non conflitto con la progettazione, convalidare il
   
 -   [Verificare se un elemento supporta la convalida](#SupportsValidation)  
   
--   [Includere altri assembly .NET e progetti per la convalida](#IncludeReferences)  
+-   [Includere altri progetti per la convalida e l'assembly .NET](#IncludeReferences)  
   
 -   [Convalidare manualmente il codice](#ValidateManually)  
   
 -   [Convalidare automaticamente il codice](#ValidateAuto)  
   
--   [Risoluzione dei problemi di convalida di livello](#TroubleshootingValidation)  
+-   [Risolvere i problemi di convalida dei livelli](#TroubleshootingValidation)  
   
 -   [Comprendere e risolvere gli errori di convalida dei livelli](#UnderstandingValidationErrors)  
 
-## <a name="live-dependency-validation"></a>Convalida della dipendenza Live
+## <a name="live-dependency-validation"></a>Convalida della dipendenza in tempo reale
 
 In questa versione di Visual Studio, convalida della dipendenza si verifica in tempo reale e gli errori vengono visualizzati immediatamente nella finestra Elenco errori di Visual Studio.
 
-* Convalida Live è supportata per c# e Visual Basic.NET. 
+* Convalida in tempo reale è supportata per c# e Visual Basic.NET. 
 
-* Per abilitare l'analisi completa soluzione quando si utilizza la convalida delle dipendenze live, aprire le impostazioni delle opzioni dalla barra gold che viene visualizzato nell'elenco degli errori. 
- - È possibile chiudere questa barra gold definitivamente se non si desidera visualizzare tutti i problemi dell'architettura della soluzione.
+* Per abilitare l'analisi della soluzione completa quando si utilizza una dipendenza in tempo reale convalida, aprire le impostazioni delle opzioni da barra gold visualizzata nell'elenco errori. 
+ - È possibile ignorare questa barra gold definitivamente se non si è interessati a visualizzare tutti i problemi dell'architettura della soluzione.
  - Se non si abilita l'analisi della soluzione completa, l'analisi viene eseguita solo per i file da modificare.<p /> 
 
-* Durante l'aggiornamento di progetti per abilitare la convalida, una finestra di dialogo Mostra lo stato di avanzamento della conversione.
+* Quando si aggiornano progetti per attivare la convalida in tempo reale, una finestra di dialogo viene visualizzato lo stato della conversione.
 
-* Quando si aggiorna un progetto per la convalida della dipendenza live, la versione del pacchetto NuGet aggiornata per essere lo stesso per tutti i progetti ed è la versione più recente in uso. 
+* Quando si aggiorna un progetto per la convalida della dipendenza in tempo reale, la versione del pacchetto NuGet in modo da essere uguale per tutti i progetti ed è la versione più recente in uso. 
 
 * Aggiunta di un nuovo trigger di progetto di convalida dipendenza un aggiornamento del progetto. 
   
-##  <a name="a-namesupportsvalidationa-see-if-an-item-supports-validation"></a><a name="SupportsValidation"></a>Verificare se un elemento supporta la convalida  
+##  <a name="SupportsValidation"></a>Verificare se un elemento supporta la convalida  
  È possibile collegare i livelli a siti Web, documenti Office, file di testo normale e file in progetti condivisi tra più app, ma il processo di convalida non li includerà. Gli errori di convalida non verranno visualizzati per i riferimenti a progetti oppure a assembly collegati a livelli separati quando tra tali livelli non è presente alcuna dipendenza. Tali riferimenti non vengono considerati dipendenze a meno che il codice non li usi.  
   
-1.  Nel diagramma delle dipendenze, selezionare uno o più livelli, fare doppio clic sulla selezione e quindi fare clic su **Visualizza collegamenti**.  
+1.  Nel diagramma di dipendenza, selezionare uno o più livelli, destro la selezione e quindi fare clic su **Visualizza collegamenti**.  
   
 2.  In **Esplora livello**, esaminare il **supporta la convalida** colonna. Se il valore è false, l'elemento non supporta la convalida.  
   
-##  <a name="a-nameincludereferencesa-include-other-net-assemblies-and-projects-for-validation"></a><a name="IncludeReferences"></a>Includere altri assembly .NET e progetti per la convalida  
- Quando si trascinano elementi nel diagramma delle dipendenze, i riferimenti a progetti o assembly .NET corrispondente vengono aggiunti automaticamente al **riferimenti livello** cartella nel progetto di modello. Questa cartella contiene i riferimenti agli assembly e ai progetti analizzati durante la convalida. È possibile includere altri assembly .NET e progetti per la convalida senza trascinarli manualmente nel diagramma delle dipendenze.  
+##  <a name="IncludeReferences"></a>Includere altri progetti per la convalida e l'assembly .NET  
+ Quando si trascinano elementi nel diagramma di dipendenza, i riferimenti agli assembly .NET corrispondente o progetti vengono aggiunti automaticamente al **riferimenti livello** cartella nel progetto di modellazione. Questa cartella contiene i riferimenti agli assembly e ai progetti analizzati durante la convalida. È possibile includere altri assembly .NET e progetti per la convalida senza trascinarli manualmente nel diagramma di dipendenza.  
   
-1.  In **Esplora**, fare doppio clic su progetto di modellazione o **riferimenti livello** cartella e quindi fare clic su **Aggiungi riferimento**.  
+1.  In **Esplora**, fare clic sul progetto di modellazione o **riferimenti livello** cartella e quindi fare clic su **Aggiungi riferimento**.  
   
-2.  Nel **Aggiungi riferimento** nella finestra di dialogo selezionare gli assembly o i progetti e quindi fare clic su **OK**.  
+2.  Nel **Aggiungi riferimento** nella finestra di dialogo selezionare l'assembly o progetti e quindi fare clic su **OK**.  
   
-##  <a name="a-namevalidatemanuallya-validate-code-manually"></a><a name="ValidateManually"></a>Convalidare manualmente il codice  
- Se si dispone di un diagramma di dipendenza aperto collegato agli elementi della soluzione, è possibile eseguire il **convalida** comando di scelta rapida del diagramma. È anche possibile utilizzare il prompt dei comandi per eseguire il **msbuild** comando con il **ValidateArchitecture** proprietà personalizzata impostata su **True**. Ad esempio, analogamente alle modifiche nel codice, eseguire regolarmente la convalida dei livelli in modo da rilevare tempestivamente conflitti di dipendenza.  
+##  <a name="ValidateManually"></a>Convalidare manualmente il codice  
+ Se si dispone di un diagramma aperto dipendenza che è collegato a elementi di soluzione, è possibile eseguire il **convalida** comando di scelta rapida del diagramma. È anche possibile utilizzare il prompt dei comandi per eseguire il **msbuild** comando con il **ValidateArchitecture** proprietà personalizzata impostata su **True**. Ad esempio, analogamente alle modifiche nel codice, eseguire regolarmente la convalida dei livelli in modo da rilevare tempestivamente conflitti di dipendenza.  
   
 #### <a name="to-validate-code-from-an-open-dependency-diagram"></a>Per convalidare il codice da un diagramma aperto dipendenza   
   
 1.  Pulsante destro del mouse sulla superficie del diagramma e quindi fare clic su **Convalida architettura**.  
   
     > [!NOTE]
-    >  Per impostazione predefinita, il **operazione di compilazione** file del diagramma (con estensione layerdiagram) dipendenza è impostata su **convalida** in modo che il diagramma è incluso nel processo di convalida.  
+    >  Per impostazione predefinita, il **azione di compilazione** file del diagramma (con estensione layerdiagram) dipendenza è impostata su **convalida** in modo che il diagramma è incluso nel processo di convalida.  
   
      Il **elenco errori** finestra segnala gli eventuali errori. Per ulteriori informazioni sugli errori di convalida, vedere [individuare e risolvere gli errori di convalida livello](#UnderstandingValidationErrors).  
   
-2.  Per visualizzare l'origine di ciascun errore, fare doppio clic su errore nel **elenco errori** finestra.  
+2.  Per visualizzare l'origine di ogni errore, fare doppio clic su errore nel **elenco errori** finestra.  
   
     > [!NOTE]
-    >  In [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] potrebbe essere visualizzata una mappa codice anziché l'origine dell'errore. Ciò si verifica quando il codice presenta una dipendenza in un assembly che non è specificato nel diagramma delle dipendenze o al codice manca una dipendenza specificata nel diagramma delle dipendenze. Esaminare la mappa codice o il codice per determinare se la dipendenza deve esistere. Per ulteriori informazioni sulle mappe codice, vedere [mappare le dipendenze delle soluzioni](../modeling/map-dependencies-across-your-solutions.md).  
+    >  In [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] potrebbe essere visualizzata una mappa codice anziché l'origine dell'errore. Questo errore si verifica quando il codice ha una dipendenza su un assembly che non viene specificato per il diagramma di dipendenze o al codice manca una dipendenza specificata nel diagramma di dipendenza. Esaminare la mappa codice o il codice per determinare se la dipendenza deve esistere. Per ulteriori informazioni sulle mappe del codice, vedere [mappare le dipendenze nelle soluzioni](../modeling/map-dependencies-across-your-solutions.md).  
   
 3.  Per gestire gli errori, vedere [gestire errori di convalida](#ManageErrors).  
   
@@ -153,7 +153,7 @@ In questa versione di Visual Studio, convalida della dipendenza si verifica in t
   
          - oppure -  
   
-         Passare alla cartella che contiene la modellazione file (con estensione modelproj) e il diagramma di dipendenze del progetto e quindi eseguire [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] con la seguente proprietà personalizzata:  
+         Passare alla cartella che contiene il modello di progetto file (con estensione modelproj) e il diagramma di dipendenze, quindi eseguire [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] con la seguente proprietà personalizzata:  
   
         ```  
         msbuild /p:ValidateArchitecture=true   
@@ -173,11 +173,11 @@ In questa versione di Visual Studio, convalida della dipendenza si verifica in t
         msbuild /p:ValidateArchitecture=true  
         ```  
   
-     Verranno elencati tutti gli errori che si verificano. Per ulteriori informazioni su [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], vedere [MSBuild](../msbuild/msbuild1.md) e [attività MSBuild](../msbuild/msbuild-task.md).  
+     Verranno elencati tutti gli errori che si verificano. Per ulteriori informazioni su [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], vedere [MSBuild](../msbuild/msbuild.md) e [attività MSBuild](../msbuild/msbuild-task.md).  
   
  Per ulteriori informazioni sugli errori di convalida, vedere [individuare e risolvere gli errori di convalida livello](#UnderstandingValidationErrors).  
   
-###  <a name="a-namemanageerrorsa-manage-validation-errors"></a><a name="ManageErrors"></a>Gestire gli errori di convalida  
+###  <a name="ManageErrors"></a>Gestire gli errori di convalida  
  Durante il processo di sviluppo, potrebbe essere necessario eliminare alcuni conflitti segnalati durante la convalida. Ad esempio, è possibile eliminare gli errori che sono già stati corretti o che non sono attinenti allo scenario in questione. Quando si elimina un errore, è buona norma registrare un elemento di lavoro in [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)].  
   
 > [!WARNING]
@@ -185,18 +185,18 @@ In questa versione di Visual Studio, convalida della dipendenza si verifica in t
   
 ##### <a name="to-create-a-work-item-for-a-validation-error"></a>Per creare un elemento di lavoro per un errore di convalida  
   
--   Nel **elenco errori** finestra, fare clic sull'errore, scegliere **Crea elemento di lavoro**, quindi fare clic sul tipo di elemento di lavoro che si desidera creare.  
+-   Nel **elenco errori** finestra destro l'errore, scegliere **Crea elemento di lavoro**, quindi fare clic sul tipo di elemento di lavoro che si desidera creare.  
   
- Utilizzare queste attività per gestire gli errori di convalida nel **elenco errori** finestra:  
+ Usare queste attività per gestire errori di convalida nel **elenco errori** finestra:  
   
 |**Per**|**Seguire questi passaggi**|  
 |------------|----------------------------|  
-|Eliminare gli errori selezionati durante la convalida|Fare clic su uno o più errori selezionati, scegliere **Gestisci errori di convalida**, quindi fare clic su **Elimina errori**.<br /><br /> Gli errori eliminati vengono visualizzati come barrati. Alla successiva convalida, questi errori non saranno visualizzati.<br /><br /> Gli errori eliminati vengono registrati in un file con estensione suppressions per il file di diagramma di dipendenza corrispondente.|  
-|Interrompere l'eliminazione di errori selezionati|Fare clic su selezionato eliminati gli errori, scegliere **Gestisci errori di convalida**, quindi fare clic su **Interrompi eliminazione errori**.<br /><br /> Alla successiva convalida, gli errori eliminati selezionati verranno visualizzati.|  
+|Eliminare gli errori selezionati durante la convalida|Fare doppio clic su uno o più errori selezionati, scegliere **Gestisci errori di convalida**, quindi fare clic su **Elimina errori**.<br /><br /> Gli errori eliminati vengono visualizzati come barrati. Alla successiva convalida, questi errori non saranno visualizzati.<br /><br /> Gli errori eliminati vengono rilevati in un file con estensione suppressions per il file di diagramma di dipendenza corrispondente.|  
+|Interrompere l'eliminazione di errori selezionati|Fare doppio clic su selezionato eliminati gli errori, scegliere **Gestisci errori di convalida**, quindi fare clic su **Interrompi eliminazione errori**.<br /><br /> Alla successiva convalida, gli errori eliminati selezionati verranno visualizzati.|  
 |Ripristinare tutti gli errori eliminati nella **elenco errori** finestra|Fare clic nel **elenco errori** finestra, scegliere **Gestisci errori di convalida**, quindi fare clic su **Mostra tutti gli errori eliminati**.|  
 |Nascondere tutti gli errori eliminati dal **elenco errori** finestra|Fare clic nel **elenco errori** finestra, scegliere **Gestisci errori di convalida**, quindi fare clic su **Nascondi errori eliminati**.|  
   
-##  <a name="a-namevalidateautoa-validate-code-automatically"></a><a name="ValidateAuto"></a>Convalidare automaticamente il codice  
+##  <a name="ValidateAuto"></a>Convalidare automaticamente il codice  
  È possibile eseguire la convalida dei livelli ogni volta che si esegue una compilazione. Se il team usa Team Foundation Build, è possibile eseguire la convalida dei livelli nelle archiviazioni gestite, che si possono specificare creando un'attività personalizzata MSBuild, e usare i rapporti di compilazione per raccogliere gli errori di convalida. Per creare compilazioni di archiviazione gestite, vedere [utilizzare un processo di compilazione di archiviazione gestita per convalidare le modifiche](http://msdn.microsoft.com/Library/9cfc8b9c-1023-40fd-8ab5-1b1bd9c172ec).  
   
 #### <a name="to-validate-code-automatically-during-a-local-build"></a>Per convalidare automaticamente il codice durante una compilazione locale  
@@ -209,15 +209,15 @@ In questa versione di Visual Studio, convalida della dipendenza si verifica in t
   
  \- oppure -  
   
-1.  In **Esplora**, fare clic sul progetto che contiene il diagramma delle dipendenze o i diagrammi di modellazione e quindi fare clic su **proprietà**.  
+1.  In **Esplora**, fare clic sul progetto che contiene il diagramma di dipendenze o i diagrammi di modellazione e quindi fare clic su **proprietà**.  
   
 2.  Nel **proprietà** finestra, impostare il progetto di modellazione **Convalida architettura** proprietà **True**.  
   
      Il progetto di modellazione viene incluso nel processo di convalida.  
   
-3.  In **Esplora**, fare clic sul file di dipendenza diagramma (con estensione layerdiagram) che si desidera utilizzare per la convalida.  
+3.  In **Esplora**, fare clic sul file di diagramma (con estensione layerdiagram) delle dipendenze che si desidera utilizzare per la convalida.  
   
-4.  Nel **proprietà** finestra, assicurarsi che il diagramma **operazione di compilazione** è impostata su **convalida**.  
+4.  Nel **proprietà** finestra, assicurarsi che il diagramma **azione di compilazione** è impostata su **convalida**.  
   
      Il diagramma di dipendenza viene incluso nel processo di convalida.  
   
@@ -227,7 +227,7 @@ In questa versione di Visual Studio, convalida della dipendenza si verifica in t
   
 1.  In **Team Explorer**, fare doppio clic sulla definizione di compilazione e quindi fare clic su **processo**.  
   
-2.  In **parametri processo di compilazione**, espandere **compilazione**e digitare quanto segue nel **argomenti MSBuild** parametro:  
+2.  In **parametri processo di compilazione**, espandere **compilazione**e digitare il comando seguente nel **argomenti MSBuild** parametro:  
   
      `/p:ValidateArchitecture=true`  
   
@@ -237,21 +237,21 @@ In questa versione di Visual Studio, convalida della dipendenza si verifica in t
   
 -   [Utilizzare il modello predefinito per il processo di compilazione](http://msdn.microsoft.com/Library/43930b12-c21b-4599-a980-2995e3d16e31)  
   
--   [Modificare una compilazione precedente basato su UpgradeTemplate.xaml](http://msdn.microsoft.com/Library/ee1a8259-1dd1-4a10-9563-66c5446ef41c)  
+-   [Modificare una compilazione Legacy che si basa sull'UpgradeTemplate.xaml](http://msdn.microsoft.com/Library/ee1a8259-1dd1-4a10-9563-66c5446ef41c)  
   
 -   [Personalizzare il modello di processo di compilazione](http://msdn.microsoft.com/Library/b94c58f2-ae6f-4245-bedb-82cd114f6039)  
   
 -   [Monitorare lo stato di una compilazione in esecuzione](http://msdn.microsoft.com/Library/e51e3bad-2d1d-4b7b-bfcc-c43439c6c8ef)  
   
-##  <a name="a-nametroubleshootingvalidationa-troubleshoot-layer-validation-issues"></a><a name="TroubleshootingValidation"></a>Risoluzione dei problemi di convalida di livello  
+##  <a name="TroubleshootingValidation"></a>Risolvere i problemi di convalida dei livelli  
  Nella tabella seguente vengono descritti i problemi di convalida dei livelli e la relativa risoluzione. Questi problemi differiscono dagli errori risultanti da conflitti tra il codice e la progettazione. Per ulteriori informazioni su questi errori, vedere [individuare e risolvere gli errori di convalida livello](#UnderstandingValidationErrors).  
   
 |**Problema**|**Possibile causa**|**Risoluzione**|  
 |---------------|------------------------|--------------------|  
-|Gli errori di convalida non si verificano come previsto.|La convalida non funziona sui diagrammi di dipendenza che vengono copiati da altri diagrammi di dipendenza in Esplora soluzioni e che sono nello stesso progetto di modellazione. diagrammi di dipendenza che vengono copiati in questo modo contengono gli stessi riferimenti del diagramma originale di dipendenza.|Aggiungere un nuovo diagramma di dipendenza per il progetto di modello.<br /><br /> Copiare gli elementi dal diagramma di dipendenza di origine al nuovo diagramma.|  
+|Gli errori di convalida non si verificano come previsto.|La convalida non funziona sui diagrammi di dipendenza che vengono copiati da altri diagrammi di dipendenza in Esplora soluzioni e che sono nello stesso progetto di modellazione. diagrammi di dipendenza che vengono copiati in questo modo contengono gli stessi riferimenti del diagramma di dipendenza originale.|Aggiungere un nuovo diagramma dipendenze al progetto di modello.<br /><br /> Copiare gli elementi dal diagramma di dipendenza di origine al nuovo diagramma.|  
   
-##  <a name="a-nameunderstandingvalidationerrorsa-understanding-and-resolving-layer-validation-errors"></a><a name="UnderstandingValidationErrors"></a>Comprensione e risoluzione degli errori di convalida dei livelli  
- Durante la convalida di codice in base a un diagramma di dipendenze, si verificano errori di convalida quando il codice è in conflitto con la progettazione. In presenza delle condizioni seguenti è possibile ad esempio che si verifichino errori di convalida:  
+##  <a name="UnderstandingValidationErrors"></a>Comprensione e risoluzione degli errori di convalida dei livelli  
+ Quando si convalida il codice rispetto a un diagramma di dipendenze, si verificano errori di convalida quando il codice è in conflitto con la progettazione. In presenza delle condizioni seguenti è possibile ad esempio che si verifichino errori di convalida:  
   
 -   Un elemento viene assegnato al livello errato. In questo caso, spostare l'elemento.  
   
@@ -263,18 +263,18 @@ In questa versione di Visual Studio, convalida della dipendenza si verifica in t
   
 |**Sintassi**|**Descrizione**|  
 |----------------|---------------------|  
-|*Elementon*(*Tipoelementon*)|*Elementon* è un elemento è associato a un livello nel diagramma delle dipendenze.<br /><br /> *Tipoelementon* è il tipo di *Elementon*, ad esempio un **classe** o **metodo**, ad esempio:<br /><br /> MySolution.MyProject.MyClass.MyMethod(Metodo)|  
+|*Artefatton*(*Tipoartefatton*)|*Artefatton* è un elemento che è associato a un livello nel diagramma di dipendenza.<br /><br /> *Tipoelementon* è il tipo di *Artefatton*, ad esempio un **classe** o **metodo**, ad esempio:<br /><br /> MySolution.MyProject.MyClass.MyMethod(Metodo)|  
 |*NamespaceNameN*|Nome di uno spazio dei nomi.|  
-|*LayerNameN*|Il nome di un livello nel diagramma delle dipendenze.|  
+|*LayerNameN*|Il nome di un livello nel diagramma di dipendenza.|  
 |*Tipodipendenza*|Il tipo di relazione di dipendenza tra *Elemento1* e *elemento2*. Ad esempio, *Elemento1* ha un **chiamate** relazione con *elemento2*.|  
   
 |**Sintassi errore**|**Descrizione dell'errore**|  
 |----------------------|---------------------------|  
-|DV0001: **dipendenza non valida**|Questo problema si verifica quando un elemento di codice (spazio dei nomi, tipo o membro) mappato ai riferimenti a un livello di un elemento di codice il mapping a un altro livello, ma non vi è alcuna freccia di dipendenza tra questi livelli nel diagramma di convalida delle dipendenze che contiene questo livelli. Si tratta di una violazione dei vincoli di dipendenza.|  
-|DV1001: **spazio dei nomi non valido**|Questo problema viene segnalato in un elemento di codice associato a un livello di proprietà "Consentiti nomi Namespace" non contiene lo spazio dei nomi in cui è definito l'elemento di codice. Si tratta di una violazione dei vincoli di denominazione. Si noti che la sintassi di "Consentiti nomi Namespace" è per un elenco di punti e virgola degli spazi dei nomi in cui il codice gli elementi associati sono di livello sono consentite da definire.|  
-|DV1002: **dipendenza unreferenceable dello spazio dei nomi**|Questo problema viene segnalato in un elemento di codice associato a un livello e che fanno riferimento a un altro elemento di codice definito in uno spazio dei nomi definito nella proprietà "Namespace Unreferenceable" del livello. Si tratta di una violazione dei vincoli di denominazione. Si noti che la proprietà "Unreferenceable spazi dei nomi" è definita come un elenco separato da punto e virgola degli spazi dei nomi che non deve essere fatto riferimento negli elementi di codice associati a questo livello.|  
-|DV1003: **spazio dei nomi non consentito**|Questo problema viene segnalato in un elemento di codice associato a un livello "Non consentiti nomi Namespace" proprietà contiene lo spazio dei nomi in cui è definito l'elemento di codice. Si tratta di una violazione dei vincoli di denominazione. Si noti che la proprietà "Spazio dei nomi non consentito" è definita come un elenco separato da punto e virgola degli spazi dei nomi in cui il codice non dovrebbero essere definiti gli elementi associati a questo livello.|  
-|DV3001: **collegamento mancante**|Livello '*nomelivello*'Collega a'*elemento*' che non viene trovato. Probabilmente manca un riferimento a un assembly.|*Nomelivello* Collega a un elemento trovato. Ad esempio, è possibile che manchi un collegamento a una classe perché nel progetto di modellazione manca un riferimento all'assembly che contiene la classe.|  
+|DV0001: **dipendenza non valida**|Questo problema viene segnalato quando un elemento di codice (spazio dei nomi, tipo, membro) mappato a riferimenti a un livello un elemento di codice eseguito il mapping a un altro livello, ma non c'è alcuna freccia di dipendenza tra questi livelli nel diagramma convalida dipendenza contenente questo livelli. Ciò costituisce una violazione di vincolo di dipendenza.|  
+|DV1001: **nome spazio dei nomi non valido**|Questo problema viene segnalato in un elemento di codice associato a un livello che la proprietà "Consentito Namespace Names" non contiene lo spazio dei nomi in cui è definito l'elemento di codice. Si tratta di una violazione dei vincoli di denominazione. Si noti che la sintassi di "Consentiti nomi di Namespace" è per un elenco di punti e virgola di spazi dei nomi in cui il codice, gli elementi associati vengono livello sono consentite da definire.|  
+|DV1002: **dipendenza spazio dei nomi unreferenceable**|Questo problema viene segnalato in un elemento di codice associato a un livello e che fanno riferimento a un altro elemento di codice definito in uno spazio dei nomi definito nella proprietà "Namespace Unreferenceable" del livello. Si tratta di una violazione dei vincoli di denominazione. Si noti che la proprietà "Unreferenceable spazi dei nomi" è definita come un elenco separato da punto e virgola di spazi dei nomi che non deve essere fatto riferimento negli elementi di codice associati a questo livello.|  
+|DV1003: **nome spazio dei nomi non consentito**|Questo problema viene segnalato in un elemento di codice associato a un livello contenente la proprietà "Nomi di Namespace non consentito" lo spazio dei nomi in cui è definito l'elemento di codice. Si tratta di una violazione dei vincoli di denominazione. Si noti che la proprietà "Nome spazio dei nomi non consentito" è definita come un elenco separato da punto e virgola di spazi dei nomi in cui il codice non devono essere definiti gli elementi associati a questo livello.|  
+|DV3001: **collegamento mancante**|Livello '*nomelivello*'Collega a'*artefatto*' che non viene trovato. Probabilmente manca un riferimento a un assembly.|*Nomelivello* Collega a un elemento che non è stato trovato. Ad esempio, è possibile che manchi un collegamento a una classe perché nel progetto di modellazione manca un riferimento all'assembly che contiene la classe.|  
 |DV9001: **errori interni di analisi dell'architettura**|I risultati potrebbero non essere completi. Per altre informazioni, vedere il log dettagliato degli eventi di compilazione o la finestra di output.|Per altre informazioni, vedere il log degli eventi di compilazione o la finestra di output.|  
 
  

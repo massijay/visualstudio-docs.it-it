@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEngines2 | Documenti di Microsoft
+title: IDebugProgramEngines2 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7e9573c4c039a335fc65776483760d06067d94ff
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: b1feaad2478a39799dfc9239cef288553120bd6d
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugprogramengines2"></a>IDebugProgramEngines2
-Questa interfaccia viene utilizzata dai nodi di programma per specificare tutti i possibili motori di debug (DE) che è possono eseguire il debug di questo programma.  
+Questa interfaccia viene usata dai nodi di programma per specificare tutti i possibili motori di debug (DE) che è possono eseguire il debug di questo programma.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,21 +46,21 @@ IDebugProgramEngines2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Note per gli implementatori  
- Fornitore porta personalizzata o un DE implementa questa interfaccia sullo stesso oggetto che implementa [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) per supportare la definizione di un DE specifico da utilizzare per un particolare programma.  
+ Un DE o un fornitore di porta personalizzato implementa questa interfaccia sullo stesso oggetto che implementa [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) per consente di stabilire un DE specifico da utilizzare per un particolare programma.  
   
-## <a name="notes-for-callers"></a>Note per chiamanti  
- Chiamare [QueryInterface](/visual-cpp/atl/queryinterface) su un `IDebugProgramNode2` interfaccia per ottenere questa interfaccia.  
+## <a name="notes-for-callers"></a>Note per i chiamanti  
+ Chiamare [QueryInterface](/cpp/atl/queryinterface) su un `IDebugProgramNode2` interfaccia per ottenere questa interfaccia.  
   
 ## <a name="methods-in-vtable-order"></a>Metodi nell'ordine Vtable  
- Nella tabella seguente vengono illustrati i metodi di `IDebugProgramEngines2`.  
+ Nella tabella seguente sono illustrati i metodi di `IDebugProgramEngines2`.  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[EnumPossibleEngines](../../../extensibility/debugger/reference/idebugprogramengines2-enumpossibleengines.md)|Indica che tutte le possibili DEs che è possibile eseguire il debug di questo programma.|  
+|[EnumPossibleEngines](../../../extensibility/debugger/reference/idebugprogramengines2-enumpossibleengines.md)|Indica tutti i possibili DEs che è possibile eseguire il debug di questo programma.|  
 |[SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md)|Seleziona DE da utilizzare per il debug di questo programma.|  
   
 ## <a name="remarks"></a>Note  
- Dopo aver scelto un DE dall'utente, tale scelta è registrata con il nodo di programma chiamando [SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md). Il motore selezionato diventa il motore restituito dal [GetEngineInfo](../../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md).  
+ Una volta un Germania scelto dall'utente, questa scelta è registrata con il nodo di programma chiamando [SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md). Il motore selezionato diventa il motore restituito dal [GetEngineInfo](../../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md).  
   
 ## <a name="requirements"></a>Requisiti  
  Intestazione: msdbg.h  

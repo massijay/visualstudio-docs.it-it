@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayField | Documenti di Microsoft
+title: IDebugArrayField | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e73ab513461077ed44bec2eed7410f5317fb6a4e
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: d294afcdbf434f65f556a3437af9cfa7e179703d
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugarrayfield"></a>IDebugArrayField
-Questa interfaccia descrive un simbolo di matrice o un tipo.  
+Questa interfaccia viene descritto un simbolo di matrice o un tipo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,10 +46,10 @@ IDebugArrayField : IDebugContainerField
 ```  
   
 ## <a name="notes-for-implementers"></a>Note per gli implementatori  
- Il provider di simboli implementa questa interfaccia sullo stesso oggetto che implementa il [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interfaccia. Questa interfaccia è una specializzazione che rappresenta gli oggetti di matrice.  
+ Il provider di simboli implementa questa interfaccia sullo stesso oggetto che implementa il [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interfaccia. Questa interfaccia è una specializzazione che rappresenta gli oggetti array.  
   
-## <a name="notes-for-callers"></a>Note per chiamanti  
- Utilizzare [QueryInterface](/visual-cpp/atl/queryinterface) per questa interfaccia da ottenere il [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interfaccia se [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) restituisce il flag `FIELD_TYPE_ARRAY`.  
+## <a name="notes-for-callers"></a>Note per i chiamanti  
+ Utilizzare [QueryInterface](/cpp/atl/queryinterface) per questa interfaccia da ottenere il [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interfaccia se [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) restituisce un flag di `FIELD_TYPE_ARRAY`.  
   
 ## <a name="methods-in-vtable-order"></a>Metodi nell'ordine Vtable  
  Oltre ai metodi nel [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) e [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) interfacce, questa interfaccia implementa le operazioni seguenti:  
@@ -58,7 +58,7 @@ IDebugArrayField : IDebugContainerField
 |------------|-----------------|  
 |[GetNumberOfElements](../../../extensibility/debugger/reference/idebugarrayfield-getnumberofelements.md)|Ottiene il numero di elementi nella matrice.|  
 |[GetElementType](../../../extensibility/debugger/reference/idebugarrayfield-getelementtype.md)|Ottiene il tipo di elemento nella matrice.|  
-|[GetRank](../../../extensibility/debugger/reference/idebugarrayfield-getrank.md)|Ottiene il rango della matrice.|  
+|[GetRank](../../../extensibility/debugger/reference/idebugarrayfield-getrank.md)|Ottiene il numero di dimensioni della matrice.|  
   
 ## <a name="requirements"></a>Requisiti  
  Intestazione: sh.h  

@@ -28,14 +28,12 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 221f4911981deec0330f76a82c0cc8a1b968e56e
-ms.openlocfilehash: 081a569fc7e38fecc8cc1ae5b0f8138ae8f25521
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 2e6e4b3d9d1528d57fe181b3765e1ce3624bebad
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Modifiche in Visual Studio 2017 extensibility
-
->**Nota:** questa documentazione è preliminare e in base alla versione di Visual Studio 2017 RC.
 
 Con Visual Studio 2017, offriamo un [veloce e leggero, esperienza di installazione di Visual Studio](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer) che riduce l'impatto di Visual Studio nei sistemi di utente, e offre agli utenti più ampia di carichi di lavoro e le funzionalità installate. Per supportare questi miglioramenti, abbiamo apportato modifiche al modello di estendibilità e apportate alcune modifiche di rilievo di extensibility di Visual Studio. Questo documento vengono illustrati i dettagli tecnici di queste modifiche, e ciò che può essere eseguita per risolverli. Si noti che alcune informazioni rappresentano i dettagli di implementazione point-in-time e possono essere modificati in un secondo momento.
 
@@ -46,21 +44,21 @@ Con Visual Studio 2017, offriamo un [veloce e leggero, esperienza di installazio
 Modifiche al formato VSIX includono:
 
 * Dichiarazione dei prerequisiti di installazione. Per le promesse di un tipo semplice, veloce o l'installazione di Visual Studio, il programma di installazione offre ulteriori opzioni di configurazione per gli utenti. Di conseguenza, per assicurarsi che siano installati le funzionalità e componenti richiesti da un'estensione, le estensioni dovranno dichiarare le relative dipendenze.
-  * Con la versione RC, il programma di installazione di Visual Studio 2017 offrirà automaticamente acquisire e installare i componenti necessari per l'utente come parte dell'installazione dell'estensione.
+  * Il programma di installazione di Visual Studio 2017 offrirà automaticamente acquisire e installare i componenti necessari per l'utente come parte dell'installazione dell'estensione.
   * Gli utenti verranno inoltre visualizzato l'avviso quando si tenta di installare un'estensione che non è stata creata utilizzando il nuovo formato v3 VSIX, anche se che sono stati contrassegnati nel relativo manifesto come destinate alla versione 15.0.
 * Funzionalità avanzate per il formato VSIX. Per realizzare un [installazione basso impatto](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install) di Visual Studio che supporta le installazioni side-by-side, abbiamo non salvare la maggior parte dei dati di configurazione nel Registro di sistema e sono stati spostati gli assembly di Visual Studio specifici dalla Global Assembly Cache. È inoltre migliorate le funzionalità del formato VSIX e motore di installazione di VSIX, che consente di utilizzare, piuttosto che un file MSI o EXE per installare le estensioni per alcuni tipi di installazione.
 
   Le nuove funzionalità includono:
 
   * Registrazione nell'istanza di Visual Studio specificato.
-  * Installazione di fuori di [cartella estensioni](set-install-root.md).
+  * Installazione di fuori di [cartella extensions](set-install-root.md).
   * Rilevamento dell'architettura del processore.
   * Dipendenza separati language language pack.
   * Installazione con [supporto NGEN](ngen-support.md).
 
 ## <a name="building-an-extension-for-visual-studio-2017"></a>Creazione di un'estensione per Visual Studio 2017
 
-Progettazione di strumenti per la creazione del nuovo formato manifesto v3 VSIX è ora disponibile in Visual Studio 2017. Vedere il documento di accompagnamento [procedura: eseguire la migrazione di progetti di estendibilità di Visual Studio 2017](how-to-migrate-extensibility-projects-to-visual-studio-2017.md) per informazioni dettagliate su utilizzando gli strumenti di progettazione o esecuzione di aggiornamenti manuali per il progetto e il manifesto per lo sviluppo di estensioni VSIX v3.
+Progettazione di strumenti per la creazione del nuovo formato del manifesto di pacchetto VSIX v3 è ora disponibile in Visual Studio 2017. Vedere il documento di accompagnamento [procedura: eseguire la migrazione di progetti di estendibilità di Visual Studio 2017](how-to-migrate-extensibility-projects-to-visual-studio-2017.md) per informazioni dettagliate su utilizzando gli strumenti di progettazione o esecuzione di aggiornamenti manuali per il progetto e il manifesto per lo sviluppo di estensioni VSIX v3.
 
 ## <a name="change-visual-studio-user-data-path"></a>Modifica: Percorso dati utente di Visual Studio
 
@@ -110,7 +108,7 @@ La maggior parte delle assembly principale di Visual Studio non vengono più ins
 * Visual Studio installato in precedenza, molte chiavi del Registro di sistema nell'hive HKEY_LOCAL_MACHINE e HKEY_CURRENT_USER del sistema, in una chiave specifici di Visual Studio:
   * HKLM\Software\Microsoft\VisualStudio\\**versione**: le chiavi del Registro di sistema create da programmi di installazione MSI ed estensioni per i singoli computer.
   * HKCU\Software\Microsoft\VisualStudio\\**versione**: le chiavi del Registro di sistema create da Visual Studio per archiviare le impostazioni specifiche dell'utente.
-  * HKCU\Software\Microsoft\VisualStudio\\**versione**_Config: una copia della chiave di Visual Studio HKLM precedente e le chiavi del Registro di sistema unito dai file. pkgdef dalle estensioni.
+  * HKCU\Software\Microsoft\VisualStudio\\**versione**_Config: una copia della chiave di Visual Studio HKLM precedente e le chiavi del Registro di sistema eseguito il merge dal file. pkgdef dalle estensioni.
 * Per ridurre l'impatto sul Registro di sistema, Visual Studio utilizza ora il [RegLoadAppKey](https://msdn.microsoft.com/en-us/library/windows/desktop/ms724886(v=vs.85).aspx) funzione per archiviare le chiavi del Registro di sistema in un file binario privato in % VsAppDataFolder%\privateregistry.bin. Solo un numero molto ridotto di chiavi specifici di Visual Studio rimane nel Registro di sistema.
 * Il codice esistente in esecuzione il processo di Visual Studio non è interessato. Visual Studio reindirizzerà tutte le operazioni del Registro di sistema nella chiave HKCU Visual Studio specifico nel Registro di sistema privato. Lettura e scrittura in altri percorsi del Registro di sistema continuerà a utilizzare il Registro di sistema.
 * Codice esterno sarà necessario caricare e leggere da questo file per le voci del Registro di sistema di Visual Studio.

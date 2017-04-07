@@ -1,62 +1,78 @@
 ---
-title: "IDebugOutputStringEvent2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugOutputStringEvent2"
-helpviewer_keywords: 
-  - "Interfaccia IDebugOutputStringEvent2"
+title: IDebugOutputStringEvent2 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugOutputStringEvent2
+helpviewer_keywords:
+- IDebugOutputStringEvent2 interface
 ms.assetid: 86596fd1-cecc-4813-8add-dc3d70068f9b
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugOutputStringEvent2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 42a3b630a501a379d38a53f942c0aceb494d94d7
+ms.lasthandoff: 04/05/2017
 
-Questa interfaccia viene inviata dal motore \(DE\) di debug gestione \(SDM\) di debug della sessione per restituire una stringa.  
+---
+# <a name="idebugoutputstringevent2"></a>IDebugOutputStringEvent2
+Questa interfaccia viene inviata dal motore di debug (DE) al gestore di sessione di debug (SDM) per restituire una stringa.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 IDebugOutputStringEvent2 : IUnknown  
 ```  
   
-## Note per gli implementatori  
- Il DE implementa questa interfaccia per inviare una stringa alla finestra di output dell'IDE.  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) L'interfaccia deve essere implementata nello stesso oggetto dell'interfaccia.  Gli utilizzi di SDM [QueryInterface](/visual-cpp/atl/queryinterface) accedere all'interfaccia di `IDebugEvent2` .  
+## <a name="notes-for-implementers"></a>Note per gli implementatori  
+ La Germania implementa questa interfaccia per l'invio di una stringa per il **Output** finestra dell'IDE. Il [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interfaccia deve essere implementata sullo stesso oggetto di questa interfaccia. Usa il SDM [QueryInterface](/cpp/atl/queryinterface) per l'accesso il `IDebugEvent2` interfaccia.  
   
-## Note per i chiamanti  
- Il DE crea e invia questo oggetto evento per inviare una stringa alla finestra di output.  L'evento viene inviato mediante [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) la funzione di callback che viene fornita da SDM quando è associata al programma sottoposto a debug.  
+## <a name="notes-for-callers"></a>Note per i chiamanti  
+ La Germania crea e invia l'oggetto evento per inviare una stringa per il **Output** finestra. L'evento viene inviato tramite il [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) funzione di callback che viene fornito dal suo SDM quando è associato al programma in fase di debug.  
   
-## Metodi nell'ordine di Vtable  
- Nella tabella seguente viene illustrato il metodo di `IDebugOutputStringEvent2`.  
+## <a name="methods-in-vtable-order"></a>Metodi nell'ordine Vtable  
+ Nella tabella seguente mostra il metodo di `IDebugOutputStringEvent2`.  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[GetString](../Topic/IDebugOutputStringEvent2::GetString.md)|Ottiene il messaggio visibili.|  
+|[GetString](../../../extensibility/debugger/reference/idebugoutputstringevent2-getstring.md)|Ottiene il messaggio visualizzabile.|  
   
-## Note  
- Ad esempio, il codice non gestito, la stringa da restituire possibile produrre quando il programma sottoposto a debug invia una stringa alla funzione Win32 `OutputDebugString` .  Questa stringa viene intercettata da DE e inviata sullo SDM ad esempio l'evento di `IDebugOutputStringEvent2` .  
+## <a name="remarks"></a>Note  
+ Nel codice non gestito, ad esempio, può derivare la stringa di output quando il programma sottoposto a debug invia una stringa a Win32 `OutputDebugString` (funzione). Questa stringa viene intercettata dalla Germania e inviata a un il SDM come il `IDebugOutputStringEvent2` evento.  
   
- Per [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md) inviare un messaggio che richiede una risposta dell'utente.  
+ Utilizzare [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md) per inviare un messaggio che richiede una risposta dell'utente.  
   
- Per [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md) inviare un messaggio di errore che non richiede una risposta.  
+ Utilizzare [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md) per inviare un messaggio di errore che non richiedono una risposta.  
   
-## Requisiti  
- intestazione: msdbg.h  
+## <a name="requirements"></a>Requisiti  
+ Intestazione: msdbg.h  
   
- Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)   
  [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)   
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   

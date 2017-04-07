@@ -1,34 +1,51 @@
 ---
-title: "Generare unit test per il codice con IntelliTest | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-10-05"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.UnitTest.CreateIntelliTest"
+title: Generare unit test per il codice con IntelliTest | Microsoft Docs
+ms.custom: 
+ms.date: 2015-10-05
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.UnitTest.CreateIntelliTest
 ms.assetid: cd9ff940-e948-4d28-a72c-b291ef5c1e90
 caps.latest.revision: 33
-ms.author: "mlearned"
-manager: "douge"
-caps.handback.revision: 33
----
-# Generare unit test per il codice con IntelliTest
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
+ms.openlocfilehash: 4ed8637dada5293a2d326568c2f0f15924f9b953
+ms.lasthandoff: 04/04/2017
 
+---
+# <a name="generate-unit-tests-for-your-code-with-intellitest"></a>Generare unit test per il codice con IntelliTest
 IntelliTest esplora il codice .NET per generare dati di test e un gruppo di unit test. Per ogni istruzione nel codice viene generato un input di test che eseguirà l'istruzione. Viene eseguita un'analisi del caso per ogni ramo condizionale nel codice. Vengono ad esempio analizzate le istruzioni if, le asserzioni e tutte le operazioni che possono generare eccezioni. Questa analisi viene usata per generare dati di test per uno unit test con parametri per ognuno dei metodi, creando unit test con un elevato code coverage.  
   
  Quando si esegue IntelliTest, è possibile visualizzare facilmente i test non superati e aggiungere l'eventuale codice necessario per correggerli. È possibile scegliere quali dei test generati salvare in un progetto di test per fornire un gruppo di regressione. Quando si modifica il codice, eseguire nuovamente IntelliTest per mantenere i test generati sincronizzati con le modifiche apportate al codice.  
   
- IntelliTest è disponibile solo per C\# e non supporta la configurazione x64.  
+ IntelliTest è disponibile solo per C# e non supporta la configurazione x64.  
   
-## Introduzione a IntelliTest  
+## <a name="get-started-with-intellitest"></a>Introduzione a IntelliTest  
  È necessario Visual Studio Enterprise.  
   
-### Esplorare: usare IntelliTest per esplorare il codice e generare unit test  
+### <a name="explore-use-intellitest-to-explore-your-code-and-generate-unit-tests"></a>Esplorare: usare IntelliTest per esplorare il codice e generare unit test  
  Per generare unit test, i tipi devono essere pubblici. In caso contrario, [creare unit test](#NoRun) prima di generarli.  
   
 1.  Aprire la soluzione in Visual Studio. Aprire quindi il file di classe contenente i metodi da testare.  
@@ -47,7 +64,7 @@ IntelliTest esplora il codice .NET per generare dati di test e un gruppo di unit
   
      Per i test che vengono superati verificare che i risultati indicati nella colonna dei risultati corrispondano a quanto previsto per il codice. Per i test che non vengono superati correggere il codice nel modo appropriato. Eseguire quindi di nuovo IntelliTest per verificare le correzioni.  
   
-### Rendere persistenti: salvare gli unit test come gruppo di regressione  
+### <a name="persist-save-the-unit-tests-as-a-regression-suite"></a>Rendere persistenti: salvare gli unit test come gruppo di regressione  
   
 1.  Selezionare le righe dei dati da salvare con lo unit test con parametri in un progetto di test.  
   
@@ -61,13 +78,13 @@ IntelliTest esplora il codice .NET per generare dati di test e un gruppo di unit
   
      Se il codice del metodo viene modificato, eseguire di nuovo IntelliTest per mantenere gli unit test sincronizzati con le modifiche apportate.  
   
-### Fornire assistenza: usare IntelliTest per concentrarsi sull'esplorazione del codice  
+### <a name="assist-use-intellitest-to-focus-code-exploration"></a>Fornire assistenza: usare IntelliTest per concentrarsi sull'esplorazione del codice  
   
 1.  In presenza di codice più complesso, IntelliTest consente di concentrarsi sull'esplorazione del codice. Se ad esempio si ha un metodo che contiene un'interfaccia come parametro ed è presente più di una classe che implementa tale interfaccia, IntelliTest trova tali classi e segnala un avviso.  
   
      Visualizzare gli avvisi per decidere le azioni da intraprendere.  
   
-     ![Visualizza avvisi](../test/media/pexviewwarning.png "PEXViewWarning")  
+     ![Visualizzare gli avvisi](../test/media/pexviewwarning.png "PEXViewWarning")  
   
 2.  Dopo aver esaminato il codice e aver compreso le parti da testare, è possibile correggere l'avviso per consentire la scelta delle classi da usare per testare l'interfaccia.  
   
@@ -81,15 +98,15 @@ IntelliTest esplora il codice .NET per generare dati di test e un gruppo di unit
   
      ![Riesecuzione di IntelliTest per generare i dati di test](../test/media/pexwarningsfixed.png "PEXWarningsFixed")  
   
-### Specificare: usare IntelliTest per convalidare le proprietà di correttezza specificate nel codice  
+### <a name="specify-use-intellitest-to-validate-correctness-properties-that-you-specify-in-code"></a>Specificare: usare IntelliTest per convalidare le proprietà di correttezza specificate nel codice  
  Specificare la relazione generale tra input e output da verificare con gli unit test generati. Questa specifica viene incapsulata in un metodo simile a un metodo di test, ma universalmente quantificato. Si tratta del metodo di unit test con parametri e tutte le asserzioni effettuate devono essere mantenute per tutti i possibili valori di input che IntelliTest può generare.  
   
 ##  <a name="QandALink"></a> Domande e risposte  
   
-### D: È possibile usare IntelliTest per il codice non gestito?  
+### <a name="q-can-you-use-intellitest-for-unmanaged-code"></a>D: È possibile usare IntelliTest per il codice non gestito?  
  **R:** No, IntelliTest funziona solo con codice gestito.  
   
-### D: Quando un test generato viene considerato superato o non superato?  
+### <a name="q-when-does-a-generated-test-pass-or-fail"></a>D: Quando un test generato viene considerato superato o non superato?  
  **R:** Viene considerato superato come qualsiasi altro unit test se non si verificano eccezioni. Viene invece considerato non superato in caso di errori dell'asserzione o se il codice analizzato genera un'eccezione non gestita.  
   
  Se un test può essere considerato superato se vengono generate determinate eccezioni, è possibile impostare uno dei seguenti attributi in base ai requisiti a livello di metodo di test, classe di test o di assembly:  
@@ -102,14 +119,14 @@ IntelliTest esplora il codice .NET per generare dati di test e un gruppo di unit
   
 -   **PexAllowedExceptionFromAssemblyAttribute**  
   
-### D: È possibile aggiungere presupposti allo unit test con parametri?  
+### <a name="q-can-i-add-assumptions-to-the-parameterized-unit-test"></a>D: È possibile aggiungere presupposti allo unit test con parametri?  
  **R:** Sì, usare i presupposti per specificare quali dati di test non sono obbligatori per lo unit test relativo a un metodo specifico. Per aggiungere presupposti, usare la classe <xref:Microsoft.Pex.Framework.PexAssume>. Ad esempio, è possibile aggiungere un presupposto per indicare che la variabile lengths è non Null come nell'esempio seguente.  
   
  `PexAssume.IsNotNull(lengths);`  
   
  Se si aggiunge un presupposto e si esegue di nuovo IntelliTest, i dati di test che non sono più rilevanti verranno rimossi.  
   
-### D: È possibile aggiungere asserzioni allo unit test con parametri?  
+### <a name="q-can-i-add-assertions-to-the-parameterized-unit-test"></a>D: È possibile aggiungere asserzioni allo unit test con parametri?  
  **R:** Sì, IntelliTest verificherà che quanto asserito nell'istruzione è di fatto corretto durante l'esecuzione degli unit test. Per aggiungere asserzioni, usare la classe <xref:Microsoft.Pex.Framework.PexAssert> o l'API di asserzione fornita con il framework di test. Ad esempio, è possibile aggiungere un'asserzione per indicare che due variabili sono uguali.  
   
  `PexAssert.AreEqual(a, b);`  
@@ -119,18 +136,19 @@ IntelliTest esplora il codice .NET per generare dati di test e un gruppo di unit
 ###  <a name="NoRun"></a> D: È possibile generare unit test con parametri senza eseguire prima IntelliTest?  
  **R:** Sì, fare clic con il pulsante destro del mouse nella classe o nel metodo, quindi scegliere **Crea IntelliTest**.  
   
- ![Right&#45;click editor, choose Create IntelliTest](../test/media/pexcreateintellitest.png "PEXCreateIntelliTest")  
+ ![Fare clic con il pulsante destro del mouse sull'editor e scegliere Crea IntelliTest](../test/media/pexcreateintellitest.png "PEXCreateIntelliTest")  
   
  Accettare il formato predefinito per generare i test o modificare la modalità di denominazione del progetto e dei test. È possibile creare un nuovo progetto di test o salvare i test in un progetto esistente.  
   
- ![Create IntelliTest with MSTest default](../test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")  
+ ![Creare IntelliTest nel formato MSTest predefinito](../test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")  
   
-### D: È possibile usare altri framework di unit test con IntelliTest?  
+### <a name="q-can-i-use-other-unit-test-frameworks-with-intellitest"></a>D: È possibile usare altri framework di unit test con IntelliTest?  
  **R:** Sì, seguire questa procedura per [trovare e installare altri framework](../test/install-third-party-unit-test-frameworks.md). Dopo aver riavviato Visual Studio e riaperto la soluzione, fare doppio clic nella classe o nel metodo, quindi scegliere **Crea IntelliTest**. Selezionare qui il framework installato:  
   
- ![Select other unit test framework for IntelliTest](../test/media/pexcreateintellitestextensions.png "PEXCreateIntelliTestExtensions")  
+ ![Selezionare altri framework unit test per IntelliTest](../test/media/pexcreateintellitestextensions.png "PEXCreateIntelliTestExtensions")  
   
  Eseguire quindi IntelliTest per generare i singoli unit test nei relativi file con estensione g.cs.  
   
-### D: È possibile reperire maggiori informazioni sulla modalità di generazione dei test?  
+### <a name="q-can-i-learn-more-about-how-the-tests-are-generated"></a>D: È possibile reperire maggiori informazioni sulla modalità di generazione dei test?  
  **R:** Sì, per ottenere una panoramica dettagliata, leggere questo [post di blog](http://blogs.msdn.com/b/visualstudioalm/archive/2015/07/05/intellitest-one-test-to-rule-them-all.aspx).
+

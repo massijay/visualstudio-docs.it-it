@@ -1,24 +1,43 @@
 ---
-title: "Contatori relativi a CPU e Windows negli strumenti di profilatura | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.performance.property.counters"
-helpviewer_keywords: 
-  - "contatori Windows negli strumenti di profilatura"
-  - "contatori CPU negli strumenti di profilatura"
+title: Contatori CPU e Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.performance.property.counters
+helpviewer_keywords:
+- Windows counters in Profiling Tools
+- CPU counters in Profiling Tools
 ms.assetid: d2c45c6a-f975-45ab-b8a5-4768ddd518fb
 caps.latest.revision: 28
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 26
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 51d524bafd6e5014c1542b05d9fd3a908eca41df
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="cpu-and-windows-counters"></a>Contatori CPU e Windows
 Il profiler di Visual Studio consente di raccogliere dati sulle prestazioni generati dal sistema operativo (contatori Windows) e dati sulle prestazioni generati dal processore (contatori CPU).  
@@ -122,7 +141,7 @@ Il profiler di Visual Studio consente di raccogliere dati sulle prestazioni gene
   
      **\<Directory degli strumenti per le prestazioni di Visual Studio > \VSPerfCmd /QueryCounters.**  
   
-     dove ** \<Directory degli strumenti per le prestazioni di Visual Studio>** è il percorso alla directory degli strumenti per le prestazioni della propria installazione di Visual Studio, in genere  
+     dove **\<Directory degli strumenti per le prestazioni di Visual Studio>** è il percorso alla directory degli strumenti per le prestazioni della propria installazione di Visual Studio, in genere  
   
      C:\Programmi\Microsoft Visual Studio 10.0\Team Tools\Strumenti per le prestazioni  
   
@@ -131,8 +150,3 @@ Il profiler di Visual Studio consente di raccogliere dati sulle prestazioni gene
  [How to: Choose Sampling Events](../profiling/how-to-choose-sampling-events.md)  (Procedura: Scegliere eventi di campionamento)  
  [How to: Collect CPU Counter Data](../profiling/how-to-collect-cpu-counter-data.md)  (Procedura: Raccogliere i dati dei contatori CPU)  
  [How to: Collect Windows Counter Data](../profiling/how-to-collect-windows-counter-data.md) (Procedura: Raccogliere i dati dei contatori Windows)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

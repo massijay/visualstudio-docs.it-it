@@ -1,67 +1,88 @@
 ---
-title: "Registrazione dei gestori di comando di Assembly di interoperabilit&#224; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "assembly di interoperabilità, gestori di comandi"
-  - "comandi (gestione) con gli assembly di interoperabilità, la registrazione"
+title: "Registrazione di gestori di comando di Assembly di interoperabilità | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- interop assemblies, command handlers
+- command handling with interop assemblies, registering
 ms.assetid: 303cd399-e29d-4ea1-8abe-5e0b59c12a0c
 caps.latest.revision: 19
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Registrazione dei gestori di comando di Assembly di interoperabilit&#224;
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 774266bbcd64e87229f8f97626cdff1462b27fcb
+ms.lasthandoff: 04/05/2017
 
-È necessario registrare un VSPackage con [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] in modo che l'ambiente di sviluppo integrato \(IDE\) consente di indirizzare i comandi correttamente.  
+---
+# <a name="registering-interop-assembly-command-handlers"></a>Registrazione di gestori di comando di Assembly di interoperabilità
+Un VSPackage è necessario registrare con [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] in modo che l'ambiente di sviluppo integrato (IDE) consente di indirizzare i relativi comandi correttamente.  
   
- Il Registro di sistema può essere aggiornato mediante la modifica manuale o tramite un file di registro \(con estensione RGS\). Per altre informazioni, vedere [Creating Registrar Scripts](/visual-cpp/atl/creating-registrar-scripts).  
+ Il Registro di sistema può essere aggiornato mediante la modifica manuale o tramite un file di registrazione (con estensione RGS). Per ulteriori informazioni, vedere [la creazione di script di registrazione](/cpp/atl/creating-registrar-scripts).  
   
- Il Framework di pacchetto gestito \(MPF\) fornisce questa funzionalità tramite la <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> classe.  
+ Il Framework di pacchetto gestito (MPF) fornisce questa funzionalità tramite la <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute>classe.</xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute>  
   
- [Command Table Format Reference](http://msdn.microsoft.com/it-it/09e9c6ef-9863-48de-9483-d45b7b7c798f) risorse si trovano nelle DLL dell'interfaccia utente di satellite non gestita.  
+ [Riferimento alla tabella formato comando](http://msdn.microsoft.com/en-us/09e9c6ef-9863-48de-9483-d45b7b7c798f) risorse si trovano in non gestite satellite DLL dell'interfaccia utente.  
   
-## Registrazione del gestore comandi di un package VS  
- Un package VS che agisce come un gestore per l'interfaccia utente \(UI\)\-i comandi di base richiede una voce del Registro di sistema denominata dopo il package VS `GUID`. Questa voce del Registro di sistema specifica il percorso del file di risorse dell'interfaccia utente del VSPackage e della risorsa di menu all'interno del file. La voce del Registro di sistema stesso si trova in HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\VisualStudio\\*\< versione \>*\\Menus, dove *\< versione \>* è la versione di [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], ad esempio 9.0.  
+## <a name="command-handler-registration-of-a-vspackage"></a>Registrazione del gestore del comando di un VSPackage  
+ Un VSPackage che agisce come un gestore per l'interfaccia utente (UI)-i comandi di base richiede una voce del Registro di sistema denominata dopo il pacchetto VSPackage `GUID`. Questa voce del Registro di sistema specifica il percorso del file di risorse di VSPackage dell'interfaccia utente e la risorsa di menu all'interno del file. La voce del Registro di sistema stesso si trova in HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\*\<versione >*\Menus, in cui *\<versione >* è la versione di [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], ad esempio 9.0.  
   
 > [!NOTE]
->  Il percorso radice dell'HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\VisualStudio\\*\< versione \>* può essere sottoposto a override con un'alternativa principale quando il [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] shell viene inizializzata. Per ulteriori informazioni sul percorso radice, vedere [L'installazione di VS con Windows Installer](../../extensibility/internals/installing-vspackages-with-windows-installer.md).  
+>  Il percorso radice dell'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<versione >* può essere sostituito con un'alternativa radice quando il [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] shell viene inizializzata. Per ulteriori informazioni sul percorso radice, vedere [l'installazione di pacchetti VSPackage con Windows Installer](../../extensibility/internals/installing-vspackages-with-windows-installer.md).  
   
-### La voce del Registro di sistema di risorse CTMENU  
+### <a name="the-ctmenu-resource-registry-entry"></a>La voce del Registro di sistema di risorse CTMENU  
  La struttura della voce del Registro di sistema è:  
   
 ```  
-HKEY_LOCAL_MACHINE\Software\VisualStudio\<Version>\ Menus\ <GUID> = <Resource Information>  
+HKEY_LOCAL_MACHINE\Software\VisualStudio\<Version>\  
+  Menus\  
+    <GUID> = <Resource Information>  
 ```  
   
- \<*GUID*\> è il `GUID` del VSPackage nel formato {XXXXXXX\-XXXX\-XXXX\-XXXX\-XXXXXXXXX}.  
+ \<*GUID*> è il `GUID` del pacchetto VSPackage nel formato {XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXX}.  
   
- *\< informazioni sulle risorse \>* è costituito da tre elementi, separati da virgole. Questi elementi sono, nell'ordine:  
+ *\<Informazioni sulle risorse >* è costituito da tre elementi, separati da virgole. Questi elementi sono, in ordine:  
   
- \<*Percorso DLL risorse*\>, \<*ID risorsa Menu*\>, \<*Menu versione*\>  
+ \<*Percorso DLL risorsa*>, \< *ID risorsa Menu*>, \< *versione Menu*>  
   
- Nella tabella seguente vengono descritti i campi di \<*informazioni sulle risorse*\>.  
+ Nella tabella seguente vengono descritti i campi di \< *informazioni sulle risorse*>.  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|\<*Percorso DLL risorse*\>|Questo è il percorso completo per la DLL che contiene la risorsa menu risorse o questo viene lasciato vuoto, che indica che la risorsa del VSPackage DLL viene utilizzato \(come specificato nella sottochiave pacchetti in cui è registrato il package VS stesso\).<br /><br /> È consuetudine lasciare vuoto questo campo.|  
-|\<*ID risorsa menu*\>|Questo è l'ID della risorsa di `CTMENU` risorse che contiene tutti gli elementi dell'interfaccia utente per il package VS compilate da un [vsct](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) file.|  
-|\<*Menu versione*\>|Questo è un numero utilizzato come una versione per il `CTMENU` risorse.[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] utilizza questo valore per determinare se è necessario unire di nuovo il contenuto di `CTMENU` risorsa con la cache di tutti `CTMENU` risorse. Eseguendo il comando setup devenv viene attivato un unire di nuovo.<br /><br /> Questo valore dovrebbe essere inizialmente impostato su 1 e incrementato dopo ogni modifica di `CTMENU` risorse e prima di unire di nuovo.|  
+|-------------|-----------------|  
+|\<*Percorso DLL di risorse*>|Si tratta del percorso completo per la DLL che contiene la risorsa menu risorse o questo viene lasciato vuoto, che indica che la risorsa del VSPackage DLL da utilizzare (come specificato nella sottochiave pacchetti in cui è stato registrato il pacchetto VSPackage stesso).<br /><br /> È facoltativa per lasciare vuoto questo campo.|  
+|\<*ID di risorsa di menu*>|Questo è l'ID della risorsa di `CTMENU` risorsa che contiene tutti gli elementi dell'interfaccia utente per il pacchetto VSPackage come compilato da un [vsct](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) file.|  
+|\<*Versione di menu*>|Si tratta di un numero utilizzato come una versione per il `CTMENU` risorse. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Questo valore viene utilizzato per determinare se è necessario unire di nuovo il contenuto del `CTMENU` risorsa con la cache di tutti `CTMENU` risorse. Un unire di nuovo viene attivata eseguendo il comando di devenv il programma di installazione.<br /><br /> Questo valore deve essere inizialmente impostato su 1 e incrementato dopo ogni modifica nel `CTMENU` risorse e prima di unire di nuovo.|  
   
-### Esempio  
+### <a name="example"></a>Esempio  
  Di seguito è riportato un esempio di un paio di voci di risorsa:  
   
 ```  
-HKEY_LOCAL_MACHINE\Software\VisualStudio\9.0Exp\ Menus\ {019971D6-4685-11D2-B48A-0000F87572EB} = ,1, 10 {1b027a40-8f43-11d0-8d11-00a0c91bc942} = , 10211, 3  
+HKEY_LOCAL_MACHINE\Software\VisualStudio\9.0Exp\  
+  Menus\  
+    {019971D6-4685-11D2-B48A-0000F87572EB} = ,1, 10  
+    {1b027a40-8f43-11d0-8d11-00a0c91bc942} = , 10211, 3  
 ```  
   
-## Vedere anche  
- [Come package VS aggiungere elementi dell'interfaccia utente](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
- [Comandi e menu che utilizzano gli assembly di interoperabilità](../../extensibility/internals/commands-and-menus-that-use-interop-assemblies.md)
+## <a name="see-also"></a>Vedere anche  
+ [Come VSPackage aggiungono elementi dell'interfaccia utente](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
+ [Comandi e menu che usano assembly di interoperabilità](../../extensibility/internals/commands-and-menus-that-use-interop-assemblies.md)

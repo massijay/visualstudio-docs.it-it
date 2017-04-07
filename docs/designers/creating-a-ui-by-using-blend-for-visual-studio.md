@@ -1,21 +1,39 @@
 ---
-title: "Creazione di un&#39;interfaccia utente usando Blend per Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Blend.Start.Dev12"
+title: Creazione di un&quot;interfaccia utente usando Blend per Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Blend.Start.Dev12
 ms.assetid: efd12263-cc2d-4081-a2bb-9a2cc17c442c
 caps.latest.revision: 31
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 29
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 5c2ab4063911852bbc79b8239693a01e0818b4a9
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>Creazione di un'interfaccia utente usando Blend per Visual Studio
 Blend per Visual Studio facilita la progettazione di app per desktop Windows basati su XAML, per Web, per [Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/jj683071.aspx) e per [Windows Store](http://msdn.microsoft.com/library/windows/apps/jj129478.aspx). Offre la stessa esperienza di progettazione XAML di base disponibile in Visual Studio e aggiunge finestre di progettazione visive per attività avanzate, quali animazioni e comportamenti.  
@@ -37,7 +55,7 @@ Blend per Visual Studio facilita la progettazione di app per desktop Windows bas
   
 -   [Panoramica del pannello Proprietà](#Properties)  
   
-##  <a name="a-nametoolsa-tour-of-the-tools-panel"></a><a name="Tools"></a> Panoramica del pannello Strumenti  
+##  <a name="Tools"></a> Panoramica del pannello Strumenti  
  È possibile usare il pannello **Strumenti** in Blend per Visual Studio per creare e modificare oggetti nell'applicazione. Per creare oggetti, si seleziona lo strumento e si disegna sulla tavola da disegno con il mouse.  
   
  ![Pannello Strumenti](../designers/media/blend5toolspanel.png "Blend5Toolspanel")  
@@ -53,7 +71,7 @@ Blend per Visual Studio facilita la progettazione di app per desktop Windows bas
   
  **Vedere un breve video:** ![Configure Installed Features] (Configurare le funzionalità installate)(../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Barra degli strumenti](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4).  
   
-##  <a name="a-nameassetsa-tour-of-the-assets-panel"></a><a name="Assets"></a>Panoramica del pannello Asset  
+##  <a name="Assets"></a>Panoramica del pannello Asset  
  Tutti i controlli sono disponibili nel pannello **Assets**, che è simile alla **Casella degli strumenti** in Visual Studio. Oltre ai controlli, nel pannello **Assets** è disponibile tutto ciò che può essere aggiunto alla tavola da disegno, inclusi gli stili, gli elementi multimediali, i comportamenti e gli effetti.  
   
  ![Pannello Asset](../designers/media/blend5_assets_panel.png "Blend5_Assets_panel")  
@@ -66,7 +84,7 @@ Blend per Visual Studio facilita la progettazione di app per desktop Windows bas
 |![](../designers/media/b1_4.png "B1_4")|**Stili** Consente di visualizzare tutti gli stili disponibili nel dizionario risorse.|  
 |![](../designers/media/b1_5.png "B1_5")|**Descrizione** Consente di visualizzare una descrizione della categoria o sottocategoria di asset selezionata.|  
   
-##  <a name="a-nameobjectsa-tour-of-the-objects-and-timeline-panel"></a><a name="Objects"></a> Panoramica del pannello Oggetti e sequenza temporale  
+##  <a name="Objects"></a> Panoramica del pannello Oggetti e sequenza temporale  
  Usare questo pannello per organizzare gli oggetti nella tavola da disegno e, se si vuole, per animarli.  
   
  ![Pannello Oggetti e sequenza temporale in modalità animazione](../designers/media/b5_object_timeline_animation.png "b5_object_timeline_animation")  
@@ -90,12 +108,12 @@ Blend per Visual Studio facilita la progettazione di app per desktop Windows bas
 |![](../designers/media/b1_15.png "B1_15")|**Zoom sequenza temporale** Consente di impostare la risoluzione di zoom della sequenza temporale. Lo zoom avanti permette di modificare un'animazione a un maggior livello di dettaglio, mentre lo zoom indietro permette di ottenere una panoramica del comportamento di un'animazione su periodi di tempo più lunghi. Se si applica lo zoom avanti, ma non è possibile impostare un fotogramma chiave nella posizione corrispondente all'istante desiderato, verificare che la risoluzione di snap sia sufficientemente elevata.|  
 |![Callout 16](../designers/media/b5_label_16.png "b5_label_16")|**Area di composizione della sequenza temporale** Consente di visualizzare la sequenza temporale e spostare i fotogrammi chiave trascinandoli o usando i relativi menu di scelta rapida.|  
   
-##  <a name="a-namepropertiesa-tour-of-the-properties-panel"></a><a name="Properties"></a>Panoramica del pannello Proprietà  
+##  <a name="Properties"></a>Panoramica del pannello Proprietà  
  Usare questo pannello per visualizzare e modificare le proprietà di un oggetto. È anche possibile impostarle direttamente sulla tavola da disegno. In questo caso, le modifiche alle proprietà si rifletteranno nel pannello **Proprietà**.  
   
  ![Pannello Proprietà](../designers/media/blend5_properties_panel.png "Blend5_properties_panel")  
   
- **Categorie** Consente di espandere e comprimere le categorie delle proprietà. Fare clic su **Espandi** ![](../designers/media/6375953d-074c-421a-bbb3-6f5055b67b64.png "6375953d-074c-421a-bbb3-6f5055b67b64") o ** Comprimi** ![Collapse](../designers/media/b5_collapse_button.png "b5_collapse_button") per visualizzare o nascondere i dettagli della categoria.  
+ **Categorie** Consente di espandere e comprimere le categorie delle proprietà. Fare clic su **Espandi** ![](../designers/media/6375953d-074c-421a-bbb3-6f5055b67b64.png "6375953d-074c-421a-bbb3-6f5055b67b64") o **Comprimi** ![Collapse](../designers/media/b5_collapse_button.png "b5_collapse_button") per visualizzare o nascondere i dettagli della categoria.  
   
 |||  
 |-|-|  
@@ -124,8 +142,3 @@ Blend per Visual Studio facilita la progettazione di app per desktop Windows bas
  [Animare oggetti](../designers/animate-objects-in-xaml-designer.md)   
  [Disegnare forme e tracciati](../designers/draw-shapes-and-paths.md)   
  [Progettazione di XAML in Visual Studio e Blend per Visual Studio](../designers/designing-xaml-in-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

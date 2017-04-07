@@ -1,7 +1,7 @@
 ---
-title: Guida per principianti al campionamento CPU | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
+title: Guida per principianti al campionamento CPU in Visual Studio | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 03/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 53907b9b88deca671ee0695385dcbc856a35d309
-ms.openlocfilehash: 072783e138fcc20d80ccbe8ec8b66905778cf67d
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: ddd52c1af0a164235de2e5055896e020dc8715c3
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>Guida per principianti al campionamento CPU
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/22/2017
 > [!TIP]
 >  Se si analizza il codice che chiama le funzioni di Windows, assicurarsi di avere i file con estensione pdb più aggiornati. Senza questi file, le visualizzazioni dei rapporti elencherà i nomi delle funzioni di Windows enigmatici e difficile da comprendere. Per altre informazioni su come verificare la disponibilità dei file necessari, vedere [Procedura: Fare riferimento alle informazioni sui simboli di Windows](../profiling/how-to-reference-windows-symbol-information.md).  
   
-##  <a name="a-namestep1a-create-and-run-a-performance-session"></a><a name="Step1"></a> Creare ed eseguire una sessione di prestazioni  
+##  <a name="Step1"></a> Creare ed eseguire una sessione di prestazioni  
  Per ottenere i dati che si devono analizzare, è necessario innanzitutto creare una sessione di prestazioni e quindi eseguire la sessione. La **Creazione guidata sessione di prestazioni** consente di eseguire entrambe le operazioni.  
   
  Se non si profila un'app desktop di Windows o un'app ASP.NET, è necessario usare uno degli altri strumenti di profilatura. Vedere [Strumenti di profilatura](../profiling/profiling-tools.md).  
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/22/2017
     > [!IMPORTANT]
     >  Se non si è un amministratore nel computer in uso, è necessario eseguire Visual Studio come amministratore quando si utilizza il profiler. Fare clic con il pulsante destro del mouse sull'icona dell'applicazione Visual Studio e quindi su **Esegui come amministratore**.  
   
-2.  Fare clic su **Profiler prestazioni** nel menu **Debug**.  
+2.  Dal menu **Debug** scegliere **Profiler** e quindi **Profiler prestazioni**.  
   
 3.  Selezionare l'opzione **Creazione guidata sessione di prestazioni** e fare clic su **Avvia**.  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/22/2017
   
      Eseguita l'applicazione, la visualizzazione **Riepilogo** relativa ai dati di profilatura appare nella finestra principale di Visual Studio e viene visualizzata un'icona per la nuova sessione nella finestra **Esplora prestazioni**.  
   
-##  <a name="a-namestep2a-step-2-analyze-sampling-data"></a><a name="Step2"></a> Passaggio 2: Analizzare i dati di campionamento  
+##  <a name="Step2"></a> Passaggio 2: Analizzare i dati di campionamento  
  Al termine dell'esecuzione di una sessione di prestazioni, la visualizzazione **Riepilogo** del rapporto sulla profilatura appare nella finestra principale di Visual Studio.  
   
  È consigliabile iniziare ad analizzare i dati esaminando il **Percorso critico**, quindi l'elenco delle funzioni che svolgono la maggior parte del lavoro e infine concentrandosi sulle altre funzioni usando la **sequenza temporale di riepilogo**. È anche possibile visualizzare suggerimenti e avvisi relativi alla profilatura nella finestra **Elenco errori**.  
@@ -125,7 +125,7 @@ ms.lasthandoff: 02/22/2017
   
     -   Per visualizzare informazioni dettagliate sull'avviso, fare clic sull'errore con il pulsante destro del mouse e quindi scegliere **Mostra guida errore**  
   
-##  <a name="a-namestep3a-step-3-revise-code-and-rerun-a-session"></a><a name="Step3"></a> Passaggio 3: Rivedere il codice ed eseguire nuovamente una sessione  
+##  <a name="Step3"></a> Passaggio 3: Rivedere il codice ed eseguire nuovamente una sessione  
  Dopo aver individuato e ottimizzare una o più funzioni, è possibile ripetere l'esecuzione della profilatura e confrontare i dati per visualizzare la differenza che le modifiche apportate alle prestazioni dell'applicazione.  
   
 #### <a name="to-revise-code-and-rerun-the-profiler"></a>Per modificare il codice e rieseguire il profiler  

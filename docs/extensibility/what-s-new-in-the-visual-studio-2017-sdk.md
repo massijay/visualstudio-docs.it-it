@@ -28,14 +28,12 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 221f4911981deec0330f76a82c0cc8a1b968e56e
-ms.openlocfilehash: 60898d7cace1c10006436a8d98cbd7f7628cf972
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 8163a0e1230712734936b7548bef1753ee0c1d2a
+ms.openlocfilehash: 3da360fc4df5516f5d976f807319c07b49d8c4e8
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="what39s-new-in-the-visual-studio-2017-sdk"></a>Novità di Visual Studio 2017 SDK
-
->**Nota:** questa documentazione è preliminare e in base alla versione di Visual Studio 2017 RC.
 
 Visual Studio SDK include le seguenti funzionalità nuove e aggiornate per Visual Studio 2017.
 
@@ -53,7 +51,7 @@ Per ulteriori informazioni su queste modifiche, vedere gli argomenti seguenti:
 
 * [Modifiche all'estendibilità per 2017](breaking-changes-2017.md)
 * [Supporto di Ngen in VSIX v3](ngen-support.md)
-* [L'installazione all'esterno della cartella di estensioni](set-install-root.md)
+* [Installazione all'esterno della cartella delle estensioni](set-install-root.md)
 * [Domande frequenti relative all'estensibilità di Visual Studio 2017](faq-2017.md)
 
 ## <a name="migrating-extensibility-project-to-visual-studio-2017"></a>Migrazione progetto extensibility di Visual Studio 2017

@@ -1,60 +1,76 @@
 ---
-title: "IDebugPortSupplier3 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPortSupplier3"
-helpviewer_keywords: 
-  - "Interfaccia IDebugPortSupplier3"
+title: IDebugPortSupplier3 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPortSupplier3
+helpviewer_keywords:
+- IDebugPortSupplier3 interface
 ms.assetid: e458cd02-2370-4435-8953-17d7a60ce152
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugPortSupplier3
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 0eb7cf542fa61d53220cd10f54e3fbd7c6165bf4
+ms.lasthandoff: 04/05/2017
 
-Questa interfaccia consente di un chiamante di determinare se un fornitore di porte possibile conservare le porte \(scrivendole su disco\) tra il debugger chiama quindi ottenere un elenco di quelli le porte mantenute.  
+---
+# <a name="idebugportsupplier3"></a>IDebugPortSupplier3
+Questa interfaccia consente a un chiamante di determinare se un fornitore di porta può mantenere porte (mediante la scrittura su disco) tra le chiamate del debugger e quindi ottenere un elenco di tali porte mantenuti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 IDebugPortSupplier3 : IDebugPortSupplier2  
 ```  
   
-## Note per gli implementatori  
- Un fornitore di porte personalizzato implementa questa interfaccia per supportare le informazioni sulla porta salvare in modo permanente o di salvataggio su disco.  È necessario implementare questa interfaccia lo stesso oggetto [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) dell'interfaccia.  
+## <a name="notes-for-implementers"></a>Note per gli implementatori  
+ Un fornitore di porta personalizzato implementa questa interfaccia per supportare la persistenza o il salvataggio delle informazioni sulla porta su disco. Questa interfaccia deve essere implementata per l'oggetto stesso come il [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) interfaccia.  
   
-## Note per i chiamanti  
- L [QueryInterface](/visual-cpp/atl/queryinterface)interfaccia di `IDebugPortSupplier2` per ottenere questa interfaccia.  
+## <a name="notes-for-callers"></a>Note per i chiamanti  
+ Chiamare [QueryInterface](/cpp/atl/queryinterface) sul `IDebugPortSupplier2` interfaccia per ottenere questa interfaccia.  
   
-## Metodi nell'ordine di Vtable  
- Oltre ai metodi ereditati [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) dall'interfaccia, questa interfaccia supporta quanto segue:  
+## <a name="methods-in-vtable-order"></a>Metodi nell'ordine Vtable  
+ Oltre ai metodi ereditati dal [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) , questa interfaccia supporta i seguenti:  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[CanPersistPorts](../../../extensibility/debugger/reference/idebugportsupplier3-canpersistports.md)|Restituisce se il fornitore di porte può mantenere le porte \(scrivendole su disco\) tra il debugger chiama.|  
-|[EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md)|Restituisce un oggetto che può essere utilizzato per enumerare da tutte le porte che sono state scritte su disco dal fornitore di porte.|  
+|[CanPersistPorts](../../../extensibility/debugger/reference/idebugportsupplier3-canpersistports.md)|Restituisce se il fornitore della porta può rendere persistente porte (mediante la scrittura su disco) tra le chiamate del debugger.|  
+|[EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md)|Restituisce un oggetto che può essere utilizzato per enumerare tramite tutte le porte che sono stati scritti su disco per il fornitore della porta.|  
   
-## Note  
- Se un fornitore di porte può mantenere le porte tra le chiamate, deve implementare questa interfaccia.  Le porte devono essere caricate quando il fornitore di porte viene creata un'istanza di e viene scritto sul disco quando il fornitore di porte viene eliminato.  
+## <a name="remarks"></a>Note  
+ Se un fornitore di porta può rendere persistente porte tra chiamate, deve implementare questa interfaccia. Porte devono essere caricate quando viene creata un'istanza, il fornitore della porta e scritto su disco quando il fornitore della porta viene eliminato definitivamente.  
   
- Il modulo di debug in genere non interagisce con un fornitore di porte e non si utilizzano per l'interfaccia.  
+ In genere, un motore di debug non interagisce con un fornitore di porta e non disporrà di alcuna utilità per l'interfaccia.  
   
-## Requisiti  
- intestazione: msdbg.h  
+## <a name="requirements"></a>Requisiti  
+ Intestazione: msdbg.h  
   
- Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Interfacce di base](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)

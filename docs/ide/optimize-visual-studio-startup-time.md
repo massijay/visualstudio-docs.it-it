@@ -18,9 +18,9 @@ manager: ghogen
 f1_keywords:
 - vs.performancecenter
 translationtype: Human Translation
-ms.sourcegitcommit: ba88bad0753653dcde8a4d28b4dd1c71522d6506
-ms.openlocfilehash: 435197f1536dc9006691c0f2e58fafd0fcf27718
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
+ms.openlocfilehash: 27a265dbbb1f9426ba2dd254095c84239bbd0db7
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="optimize-visual-studio-startup-time"></a>Ottimizzare il tempo di avvio di Visual Studio
@@ -28,7 +28,7 @@ Idealmente, Visual Studio deve sempre essere avviato nel più breve tempo possib
 
 ## <a name="control-startup-behavior"></a>Controllare il comportamento di avvio
 
-Per evitare di estendere il tempo di avvio, Visual Studio 2017 RC consente di evitare il caricamento delle estensioni all'avvio tramite un approccio di carico su richiesta. Ciò significa che le estensioni non si aprono subito dopo l'avvio di Visual Studio, aprendosi invece in modo asincrono in base alle esigenze dopo l'avvio. Inoltre, poiché le finestre degli strumenti lasciate aperte in una sessione precedente di Visual Studio possono rallentare l'avvio, esse vengono aperte in un modo più intelligente per evitare di compromettere il tempo di avvio.
+Per evitare di prolungare il tempo di avvio, Visual Studio 2017 evita il caricamento delle estensioni all'avvio usando un approccio di caricamento su richiesta. Ciò significa che le estensioni non si aprono subito dopo l'avvio di Visual Studio, aprendosi invece in modo asincrono in base alle esigenze dopo l'avvio. Inoltre, poiché le finestre degli strumenti lasciate aperte in una sessione precedente di Visual Studio possono rallentare l'avvio, esse vengono aperte in un modo più intelligente per evitare di compromettere il tempo di avvio.
 
 Se Visual Studio rileva un avvio lento, viene visualizzato un messaggio popup che comunica quale estensione o finestra degli strumenti provoca il rallentamento. Il messaggio include anche un collegamento alla finestra di dialogo **Gestisci prestazioni di Visual Studio** che elenca le estensioni e le finestre degli strumenti che compromettono le prestazioni di avvio. Questa finestra di dialogo consente di modificare le impostazioni delle estensioni e delle finestre degli strumenti per migliorare le prestazioni di avvio.
 
@@ -55,7 +55,7 @@ Se successivamente si cambia idea, è possibile ripristinare una qualsiasi di qu
 
 ## <a name="speed-up-solution-load"></a>Velocizzare il caricamento della soluzione
 
-Visual Studio 2017 RC introduce una nuova funzionalità denominata **caricamento leggero soluzioni** che riduce la quantità di tempo e memoria necessari per caricare le soluzioni di grandi dimensioni nell'IDE. Se si possiede una soluzione di grandi dimensioni contenente molti progetti C#, VB o C++, è probabile che l'abilitazione del caricamento leggero soluzioni produca sostanziali vantaggi in termini di prestazioni.
+Visual Studio 2017 introduce una nuova funzionalità denominata **caricamento leggero soluzioni** che riduce la quantità di tempo e memoria necessari per caricare le soluzioni di grandi dimensioni nell'IDE. Se si possiede una soluzione di grandi dimensioni contenente molti progetti C#, VB o C++, è probabile che l'abilitazione del caricamento leggero soluzioni produca sostanziali vantaggi in termini di prestazioni.
 
 Poiché alcune funzionalità IDE non sono completamente disponibili quando è abilitato il caricamento leggero soluzioni, la funzionalità è disattivata per impostazione predefinita. Le sezioni seguenti consentono di decidere se abilitare o meno questa funzionalità.
 
@@ -77,7 +77,7 @@ Quando si modifica l'impostazione del caricamento leggero soluzioni, la modifica
 
 ### <a name="automatically-enable-lightweight-solution-load"></a>Abilitare automaticamente il caricamento leggero soluzioni
 
-Quando si apre una soluzione di grandi dimensioni in Visual Studio RC 2017, potrebbe essere visualizzato un messaggio popup che propone di abilitare il caricamento leggero soluzioni. Il messaggio viene visualizzato solo per le soluzioni che contengono molti progetti C#, VB o C++. Se si sceglie di **abilitare** il comando, il caricamento leggero soluzioni viene abilitato soltanto per quella soluzione. L'impostazione a livello di IDE non cambierà.
+Quando si apre una soluzione di grandi dimensioni in Visual Studio 2017, potrebbe essere visualizzato un messaggio popup che propone di abilitare il caricamento leggero soluzioni. Il messaggio viene visualizzato solo per le soluzioni che contengono molti progetti C#, VB o C++. Se si sceglie di **abilitare** il comando, il caricamento leggero soluzioni viene abilitato soltanto per quella soluzione. L'impostazione a livello di IDE non cambierà.
 
 ![Finestra popup](../ide/media/VSIDE_LSL Popup.png)
 

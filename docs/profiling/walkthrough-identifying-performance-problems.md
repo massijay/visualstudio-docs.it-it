@@ -1,163 +1,180 @@
 ---
-title: "Procedura dettagliata: Profilatura di applicazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "strumenti per la profilatura, procedure dettagliate"
-  - "strumenti per le prestazioni, procedure dettagliate"
-  - "prestazioni, analisi"
-  - "applicazioni di profilatura, procedure dettagliate"
+title: 'Procedura dettagliata: Identificazione dei problemi di prestazioni | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- profiling tools, walkthroughs
+- performance tools, walkthroughs
+- performance, analyzing
+- profiling applications, walkthroughs
 ms.assetid: 36f6f123-0c14-4763-99c3-bd60ecb95b87
 caps.latest.revision: 53
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 53
----
-# Procedura dettagliata: Profilatura di applicazioni
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: a20a64818982484a56ba7dc82af890c729da40e4
+ms.lasthandoff: 04/05/2017
 
-In questa procedura dettagliata viene illustrato come profilare un'applicazione per l'identificazione dei problemi di prestazioni.  
+---
+# <a name="walkthrough-identifying-performance-problems"></a>Procedura dettagliata: Identificazione dei problemi di prestazioni
+Questa procedura dettagliata illustra come eseguire la profilatura di un'applicazione per identificare i problemi di prestazioni.  
   
- In questa procedura dettagliata verranno illustrati tutti i passaggi del processo di profilatura di un'applicazione gestita, nonché l'utilizzo del campionamento e della strumentazione per isolare e identificare i problemi presenti nell'applicazione.  
+ In questa procedura dettagliata verrà illustrato il processo di profilatura di un'applicazione gestita e sarà descritto come usare il campionamento e la strumentazione per isolare e identificare i problemi di prestazioni nell'applicazione.  
   
- Nel corso di questa procedura dettagliata verranno effettuate le seguenti operazioni:  
+ In questa procedura dettagliata vengono illustrate le operazioni seguenti:  
   
--   Profilare un'applicazione utilizzando il metodo di campionamento.  
+-   Eseguire la profilatura di un'applicazione tramite il metodo di campionamento.  
   
--   Esaminare i risultati dell'analisi mediante campionamento per individuare e risolvere un problema di prestazioni.  
+-   Analizzare i risultati della profilatura campionati per individuare e risolvere un problema di prestazioni.  
   
--   Profilare un'applicazione utilizzando il metodo di strumentazione.  
+-   Eseguire la profilatura di un'applicazione tramite il metodo di strumentazione.  
   
--   Esaminare i risultati dell'analisi mediante strumentazione per individuare e risolvere un problema di prestazioni.  
+-   Analizzare i risultati della profilatura instrumentati per individuare e risolvere un problema di prestazioni.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
   
--   Conoscenza di livello medio di C\#.  
+-   Conoscenza a livello intermedio di C#.  
   
--   Una copia di [Esempio PeopleTrax](../profiling/peopletrax-sample-profiling-tools.md).  
+-   Una copia dell'[esempio PeopleTrax](../profiling/peopletrax-sample-profiling-tools.md).  
   
- Per utilizzare le informazioni fornite dalla profilatura, è preferibile che siano disponibili le informazioni sui simboli di debug.  
+ Per usare le informazioni fornite dalla profilatura, è consigliabile avere a disposizione informazioni sui simboli di debug.  
   
-## Profilatura mediante il metodo di campionamento  
- Il campionamento è il metodo di analisi con cui il processo in questione viene sottoposto regolarmente a polling al fine di stabilire quale sia la funzione attiva.  Nei dati risultanti è presente un conteggio della frequenza con cui la funzione in oggetto si è trovata in cima allo stack di chiamate quando è stato effettuato il campionamento del processo.  
+## <a name="profiling-by-using-the-sampling-method"></a>Profilatura tramite il metodo di campionamento  
+ Il campionamento è un metodo di profilatura mediante il quale viene eseguito periodicamente il polling del processo in questione per determinare la funzione attiva. I dati risultanti forniscono un conteggio della frequenza con cui la funzione si trovava all'inizio dello stack di chiamate quando è stato eseguito il campionamento del processo.  
   
-#### Per profilare un'applicazione utilizzando il metodo di campionamento  
+#### <a name="to-profile-an-application-by-using-the-sampling-method"></a>Per eseguire la profilatura di un'applicazione tramite il metodo di campionamento  
   
-1.  Aprire [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] con i privilegi di amministratore.  L'esecuzione come un amministratore è obbligatoria per la profilatura.  
+1.  Aprire [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] con privilegi di amministratore. Per eseguire la profilatura, è necessario essere un amministratore.  
   
 2.  Aprire la soluzione PeopleTrax.  
   
      La soluzione PeopleTrax verrà inserita in Esplora soluzioni.  
   
-3.  Impostare l'opzione di configurazione del progetto su **Release**.  
+3.  Impostare l'opzione di configurazione del progetto su **Rilascio**.  
   
-     Si consiglia di utilizzare una compilazione di rilascio per rilevare problemi di prestazioni nell'applicazione.  Una compilazione di rilascio è consigliata per la profilatura perché una compilazione di debug contiene informazioni aggiuntive che potrebbero incidere negativamente sulle prestazioni e non riuscire a illustrare accuratamente i problemi di prestazioni.  
+     Usare una build di rilascio per rilevare i problemi di prestazioni nell'applicazione. Per la profilatura è consigliata una build di rilascio perché una build di debug contiene informazioni aggiuntive che potrebbero influire negativamente sulle prestazioni e non indicare in modo accurato i problemi di prestazioni.  
   
-4.  Scegliere **Avvia Creazione guidata sessione di prestazioni** dal menu **Analizza**.  
+4.  Dal menu **Analizza** scegliere **Profiler prestazioni**, **Creazione guidata sessione di prestazioni** e quindi selezionare **Avvia**.  
   
      Verrà visualizzata la Creazione guidata sessione di prestazioni.  
   
-5.  Assicurarsi che **Campionamento CPU \(consigliato\)** sia selezionata, quindi scegliere **Avanti**.  
+5.  Verificare che sia selezionato **Campionamento CPU (consigliato)** e quindi fare clic su **Avanti**.  
   
-6.  In **Specificare l'applicazione di destinazione per il profilo** selezionare PeopleTrax, quindi scegliere **Avanti**.  
+6.  In **Specificare l'applicazione di destinazione per la profilatura** selezionare PeopleTrax e quindi fare clic su **Avanti**.  
   
-     In [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] viene compilato il progetto e viene avviata la profilatura dell'applicazione.  Verrà visualizzata la finestra dell'applicazione **PeopleTrax**.  
+     [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] compila il progetto e avvia la profilatura dell'applicazione. Verrà visualizzata la finestra dell'applicazione **PeopleTrax**.  
   
 7.  Fare clic su **Get People**.  
   
-8.  Scegliere **Esporta Dati**.  
+8.  Fare clic su **ExportData**.  
   
-     Viene aperto Blocco note in cui è visualizzato un nuovo file contenente i dati esportati da **PeopleTrax**.  
+     Verrà aperto il Blocco note con un nuovo file che contiene i dati esportati da **PeopleTrax**.  
   
-9. Chiudere Blocco note e successivamente l'applicazione **PeopleTrax**.  
+9. Chiudere il Blocco note e quindi chiudere l'applicazione **PeopleTrax**.  
   
-     Il profiler genera un file dei dati di profilatura \(\*.vsp\), elenca il nome file nella sezione Rapporti della finestra Esplora prestazioni e carica automaticamente la visualizzazione **Riepilogo** del file di dati nella finestra principale di [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)].  
+     Il profiler genera un file di dati di profilatura (\*.vsp), elenca il nome del file nella sezione Report della finestra Esplora prestazioni e carica automaticamente la visualizzazione **Riepilogo** del file di dati nella finestra principale di [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)].  
   
-#### Per esaminare i risultati dell'analisi mediante campionamento  
+#### <a name="to-analyze-sampled-profiling-results"></a>Per analizzare i risultati della profilatura campionati  
   
-1.  Nella visualizzazione Riepilogo sono riportati una sequenza temporale dell'utilizzo della CPU nel corso dell'esecuzione della profilatura, l'elenco **Percorso critico** che rappresenta il ramo dell'albero delle chiamate dell'applicazione più attiva e un elenco di **Funzioni che svolgono più lavoro individuale** con le funzioni sottoposte a un campionamento più frequente durante l'esecuzione di codice nel corpo stesso della funzione.  
+1.  La visualizzazione Riepilogo mostra una sequenza temporale dell'utilizzo della CPU nel corso dell'esecuzione della profilatura, l'elenco **Percorso critico** che rappresenta il ramo più attivo dell'albero delle chiamate dell'applicazione e un elenco **Funzioni che svolgono più lavoro individuale** che mostra le funzioni che sono state campionate più di frequente durante l'esecuzione del codice nel corpo della funzione.  
   
-     Esaminare l'elenco **Percorso critico** e notare che il metodo PeopleNS.People.GetNames è la funzione PeopleTrax più vicina alla fine dell'elenco.  La posizione la rende un buon candidato per l'analisi.  Fare clic sul nome della funzione per visualizzare dettagli di GetNames nella visualizzazione **Dettagli funzione**.  
+     Esaminando l'elenco **Percorso critico**, è possibile osservare che il metodo PeopleNS.People.GetNames è la funzione PeopleTrax più vicina alla fine dell'elenco. La sua posizione la rende un buon candidato per l'analisi. Fare clic sul nome della funzione per visualizzare i dettagli di GetNames nella visualizzazione **Dettagli funzione**.  
   
-2.  Nella visualizzazione **Dettagli funzione** sono presenti due finestre.  La finestra di distribuzione dei costi fornisce una visualizzazione grafica delle operazioni eseguite dalla funzione e dalle funzioni chiamate, nonché il contributo delle funzioni che hanno chiamato la funzione sul numero di istanze campionate.  È possibile modificare la funzione con lo stato attivo della visualizzazione facendo clic sul nome di una funzione.  Ad esempio, è possibile fare clic su PeopleNS.People.GetPeople per impostare GetPeople come funzione selezionata.  
+2.  La visualizzazione **Dettagli funzione** contiene due finestre. La finestra di distribuzione dei costi fornisce una visualizzazione grafica del lavoro svolto dalla funzione, del lavoro svolto dalle funzioni che questa ha chiamato e del contributo delle funzioni che hanno chiamato la funzione per il numero di istanze campionate. È possibile modificare la funzione rappresentata della visualizzazione facendo clic sul nome di una funzione. È ad esempio possibile fare clic su PeopleNS.People.GetPeople per rendere GetPeople la funzione selezionata.  
   
-     Nella finestra **Visualizzazione codice funzione** viene mostrato il codice sorgente della funzione, se disponibile, e vengono evidenziate le righe con il costo più elevato della funzione selezionata.  Quando è selezionata GetNames, è possibile verificare che questa funzione legge una stringa dalle risorse dell'applicazione, quindi utilizza un oggetto <xref:System.IO.StringReader> per aggiungere ogni riga nella stringa a un oggetto <xref:System.Collections.ArrayList>.  Non esiste una modalità ovvia per ottimizzare questa funzione.  
+     La finestra **Visualizzazione codice funzione** mostra il codice sorgente per la funzione, se disponibile, ed evidenzia le righe più costose della funzione selezionata. Quando è selezionata GetNames, è possibile notare che questa funzione legge una stringa dalle risorse dell'applicazione e quindi usa un <xref:System.IO.StringReader> per aggiungere ogni riga nella stringa a un <xref:System.Collections.ArrayList>. Non esiste un modo ovvio per ottimizzare questa funzione.  
   
-3.  Poiché PeopleNS.People.GetPeople è il solo chiamante di GetNames, fare clic su GetPeople nella finestra di distribuzione dei costi per esaminare il codice.  Questo metodo restituisce un oggetto <xref:System.Collections.ArrayList> di oggetti PersonInformationNS.PersonInformation dai nomi di persone e società prodotti da GetNames.  GetNames viene tuttavia chiamato due volte ogni volta che viene creato un oggetto PersonInformation.  È possibile osservare che il metodo può essere facilmente ottimizzato creando gli elenchi una sola volta all'inizio del metodo e indicizzando tali elenchi durante il ciclo di creazione di PersonInformation.  
+3.  Poiché PeopleNS.People.GetPeople è il solo chiamante di GetNames, fare clic su GetPeople nella finestra di distribuzione dei costi per esaminarne il codice. Questo metodo restituisce un <xref:System.Collections.ArrayList> di oggetti PersonInformationNS.PersonInformation dai nomi di persone e di aziende prodotti da GetNames. Tuttavia, GetNames viene chiamata due volte ogni volta che viene creato un oggetto PersonInformation. È possibile vedere che il metodo può essere facilmente ottimizzato creando gli elenchi una sola volta all'inizio del metodo e indicizzando tali elenchi durante il ciclo di creazione di PersonInformation.  
   
-4.  Una versione alternativa di GetPeople viene fornita con il codice dell'applicazione di esempio ed è possibile chiamare la funzione ottimizzata aggiungendo un simbolo di compilazione condizionale alle proprietà di compilazione.  Nella finestra Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto People, quindi scegliere **Proprietà**.  Scegliere **Compila** dal menu della pagina delle proprietà, quindi digitare **OPTIMIZED\_GETPEOPLE** nella casella di testo Simboli di compilazione condizionale.  La versione ottimizzata di GetPeople sostituisce il metodo originale nella compilazione successiva.  
+4.  Una versione alternativa di GetPeople viene fornita con il codice dell'applicazione di esempio ed è possibile chiamare la funzione ottimizzata aggiungendo un simbolo di compilazione condizionale alle proprietà di compilazione. Nella finestra Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto People e scegliere **Proprietà**. Fare clic su **Genera** nel menu della pagina delle proprietà e quindi digitare **OPTIMIZED_GETPEOPLE** nella casella di testo per il simbolo di compilazione condizionale. La versione ottimizzata di GetPeople sostituisce il metodo originale nella compilazione successiva.  
   
-5.  Eseguire di nuovo la sessione di prestazioni.  Sulla barra degli strumenti di Esplora prestazioni fare clic su **Avvio con profilatura** .  Fare clic su **Get People**, quindi su **Esporta dati**.  Chiudere la finestra Blocco note che viene visualizzata, quindi chiudere l'applicazione PeopleTrax.  
+5.  Eseguire nuovamente la sessione di prestazioni. Nella barra degli strumenti di Esplora prestazioni fare clic su **Avvio con analisi**. Fare clic su **Get People** e quindi su **Esporta dati**. Chiudere la finestra del Blocco note visualizzata e quindi chiudere l'applicazione PeopleTrax.  
   
-     Viene generato un nuovo file dei dati di profilatura e nella finestra principale di [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] viene mostrata una visualizzazione **Riepilogo** per i nuovi dati.  
+     Verrà generato un nuovo file di dati di profilatura e sarà mostrata una visualizzazione **Riepilogo** per i nuovi dati nella finestra principale di [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)].  
   
-6.  Per confrontare le due esecuzioni della profilatura, selezionare i due file di dati in Esplora prestazioni, fare clic con il pulsante destro del mouse sui file, quindi scegliere **Confronta rapporti di prestazioni**.  Nella finestra principale di [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] viene visualizzata la finestra Rapporto di confronto.  Nella colonna **Delta** è visualizzata la modifica del valore di prestazioni delle funzioni dal precedente valore di **Alla linea di base** al successivo valore di **Confronto**.  È possibile selezionare i valori da confrontare dall'elenco a discesa **Colonna**.  Selezionare **% campioni inclusivi**.  
+6.  Per confrontare le due esecuzioni della profilatura, selezionare i due file di dati in Esplora prestazioni, fare clic con il pulsante destro del mouse sui file e quindi scegliere **Confronta rapporto di prestazioni**. Viene visualizzata una finestra Rapporto di confronto nella finestra principale di [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]. La colonna **Delta** mostra la modifica del valore delle prestazioni delle funzioni, dal valore precedente **Linea di base** al valore successivo **Confronto**. È possibile selezionare i valori da confrontare nell'elenco a discesa **Colonna**. Selezionare **% esempi inclusivi**.  
   
      Si noti che i metodi GetPeople e GetNames mostrano notevoli miglioramenti delle prestazioni.  
   
-## Profilatura mediante il metodo di strumentazione  
- La strumentazione è un metodo di profilatura in cui il profiler inserisce funzioni probe in versioni compilate in modo speciale dei binari profilati.  I probe raccolgono informazioni sugli intervalli all'ingresso e all'uscita di funzioni nei moduli instrumentati e in tutti i siti di chiamata in tali funzioni.  Il processo di strumentazione è utile per analizzare problemi relativi alle operazioni di input\/output, quali la scrittura su disco e la comunicazione in rete.  La strumentazione fornisce informazioni più dettagliate del campionamento, ma è più intrusiva nell'esecuzione del processo e implica un maggior sovraccarico.  I binari instrumentati sono inoltre di dimensioni maggiori rispetto a quelli di debug e di rilascio e non sono destinati alla distribuzione.  
+## <a name="profiling-by-using-the-instrumentation-method"></a>Profilatura tramite il metodo di strumentazione  
+ La strumentazione è un metodo di profilatura in cui il profiler inserisce funzioni probe in particolari versioni dei file binari profilati. I probe raccolgono informazioni sugli intervalli all'ingresso e all'uscita delle funzioni nei moduli instrumentati e in tutto il sito di chiamata in tali funzioni. Il processo di strumentazione è utile per l'analisi dei problemi relativi alle operazioni di input/output, come la scrittura su disco e le comunicazioni di rete. La strumentazione fornisce informazioni più dettagliate del campionamento, ma è più intrusiva nell'esecuzione del processo e comporta una maggiore quantità di overhead. I file binari instrumentati sono anche più grandi dei file binari di debug o di rilascio e non sono destinati alla distribuzione.  
   
- In questa sezione della procedura dettagliata si utilizzerà il metodo di strumentazione per individuare ulteriore codice ottimizzabile nell'applicazione PeopleTrax precedentemente profilata.  Tramite il filtro della cronologia della visualizzazione Riepilogo, si concentrerà l'analisi sullo scenario di esportazione dei dati nell'applicazione profilata, in cui l'elenco di persone viene scritto in un file del Blocco note.  
+ In questa sezione della procedura dettagliata verrà usato il metodo di strumentazione per individuare altro codice che è possibile ottimizzare nell'applicazione PeopleTrax di cui è stata precedentemente eseguita la profilatura. Usando il filtro della sequenza temporale della visualizzazione Riepilogo, verrà analizzato lo scenario di esportazione dei dati nell'applicazione profilata, in cui l'elenco di persone viene scritto in un file di Blocco note.  
   
-#### Per profilare un'applicazione esistente utilizzando il metodo di strumentazione  
+#### <a name="to-profile-an-existing-application-by-using-the-instrumentation-method"></a>Per eseguire la profilatura di un'applicazione esistente tramite il metodo di strumentazione  
   
 1.  Se necessario, aprire l'applicazione PeopleTrax in Visual Studio.  
   
-     Verificare che il programma venga eseguito come Amministratore e che la configurazione della compilazione per la soluzione viene impostata su **Release**.  
+     Assicurarsi di usare un account di amministratore e verificare che la configurazione della build per la soluzione sia impostata su **Rilascio**.  
   
 2.  In Esplora prestazioni fare clic su **Strumentazione**.  
   
-3.  Sulla barra degli strumenti di Esplora prestazioni fare clic su **Avvio con analisi** .  
+3.  Nella barra degli strumenti di Esplora prestazioni fare clic su **Avvio con analisi**.  
   
-     Il profiler compila il progetto e avvia la profilatura dell'applicazione.  Verrà visualizzata la finestra dell'applicazione PeopleTrax.  
+     Il profiler compila il progetto e avvia la profilatura dell'applicazione. Verrà visualizzata la finestra dell'applicazione PeopleTrax.  
   
 4.  Fare clic su **Get People**.  
   
-     La griglia di dati di PeopleTrax viene compilata.  
+     Verranno inseriti dati nella griglia dei dati di PeopleTrax.  
   
-5.  Attendere per circa 10 secondi, quindi fare clic su **Esporta dati**.  
+5.  Attendere circa 10 secondi e quindi fare clic su **Esporta dati**.  
   
-     Viene avviato **Blocco note** in cui viene visualizzato un nuovo file contenente un elenco di persone ottenuto dall'applicazione PeopleTrax.  L'attesa consente di identificare più facilmente la procedura di esportazione dei dati per il filtraggio.  
+     Verrà avviato il **Blocco note** e sarà visualizzato un nuovo file che contiene un elenco di persone di PeopleTrax. L'attesa consente di identificare più facilmente la procedura di esportazione dei dati per il filtro.  
   
-6.  Chiudere **Blocco note** e successivamente l'applicazione **PeopleTrax**.  
+6.  Chiudere il **Blocco note** e quindi chiudere l'applicazione **PeopleTrax**.  
   
-     In [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] viene generato un report delle sessioni di prestazioni \(\*.vsp\).  
+     [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] genera un report della sessione di prestazioni (con estensione vsp).  
   
-#### Per esaminare i risultati dell'analisi mediante strumentazione  
+#### <a name="to-analyze-instrumented-profiling-results"></a>Per analizzare i risultati della profilatura instrumentati  
   
-1.  Il grafico cronologia della visualizzazione **Riepilogo** del rapporto mostra l'utilizzo della CPU del programma per la durata dell'esecuzione della profilatura.  L'operazione di esportazione dei dati dovrebbe essere il punto massimo o costante sul lato destro del grafico.  È possibile filtrare la sessione di prestazioni per visualizzare e analizzare solo i dati raccolti nell'operazione di esportazione.  Fare clic a sinistra dell punto sul grafico dove inizia l'operazione sui dati dell'esportazione.  Fare di nuovo clic sul lato destro dell'operazione.  Fare quindi clic su **Filtra in base a selezione** nell'elenco di collegamenti a destra della cronologia.  
+1.  Il grafico della sequenza temporale della visualizzazione **Riepilogo** del report mostra l'utilizzo della CPU del programma per la durata dell'esecuzione della profilatura. L'operazione di esportazione dei dati dovrebbe essere il picco o il livello elevato sul lato destro del grafico. È possibile filtrare la sessione di prestazioni per visualizzare e analizzare solo i dati raccolti durante l'operazione di esportazione. Fare clic a sinistra del punto nel grafico in cui inizia l'operazione di esportazione dei dati. Fare nuovamente clic sul lato destro dell'operazione. Fare quindi clic su **Filtro in base a selezione** nell'elenco di collegamenti a destra della sequenza temporale.  
   
-     Nella struttura ad albero **Percorso critico** viene mostrato che il metodo <xref:System.String.Concat%2A> chiamato dal metodo PeopleTrax.Form1.ExportData utilizza un'ampia percentuale del tempo.  Poiché **System.String.Concat** si trova anche all'inizio dell'elenco **Funzioni con più lavoro individuale**, la riduzione del tempo trascorso nella funzione è un possibile punto di ottimizzazione.  
+     L'albero **Percorso critico** mostra che il metodo <xref:System.String.Concat%2A>, che viene chiamato dal metodo PeopleTrax.Form1.ExportData, usa una percentuale elevata di tempo. Poiché anche **System.String.Concat** è all'inizio dell'elenco **Funzioni con più lavoro individuale**, la riduzione del tempo impiegato nella funzione è un probabile punto di ottimizzazione.  
   
-2.  Fare doppio clic su **System.String.Concat** in una delle tabelle di riepilogo per ottenere ulteriori informazioni nella visualizzazione Dettagli funzione.  
+2.  Fare doppio clic su **System.String.Concat** in una delle tabelle di riepilogo per visualizzare altre informazioni nella visualizzazione Dettagli funzione.  
   
-3.  È possibile osservare che PeopleTrax.Form1.ExportData è il solo metodo che chiama Concat.  Fare clic su **PeopleTrax.Form1.ExportData** nell'elenco **Funzioni chiamanti** per selezionare il metodo come destinazione della visualizzazione Dettagli funzione.  
+3.  È possibile osservare che PeopleTrax.Form1.ExportData è l'unico metodo che chiama Concat. Fare clic su **PeopleTrax.Form1.ExportData** nell'elenco **Funzioni chiamanti** per selezionare il metodo come destinazione della visualizzazione Dettagli funzione.  
   
-4.  Esaminare il metodo nella finestra Visualizzazione codice funzione.  Notare che non sono presenti chiamate letterali a **System.String.Concat**.  Sono invece presenti diversi utilizzi dell'operando \+\=, che il compilatore sostituisce con chiamate a **System.String.Concat**.  Qualsiasi modifica apportata a una stringa in .NET Framework determina l'allocazione di una nuova stringa.  In .NET Framework è disponibile una classe <xref:System.Text.StringBuilder> ottimizzata per la concatenazione di stringhe.  
+4.  Esaminare il metodo nella finestra Visualizzazione codice funzione. Si noti che non sono presenti chiamate letterali a **System.String.Concat**. Sono invece presenti diversi usi dell'operando +=, che il compilatore sostituisce con chiamate a **System.String.Concat**. Qualsiasi modifica a una stringa in .NET Framework causa l'allocazione di una nuova stringa. .NET Framework include una classe <xref:System.Text.StringBuilder>, che è ottimizzata per la concatenazione delle stringhe.  
   
-5.  Per sostituire l'area problematica con il codice ottimizzato, aggiungere OPTIMIZED\_EXPORTDATA come simbolo di compilazione condizionata al progetto PeopleTrax.  
+5.  Per sostituire quest'area problematica con codice ottimizzato, aggiungere OPTIMIZED_EXPORTDATA come simbolo di compilazione condizionale al progetto PeopleTrax.  
   
 6.  In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto PeopleTrax e scegliere **Proprietà**.  
   
-     Verrà visualizzato il form delle proprietà del progetto PeopleTrax.  
+     Viene visualizzato il form delle proprietà del progetto PeopleTrax.  
   
-7.  Fare clic sulla scheda **Compila**.  
+7.  Fare clic sulla scheda **Generazione**.  
   
-8.  Nella casella di testo **Simboli di compilazione condizionale** digitare OPTIMIZED\_EXPORTDATA.  
+8.  Nella casella di testo **Simboli di compilazione condizionale** digitare **OPTIMIZED_EXPORTDATA**.  
   
 9. Chiudere il form delle proprietà del progetto e scegliere **Salva tutto** quando richiesto.  
   
- Alla successiva esecuzione dell'applicazione sarà possibile riscontrare notevoli miglioramenti nelle prestazioni.  Eseguire nuovamente la sessione di analisi, anche se le prestazioni presentano miglioramenti visibili all'utente.  La verifica dei dati dopo la risoluzione di un problema costituisce un passaggio importante, poiché il primo problema potrebbe nasconderne altri.  
+ Quando si esegue nuovamente l'applicazione, sarà possibile osservare notevoli miglioramenti delle prestazioni. È consigliabile ripetere la sessione di profilatura, anche se si registrano miglioramenti delle prestazioni visibili all'utente. Esaminare i dati dopo aver risolto un problema è importante perché il primo problema potrebbe nascondere altri problemi.  
   
-## Vedere anche  
- [Cenni preliminari](../profiling/overviews-performance-tools.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Panoramiche](../profiling/overviews-performance-tools.md)   
  [Introduzione](../profiling/getting-started-with-performance-tools.md)   
- [\/Z7, \/Zi, \/ZI \(Formato informazioni di debug\)](/visual-cpp/build/reference/z7-zi-zi-debug-information-format)
+ [/Z7, /Zi, /ZI (Formato informazioni di debug)](/cpp/build/reference/z7-zi-zi-debug-information-format)

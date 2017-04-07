@@ -1,5 +1,5 @@
 ---
-title: IDebugAddress2 | Documenti di Microsoft
+title: IDebugAddress2 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 005911465f7ba78a3a6dcdf8249a96443cd12355
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: e36f2863680dea79451e57d06bd749b52fbed933
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugaddress2"></a>IDebugAddress2
@@ -46,10 +46,10 @@ IDebugAddress2 : IDebugAddress
 ```  
   
 ## <a name="notes-for-implementers"></a>Note per gli implementatori  
- Un provider di simboli implementa questa interfaccia sullo stesso oggetto che implementa il [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interfaccia. Questa interfaccia fornisce l'accesso per l'ID del processo a cui appartiene l'oggetto correlato a questo indirizzo.  
+ Un provider di simboli implementa questa interfaccia sullo stesso oggetto che implementa il [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interfaccia. Questa interfaccia fornisce l'accesso all'ID del processo a cui appartiene l'oggetto che è correlato a questo indirizzo.  
   
-## <a name="notes-for-callers"></a>Note per chiamanti  
- Utilizzare [QueryInterface](/visual-cpp/atl/queryinterface) per questa interfaccia da ottenere il [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interfaccia.  
+## <a name="notes-for-callers"></a>Note per i chiamanti  
+ Utilizzare [QueryInterface](/cpp/atl/queryinterface) per questa interfaccia da ottenere il [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interfaccia.  
   
 ## <a name="methods-in-vtable-order"></a>Metodi nell'ordine vtable  
  Oltre ai metodi ereditati dal [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interfaccia, implementa il metodo seguente:  

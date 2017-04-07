@@ -1,7 +1,7 @@
 ---
 title: Gestione delle firme di assembly e manifesti | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 85474fe229980aac7c57205f111656d4264045d1
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 68358885d93e9e6b7f231750c35065be9521c3fe
+ms.openlocfilehash: b1ce5a5c4dc05cb9d0a2ebcb68a10a5054b68893
+ms.lasthandoff: 03/01/2017
 
 ---
 # <a name="managing-assembly-and-manifest-signing"></a>Gestione delle firme di assembly e manifesti
@@ -46,6 +46,9 @@ La firma con nome sicuro offre un'identità univoca globale per un componente so
  Per informazioni sulla firma degli assembly nei progetti Visual Basic e C#, vedere [Creazione e utilizzo degli assembly con nome sicuro](http://msdn.microsoft.com/Library/ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9).  
   
  Per informazioni sulla firma degli assembly nei progetti Visual C++, vedere [Assembly con nome sicuro (firma degli assembly) (C++/CLI)](/visual-cpp/dotnet/strong-name-assemblies-assembly-signing-cpp-cli).  
+
+> [!NOTE]
+>  La firma con nome sicuro non offre protezione da attacchi di reverse engineering dell'assembly.  Per proteggere da attacchi di reverse engineering, vedere [Dotfuscator Community Edition (CE)](dotfuscator/index.md).
   
 ## <a name="asset-types-and-signing"></a>Tipi di asset e firma  
  È possibile firmare gli assembly .NET e i manifesti dell'applicazione, tra cui:  
