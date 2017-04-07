@@ -1,62 +1,78 @@
 ---
-title: "IDebugCanStopEvent2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCanStopEvent2"
-helpviewer_keywords: 
-  - "Interfaccia IDebugBreakpointRequest2"
+title: IDebugCanStopEvent2 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCanStopEvent2
+helpviewer_keywords:
+- IDebugBreakpointRequest2 interface
 ms.assetid: 784bd5b1-4a3f-4455-b313-c4c9a82555a5
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugCanStopEvent2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 00cfe8409762119c15cbe188b1a20b7a6466ea4a
+ms.lasthandoff: 04/05/2017
 
-Questa interfaccia viene utilizzata per richiedere all'amministratore di debug della sessione \(SDM\) se l'arresto della posizione corrente di codice.  
+---
+# <a name="idebugcanstopevent2"></a>IDebugCanStopEvent2
+Questa interfaccia viene utilizzata per chiedere di gestore di sessione di debug (SDM) se si desidera arrestare in corrispondenza della posizione di codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 IDebugCanStopEvent2 : IUknown  
 ```  
   
-## Note per gli implementatori  
- Il motore \(DE\) di debug implementa questa interfaccia per supportare l'esecuzione un'istruzione al codice sorgente.  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) L'interfaccia deve essere implementata nello stesso oggetto di questa interfaccia \(utilizzi [QueryInterface](/visual-cpp/atl/queryinterface) di SDM accedere all'interfaccia di `IDebugEvent2` \).  
+## <a name="notes-for-implementers"></a>Note per gli implementatori  
+ Il motore di debug (DE) implementa questa interfaccia per supportare l'esecuzione passo passo il codice sorgente. Il [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interfaccia deve essere implementata sullo stesso oggetto di questa interfaccia (utilizza il SDM [QueryInterface](/cpp/atl/queryinterface) per l'accesso di `IDebugEvent2` interfaccia).  
   
- L'implementazione di questa interfaccia deve comunicare la chiamata di SDM [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) al motore di debug.  Ad esempio, può essere eseguita con un messaggio inviato al thread di gestione dei messaggi del motore di debug o l'oggetto che implementa questa interfaccia possibile utilizzare un riferimento al motore di debug e la richiamata nel motore di debug con il flag è viene trasformata `IDebugCanStopEvent2::CanStop`.  
+ L'implementazione di questa interfaccia deve comunicare la chiamata del SDM di [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) al motore di debug. Ad esempio, questa operazione può essere eseguita con un messaggio inviato al messaggio del motore di debug thread di gestione o l'oggetto che implementa questa interfaccia può contenere un riferimento al motore di debug e richiamare il motore di debug con il flag passato `IDebugCanStopEvent2::CanStop`.  
   
-## Note per i chiamanti  
- Il DE possibile inviare questo metodo ogni volta il DE viene richiesto per continuare l'esecuzione e di DE esegue il codice un'istruzione alla volta.  Questo evento viene inviato mediante [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) la funzione di callback fornite da SDM quando è collegato al programma sottoposto a debug.  
+## <a name="notes-for-callers"></a>Note per i chiamanti  
+ La Germania può inviare questo metodo ogni volta che la Germania viene chiesto di continuare l'esecuzione e il DE è avanzamento tramite codice. Questo evento viene inviato tramite il [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) funzione di callback fornita dal suo SDM quando è collegato al programma sottoposto a debug.  
   
-## Metodi nell'ordine di Vtable  
- Nella tabella seguente sono elencati i metodi di `IDebugCanStopEvent2`.  
+## <a name="methods-in-vtable-order"></a>Metodi nell'ordine Vtable  
+ Nella tabella seguente sono illustrati i metodi di `IDebugCanStopEvent2`.  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[GetReason](../Topic/IDebugCanStopEvent2::GetReason.md)|ottiene il motivo per questo evento.|  
-|[CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md)|Specifica se il programma di cui viene eseguito il debug deve essere interrotta nella posizione di questo evento \(e inviare un evento che descrive il motivo per arrestare\) o continuare immediatamente l'esecuzione.|  
-|[GetDocumentContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md)|Ottiene il contesto del documento che specifica la posizione di questo evento.|  
-|[GetCodeContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getcodecontext.md)|Ottiene il contesto di codice che specifica la posizione di questo evento.|  
+|[GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md)|Ottiene il motivo per questo evento.|  
+|[CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md)|Specifica se il programma in corso il debug deve essere arrestato in corrispondenza di questo evento (e invia un evento che descrive il motivo dell'arresto) o semplicemente continuare l'esecuzione.|  
+|[GetDocumentContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md)|Ottiene il contesto del documento che descrive il percorso di questo evento.|  
+|[GetCodeContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getcodecontext.md)|Ottiene il contesto del codice che descrive il percorso di questo evento.|  
   
-## Note  
- Il DE invia questa interfaccia se l'utente effettua una funzione e il DE non trova informazioni di debug presenti o le informazioni di debug sono presenti ma il DE non sa se il codice sorgente è possibile visualizzare per quel percorso.  
+## <a name="remarks"></a>Note  
+ Se i passi di utente in una funzione e il DE rileva che non esiste alcuna informazione di debug o le informazioni di debug presenti, ma la Germania non sa se il codice sorgente può essere visualizzato per tale percorso, la Germania invia questa interfaccia.  
   
-## Requisiti  
- intestazione: msdbg.h  
+## <a name="requirements"></a>Requisiti  
+ Intestazione: msdbg.h  
   
- Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDebugStepCompleteEvent2](../../../extensibility/debugger/reference/idebugstepcompleteevent2.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)

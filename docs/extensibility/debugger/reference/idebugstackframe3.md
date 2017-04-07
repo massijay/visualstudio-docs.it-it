@@ -1,68 +1,84 @@
 ---
-title: "IDebugStackFrame3 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugStackFrame3"
-helpviewer_keywords: 
-  - "Interfaccia IDebugStackFrame3"
+title: IDebugStackFrame3 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugStackFrame3
+helpviewer_keywords:
+- IDebugStackFrame3 interface
 ms.assetid: 39af2f57-0a01-42b8-b093-b7fbc61e2909
 caps.latest.revision: 15
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# IDebugStackFrame3
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 71ffa007c894090b9c0af2ad16429f381eb2db8b
+ms.lasthandoff: 04/05/2017
 
-Questa interfaccia estende [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) per gestire le eccezioni rilevate.  
+---
+# <a name="idebugstackframe3"></a>IDebugStackFrame3
+Questa interfaccia estende [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) per gestire le eccezioni intercettate.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 IDebugStackFrame3 : IDebugStackFrame2  
 ```  
   
-## Note per gli implementatori  
- Il motore \(DE\) di debug implementa questa interfaccia lo stesso oggetto che implementa [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) l'interfaccia per supportare le eccezioni rilevate.  
+## <a name="notes-for-implementers"></a>Note per gli implementatori  
+ Il motore di debug (DE) implementa questa interfaccia sullo stesso oggetto che implementa il [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) interfaccia per supportare le eccezioni intercettate.  
   
-## Note per i chiamanti  
- chiamata [QueryInterface](/visual-cpp/atl/queryinterface) su un'interfaccia di `IDebugStackFrame2` per ottenere questa interfaccia.  
+## <a name="notes-for-callers"></a>Note per i chiamanti  
+ Chiamare [QueryInterface](/cpp/atl/queryinterface) su un `IDebugStackFrame2` interfaccia per ottenere questa interfaccia.  
   
-## Metodi nell'ordine di Vtable  
+## <a name="methods-in-vtable-order"></a>Metodi nell'ordine Vtable  
  Oltre ai metodi ereditati da [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md), `IDebugStackFrame3` espone i metodi seguenti.  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)|Gestisce un'eccezione per lo stack frame corrente prima di qualsiasi gestione delle eccezioni normale.|  
-|[GetUnwindCodeContext](../../../extensibility/debugger/reference/idebugstackframe3-getunwindcodecontext.md)|Restituisce un contesto di codice se uno stack viene rimosso è stato di verifica.|  
+|[InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)|Gestisce un'eccezione per lo stack frame corrente prima di eventuali eccezioni regolare.|  
+|[GetUnwindCodeContext](../../../extensibility/debugger/reference/idebugstackframe3-getunwindcodecontext.md)|Restituisce un contesto di codice se si verificasse uno svuotamento dello stack.|  
   
-## Note  
- Un'eccezione intercettata significa che un debugger può elaborare un'eccezione prima che tutte le routine standard di gestione delle eccezioni sono chiamate dal runtime.  I mezzi di intercettazione di un'eccezione essenzialmente che hanno il runtime fingono che vi sia presente un gestore di eccezioni anche quando non c " è.  
+## <a name="remarks"></a>Note  
+ Un'eccezione intercettata significa che un debugger può elaborare un'eccezione prima di qualsiasi routine di gestione delle eccezioni normale vengono chiamati dal runtime. Intercettazione di un'eccezione in pratica significa la fase di esecuzione si supponga che sia presente anche quando non vi è un gestore di eccezioni.  
   
- [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) viene chiamato durante tutti gli eventi di callback di eccezione normale \(l'unica eccezione è se il codice misto di debug \(gestito e codice non gestito, nel qual caso l'eccezione non è possibile intercettare durante il callback dell'ultima vendita potrebbe\).  se il DE non implementa `IDebugStackFrame3`, o il DE restituisce un errore da IDebugStackFrame3::`InterceptCurrentException` \(come `E_NOTIMPL`\), il debugger gestisce l'eccezione generale.  
+ [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) viene chiamato durante tutti gli eventi di callback normale eccezione (l'unica eccezione è se si esegue il debug in modalità mista di codice gestito e codice non gestito, nel qual caso non è possibile intercettare l'eccezione durante il callback ultima possibilità). Se non implementa la Germania `IDebugStackFrame3`, o la Germania restituisce un errore da IDebugStackFrame3::`InterceptCurrentException` (ad esempio `E_NOTIMPL`), quindi il debugger gestirà in genere l'eccezione.  
   
- Intercettando un'eccezione, il debugger può consentire all'utente vengano apportate modifiche allo stato del programma sottoposto a debug e quindi riattivi l'esecuzione nel punto in cui l'eccezione è stata generata.  
+ Mediante l'intercettazione di un'eccezione, il debugger può consentire all'utente di apportare modifiche allo stato del programma sottoposto a debug e quindi riprendere l'esecuzione nel punto in cui è stata generata l'eccezione.  
   
 > [!NOTE]
->  Le eccezioni individuate sono consentite solo nel codice gestito, ovvero, in un programma in esecuzione nel Common Language \(CLR\) Runtime.  
+>  Eccezioni intercettate sono consentite solo nel codice gestito, vale a dire, in un programma che è in esecuzione in Common Language Runtime (CLR).  
   
- Il modulo di debug indica che supporta le eccezioni di intercettazione impostando “i metricExceptions„ a un valore 1 in fase di esecuzione utilizzando la funzione di `SetMetric` .  Per ulteriori informazioni, vedere [Helper SDK per il debug](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md).  
+ Un motore di debug indica che supporta le eccezioni di intercettazione impostando "metricExceptions" su un valore pari a 1 in fase di esecuzione utilizzando il `SetMetric` (funzione). Per ulteriori informazioni, vedere [SDK helper per il debug](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md).  
   
-## Requisiti  
- intestazione: msdbg.h  
+## <a name="requirements"></a>Requisiti  
+ Intestazione: msdbg.h  
   
- Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Interfacce di base](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
  [Helper SDK per il debug](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)

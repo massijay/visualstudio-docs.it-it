@@ -1,66 +1,82 @@
 ---
-title: "IDebugProcessEx2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcessEx2"
-helpviewer_keywords: 
-  - "Interfaccia IDebugProcessEx2"
+title: IDebugProcessEx2 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProcessEx2
+helpviewer_keywords:
+- IDebugProcessEx2 interface
 ms.assetid: 44e309ba-1d6f-499b-aa7e-9b34858a6d57
 caps.latest.revision: 21
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# IDebugProcessEx2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 56483c55810f75042184439be9f0d7bcfb2d6836
+ms.lasthandoff: 04/05/2017
 
-Questa interfacciaamministratore \(SDM\) di debug della sessione notificare a un processo in fase di connessione o viene svuotato dal processo.  
+---
+# <a name="idebugprocessex2"></a>IDebugProcessEx2
+Questa interfaccia consente la sessione di debug manager (SDM) un processo di collegamento a o la disconnessione dal processo di notifica.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 IDebugProcessEx2 : IUnknown  
 ```  
   
-## Note per gli implementatori  
- Un fornitore di porte personalizzato implementa questa interfaccia lo stesso oggetto [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) dell'interfaccia per:  
+## <a name="notes-for-implementers"></a>Note per gli implementatori  
+ Un fornitore di porta personalizzato implementa questa interfaccia per l'oggetto stesso come il [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) interfaccia al fine di:  
   
--   Supportare la verifica delle sessioni connesse a un processo  
+-   Supportano la gestione di sessioni connesse a un processo  
   
--   Auto\-attaccatura di supporto tramite i motori di debug più  
+-   Supporto della connessione automatica tra più motori di debug  
   
- Il fornitore di porte personalizzato può implementare questa interfaccia se scegliere.  
+ Se sceglie, il fornitore della porta personalizzato può implementare questa interfaccia.  
   
-## Note per i chiamanti  
+## <a name="notes-for-callers"></a>Note per i chiamanti  
   
--   Le chiamate di SDM [QueryInterface](/visual-cpp/atl/queryinterface) su `IDebugProcess2` interfaccia per ottenere questa interfaccia.  
+-   Le chiamate SDM [QueryInterface](/cpp/atl/queryinterface) su un `IDebugProcess2` interfaccia per ottenere questa interfaccia.  
   
-## Metodi nell'ordine di Vtable  
- Nella tabella seguente sono elencati i metodi di `IDebugProcessEx2`.  
+## <a name="methods-in-vtable-order"></a>Metodi nell'ordine Vtable  
+ Nella tabella seguente sono illustrati i metodi di `IDebugProcessEx2`.  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Attach](../../../extensibility/debugger/reference/idebugprocessex2-attach.md)|Notifica al processo di una sessione ora esegue il debug del processo.|  
-|[Detach](../../../extensibility/debugger/reference/idebugprocessex2-detach.md)|Notifica al processo di una sessione si esegue il debug del processo.|  
+|[Attach](../../../extensibility/debugger/reference/idebugprocessex2-attach.md)|Informa il processo di una sessione è ora il debug del processo.|  
+|[Detach](../../../extensibility/debugger/reference/idebugprocessex2-detach.md)|Informa il processo che una sessione non è più il debug del processo.|  
 |[AddImplicitProgramNodes](../../../extensibility/debugger/reference/idebugprocessex2-addimplicitprogramnodes.md)|Aggiunge i nodi di programma per un elenco dei motori di debug.|  
   
-## Note  
- Questa interfaccia è privata tra lo SDM e il processo.  
+## <a name="remarks"></a>Note  
+ Questa interfaccia è privata tra il SDM e il processo.  
   
-## Requisiti  
- intestazione: Portpriv.h  
+## <a name="requirements"></a>Requisiti  
+ Intestazione: Portpriv.h  
   
- Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Interfacce di base](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

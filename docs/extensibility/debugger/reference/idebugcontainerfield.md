@@ -1,5 +1,5 @@
 ---
-title: IDebugContainerField | Documenti di Microsoft
+title: IDebugContainerField | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7cf087725f8cfcb8ba53da739706ededcddb61c4
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: a91b491aeb234a20dc601950c5ff8a436b1be90a
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugcontainerfield"></a>IDebugContainerField
@@ -48,8 +48,8 @@ IDebugContainerField : IDebugField
 ## <a name="notes-for-implementers"></a>Note per gli implementatori  
  Un provider di simboli implementa questa interfaccia sullo stesso oggetto che implementa il [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interfaccia. Questa interfaccia è anche la classe base per tutte le interfacce che rappresentano i contenitori.  
   
-## <a name="notes-for-callers"></a>Note per chiamanti  
- Molti metodi su interfacce restituiscono questa interfaccia. Poiché si tratta di una classe di base per tutti i contenitori, interfacce più specifiche possono ottenere da questa interfaccia tramite [QueryInterface](/visual-cpp/atl/queryinterface). Tali interfacce includono [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md), [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md), [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md), e [IDebugPropertyField](../../../extensibility/debugger/reference/idebugpropertyfield.md).  
+## <a name="notes-for-callers"></a>Note per i chiamanti  
+ Molti metodi su interfacce restituiscono questa interfaccia. Poiché si tratta di una classe di base per tutti i contenitori, le interfacce più specializzate può ottenuto da questa interfaccia utilizzando [QueryInterface](/cpp/atl/queryinterface). Tali interfacce includono [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md), [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md), [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md), e [IDebugPropertyField](../../../extensibility/debugger/reference/idebugpropertyfield.md).  
   
 ## <a name="methods-in-vtable-order"></a>Metodi nell'ordine Vtable  
  Oltre ai metodi nel [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interfaccia, implementa il metodo seguente:  

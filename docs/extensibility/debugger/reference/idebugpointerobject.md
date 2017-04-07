@@ -1,5 +1,5 @@
 ---
-title: IDebugPointerObject | Documenti di Microsoft
+title: IDebugPointerObject | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,14 +31,14 @@ translation.priority.mt:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ad0660d583e1bc23c19b0fbd1836eb952d778665
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 0fbc9ae8e067a3442135e436712c1dc47360e339
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="idebugpointerobject"></a>IDebugPointerObject
 > [!IMPORTANT]
->  In Visual Studio 2015, questa modalità di implementazione di analizzatori di espressioni è deprecata. Per informazioni sull'implementazione analizzatori di espressioni CLR, vedere [gli analizzatori di espressioni CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) e [gestito esempio analizzatore di espressioni](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  In Visual Studio 2015, questa modalità di implementazione analizzatori di espressioni è deprecata. Per informazioni sull'implementazione analizzatori di espressioni CLR, vedere [analizzatori di espressioni CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) e [gestiti esempio analizzatore di espressioni](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
  Questa interfaccia rappresenta un oggetto del puntatore.  
   
@@ -51,15 +51,15 @@ IDebugPointerObject : IDebugObject
 ## <a name="notes-for-implementers"></a>Note per gli implementatori  
  L'analizzatore di espressioni implementa questa interfaccia per rappresentare un oggetto del puntatore.  
   
-## <a name="notes-for-callers"></a>Note per chiamanti  
- Il [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) interfaccia è possibile ottenere questa interfaccia tramite [QueryInterface](/visual-cpp/atl/queryinterface) se il `IDebugObject` rappresenta un puntatore.  
+## <a name="notes-for-callers"></a>Note per i chiamanti  
+ Il [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) interfaccia può ottenere questa interfaccia con [QueryInterface](/cpp/atl/queryinterface) se il `IDebugObject` rappresenta un puntatore.  
   
 ## <a name="methods-in-vtable-order"></a>Metodi nell'ordine Vtable  
  Oltre ai metodi ereditati da [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md), `IDebugPointerObject` interfaccia espone i metodi seguenti.  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Dereference](../../../extensibility/debugger/reference/idebugpointerobject-dereference.md)|Ottiene l'oggetto a cui punta l'interfaccia.|  
+|[Risolvere il riferimento](../../../extensibility/debugger/reference/idebugpointerobject-dereference.md)|Ottiene l'oggetto a cui punta l'interfaccia.|  
 |[GetBytes](../../../extensibility/debugger/reference/idebugpointerobject-getbytes.md)|Ottiene il valore a cui fa riferimento l'interfaccia come una serie di byte consecutivi.|  
 |[SetBytes](../../../extensibility/debugger/reference/idebugpointerobject-setbytes.md)|Imposta il valore a cui fa riferimento l'interfaccia da una serie di byte consecutivi.|  
   
