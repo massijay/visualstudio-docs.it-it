@@ -36,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 118223d1a5c07188b8f8d8c7b6990792dcd94ff5
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 989bc338e0cb8c49a2342d998e1e09e8f6b0eb9f
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="output-window"></a>Finestra di output
@@ -76,7 +76,7 @@ Nella finestra **Output** è possibile che vengano visualizzati messaggi di stat
   
  È anche possibile programmare applicazioni personalizzate per scrivere messaggi di diagnostica in fase di esecuzione in un riquadro **Output**. A tale scopo, usare i membri della classe <xref:System.Diagnostics.Debug> o <xref:System.Diagnostics.Trace> nello spazio dei nomi <xref:System.Diagnostics> della libreria di classi .NET Framework. I membri della classe <xref:System.Diagnostics.Debug> visualizzano l'output quando si compilano configurazioni di debug della soluzione o del progetto; i membri della classe <xref:System.Diagnostics.Trace> visualizzano l'output quando si compilano configurazioni di debug o di rilascio. Per altre informazioni, vedere [Messaggi diagnostici nella finestra di output](../../debugger/diagnostic-messages-in-the-output-window.md).  
   
- In [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]  è possibile creare istruzioni ed eventi di compilazione personalizzati i cui avvisi ed errori vengono visualizzati e conteggiati nel riquadro **Output**. Premendo F1 su una riga di output, è possibile visualizzare un argomento della Guida appropriato. Per altre informazioni, vedere [Formattazione dell'output di un'istruzione di compilazione personalizzata o un evento di compilazione](/visual-cpp/ide/formatting-the-output-of-a-custom-build-step-or-build-event).  
+ In [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]  è possibile creare istruzioni ed eventi di compilazione personalizzati i cui avvisi ed errori vengono visualizzati e conteggiati nel riquadro **Output**. Premendo F1 su una riga di output, è possibile visualizzare un argomento della Guida appropriato. Per altre informazioni, vedere [Formattazione dell'output di un'istruzione di compilazione personalizzata o un evento di compilazione](/cpp/ide/formatting-the-output-of-a-custom-build-step-or-build-event).  
   
 ## <a name="scrolling-behavior"></a>Comportamento dello scorrimento  
  Se si usa lo scorrimento automatico nella finestra Output e quindi si naviga usando il mouse o i tasti di direzione, lo scorrimento automatico viene interrotto. Per riprendere lo scorrimento automatico, premere CTRL+FINE.  

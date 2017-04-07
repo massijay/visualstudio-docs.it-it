@@ -43,9 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 96fad179fb30f3b5e8fe6ddfd041c8e289dde48a
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: ce6f346f77217e61d93879118610934422cdc642
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="building-and-cleaning-projects-and-solutions-in-visual-studio"></a>Compilazione e pulizia di progetti e soluzioni in Visual Studio
@@ -131,6 +131,6 @@ Tramite le procedure descritte in questo argomento è possibile compilare, ricom
  [Compiling and Building](../ide/compiling-and-building-in-visual-studio.md)  (Compilazione e creazione)  
  [Understanding Build Configurations](../ide/understanding-build-configurations.md)  (Informazioni sulle configurazioni delle compilazioni)  
  [Eseguire il debug e il rilascio delle configurazione del progetto](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)   
- [C/C++ Building Reference](/visual-cpp/build/reference/c-cpp-building-reference)  (Informazioni di riferimento per la compilazione in C/C++)  
+ [C/C++ Building Reference](/cpp/build/reference/c-cpp-building-reference)  (Informazioni di riferimento per la compilazione in C/C++)  
  [Devenv Command Line Switches](../ide/reference/devenv-command-line-switches.md)  (Opzioni della riga di comando di Devenv)  
  [Solutions and Projects](../ide/solutions-and-projects-in-visual-studio.md) (Soluzioni e progetti)

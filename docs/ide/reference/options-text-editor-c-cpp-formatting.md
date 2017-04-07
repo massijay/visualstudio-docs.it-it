@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: f70339a150a53d346ab9a6f59b4b1634263f5b9e
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 80ce7de7e89844d8c9cb1052499b2d873e04965e
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="options-text-editor-cc-formatting"></a>Opzioni, Editor di testo, C/C++, Formattazione
@@ -81,16 +81,16 @@ Consente di modificare il comportamento predefinito dell'editor di codice in fas
  Aprendo un file nell'editor di testo, è possibile abilitare la funzionalità di struttura. Per altre informazioni, vedere [Struttura](../../ide/outlining.md). Se questa opzione è selezionata, la funzionalità di struttura verrà abilitata all'apertura di un file.  
   
  **Struttura blocchi pragma region**  
- Se questa opzione è selezionata, la struttura automatica per le [direttive pragma](/visual-cpp/preprocessor/pragma-directives-and-the-pragma-keyword) è abilitata. In questo modo è possibile espandere o comprimere blocchi pragma region in modalità struttura.  
+ Se questa opzione è selezionata, la struttura automatica per le [direttive pragma](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword) è abilitata. In questo modo è possibile espandere o comprimere blocchi pragma region in modalità struttura.  
   
  **Struttura blocchi di istruzioni**  
  Se questa opzione è selezionata, la struttura automatica è abilitata per i costrutti delle istruzioni seguenti:  
   
 -   [if-else](/dotnet/csharp/language-reference/keywords/if-else)  
   
--   [Istruzione switch (C++)](/visual-cpp/cpp/switch-statement-cpp)  
+-   [Istruzione switch (C++)](/cpp/cpp/switch-statement-cpp)  
   
--   [Istruzione while (C++)](/visual-cpp/cpp/while-statement-cpp)  
+-   [Istruzione while (C++)](/cpp/cpp/while-statement-cpp)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Generale, Ambiente, finestra di dialogo Opzioni](../../ide/reference/general-environment-options-dialog-box.md)   

@@ -28,9 +28,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e843adb473be51e185fd3b5dc514b44f16106157
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 332ef0d4534d8f607a1b5d92038855ebd247657f
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="managing-project-and-solution-properties"></a>Gestione delle proprietà di progetti e soluzioni
@@ -60,7 +60,7 @@ Le proprietà dei progetti governano molti aspetti della compilazione, del debug
   
  ![Proprietà di progetto Visual C&#43;&#43;](../ide/media/vs2015_projprops_cpp.png "VS2015_ProjProps_cpp")  
   
- Per informazioni sulle proprietà di progetto C++, vedere [Utilizzo di proprietà di progetto](/visual-cpp/ide/working-with-project-properties). Per altre informazioni sulle proprietà JavaScript, vedere [Pagine proprietà, JavaScript](../ide/reference/property-pages-javascript.md).  
+ Per informazioni sulle proprietà di progetto C++, vedere [Utilizzo di proprietà di progetto](/cpp/ide/working-with-project-properties). Per altre informazioni sulle proprietà JavaScript, vedere [Pagine proprietà, JavaScript](../ide/reference/property-pages-javascript.md).  
   
 ## <a name="solution-properties"></a>Proprietà soluzione  
  Per accedere alle proprietà della soluzione, fare clic con il pulsante destro del mouse sul nodo della soluzione in **Esplora soluzioni** e scegliere **Proprietà**. Nella finestra di dialogo è possibile impostare le configurazioni di progetto per le compilazioni di debug o di rilascio, scegliere i progetti che devono essere il progetto di avvio quando si preme F5 e impostare le opzioni di analisi codice.  
