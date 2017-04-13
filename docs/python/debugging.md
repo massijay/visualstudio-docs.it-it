@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: b5d72a83092c2b97b30b7a8af539a0b1aca50418
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
+ms.openlocfilehash: 1d26ca1a464e2ec15c0d5d338a46b6fb1e7e1d65
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -105,7 +105,7 @@ Quando l'esecuzione del codice viene arrestata in corrispondenza di un punto di 
 
 ### <a name="inspecting-and-modifying-values"></a>Controllo e modifica di valori
 
-Quando il debugger non è in esecuzione, è possibile controllare e modificare i valori delle variabili. È anche possibile usare la finestra Espressioni di controllo per monitorare singole variabili oltre a espressioni personalizzate. Per informazioni di carattere generale, vedere [Inspect Variables](../debugger/getting-started-with-the-debugger.md#BKMK_Inspect_Variables) (Controllare le variabili).
+Quando il debugger non è in esecuzione, è possibile controllare e modificare i valori delle variabili. È anche possibile usare la finestra Espressioni di controllo per monitorare singole variabili oltre a espressioni personalizzate. Per informazioni di carattere generale, vedere [Inspect Variables](../debugger/getting-started-with-the-debugger.md#inspect-variables-with-the-autos-and-locals-windows) (Controllare le variabili).
 
 Per visualizzare un valore usando i suggerimenti dati, è sufficiente passare il puntatore del mouse su una qualsiasi variabile nell'editor. È possibile fare clic sul valore per modificarlo:
 
