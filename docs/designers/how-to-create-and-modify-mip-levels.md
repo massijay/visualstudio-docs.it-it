@@ -29,9 +29,9 @@ Questo documento illustra come usare **Editor di immagini** per generare e modif
   
 1.  Iniziare con una trama di base, come descritto in [Procedura: Creare una trama di base](../designers/how-to-create-a-basic-texture.md). Per risultati ottimali, specificare una trama con larghezza e altezza equivalenti a una potenza di due nella dimensione, ad esempio 256, 512, 1024 e così via.  
   
-2.  Generare i livelli MIP. Sulla barra degli strumenti della **modalità dell'editor di immagini scegliere** **Avanzate**, **Strumenti**, **Genera MIP**.  
+2.  Generare i livelli MIP. Sulla barra degli strumenti della **modalità dell'editor di immagini scegliere** **Avanzate** , **Strumenti** , **Genera MIP** .  
   
-     I pulsanti per **la visualizzazione del livello MIP precedente** o **successivo** sono ora visualizzati sulla barra degli strumenti della **modalità dell'editor di immagini**. Se è visualizzata la finestra **Proprietà**, si può anche notare che nelle proprietà dell'immagine sono ora incluse le proprietà di sola lettura **Livello MIP** e **Conteggio livelli MIP**.  
+     I pulsanti per **la visualizzazione del livello MIP precedente** o **successivo** sono ora visualizzati sulla barra degli strumenti della **modalità dell'editor di immagini** . Se è visualizzata la finestra **Proprietà**, si può anche notare che nelle proprietà dell'immagine sono ora incluse le proprietà di sola lettura **Livello MIP** e **Conteggio livelli MIP**.  
   
 ## <a name="modifying-mip-levels"></a>Modifica dei livelli MIP  
  Per ottenere effetti speciali o aumentare la qualità dell'immagine in specifici livelli di dettaglio, è possibile modificare singolarmente ogni livello MIP. È ad esempio possibile assegnare a un oggetto con trama un aspetto diverso a una certa distanza (una distanza maggiore corrisponde a livelli MIP più piccoli) oppure è possibile assicurarsi che le trame contenenti testo o simboli rimangano leggibili anche a livelli MIP più piccoli.  
