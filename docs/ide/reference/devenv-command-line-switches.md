@@ -1,31 +1,50 @@
 ---
-title: "Opzioni della riga di comando devenv | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "applicazioni [Visual Studio], esecuzione"
-  - "compilazioni [Team System], riga di comando"
-  - "riga di comando [Visual Studio], opzioni"
-  - "opzioni della riga di comando, devenv"
-  - "compilatori, comandi devenv"
-  - "compilazione di codice sorgente, devenv"
-  - "devenv"
-  - "devenv, sintassi ed elenco di opzioni"
-  - "ambiente, comandi devenv"
-  - "opzioni"
-  - "opzioni, devenv"
+title: Opzioni della riga di comando devenv | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- switches, Devenv
+- builds [Team System], command-line
+- applications [Visual Studio], executing
+- compiling source code, Devenv
+- command-line switches, Devenv
+- command line [Visual Studio], switches
+- Devenv
+- environment, Devenv commands
+- compilers, Devenv commands
+- switches
+- Devenv, syntax and list of switches
 ms.assetid: e12bc6ed-74fd-4bea-8d7c-89b99c20bad8
 caps.latest.revision: 33
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 29
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 5666566315e94f109c5ca214dcf5b2a539911203
+ms.lasthandoff: 04/05/2017
+
 ---
 # <a name="devenv-command-line-switches"></a>Opzioni della riga di comando devenv
 La riga di comando devenv consente di impostare varie opzioni per l'ambiente di sviluppo integrato (IDE, Integrated Development Environment) e di compilare, eseguire il debug e distribuire i progetti dalla riga di comando. Usare queste opzioni per eseguire l'IDE da uno script o un file con estensione bat, ad esempio uno script di compilazione notturna, o per avviare l'IDE in una configurazione particolare.  
@@ -73,7 +92,7 @@ La riga di comando devenv consente di impostare varie opzioni per l'ambiente di 
 |[/Log (devenv.exe)](../../ide/reference/log-devenv-exe.md)|Avvia [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] e registra tutte le attività nel file di registro.|  
 |[/Run (devenv.exe)](../../ide/reference/run-devenv-exe.md) o `/r`|Compila ed esegue la soluzione specificata.|  
 |[/Runexit (devenv.exe)](../../ide/reference/runexit-devenv-exe.md)|Compila ed esegue la soluzione specificata, riduce a icona l'IDE quando la soluzione viene eseguita e chiude l'IDE al termine dell'esecuzione della soluzione.|  
-|[/UseEnv (devenv.exe)](../../ide/reference/useenv-devenv-exe.md)|Fa sì che l'IDE usi le variabili di ambiente PATH, INCLUDE e LIB per la compilazione [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] anziché le impostazioni specificate nella sezione Directory di VC++ delle opzioni **Progetti** nella finestra di dialogo **Opzioni**. Per altre informazioni, vedere [Impostazione delle variabili di percorso e di ambiente per la compilazione dalla riga di comando](/visual-cpp/build/setting-the-path-and-environment-variables-for-command-line-builds)|  
+|[/UseEnv (devenv.exe)](../../ide/reference/useenv-devenv-exe.md)|Fa sì che l'IDE usi le variabili di ambiente PATH, INCLUDE e LIB per la compilazione [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] anziché le impostazioni specificate nella sezione Directory di VC++ delle opzioni **Progetti** nella finestra di dialogo **Opzioni**. Per altre informazioni, vedere [Impostazione delle variabili di percorso e di ambiente per la compilazione dalla riga di comando](/cpp/build/setting-the-path-and-environment-variables-for-command-line-builds)|  
 |[/Edit (devenv.exe)](../../ide/reference/edit-devenv-exe.md)|Apre i file specificati in un'istanza dell'applicazione in esecuzione. Se non sono presenti istanze in esecuzione, verrà avviata una nuova istanza con un layout di finestra semplificato.|  
 |[/ResetAddin (devenv.exe)](../../ide/reference/resetaddin-devenv-exe.md)|Avvia un'istanza dell'IDE di Visual Studio senza caricare il componente aggiuntivo specificato.|  
 |[/SafeMode (devenv.exe)](../../ide/reference/safemode-devenv-exe.md)|Avvia [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] in modalità sicura, caricando solo l'ambiente e i servizi predefiniti e le versioni acquistate dei pacchetti di terze parti.|  
@@ -100,8 +119,3 @@ La riga di comando devenv consente di impostare varie opzioni per l'ambiente di 
   
 ## <a name="see-also"></a>Vedere anche  
  [Generale, Ambiente, finestra di dialogo Opzioni](../../ide/reference/general-environment-options-dialog-box.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

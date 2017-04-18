@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: ba9c9b60de651eecc92ea10ba44579a7dadc36df
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 9c9e9e8c63d69e797a28ce4f8b1ac0adcf074b77
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="options-text-editor-cc-advanced"></a>Opzioni, Editor di testo, C/C++, Avanzate
@@ -139,7 +139,7 @@ Modificando queste opzioni è possibile modificare il comportamento correlato a 
  **Numero massimo di unità di conversione memorizzate nella cache**  
  Il numero massimo di unità di conversione che saranno mantenute attive alla volta per le richieste IntelliSense. Il valore deve essere compreso tra 2 e 15. Questo numero è direttamente correlato al numero massimo di processi VCPkgSrv.exe che verrà eseguito (per una determinata istanza di Visual Studio). Il valore predefinito è 2, ma in presenza di memoria disponibile è possibile aumentare questo valore e verosimilmente garantire prestazioni leggermente migliori in IntelliSense.  
   
- Per altre informazioni sulle unità di conversione, vedere [Phases of Translation](/visual-cpp/preprocessor/phases-of-translation) (Fasi di conversione).  
+ Per altre informazioni sulle unità di conversione, vedere [Phases of Translation](/cpp/preprocessor/phases-of-translation) (Fasi di conversione).  
 
  **Abilita sostituzione punto con freccia per elenco di membri**  
  sostituisce '.' con '->' quando applicabile per l'elenco membri.

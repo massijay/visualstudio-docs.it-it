@@ -1,22 +1,40 @@
 ---
-title: "Compilazione e creazione in Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "compilazioni [Visual Studio], informazioni sulla compilazione in Visual Studio"
-  - "istruzioni di compilazione personalizzate, tipi di compilazioni"
+title: Compilazione e creazione in Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- builds [Visual Studio], about building in Visual Studio
+- custom build steps, types of builds
 ms.assetid: c7958821-285f-4e28-9e7a-b5d8b40336a1
 caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 28
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5581224b17a7b42f65b69f741f984a144d78fc26
+ms.openlocfilehash: f4ae98f4e9b7dbf4b1066120316ee5a167ae78f2
+ms.lasthandoff: 04/04/2017
+
 ---
 # <a name="compiling-and-building-in-visual-studio"></a>Compilazione e creazione in Visual Studio
 È possibile utilizzare Visual Studio per sviluppare applicazioni e creare a intervalli frequenti gli assembly e i programmi eseguibili durante il ciclo di sviluppo. Compilando spesso il codice, è possibile identificare più rapidamente errori in fase di compilazione, ad esempio sintassi non corretta, parole chiave non digitate correttamente e tipi non corrispondenti. È inoltre possibile rilevare e risolvere gli errori di runtime, ad esempio errori logici e semantici, compilando frequentemente ed eseguendo le versioni di debug del codice.  
@@ -29,7 +47,7 @@ caps.handback.revision: 28
 |Metodo di compilazione|Vantaggi|Per altre informazioni|  
 |------------------|--------------|--------------------------|  
 |Utilizzo di IDE|- È più semplice creare ed eseguire compilazioni immediatamente.<br />- È possibile eseguire compilazioni multiprocessore per progetti C++ e C#.<br />- È possibile personalizzare alcuni aspetti del sistema di compilazione.|[Building and Cleaning Projects and Solutions in Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md) (Compilazione e pulizia di progetti e soluzioni in Visual Studio)|  
-|Esecuzione di una riga di comando di MSBuild|- È possibile compilare progetti senza installare Visual Studio.<br />- È possibile eseguire compilazioni multiprocessore per tutti i tipi di progetto.<br />- È possibile personalizzare la maggior parte delle aree del sistema di compilazione.|[MSBuild](../msbuild/msbuild1.md)|  
+|Esecuzione di una riga di comando di MSBuild|- È possibile compilare progetti senza installare Visual Studio.<br />- È possibile eseguire compilazioni multiprocessore per tutti i tipi di progetto.<br />- È possibile personalizzare la maggior parte delle aree del sistema di compilazione.|[MSBuild](../msbuild/msbuild.md)|  
 |Uso di Team Foundation Build|- È possibile automatizzare il processo di compilazione. È possibile ad esempio compilare uno o più progetti di notte o ogni volta che il codice viene controllato. È inoltre possibile compilare progetti nei server di compilazione condivisi anziché nel computer di sviluppo.<br />- È possibile specificare rapidamente il codice da compilare, i test da eseguire e altre opzioni comuni.<br />- È possibile modificare il flusso di lavoro di compilazione e, se necessario, creare attività di compilazione per eseguire attività estremamente personalizzate.|[Compilare l'applicazione](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)|  
   
 ## <a name="building-from-the-ide"></a>Compilazione nell'IDE  
@@ -55,8 +73,3 @@ caps.handback.revision: 28
  [Understanding Build Platforms](../ide/understanding-build-platforms.md)  (Informazioni sulle piattaforme di compilazione)  
  [Compilazione di progetti di siti Web](http://msdn.microsoft.com/Library/a9cbb88c-8fff-4c67-848b-98fbfd823193)   
  [How to: Create and Remove Project Dependencies](../ide/how-to-create-and-remove-project-dependencies.md) (Procedura: Creare e rimuovere dipendenze di progetto)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
