@@ -31,15 +31,15 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: 780c643c25f0d43ec0564e43bc50d2f36f1aee79
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 889d538b732b360b475788ec6d67b47920703c73
+ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="options-text-editor-cc-experimental"></a>Opzioni, Editor di testo, C/C++, Sperimentale
-Modificando queste opzioni è possibile modificare il comportamento correlato a IntelliSense e il database di esplorazione quando si programma in C o C++. Queste funzionalità sono davvero sperimentali. È possibile che vengano modificate o rimossa da Visuali Studio in una versione futura.  
+Modificando queste opzioni è possibile modificare il comportamento correlato a IntelliSense e il database di esplorazione quando si programma in C o C++. Queste funzionalità sono davvero sperimentali. È possibile che vengano modificate o rimossa da Visuali Studio in una versione futura. In questo argomento vengono descritte le opzioni di Visual Studio 2017. Per Visual Studio 2015, vedere [Opzioni, Editor di testo, C/C++, Sperimentale](https://msdn.microsoft.com/library/mt591979.aspx) 
   
- Per accedere a questa pagina, nel riquadro sinistro della finestra di dialogo **Opzioni** espandere **Editor di testo**e **C/C++**, quindi fare clic su **Sperimentale**.  
+ Per accedere a questa pagina delle proprietà, premere **CTRL + Q** per attivare `Quick Launch` e quindi digitare "sperimentale". Avvio veloce troverà la pagina dopo le prime lettere. È anche possibile accedere scegliendo **Strumenti | Opzioni**, espandendo **Editor di testo** e **C/C++** e quindi scegliendo **Sperimentale**.  
 
  In un'installazione di Visual Studio 2017 sono disponibili queste funzionalità.  
   
@@ -50,7 +50,7 @@ Modificando queste opzioni è possibile modificare il comportamento correlato a 
 IntelliSense predittivo limita il numero di risultati visualizzati nell'elenco a discesa di IntelliSense, in modo che siano visualizzati solo i risultati pertinenti al contesto. Se ad esempio si digita <code> int x = </code> e si chiama l'elenco a discesa di IntelliSense, vengono visualizzati solo numeri interi o funzioni che restituiscono numeri interi. Per impostazione predefinita, IntelliSense predittivo è disattivato.
 
 ## <a name="enable-faster-project-load"></a>Abilita caricamento più rapido del progetto
-Questa opzione abilita la funzionalità nota come "caricamento leggero delle soluzioni". Quando il caricamento leggero delle soluzioni è abilitato, Visual Studio carica interamente i progetti solo quando è effettivamente necessario. Molte attività comuni, ad esempio lo spostamento all'interno di una codebase, la modifica di codice e la compilazione di progetti, non richiedono il caricamento del progetto. Se abilitata, questa opzione consente di iniziare a eseguire queste attività comuni più rapidamente. Non è infatti necessario attendere il caricamento del progetto.  
+Questa opzione consente a Visual Studio di memorizzare nella cache i dati di progetto in modo che alla successiva apertura del progetto sia possibile caricare i dati presenti nella cache anziché rielaborare i dati dai file di progetto. L'uso dei dati memorizzati nella cache può accelerare i tempi di caricamento del progetto in modo significativo.  
 
 ## <a name="additional-features-in-the-visual-studio-gallery"></a>Altre funzionalità in Visual Studio Gallery
 Per altre funzionalità dell'editor di testo in Visual Studio Gallery, vedere l'elenco disponibile [qui](http://go.microsoft.com/fwlink/?LinkId=692016). Un esempio è [Correzioni rapide per C++](https://visualstudiogallery.msdn.microsoft.com/be91feef-8dc3-4f7a-ac9f-f34e7ca5918f), che supporta quanto segue:  
