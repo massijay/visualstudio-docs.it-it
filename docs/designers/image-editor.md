@@ -91,13 +91,13 @@ Questo documento descrive come usare l'editor di immagini di [!INCLUDE[vsprvs](.
 ### <a name="image-editor-toolbars"></a>Barre degli strumenti dell'editor di immagini  
  Le barre degli strumenti dell'editor di immagini contengono i comandi che consentono di lavorare con le immagini.  
   
- I controlli che influiscono sullo stato dell'editor di immagini si trovano nella barra degli strumenti della modalità dell'editor di immagini**** insieme ai comandi avanzati. Questa barra degli strumenti si trova lungo il bordo superiore dell'area di progettazione dell'editor di immagini. Gli strumenti di disegno si trovano nella barra degli strumenti **Editor di immagini** lungo il bordo sinistro dell'area di progettazione.  
+ I controlli che influiscono sullo stato dell'editor di immagini si trovano nella barra degli strumenti della **modalità dell'editor di immagini** insieme ai comandi avanzati. Questa barra degli strumenti si trova lungo il bordo superiore dell'area di progettazione dell'editor di immagini. Gli strumenti di disegno si trovano nella barra degli strumenti **Editor di immagini** lungo il bordo sinistro dell'area di progettazione.  
   
- Di seguito è illustrata la barra degli strumenti della ****modalità dell'editor di immagini:  
+ Di seguito è illustrata la barra degli strumenti della **modalità dell'editor di immagini**:  
   
  ![Barra degli strumenti della modalità dell'editor di immagini.](../designers/media/digit-tre-modal-toolbar.png "Digit-TRE-Modal-Toolbar")  
   
- La tabella seguente descrive gli elementi disponibili nella barra degli strumenti della ****modalità dell'editor di immagini, nell'ordine di visualizzazione da sinistra verso destra.  
+ La tabella seguente descrive gli elementi disponibili nella barra degli strumenti della **modalità dell'editor di immagini**, nell'ordine di visualizzazione da sinistra verso destra.  
   
 |Elemento della barra degli strumenti|Descrizione|  
 |------------------|-----------------|  
@@ -220,8 +220,8 @@ Questo documento descrive come usare l'editor di immagini di [!INCLUDE[vsprvs](.
 |Tutti gli strumenti e le selezioni|**Rotazione di**<br /> Definisce il numero di gradi, in senso orario, in base al quale viene ruotato lo strumento o la selezione.|  
 |**Matita**, **Pennello**, **Aerografo**, **Gomma**|**Spessore**<br /> Definisce le dimensioni dell'area interessata dallo strumento.|  
 |**Testo**|**Anti-alias**<br /> Traccia il testo usando bordi con anti-aliasing. In questo modo il testo assume un aspetto più uniforme.<br /><br /> **Valore**<br /> Testo da tracciare.<br /><br /> **Tipo di carattere**<br /> Tipo di carattere usato per tracciare il testo.<br /><br /> **Dimensione**<br /> Dimensione del testo.<br /><br /> **Grassetto**<br /> Applica il grassetto.<br /><br /> **Corsivo**<br /> Applica il corsivo.<br /><br /> **Sottolineato**<br /> Applica la sottolineatura.|  
-|**Primitiva&2;D**|**Anti-alias**<br /> Disegna le primitive usando bordi con anti-aliasing. In questo modo, le primitive assumono un aspetto più uniforme.<br /><br /> **Spessore**<br /> Definisce lo spessore della linea che forma il contorno della primitiva.<br /><br /> **Raggio X**<br /> (Solo rettangolo arrotondato) Definisce il raggio di arrotondamento per i bordi superiore e inferiore della primitiva.<br /><br /> **Raggio Y**<br /> (Solo rettangolo arrotondato) Definisce il raggio di arrotondamento per i bordi destro e sinistro della primitiva.|  
-|**Matita**, **Pennello**, **Aerografo**, **Primitiva&2;D**|**Canali**<br /> Abilita o disabilita i canali di colore specifici per la visualizzazione e il disegno. Se per un canale di colore specifico è impostata l'opzione **Visualizzazione**, tale canale è visibile nell'immagine. In caso contrario, non è visibile. Se per un canale di colore specifico è impostata l'opzione **Disegno**, tale canale è interessato dalle operazioni di disegno. In caso contrario, non lo è.|  
+|**Primitiva 2D**|**Anti-alias**<br /> Disegna le primitive usando bordi con anti-aliasing. In questo modo, le primitive assumono un aspetto più uniforme.<br /><br /> **Spessore**<br /> Definisce lo spessore della linea che forma il contorno della primitiva.<br /><br /> **Raggio X**<br /> (Solo rettangolo arrotondato) Definisce il raggio di arrotondamento per i bordi superiore e inferiore della primitiva.<br /><br /> **Raggio Y**<br /> (Solo rettangolo arrotondato) Definisce il raggio di arrotondamento per i bordi destro e sinistro della primitiva.|  
+|**Matita**, **Pennello**, **Aerografo**, **Primitiva 2D**|**Canali**<br /> Abilita o disabilita i canali di colore specifici per la visualizzazione e il disegno. Se per un canale di colore specifico è impostata l'opzione **Visualizzazione**, tale canale è visibile nell'immagine. In caso contrario, non è visibile. Se per un canale di colore specifico è impostata l'opzione **Disegno**, tale canale è interessato dalle operazioni di disegno. In caso contrario, non lo è.|  
 |**Selezione con bacchetta magica**, **Riempimento**|**Tolleranza**<br /> Definisce la differenza massima tra i colori adiacenti considerati simili, in modo da includere un numero minore o maggiore di colori simili nell'area interessata o selezionata. Per impostazione predefinita, il valore è 32. In questo modo, i pixel adiacenti in 32 tonalità (più chiare o più scure) del colore originale vengono considerati come parte dell'area.|  
   
 ## <a name="keyboard-shortcuts"></a>Scelte rapide da tastiera  

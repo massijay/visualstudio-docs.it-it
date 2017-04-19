@@ -62,7 +62,7 @@ ms.lasthandoff: 02/22/2017
 |-------------|-----------------|---------------------|  
 |Finestra della casella degli strumenti|Consente di passare da una scheda all'altra della casella degli strumenti|**CTRL** + **Freccia SU**<br /><br /> e<br /><br /> **CTRL** + **Freccia GIÙ**|  
 |Finestra della casella degli strumenti|Consente di aggiungere un controllo della casella degli strumenti a un modulo o una finestra di progettazione|**INVIO**|  
-|Tastiera, Ambiente, finestra di dialogo Opzioni|Consente di eliminare una combinazione di tasti immessa nell'opzione **	Premi tasti di scelta rapida**|**BACKSPACE**|  
+|Tastiera, Ambiente, finestra di dialogo Opzioni|Consente di eliminare una combinazione di tasti immessa nell'opzione **Premi tasti di scelta rapida**|**BACKSPACE**|  
 |Tutte le finestre degli strumenti|Consente di selezionare il primo pulsante della barra degli strumenti della finestra|**MAIUSC** + **ALT**|  
 |Barre degli strumenti dell'IDE|Consente di selezionare il primo pulsante della barra degli strumenti Standard|**ALT**, **CTRL** + **TAB** **Nota:** premere nuovamente **CTRL** + **TAB** per selezionare il primo pulsante della successiva barra degli strumenti dell'IDE.|  
   
