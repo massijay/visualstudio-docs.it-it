@@ -1,6 +1,6 @@
 ---
-title: ID dei carichi di lavoro e dei componenti di Visual Studio Feedback Client 2017 | Microsoft Docs
-description: Usare gli ID dei carichi di lavoro e dei componenti di Visual Studio per fornire commenti avanzati per Visual Studio Team Services o Team Foundation Server
+title: ID dei carichi di lavoro e dei componenti di Visual Studio Team Explorer 2017 | Microsoft Docs
+description: Usare gli ID dei carichi di lavoro e dei componenti di Visual Studio per fornire strumenti di test integrati per tester non specializzati
 keywords: 
 author: TerryGLee
 ms.author: tglee
@@ -15,7 +15,7 @@ ms.prod: visual-studio-dev15
 ms.service: 
 ms.technology:
 - vs-ide-install
-ms.assetid: 7392a100-100c-458c-9394-828695109015
+ms.assetid: c6ef9a3b-d13d-49b4-9faa-51fa06b21e1f
 translation.priority.ht:
 - de-de
 - es-es
@@ -32,17 +32,17 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
-ms.openlocfilehash: 6b981d8ec1594da3db8fa1384ddeeee9da519837
-ms.lasthandoff: 04/06/2017
+ms.sourcegitcommit: 293d694cfff4c375b342d8322483c84fbbeb446c
+ms.openlocfilehash: 7a4538f04e18630da5adeb8189716a5ac34f3c47
+ms.lasthandoff: 04/07/2017
 
 ---
 
-# <a name="visual-studio-feedback-client-2017-component-directory"></a>Elenco dei componenti di Visual Studio Feedback Client 2017
+# <a name="visual-studio-team-explorer-2017-component-directory"></a>Elenco dei componenti di Visual Studio Team Explorer 2017
 
 Le tabelle in questa pagina elencano gli ID che è possibile usare per installare Visual Studio tramite la riga di comando. Si noti che verranno aggiunti ulteriori componenti con il rilascio di aggiornamenti di Visual Studio.
 
-Tenere presenti anche le note seguenti relative alla pagina:
+Tenere presenti anche le note seguenti relative a questa pagina:
 
 * Esiste una sezione a parte per ogni carico di lavoro, seguita dall'ID del carico di lavoro e da una tabella dei componenti disponibili per il carico di lavoro.
 * Per impostazione predefinita, i componenti di tipo **Obbligatorio** verranno installati quando si installa il carico di lavoro. È anche possibile scegliere di installare i componenti di tipo **Consigliato** e **Facoltativo**.
@@ -50,18 +50,17 @@ Tenere presenti anche le note seguenti relative alla pagina:
 
 Per altre informazioni su come usare questi ID, vedere la pagina [Usare i parametri della riga di comando per installare Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md). Per un elenco di ID di componenti e carichi di lavoro per altri prodotti, vedere la pagina [ID dei carichi di lavoro e dei componenti di Visual Studio 2017](workload-and-component-ids.md).
 
-## <a name="feedback-client"></a>Client di feedback
+## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2017"></a>Editor principale di Visual Studio (incluso in Visual Studio Team Explorer 2017)
 
-**ID:** Microsoft.VisualStudio.Workload.FeedbackClient
+**ID:** Microsoft.VisualStudio.Workload.CoreEditor
 
-**Descrizione:** Feedback Client consente agli stakeholder di offrire commenti in formato avanzato per Visual Studio Team Services o Team Foundation Server.
+**Descrizione:** shell di base di Visual Studio, che include un editor di codice con riconoscimento della sintassi, il controllo del codice sorgente e la gestione degli elementi di lavoro.
 
 ### <a name="components-included-by-this-workload"></a>Componenti inclusi per questo carico di lavoro
 
 ID componente | Nome | Versione | Tipo di dipendenza
 --- | --- | --- | ---
-Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.0.26208.0 | Obbligatorio
-
+Microsoft.VisualStudio.Component.CoreEditor | Editor principale di Visual Studio | 15.0.26208.0 | Obbligatorio
 ## <a name="unaffiliated-components"></a>Componenti non affiliati
 
 Questi sono i componenti non inclusi in alcun carico di lavoro, che possono però essere selezionati come un singolo componente.
