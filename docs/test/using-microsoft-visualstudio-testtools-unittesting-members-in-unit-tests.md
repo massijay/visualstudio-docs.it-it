@@ -1,131 +1,148 @@
 ---
-title: "Utilizzo di membri Microsoft.VisualStudio.TestTools.UnitTesting in unit test | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Uso di membri Microsoft.VisualStudio.TestTools.UnitTesting in unit test | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0fa335fd-e442-448f-913f-25a19df90a93
 caps.latest.revision: 6
-caps.handback.revision: 6
-ms.author: "mlearned"
-manager: "douge"
----
-# Utilizzo di membri Microsoft.VisualStudio.TestTools.UnitTesting in unit test
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
+ms.openlocfilehash: 0488f42c64c3079b671e046055112f8366d2c2bf
+ms.lasthandoff: 04/04/2017
 
-Il framework unit test supporta l'esecuzione di unit test in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  Per la codifica degli unit test, utilizzare le classi e i membri nello spazio dei nomi <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework>.  Questi elementi devono essere utilizzati quando si scrivono unit test completamente nuovi oppure quando si definiscono unit test generati dal codice sottoposto al test.  
+---
+# <a name="using-microsoftvisualstudiotesttoolsunittesting-members-in-unit-tests"></a>Uso di membri Microsoft.VisualStudio.TestTools.UnitTesting in unit test
+Il framework di unit test supporta gli unit test in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Usare le classi e membri dello spazio dei nomi Microsoft.VisualStudio.TestPlatform.UnitTestFramework quando si esegue la codifica di unit test. È possibile usarli sia quando si scrive uno unit test da zero che per la modifica di uno unit test generato dal codice sottoposto a test.  
   
-## Gruppi di elementi  
- Per fornire una panoramica più accurata del framework unit test, in questa sezione gli elementi dello spazio dei nomi UnitTesting vengono organizzati in gruppi di funzioni correlate.  
+## <a name="groups-of-elements"></a>Gruppi di elementi  
+ Per offrire una panoramica più accurata del framework di unit test, in questa sezione gli elementi dello spazio dei nomi UnitTesting vengono organizzati in gruppi di funzionalità correlate.  
   
 > [!NOTE]
->  Gli elementi dell'attributo, i cui nomi terminano con la stringa Attribute, possono essere utilizzati con o senza la stringa Attribute.  Ad esempio, nei due esempi di codice seguenti il funzionamento è identico:  
+>  Gli elementi di attributo, i cui nomi terminano con la stringa Attribute, possono essere usati con o senza la stringa Attribute. I due esempi di codice seguenti presentano lo stesso funzionamento:  
 >   
 >  `[TestClass()]`  
 >   
 >  `[TestClassAttribute()]`  
   
-### Elementi utilizzati per il test basato sui dati  
- Utilizzare i seguenti elementi per impostare unit test basati sui dati.  Per ulteriori informazioni, vedere [Procedura: Creare uno unit test basato sui dati](../test/how-to-create-a-data-driven-unit-test.md) e [Procedura dettagliata: utilizzo di un file di configurazione per definire un'origine dati](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md).  
+### <a name="elements-used-for-data-driven-testing"></a>Elementi usati per i test basati sui dati  
+ Usare gli elementi seguenti per configurare unit test basati sui dati. Per altre informazioni, vedere [Procedura: Creare uno unit test basato sui dati](../test/how-to-create-a-data-driven-unit-test.md) e [Procedura dettagliata: Uso di un file di configurazione per definire un'origine dati](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md).  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DataAccessMethod>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DataAccessMethod  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DataSourceAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DataSourceAttribute 
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DataSourceElement>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DataSourceElement  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DataSourceElementCollection>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DataSourceElementCollection  
   
-## Attributi utilizzati per stabilire un ordine di chiamata  
- Un elemento di codice decorato con uno dei seguenti attributi viene chiamato al momento specificato.  Per ulteriori informazioni, vedere [Anatomy of a Unit Test](http://msdn.microsoft.com/it-it/a03d1ee7-9999-4e7c-85df-7d9073976144).  
+## <a name="attributes-used-to-establish-a-calling-order"></a>Attributi usati per stabilire un ordine di chiamata  
+ Un elemento di codice decorato con uno degli attributi seguenti viene chiamato nel momento specificato. Per altre informazioni, vedere [Anatomia di un unit test](http://msdn.microsoft.com/en-us/a03d1ee7-9999-4e7c-85df-7d9073976144).  
   
-### Per gli assembly  
- AssemblyInitialize e AssemblyCleanup vengono chiamati subito dopo che l'assembly è stato caricato e subito prima che venga scaricato.  
+### <a name="for-assemblies"></a>Per gli assembly  
+ AssemblyInitialize e AssemblyCleanup vengono chiamati subito dopo il caricamento e subito prima dello scaricamento dell'assembly.  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AssemblyInitializeAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AssemblyInitializeAttribute  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AssemblyCleanupAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AssemblyCleanupAttribute  
   
-### Per le classi  
- ClassInitialize e ClassCleanup vengono chiamati subito dopo che la classe è stata caricata e subito prima che venga scaricata.  
+### <a name="for-classes"></a>Per le classi  
+ ClassInitialize e ClassCleanup vengono chiamati subito dopo il caricamento e subito prima dello scaricamento della classe.  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.ClassInitializeAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.ClassInitializeAttribute  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.ClassCleanupAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.ClassCleanupAttribute  
   
-### Per i metodi di test  
+### <a name="for-test-methods"></a>Per i metodi di test  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestInitializeAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestInitializeAttribute  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCleanupAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCleanupAttribute  
   
-## Attributi utilizzati per identificare le classi e i metodi di test  
- Tutte le classi di test devono disporre dell'attributo TestClass e tutti i metodi di test devono disporre dell'attributo TestMethod.  Per ulteriori informazioni, vedere [Anatomy of a Unit Test](http://msdn.microsoft.com/it-it/a03d1ee7-9999-4e7c-85df-7d9073976144).  
+## <a name="attributes-used-to-identify-test-classes-and-methods"></a>Attributi usati per identificare classi e metodi di test  
+ Ogni classe di test deve avere l'attributo TestClass e ogni metodo di test deve avere l'attributo TestMethod. Per altre informazioni, vedere [Anatomia di un unit test](http://msdn.microsoft.com/en-us/a03d1ee7-9999-4e7c-85df-7d9073976144).  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute  
   
-## Classi Assert ed eccezioni correlate  
- Gli unit test consentono di verificare il comportamento di specifiche applicazioni grazie all'utilizzo di vari tipi di eccezioni, attributi e istruzioni Assert.  Per ulteriori informazioni, vedere [Utilizzo di classi Assert](../test/using-the-assert-classes.md).  
+## <a name="assert-classes-and-related-exceptions"></a>Classi Assert ed eccezioni correlate  
+ Gli unit test possono verificare il comportamento specifico dell'applicazione in base all'uso di vari tipi di istruzioni, eccezioni e attributi Assert. Per altre informazioni, vedere [Uso di classi Assert](../test/using-the-assert-classes.md).  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.Assert>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.Assert 
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.CollectionAssert>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.CollectionAssert  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.StringAssert>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.StringAssert  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AssertFailedException>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AssertFailedException  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AssertInconclusiveException>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AssertInconclusiveException  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.UnitTestAssertException>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.UnitTestAssertException  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.ExpectedExceptionAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.ExpectedExceptionAttribute  
   
-## Classe TestContext  
- I seguenti attributi e relativi valori vengono visualizzati nella finestra Proprietà di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] per un determinato metodo di test.  Questi attributi non sono stati realizzati per accedere tramite il codice dello unit test.  Invece, sono in grado di modificare l'utilizzo o l'esecuzione di unit test tramite l'ambiente IDE di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oppure tramite il modulo del test [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Ad esempio, alcuni di questi attributi sono visualizzati come colonne nell'Editor elenco dei test e nella finestra Risultati test e possono quindi essere utilizzati per raggruppare e ordinare i test e i relativi risultati.  Uno di questi attributi è TestPropertyAttribute, che consente di aggiungere i metadati arbitrari agli unit test.  Ad esempio, è possibile utilizzarlo per archiviare il nome dell'esito del test coperto da questo test, contrassegnando lo unit test con `[TestProperty("TestPass", "Accessibility")]`.  In alternativa, è possibile utilizzarlo per archiviare un indicatore di quale tipo di test è: `[TestProperty("TestKind", "Localization")]`.  La proprietà che viene creata utilizzando questo attributo e il valore della proprietà assegnato vengono visualizzati nella finestra Proprietà di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sotto l'intestazione **Specifico del test**.  
+## <a name="the-testcontext-class"></a>Classe TestContext  
+ I seguenti attributi e i valori ad essi assegnati sono visualizzati nella finestra Proprietà di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] per un determinato metodo di test. Questi attributi non sono pensati per essere accessibili tramite il codice dello unit test. Influiscono invece sui modi in cui lo unit test viene usato o eseguito, dallo sviluppatore tramite l'IDE di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oppure dal motore di test di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Ad esempio, alcuni di questi attributi sono visualizzati come colonne nella finestra Gestione test e nella finestra Risultati del test, quindi è possibile usarli per raggruppare e ordinare i test e i risultati dei test. Uno di questi attributi è TestPropertyAttribute, che viene usato per aggiungere metadati arbitrari agli unit test. È ad esempio possibile usarlo per archiviare il nome del superamento di un test coperto da questo test, contrassegnando lo unit test con `[TestProperty("TestPass", "Accessibility")]`. In alternativa, è possibile usarlo per archiviare un indicatore del tipo di test: `[TestProperty("TestKind", "Localization")]`. La proprietà creata usando questo attributo e il valore di proprietà assegnato sono visualizzati nella finestra Proprietà di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], sotto l'intestazione **Specifico del test**.  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.OwnerAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.OwnerAttribute  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DeploymentItemAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DeploymentItemAttribute  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DescriptionAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DescriptionAttribute  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.HostTypeAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.HostTypeAttribute  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.IgnoreAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.IgnoreAttribute  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.PriorityAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.PriorityAttribute  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestPropertyAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestPropertyAttribute  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.WorkItemAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.WorkItemAttribute  
   
-## Classi di configurazione del test  
+## <a name="test-configuration-classes"></a>Classi di configurazione di test  
   
--   <xref:Microsoft.TeamFoundation.TestManagement.Client.ObjectTypes>  
+-   Microsoft.TeamFoundation.TestManagement.Client.ObjectTypes>  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestConfigurationSection>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestConfigurationSection  
   
-## Attributi utilizzati per la generazione di rapporti  
- Gli attributi in questa sezione consentono di collegare il metodo di test decorato alle entità nella gerarchia del progetto di un progetto team [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)].  
+## <a name="attributes-used-for-generating-reports"></a>Attributi usati per la generazione di report  
+ Gli attributi in questa sezione correlano il metodo di test che decorano alle entità nella gerarchia del progetto di un progetto team di [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)].  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.CssIterationAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.CssIterationAttribute  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.CssProjectStructureAttribute>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.CssProjectStructureAttribute  
   
-## Classi utilizzate con accessi privati  
- Come descritto in [Using Publicize to Create a Private Accessor](http://msdn.microsoft.com/it-it/2056c6a7-6672-42a7-8f53-fead33c56deb), è possibile generare uno unit test per un metodo privato.  Tale operazione crea una classe di accesso privata che consente di creare istanze di un oggetto della classe PrivateObject.  La classe PrivateObject è una classe wrapper in cui la reflection viene utilizzata come parte del processo della funzione di accesso privato.  La classe PrivateType è simile, ma viene utilizzata per chiamare i metodi statici privati anziché i metodi di istanza privata.  
+## <a name="classes-used-with-private-accessors"></a>Classi usate con funzioni di accesso private  
+ Come descritto in [Utilizzo di Publicize per creare una funzione di accesso privata](http://msdn.microsoft.com/en-us/2056c6a7-6672-42a7-8f53-fead33c56deb), è possibile generare uno unit test per un metodo privato. Questa generazione crea una classe di funzioni di accesso private, che crea un'istanza di un oggetto della classe PrivateObject. La classe PrivateObject è una classe wrapper che usa la reflection come parte del processo della funzione di accesso privata. La classe PrivateType è simile, ma viene usata per chiamare metodi statici privati anziché metodi di istanza privata.  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.PrivateObject>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.PrivateObject  
   
--   <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework.PrivateType>  
+-   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.PrivateType  
   
-## Vedere anche  
- <xref:Microsoft.VisualStudio.TestPlatform.UnitTestFramework>
+## <a name="see-also"></a>Vedere anche  
+ Microsoft.VisualStudio.TestPlatform.UnitTestFramework
+

@@ -1,61 +1,77 @@
 ---
-title: "Isolamento del codice sottoposto a test con Microsoft Fakes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Isolamento del codice sottoposto a test con Microsoft Fakes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a03c2e83-a41f-4854-bcf2-fcaa277a819d
 caps.latest.revision: 16
-ms.author: "mlearned"
-manager: "douge"
-caps.handback.revision: 16
----
-# Isolamento del codice sottoposto a test con Microsoft Fakes
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: douge
+manager: douge
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
+ms.openlocfilehash: acc2f3de7000e438829486b23b9652cb8d34db26
+ms.lasthandoff: 04/04/2017
 
-Microsoft Fakes consente di isolare il codice di cui si sta eseguendo il test sostituendo altre parti dell'applicazione con *stub* o *shim*.  Si tratta di frammenti di codice che rientrano nel controllo dei test.  Isolando il codice per il test, si avrà la certezza che se il test non viene superato, la causa è presente in tale codice e non in un altro punto.  Anche gli stub e gli shim consentono di testare il codice anche se altre parti dell'applicazione ancora non funzionano.  
+---
+# <a name="isolating-code-under-test-with-microsoft-fakes"></a>Isolamento del codice sottoposto a test con Microsoft Fakes
+Microsoft Fakes consente di isolare il codice di cui si sta eseguendo il test sostituendo altre parti dell'applicazione con *stub* o *shim*. Si tratta di frammenti di codice che rientrano nel controllo dei test. Isolando il codice per il test, si avrà la certezza che se il test non viene superato, la causa è presente in tale codice e non in un altro punto. Anche gli stub e gli shim consentono di testare il codice anche se altre parti dell'applicazione ancora non funzionano.  
   
  Fakes è di due tipi:  
   
--   Uno [stub](#stubs) sostituisce una classe con un piccolo sostituto che implementa la stessa interfaccia.  Per usare gli stub, è necessario progettare l'applicazione in modo che ogni componente dipenda solo dalle interfacce e non da altri componenti.  Il termine "componente" indica una classe o un gruppo di classi progettate e aggiornate insieme che sono generalmente contenute in un assembly.  
+-   Uno [stub](#stubs) sostituisce una classe con un componente di dimensioni ridotte che implementa la stessa interfaccia.  Per usare gli stub, è necessario progettare l'applicazione in modo che ogni componente dipenda solo dalle interfacce e non da altri componenti. Il termine "componente" indica una classe o un gruppo di classi progettate e aggiornate insieme che sono generalmente contenute in un assembly.  
   
--   Uno [shim](#shims) modifica il codice compilato dell'applicazione in fase di esecuzione affinché anziché effettuare la chiamata al metodo specificato, esegue il codice dello shim che il test fornisce.  Gli shim possono essere usati per sostituire le chiamate agli assembly che non si possono modificare, ad esempio gli assembly .NET.  
+-   Uno [shim](#shims) modifica il codice compilato dell'applicazione in fase di esecuzione in modo tale che, invece di effettuare la chiamata al metodo specificato, esegue il codice dello shim fornito dal test. Gli shim possono essere usati per sostituire le chiamate agli assembly che non si possono modificare, ad esempio gli assembly .NET.  
   
- ![Fakes sostituisce altri componenti](../test/media/fakes-2.png "Fakes\-2")  
+ ![Fakes sostituisce altri componenti](../test/media/fakes-2.png "Fakes-2")  
   
  **Requisiti**  
   
 -   Visual Studio Enterprise  
   
-## Scelta tra i tipi stub e shim  
- In genere, un progetto di Visual Studio viene considerato un componente perché le classi vengono sviluppate e aggiornate contemporaneamente.  Considerare l'uso di stub e shim per le chiamate che il progetto effettua ad altri progetti della soluzione o ad altri assembly a cui fa riferimento.  
+## <a name="choosing-between-stub-and-shim-types"></a>Scelta tra i tipi stub e shim  
+ In genere, un progetto di Visual Studio viene considerato un componente perché le classi vengono sviluppate e aggiornate contemporaneamente. Considerare l'uso di stub e shim per le chiamate che il progetto effettua ad altri progetti della soluzione o ad altri assembly a cui fa riferimento.  
   
- In generale, è consigliabile usare gli stub per le chiamate all'interno della soluzione di Visual Studio e gli shim per le chiamate ad altri assembly a cui si fa riferimento.  Questo perché all'interno di una soluzione è consigliabile separare i componenti definendo le interfacce secondo le regole di esecuzione dello stub.  Gli assembly esterni, ad esempio System.dll, invece in genere non vengono forniti con definizioni di interfaccia separate e pertanto è necessario usare gli shim.  
+ In generale, è consigliabile usare gli stub per le chiamate all'interno della soluzione di Visual Studio e gli shim per le chiamate ad altri assembly a cui si fa riferimento. Questo perché all'interno di una soluzione è consigliabile separare i componenti definendo le interfacce secondo le regole di esecuzione dello stub. Gli assembly esterni, ad esempio System.dll, invece in genere non vengono forniti con definizioni di interfaccia separate e pertanto è necessario usare gli shim.  
   
  Altre considerazioni:  
   
- **Prestazioni.** Gli shim sono più lenti perché riscrivono il codice in fase di esecuzione.  Gli stub non incorrono in questo sovraccarico delle prestazioni e sono veloci al pari dei metodi virtuali.  
+ **Prestazioni.** Gli shim sono più lenti perché riscrivono il codice in fase di esecuzione. Gli stub non incorrono in questo sovraccarico delle prestazioni e sono veloci al pari dei metodi virtuali.  
   
- **Metodi statici, tipi sealed.** È possibile utilizzare solo gli stub per implementare le interfacce.  Di conseguenza, i tipi stub non possono essere usati per metodi statici, metodi non virtuali, metodi virtuali sealed, metodi con tipi sealed e così via.  
+ **Metodi statici, tipi sealed.** È possibile usare solo gli stub per implementare le interfacce. Di conseguenza, i tipi stub non possono essere usati per metodi statici, metodi non virtuali, metodi virtuali sealed, metodi con tipi sealed e così via.  
   
- **Tipi interni.** Sia i tipi stub che i tipi shim possono essere utilizzati con tipi interni che sono stati resi accessibili con l'attributo dell'assembly <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.  
+ **Tipi interni.** È possibile usare sia tipi stub che tipi shim con tipi interni che sono stati resi accessibili con l'attributo di assembly <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.  
   
- **Metodi privati.** Gli shim possono sostituire le chiamate ai metodi privati se tutti i tipi sono visibili nella firma del metodo.  Gli stub possono sostituire solo i metodi visibili.  
+ **Metodi privati.** Gli shim possono sostituire le chiamate ai metodi privati se tutti i tipi sono visibili nella firma del metodo. Gli stub possono sostituire solo i metodi visibili.  
   
- **Interfacce e metodi astratti.** Gli stub forniscono implementazioni di interfacce e metodi astratti che possono essere utilizzati nel test.  Gli shim non possono instrumentare interfacce e metodi astratti perché sono privi del corpo del metodo.  
+ **Interfacce e metodi astratti.** Gli stub forniscono implementazioni di interfacce e metodi astratti che possono essere utilizzati nel test. Gli shim non possono instrumentare interfacce e metodi astratti perché sono privi del corpo del metodo.  
   
- In generale, è consigliabile usare i tipi stub per l'isolamento dalle dipendenze nella codebase.  A tale scopo è possibile nascondere i componenti dietro le interfacce.  I tipi shim possono essere usati per l'isolamento da componenti di terze parti che non forniscono un'API testabile.  
+ In generale, è consigliabile usare i tipi stub per l'isolamento dalle dipendenze nella codebase. A tale scopo è possibile nascondere i componenti dietro le interfacce. I tipi shim possono essere usati per l'isolamento da componenti di terze parti che non forniscono un'API testabile.  
   
 ##  <a name="stubs"></a> Introduzione agli stub  
- Per una descrizione più dettagliata, vedere [Utilizzo di stub per isolare le parti dell'applicazione l'una dall'altra per gli unit test](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md).  
+ Per una descrizione più dettagliata, vedere [Uso di stub per isolare le parti dell'applicazione tra loro per gli unit test](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md).  
   
 1.  **Inserire le interfacce**  
   
-     Per usare gli stub, è necessario scrivere il codice che si desidera testare in modo che non menzioni esplicitamente le classi in un altro componente dell'applicazione.  Il termine "componente" indica una o più classi sviluppate e aggiornate insieme che in genere sono contenute in un solo progetto di Visual Studio.  Le variabili e i parametri devono essere dichiarati tramite le interfacce e le istanze di altri componenti devono essere passate o create tramite una factory.  Ad esempio, se StockFeed è una classe in un altro componente dell'applicazione, allora questa viene considerata non valida:  
+     Per usare gli stub, è necessario scrivere il codice che si desidera testare in modo che non menzioni esplicitamente le classi in un altro componente dell'applicazione. Il termine "componente" indica una o più classi sviluppate e aggiornate insieme che in genere sono contenute in un solo progetto di Visual Studio. Le variabili e i parametri devono essere dichiarati tramite le interfacce e le istanze di altri componenti devono essere passate o create tramite una factory. Ad esempio, se StockFeed è una classe in un altro componente dell'applicazione, allora questa viene considerata non valida:  
   
      `return (new StockFeed()).GetSharePrice("COOO"); // Bad`  
   
@@ -76,9 +92,9 @@ Microsoft Fakes consente di isolare il codice di cui si sta eseguendo il test so
   
 2.  **Aggiungere l'assembly Fakes**  
   
-    1.  In Esplora soluzioni espandere l'elenco di riferimento del progetto di test.  Se si usa Visual Basic, scegliere **Mostra tutti i file** per visualizzare un elenco di riferimento.  
+    1.  In Esplora soluzioni espandere l'elenco di riferimento del progetto di test. Se si usa Visual Basic, scegliere **Mostra tutti i file** per visualizzare l'elenco dei riferimenti.  
   
-    2.  Selezionare il riferimento all'assembly in cui è definita l'interfaccia \(ad esempio IStockFeed\).  Nel menu di scelta rapida del riferimento scegliere **Aggiungi assembly Fakes**.  
+    2.  Selezionare il riferimento all'assembly in cui è definita l'interfaccia (ad esempio IStockFeed). Nel menu di scelta rapida del riferimento scegliere **Aggiungi assembly Fakes**.  
   
     3.  Ricompilare la soluzione.  
   
@@ -140,12 +156,12 @@ Microsoft Fakes consente di isolare il codice di cui si sta eseguendo il test so
   
     ```  
   
-     Il particolare speciale qui è la classe `StubIStockFeed`.  Per ogni interfaccia nell'assembly di riferimento, il meccanismo Microsoft Fakes genera una classe stub.  Il nome della classe stub è derivato dal nome dell'interfaccia, con "`Fakes.Stub`" come prefisso, e i nomi dei tipi di parametro accodati.  
+     Il particolare speciale qui è la classe `StubIStockFeed`. Per ogni interfaccia nell'assembly di riferimento, il meccanismo Microsoft Fakes genera una classe stub. Il nome della classe stub è derivato dal nome dell'interfaccia, con "`Fakes.Stub`" come prefisso, e i nomi dei tipi di parametro accodati.  
   
-     Gli stub vengono generati per i metodi GET e SET di proprietà, per gli eventi e per i metodi generici.  Per altre informazioni, vedere [Utilizzo di stub per isolare le parti dell'applicazione l'una dall'altra per gli unit test](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md).  
+     Gli stub vengono generati per i metodi GET e SET di proprietà, per gli eventi e per i metodi generici. Per altre informazioni, vedere [Uso di stub per isolare le parti dell'applicazione tra loro per gli unit test](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md).  
   
 ##  <a name="shims"></a> Introduzione agli shim  
- Per una descrizione dettagliata, vedere [Utilizzo di shim per isolare l'applicazione dagli altri assembly per gli unit test](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).  
+ Per una descrizione più dettagliata, vedere [Uso di shim per isolare l'applicazione da altri assembly per gli unit test](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).  
   
  Si supponga che il componente contenga delle chiamate a `DateTime.Now`:  
   
@@ -164,9 +180,9 @@ Microsoft Fakes consente di isolare il codice di cui si sta eseguendo il test so
   
 1.  **Aggiungere l'assembly Fakes**  
   
-     In Esplora soluzioni aprire i riferimenti del progetto unit test e selezionare il riferimento all'assembly che contiene il metodo che si desiderare camuffare.  In questo esempio, la classe `DateTime` si trova in **System.dll**.  Per visualizzare i riferimenti in un progetto di Visual Basic, scegliere **Mostra tutti i file**.  
+     In Esplora soluzioni aprire i riferimenti del progetto di unit test e selezionare il riferimento all'assembly che contiene il metodo che si desiderare camuffare. In questo esempio la classe `DateTime` si trova in **System.dll**.  Per visualizzare i riferimenti in un progetto di Visual Basic, scegliere **Mostra tutti i file**.  
   
-     Selezionare **Aggiungi assembly Fakes**.  
+     Scegliere **Aggiungi assembly Fakes**.  
   
 2.  **Inserire uno shim in uno ShimsContext**  
   
@@ -229,21 +245,22 @@ Microsoft Fakes consente di isolare il codice di cui si sta eseguendo il test so
     End Class  
     ```  
   
-     I nomi delle classi shim vengono creati aggiungendo un prefisso `Fakes.Shim` al nome del tipo originale.  I nomi dei parametri vengono aggiunti al nome del metodo.  Non è necessario aggiungere riferimenti ad assembly a System.Fakes.  
+     I nomi delle classi shim vengono creati aggiungendo un prefisso `Fakes.Shim` al nome del tipo originale. I nomi dei parametri vengono aggiunti al nome del metodo. Non è necessario aggiungere riferimenti ad assembly a System.Fakes.  
   
- Nell'esempio precedente viene usato uno shim come metodo statico.  Per usare uno shim per un metodo di istanza, scrivere `AllInstances` tra il nome del tipo e il nome del metodo:  
+ Nell'esempio precedente viene usato uno shim come metodo statico. Per usare uno shim per un metodo di istanza, scrivere `AllInstances` tra il nome del tipo e il nome del metodo:  
   
 ```  
 System.IO.Fakes.ShimFile.AllInstances.ReadToEnd = ...  
 ```  
   
- Non è presente un assembly "System.IO.Fakes" a cui fare riferimento.  Lo spazio dei nomi viene generato dal processo di creazione di shim.  È tuttavia possibile usare istruzioni "using" o "Import" nel modo consueto.  
+ Non è presente un assembly "System.IO.Fakes" a cui fare riferimento. Lo spazio dei nomi viene generato dal processo di creazione di shim. È tuttavia possibile usare istruzioni "using" o "Import" nel modo consueto.  
   
- È inoltre possibile creare shim per istanze, costruttori e proprietà specifiche.  Per altre informazioni, vedere [Utilizzo di shim per isolare l'applicazione dagli altri assembly per gli unit test](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).  
+ È inoltre possibile creare shim per istanze, costruttori e proprietà specifiche. Per altre informazioni, vedere [Uso di shim per isolare l'applicazione da altri assembly per gli unit test](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).  
   
-## Contenuto della sezione  
- [Utilizzo di stub per isolare le parti dell'applicazione l'una dall'altra per gli unit test](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [Uso di stub per isolare le parti dell'applicazione tra loro per gli unit test](../test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md)  
   
- [Utilizzo di shim per isolare l'applicazione dagli altri assembly per gli unit test](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)  
+ [Uso di shim per isolare l'applicazione da altri assembly per gli unit test](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)  
   
  [Generazione del codice, compilazione e convenzioni di denominazione in Microsoft Fakes](../test/code-generation-compilation-and-naming-conventions-in-microsoft-fakes.md)
+
