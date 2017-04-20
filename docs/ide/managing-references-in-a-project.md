@@ -43,9 +43,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 8c478c49ee429e0c5d96dc60f035fcb460b902c8
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
+ms.openlocfilehash: 890e181643d2cc5d4861d64ffd9052e0400126d0
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="managing-references-in-a-project"></a>Gestione dei riferimenti in un progetto
@@ -70,9 +70,9 @@ Prima di scrivere codice per un componente esterno o servizio connesso, il proge
 ## <a name="windows-store-app-references"></a>Riferimenti ad app di Windows Store  
 
 ### <a name="project-references"></a>Riferimenti al progetto  
- I progetti della piattaforma UWP (Universal Windows Platform) destinati a Windows 10 possono creare riferimenti ad altri progetti UWP nella soluzione oppure a progetti o file binari di Windows Store destinati a [!INCLUDE[win81](../debugger/includes/win81_md.md)], a condizione che tali progetti non usino API deprecate in Windows 10. Per altre informazioni vedere la pagina relativa al [passaggio da Windows Runtime 8 alla piattaforma UWP](https://msdn.microsoft.com/en-us/library/windows/apps/dn954974.aspx).  
+ I progetti della piattaforma UWP (Universal Windows Platform) destinati a Windows 10 possono creare riferimenti ad altri progetti UWP nella soluzione oppure a progetti o file binari di Windows Store destinati a [!INCLUDE[win81](../debugger/includes/win81_md.md)], a condizione che tali progetti non usino API deprecate in Windows 10. Per altre informazioni vedere la pagina relativa al [passaggio da Windows Runtime 8 alla piattaforma UWP](https://docs.microsoft.com/en-us/windows/uwp/porting/w8x-to-uwp-root).  
 
- Se si sceglie di destinare di nuovo i progetti di [!INCLUDE[win81](../debugger/includes/win81_md.md)] per Windows 10, vedere [Portabilità, migrazione e aggiornamento dei progetti di Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md)  
+ Se si sceglie di impostare di nuovo Windows 10 come destinazione dei progetti di [!INCLUDE[win81](../debugger/includes/win81_md.md)], vedere [Conversione, migrazione e aggiornamento dei progetti di Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md).  
 
 ### <a name="extension-sdk-references"></a>Riferimenti all'SDK di estensione  
  I progetti di Windows Store in Visual Basic, C#, C++ e JavaScript destinati alla piattaforma UWP (Universal Windows Platform) possono fare riferimento a SDK di estensione destinati a [!INCLUDE[win81](../debugger/includes/win81_md.md)], a condizione che tali SDK non usino API deprecate in Windows 10. Controllare il sito del fornitore dell'SDK di estensione per verificare se i progetti Windows Store destinati a UWP possono farvi riferimento.  
@@ -84,7 +84,7 @@ Prima di scrivere codice per un componente esterno o servizio connesso, il proge
 2.  Andare al sito del fornitore proprietario dell'SDK di estensione non supportato e installare la versione dell'SDK di estensione con dipendenze compatibili con la versione della piattaforma di destinazione del progetto.  
 
     > [!NOTE]
-    >  Un modo per verificare se l'SDK di estensione ha dipendenze da altri SDK di estensione, riavviare Visual Studio, creare un nuovo progetto Windows Store in C#, fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi riferimento**, passare alla scheda **Windows** , passare alla sottoscheda **Estensioni** , selezionare l'SDK di estensione e controllare nel riquadro destro di **Gestione riferimenti**. Se dispone di dipendenze, risulteranno elencate.  
+    >  Un modo per verificare se l'SDK di estensione ha dipendenze da altri SDK di estensione, riavviare Visual Studio, creare un nuovo progetto Windows Store in C#, fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi riferimento**, passare alla scheda **Windows**, passare alla sottoscheda **Estensioni**, selezionare l'SDK di estensione e controllare nel riquadro destro di **Gestione riferimenti**. Se dispone di dipendenze, risulteranno elencate.  
 
     > [!IMPORTANT]
     >  Se il progetto è destinato a Windows 10 e l'SDK di estensione installato in precedenza ha una dipendenza da Microsoft Visual C++ Runtime Package, la versione di Microsoft Visual C++ Runtime Package compatibile con Windows 10 è v14.0 e viene installata con Visual Studio.  
@@ -95,14 +95,14 @@ Prima di scrivere codice per un componente esterno o servizio connesso, il proge
 
 5.  Fare clic con il pulsante destro del mouse sul nodo **Riferimenti** del progetto che ha causato l'errore e scegliere **Aggiungi riferimento**.  
 
-6.  Fare clic sulla scheda **Windows** e sulla sottoscheda **Estensioni** , quindi deselezionare le caselle di controllo per l'SDK di estensione precedente e selezionare le caselle di controllo per i nuovi SDK di estensione. Fare clic su **OK**.  
+6.  Fare clic sulla scheda **Windows** e sulla sottoscheda **Estensioni**, deselezionare le caselle di controllo per l'SDK di estensione precedente e selezionare le caselle di controllo per i nuovi SDK di estensione. Fare clic su **OK**.  
 
 ## <a name="adding-a-reference-at-design-time"></a>Aggiunta di un riferimento in fase di progettazione  
  Quando si fa riferimento a un assembly nel progetto, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] cerca l'assembly nei percorsi seguenti:  
 
--   La directory del progetto corrente. È possibile trovare questi assembly tramite la scheda **Sfoglia** .  
+-   La directory del progetto corrente. È possibile trovare questi assembly tramite la scheda **Sfoglia**.  
 
--   Altre directory di progetto nella stessa soluzione. È possibile trovare questi assembly tramite la scheda **Progetti** .  
+-   Altre directory di progetto nella stessa soluzione. È possibile trovare questi assembly tramite la scheda **Progetti**.  
 
 > [!NOTE]
 >  Tutti i progetti contengono un riferimento implicito a mscorlib. I progetti di Visual Basic contengono un riferimento implicito a `Microsoft.VisualBasic`.  
@@ -122,7 +122,7 @@ Prima di scrivere codice per un componente esterno o servizio connesso, il proge
  Per altre informazioni, vedere [Sviluppo per una versione specifica di .NET Framework](../ide/targeting-a-specific-dotnet-framework-version.md).  
 
 ## <a name="project-to-project-references"></a>Riferimenti da progetto a progetto  
- I riferimenti da progetto a progetto sono riferimenti a progetti che contengono assembly; è possibile crearli tramite la scheda **Progetto** . Visual Studio può trovare un assembly se viene specificato un percorso al progetto.  
+ I riferimenti da progetto a progetto sono riferimenti a progetti che contengono assembly; è possibile crearli tramite la scheda **Progetto**. Visual Studio può trovare un assembly se viene specificato un percorso al progetto.  
 
  In un progetto che produce un assembly, fare riferimento al progetto e non usare un riferimento al file (vedere sotto). Il vantaggio di un riferimento da progetto è che viene creata una dipendenza tra i progetti nel sistema di compilazione. Il progetto dipendente verrà compilato come se fosse stato modificato dall'ultima volta in cui è stato compilato il progetto di riferimento. Un riferimento al file non crea una dipendenza di compilazione, pertanto è possibile compilare il progetto di riferimento senza compilare il progetto dipendente, nel qual caso il riferimento potrebbe diventare obsoleto. Ovvero, il progetto potrebbe fare riferimento a una versione precedente del progetto. Ciò potrebbe comportare l'esigenza di varie versioni di una singola DLL nella directory bin, il che non è possibile. Quando si verifica questo conflitto, viene visualizzato un messaggio simile al seguente: "Avviso: impossibile copiare la dipendenza 'file' del progetto 'progetto' nella directory di esecuzione perché sovrascriverebbe il riferimento 'file'.". Per altre informazioni, vedere [Risoluzione dei problemi relativi ai riferimenti interrotti](../ide/troubleshooting-broken-references.md) e [Procedura: Creare e rimuovere dipendenze di progetto](../ide/how-to-create-and-remove-project-dependencies.md).  
 

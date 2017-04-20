@@ -1,82 +1,98 @@
 ---
-title: "Impostazioni progetto di VC++, Progetti e soluzioni, finestra di dialogo Opzioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Projects.VCBuild"
-helpviewer_keywords: 
-  - "compilazioni [Visual Studio], log"
-  - "processo di compilazione [C++]"
-  - "file [Visual Studio], generati dal compilatore C/C++"
-  - "estensioni di file, generati dal compilatore C o C++"
-  - "cl.exe (compilatore), estensioni di file"
-  - "estensioni, file generati dal compilatore C o C++"
-  - "BuildLog.htm"
+title: Impostazioni progetto di VC++, Progetti e soluzioni, finestra di dialogo Opzioni | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.ToolsOptionsPages.Projects.VCBuild
+helpviewer_keywords:
+- builds [Visual Studio], logs
+- build process [C++]
+- files [Visual Studio], built by C/C++ compiler
+- file extensions, built by C or C++ compiler
+- cl.exe compiler, file extensions
+- extensions, files built by C or C++ compiler
+- BuildLog.htm
 ms.assetid: 56420efd-6a95-464e-b890-e2b38c48d66a
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Impostazioni progetto di VC++, Progetti e soluzioni, finestra di dialogo Opzioni
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: fbe834e4e8178a129f68cec1c4a78ffea3c9fd7c
+ms.lasthandoff: 04/05/2017
 
-Questa finestra di dialogo consente di definire le impostazioni del progetto [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] relative al log di compilazione e ai tipi di file di supporto.  
+---
+# <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>Impostazioni progetto di VC++, Progetti e soluzioni, finestra di dialogo Opzioni
+Questa finestra di dialogo consente di definire le impostazioni del progetto [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] relative ai log di compilazione e ai tipi di file supportati.  
   
-### Per accedere a questa finestra di dialogo  
+### <a name="to-access-this-dialog-box"></a>Per accedere a questa finestra di dialogo  
   
 1.  Scegliere **Opzioni** dal menu **Strumenti**.  
   
-2.  Selezionare **Progetti e soluzioni**, quindi scegliere **Impostazioni progetto di VC\+\+**.  
+2.  Selezionare **Progetti e soluzioni** e quindi **Impostazioni progetto di VC++**.  
   
-## Percorso di ricerca delle personalizzazioni di compilazione  
- Specifica l'elenco delle directory che contengono i file RULE, che aiutano a definire le regole di compilazione dei progetti.  
+## <a name="build-customization-search-path"></a>Percorso di ricerca per le personalizzazioni delle compilazioni  
+ Specifica l'elenco delle directory che contengono i file con estensione rule, che consentono di definire le regole di compilazione per i progetti.  
   
-## Log di compilazione  
+## <a name="build-logging"></a>Log di compilazione  
  **Sì**  
- Attiva la creazione del file di log di compilazione.  Questa opzione consente di generare il file BuildLog.htm, che è possibile reperire nella directory dei file intermedi del progetto.  A ogni ricompilazione il file BuildLog.htm precedente viene sovrascritto.  
+ Attiva la generazione del file di log di compilazione. Con questa opzione viene generato il file BuildLog.htm, reperibile nella directory dei file intermedi del progetto. Tale file viene sovrascritto a ogni nuova ricompilazione.  
   
  **No**  
- Disattiva la creazione del file di log di compilazione.  
+ Disattiva la generazione del file di log di compilazione.  
   
-## Temporizzazione del processo di compilazione  
+## <a name="build-timing"></a>Durata compilazione  
  **Sì**  
- Attiva la temporizzazione del processo di compilazione.  Se l'opzione è selezionata, il tempo impiegato per il completamento della compilazione viene inviato alla finestra di output.  Per ulteriori informazioni, vedere [Finestra di output](../../ide/reference/output-window.md).  
+ Attiva la registrazione della durata della compilazione. Se questa opzione è selezionata, il tempo necessario per il completamento della compilazione viene inviato alla finestra di output. Per altre informazioni, vedere [Finestra di output](../../ide/reference/output-window.md).  
   
  **No**  
- Disattiva la temporizzazione del processo di compilazione.  
+ Disattiva la registrazione della durata della compilazione.  
   
-## Estensioni da nascondere  
- Consente di specificare le estensioni dei file che non saranno visualizzati in **Esplora soluzioni** quando è abilitata l'opzione **Mostra tutti i file**.  
+## <a name="extensions-to-hide"></a>Estensioni da nascondere  
+ Specifica le estensioni di file che non verranno visualizzate in **Esplora soluzioni** quando l'opzione **Mostra tutti i file** è abilitata.  
   
-## Estensioni da includere  
- Consente di specificare le estensioni dei file che è possibile trasferire nel progetto.  
+## <a name="extensions-to-include"></a>Estensioni da includere  
+ Specifica le estensioni di file che è possibile trasferire nel progetto.  
   
-## Compilazioni in C\+\+ simultanee massime  
- Specifica il numero massimo di core della CPU da utilizzare per la compilazione in C\+\+ parallela.  
+## <a name="maximum-concurrent-c-compilations"></a>Numero massimo di compilazioni C++ simultanee  
+ Specifica il numero massimo di core CPU da usare per la compilazione C++ in parallelo.  
   
-## Mostra ambiente nel log  
+## <a name="show-environment-in-log"></a>Mostra ambiente nel log  
  **Sì**  
- Elenca le variabili di ambiente nel file di log di compilazione.  Questa opzione specifica se attivare o meno l'eco di tutte le variabili di ambiente durante la compilazione dei progetti [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] nel file di log di compilazione.  
+ Elenca le variabili di ambiente presenti nel file di log di compilazione. Questa opzione specifica se attivare o meno nel file di log di compilazione l'eco di tutte le variabili di ambiente durante la compilazione di progetti [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)].  
   
  **No**  
  Esclude le variabili di ambiente dal file di log di compilazione.  
   
-## Modalità Esplora soluzioni  
- **Mostra solo file del progetto**  
- Consente di configurare **Esplora soluzioni** in modo da visualizzare solo i file del progetto.  
+## <a name="solution-explorer-mode"></a>Modalità Esplora soluzioni  
+ **Mostra solo i file del progetto**  
+ Configura **Esplora soluzioni** in modo da visualizzare solo i file del progetto.  
   
  **Mostra tutti i file**  
- Consente di configurare **Esplora soluzioni** in modo da visualizzare i file nel progetto e i file su disco nella cartella del progetto.  
+ Configura **Esplora soluzioni** in modo da visualizzare i file del progetto e quelli presenti su disco nella cartella del progetto.  
   
-## Vedere anche  
- [Compilazione di programmi C\/C\+\+](/visual-cpp/build/building-c-cpp-programs)   
- [Riferimenti alla compilazione in C\/C\+\+](/visual-cpp/build/reference/c-cpp-building-reference)
+## <a name="see-also"></a>Vedere anche  
+ [Compilazione di programmi C/C++](/cpp/build/building-c-cpp-programs)   
+ [Riferimenti alla compilazione in C/C++](/cpp/build/reference/c-cpp-building-reference)
