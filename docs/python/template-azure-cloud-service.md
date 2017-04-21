@@ -1,7 +1,7 @@
 ---
 title: Modello di progetto servizio cloud di Azure per Python | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,15 +29,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 10ea76d474d96ba4b5aa95584fd1893abe05d991
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 5dd1c40c925327c9494e3a334cdf348692a4981d
+ms.lasthandoff: 04/10/2017
 
 ---
 
 # <a name="azure-cloud-service-projects-for-python"></a>Progetti servizio cloud di Azure per Python
 
-Python Tools for Visual Studio (PTVS) include modelli per iniziare rapidamente a creare servizi cloud di Azure con Python.
+Visual Studio include modelli per iniziare rapidamente a creare servizi cloud di Microsoft Azure con Python.
 
 Un [servizio cloud](http://go.microsoft.com/fwlink/?LinkId=306052) è costituito da un numero qualsiasi di *ruoli di lavoro* e *ruoli web*, ognuno dei quali esegue un'attività distinta dal punto di vista concettuale, ma che può essere replicata separatamente in macchine virtuali a seconda delle esigenze di ridimensionamento. I ruoli Web offrono funzionalità di hosting per applicazioni Web front-end. Per quel che riguarda Python, per scrivere una tale applicazione, supportata dal [modello Progetto Web](template-web.md), è possibile usare qualsiasi framework Web che supporta WSGI. I ruoli di lavoro sono destinati a processi a esecuzione prolungata che non interagiscono direttamente con gli utenti. Essi usano in genere le librerie di [dati](http://go.microsoft.com/fwlink/?LinkId=401571) e [servizi app](http://go.microsoft.com/fwlink/?LinkId=401572), che è possibile installare con `pip install`&nbsp;[`azure`](http://pypi.org/project/azure).
 
@@ -58,7 +58,7 @@ Questo argomento contiene informazioni dettagliate sul modello di progetto e su 
 
 1. Dopo aver aggiunto un nuovo ruolo al progetto, verranno visualizzate alcune istruzioni di configurazione. Tali istruzioni non sono in genere necessarie, ma possono essere utili per la futura personalizzazione dei progetti. Si noti che, quando si aggiungono più ruoli contemporaneamente, rimarranno aperte solo le istruzioni relative all'ultimo ruolo. Le istruzioni e i suggerimenti per la risoluzione dei problemi relativi ad altri ruoli sono disponibili nei rispettivi file `readme.mht`, inclusi nella radice del ruolo o nella cartella `bin`.
 
-1. La cartella `bin` di un progetto contiene anche uno o due script di PowerShell usati per la configurazione della macchina virtuale remota, tra cui quello di installazione di Python, eventuali file [requirements.txt](#requirementstxt) presenti nel progetto e quello per l'eventuale configurazione di IIS. È possibile modificare questi file a seconda della distribuzione, anche se le opzioni più comuni possono essere gestite in altri modi. Vedere [Configurazione della distribuzione del ruolo](#configuring-role-deployment) più avanti. È consigliabile non rimuovere questi file, perché se non sono disponibili verrà usato uno script di configurazione legacy.
+1. La cartella `bin` di un progetto contiene anche uno o due script di PowerShell usati per la configurazione della macchina virtuale remota, tra cui quello di installazione di Python, eventuali file [requirements.txt](#dependencies) presenti nel progetto e quello per l'eventuale configurazione di IIS. È possibile modificare questi file a seconda della distribuzione, anche se le opzioni più comuni possono essere gestite in altri modi. Vedere [Configurazione della distribuzione del ruolo](#configuring-role-deployment) più avanti. È consigliabile non rimuovere questi file, perché se non sono disponibili verrà usato uno script di configurazione legacy.
 
     ![File di supporto del ruolo di lavoro](media/template-azure-cloud-service-worker-role-support-files.png)
 

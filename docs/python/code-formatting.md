@@ -1,7 +1,7 @@
 ---
-title: Formattazione del codice in Python Tools for Visual Studio | Microsoft Docs
+title: Formattazione del codice Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,22 +29,22 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: c1d7a19438b796c5666daecef33052e43d1f720f
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: b9e1c2b6be671adb99a13e4a0eb4357fbba477b2
+ms.lasthandoff: 04/10/2017
 
 ---
 
 # <a name="formatting-python-code"></a>Formattazione del codice Python
 
-La formattazione del codice in Python Tools for Visual Studio (PTVS) versione 2.0 e versioni successive consente di riformattare velocemente il codice in modo che corrisponda a opzioni di formattazione preconfigurate.
+Visual Studio consente di riformattare rapidamente il codice in base a opzioni di formattazione preconfigurate.
 
 - Per formattare una selezione, selezionare **Modifica > Avanzate > Formatta selezione** o premere CTRL+E,F.
 - Per formattare l'intero file, selezionare **Modifica > Avanzate > Formatta documento** o premere CTRL+E,D.
 
 Le opzioni vengono impostate mediante **Strumenti > Opzioni > Editor di testo > Python > Formattazione** e le relative schede secondarie e per impostazione predefinita vengono impostate in modo da corrispondere a un superset della [guida di stile PEP 8](http://www.python.org/dev/peps/pep-0008/). La scheda **Generale** determina quando viene applicata la formattazione. Le altre tre pagine secondarie sono definite nelle sezioni seguenti.
 
-PTVS aggiunge inoltre l'utile comando [Fill Comment Paragraph](#fill-comment-paragraph) (Riempi paragrafo commenti) al menu **Modifica > Avanzate** come descritto di seguito.
+Il supporto di Python in Visual Studio aggiunge anche il comando [Fill Comment Paragraph](#fill-comment-paragraph-command) (Riempi paragrafo di commento), molto utile, al menu **Modifica > Avanzate** come descritto di seguito.
 
 ## <a name="spacing"></a>Spacing (Spaziatura)
 
@@ -109,7 +109,7 @@ La scheda **Statements** (Istruzioni) controlla la riscrittura automatica di var
 
 ## <a name="wrapping"></a>Wrapping (Ritorno a capo)
 
-La scheda **Wrapping** (Ritorno a capo) consente di impostare il valore **Maximum comment width** (Larghezza massima commenti)(per impostazione predefinita 80), in modo che se viene impostata l'opzione **Wrap comments that are too wide** (Ritorno a capo dei commenti troppo larghi), PTVS riformatti i commenti in modo che non superino la larghezza specificata.
+La scheda **Ritorno a capo** consente di impostare il valore **Maximum comment width** (Larghezza massima commenti), che per impostazione predefinita è 80, in modo che se viene impostata l'opzione **Wrap comments that are too wide** (Esegui il ritorno a capo dei commenti troppo larghi), Visual Studio riformatti i commenti in modo che non superino la larghezza specificata.
 
 ```python
 # Wrapped to 40 columns

@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: f1148cb9e4d50241580190f274d6a4c2e3979b80
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
+ms.openlocfilehash: 878bd0baaa0e08a31274645213b222bf6faeb412
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -62,7 +62,7 @@ Per convenzione, PTVS identifica i test come metodi il cui nome inizia con "test
       unittest.main()
   ```
 
-1. Salvare il file se necessario e quindi scegliere il comando di menu **Test > Finestre > Esplora test** per aprire Esplora test.
+1. Se necessario, salvare il file e aprire Esplora test con il comando di menu **Test > Windows > Esplora test**.
 
 1. Esplora test cercherà il progetto per i test e li visualizzerà come illustrato di seguito. Fare doppio clic su un test per aprirne il file di origine.
 

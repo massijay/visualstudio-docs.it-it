@@ -1,7 +1,7 @@
 ---
-title: "Debug in modalità mista in Python Tools for Visual Studio | Microsoft Docs"
+title: "Debug in modalità mista per Python in Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: ddbac5b8ed52e6ed7afae7e7b04dc2fa15f7a0c2
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: bdc621831893f907beba7ec5ad503fe4d96c0042
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -70,7 +70,7 @@ Per un'introduzione a compilazione, test e debug dei moduli C nativi con Visual 
 
 - [Stack di chiamate combinato](#combined-call-stack)
 - [Passaggio tra codice Python e codice nativo](#stepping-between-python-and-native-code)
-- [Visualizzazione di valori PyObject nel codice nativo](#pyobject-values-in-native-code)
+- [Visualizzazione di valori PyObject nel codice nativo](#pyobject-values-view-in-native-code)
 - [Visualizzazione di valori nativi nel codice Python](#native-values-view-in-python-code)
 
 ### <a name="combined-call-stack"></a>Stack di chiamate combinato
@@ -153,7 +153,7 @@ Il debugger in modalità mista è diverso dal [debugger Python standard](debuggi
 - Funzionalità non supportate: punti di interruzione condizionali, finestra interattiva di debug e debug remoto multipiattaforma.
 - Finestra di controllo immediato: è disponibile ma con un sottoinsieme limitato di funzionalità, tra cui tutte le limitazioni qui elencate.
 - Versioni di Python supportate: solo CPython 2.7 e versioni successive alla 3.3.
-- Visual Studio Shell: quando si usa PTVS con Visual Studio Shell (ad esempio, se è stato installato con il programma di installazione integrato), Visual Studio non è in grado di aprire progetti C++ e l'esperienza di modifica per i file di C++ è limitata a un semplice editor di testo. Il debug di C/C++ e il debug in modalità mista sono tuttavia supporti completamente nella shell con il codice sorgente, l'esecuzione istruzione per istruzione del codice nativo e la valutazione delle espressioni C++ nelle finestre del debugger.
+- Visual Studio Shell: quando si usa Python con Visual Studio Shell, ad esempio se è stato installato con il programma di installazione integrato, Visual Studio non è in grado di aprire i progetti C++ e l'esperienza di modifica per i file di C++ è limitata a un semplice editor di testo. Il debug di C/C++ e il debug in modalità mista sono tuttavia supporti completamente nella shell con il codice sorgente, l'esecuzione istruzione per istruzione del codice nativo e la valutazione delle espressioni C++ nelle finestre del debugger.
 - Visualizzazione ed espansione degli oggetti: durante la visualizzazione di oggetti Python nelle finestre del debugger Variabili locali ed Espressioni di controllo, il debugger in modalità mista mostra solo la struttura degli oggetti. Non valuta automaticamente le proprietà, né mostra gli attributi calcolati. Per le raccolte, mostra solo gli elementi per i tipi di raccolta predefiniti (`tuple`, `list`, `dict`, `set`). I tipi di raccolta personalizzati non vengono visualizzati come raccolte, a meno che non siano ereditati da un tipo di raccolta predefinito.
 - Valutazione delle espressioni: vedere di seguito.
 
