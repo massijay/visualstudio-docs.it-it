@@ -1,27 +1,42 @@
 ---
-title: "Visual C++ Structures in Class Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Class Designer [Visual Studio], structures"
+title: Strutture Visual C++ in Progettazione classi | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Class Designer [Visual Studio], structures
 ms.assetid: bad18ab6-d956-47a6-a413-811cc26db5f5
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
----
-# Visual C++ Structures in Class Designer
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 5f15cb38d9bd9f5035f9c02ef1beaf5d19da143b
+ms.lasthandoff: 04/05/2017
 
-La Progettazione classi supporta strutture C\+\+ dichiarate tramite la parola chiave `struct`.  Di seguito è riportato un esempio:  
+---
+# <a name="visual-c-structures-in-class-designer"></a>Strutture Visual C++ in Progettazione classi
+Progettazione classi supporta le strutture C++, che vengono dichiarate con la parola chiave `struct`, come nell'esempio seguente:  
   
 ```  
 struct MyStructure  
@@ -32,15 +47,15 @@ struct MyStructure
 };  
 ```  
   
- Per ulteriori informazioni sull'utilizzo del tipo `struct` vedere [struct](/visual-cpp/cpp/struct-cpp).  
+ Per altre informazioni sull'uso del tipo `struct`, vedere [struct](/cpp/cpp/struct-cpp).  
   
- Una forma della struttura C\+\+ in un diagramma classi viene visualizzata e funziona come una forma della classe, con l'eccezione che l'etichetta **Struct** ha angoli quadrati anziché angoli arrotondati.  
+ Una forma struttura C++ in un diagramma classi è simile per aspetto e funzionamento a una forma classe, ad eccezione del fatto che l'etichetta della forma struttura è **Struct** ed è contraddistinta da angoli squadrati anziché arrotondati.  
   
-|Elemento di codice|Visualizzazione di Progettazione classi|  
-|------------------------|---------------------------------------------|  
+|Elemento del codice|Visualizzazione di Progettazione classi|  
+|------------------|-------------------------|  
 |`struct StructureName {};`|**NomeStruttura**<br /><br /> Struct|  
   
-## Vedere anche  
- [Working with Visual C\+\+ Code \(Class Designer\)](../ide/working-with-visual-cpp-code-class-designer.md)   
- [Classi e struct](/visual-cpp/cpp/classes-and-structs-cpp)   
- [struct](/visual-cpp/cpp/struct-cpp)
+## <a name="see-also"></a>Vedere anche  
+ [Uso del codice Visual C++ (Progettazione classi)](../ide/working-with-visual-cpp-code-class-designer.md)   
+ [Classi e struct](/cpp/cpp/classes-and-structs-cpp)   
+ [struct](/cpp/cpp/struct-cpp)

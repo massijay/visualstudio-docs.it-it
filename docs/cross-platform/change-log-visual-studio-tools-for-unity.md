@@ -1,5 +1,5 @@
 ---
-title: Registro delle modifiche (Visual Studio Tools per Unity) |Microsoft Docs
+title: Log delle modifiche (Visual Studio Tools per Unity) |Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,13 +29,42 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 91fde66abf2f325ef0a6a0a2fd30e36981f44033
-ms.openlocfilehash: 8c13675dbd06111bb0eced77f9343c80959afba1
-ms.lasthandoff: 03/08/2017
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 2af148cb8367ea3a584ac8e028c8167e4ad6123b
+ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>Registro delle modifiche (Visual Studio Tools per Unity)
 Registro delle modifiche di Visual Studio Tools per Unity.  
+
+## <a name="3100"></a>3.1.0.0
+ Rilasciato in data 07-04-2017
+
+### <a name="new-features"></a>Nuove funzionalità  
+  
+-   **Debugger:**  
+
+    -   Aggiunto il supporto per il nuovo runtime di Unity, compatibile con .NET 4.6 / C# 6.
+        
+-   **Generazione del progetto:**  
+
+    -   Aggiunta del supporto per il profilo .NET 4.6.
+    
+    -   Aggiunta del supporto per i file con estensione mcs.rsp.
+    
+    -   Abilita sempre l'opzione di compilazione non sicura quando viene usato Unity 5.6.
+    
+    -   Aggiunto il supporto per la generazione del progetto "Player" quando si usa la piattaforma Windows Store e il back-end il2cpp.
+   
+### <a name="bug-fixes"></a>Correzioni di bug  
+  
+-   **Editor di codice:**  
+
+    -   Corretta la posizione del cursore dopo l'inserimento del metodo con completamento automatico.
+  
+-   **Generazione del progetto:**  
+  
+    -   Eliminata la post-elaborazione della versione dell'assembly.
 
 ## <a name="3001"></a>3.0.0.1
  Rilasciato in data 07.03.2017
@@ -43,59 +72,59 @@ Registro delle modifiche di Visual Studio Tools per Unity.
 ### <a name="this-version-includes-all-new-features-and-bug-fixes-introduced-with-28x-series"></a>Questa versione include tutte le nuove funzionalità e correzioni di bug introdotte con la serie 2.8.x.
 
 ## <a name="282-30-preview-3"></a>2.8.2 (3.0 Preview 3)
- Rilasciato in data 25.01.2017
+ Data rilascio: 25/01/2017
    
 ### <a name="bug-fixes"></a>Correzioni di bug  
 
 -   **Generazione del progetto:**  
   
-    -   Correzione della regressione dove veniva fatto riferimento ai progetti di plug-in due volte, prima come DLL binario e poi come riferimento al progetto.
+    -   Corretta la regressione dove veniva fatto riferimento ai progetti Plugins due volte, prima come DLL binario e poi come riferimento al progetto.
 
 ## <a name="281-30-preview-2"></a>2.8.1 (3.0 Preview 2)
- Rilasciato in data 23.01.2017
+ Data rilascio: 23/01/2017
    
 ### <a name="bug-fixes"></a>Correzioni di bug  
 
 -   **Editor di codice:**  
   
-    -   Correzione di un arresto anomalo all'avvio di una dichiarazione di attributo senza completamento parentesi graffa.
+    -   Corretto un arresto anomalo all'avvio di una dichiarazione di attributo senza completamento parentesi graffa.
 
 -   **Debugger:**  
   
-    -   Correzione dei punti di interruzione delle funzioni con coroutine sotto il nuovo compilatore/runtime Unity.
+    -   Corretti i punti di interruzione delle funzioni con coroutine sotto il nuovo compilatore/runtime Unity.
     
-    -   È stato aggiunto un avviso in caso di punto di interruzione non associabile (quando non viene trovato alcun percorso di origine corrispondente).
+    -   Aggiunto un avviso in caso di punto di interruzione non associabile (quando non viene trovato alcun percorso di origine corrispondente).
     
 -   **Generazione del progetto:**  
   
-    -   Correzione della generazione di file csproj con caratteri speciali/localizzati.
+    -   Corretta la generazione di file csproj con caratteri speciali/localizzati.
     
-    -   Correzione dei riferimenti esterni ad Asset, ad esempio Libreria (come Facebook SDK).
+    -   Corretti i riferimenti esterni ad Asset, ad esempio Libreria (come Facebook SDK).
 
--   **Varie**  
+-   **Varie:**  
   
-    -   Aggiunto controllo per impedire l'esecuzione di Unity durante l'installazione o la disinstallazione.
+    -   Aggiunto il controllo per impedire l'esecuzione di Unity durante l'installazione o la disinstallazione.
     
     -   Eseguito il passaggio a https per l'uso della documentazione remota di Unity.
 
 ## <a name="28-30-preview"></a>2.8 (3.0 Preview)
- Rilasciato in data 17.11.2016
+ Data rilascio: 17/11/2016
 
 ### <a name="new-features"></a>Nuove funzionalità  
   
 -   **Generale:**  
   
-    -   Aggiunta del supporto per l'installazione di Visual Studio 2017.
+    -   Aggiunto il supporto per l'installazione di Visual Studio 2017.
   
-    -   Aggiunta del supporto per l'estensione di Visual Studio 2017.
+    -   Aggiunto il supporto per l'estensione di Visual Studio 2017.
     
-    -   Aggiunta del supporto per la localizzazione.    
+    -   Aggiunto il supporto per la localizzazione.    
 
 -   **Editor di codice:**  
 
-    -   Aggiunto IntelliSense C# per i messaggi Unity.
+    -   Aggiunto IntelliSense C# per i messaggi di Unity.
   
-    -   Aggiunta colorazione del codice C# per i messaggi Unity.
+    -   Aggiunta la colorazione del codice C# per i messaggi di Unity.
 
 -   **Debugger:**  
 
@@ -109,7 +138,7 @@ Registro delle modifiche di Visual Studio Tools per Unity.
     
     -   Aggiunto il supporto per le conversioni implicite di primitive.
     
-    -   Aggiunta di messaggi di errore più efficaci quando un tipo è previsto o non trovato.
+    -   Aggiunti messaggi di errore più efficaci quando un tipo è previsto o non trovato.
 
 -   **Generazione del progetto:**  
 
@@ -119,9 +148,9 @@ Registro delle modifiche di Visual Studio Tools per Unity.
     
 -   **Procedure guidate:**  
   
-    -   Aggiunta del supporto per i messaggi di Unity in tipi non di comportamento come Editor o EditorWindow.
+    -   Aggiunto il supporto per i messaggi di Unity in tipi non Behaviour come Editor o EditorWindow.
     
-    -   Passaggio a Roslyn per inserire e formattare i messaggi Unity.
+    -   Eseguito il passaggio a Roslyn per inserire e formattare i messaggi di Unity.
     
 ### <a name="bug-fixes"></a>Correzioni di bug  
   
@@ -129,32 +158,32 @@ Registro delle modifiche di Visual Studio Tools per Unity.
   
     -   Risolto un bug con arresto anomalo di Unity durante la valutazione di tipi generici.
     
-    -   Correzione della gestione dei tipi nullable.
+    -   Corretta la gestione dei tipi nullable.
     
-    -   Correzione della gestione delle enumerazioni.
+    -   Corretta la gestione delle enumerazioni.
     
-    -   Correzione della gestione dei tipi di membro annidato.
+    -   Corretta la gestione dei tipi di membro annidato.
     
-    -   Correzione dell'accesso all'indicizzatore raccolta.
+    -   Corretto l'accesso all'indicizzatore raccolta.
     
     -   Corretto il supporto per il debug dei frame di iteratore con il nuovo compilatore C#.
 
 -   **Generazione del progetto:**  
   
-    -   Correzione del bug che impediva la compilazione quando si usava il lettore Web Unity.
+    -   Corretto il bug che impediva la compilazione quando si usava Unity Web Player.
     
-    -   Correzione del bug che impediva la compilazione durante la compilazione di uno script con nome file con codifica Web.
+    -   Corretto il bug che impediva la compilazione durante la compilazione di uno script con nome file con codifica Web.
 
 ## <a name="23"></a>2.3  
- Rilasciato in data 14.07.2016  
+ Data rilascio: 14/07/2016  
   
 ### <a name="new-features"></a>Nuove funzionalità  
   
 -   **Generale:**  
   
-    -   Aggiunta di un'opzione per disabilitare i log della console Unity nell'elenco errori di Visual Studio.  
+    -   Aggiunta un'opzione per disabilitare i log della console Unity nell'elenco errori di Visual Studio.  
   
-    -   Aggiunta di un'opzione per consentire la modifica delle proprietà del progetto generato.  
+    -   Aggiunta un'opzione per consentire la modifica delle proprietà del progetto generato.  
   
 -   **Debugger:**  
   
@@ -162,7 +191,7 @@ Registro delle modifiche di Visual Studio Tools per Unity.
   
 -   **Procedure guidate:**  
   
-    -   Aggiunti MonoBehaviour mancanti.  
+    -   Aggiunti i MonoBehaviour mancanti.  
   
 ### <a name="bug-fixes"></a>Correzioni di bug  
   
@@ -451,9 +480,9 @@ Registro delle modifiche di Visual Studio Tools per Unity.
   
 ### <a name="bug-fixes"></a>Correzioni di bug  
   
--   Correzione della gestione dei temi di Visual Studio. Nelle versioni precedenti le finestre di dialogo su temi neri possono apparire vuote (problemi Connect [n.&93263;7](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/932637/) e [n.&93643;9](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/936439/)).  
+-   Correzione della gestione dei temi di Visual Studio. Nelle versioni precedenti le finestre di dialogo su temi neri possono apparire vuote (problemi Connect [n. 932637](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/932637/) e [n. 936439](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/936439/)).  
   
--   Correzione del blocco di Unity durante la connessione del debugger quando Unity è in fase di ricompilazione (problemi Connect [n.&94711;9](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/947119/) e [n.&96921;1](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/969211/)).  
+-   Correzione del blocco di Unity durante la connessione del debugger quando Unity è in fase di ricompilazione (problemi Connect [n. 947119](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/947119/) e [n. 969211](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/969211/)).  
   
 -   Correzione dei punti di interruzione durante il debug di editor o lettori remoti compilati su un altro sistema.  
   
@@ -463,7 +492,7 @@ Registro delle modifiche di Visual Studio Tools per Unity.
   
 -   Correzione della gestione dell'ambito delle variabili nel debugger per evitare variabili live indicate come esterne all'ambito.  
   
--   Correzione della ricerca di membri statici nella valutazione di espressioni del debugger (problema Connect [n.&95337;9](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/953379/)).  
+-   Correzione della ricerca di membri statici nella valutazione di espressioni del debugger (problema Connect [n. 953379](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/953379/)).  
   
 -   Correzione della visualizzazione dei tipi nella valutazione di espressioni del debugger in modo da mostrare proprietà e campi statici.  
   
@@ -715,21 +744,21 @@ Registro delle modifiche di Visual Studio Tools per Unity.
   
 -   Correzione del bug UVS-48 per cui la digitazione di virgolette doppie produceva talvolta un errore e interrompeva la funzione (completamento del codice, evidenziazione della sintassi e così via).  
   
--   Correzione del bug UVS-46 per cui veniva generato un file di script aperto duplicato (UnityScript) quando si faceva clic sull'elenco errori di Visual Studio.  
+-   Corretto il bug UVS-46 per cui veniva generato un file di script aperto duplicato (UnityScript) quando si faceva clic sull'elenco errori di Visual Studio.  
   
--   Correzione del bug UVS-42 per cui il logo di connettività di Unity sulla barra di stato non gestiva gli eventi del mouse in Visual Studio 2012.  
+-   Corretto il bug UVS-42 per cui il logo di connettività di Unity sulla barra di stato non gestiva gli eventi del mouse in Visual Studio 2012.  
   
--   Correzione del bug UVS-44 per cui CTRL+SHIFT+Q non era disponibile in Visual Studio 2012 per metodi MonoBehaviour rapidi.  
+-   Corretto il bug UVS-44 per cui CTRL+MAIUSC+Q non era disponibile in Visual Studio 2012 per metodi MonoBehaviour rapidi.  
   
--   Correzione del bug UVS-40 per cui elementi selezionati in Esplora progetti Unity non erano leggibili in caso di inattività della finestra nel tema scuro di Visual Studio&2012;.  
+-   Corretto il bug UVS-40 per cui elementi selezionati in Esplora progetti Unity non erano leggibili in caso di inattività della finestra nel tema scuro di Visual Studio 2012.  
   
--   Correzione del bug UVS-39 per cui si verificava un problema di suddivisione in token di stringhe con caratteri di escape.  
+-   Corretto il bug UVS-39 per cui si verificava un problema di suddivisione in token di stringhe con caratteri di escape.  
   
--   Correzione del bug UVS-35 per cui veniva richiamato ToString negli oggetti durante il controllo delle variabili.  
+-   Corretto il bug UVS-35 per cui veniva richiamato ToString negli oggetti durante il controllo delle variabili.  
   
--   Correzione del bug UVS-27 relativo all'incoerenza della finestra Vai al simbolo con il tema scuro in Visual Studio&2012;.  
+-   Corretto il bug UVS-27 relativo all'incoerenza della finestra Vai al simbolo con il tema scuro in Visual Studio 2012.  
   
--   Correzione del bug UVS-11 relativo alla presenza di variabili locali in coroutine.  
+-   Corretto il bug UVS-11 relativo alla presenza di variabili locali in coroutine.  
   
 ## <a name="11--beta-release"></a>1.1 - Versione beta  
  Rilasciato in data 09.10.2014  
@@ -789,9 +818,9 @@ Registro delle modifiche di Visual Studio Tools per Unity.
   
 -   Analisi del messaggio della console di informazioni, per cui facendo clic nell'elenco degli errori si viene indirizzati al primo stack frame con simboli.  
   
--   Aggiunta di un'[API](../cross-platform/customize-project-files-created-by-vstu.md) per consentire all'utente di partecipare alla generazione del progetto.  
+-   Aggiunta un'[API](../cross-platform/customize-project-files-created-by-vstu.md) per consentire all'utente di partecipare alla generazione del progetto.  
   
--   Aggiunta di un'[API](../cross-platform/share-the-unity-log-callback-with-vstu.md) per consentire all'utente di partecipare a LogCallback.  
+-   Aggiunta un'[API](../cross-platform/share-the-unity-log-callback-with-vstu.md) per consentire all'utente di partecipare a LogCallback.  
   
 ### <a name="bug-fixes"></a>Correzioni di bug  
   
@@ -835,9 +864,9 @@ Registro delle modifiche di Visual Studio Tools per Unity.
   
 -   Correzione del modo in cui i tipi vengono cercati negli assembly caricati per la valutazione di espressioni.  
   
--   Correzione del bug UVS-21 per cui la valutazione dell'assegnazione in oggetti Unity non aveva effetto.  
+-   Corretto il bug UVS-21 per cui la valutazione dell'assegnazione su oggetti Unity non aveva effetto.  
   
--   Correzione del bug UVS-21 che generava un puntatore non valido durante la valutazione della chiamata di un metodo nell'API Math di Unity.  
+-   Corretto il bug UVS-21 che generava un puntatore non valido durante la valutazione della chiamata di un metodo nell'API Math di Unity.  
   
 ## <a name="108"></a>1.0.8  
  Rilasciato in data 26.09.2012  

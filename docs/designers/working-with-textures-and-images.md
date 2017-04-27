@@ -1,35 +1,52 @@
 ---
-title: "Uso di trame e immagini | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Uso di trame e immagini | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b9fbc8fa-66d1-4055-8460-24d8b8fbe43e
 caps.latest.revision: 10
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Uso di trame e immagini
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: BrianPeek
+ms.author: brpeek
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
+ms.openlocfilehash: 2cb4836ae868d56147a82fcefa0c5546bfcf8cad
+ms.lasthandoff: 04/05/2017
 
+---
+# <a name="working-with-textures-and-images"></a>Uso di trame e immagini
 È possibile usare l'editor di immagini in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] per creare e modificare trame e immagini. L'editor di immagini supporta formati avanzati per trame e immagini, come quelli usati nello sviluppo di app DirectX.  
   
 > [!NOTE]
->  L'editor di immagini non supporta immagini con livello di colore minimo, come icone e cursori. Per creare o modificare questi tipi di immagini, usare l'[Image Editor for Icons](/visual-cpp/windows/image-editor-for-icons).  
+>  L'editor di immagini non supporta immagini con livello di colore minimo, come icone e cursori. Per creare o modificare questi tipi di immagini, usare l'[editor di immagini per le icone](/cpp/windows/image-editor-for-icons).  
   
-## Trame e immagini  
- A un livello di base, le trame e le immagini sono semplicemente tabelle di dati usate per offrire dettagli visivi nelle app grafiche. Il tipo di dettagli offerti da una trama o un'immagine dipende dal modo in cui viene usata, ma i campioni di colore, i valori alfa \(trasparenza\), le normali alla superficie e i valori di altezza costituiscono alcuni esempi comuni. La differenza principale tra una trama e un'immagine è che una trama è destinata a essere usata insieme a una rappresentazione di forma, in genere un modello 3D, per esprimere una scena o un oggetto completo, mentre un'immagine è in genere una rappresentazione autonoma della scena o dell'oggetto.  
+## <a name="textures-and-images"></a>Trame e immagini  
+ A un livello di base, le trame e le immagini sono semplicemente tabelle di dati usate per offrire dettagli visivi nelle app grafiche. Il tipo di dettagli offerti da una trama o un'immagine dipende dal modo in cui viene usata, ma i campioni di colore, i valori alfa (trasparenza), le normali alla superficie e i valori di altezza costituiscono alcuni esempi comuni. La differenza principale tra una trama e un'immagine è che una trama è destinata a essere usata insieme a una rappresentazione di forma, in genere un modello 3D, per esprimere una scena o un oggetto completo, mentre un'immagine è in genere una rappresentazione autonoma della scena o dell'oggetto.  
   
  Ecco alcuni tra i tipi comuni di trame:  
   
  Mappe di trama  
- Le mappe di trama contengono valori di colore organizzati come matrice unidimensionale, bidimensionale o tridimensionale e vengono usate per fornire dettagli di colore sull'oggetto interessato. I colori usano in genere per la codifica i canali di colore RGB \(Red, Green, Blue, rosso, verde e blu\) e possono includere un quarto canale, chiamato alfa, che rappresenta la trasparenza. Meno frequentemente i colori usano un'altra combinazione colori per la codifica oppure il quarto canale può contenere dati diversi da alfa, ad esempio di altezza.  
+ Le mappe di trama contengono valori di colore organizzati come matrice unidimensionale, bidimensionale o tridimensionale e vengono usate per fornire dettagli di colore sull'oggetto interessato. I colori usano in genere per la codifica i canali di colore RGB (Red, Green, Blue, rosso, verde e blu) e possono includere un quarto canale, chiamato alfa, che rappresenta la trasparenza. Meno frequentemente i colori usano un'altra combinazione colori per la codifica oppure il quarto canale può contenere dati diversi da alfa, ad esempio di altezza.  
   
  Mappe normali  
  Le mappe normali contengono normali alla superficie e vengono usate per fornire dettagli di illuminazione sull'oggetto interessato. Le normali usano in genere la codifica con i componenti di colore rosso, verde e blu per archiviare le dimensioni x, y e z del vettore. Tuttavia, esistono altre codifiche, ad esempio quelle basate su coordinate polari.  
@@ -44,9 +61,9 @@ caps.handback.revision: 10
   
  È possibile usare l'editor di immagini per creare e modificare trame e immagini analogamente ad altri editor di immagini. L'editor di immagini offre anche mapping MIP e altre funzionalità da usare con la grafica 3D e supporta molti dei formati di trama con accelerazione hardware e compressione elevata supportati da DirectX.  
   
-## Argomenti correlati  
+## <a name="related-topics"></a>Argomenti correlati  
   
 |Titolo|Descrizione|  
-|------------|-----------------|  
+|-----------|-----------------|  
 |[Editor immagini](../designers/image-editor.md)|Descrive come usare l'editor di immagini con trame e immagini.|  
 |[Esempi dell'editor immagini](../designers/image-editor-examples.md)|Contiene i collegamenti ad alcuni argomenti che descrivono come usare l'editor di immagini per eseguire attività comuni di elaborazione delle immagini.|

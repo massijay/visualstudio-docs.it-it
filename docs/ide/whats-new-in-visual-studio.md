@@ -1,7 +1,7 @@
 ---
 title: "Novità di Visual Studio 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/08/2017
+ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -31,9 +31,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8c4e45eadd81c54a372885ce89ccced1256d3b3d
-ms.openlocfilehash: 14a06f4344989052b0a020570dc87d9697ba95d0
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: ddc84f3b92d8e0febaea3d23b415bd6e703cc530
+ms.openlocfilehash: e04b972187b7b7ec225b48cc9b8904d804399ff8
+ms.lasthandoff: 04/07/2017
 
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Novità di Visual Studio 2017
@@ -49,7 +49,7 @@ Di seguito è riportato un riepilogo generale delle modifiche apportate:
 * **Sviluppo di app cloud con Azure**. Un gruppo di strumenti Azure incorporati consentono di creare facilmente app per cloud con tecnologia Microsoft Azure. Visual Studio facilita la configurazione, la compilazione, il debug, l'inserimento in pacchetti e la distribuzione di app e servizi in Azure.
 * **Sviluppo di app per dispositivi mobili**. Visual Studio 2017 supporta l'innovazione e permette di ottenere risultati rapidamente con Xamarin, che unifica i requisiti per dispositivi mobili multipiattaforma usando un'unica codebase principale e un singolo set di competenze. È possibile passare allo sviluppo per dispositivi mobili avvalendosi dei team, degli investimenti tecnologici e del codice C# esistenti, per offrire esperienze per consumatori in tempi più brevi e con costi minori del previsto. Ogni passaggio del ciclo di vita dei dispositivi mobili può essere velocizzato per realizzare esperienze per consumatori di alto livello o un portfolio di app di produttività per supportare e agevolare la forza lavoro.
 
-Di seguito sono riportate altre informazioni su alcune delle modifiche più significative.
+Ecco altre informazioni su alcune delle modifiche più significative.
 
 ## <a name="performance-improvements"></a>Miglioramenti delle prestazioni
 
@@ -123,6 +123,21 @@ In Visual Studio Enterprise 2017, questa funzionalità mostra i risultati dei li
 
 ![Live Unit Testing](../ide/media/lut-codewindow.png "Esempio della nuova funzionalità Live Unit Testing nell'edizione Enterprise di Visual Studio")
 
+Per altre informazioni, vedere il post di blog [Live Unit Testing in Visual Studio 2017 Enterprise](https://blogs.msdn.microsoft.com/visualstudio/2017/03/09/live-unit-testing-in-visual-studio-2017-enterprise/).
+
+### <a name="devops"></a>DevOps
+#### <a name="redgate-data-tools"></a>Redgate Data Tools:
+Per estendere le funzionalità DevOps all'ambiente di sviluppo di database SQL Server, le edizioni seguenti di Visual Studio 2017 includono ora gli strumenti Redgate Data Tools.
+
+Strumenti inclusi in Visual Studio 2017 Enterprise:
+- [Redgate ReadyRoll Core](http://www.red-gate.com/products/sql-development/readyroll/entrypage/microsoft-and-readyroll?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=docs-newinvs): consente di sviluppare script di migrazione e gestire modifiche del database mediante il controllo del codice sorgente, oltre ad automatizzare in modo sicuro le distribuzioni delle modifiche di database di SQL Server unitamente alle modifiche delle applicazioni.
+- [Redgate SQL Prompt Core](http://www.red-gate.com/products/sql-development/sql-prompt/entrypage/microsoft-and-sql-prompt?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=docs-newinvs): consente di scrivere codice SQL più velocemente e con maggiore precisione grazie al supporto del completamento intelligente del codice. SQL Prompt completa automaticamente gli oggetti di database, gli oggetti di sistema e le parole chiave, oltre a offrire suggerimenti per le colonne durante la digitazione. Il codice risultante è quindi più pulito e con meno errori, perché non è necessario ricordare ogni nome di colonna o alias.
+
+Strumenti inclusi in tutte le edizioni di Visual Studio 2017:
+- [Redgate SQL Search](http://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=docs-newinvs): consente di aumentare la produttività grazie alla possibilità di individuare rapidamente oggetti e frammenti SQL in più database.
+
+Per altre informazioni, vedere il post di blog [Redgate Data Tools in Visual Studio 2017](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/redgate-data-tools-in-visual-studio-2017/).
+
 ### <a name="visual-studio-ide-enhancements"></a>Miglioramenti dell'IDE di Visual Studio
 #### <a name="interact-with-git"></a>Interagire con Git:
 Quando si lavora con un progetto in Visual Studio, è possibile configurare il codice ed eseguirne rapidamente il commit e la pubblicazione in un servizio GIT. È anche possibile gestire i repository GIT tramite i menu visualizzati facendo clic sui pulsanti nell'angolo inferiore destro dell'IDE.
@@ -130,9 +145,9 @@ Quando si lavora con un progetto in Visual Studio, è possibile configurare il c
 ![Finestra di dialogo di interazione di Visual Studio 2017 con GIT](../ide/media/vsIDE-GitInteraction.png "Strumenti GIT nell'IDE di Visual Studio")
 
 #### <a name="view-and-navigate-code-with-structure-visualizer"></a>Visualizzare ed esplorare il codice con il visualizzatore di struttura:
-Il visualizzatore della struttura disegna linee guida di struttura (note anche come guide di rientro) nel codice. È possibile usarle per visualizzare e individuare il blocco di codice attivo in qualsiasi momento, senza dover scorrere. Al passaggio del mouse sulle linee vengono visualizzate descrizioni comando che consentono di visualizzare il blocco e i relativi elementi padre aperti. Questa funzionalità è disponibile per tutti i linguaggi supportati da grammatiche TextMate e per C#, Visual Basic e XAML.
+Il visualizzatore di struttura disegna le guide per strutture (note anche come guide di rientro) nel codice. È possibile usarle per visualizzare e individuare il blocco di codice attivo in qualsiasi momento, senza dover scorrere. Al passaggio del mouse sulle linee vengono visualizzate descrizioni comando che consentono di visualizzare il blocco e i relativi elementi padre aperti. Questa funzionalità è disponibile per tutti i linguaggi supportati da grammatiche TextMate e per C#, Visual Basic e XAML.
 
-![Visualizzatore della struttura di Visual Studio 2017](../ide/media/vsIDE-StructureVisualizer.png "Visualizzatore della struttura in Visual Studio")
+![Visualizzatore di struttura di Visual Studio 2017](../ide/media/vsIDE-StructureVisualizer.png "Visualizzatore di struttura in Visual Studio")
 
 #### <a name="experience-improved-navigation-controls"></a>Controlli di spostamento migliorati:
 L'esperienza è stata aggiornata per consentire spostamenti più efficienti e con meno distrazioni.

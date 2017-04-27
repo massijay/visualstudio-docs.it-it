@@ -2,7 +2,7 @@
 title: Creare un programma di installazione offline per Visual Studio 2017 | Microsoft Docs
 description: Informazioni su come creare un programma di installazione offline per Visual Studio.
 ms.custom: 
-ms.date: 03/21/2017
+ms.date: 04/05/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
-ms.openlocfilehash: 563c78a49eb55886b1ddbd4f437951c99c6568e5
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: 4e33dc3ebb32569b547aa9bcb6db9a15dbe4fc21
+ms.openlocfilehash: fda1a4fbfebd856312174fe24ff161b0e9d04bb9
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="create-an-offline-installer-for-visual-studio-2017"></a>Creare un programma di installazione offline per Visual Studio 2017
@@ -47,7 +47,7 @@ Ecco come fare.
 ## <a name="download-the-setup-file-you-want"></a>Scaricare il file del programma di installazione desiderato
 **[Scaricare](https://www.visualstudio.com/downloads?utm_source=mscom&utm_campaign=msdocs)** l'edizione di Visual Studio desiderata. Assicurarsi di fare clic su **Salva** e quindi su **Apri cartella**.
 
-Il file di installazione o, per essere più specifici, il file di un programma di avvio automatico, sarà uno dei seguenti.
+Il file di installazione o, per essere più specifici, il file di un programma di bootstrap, sarà uno dei seguenti.
 
 |Edizione | File|  
 |-------------|-----------------------|  
@@ -55,7 +55,7 @@ Il file di installazione o, per essere più specifici, il file di un programma d
 |Visual Studio Professional |**vs_professional.exe**|  
 |Community di Visual Studio |**vs_community.exe**|
 
-Altri programmi di avvio automatico supportati includono vs_buildtools.exe, vs_feedbackclient.exe, vs_teamexplorer.exe, vs_testagent.exe, vs_testcontroller.exe e vs_testprofessional.exe.
+Altri programmi di bootstrap supportati includono vs_buildtools.exe, vs_feedbackclient.exe, vs_teamexplorer.exe, vs_testagent.exe, vs_testcontroller.exe e vs_testprofessional.exe.
 
 ## <a name="create-an-offline-installation-folder"></a>Creare una cartella di installazione offline
 Per creare un'installazione offline con tutte le lingue e tutte le funzionalità, usare uno dei comandi degli esempi seguenti.
@@ -66,7 +66,7 @@ Per creare un'installazione offline con tutte le lingue e tutte le funzionalità
 - Per For Visual Studio Professional, eseguire: <br> ```vs_professional.exe --layout c:\vs2017offline```
 - Per Visual Studio Community, eseguire: <br> ```vs_community.exe --layout c:\vs2017offline```
 
-Per altri esempi, vedere la sezione [Come personalizzare il programma di installazione offline](#how-to-customize-your-offline- installer) in questa pagina.
+Per altri esempi, vedere la sezione [Come personalizzare il programma di installazione offline](#how-to-customize-your-offline-installer) in questa pagina.
 
 ## <a name="install-from-the-offline-installation-folder"></a>Eseguire l'installazione dalla cartella di installazione offline
 È possibile scegliere di eseguire l'installazione in qualsiasi momento, ma quando si decide di procedere, seguire questa procedura.
@@ -98,6 +98,7 @@ Non sempre tutto funziona correttamente. Ecco una tabella dei problemi noti e di
 
 | Problema       | Elemento                   | Soluzione |
 | ----------- | ---------------------- | -------- |
+| Il programma di installazione di Visual Studio visualizza il messaggio di errore "Installazione completata con avvisi" e l'emulatore Windows non viene installato. | Emulatore Windows 10 | Aprire la cartella di installazione offline per Visual Studio, passare alla sottocartella "Win10_Emulator_10.0.15063,version=10.0.15063.12,chip=x64" e quindi eseguire EmulatorSetup.exe per installare l'emulatore Windows. |
 | Viene visualizzato un messaggio di avviso che segnala che non è possibile installare alcuni componenti e pacchetti.  | Installazione di Android SDK (livello API) | Per includere pacchetti Android SDK (livello API), è necessario avere una connessione Internet a disposizione quando si crea il programma di installazione offline. Se si usa una rete con restrizioni, è necessario consentire l'accesso agli URL seguenti: <br><br> - http://dl.google.com:443 <br> - http://dl-ssl.google.com:443 <br>  - https://dl-ssl.google.com/android/repository/*<br><br>Per ulteriori informazioni su come risolvere possibili problemi relativi alle impostazioni proxy, vedere il post di blog [Visual Studio install failures (Android SDK Setup) behind a Proxy](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/) (Errori di installazione di Visual Studio (Android SDK) dietro un proxy).  |  
 | Gli utenti non anno accesso ai file. | Autorizzazioni (ACL) | Assicurarsi di modificare le autorizzazioni (ACL) in modo da consentire l'accesso in lettura ad altri utenti *prima* di condividere l'installazione offline. |
 | Non è possibile installare nuovi carichi di lavoro, componenti o lingue.  | `--layout`  | Assicurarsi di avere accesso a Internet se si esegue l'installazione da un layout parziale e si selezionano carichi di lavoro, componenti o lingue non disponibili nel layout precedente. |

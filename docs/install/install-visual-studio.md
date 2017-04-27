@@ -2,7 +2,7 @@
 title: Installare Visual Studio 2017 | Microsoft Docs
 description: Informazioni dettagliate sull&quot;installazione di Visual Studio.
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 04/03/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -37,9 +37,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8c4e45eadd81c54a372885ce89ccced1256d3b3d
-ms.openlocfilehash: 5552f67ae880e3b7ec832d6d035382e2abcca116
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: af9699b63fdfb81a274affb78856817520c38b05
+ms.openlocfilehash: 47688935cec36db174c3a0c424b1705ae47c6118
+ms.lasthandoff: 04/03/2017
 
 ---
 # <a name="install-visual-studio-2017"></a>Installare Visual Studio 2017
@@ -50,12 +50,12 @@ In questo articolo viene presentato un nuovo modo per installare Visual Studio! 
  Tutto pronto? Sarà illustrata una procedura dettagliata. Ma veniamo al dunque.  
 
 ## <a name="install-the-installer"></a>Installare il programma di installazione  
- Con il download di Visual Studio 2017 viene scaricato un programma di avvio automatico che installa a sua volta il nuovo programma di installazione semplificato. Questo nuovo programma di installazione include tutto il necessario per personalizzare l'installazione.  
+ Con il download di Visual Studio 2017 viene scaricato un programma di bootstrap che installa a sua volta il nuovo programma di installazione semplificato. Questo nuovo programma di installazione include tutto il necessario per personalizzare l'installazione.  
 
 > [!IMPORTANT]
 > Se nel computer è installata una versione di anteprima di Visual Studio 2017, verrà chiesto di rimuoverla prima di installare Visual Studio 2017.
 
-1.  **[Scaricare Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)** e fare clic su **Salva**. Dalla cartella **Download** eseguire quindi il file del programma di avvio automatico corrispondente all'edizione scelta.
+1.  **[Scaricare Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)** e fare clic su **Salva**. Dalla cartella **Download** eseguire quindi il file del programma di bootstrap corrispondente all'edizione scelta.
 
   * **vs_enterprise.exe** per Visual Studio Enterprise
   * **vs_professional.exe** per Visual Studio Professional
@@ -102,6 +102,8 @@ Per installare Visual Studio 2017 nella lingua prescelta, fare clic sull'opzione
 
 Per impostazione predefinita, alla prima esecuzione il programma di installazione tenta di trovare una corrispondenza con la lingua del sistema operativo. Il programma di installazione memorizza questa impostazione che è tuttavia possibile modificare eseguendo il programma di installazione dalla riga di comando. Ad esempio, usare il comando seguente per forzare l'esecuzione in inglese del programma di installazione: `vs_installer.exe --locale en-US`. Il programma di installazione memorizza questa impostazione per l'esecuzione successiva. Il programma di installazione supporta i token delle lingue seguenti: zh-CN, zh-TW, cs-CZ, en-US, fr-FR, de-DE, it-IT, ja-JP, ko-KR, pl-PL, pt-BR, ru-RU, es-ES e tr-TR.
 
+## <a name="get-support"></a>Supporto
+Non sempre tutto funziona correttamente. Se l'installazione di Visual Studio non riesce, vedere l'articolo [Risoluzione degli errori di installazione e aggiornamento di Visual Studio 2017](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures) della Knowledge Base che include suggerimenti utili per la risoluzione dei problemi.
 
 ## <a name="see-also"></a>Vedere anche  
 * [Modificare Visual Studio 2017](modify-visual-studio.md)

@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 5b6334c38a6c058f274498c06f8e07c934931910
-ms.openlocfilehash: 746dd25dde790d5e262e25a3702b49721edc3510
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: 06f5b9d2223ccb9cbbbff8f2960d89c8efbf05b2
+ms.openlocfilehash: 83a676c5f2f838b6920c5fafbe78dc9b49fbb4cb
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 03/22/2017
 
 Python è un linguaggio di programmazione molto diffuso affidabile, flessibile, facile da imparare, utilizzabile gratis in tutti i sistemi operativi e supportato da un'attiva community di sviluppatori e da numerose librerie gratuite. Python supporta tutte le modalità di sviluppo, tra cui applicazioni Web, servizi Web, app desktop, script e calcolo scientifico. Viene usato in molte università, nonché da scienziati, sviluppatori professionisti e non professionisti. Per altre informazioni sul linguaggio, vedere [python.org](https://www.python.org) e [Python for Beginners](https://www.python.org/about/gettingstarted/) (Python per principianti).
 
-Visual Studio offre supporto [open source](https://github.com/Microsoft/ptvs) per Python tramite il carico di lavoro Python (Visual Studio 2017) e l'estensione gratuita Python Tools for Visual Studio (Visual Studio 2015 e versioni precedenti). 
+Visual Studio offre supporto [open source](https://github.com/Microsoft/ptvs) per il linguaggio Python tramite il carico di lavoro Python (Visual Studio 2017) e l'estensione gratuita Python Tools for Visual Studio (Visual Studio 2015 e versioni precedenti). 
 
 Seguire le [istruzioni di installazione](installation.md) per configurare il carico di lavoro Python, quindi usare i collegamenti seguenti per saperne di più sulle funzionalità correlate a Python, nonché sulle funzionalità di Visual Studio stesso.
 
@@ -57,9 +57,19 @@ Seguire le [istruzioni di installazione](installation.md) per configurare il car
 
 Il carico di lavoro Python include anche [Azure SDK per Python](azure-sdk-for-python.md), che semplifica l'utilizzo dei servizi Azure e offre il supporto per Windows, Mac OS X e Linux.
 
-Vedere anche la serie di [video introduttivi e di approfondimento](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff) su YouTube, che offrono una panoramica delle funzionalità principali.
+La serie di [video introduttivi e di approfondimento](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff) su YouTube offre una panoramica delle funzionalità principali.
 
 [![Video su Python Tools](media/video-general.png)](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
+
+## <a name="questions-and-answers"></a>Domande e risposte
+
+**D. Cosa si può usare per compilare un'interfaccia utente con Python?**
+
+Un  La proposta migliore in questo campo è il [progetto Qt](https://www.qt.io/qt-for-application-development/), con le associazioni per Python note come [PySide (l'associazione ufficiale)](http://wiki.qt.io/PySide) (vedere anche [PySide downloads](https://download.qt.io/official_releases/pyside/.)) e [PyQt](https://wiki.python.org/moin/PyQt). Attualmente il supporto di Python in Visual Studio non include strumenti specifici per lo sviluppo dell'interfaccia utente.
+
+**D. Un progetto Python può produrre un file eseguibile autonomo?**
+
+Un  Python è in genere un linguaggio interpretato, con il codice eseguito su richiesta in un ambiente in grado di supportare Python, ad esempio Visual Studio e i server Web. Visual Studio attualmente non offre la possibilità di creare un file eseguibile autonomo, ovvero un programma con un interprete Python incorporato. Tuttavia, esistono diversi metodi all'interno della community di Python per eseguire questa operazione, come descritto in [StackOverflow](http://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency). CPython può anche essere incorporato in un'applicazione nativa, come descritto nel post del blog, [Using CPython's Embeddable Zip File](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/26/cpython-embeddable-zip-file/) (Uso del file ZIP incorporabile di CPython).
 
 ## <a name="features-matrix"></a>Matrice delle funzionalità
 
@@ -68,8 +78,8 @@ Vedere anche la serie di [video introduttivi e di approfondimento](https://www.y
 - [Visual Studio 2017 Preview](https://www.visualstudio.com/vs/preview)
 - [Visual Studio 2015 (tutte le edizioni)] (https://www.visualstudio.com/it-it/downloads/visual-studio-2015-downloads-vs)
 - [Visual Studio 2013 Community Edition] (https://www.visualstudio.com/it-it/products/visual-studio-community-vs.aspx)
-- [Visual Studio 2013 Express per il Web, Update 2 o versione successiva](http://www.microsoft.com/en-us/download/details.aspx?id=40747)
-- [Visual Studio 2013 Express per Desktop, Update 2 o versione successiva](http://www.microsoft.com/en-us/download/details.aspx?id=40787)
+- [Visual Studio 2013 Express per il Web, Update 2 o versione successiva](https://www.microsoft.com/en-us/download/details.aspx?id=44912)
+- [Visual Studio 2013 Express per Desktop, Update 2 o versione successiva](https://www.microsoft.com/en-US/download/details.aspx?id=44914)
 - Visual Studio 2013 (Professional Edition o versione successiva)
 - Visual Studio 2012 (Professional Edition o versione successiva)
 - Visual Studio 2010 SP1 (Professional Edition o versione successiva; richiede .NET 4.5)

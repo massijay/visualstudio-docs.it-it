@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 69740c73cc133e08254fc546d2b59885270725f2
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: 2a6555eb9c0a88b1533428cf2aa932b3fc4960ec
+ms.openlocfilehash: 2a92d10d4e47983de6e3f3c5b55adfcc5dc68c8a
+ms.lasthandoff: 03/30/2017
 
 ---
 
@@ -89,6 +89,11 @@ Nell'esempio precedente, oltre a Python 3.4 (CPython a 32 bit) sono installate l
 >
 > ![Visualizzazione espansa della finestra Ambienti Python](media/environments-expanded-view.png)
 
+> [!Note]
+> Anche se Visual Studio rispetta l'opzione dei pacchetti dei siti di sistema, non consente di modificarla da Visual Studio.
+
+### <a name="creating-an-environment-for-an-existing-interpreter"></a>Creazione di un ambiente per un interprete esistente
+
 Visual Studio individua in genere la presenza di un interprete Python installato controllando il Registro di sistema, ma potrebbe non individuarla se l'interprete è installato in modalità non standard. In questi casi è possibile impostare Visual Studio in modo che punti direttamente all'interprete come illustrato di seguito:
 
 1. Selezionare **+ Personalizzato** nella finestra Ambienti Python per creare un nuovo ambiente e aprire la [scheda **Configura**](#configure-tab) descritta di seguito.
@@ -101,12 +106,9 @@ Visual Studio individua in genere la presenza di un interprete Python installato
 1. Selezionare **Applica** per salvare l'ambiente.
 1. Se è necessario rimuovere l'ambiente, selezionare il comando **Rimuovi** nella scheda **Configura**.
 
-> [!Note]
-> Anche se Visual Studio rispetta l'opzione dei pacchetti dei siti di sistema, non consente di modificarla da Visual Studio.
-
 ### <a name="overview-tab"></a>Scheda Panoramica
 
-Include informazioni di base e comandi per l'ambiente, ad esempio per impostarlo come predefinito, aprire un [finestra interattiva (REPL)](interactive-repl.md) con tale ambiente e passare alla finestra di dialogo per configurare la finestra interattiva. È possibile eseguire queste operazioni anche selezionando il comando di menu **Strumenti > Opzioni**, quindi **Strumenti Python > Finestre interattive** e infine il nome dell'ambiente.
+Include informazioni di base e comandi per l'ambiente, ad esempio per impostarlo come predefinito, aprire un [finestra interattiva (REPL)](interactive-repl.md) con tale ambiente e passare alla finestra di dialogo per configurare la finestra interattiva. È possibile eseguire queste operazioni anche selezionando il comando di menu **Strumenti > Opzioni**, **Strumenti Python > Finestre interattive** e infine il nome dell'ambiente.
 
 ![Scheda Panoramica di Ambienti Python](media/environments-overview-tab.png)
 
@@ -258,7 +260,7 @@ Cleaning up...
 
 # <a name="search-paths"></a>Percorsi di ricerca
 
-Quando Python viene usato normalmente, il percorso di ricerca predefinito per i file di modulo viene fornito dalla variabile di ambiente `PYTHONPATH` (o `IRONPYTHONPATH` e così via). Quando si usa un'istruzione `import <name>`, quindi, Python cerca nome corrispondente prima nei moduli predefiniti, quindi nella cartella che contiene il codice Python in esecuzione e infine nel percorso di ricerca del modulo definito dalla variabile di ambiente applicabile. Vedere [The Module Search Path](https://docs.python.org/2/tutorial/modules.html#the-module-search-path) (Percorso di ricerca del modulo) e [Environment variables](https://docs.python.org/2/using/cmdline.html#envvar-PYTHONPATH) (Variabili di ambiente) nella documentazione principale di Python.
+Quando Python viene usato normalmente, il percorso di ricerca predefinito per i file di modulo viene fornito dalla variabile di ambiente `PYTHONPATH` (o `IRONPYTHONPATH` e così via). Quando si usa un'istruzione `import <name>`, quindi, Python cerca nome corrispondente prima nei moduli predefiniti, successivamente nella cartella che contiene il codice Python in esecuzione e infine nel percorso di ricerca del modulo definito dalla variabile di ambiente applicabile. Vedere [The Module Search Path](https://docs.python.org/2/tutorial/modules.html#the-module-search-path) (Percorso di ricerca del modulo) e [Environment variables](https://docs.python.org/2/using/cmdline.html#envvar-PYTHONPATH) (Variabili di ambiente) nella documentazione principale di Python.
 
 La variabile di ambiente del percorso di ricerca viene però ignorata da Visual Studio, anche se è stata impostata per l'intero sistema. In realtà, viene ignorata proprio *perché* è impostata per l'intero sistema e non consente di fornire automaticamente una risposta a domande di questo tipo: i moduli di riferimento sono validi per Python 2.7 o per Python 3.3? Sostituiranno i moduli di libreria standard? Lo sviluppatore è a conoscenza di questo comportamento o si tratta di un tentativo di hijack effettuato da utenti malintenzionati?
 

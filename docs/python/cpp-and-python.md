@@ -29,9 +29,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
-ms.openlocfilehash: 730207e42f42c0cd5d1b78dc558e58267343d186
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 002c77b27f7283ecd28d7ec5470b0ed44b2bb7a4
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -45,7 +45,7 @@ I moduli scritti in C++ (o in C) vengono comunemente usati per estendere le funz
 
 Questo argomento illustra la creazione di un modulo di estensione C++ per CPython per calcolare una tangente iperbolica e per chiamare il codice Python. Per illustrare la differenza nelle prestazioni, la routine verrà creata e testata prima in Python.
 
-L'approccio adottato in questo argomento è quello per le estensioni CPython standard come illustrato nella [documentazione di Python](https://docs.python.org/e/c-api/). Un confronto tra questo e altri approcci viene illustrato in [Approcci alternativi](#alternative-approaches) alla fine di questo argomento.
+L'approccio adottato in questo argomento è quello per le estensioni CPython standard come illustrato nella [documentazione di Python](https://docs.python.org/3/c-api/). Un confronto tra questo e altri approcci viene illustrato in [Approcci alternativi](#alternative-approaches) alla fine di questo argomento.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -231,7 +231,7 @@ In secondo luogo, è possibile installare il modulo nell'ambiente globale di Pyt
 
 1. Se si usa Visual Studio 2017, eseguire il programma di installazione di Visual Studio, selezionare **Modifica**, selezionare **Singoli componenti > Compilatori, strumenti di compilazione e runtime > Set di strumenti di Visual C++ 2015.3 v140**. Questa operazione è necessaria perché Python (per Windows) è stato compilato con Visual Studio 2015 (versione 14.0) e richiede la disponibilità di questi strumenti quando compila un'estensione tramite il metodo descritto in questo argomento.
 
-1. Creare un file denominato `setup.py` nel progetto C++ facendo clic con il pulsante destro del mouse sul progetto. Selezionare **Aggiungi > Nuovi elementi*, cercare "Python", scegliere**File Python**, denominarlo setup.py e quindi fare clic su **OK**. Quando il file viene visualizzato nell'editor, incollarvi il codice seguente:
+1. Creare un file denominato `setup.py` nel progetto C++ facendo clic con il pulsante destro del mouse sul progetto. Selezionare **Aggiungi > Nuovi elementi*, cercare "Python", scegliere **File Python**, denominarlo setup.py e quindi fare clic su **OK**. Quando il file viene visualizzato nell'editor, incollarvi il codice seguente:
 
     ```python
     from distutils.core import setup, Extension, DEBUG
@@ -270,7 +270,7 @@ Il supporto di Python in Visual Studio include la possibilità di [eseguire il d
 1. Fare clic con il pulsante destro del mouse sul progetto Python in Esplora soluzioni, selezionare **Proprietà**, selezionare la scheda **Debug** e quindi selezionare l'opzione **Debug > Abilita debug codice nativo**.
 
     > [!Tip]
-    > Quando si abilita il debug del codice nativo, è possibile che la finestra di output di Python venga chiusa quando il programma avrà terminato l'operazione, senza che venga visualizzato il consueto messaggio "Premere un tasto qualsiasi per continuare". Per specificare una pausa, aggiungere l'opzione `-i` al campo **Esegui > Argomenti dell'interprete** della scheda **Debug** quando si attiva il debug del codice nativo. Questa opzione abilita la modalità interattiva dell'interprete di Python dopo l'esecuzione del debug del codice e quindi aspetta che venga premuto CTRL+Z, INVIO per uscire. In alternativa, se si vuole modificare il codice Python, è possibile aggiungere le istruzioni `import os` e `os.system("pause")` alla fine del programma. Questa operazione duplica la richiesta di pausa originale.
+    > Quando si abilita il debug del codice nativo, è possibile che la finestra di output di Python venga chiusa quando il programma avrà terminato l'operazione, senza che venga visualizzato il consueto messaggio "Premere un tasto qualsiasi per continuare". Per specificare una pausa, aggiungere l'opzione `-i` al campo **Esegui > Argomenti dell'interprete** della scheda **Debug** quando si abilita il debug del codice nativo. Questa opzione abilita la modalità interattiva dell'interprete di Python dopo l'esecuzione del debug del codice e quindi aspetta che venga premuto CTRL+Z, INVIO per uscire. In alternativa, se si vuole modificare il codice Python, è possibile aggiungere le istruzioni `import os` e `os.system("pause")` alla fine del programma. Questa operazione duplica la richiesta di pausa originale.
 
 1. Nel codice C++, impostare un punto di interruzione nella prima riga all'interno del metodo `tanh` e quindi avviare il debugger. Si noterà che il debugger interrompe l'esecuzione quando viene chiamato tale codice:
 
@@ -284,7 +284,7 @@ Ci sono altri modi per creare estensioni di Python, come descritto nella tabella
 
 | Approccio | Anno | Utenti rappresentanti | Vantaggi | Svantaggi |
 | --- | --- | --- | --- | --- |
-| Moduli di estensione C/C++ per CPython | 1991 | Libreria standard | [Documentazione ampia ed esercitazioni](https://docs.python.org/e/c-api/). Controllo totale. | Compilazione, portabilità, gestione dei riferimenti. Conoscenza elevata di C. |
+| Moduli di estensione C/C++ per CPython | 1991 | Libreria standard | [Documentazione ampia ed esercitazioni](https://docs.python.org/3/c-api/). Controllo totale. | Compilazione, portabilità, gestione dei riferimenti. Conoscenza elevata di C. |
 | SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | Genera associazioni per molte lingue contemporaneamente. | Sovraccarico eccessivo se Python è l'unica destinazione. |
 | ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | Nessuna compilazione, ampia disponibilità. | Accesso e modifica di strutture C complesse e soggette a errori. |
 | Cython | 2007 | [gevent](http://www.gevent.org/), [kivy](https://kivy.org/) | Simile a Python. Altamente maturo. Prestazioni elevate. | Compilazione, nuova sintassi e toolchain. |

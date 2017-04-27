@@ -1,7 +1,7 @@
 ---
-title: Modifica del codice in Python Tools for Visual Studio | Microsoft Docs
+title: Modifica del codice Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 4/10/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -29,15 +29,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 79d7c18b672119b745258feee0f646dff96c1922
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 0f2ecd6ca52a04e8813610c0f406251ef4604354
+ms.lasthandoff: 04/10/2017
 
 ---
 
 # <a name="editing-python-code"></a>Modifica del codice Python
 
-Gli sviluppatori trascorrono molto del loro tempo nell'editor del codice e Python Tools for Visual Studio (PTVS) offre funzionalità utili per aumentare la produttività, quali l'evidenziazione della sintassi IntelliSense, il completamento automatico, informazioni della Guida per le firme, override dei metodi, ricerca e navigazione. 
+Il lavoro nell'editor del codice costituisce gran parte dell'attività degli sviluppatori e il supporto di Python in Visual Studio offre funzionalità utili per aumentare la produttività, quali l'evidenziazione della sintassi IntelliSense, il completamento automatico, il supporto alla firma, gli override dei metodi, la funzione di ricerca ed esplorazione. 
 
 Contenuto dell'argomento:
 
@@ -45,9 +45,9 @@ Contenuto dell'argomento:
 - [Frammenti di codice](#code-snippets)
 - [Navigazione nel codice](#navigating-your-code)
 
-Per informazioni generali sulla modifica del codice in Visual Studio, vedere [Scrittura di codice nell'Editor di testo e del codice](../ide/writing-code-in-the-code-and-text-editor.md). Vedere anche [Struttura](../ide/outlining.md) per informazioni su questa funzionalità che consente di concentrarsi su sezioni specifiche del codice. PTVS supporta l'uso del Visualizzatore oggetti di Visual Studio (**Visualizza > Altre finestre > Visualizzatore oggetti** o CTRL+W,J) per esaminare le classi definite in ogni modulo e le funzioni definite in tali classi. 
+Per informazioni generali sulla modifica del codice in Visual Studio, vedere [Scrittura di codice nell'Editor di testo e del codice](../ide/writing-code-in-the-code-and-text-editor.md). Vedere anche [Struttura](../ide/outlining.md) per informazioni su questa funzionalità che consente di concentrarsi su sezioni specifiche del codice. Il supporto di Python include l'uso del Visualizzatore oggetti di Visual Studio (**Visualizza > Altre finestre > Visualizzatore oggetti** o CTRL+W,J) per esaminare le classi definite in ogni modulo e le funzioni definite in tali classi. 
 
-Per un'introduzione alla modifica del codice Python, vedere [Getting Started with PTVS, Part 3: Editing](https://youtu.be/uZGZNEyyeKs?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff) (Introduzione a PTVS, parte 3: modifica) (youtube.com, 3m48s):
+Per un'introduzione alla modifica del codice Python, vedere [Getting Started with Python in Visual Studio, Part 3: Editing](https://youtu.be/uZGZNEyyeKs?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff) (Introduzione a Python in Visual Studio, parte 3: modifica) (youtube.com, 3m 48s):
 
 > [!VIDEO https://www.youtube.com/embed/uZGZNEyyeKs]
 
@@ -136,14 +136,14 @@ I frammenti di codice sono parti di codice che possono essere inserite nei file 
 Per creare frammenti personalizzati, vedere [Procedura dettagliata: creazione di un frammento di codice](https://docs.microsoft.com/en-us/visualstudio/ide/walkthrough-creating-a-code-snippet).
 Per personalizzare i frammenti di codice, è possibile [creare un frammento di codice](https://msdn.microsoft.com/en-us/library/ms165394.aspx) e poi importarlo. 
 
-Se si scrive un frammento di codice particolarmente utile e si vuole condividerlo, pubblicarlo in un gist e [segnalarlo a Microsoft](https://github.com/Microsoft/PTVS/issues). Potrebbe essere incluso in una versione futura di PTVS.
+Se si scrive un frammento di codice particolarmente utile e si vuole condividerlo, pubblicarlo in un gist e [segnalarlo a Microsoft](https://github.com/Microsoft/PTVS/issues). È possibile che venga incluso in una versione futura di Visual Studio.
 
 
 ## <a name="navigating-your-code"></a>Navigazione nel codice
 
-PTVS offre diversi strumenti per spostarsi rapidamente all'interno del codice, incluse le librerie per cui è disponibile codice sorgente: la [barra di spostamento](#navigation-bar), [Vai a definizione](#go-to-definition), [Passa a](#navigate-to), [Trova tutti i riferimenti](#find-all-references) e il [Visualizzatore oggetti](#object-browser).
+Il supporto di Python in Visual Studio offre diversi strumenti per spostarsi rapidamente all'interno del codice, incluse le librerie per cui è disponibile codice sorgente: la [barra di spostamento](#navigation-bar), [Vai a definizione](#go-to-definition), [Passa a](#navigate-to) e [Trova tutti i riferimenti](#find-all-references), come descritto in seguito. È anche possibile usare il [Visualizzatore oggetti](../ide/viewing-the-structure-of-code.md#BKMK_ObjectBrowser) di Visual Studio.
 
-### <a name="navigation-bar"></a>Barra di spostamento
+### <a name="navigation-bar"></a>Barra di navigazione
 
 La barra di spostamento viene visualizzata nella parte superiore di ogni finestra dell'editor e include un elenco di definizioni su due livelli. L'elenco a discesa a sinistra contiene le definizioni di classi e funzioni di primo livello nel file corrente. L'elenco a discesa a destra visualizza un elenco di definizioni all'interno dell'ambito indicato a sinistra. Spostandosi nell'editor, questi elenchi vengono aggiornati per mostrare il contesto corrente ed è anche possibile selezionare una voce in questi elenchi per passarvi direttamente.
 
