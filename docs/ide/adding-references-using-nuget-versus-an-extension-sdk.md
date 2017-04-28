@@ -1,22 +1,37 @@
 ---
-title: "Aggiunta di riferimenti utilizzando NuGet o SDK di estensione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.toolsoptionspages.nuget_package_manager.general"
-  - "vs.toolsoptionspages.nuget_package_manager.package_sources"
+title: Aggiunta di riferimenti tramite NuGet o SDK di estensione | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2175581e-83cb-444c-bb52-cc1fca8ea196
 caps.latest.revision: 21
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 3f4740d442a7ef24803d6360cdcc480d9d6fca84
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="adding-references-using-nuget-versus-an-extension-sdk"></a>Aggiunta di riferimenti utilizzando NuGet o SDK di estensione
 Per offrire un pacchetto destinato al consumo all'interno di progetti di Visual Studio, è possibile usare l'estensione NuGet di Visual Studio o un SDK (Software Development Kit). Questo argomento semplifica la scelta dell'estensione più adatta all'attività in corso descrivendo le analogie e le differenze tra i due meccanismi.  
@@ -69,8 +84,3 @@ Per offrire un pacchetto destinato al consumo all'interno di progetti di Visual 
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione dei riferimenti in un progetto](../ide/managing-references-in-a-project.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
