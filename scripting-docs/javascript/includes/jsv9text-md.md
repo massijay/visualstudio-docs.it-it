@@ -1,0 +1,1 @@
+Modalità standard di Internet Explorer 9, Modalità standard di Internet Explorer 10, Modalità standard di Internet Explorer 11 e app di Windows Store
