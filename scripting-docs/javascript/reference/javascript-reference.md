@@ -43,7 +43,7 @@ In queste sezioni vengono descritti gli elementi che costituiscono il linguaggio
   
 -   Per informazioni sulle API [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)], vedere la pagina di [riferimento API per Windows Runtime e la Libreria Windows per JavaScript](http://go.microsoft.com/fwlink/p/?LinkID=250938).  
   
- L'editor JavaScript in Visual Studio fornisce il supporto IntelliSense.  Per ulteriori informazioni, vedere [IntelliSense per JavaScript](../Topic/JavaScript%20IntelliSense.md).  
+ L'editor JavaScript in Visual Studio fornisce il supporto IntelliSense.  Per ulteriori informazioni, vedere [IntelliSense per JavaScript](~/ide/javascript-intellisense.md).  
   
 ## In questa sezione  
  [Informazioni sulla versione](../../javascript/reference/javascript-version-information.md)  

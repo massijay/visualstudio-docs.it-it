@@ -37,4 +37,4 @@ Nell'implementazione dell'host di Microsoft Windows Script, è possibile creare 
  Nessuna di queste restrizioni applicate a un host che sceglie di applicare un'interfaccia a thread libero di [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) e un modello a oggetti a thread libero.  Tale host può utilizzare l'interfaccia di [IActiveScript](../winscript/reference/iactivescript.md) da qualsiasi thread, senza restrizioni.  
   
 ## Vedere anche  
- [\<PAVE OVER\> Interfacce di Microsoft Windows Script \- Introduzione](../Topic/%3CPAVE%20OVER%3E%20Microsoft%20Windows%20Script%20Interfaces%20-%20Introduction.md)
+ [\<PAVE OVER\> Interfacce di Microsoft Windows Script \- Introduzione](http://msdn.microsoft.com/library/3d10169f-2984-49ef-90c6-dd89c97f1dd6)

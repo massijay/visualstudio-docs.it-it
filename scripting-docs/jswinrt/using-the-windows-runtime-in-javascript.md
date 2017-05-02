@@ -30,7 +30,7 @@ Quando si scrive un'app per [!INCLUDE[win8_appname_long](../javascript/includes/
  Per documentazione di riferimento, vedere [Windows Runtime reference](http://msdn.microsoft.com/it-it/8fe97dbf-8cd4-435f-b481-9e83d0519f9e).  Esempi di codice sono disponibili in JavaScript e anche in C\+\+, C\# e Visual Basic.  
   
 ## Scrittura di componenti di Windows Runtime Components in C\+\+, C\# o Visual Basic  
- Per istruzioni e indicazioni sulla scrittura di componenti di Windows Runtime che possono essere usati in JavaScript, vedere [Creazione di componenti Windows Runtime](../Topic/Creating%20Windows%20Runtime%20Components.md).  
+ Per istruzioni e indicazioni sulla scrittura di componenti di Windows Runtime che possono essere usati in JavaScript, vedere [Creazione di componenti Windows Runtime](http://msdn.microsoft.com/library/9a6b8f0a-7d5e-40a0-a9c5-a59b4908e133).  
   
 ## Convenzioni relative alla combinazione di maiuscole e minuscole con funzionalità di Windows Runtime  
  Le convenzioni relative alla combinazione di maiuscole e minuscole per le funzionalità di Windows Runtime in JavaScript sono leggermente diverse rispetto a quelle per gli altri linguaggi:  
