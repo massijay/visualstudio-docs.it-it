@@ -1,7 +1,7 @@
 ---
 title: Usare i parametri della riga di comando per installare Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -32,18 +32,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 2a6555eb9c0a88b1533428cf2aa932b3fc4960ec
-ms.openlocfilehash: e8ddcebccc5a8a949c75a33de6732d42134e6445
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
+ms.openlocfilehash: 09c6971e21e48d250e3a9869860459fd8cbbb50f
+ms.lasthandoff: 04/10/2017
 
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>Usare i parametri della riga di comando per installare Visual Studio 2017
-Quando si installa Visual Studio 2017 da un prompt dei comandi, è possibile usare diversi parametri della riga di comando per controllare o personalizzare l'installazione. Dalla riga di comando è possibile:
-- avviare l'installazione con determinate opzioni preselezionate, 
-- automatizzare il processo di installazione,
-- creare una cache (layout) dei file di installazione per riutilizzarli in seguito. 
+Quando si installa Visual Studio 2017 da un prompt dei comandi, è possibile usare diversi parametri della riga di comando per controllare o personalizzare l'installazione. Dalla riga di comando è possibile eseguire le operazioni seguenti:
+- Avviare l'installazione con determinate opzioni preselezionate.
+- Automatizzare il processo di installazione.
+- Creare una cache (layout) dei file di installazione per riutilizzarli in seguito.
 
-Insieme alle opzioni della riga di comando viene usato il programma di bootstrap dell'installazione, ovvero un file di dimensioni ridotte (circa 1 MB) che avvia il processo di download. Il programma di bootstrap è il primo eseguibile che viene avviato quando si esegue il download dal sito di Visual Studio. Fare clic sui collegamenti seguenti per accedere direttamente al programma di bootstrap della versione più recente per l'edizione del prodotto da installare:
+Insieme alle opzioni della riga di comando viene usato il programma di bootstrap dell'installazione, ovvero un file di dimensioni ridotte (circa 1 MB) che avvia il processo di download. Il programma di avvio automatico è il primo eseguibile che viene avviato quando si esegue il download dal sito di Visual Studio. Fare clic sui collegamenti seguenti per accedere direttamente al programma di bootstrap della versione più recente per l'edizione del prodotto da installare:
 
 * [Visual Studio 2017 Enterprise](https://aka.ms/vs/15/release/vs_enterprise.exe)
 * [Visual Studio 2017 Professional](https://aka.ms/vs/15/release/vs_professional.exe)
@@ -54,11 +54,12 @@ Insieme alle opzioni della riga di comando viene usato il programma di bootstrap
 
 >  Sintassi: `vs_enterprise.exe [command] <options>...`
 
-(sostituire `vs_enterprise.exe` con l'edizione del prodotto da installare)
+(Sostituire `vs_enterprise.exe` con l'edizione del prodotto da installare. Per alcuni esempi, vedere la pagina [Esempi di parametri della riga di comando](command-line-parameter-examples.md).)
+
 
 | **Comando** | **Descrizione** |
-| ----------------------- | --------------- | 
-| (vuoto) | Installa il prodotto. | 
+| ----------------------- | --------------- |
+| (vuoto) | Installa il prodotto. |
 | ```modify``` | Modifica un prodotto installato. |
 | ```update``` | Aggiorna un prodotto installato. |
 | ```repair``` | Ripristina un prodotto installato. |
@@ -108,7 +109,6 @@ Per un elenco degli ID di componenti e carichi di lavoro ordinati per prodotto V
 | de-DE | Tedesco |
 | it-IT | Inglese |
 | es-ES | Spagnolo |
-| cs-CZ | Ceco |
 | fr-FR | Francese |
 | it-IT | Italiano |
 | ja-JP | Giapponese |
@@ -123,17 +123,19 @@ Per un elenco degli ID di componenti e carichi di lavoro ordinati per prodotto V
 
 ## <a name="error-codes"></a>Codici di errore
 A seconda del risultato dell'operazione, la variabile di ambiente `%ERRORLEVEL%` verrà impostata su uno dei valori seguenti:
+
 | **Valore** | **Risultato** |
 | --------- | ---------- |
 | 0 | L'operazione è riuscita |
 | 3010 | L'operazione è riuscita, ma è necessario riavviare per poter usare l'installazione |
 | Altro | Si è verificata una condizione di errore. Per altre informazioni, vedere i log |
 
-Durante ogni operazione nella directory `%TEMP%` verranno generati diversi file di log che indicano lo stato di avanzamento dell'installazione. Ordinare la cartella per data e cercare i file che iniziano con `dd_bootstrapper`, `dd_client` e `dd_setup` per individuare quelli che si riferiscono rispettivamente al programma di bootstrap, all'app del programma di installazione e al motore di installazione. 
+Durante ogni operazione nella directory `%TEMP%` verranno generati diversi file di log che indicano lo stato di avanzamento dell'installazione. Ordinare la cartella per data e cercare i file che iniziano con `dd_bootstrapper`, `dd_client` e `dd_setup` per individuare quelli che si riferiscono rispettivamente al programma di avvio automatico, all'app del programma di installazione e al motore di installazione.
 
 ## <a name="see-also"></a>Vedere anche
 
- * [Installare Visual Studio](install-visual-studio.md)
+ * [Installare Visual Studio 2017](install-visual-studio.md)
  * [Creare un'installazione offline di Visual Studio 2017](create-an-offline-installation-of-visual-studio.md)
- * [Come segnalare un problema con Visual Studio 2017 RC](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
+ * [Command-line parameter examples for Visual Studio 2017 installation](command-line-parameter-examples.md) (Esempi di parametri della riga di comando per l'installazione di Visual Studio 2017)
+ * [Come segnalare un problema con Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 
