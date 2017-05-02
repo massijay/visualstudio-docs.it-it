@@ -104,8 +104,3 @@
 #### [<Strings> Elemento (programma di avvio automatico)](strings-element-bootstrapper.md)
 #### [<Schedules> Elemento (programma di avvio automatico)](schedules-element-bootstrapper.md)
 ## [InstallShield Limited Edition](installshield-limited-edition.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

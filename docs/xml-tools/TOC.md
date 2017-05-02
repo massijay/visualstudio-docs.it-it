@@ -60,8 +60,3 @@
 ### [Modelli XSLT predefiniti](xslt-default-templates.md)
 ### [Interfaccia utente del debugger (XSLT)](debugger-user-interface-xslt.md)
 ### [Profiler XSLT](xslt-profiler.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
