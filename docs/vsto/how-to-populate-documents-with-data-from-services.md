@@ -34,7 +34,7 @@ caps.handback.revision: 39
   
 ### Per popolare un progetto a livello di documento con i dati da un servizio Web  
   
-1.  Aprire la finestra **Origini dati** e creare un'origine dati del servizio per il progetto. Per altre informazioni, vedere [Procedura: connettersi ai dati di un servizio](../Topic/How%20to:%20Connect%20to%20Data%20in%20a%20Service.md).  
+1.  Aprire la finestra **Origini dati** e creare un'origine dati del servizio per il progetto. Per altre informazioni, vedere [Procedura: connettersi ai dati di un servizio](~/data-tools/how-to-connect-to-data-in-a-service.md).  
   
 2.  Trascinare la tabella o il campo desiderato dalla finestra **Origini dati** al documento.  
   

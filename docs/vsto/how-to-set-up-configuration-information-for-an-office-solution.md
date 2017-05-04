@@ -41,12 +41,12 @@ caps.handback.revision: 33
   
 5.  Scegliere **Aggiungi**.  
   
-6.  Creare il file di configurazione in base allo schema del file di configurazione dell'applicazione.  Per ulteriori informazioni, vedere [Schema dei file di configurazione per .NET Framework](../Topic/Configuration%20File%20Schema%20for%20the%20.NET%20Framework.md).  
+6.  Creare il file di configurazione in base allo schema del file di configurazione dell'applicazione.  Per ulteriori informazioni, vedere [Schema dei file di configurazione per .NET Framework](http://msdn.microsoft.com/library/69003d39-dc8a-460c-a6be-e6d93e690b38).  
   
  Non vi sono considerazioni particolari da tenere presente per l'utilizzo dei file di configurazione con i progetti Office.  
   
 ## Vedere anche  
- [Schema dei file di configurazione per .NET Framework](../Topic/Configuration%20File%20Schema%20for%20the%20.NET%20Framework.md)   
+ [Schema dei file di configurazione per .NET Framework](http://msdn.microsoft.com/library/69003d39-dc8a-460c-a6be-e6d93e690b38)   
  [Progettazione e creazione di soluzioni Office](../vsto/designing-and-creating-office-solutions.md)   
  [Distribuzione di una soluzione Office](../vsto/deploying-an-office-solution.md)  
   

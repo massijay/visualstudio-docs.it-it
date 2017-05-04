@@ -22,7 +22,7 @@ manager: "ghogen"
 caps.handback.revision: 24
 ---
 # Utilizzo dei controlli WPF nelle soluzioni Office
-  Anche se le soluzioni create tramite gli strumenti di sviluppo di Office in Visual Studio sono progettate per essere usate direttamente con i controlli Windows Form, è possibile usare anche i controlli WPF nelle soluzioni.  Windows Presentation Foundation \(WPF\) è un'alternativa a Windows Form per progettare interfacce utente.  In WPF viene usato un linguaggio di markup, denominato Extensible Application Markup Language \(XAML\), che offre nuove tecniche per l'incorporazione di interfacce utente, supporti e documenti.  Per altre informazioni, vedere [Introduzione a WPF in Visual Studio 2015](../Topic/Introduction%20to%20WPF%20in%20Visual%20Studio%202015.md).  
+  Anche se le soluzioni create tramite gli strumenti di sviluppo di Office in Visual Studio sono progettate per essere usate direttamente con i controlli Windows Form, è possibile usare anche i controlli WPF nelle soluzioni.  Windows Presentation Foundation \(WPF\) è un'alternativa a Windows Form per progettare interfacce utente.  In WPF viene usato un linguaggio di markup, denominato Extensible Application Markup Language \(XAML\), che offre nuove tecniche per l'incorporazione di interfacce utente, supporti e documenti.  Per altre informazioni, vedere [Introduzione a WPF in Visual Studio 2015](http://msdn.microsoft.com/library/582a314e-e23d-4144-b45b-acbbd5579252).  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
@@ -98,21 +98,21 @@ caps.handback.revision: 24
 ## Risorse WPF  
  Per altre informazioni sulle problematiche di progettazione e architettura per l'hosting dei controlli WPF in form e controlli Windows Form, vedere gli argomenti seguenti:  
   
--   [Architettura di input per l'interoperabilità tra Windows Form e WPF](../Topic/Windows%20Forms%20and%20WPF%20Interoperability%20Input%20Architecture.md)  
+-   [Architettura di input per l'interoperabilità tra Windows Form e WPF](http://msdn.microsoft.com/library/0eb6f137-f088-4c5e-9e37-f96afd28f235)  
   
--   [Mapping di proprietà di Windows Form e WPF](../Topic/Windows%20Forms%20and%20WPF%20Property%20Mapping.md)  
+-   [Mapping di proprietà di Windows Form e WPF](http://msdn.microsoft.com/library/999d8298-9c04-467d-a453-86e41002057d)  
   
--   [Interoperatività di WPF e Windows Form](../Topic/WPF%20and%20Windows%20Forms%20Interoperation.md)  
+-   [Interoperatività di WPF e Windows Form](http://msdn.microsoft.com/library/9e8aa6b6-112c-4579-98d1-c974917df499)  
   
--   [Controlli Windows Form e controlli WPF equivalenti](../Topic/Windows%20Forms%20Controls%20and%20Equivalent%20WPF%20Controls.md)  
+-   [Controlli Windows Form e controlli WPF equivalenti](http://msdn.microsoft.com/library/8a157e6b-8054-46db-a5cf-a78966acc7a1)  
   
  Per altre informazioni sull'aggiunta dei controlli WPF a form e controlli Windows Form in Visual Studio in fase di progettazione, vedere gli argomenti seguenti:  
   
--   [Procedura dettagliata: creazione di nuovo contenuto WPF in Windows Form in fase di progettazione](../Topic/Walkthrough:%20Creating%20New%20WPF%20Content%20on%20Windows%20Forms%20at%20Design%20Time.md)  
+-   [Procedura dettagliata: creazione di nuovo contenuto WPF in Windows Form in fase di progettazione](http://msdn.microsoft.com/library/2e92d8e8-f0e4-4df7-9f07-2acf35cd798c)  
   
--   [Procedura dettagliata: disposizione del contenuto WPF in Windows Form in fase di progettazione](../Topic/Walkthrough:%20Arranging%20WPF%20Content%20on%20Windows%20Forms%20at%20Design%20Time.md)  
+-   [Procedura dettagliata: disposizione del contenuto WPF in Windows Form in fase di progettazione](http://msdn.microsoft.com/library/5efb1c53-1484-43d6-aa8a-f4861b99bb8a)  
   
--   [Procedura dettagliata: applicazione di stili al contenuto WPF](../Topic/Walkthrough:%20Styling%20WPF%20Content.md)  
+-   [Procedura dettagliata: applicazione di stili al contenuto WPF](http://msdn.microsoft.com/library/e574aac7-7ea4-4cdb-8034-bab541f000df)  
   
 ## Vedere anche  
  [Personalizzazione dell'interfaccia utente di Office](../vsto/office-ui-customization.md)   

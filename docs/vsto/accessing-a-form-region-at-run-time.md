@@ -71,7 +71,7 @@ caps.handback.revision: 22
   
  Per consentire l'accesso a un controllo dall'esterno del file di codice dell'area del modulo, creare una proprietà in tale file di codice per la restituzione del controllo.  
   
- Per altre informazioni su come creare proprietà in C\#, vedere [Procedura: dichiarare e usare proprietà Read Write &#40;Guida per programmatori C&#35;&#41;](../Topic/How%20to:%20Declare%20and%20Use%20Read%20Write%20Properties%20(C%23%20Programming%20Guide).md).  
+ Per altre informazioni su come creare proprietà in C\#, vedere [Procedura: dichiarare e usare proprietà Read Write &#40;Guida per programmatori C&#35;&#41;](http://msdn.microsoft.com/library/a4962fef-af7e-4c4b-a929-4ae4d646ab8a).  
   
  Per altre informazioni su come creare proprietà in Visual Basic, vedere [NON INCLUSO NELLA BUILD: Procedura: Aggiungere campi e proprietà a una classe](http://msdn.microsoft.com/it-it/ae53f61b-3abc-413e-8931-703c5f5e8fc2).  
   

@@ -98,7 +98,7 @@ caps.handback.revision: 100
  È anche possibile scrivere codice per rispondere agli eventi di qualsiasi oggetto, tra cui controlli host, applicazioni o eventi del documento.  Per altre informazioni, vedere [Procedura dettagliata: programmazione per eventi di un controllo NamedRange](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md).  
   
 ## Binding di dati a controlli nel riquadro azioni  
- I controlli nel riquadro azioni hanno le stesse caratteristiche di data binding di quelli in Windows Form.  È possibile associare i controlli a origini dati come set di dati, set di dati tipizzati e XML.  Per altre informazioni, vedere [Associazione dati e Windows Form](../Topic/Data%20Binding%20and%20Windows%20Forms.md).  
+ I controlli nel riquadro azioni hanno le stesse caratteristiche di data binding di quelli in Windows Form.  È possibile associare i controlli a origini dati come set di dati, set di dati tipizzati e XML.  Per altre informazioni, vedere [Associazione dati e Windows Form](http://msdn.microsoft.com/library/419aac5e-819b-4aad-88b0-73a2f8c0bd27).  
   
  È possibile associare controlli nel riquadro azioni e controlli nel documento allo stesso set di dati.  Ad esempio, è possibile creare una relazione master\/dettaglio tra i controlli nel riquadro azioni e i controlli nel foglio di lavoro.  Per altre informazioni, vedere [Procedura dettagliata: associazione di dati a controlli in un riquadro delle azioni di Excel](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md).  
   
@@ -124,7 +124,7 @@ caps.handback.revision: 100
  [!code-vb[Trin_VstcoreActionsPaneExcel#10](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreActionsPaneExcel/VB/ThisWorkbook.vb#10)]  
   
 ## Ancoraggio dei controlli  
- Se l'utente ridimensiona il riquadro azioni in fase di esecuzione, i controlli possono essere ridimensionati insieme al riquadro azioni.  È possibile usare la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> di un controllo Windows Form per ancorare i controlli al riquadro azioni.  È anche possibile ancorare i controlli Windows Form nel controllo utente allo stesso modo.  Per altre informazioni, vedere [Procedura: agganciare i controlli in Windows Form](../Topic/How%20to:%20Anchor%20Controls%20on%20Windows%20Forms.md).  
+ Se l'utente ridimensiona il riquadro azioni in fase di esecuzione, i controlli possono essere ridimensionati insieme al riquadro azioni.  È possibile usare la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> di un controllo Windows Form per ancorare i controlli al riquadro azioni.  È anche possibile ancorare i controlli Windows Form nel controllo utente allo stesso modo.  Per altre informazioni, vedere [Procedura: agganciare i controlli in Windows Form](http://msdn.microsoft.com/library/59ea914f-fbd3-427a-80fe-decd02f7ae6d).  
   
 ## Ridimensionamento del riquadro azioni  
  Non è possibile modificare direttamente le dimensioni di un oggetto <xref:Microsoft.Office.Tools.ActionsPane> perché <xref:Microsoft.Office.Tools.ActionsPane> è incorporato nel riquadro attività.  È tuttavia modificare a livello di codice la larghezza del riquadro attività impostando la proprietà <xref:Microsoft.Office.Core.CommandBar.Width%2A> dell'oggetto <xref:Microsoft.Office.Core.CommandBar> che rappresenta il riquadro attività.  È possibile modificare l'altezza del riquadro attività se è ancorato in orizzontale o se è mobile.  

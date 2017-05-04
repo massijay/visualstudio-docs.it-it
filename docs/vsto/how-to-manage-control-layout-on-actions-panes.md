@@ -31,7 +31,7 @@ caps.handback.revision: 55
  L'ordine di presentazione dei controlli varia a seconda che il riquadro delle azioni sia ancorato verticalmente oppure orizzontalmente.  
   
 > [!NOTE]  
->  Se l'utente ridimensiona il riquadro delle azioni in fase di esecuzione, è possibile impostare i controlli per il ridimensionamento con il riquadro.  È possibile utilizzare la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> di un controllo Windows Form per ancorare i controlli al riquadro delle azioni.  Per ulteriori informazioni, vedere [Procedura: agganciare i controlli in Windows Form](../Topic/How%20to:%20Anchor%20Controls%20on%20Windows%20Forms.md).  
+>  Se l'utente ridimensiona il riquadro delle azioni in fase di esecuzione, è possibile impostare i controlli per il ridimensionamento con il riquadro.  È possibile utilizzare la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> di un controllo Windows Form per ancorare i controlli al riquadro delle azioni.  Per ulteriori informazioni, vedere [Procedura: agganciare i controlli in Windows Form](http://msdn.microsoft.com/library/59ea914f-fbd3-427a-80fe-decd02f7ae6d).  
   
 > [!NOTE]  
 >  Il computer potrebbe mostrare nomi o percorsi diversi per alcuni elementi dell'interfaccia utente di Visual Studio nelle istruzioni seguenti.  Questi elementi sono determinati dall'edizione di Visual Studio in uso e dalle impostazioni utilizzate.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  

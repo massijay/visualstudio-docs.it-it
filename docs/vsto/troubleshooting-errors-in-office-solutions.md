@@ -206,7 +206,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
   
  "Impossibile creare il dominio applicazione. Personalizzazione non caricata."  
   
- Visual Studio usa Fusion, il caricatore di assembly .NET Framework, per memorizzare nella cache gli assembly prima di caricare le soluzioni Office.  Assicurarsi che Visual Studio possa scrivere nella cache Fusion e riprovare.  Per altre informazioni, vedere [Creazione di copie replicate di assembly](../Topic/Shadow%20Copying%20Assemblies.md).  
+ Visual Studio usa Fusion, il caricatore di assembly .NET Framework, per memorizzare nella cache gli assembly prima di caricare le soluzioni Office.  Assicurarsi che Visual Studio possa scrivere nella cache Fusion e riprovare.  Per altre informazioni, vedere [Creazione di copie replicate di assembly](http://msdn.microsoft.com/library/de8b8759-fca7-4260-896b-5a4973157672).  
   
 ### Errore durante l'arresto del debugger in un progetto a livello di documento dopo l'uso del comando Modifica e continuazione  
  Se si usa il comando Modifica e continuazione per apportare modifiche al codice in un progetto a livello di documento per Excel o Word mentre il progetto è in modalità interruzione, potrebbe venire visualizzata una finestra di dialogo con il messaggio di errore seguente se successivamente si arresta il debugger.  

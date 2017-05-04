@@ -95,11 +95,11 @@ caps.handback.revision: 14
   
  In un VSPackage è possibile richiedere un oggetto <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> tramite uno dei metodi seguenti:  
   
--   Il metodo <xref:System.IServiceProvider.GetService%2A> di un VSPackage gestito che deriva dalla classe <xref:Microsoft.VisualStudio.Shell.Package>.  Per ulteriori informazioni, vedere [Procedura: ottenere un servizio](../Topic/How%20to:%20Get%20a%20Service.md).  
+-   Il metodo <xref:System.IServiceProvider.GetService%2A> di un VSPackage gestito che deriva dalla classe <xref:Microsoft.VisualStudio.Shell.Package>.  Per ulteriori informazioni, vedere [Procedura: ottenere un servizio](~/extensibility/how-to-get-a-service.md).  
   
--   Il metodo statico <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>.  Per ulteriori informazioni, vedere [Procedura: Usare GetGlobalService](../Topic/How%20to:%20Use%20GetGlobalService.md).  
+-   Il metodo statico <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A>.  Per ulteriori informazioni, vedere [Procedura: Usare GetGlobalService](~/misc/how-to-use-getglobalservice.md).  
   
- In un'estensione di Visual Studio in grado di accedere a un oggetto <xref:EnvDTE80.DTE2> è possibile richiedere un oggetto <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> tramite il metodo <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> di un oggetto <xref:Microsoft.VisualStudio.Shell.ServiceProvider>.  Per ulteriori informazioni, vedere [Procedura: Ottenere un servizio dall'oggetto DTE](../Topic/How%20to:%20Get%20a%20Service%20from%20the%20DTE%20Object.md).  
+ In un'estensione di Visual Studio in grado di accedere a un oggetto <xref:EnvDTE80.DTE2> è possibile richiedere un oggetto <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> tramite il metodo <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> di un oggetto <xref:Microsoft.VisualStudio.Shell.ServiceProvider>.  Per ulteriori informazioni, vedere [Procedura: Ottenere un servizio dall'oggetto DTE](~/misc/how-to-get-a-service-from-the-dte-object.md).  
   
 ### Esempio  
  Nell'esempio di codice seguente viene illustrato come recuperare il servizio di progetto in un componente aggiuntivo di Visual Studio.  Per utilizzare questo codice, eseguirlo dalla classe `Connect` in un progetto di componente aggiuntivo.  L'oggetto `_applicationObject` viene generato automaticamente nei progetti di componente aggiuntivo. Questo oggetto è un'istanza dell'interfaccia <xref:EnvDTE80.DTE2>.  
@@ -109,15 +109,15 @@ caps.handback.revision: 14
   
  L'esempio presenta i seguenti requisiti:  
   
--   Progetto di componente aggiuntivo di Visual Studio  Per ulteriori informazioni, vedere [Procedura: creare un componente aggiuntivo](../Topic/How%20to:%20Create%20an%20Add-In.md).  
+-   Progetto di componente aggiuntivo di Visual Studio  Per ulteriori informazioni, vedere [Procedura: creare un componente aggiuntivo](http://msdn.microsoft.com/library/50be56d2-e3a5-4cd2-8569-2a0666b268ce).  
   
 -   Riferimenti agli assembly Microsoft.VisualStudio.OLE.Interop, Microsoft.VisualStudio.Shell e Microsoft.VisualStudio.SharePoint.  
   
 ## Vedere anche  
  [Using the SharePoint Project Service](../sharepoint/using-the-sharepoint-project-service.md)   
- [Procedura: creare un componente aggiuntivo](../Topic/How%20to:%20Create%20an%20Add-In.md)   
- [Procedura: ottenere un servizio](../Topic/How%20to:%20Get%20a%20Service.md)   
- [Procedura: Ottenere un servizio dall'oggetto DTE](../Topic/How%20to:%20Get%20a%20Service%20from%20the%20DTE%20Object.md)   
- [Procedura: utilizzare procedure guidate con modelli di progetto](../Topic/How%20to:%20Use%20Wizards%20with%20Project%20Templates.md)  
+ [Procedura: creare un componente aggiuntivo](http://msdn.microsoft.com/library/50be56d2-e3a5-4cd2-8569-2a0666b268ce)   
+ [Procedura: ottenere un servizio](~/extensibility/how-to-get-a-service.md)   
+ [Procedura: Ottenere un servizio dall'oggetto DTE](~/misc/how-to-get-a-service-from-the-dte-object.md)   
+ [Procedura: utilizzare procedure guidate con modelli di progetto](~/extensibility/how-to-use-wizards-with-project-templates.md)  
   
   

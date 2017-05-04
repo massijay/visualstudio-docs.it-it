@@ -49,7 +49,7 @@ caps.handback.revision: 43
   
  Per completare la procedura dettagliata è consigliabile conoscere i concetti riportati di seguito:  
   
--   Procedure guidate per modelli di progetto e di elemento in Visual Studio.  Per ulteriori informazioni, vedere [Procedura: utilizzare procedure guidate con modelli di progetto](../Topic/How%20to:%20Use%20Wizards%20with%20Project%20Templates.md) e l'interfaccia <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>.  
+-   Procedure guidate per modelli di progetto e di elemento in Visual Studio.  Per ulteriori informazioni, vedere [Procedura: utilizzare procedure guidate con modelli di progetto](~/extensibility/how-to-use-wizards-with-project-templates.md) e l'interfaccia <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>.  
   
 -   Azioni personalizzate in SharePoint.  Per ulteriori informazioni, vedere l'articolo relativo all'[azione personalizzata](http://go.microsoft.com/fwlink/?LinkID=177800) \(la pagina potrebbe essere in inglese\).  
   
@@ -84,7 +84,7 @@ caps.handback.revision: 43
   
 2.  In **Progettazione progetti**, assicurarsi che il framework di destinazione sia impostato su .NET Framework 4,5.  
   
-     Per i progetti visual C\#, è possibile impostare questo valore sulla scheda **Application**.  Per i progetti di Visual Basic., è possibile impostare questo valore sulla scheda **Compilazione**.  Per ulteriori informazioni, vedere [Procedura: destinare una versione di .NET Framework](../Topic/How%20to:%20Target%20a%20Version%20of%20the%20.NET%20Framework.md).  
+     Per i progetti visual C\#, è possibile impostare questo valore sulla scheda **Application**.  Per i progetti di Visual Basic., è possibile impostare questo valore sulla scheda **Compilazione**.  Per ulteriori informazioni, vedere [Procedura: destinare una versione di .NET Framework](~/ide/how-to-target-a-version-of-the-dotnet-framework.md).  
   
 3.  Nel progetto **ItemTemplateWizard**, aggiungere un elemento **Finestra \(WPF\)** al progetto e denominarlo l'elemento **WizardWindow**.  
   
@@ -354,7 +354,7 @@ caps.handback.revision: 43
  [Defining Custom SharePoint Project Item Types](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [Creating Item Templates and Project Templates for SharePoint Project Items](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)   
  [Riferimenti allo schema dei modelli di Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Procedura: utilizzare procedure guidate con modelli di progetto](../Topic/How%20to:%20Use%20Wizards%20with%20Project%20Templates.md)   
+ [Procedura: utilizzare procedure guidate con modelli di progetto](~/extensibility/how-to-use-wizards-with-project-templates.md)   
  [Impostare come valore predefinito percorsi di un'azione personalizzata e gli ID](http://go.microsoft.com/fwlink/?LinkId=181964)  
   
   

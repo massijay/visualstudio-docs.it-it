@@ -28,7 +28,7 @@ caps.handback.revision: 17
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- Se si modificano i manifesti dell'applicazione e quelli di distribuzione utilizzando lo Strumento per la generazione e la modifica di manifesti \(mage.exe e mageui.exe\), è necessario firmare nuovamente i manifesti prima che sia possibile utilizzarli.  Per ulteriori informazioni, vedere [How to: Re-sign Application and Deployment Manifests](../Topic/How%20to:%20Re-sign%20Application%20and%20Deployment%20Manifests.md).  
+ Se si modificano i manifesti dell'applicazione e quelli di distribuzione utilizzando lo Strumento per la generazione e la modifica di manifesti \(mage.exe e mageui.exe\), è necessario firmare nuovamente i manifesti prima che sia possibile utilizzarli.  Per ulteriori informazioni, vedere [How to: Re-sign Application and Deployment Manifests](~/deployment/how-to-re-sign-application-and-deployment-manifests.md).  
   
 ## Applicazione della firma mediante un certificato  
  Un certificato è un file che contiene una chiave univoca e l'identità dell'autore della soluzione.  È possibile acquistare certificati da un autorità di certificazione oppure creare il proprio certificato e farlo firmare da un'autorità di certificazione.  

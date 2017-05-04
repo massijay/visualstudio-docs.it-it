@@ -38,7 +38,7 @@ caps.handback.revision: 38
   
 1.  Aprire un progetto a livello di documento di Excel in Visual Studio, tenendo aperto il foglio di lavoro nella finestra di progettazione.  
   
-2.  Aprire la finestra **Origini dati** e creare un'origine dati per il progetto.  Per ulteriori informazioni, vedere [Procedura: connettersi ai dati di un database](../Topic/How%20to:%20Connect%20to%20Data%20in%20a%20Database.md).  
+2.  Aprire la finestra **Origini dati** e creare un'origine dati per il progetto.  Per ulteriori informazioni, vedere [Procedura: connettersi ai dati di un database](~/data-tools/how-to-connect-to-data-in-a-database.md).  
   
 3.  Trascinare la tabella o il campo desiderato dalla finestra **Origini dati** sul foglio di lavoro.  
   
@@ -55,11 +55,11 @@ caps.handback.revision: 38
   
 -   Un dataset tipizzato che incapsula le tabelle dati a cui ci si è connessi nel database.  Per ulteriori informazioni, vedere [Utilizzo di dataset in Visual Studio](../data-tools/dataset-tools-in-visual-studio.md).  
   
--   Un oggetto <xref:System.Windows.Forms.BindingSource> che connette il controllo al dataset tipizzato.  Per ulteriori informazioni, vedere [Cenni preliminari sul componente BindingSource](../Topic/BindingSource%20Component%20Overview.md).  
+-   Un oggetto <xref:System.Windows.Forms.BindingSource> che connette il controllo al dataset tipizzato.  Per ulteriori informazioni, vedere [Cenni preliminari sul componente BindingSource](http://msdn.microsoft.com/library/be838caf-fcb0-4b68-827f-58b2c04b747f).  
   
 -   Un oggetto TableAdapter che connette il dataset tipizzato al database.  Per ulteriori informazioni, vedere [Cenni preliminari sugli oggetti TableAdapter](/visual-studio/data-tools/tableadapter-overview).  
   
--   Un oggetto TableAdapterManager, utilizzato per coordinare i TableAdapter nel dataset per attivare gli aggiornamenti gerarchici.  Per ulteriori informazioni, vedere [Aggiornamento gerarchico](../data-tools/hierarchical-update.md) e [Panoramica di TableAdapterManager](../Topic/TableAdapterManager%20Overview.md).  
+-   Un oggetto TableAdapterManager, utilizzato per coordinare i TableAdapter nel dataset per attivare gli aggiornamenti gerarchici.  Per ulteriori informazioni, vedere [Aggiornamento gerarchico](../data-tools/hierarchical-update.md) e [Panoramica di TableAdapterManager](http://msdn.microsoft.com/library/33076d42-6b41-491a-ac11-6c6339aea650).  
   
  Quando si esegue il progetto, nel controllo verrà visualizzato il primo record dell'origine dati.  È possibile utilizzare <xref:System.Windows.Forms.BindingSource> per consentire agli utenti di scorrere i record.  
   

@@ -44,6 +44,6 @@ caps.handback.revision: 47
  [Procedura: Usare finestre di dialogo incorporate in Word a livello di codice](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)   
  [Panoramica del modello a oggetti di Word](../vsto/word-object-model-overview.md)   
  [Associazione tardiva nelle soluzioni Office](../vsto/late-binding-in-office-solutions.md)   
- [Reflection &#40;C&#35; e Visual Basic&#41;](../Topic/Reflection%20(C%23%20and%20Visual%20Basic).md)  
+ [Reflection &#40;C&#35; e Visual Basic&#41;](http://msdn.microsoft.com/library/5d1d1bcf-08de-4d0b-97a8-912d17c00f26)  
   
   

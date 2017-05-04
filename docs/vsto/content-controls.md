@@ -155,7 +155,7 @@ caps.handback.revision: 64
  Per una panoramica del binding di controlli host in soluzioni di Office a dati, vedere [Associazione di dati ai controlli nelle soluzioni Office](../vsto/binding-data-to-controls-in-office-solutions.md).  
   
 ### Uso del modello di data binding di Windows Form  
- La maggior parte dei controlli contenuto supporta il modello di data binding semplice usato da Windows Form.  Il data binding semplice significa che un controllo è associato a un singolo elemento dati, ad esempio un valore in una colonna di una tabella dati.  Per altre informazioni, vedere [Associazione dati e Windows Form](../Topic/Data%20Binding%20and%20Windows%20Forms.md).  
+ La maggior parte dei controlli contenuto supporta il modello di data binding semplice usato da Windows Form.  Il data binding semplice significa che un controllo è associato a un singolo elemento dati, ad esempio un valore in una colonna di una tabella dati.  Per altre informazioni, vedere [Associazione dati e Windows Form](http://msdn.microsoft.com/library/419aac5e-819b-4aad-88b0-73a2f8c0bd27).  
   
  Nei progetti a livello di documento è possibile associare dati a controlli contenuto usando la finestra **Origini dati** in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  Per altre informazioni su come aggiungere ai documenti controlli contenuto associati a dati, vedere [Procedura: popolare documenti con dati da un database](../vsto/how-to-populate-documents-with-data-from-a-database.md) e [Procedura: Popolare documenti con i dati di oggetti](../vsto/how-to-populate-documents-with-data-from-objects.md).  
   

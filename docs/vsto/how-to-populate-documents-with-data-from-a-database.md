@@ -39,7 +39,7 @@ caps.handback.revision: 47
   
 1.  Aprire un progetto a livello di documento Word in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], con il documento aperto nella finestra di progettazione.  
   
-2.  Aprire la finestra **Origini dati** e creare un'origine dati da un database.  Per altre informazioni, vedere [Procedura: connettersi ai dati di un database](../Topic/How%20to:%20Connect%20to%20Data%20in%20a%20Database.md).  
+2.  Aprire la finestra **Origini dati** e creare un'origine dati da un database.  Per altre informazioni, vedere [Procedura: connettersi ai dati di un database](~/data-tools/how-to-connect-to-data-in-a-database.md).  
   
 3.  Trascinare il campo desiderato dalla finestra **Origini dati** nel documento.  
   
@@ -52,11 +52,11 @@ caps.handback.revision: 47
   
 -   Un set di dati tipizzato che incapsula le tabelle dati a cui ci si è connessi nel database.  Per altre informazioni, vedere [Utilizzo di dataset in Visual Studio](../data-tools/dataset-tools-in-visual-studio.md).  
   
--   Un oggetto <xref:System.Windows.Forms.BindingSource> che connette il controllo al set di dati tipizzato.  Per altre informazioni, vedere [Cenni preliminari sul componente BindingSource](../Topic/BindingSource%20Component%20Overview.md).  
+-   Un oggetto <xref:System.Windows.Forms.BindingSource> che connette il controllo al set di dati tipizzato.  Per altre informazioni, vedere [Cenni preliminari sul componente BindingSource](http://msdn.microsoft.com/library/be838caf-fcb0-4b68-827f-58b2c04b747f).  
   
 -   Un oggetto TableAdapter che connette il set di dati tipizzato al database.  Per altre informazioni, vedere [Cenni preliminari sugli oggetti TableAdapter](/visual-studio/data-tools/tableadapter-overview).  
   
--   Un oggetto TableAdapterManager, usato per coordinare gli adattatori di tabella nel set di dati per attivare gli aggiornamenti gerarchici.  Per altre informazioni, vedere [Aggiornamento gerarchico](../data-tools/hierarchical-update.md) e [Panoramica di TableAdapterManager](../Topic/TableAdapterManager%20Overview.md).  
+-   Un oggetto TableAdapterManager, usato per coordinare gli adattatori di tabella nel set di dati per attivare gli aggiornamenti gerarchici.  Per altre informazioni, vedere [Aggiornamento gerarchico](../data-tools/hierarchical-update.md) e [Panoramica di TableAdapterManager](http://msdn.microsoft.com/library/33076d42-6b41-491a-ac11-6c6339aea650).  
   
  Quando si esegue il progetto, il controllo visualizza il primo record dell'origine dati.  È possibile usare <xref:System.Windows.Forms.BindingSource> per consentire agli utenti di scorrere i record.  
   
@@ -74,6 +74,6 @@ caps.handback.revision: 47
  [Procedura: Aggiornare un'origine dati con i dati inviati da un controllo host](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)   
  [Cenni preliminari sull'utilizzo di file di un database locale nelle soluzioni Office](../vsto/using-local-database-files-in-office-solutions-overview.md)   
  [Connessione ai dati nelle applicazioni Windows Form](/visual-studio/data-tools/connecting-to-data-in-windows-forms-applications)   
- [Cenni preliminari sul componente BindingSource](../Topic/BindingSource%20Component%20Overview.md)  
+ [Cenni preliminari sul componente BindingSource](http://msdn.microsoft.com/library/be838caf-fcb0-4b68-827f-58b2c04b747f)  
   
   

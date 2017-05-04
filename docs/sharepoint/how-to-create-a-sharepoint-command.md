@@ -30,7 +30,7 @@ caps.handback.revision: 21
   
 1.  Creare un progetto Libreria di classi avente la configurazione seguente:  
   
-    -   Destinata a .NET Framework 3.5.  Per ulteriori informazioni sulla scelta del framework di destinazione, vedere [Procedura: destinare una versione di .NET Framework](../Topic/How%20to:%20Target%20a%20Version%20of%20the%20.NET%20Framework.md).  
+    -   Destinata a .NET Framework 3.5.  Per ulteriori informazioni sulla scelta del framework di destinazione, vedere [Procedura: destinare una versione di .NET Framework](~/ide/how-to-target-a-version-of-the-dotnet-framework.md).  
   
     -   Destinata alla piattaforma AnyCPU o x64.  Per impostazione predefinita, la piattaforma di destinazione per i progetti Libreria di classi è AnyCPU.  Per ulteriori informazioni sulla scelta della piattaforma di destinazione, vedere [NIB: How to: Optimize an Application for a Specific CPU Type](http://msdn.microsoft.com/it-it/294a75d2-4279-4b72-8298-2bea05be907a).  
   
@@ -53,7 +53,7 @@ caps.handback.revision: 21
   
     -   Può presentare un valore restituito.  
   
-    -   Il secondo parametro e il valore restituito devono poter essere serializzati da Windows Communication Foundation \(WCF\).  Per ulteriori informazioni, vedere [Tipi supportati dal serializzatore dei contratti dati](../Topic/Types%20Supported%20by%20the%20Data%20Contract%20Serializer.md) e [Utilizzo della classe XmlSerializer](../Topic/Using%20the%20XmlSerializer%20Class.md).  
+    -   Il secondo parametro e il valore restituito devono poter essere serializzati da Windows Communication Foundation \(WCF\).  Per ulteriori informazioni, vedere [Tipi supportati dal serializzatore dei contratti dati](http://msdn.microsoft.com/library/7381b200-437a-4506-9556-d77bf1bc3f34) e [Utilizzo della classe XmlSerializer](http://msdn.microsoft.com/library/c680602d-39d3-44f1-bf22-8e6654ad5069).  
   
     -   Il metodo può presentare qualsiasi tipo di visibilità \(**public**, **internal**o **private**\) e può essere statico o non statico.  
   

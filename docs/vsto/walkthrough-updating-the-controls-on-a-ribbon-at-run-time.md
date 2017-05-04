@@ -291,7 +291,7 @@ caps.handback.revision: 50
 ## Vedere anche  
  [Accesso alla barra multifunzione in fase di esecuzione](../vsto/accessing-the-ribbon-at-run-time.md)   
  [Cenni preliminari sulla barra multifunzione](../vsto/ribbon-overview.md)   
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20(Language-Integrated%20Query).md)   
+ [LINQ \(Language\-Integrated Query\)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
  [Procedura: iniziare a personalizzare la barra multifunzione](../vsto/how-to-get-started-customizing-the-ribbon.md)   
  [Finestra di progettazione della barra multifunzione](../vsto/ribbon-designer.md)   
  [Procedura dettagliata: creazione di una scheda personalizzata utilizzando la finestra di progettazione della barra multifunzione](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   

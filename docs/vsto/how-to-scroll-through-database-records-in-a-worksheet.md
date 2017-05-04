@@ -35,7 +35,7 @@ caps.handback.revision: 32
   
 1.  Aprire un progetto Applicazione di Excel in Visual Studio.  
   
-2.  Aprire la finestra **Origini dati** e creare un'origine dati dal database.  Per ulteriori informazioni, vedere [Procedura: connettersi ai dati di un database](../Topic/How%20to:%20Connect%20to%20Data%20in%20a%20Database.md).  
+2.  Aprire la finestra **Origini dati** e creare un'origine dati dal database.  Per ulteriori informazioni, vedere [Procedura: connettersi ai dati di un database](~/data-tools/how-to-connect-to-data-in-a-database.md).  
   
 3.  Espandere la tabella contenente i dati che si desidera mostrare e selezionare la colonna specifica.  
   
@@ -43,7 +43,7 @@ caps.handback.revision: 32
   
 5.  Trascinare il controllo <xref:Microsoft.Office.Tools.Excel.NamedRange> sulla cella in cui si desidera visualizzare i dati.  
   
-6.  Dalla scheda **Windows Form** della **Casella degli strumenti**, aggiungere un controllo <xref:System.Windows.Forms.BindingNavigator> al foglio di lavoro e impostare i controlli che si desidera utilizzare.  Per ulteriori informazioni, vedere [Cenni preliminari sul controllo BindingNavigator &#40;Windows Form&#41;](../Topic/BindingNavigator%20Control%20Overview%20(Windows%20Forms).md).  
+6.  Dalla scheda **Windows Form** della **Casella degli strumenti**, aggiungere un controllo <xref:System.Windows.Forms.BindingNavigator> al foglio di lavoro e impostare i controlli che si desidera utilizzare.  Per ulteriori informazioni, vedere [Cenni preliminari sul controllo BindingNavigator &#40;Windows Form&#41;](http://msdn.microsoft.com/library/4423eede-f8d1-4d02-822f-5bf8432680d0).  
   
 ## Vedere anche  
  [Associazione di dati ai controlli nelle soluzioni Office](../vsto/binding-data-to-controls-in-office-solutions.md)  

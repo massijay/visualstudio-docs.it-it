@@ -48,7 +48,7 @@ caps.handback.revision: 38
   
  È inoltre consigliabile installare [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)].  Nell'SDK sono inclusi modelli di progetto e strumenti utili per estendere Visual Studio.  In particolare, nell'SDK è presente un modello di progetto che è possibile utilizzare per creare facilmente un pacchetto Visual Studio Extension \(VSIX\).  I pacchetti VSIX costituiscono il modo migliore per implementare le estensioni di Visual Studio in Visual Studio.  Tutte le estensioni degli strumenti di SharePoint devono essere distribuite tramite pacchetti VSIX.  Tutte le procedure dettagliate di questa documentazione presuppongono che sia stato installato l'[!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)].  
   
- Per scaricare l'SDK, vedere [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=164562](http://go.microsoft.com/fwlink/?LinkId=164562) \(la pagina potrebbe essere in inglese\).  Per ulteriori informazioni sulle estensioni di Visual Studio, vedere [Sviluppo di estensioni di Visual Studio](../Topic/Developing%20Visual%20Studio%20Extensions.md).  
+ Per scaricare l'SDK, vedere [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=164562](http://go.microsoft.com/fwlink/?LinkId=164562) \(la pagina potrebbe essere in inglese\).  Per ulteriori informazioni sulle estensioni di Visual Studio, vedere [Sviluppo di estensioni di Visual Studio](http://msdn.microsoft.com/library/5b1b5db3-6005-44cf-83b0-e608d7764d14).  
   
 ## Vedere anche  
  [Overview of the Programming Model of SharePoint Tools Extensions](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)   

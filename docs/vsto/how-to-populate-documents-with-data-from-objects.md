@@ -39,7 +39,7 @@ caps.handback.revision: 39
   
 #### Per aggiungere un oggetto dati  
   
--   Aprire la finestra **Origini dati** e creare un'origine dati da un oggetto. Per altre informazioni, vedere [Procedura: connettersi ai dati negli oggetti](../Topic/How%20to:%20Connect%20to%20Data%20in%20Objects.md).  
+-   Aprire la finestra **Origini dati** e creare un'origine dati da un oggetto. Per altre informazioni, vedere [Procedura: connettersi ai dati negli oggetti](http://msdn.microsoft.com/library/862fd351-0f4d-4220-9743-6103b87dc24b).  
   
 ## Connessione dell'oggetto dati a BindingSource  
  Nei progetti a livello di documento i controlli vengono aggiunti al documento e associati ai dati in fase di progettazione.  
@@ -75,6 +75,6 @@ caps.handback.revision: 39
  [Procedura: popolare documenti con dati da un database](../vsto/how-to-populate-documents-with-data-from-a-database.md)   
  [Procedura: Aggiornare un'origine dati con i dati inviati da un controllo host](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)   
  [Connessione ai dati nelle applicazioni Windows Form](/visual-studio/data-tools/connecting-to-data-in-windows-forms-applications)   
- [Cenni preliminari sul componente BindingSource](../Topic/BindingSource%20Component%20Overview.md)  
+ [Cenni preliminari sul componente BindingSource](http://msdn.microsoft.com/library/be838caf-fcb0-4b68-827f-58b2c04b747f)  
   
   

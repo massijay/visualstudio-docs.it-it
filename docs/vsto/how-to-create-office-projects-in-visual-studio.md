@@ -44,7 +44,7 @@ caps.handback.revision: 95
      Verrà visualizzata la finestra di dialogo **Nuovo progetto**.  
   
     > [!NOTE]  
-    >  Per impostazione predefinita, i progetti di Office hanno come destinazione [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)].  Per altre informazioni, vedere [Profilo client .NET Framework](../Topic/.NET%20Framework%20Client%20Profile.md).  
+    >  Per impostazione predefinita, i progetti di Office hanno come destinazione [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)].  Per altre informazioni, vedere [Profilo client .NET Framework](http://msdn.microsoft.com/library/f0219919-1f02-4588-8704-327a62fd91f1).  
   
 2.  Nel riquadro dei modelli, nel nodo per il linguaggio che si vuole usare, espandere **Office\/SharePoint**.  
   
@@ -95,7 +95,7 @@ caps.handback.revision: 95
      Verrà visualizzata la finestra di dialogo **Nuovo progetto**.  
   
     > [!NOTE]  
-    >  Per impostazione predefinita, i progetti di Office hanno come destinazione [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)].  Per altre informazioni, vedere [Profilo client .NET Framework](../Topic/.NET%20Framework%20Client%20Profile.md).  
+    >  Per impostazione predefinita, i progetti di Office hanno come destinazione [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)].  Per altre informazioni, vedere [Profilo client .NET Framework](http://msdn.microsoft.com/library/f0219919-1f02-4588-8704-327a62fd91f1).  
   
 2.  Nel riquadro dei modelli, nel nodo per il linguaggio che si vuole usare, espandere **Office\/SharePoint**.  
   

@@ -191,7 +191,7 @@ caps.handback.revision: 57
   
 -   Associazione di celle a più colonne di una tabella invece che a un solo campo.  Per ulteriori informazioni, vedere [Procedura dettagliata: associazione dati complessa in un progetto a livello di documento](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md).  
   
--   Utilizzo di un controllo <xref:System.Windows.Forms.BindingNavigator> per scorrere i record.  Per ulteriori informazioni, vedere [Procedura: esplorare i dati con il controllo BindingNavigator Windows Form](../Topic/How%20to:%20Navigate%20Data%20with%20the%20Windows%20Forms%20BindingNavigator%20Control.md).  
+-   Utilizzo di un controllo <xref:System.Windows.Forms.BindingNavigator> per scorrere i record.  Per ulteriori informazioni, vedere [Procedura: esplorare i dati con il controllo BindingNavigator Windows Form](http://msdn.microsoft.com/library/0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb).  
   
 ## Vedere anche  
  [Associazione di dati ai controlli nelle soluzioni Office](../vsto/binding-data-to-controls-in-office-solutions.md)   

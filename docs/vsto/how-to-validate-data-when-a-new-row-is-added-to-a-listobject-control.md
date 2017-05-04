@@ -32,7 +32,7 @@ caps.handback.revision: 42
  Ogni volta che viene aggiunta una riga a <xref:Microsoft.Office.Tools.Excel.ListObject> associata ai dati, viene generato l'evento <xref:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow>. È possibile gestire questo evento per eseguire la convalida dei dati. Se, ad esempio, l'applicazione richiede che solo i dipendenti di età compresa tra i 18 e i 65 anni possano essere aggiunti all'origine dati, è possibile verificare che l'età inserita sia compresa nell'intervallo prima di aggiungere la riga.  
   
 > [!NOTE]  
->  È sempre opportuno verificare l'input dell'utente non solo nel client ma anche nel server. Per altre informazioni, vedere [Applicazioni client protette](../Topic/Secure%20Client%20Applications.md).  
+>  È sempre opportuno verificare l'input dell'utente non solo nel client ma anche nel server. Per altre informazioni, vedere [Applicazioni client protette](http://msdn.microsoft.com/library/6239592e-fa7d-4dea-9f00-d296d0048b01).  
   
 #### Per convalidare i dati quando una nuova riga viene aggiunta a un controllo ListObject associato ai dati  
   

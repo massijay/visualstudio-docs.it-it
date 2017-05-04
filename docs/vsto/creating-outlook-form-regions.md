@@ -135,7 +135,7 @@ caps.handback.revision: 41
   
  Per gestire gli eventi in un progetto Visual Basic, selezionare un evento dall'elenco dei nomi di metodo nella parte superiore dell'editor di codice.  
   
- Per gestire gli eventi in un progetto C\#, sottoscrivere gli eventi di controllo nel metodo <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing>.  Per altre informazioni, vedere [Procedura: sottoscrivere e annullare la sottoscrizione di eventi &#40;Guida per programmatori C&#35;&#41;](../Topic/How%20to:%20Subscribe%20to%20and%20Unsubscribe%20from%20Events%20(C%23%20Programming%20Guide).md).  
+ Per gestire gli eventi in un progetto C\#, sottoscrivere gli eventi di controllo nel metodo <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing>.  Per altre informazioni, vedere [Procedura: sottoscrivere e annullare la sottoscrizione di eventi &#40;Guida per programmatori C&#35;&#41;](http://msdn.microsoft.com/library/6319f39f-282c-4173-8a62-6c4657cf51cd).  
   
  È possibile modificare le proprietà dell'area del modulo nel metodo `InitializeManifest` della classe factory dell'area del modulo.  
   
