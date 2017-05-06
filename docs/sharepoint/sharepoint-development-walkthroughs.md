@@ -1,5 +1,5 @@
 ---
-title: "Procedure dettagliate sullo sviluppo per SharePoint | Microsoft Docs"
+title: "Procedure dettagliate sullo sviluppo per SharePoint"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

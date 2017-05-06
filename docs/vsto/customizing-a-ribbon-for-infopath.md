@@ -1,5 +1,5 @@
 ---
-title: "Personalizzazione di una barra multifunzione per InfoPath | Microsoft Docs"
+title: "Personalizzazione di una barra multifunzione per InfoPath"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

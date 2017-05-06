@@ -1,5 +1,5 @@
 ---
-title: "Procedura: esporre il codice a VBA in un progetto Visual Basic | Microsoft Docs"
+title: "Procedura: esporre il codice a VBA in un progetto Visual Basic"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

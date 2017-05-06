@@ -1,5 +1,5 @@
 ---
-title: "Cenni preliminari sulle propriet&#224; personalizzate dei documenti | Microsoft Docs"
+title: "Cenni preliminari sulle propriet&#224; personalizzate dei documenti"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

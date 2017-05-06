@@ -1,5 +1,5 @@
 ---
-title: "Procedura: supportare l&#39;esecuzione di codice sottostante i documenti con autorizzazioni limitate | Microsoft Docs"
+title: "Procedura: supportare l&#39;esecuzione di codice sottostante i documenti con autorizzazioni limitate"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

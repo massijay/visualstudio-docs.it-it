@@ -1,5 +1,5 @@
 ---
-title: "Sicurezza tramite password di documenti di Office | Microsoft Docs"
+title: "Sicurezza tramite password di documenti di Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

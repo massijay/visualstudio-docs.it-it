@@ -1,5 +1,5 @@
 ---
-title: "Cenni preliminari sul modello a oggetti di Excel | Microsoft Docs"
+title: "Cenni preliminari sul modello a oggetti di Excel"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

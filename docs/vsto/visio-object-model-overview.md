@@ -1,5 +1,5 @@
 ---
-title: "Panoramica del modello a oggetti di Visio | Microsoft Docs"
+title: "Panoramica del modello a oggetti di Visio"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Soluzioni Project | Microsoft Docs"
+title: "Soluzioni Project"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

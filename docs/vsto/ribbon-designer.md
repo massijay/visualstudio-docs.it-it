@@ -1,5 +1,5 @@
 ---
-title: "Finestra di progettazione della barra multifunzione | Microsoft Docs"
+title: "Finestra di progettazione della barra multifunzione"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

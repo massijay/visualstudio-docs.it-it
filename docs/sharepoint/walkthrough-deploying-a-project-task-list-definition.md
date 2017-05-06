@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: distribuzione di una definizione di elenco attivit&#224; del progetto | Microsoft Docs"
+title: "Procedura dettagliata: distribuzione di una definizione di elenco attivit&#224; del progetto"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

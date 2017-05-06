@@ -1,5 +1,5 @@
 ---
-title: "Creazione di definizioni di sito per SharePoint | Microsoft Docs"
+title: "Creazione di definizioni di sito per SharePoint"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

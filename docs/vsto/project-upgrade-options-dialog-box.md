@@ -1,5 +1,5 @@
 ---
-title: "Aggiornamento progetto, finestra di dialogo Opzioni | Microsoft Docs"
+title: "Aggiornamento progetto, finestra di dialogo Opzioni"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

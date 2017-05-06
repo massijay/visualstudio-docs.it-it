@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere un file di risorse | Microsoft Docs"
+title: "Procedura: aggiungere un file di risorse"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

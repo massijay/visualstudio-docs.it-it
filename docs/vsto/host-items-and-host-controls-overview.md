@@ -1,5 +1,5 @@
 ---
-title: "Panoramica degli elementi e dei controlli host | Microsoft Docs"
+title: "Panoramica degli elementi e dei controlli host"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

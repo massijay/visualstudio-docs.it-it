@@ -1,5 +1,5 @@
 ---
-title: "Riferimenti relativi all&#39;interfaccia utente (sviluppo per Office in Visual Studio) | Microsoft Docs"
+title: "Riferimenti relativi all&#39;interfaccia utente (sviluppo per Office in Visual Studio)"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

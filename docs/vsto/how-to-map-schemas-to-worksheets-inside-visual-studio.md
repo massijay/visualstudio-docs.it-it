@@ -1,5 +1,5 @@
 ---
-title: "Procedura: mappare schemi a fogli di lavoro in Visual Studio | Microsoft Docs"
+title: "Procedura: mappare schemi a fogli di lavoro in Visual Studio"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

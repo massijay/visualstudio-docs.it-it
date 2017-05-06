@@ -1,5 +1,5 @@
 ---
-title: "Procedura: esportare una barra multifunzione dalla finestra di progettazione in un elemento XML della barra | Microsoft Docs"
+title: "Procedura: esportare una barra multifunzione dalla finestra di progettazione in un elemento XML della barra"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

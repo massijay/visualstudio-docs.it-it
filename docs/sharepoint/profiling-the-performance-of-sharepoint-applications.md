@@ -1,5 +1,5 @@
 ---
-title: "Profilatura delle prestazioni di applicazioni di SharePoint | Microsoft Docs"
+title: "Profilatura delle prestazioni di applicazioni di SharePoint"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

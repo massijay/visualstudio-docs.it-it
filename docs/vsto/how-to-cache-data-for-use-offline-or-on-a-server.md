@@ -1,5 +1,5 @@
 ---
-title: "Procedura: memorizzare dati nella cache per l&#39;utilizzo offline o su un server | Microsoft Docs"
+title: "Procedura: memorizzare dati nella cache per l&#39;utilizzo offline o su un server"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

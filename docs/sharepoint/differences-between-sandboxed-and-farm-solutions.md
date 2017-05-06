@@ -1,5 +1,5 @@
 ---
-title: "Differenze tra soluzioni create mediante sandbox e soluzioni farm | Microsoft Docs"
+title: "Differenze tra soluzioni create mediante sandbox e soluzioni farm"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

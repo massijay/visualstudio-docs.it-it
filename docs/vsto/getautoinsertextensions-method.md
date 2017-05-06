@@ -1,5 +1,5 @@
 ---
-title: "Metodo GetAutoInsertExtensions | Microsoft Docs"
+title: "Metodo GetAutoInsertExtensions"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

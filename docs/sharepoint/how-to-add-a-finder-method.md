@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere un metodo Finder | Microsoft Docs"
+title: "Procedura: aggiungere un metodo Finder"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

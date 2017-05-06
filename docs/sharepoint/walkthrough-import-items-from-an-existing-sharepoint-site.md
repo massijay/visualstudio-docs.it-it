@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: importare gli elementi da un sito di SharePoint esistente | Microsoft Docs"
+title: "Procedura dettagliata: importare gli elementi da un sito di SharePoint esistente"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

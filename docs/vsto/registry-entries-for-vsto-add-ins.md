@@ -1,5 +1,5 @@
 ---
-title: "Voci del Registro di sistema per i componenti aggiuntivi VSTO | Microsoft Docs"
+title: "Voci del Registro di sistema per i componenti aggiuntivi VSTO"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

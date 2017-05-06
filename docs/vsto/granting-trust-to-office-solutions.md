@@ -1,5 +1,5 @@
 ---
-title: "Concessione dell&#39;attendibilit&#224; alle soluzioni Office | Microsoft Docs"
+title: "Concessione dell&#39;attendibilit&#224; alle soluzioni Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

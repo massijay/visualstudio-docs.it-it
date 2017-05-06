@@ -1,5 +1,5 @@
 ---
-title: "Attivit&#224; comuni nella programmazione con Office | Microsoft Docs"
+title: "Attivit&#224; comuni nella programmazione con Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

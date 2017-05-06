@@ -1,5 +1,5 @@
 ---
-title: "Personalizzazione di una barra multifunzione per Outlook | Microsoft Docs"
+title: "Personalizzazione di una barra multifunzione per Outlook"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

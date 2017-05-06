@@ -1,5 +1,5 @@
 ---
-title: "Creazione di colonne del sito, tipi di contenuto ed elenchi per SharePoint | Microsoft Docs"
+title: "Creazione di colonne del sito, tipi di contenuto ed elenchi per SharePoint"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

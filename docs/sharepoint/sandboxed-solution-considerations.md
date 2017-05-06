@@ -1,5 +1,5 @@
 ---
-title: "Considerazioni sulle soluzioni create mediante sandbox | Microsoft Docs"
+title: "Considerazioni sulle soluzioni create mediante sandbox"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

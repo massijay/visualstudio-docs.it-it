@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: associazione dei controlli del contenuto a parti XML personalizzate | Microsoft Docs"
+title: "Procedura dettagliata: associazione dei controlli del contenuto a parti XML personalizzate"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

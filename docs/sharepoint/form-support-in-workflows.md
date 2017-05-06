@@ -1,5 +1,5 @@
 ---
-title: "Supporto dei form nei flussi di lavoro | Microsoft Docs"
+title: "Supporto dei form nei flussi di lavoro"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

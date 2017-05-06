@@ -1,5 +1,5 @@
 ---
-title: "Procedura: creare gestori eventi in progetti di Office | Microsoft Docs"
+title: "Procedura: creare gestori eventi in progetti di Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

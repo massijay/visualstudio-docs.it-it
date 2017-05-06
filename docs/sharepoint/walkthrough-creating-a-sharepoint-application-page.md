@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: creazione di una pagina di un&#39;applicazione SharePoint | Microsoft Docs"
+title: "Procedura dettagliata: creazione di una pagina di un&#39;applicazione SharePoint"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

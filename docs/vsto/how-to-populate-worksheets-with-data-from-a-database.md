@@ -1,5 +1,5 @@
 ---
-title: "Procedura: popolare fogli di lavoro con dati da un database | Microsoft Docs"
+title: "Procedura: popolare fogli di lavoro con dati da un database"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

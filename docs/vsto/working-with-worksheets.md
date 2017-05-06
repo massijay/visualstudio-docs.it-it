@@ -1,5 +1,5 @@
 ---
-title: "Utilizzo dei fogli di lavoro | Microsoft Docs"
+title: "Utilizzo dei fogli di lavoro"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Uso delle tabelle | Microsoft Docs"
+title: "Uso delle tabelle"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

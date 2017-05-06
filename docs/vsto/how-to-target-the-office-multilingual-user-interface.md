@@ -1,5 +1,5 @@
 ---
-title: "Procedura: utilizzare l&#39;interfaccia utente multilingue (MUI) di Office | Microsoft Docs"
+title: "Procedura: utilizzare l&#39;interfaccia utente multilingue (MUI) di Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

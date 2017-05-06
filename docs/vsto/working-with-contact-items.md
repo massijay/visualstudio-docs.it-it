@@ -1,5 +1,5 @@
 ---
-title: "Uso dei contatti | Microsoft Docs"
+title: "Uso dei contatti"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

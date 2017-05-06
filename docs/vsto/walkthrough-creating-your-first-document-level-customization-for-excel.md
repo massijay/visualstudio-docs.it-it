@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: creazione di una personalizzazione a livello di documento per Excel | Microsoft Docs"
+title: "Procedura dettagliata: creazione di una personalizzazione a livello di documento per Excel"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

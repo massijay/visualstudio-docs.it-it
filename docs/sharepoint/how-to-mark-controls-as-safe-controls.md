@@ -1,5 +1,5 @@
 ---
-title: "Procedura: contrassegnare i controlli come controlli sicuri | Microsoft Docs"
+title: "Procedura: contrassegnare i controlli come controlli sicuri"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Panoramica dello sviluppo di soluzioni Office (VSTO) | Microsoft Docs"
+title: "Panoramica dello sviluppo di soluzioni Office (VSTO)"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

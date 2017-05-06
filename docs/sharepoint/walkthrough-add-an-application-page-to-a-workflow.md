@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: aggiungere una pagina dell&#39;applicazione a un flusso di lavoro | Microsoft Docs"
+title: "Procedura dettagliata: aggiungere una pagina dell&#39;applicazione a un flusso di lavoro"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

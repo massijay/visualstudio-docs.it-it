@@ -1,5 +1,5 @@
 ---
-title: "Controllo NamedRange | Microsoft Docs"
+title: "Controllo NamedRange"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

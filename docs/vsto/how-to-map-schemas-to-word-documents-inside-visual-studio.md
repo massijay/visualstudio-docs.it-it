@@ -1,5 +1,5 @@
 ---
-title: "Procedura: effettuare il mapping degli schemi a documenti di Word in Visual Studio | Microsoft Docs"
+title: "Procedura: effettuare il mapping degli schemi a documenti di Word in Visual Studio"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

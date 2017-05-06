@@ -1,5 +1,5 @@
 ---
-title: "Guida introduttiva alla programmazione delle personalizzazioni a livello di documento per Word | Microsoft Docs"
+title: "Guida introduttiva alla programmazione delle personalizzazioni a livello di documento per Word"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

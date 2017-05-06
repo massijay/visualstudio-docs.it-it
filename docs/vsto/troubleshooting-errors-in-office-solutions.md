@@ -1,5 +1,5 @@
 ---
-title: "Risoluzione degli errori nelle soluzioni Office | Microsoft Docs"
+title: "Risoluzione degli errori nelle soluzioni Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

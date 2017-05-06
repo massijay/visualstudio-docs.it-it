@@ -1,5 +1,5 @@
 ---
-title: "Cenni preliminari sulle web part XML personalizzate | Microsoft Docs"
+title: "Cenni preliminari sulle web part XML personalizzate"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere e rimuovere cartelle mappate | Microsoft Docs"
+title: "Procedura: aggiungere e rimuovere cartelle mappate"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

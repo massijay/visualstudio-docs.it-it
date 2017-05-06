@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Creare un elemento di posta elettronica a livello di codice | Microsoft Docs"
+title: "Procedura: Creare un elemento di posta elettronica a livello di codice"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

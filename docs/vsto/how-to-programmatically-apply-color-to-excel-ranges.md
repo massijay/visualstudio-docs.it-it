@@ -1,5 +1,5 @@
 ---
-title: "Procedura: applicare il colore a intervalli di Excel a livello di codice | Microsoft Docs"
+title: "Procedura: applicare il colore a intervalli di Excel a livello di codice"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: automazione di un&#39;applicazione da un riquadro attivit&#224; personalizzato | Microsoft Docs"
+title: "Procedura dettagliata: automazione di un&#39;applicazione da un riquadro attivit&#224; personalizzato"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Controllo Bookmark | Microsoft Docs"
+title: "Controllo Bookmark"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

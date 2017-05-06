@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Importazione di un&#39;area del modulo progettata in Outlook | Microsoft Docs"
+title: "Procedura dettagliata: Importazione di un&#39;area del modulo progettata in Outlook"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

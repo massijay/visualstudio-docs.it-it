@@ -1,5 +1,5 @@
 ---
-title: "Esecuzione di soluzioni in versioni diverse di Microsoft Office | Microsoft Docs"
+title: "Esecuzione di soluzioni in versioni diverse di Microsoft Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

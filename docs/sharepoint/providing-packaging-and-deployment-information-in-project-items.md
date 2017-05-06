@@ -1,5 +1,5 @@
 ---
-title: "Specifica delle informazioni sui pacchetti e sulla distribuzione negli elementi di progetto | Microsoft Docs"
+title: "Specifica delle informazioni sui pacchetti e sulla distribuzione negli elementi di progetto"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

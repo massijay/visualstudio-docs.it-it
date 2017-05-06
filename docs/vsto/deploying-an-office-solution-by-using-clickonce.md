@@ -1,5 +1,5 @@
 ---
-title: "Distribuzione di una soluzione Office utilizzando ClickOnce | Microsoft Docs"
+title: "Distribuzione di una soluzione Office utilizzando ClickOnce"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

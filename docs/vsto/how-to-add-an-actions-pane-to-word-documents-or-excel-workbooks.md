@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere un riquadro ai documenti Word o alle cartelle di lavoro di Excel | Microsoft Docs"
+title: "Procedura: aggiungere un riquadro ai documenti Word o alle cartelle di lavoro di Excel"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Procedure dettagliate di personalizzazione dell&#39;interfaccia utente di Office | Microsoft Docs"
+title: "Procedure dettagliate di personalizzazione dell&#39;interfaccia utente di Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

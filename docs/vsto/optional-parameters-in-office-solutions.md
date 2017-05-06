@@ -1,5 +1,5 @@
 ---
-title: "Parametri facoltativi nelle soluzioni Office | Microsoft Docs"
+title: "Parametri facoltativi nelle soluzioni Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

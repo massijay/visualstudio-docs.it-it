@@ -1,5 +1,5 @@
 ---
-title: "Elemento XML della barra multifunzione | Microsoft Docs"
+title: "Elemento XML della barra multifunzione"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

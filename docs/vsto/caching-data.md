@@ -1,5 +1,5 @@
 ---
-title: "Memorizzazione di dati nella cache | Microsoft Docs"
+title: "Memorizzazione di dati nella cache"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

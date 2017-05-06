@@ -1,5 +1,5 @@
 ---
-title: "Procedura: nascondere i controlli contenuti nei fogli di lavoro durante la stampa | Microsoft Docs"
+title: "Procedura: nascondere i controlli contenuti nei fogli di lavoro durante la stampa"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

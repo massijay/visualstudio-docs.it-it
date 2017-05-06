@@ -1,5 +1,5 @@
 ---
-title: "Utilizzo degli intervalli | Microsoft Docs"
+title: "Utilizzo degli intervalli"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

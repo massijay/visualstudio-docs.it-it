@@ -1,5 +1,5 @@
 ---
-title: "Procedura: compilare tabelle di Word con le propriet&#224; documento a livello di codice | Microsoft Docs"
+title: "Procedura: compilare tabelle di Word con le propriet&#224; documento a livello di codice"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

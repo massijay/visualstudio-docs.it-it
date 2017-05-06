@@ -1,5 +1,5 @@
 ---
-title: "Personalizzazione delle funzionalit&#224; dell&#39;interfaccia utente usando le interfacce di estensibilit&#224; | Microsoft Docs"
+title: "Personalizzazione delle funzionalit&#224; dell&#39;interfaccia utente usando le interfacce di estensibilit&#224;"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

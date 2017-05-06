@@ -1,5 +1,5 @@
 ---
-title: "Procedura: memorizzare nella cache a livello di codice un&#39;origine dati di un documento di Office | Microsoft Docs"
+title: "Procedura: memorizzare nella cache a livello di codice un&#39;origine dati di un documento di Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: memorizzare dati nella cache di un documento protetto da password | Microsoft Docs"
+title: "Procedura: memorizzare dati nella cache di un documento protetto da password"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

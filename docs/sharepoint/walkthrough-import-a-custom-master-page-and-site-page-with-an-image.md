@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: importazione di una pagina master personalizzata e di una pagina del sito con un&#39;immagine | Microsoft Docs"
+title: "Procedura dettagliata: importazione di una pagina master personalizzata e di una pagina del sito con un&#39;immagine"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

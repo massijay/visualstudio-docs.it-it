@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: creare un&#39;attivit&#224; personalizzata per un flusso di lavoro del sito | Microsoft Docs"
+title: "Procedura dettagliata: creare un&#39;attivit&#224; personalizzata per un flusso di lavoro del sito"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

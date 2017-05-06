@@ -1,5 +1,5 @@
 ---
-title: "Procedura: eseguire la ricerca in una cartella specifica a livello di codice | Microsoft Docs"
+title: "Procedura: eseguire la ricerca in una cartella specifica a livello di codice"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Procedure dettagliate con Excel | Microsoft Docs"
+title: "Procedure dettagliate con Excel"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

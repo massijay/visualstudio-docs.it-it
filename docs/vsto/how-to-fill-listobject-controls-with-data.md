@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Riempire controlli ListObject con dati | Microsoft Docs"
+title: "Procedura: Riempire controlli ListObject con dati"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

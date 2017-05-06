@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: modifica della formattazione dei documenti mediante i controlli CheckBox | Microsoft Docs"
+title: "Procedura dettagliata: modifica della formattazione dei documenti mediante i controlli CheckBox"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: impedire la visualizzazione di un&#39;area del modulo in Outlook | Microsoft Docs"
+title: "Procedura: impedire la visualizzazione di un&#39;area del modulo in Outlook"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

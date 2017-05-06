@@ -1,5 +1,5 @@
 ---
-title: "Globalizzazione e localizzazione di soluzioni di Excel | Microsoft Docs"
+title: "Globalizzazione e localizzazione di soluzioni di Excel"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Creazione di un elemento di progetto Colonna del sito con un modello di progetto, parte 2 | Microsoft Docs"
+title: "Procedura dettagliata: Creazione di un elemento di progetto Colonna del sito con un modello di progetto, parte 2"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

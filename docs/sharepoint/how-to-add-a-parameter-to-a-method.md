@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere un parametro a un metodo | Microsoft Docs"
+title: "Procedura: aggiungere un parametro a un metodo"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

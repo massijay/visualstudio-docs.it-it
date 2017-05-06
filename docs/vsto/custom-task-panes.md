@@ -1,5 +1,5 @@
 ---
-title: "Riquadri attivit&#224; personalizzati | Microsoft Docs"
+title: "Riquadri attivit&#224; personalizzati"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

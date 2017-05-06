@@ -1,5 +1,5 @@
 ---
-title: "Procedura: iniziare a personalizzare la barra multifunzione | Microsoft Docs"
+title: "Procedura: iniziare a personalizzare la barra multifunzione"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

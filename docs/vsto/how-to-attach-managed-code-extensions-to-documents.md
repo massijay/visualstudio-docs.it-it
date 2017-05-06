@@ -1,5 +1,5 @@
 ---
-title: "Procedura: associare estensioni di codice gestito a documenti | Microsoft Docs"
+title: "Procedura: associare estensioni di codice gestito a documenti"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

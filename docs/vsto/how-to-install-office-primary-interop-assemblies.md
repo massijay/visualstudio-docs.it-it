@@ -1,5 +1,5 @@
 ---
-title: "Procedura: installare assembly di interoperabilit&#224; primari di Office | Microsoft Docs"
+title: "Procedura: installare assembly di interoperabilit&#224; primari di Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

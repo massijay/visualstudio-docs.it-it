@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: creazione e debug di una soluzione flusso di lavoro SharePoint | Microsoft Docs"
+title: "Procedura dettagliata: creazione e debug di una soluzione flusso di lavoro SharePoint"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

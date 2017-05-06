@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Visualizzare gli errori dell&#39;interfaccia utente del componente aggiuntivo | Microsoft Docs"
+title: "Procedura: Visualizzare gli errori dell&#39;interfaccia utente del componente aggiuntivo"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Scenari di installazione del runtime di Visual Studio Tools per Office | Microsoft Docs"
+title: "Scenari di installazione del runtime di Visual Studio Tools per Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

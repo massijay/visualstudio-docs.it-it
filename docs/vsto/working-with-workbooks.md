@@ -1,5 +1,5 @@
 ---
-title: "Uso delle cartelle di lavoro | Microsoft Docs"
+title: "Uso delle cartelle di lavoro"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

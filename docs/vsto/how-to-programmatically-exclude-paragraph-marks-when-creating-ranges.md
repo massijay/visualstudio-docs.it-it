@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Escludere i segni di paragrafo durante l&#39;inserimento di intervalli a livello di codice | Microsoft Docs"
+title: "Procedura: Escludere i segni di paragrafo durante l&#39;inserimento di intervalli a livello di codice"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

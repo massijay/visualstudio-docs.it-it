@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere un&#39;entit&#224; al modello | Microsoft Docs"
+title: "Procedura: aggiungere un&#39;entit&#224; al modello"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

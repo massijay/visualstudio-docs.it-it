@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: creare una colonna del sito, un tipo di contenuto e un elenco per SharePoint | Microsoft Docs"
+title: "Procedura dettagliata: creare una colonna del sito, un tipo di contenuto e un elenco per SharePoint"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

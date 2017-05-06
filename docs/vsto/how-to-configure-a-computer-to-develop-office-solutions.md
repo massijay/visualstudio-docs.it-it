@@ -1,5 +1,5 @@
 ---
-title: "Procedura: configurare un computer per sviluppare soluzioni Office | Microsoft Docs"
+title: "Procedura: configurare un computer per sviluppare soluzioni Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

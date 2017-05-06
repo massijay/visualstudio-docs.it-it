@@ -1,5 +1,5 @@
 ---
-title: "Panoramica del modello a oggetti di Outlook | Microsoft Docs"
+title: "Panoramica del modello a oggetti di Outlook"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: creazione del primo componente aggiuntivo VSTO per Project | Microsoft Docs"
+title: "Procedura dettagliata: creazione del primo componente aggiuntivo VSTO per Project"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

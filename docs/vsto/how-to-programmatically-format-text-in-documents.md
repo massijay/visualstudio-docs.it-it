@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Formattare il testo nei documenti a livello di codice | Microsoft Docs"
+title: "Procedura: Formattare il testo nei documenti a livello di codice"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

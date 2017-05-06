@@ -1,5 +1,5 @@
 ---
-title: "Combinazione di VBA con le personalizzazioni a livello di documento | Microsoft Docs"
+title: "Combinazione di VBA con le personalizzazioni a livello di documento"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

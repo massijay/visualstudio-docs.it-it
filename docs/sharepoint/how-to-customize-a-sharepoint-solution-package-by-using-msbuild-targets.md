@@ -1,5 +1,5 @@
 ---
-title: "Procedura: personalizzare un pacchetto della soluzione SharePoint tramite le destinazioni di MSBuild | Microsoft Docs"
+title: "Procedura: personalizzare un pacchetto della soluzione SharePoint tramite le destinazioni di MSBuild"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

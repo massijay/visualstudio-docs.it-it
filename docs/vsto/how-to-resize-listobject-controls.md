@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Ridimensionare i controlli ListObject | Microsoft Docs"
+title: "Procedura: Ridimensionare i controlli ListObject"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

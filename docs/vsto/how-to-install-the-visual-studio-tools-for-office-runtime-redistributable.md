@@ -1,5 +1,5 @@
 ---
-title: "Procedura: installare il runtime ridistribuibile di Microsoft Visual Studio Tools per Office | Microsoft Docs"
+title: "Procedura: installare il runtime ridistribuibile di Microsoft Visual Studio Tools per Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: scorrere i record di un database in un foglio di lavoro | Microsoft Docs"
+title: "Procedura: scorrere i record di un database in un foglio di lavoro"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

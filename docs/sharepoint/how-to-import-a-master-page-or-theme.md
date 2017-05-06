@@ -1,5 +1,5 @@
 ---
-title: "Procedura: importare una pagina master o un tema | Microsoft Docs"
+title: "Procedura: importare una pagina master o un tema"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

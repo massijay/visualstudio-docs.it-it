@@ -1,5 +1,5 @@
 ---
-title: "Considerazioni specifiche sulla sicurezza per le soluzioni Office | Microsoft Docs"
+title: "Considerazioni specifiche sulla sicurezza per le soluzioni Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

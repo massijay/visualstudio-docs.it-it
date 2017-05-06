@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: debug di un&#39;applicazione di SharePoint tramite IntelliTrace | Microsoft Docs"
+title: "Procedura dettagliata: debug di un&#39;applicazione di SharePoint tramite IntelliTrace"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

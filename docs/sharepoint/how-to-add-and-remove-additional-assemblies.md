@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Aggiungere e rimuovere assembly aggiuntivi | Microsoft Docs"
+title: "Procedura: Aggiungere e rimuovere assembly aggiuntivi"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

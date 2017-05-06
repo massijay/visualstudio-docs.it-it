@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: aggiornamento di un grafico in un foglio di lavoro mediante i pulsanti di opzione | Microsoft Docs"
+title: "Procedura dettagliata: aggiornamento di un grafico in un foglio di lavoro mediante i pulsanti di opzione"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Concessione dell&#39;attendibilit&#224; alle soluzioni Office mediante gli elenchi di inclusione | Microsoft Docs"
+title: "Concessione dell&#39;attendibilit&#224; alle soluzioni Office mediante gli elenchi di inclusione"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

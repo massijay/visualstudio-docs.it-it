@@ -1,5 +1,5 @@
 ---
-title: "Accesso ai dati dei documenti sul server | Microsoft Docs"
+title: "Accesso ai dati dei documenti sul server"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

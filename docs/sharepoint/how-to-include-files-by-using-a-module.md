@@ -1,5 +1,5 @@
 ---
-title: "Procedura: includere file mediante un modulo | Microsoft Docs"
+title: "Procedura: includere file mediante un modulo"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

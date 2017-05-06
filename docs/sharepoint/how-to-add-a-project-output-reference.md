@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere un riferimento all&#39;output del progetto | Microsoft Docs"
+title: "Procedura: aggiungere un riferimento all&#39;output del progetto"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

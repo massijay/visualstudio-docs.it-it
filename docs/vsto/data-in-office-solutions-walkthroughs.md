@@ -1,5 +1,5 @@
 ---
-title: "Procedure dettagliate relative ai dati nelle soluzioni Office | Microsoft Docs"
+title: "Procedure dettagliate relative ai dati nelle soluzioni Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

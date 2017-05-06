@@ -1,5 +1,5 @@
 ---
-title: "Azioni personalizzate nelle aree di modulo di Outlook | Microsoft Docs"
+title: "Azioni personalizzate nelle aree di modulo di Outlook"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

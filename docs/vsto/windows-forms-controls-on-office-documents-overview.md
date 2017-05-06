@@ -1,5 +1,5 @@
 ---
-title: "Panoramica dei controlli Windows Form nei documenti di Office | Microsoft Docs"
+title: "Panoramica dei controlli Windows Form nei documenti di Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

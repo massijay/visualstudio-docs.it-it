@@ -1,5 +1,5 @@
 ---
-title: "Procedura: utilizzare le finestre di dialogo di Word in modalit&#224; nascosta a livello di codice | Microsoft Docs"
+title: "Procedura: utilizzare le finestre di dialogo di Word in modalit&#224; nascosta a livello di codice"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

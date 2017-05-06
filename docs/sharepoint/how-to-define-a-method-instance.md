@@ -1,5 +1,5 @@
 ---
-title: "Procedura: definire un&#39;istanza di metodo | Microsoft Docs"
+title: "Procedura: definire un&#39;istanza di metodo"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

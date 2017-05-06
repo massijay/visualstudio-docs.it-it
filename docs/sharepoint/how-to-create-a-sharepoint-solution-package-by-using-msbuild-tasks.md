@@ -1,5 +1,5 @@
 ---
-title: "Procedura: creare un pacchetto della soluzione SharePoint tramite le attivit&#224; MSBuild | Microsoft Docs"
+title: "Procedura: creare un pacchetto della soluzione SharePoint tramite le attivit&#224; MSBuild"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

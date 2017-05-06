@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere controlli alla visualizzazione Backstage | Microsoft Docs"
+title: "Procedura: aggiungere controlli alla visualizzazione Backstage"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

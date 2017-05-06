@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: creazione di un modello utilizzando i controlli del contenuto | Microsoft Docs"
+title: "Procedura dettagliata: creazione di un modello utilizzando i controlli del contenuto"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

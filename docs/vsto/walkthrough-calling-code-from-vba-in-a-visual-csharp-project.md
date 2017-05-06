@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: chiamata di codice da VBA in un progetto Visual C# | Microsoft Docs"
+title: "Procedura dettagliata: chiamata di codice da VBA in un progetto Visual C#"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

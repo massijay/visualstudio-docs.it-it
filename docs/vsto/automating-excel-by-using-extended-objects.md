@@ -1,5 +1,5 @@
 ---
-title: "Automazione di Excel usando oggetti estesi | Microsoft Docs"
+title: "Automazione di Excel usando oggetti estesi"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

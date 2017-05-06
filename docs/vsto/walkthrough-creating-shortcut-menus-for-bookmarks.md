@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: creazione di menu di scelta rapida per segnalibri | Microsoft Docs"
+title: "Procedura dettagliata: creazione di menu di scelta rapida per segnalibri"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

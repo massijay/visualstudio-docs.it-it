@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: aggiornamento dei controlli di una barra multifunzione in fase di esecuzione | Microsoft Docs"
+title: "Procedura dettagliata: aggiornamento dei controlli di una barra multifunzione in fase di esecuzione"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

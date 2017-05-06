@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Aggiornare un&#39;origine dati con i dati inviati da un controllo host | Microsoft Docs"
+title: "Procedura: Aggiornare un&#39;origine dati con i dati inviati da un controllo host"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Limitazioni a livello di codice degli elementi e dei controlli host | Microsoft Docs"
+title: "Limitazioni a livello di codice degli elementi e dei controlli host"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

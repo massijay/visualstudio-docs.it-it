@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: raccolta di dati tramite Windows Form | Microsoft Docs"
+title: "Procedura dettagliata: raccolta di dati tramite Windows Form"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

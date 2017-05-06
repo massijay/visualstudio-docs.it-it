@@ -1,5 +1,5 @@
 ---
-title: "Procedura: memorizzare e recuperare valori di data in intervalli di Excel a livello di codice | Microsoft Docs"
+title: "Procedura: memorizzare e recuperare valori di data in intervalli di Excel a livello di codice"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

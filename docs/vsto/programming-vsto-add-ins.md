@@ -1,5 +1,5 @@
 ---
-title: "Programmazione di componenti aggiuntivi VSTO | Microsoft Docs"
+title: "Programmazione di componenti aggiuntivi VSTO"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

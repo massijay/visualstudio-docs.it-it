@@ -1,5 +1,5 @@
 ---
-title: "Distribuzione sicura | Microsoft Docs"
+title: "Distribuzione sicura"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

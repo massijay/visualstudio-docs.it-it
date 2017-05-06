@@ -1,5 +1,5 @@
 ---
-title: "Creazione di controlli utente riutilizzabili per web part o pagine applicazione | Microsoft Docs"
+title: "Creazione di controlli utente riutilizzabili per web part o pagine applicazione"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Linee guida per l&#39;importazione di flussi di lavoro riutilizzabili | Microsoft Docs"
+title: "Linee guida per l&#39;importazione di flussi di lavoro riutilizzabili"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

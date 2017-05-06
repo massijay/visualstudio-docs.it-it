@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere intestazioni e pi&#232; di pagina ai documenti a livello di codice | Microsoft Docs"
+title: "Procedura: aggiungere intestazioni e pi&#232; di pagina ai documenti a livello di codice"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

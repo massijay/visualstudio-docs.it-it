@@ -1,5 +1,5 @@
 ---
-title: "Procedura: visualizzare una stringa in una cella del foglio di lavoro a livello di codice | Microsoft Docs"
+title: "Procedura: visualizzare una stringa in una cella del foglio di lavoro a livello di codice"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

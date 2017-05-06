@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Aggiungere parti XML personalizzate a documenti usando componenti aggiuntivi VSTO | Microsoft Docs"
+title: "Procedura: Aggiungere parti XML personalizzate a documenti usando componenti aggiuntivi VSTO"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

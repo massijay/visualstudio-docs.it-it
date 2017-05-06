@@ -1,5 +1,5 @@
 ---
-title: "Distribuzione, pubblicazione e aggiornamento dei pacchetti delle soluzioni SharePoint | Microsoft Docs"
+title: "Distribuzione, pubblicazione e aggiornamento dei pacchetti delle soluzioni SharePoint"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

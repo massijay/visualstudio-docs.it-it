@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Data binding complesso in un progetto di componente aggiuntivo VSTO | Microsoft Docs"
+title: "Procedura dettagliata: Data binding complesso in un progetto di componente aggiuntivo VSTO"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

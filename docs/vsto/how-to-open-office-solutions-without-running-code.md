@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aprire soluzioni Office senza eseguire codice | Microsoft Docs"
+title: "Procedura: aprire soluzioni Office senza eseguire codice"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

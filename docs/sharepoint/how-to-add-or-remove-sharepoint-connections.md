@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere o rimuovere connessioni di SharePoint | Microsoft Docs"
+title: "Procedura: aggiungere o rimuovere connessioni di SharePoint"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

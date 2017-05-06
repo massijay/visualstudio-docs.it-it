@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Aggiungere un&#39;area del modulo a un progetto di componente aggiuntivo per Outlook | Microsoft Docs"
+title: "Procedura: Aggiungere un&#39;area del modulo a un progetto di componente aggiuntivo per Outlook"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

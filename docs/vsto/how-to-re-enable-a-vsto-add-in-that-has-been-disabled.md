@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Riattivare un componente aggiuntivo VSTO disattivato | Microsoft Docs"
+title: "Procedura: Riattivare un componente aggiuntivo VSTO disattivato"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

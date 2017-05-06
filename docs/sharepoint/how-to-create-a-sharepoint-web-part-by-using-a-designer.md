@@ -1,5 +1,5 @@
 ---
-title: "Procedura: creare una web part di SharePoint tramite una finestra di progettazione | Microsoft Docs"
+title: "Procedura: creare una web part di SharePoint tramite una finestra di progettazione"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

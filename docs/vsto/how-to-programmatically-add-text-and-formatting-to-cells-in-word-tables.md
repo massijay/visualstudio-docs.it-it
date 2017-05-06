@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere testo e formattazione alle celle delle tabelle di Word a livello di codice | Microsoft Docs"
+title: "Procedura: aggiungere testo e formattazione alle celle delle tabelle di Word a livello di codice"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

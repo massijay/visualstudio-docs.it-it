@@ -1,5 +1,5 @@
 ---
-title: "Procedura: gestire il layout di controllo dei riquadri delle azioni | Microsoft Docs"
+title: "Procedura: gestire il layout di controllo dei riquadri delle azioni"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

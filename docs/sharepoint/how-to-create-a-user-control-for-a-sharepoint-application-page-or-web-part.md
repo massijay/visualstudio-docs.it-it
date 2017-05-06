@@ -1,5 +1,5 @@
 ---
-title: "Procedura: creare un controllo utente per una web part o una pagina applicazione di SharePoint | Microsoft Docs"
+title: "Procedura: creare un controllo utente per una web part o una pagina applicazione di SharePoint"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere controlli Windows Form a documenti di Office | Microsoft Docs"
+title: "Procedura: aggiungere controlli Windows Form a documenti di Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

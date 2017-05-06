@@ -1,5 +1,5 @@
 ---
-title: "Risoluzione dei problemi relativi alle soluzioni Office | Microsoft Docs"
+title: "Risoluzione dei problemi relativi alle soluzioni Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

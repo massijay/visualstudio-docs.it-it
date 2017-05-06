@@ -1,5 +1,5 @@
 ---
-title: "Procedura: impostare i comandi di distribuzione di SharePoint | Microsoft Docs"
+title: "Procedura: impostare i comandi di distribuzione di SharePoint"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

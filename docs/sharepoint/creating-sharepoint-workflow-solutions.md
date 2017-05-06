@@ -1,5 +1,5 @@
 ---
-title: "Creazione di soluzioni flusso di lavoro SharePoint | Microsoft Docs"
+title: "Creazione di soluzioni flusso di lavoro SharePoint"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

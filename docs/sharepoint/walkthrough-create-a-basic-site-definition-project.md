@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Creare un progetto di definizione di sito di base | Microsoft Docs"
+title: "Procedura dettagliata: Creare un progetto di definizione di sito di base"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

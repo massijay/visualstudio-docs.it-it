@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: creazione di una scheda personalizzata utilizzando l&#39;elemento XML della barra multifunzione | Microsoft Docs"
+title: "Procedura dettagliata: creazione di una scheda personalizzata utilizzando l&#39;elemento XML della barra multifunzione"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

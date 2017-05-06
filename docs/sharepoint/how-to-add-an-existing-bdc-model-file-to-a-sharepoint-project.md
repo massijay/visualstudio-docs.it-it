@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere un file modello di integrazione applicativa dei dati esistente a un progetto SharePoint | Microsoft Docs"
+title: "Procedura: aggiungere un file modello di integrazione applicativa dei dati esistente a un progetto SharePoint"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

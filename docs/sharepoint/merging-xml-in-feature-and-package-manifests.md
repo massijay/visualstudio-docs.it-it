@@ -1,5 +1,5 @@
 ---
-title: "Unione di codice XML in manifesti di funzionalit&#224; e pacchetto | Microsoft Docs"
+title: "Unione di codice XML in manifesti di funzionalit&#224; e pacchetto"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

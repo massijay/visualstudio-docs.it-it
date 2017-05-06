@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Creare e modificare propriet&#224; personalizzate di un documento | Microsoft Docs"
+title: "Procedura: Creare e modificare propriet&#224; personalizzate di un documento"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

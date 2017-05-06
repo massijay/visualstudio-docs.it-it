@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Visualizzazione dei riquadri attivit&#224; personalizzati con messaggi di posta elettronica in Outlook | Microsoft Docs"
+title: "Procedura dettagliata: Visualizzazione dei riquadri attivit&#224; personalizzati con messaggi di posta elettronica in Outlook"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

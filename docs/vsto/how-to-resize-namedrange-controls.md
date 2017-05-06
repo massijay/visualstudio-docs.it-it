@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Ridimensionare i controlli NamedRange | Microsoft Docs"
+title: "Procedura: Ridimensionare i controlli NamedRange"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

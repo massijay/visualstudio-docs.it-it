@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Leggere e scrivere nelle propriet&#224; dei documenti | Microsoft Docs"
+title: "Procedura: Leggere e scrivere nelle propriet&#224; dei documenti"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

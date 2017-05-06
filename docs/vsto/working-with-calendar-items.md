@@ -1,5 +1,5 @@
 ---
-title: "Uso degli elementi di calendario | Microsoft Docs"
+title: "Uso degli elementi di calendario"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

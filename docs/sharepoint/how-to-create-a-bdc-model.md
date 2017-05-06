@@ -1,5 +1,5 @@
 ---
-title: "Procedura: creare un modello di integrazione applicativa dei dati | Microsoft Docs"
+title: "Procedura: creare un modello di integrazione applicativa dei dati"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

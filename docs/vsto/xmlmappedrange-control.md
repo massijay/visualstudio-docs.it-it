@@ -1,5 +1,5 @@
 ---
-title: "Controllo XmlMappedRange | Microsoft Docs"
+title: "Controllo XmlMappedRange"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

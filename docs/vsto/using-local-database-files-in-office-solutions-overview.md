@@ -1,5 +1,5 @@
 ---
-title: "Cenni preliminari sull&#39;utilizzo di file di un database locale nelle soluzioni Office | Microsoft Docs"
+title: "Cenni preliminari sull&#39;utilizzo di file di un database locale nelle soluzioni Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

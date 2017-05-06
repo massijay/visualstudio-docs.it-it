@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Creazione del primo componente aggiuntivo VSTO per Outlook | Microsoft Docs"
+title: "Procedura dettagliata: Creazione del primo componente aggiuntivo VSTO per Outlook"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

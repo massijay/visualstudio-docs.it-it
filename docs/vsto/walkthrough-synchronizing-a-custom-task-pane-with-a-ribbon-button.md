@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Sincronizzazione di un riquadro attivit&#224; personalizzato con una barra multifunzione | Microsoft Docs"
+title: "Procedura dettagliata: Sincronizzazione di un riquadro attivit&#224; personalizzato con una barra multifunzione"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

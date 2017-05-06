@@ -1,5 +1,5 @@
 ---
-title: "Verifica e debug del codice di SharePoint | Microsoft Docs"
+title: "Verifica e debug del codice di SharePoint"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

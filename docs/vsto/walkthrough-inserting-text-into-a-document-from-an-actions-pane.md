@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: inserimento di testo in un documento da un riquadro azioni | Microsoft Docs"
+title: "Procedura dettagliata: inserimento di testo in un documento da un riquadro azioni"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

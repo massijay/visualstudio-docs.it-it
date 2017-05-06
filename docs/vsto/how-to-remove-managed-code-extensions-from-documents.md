@@ -1,5 +1,5 @@
 ---
-title: "Procedura: rimuovere estensioni di codice gestito dai documenti | Microsoft Docs"
+title: "Procedura: rimuovere estensioni di codice gestito dai documenti"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

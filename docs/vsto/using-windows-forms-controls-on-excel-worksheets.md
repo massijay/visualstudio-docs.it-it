@@ -1,5 +1,5 @@
 ---
-title: "Utilizzo di controlli Windows Form nei fogli di lavoro di Excel | Microsoft Docs"
+title: "Utilizzo di controlli Windows Form nei fogli di lavoro di Excel"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

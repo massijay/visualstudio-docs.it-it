@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: chiamata di codice in un componente aggiuntivo VSTO da VBA | Microsoft Docs"
+title: "Procedura dettagliata: chiamata di codice in un componente aggiuntivo VSTO da VBA"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

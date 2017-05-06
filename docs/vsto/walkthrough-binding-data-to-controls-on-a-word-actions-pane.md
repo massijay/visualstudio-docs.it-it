@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: associazione di dati a controlli in un riquadro delle azioni di Word | Microsoft Docs"
+title: "Procedura dettagliata: associazione di dati a controlli in un riquadro delle azioni di Word"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

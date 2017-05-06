@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: visualizzazione di testo in una casella di testo di un foglio di lavoro tramite un pulsante | Microsoft Docs"
+title: "Procedura dettagliata: visualizzazione di testo in una casella di testo di un foglio di lavoro tramite un pulsante"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Esplorazione di connessioni di SharePoint tramite Esplora server | Microsoft Docs"
+title: "Esplorazione di connessioni di SharePoint tramite Esplora server"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: modificare la posizione di una scheda nella barra multifunzione | Microsoft Docs"
+title: "Procedura: modificare la posizione di una scheda nella barra multifunzione"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

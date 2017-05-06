@@ -1,5 +1,5 @@
 ---
-title: "Procedura: personalizzare una scheda incorporata | Microsoft Docs"
+title: "Procedura: personalizzare una scheda incorporata"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

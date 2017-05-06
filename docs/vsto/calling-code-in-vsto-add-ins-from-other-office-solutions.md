@@ -1,5 +1,5 @@
 ---
-title: "Chiamata di codice nei componenti aggiuntivi VSTO da altre soluzioni Office | Microsoft Docs"
+title: "Chiamata di codice nei componenti aggiuntivi VSTO da altre soluzioni Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

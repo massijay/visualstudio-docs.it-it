@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: creazione di una relazione master-dettagli mediante un DataSet memorizzato nella cache | Microsoft Docs"
+title: "Procedura dettagliata: creazione di una relazione master-dettagli mediante un DataSet memorizzato nella cache"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: includere un assembly personalizzato in una funzionalit&#224; di integrazione applicativa dei dati | Microsoft Docs"
+title: "Procedura: includere un assembly personalizzato in una funzionalit&#224; di integrazione applicativa dei dati"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

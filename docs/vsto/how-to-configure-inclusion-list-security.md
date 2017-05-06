@@ -1,5 +1,5 @@
 ---
-title: "Procedura: configurare la sicurezza dell&#39;elenco di inclusione | Microsoft Docs"
+title: "Procedura: configurare la sicurezza dell&#39;elenco di inclusione"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

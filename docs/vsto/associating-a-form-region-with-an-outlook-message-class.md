@@ -1,5 +1,5 @@
 ---
-title: "Associazione di un&#39;area del modulo a una classe messaggio di Outlook | Microsoft Docs"
+title: "Associazione di un&#39;area del modulo a una classe messaggio di Outlook"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

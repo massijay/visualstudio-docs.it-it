@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: creazione di una Web part Silverlight che visualizza il servizio OData per SharePoint | Microsoft Docs"
+title: "Procedura dettagliata: creazione di una Web part Silverlight che visualizza il servizio OData per SharePoint"
 ms.custom: ""
 ms.date: "02/22/2017"
 ms.prod: "visual-studio-dev14"

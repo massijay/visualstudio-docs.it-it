@@ -1,5 +1,5 @@
 ---
-title: "Procedure dettagliate relative alla sicurezza e alla distribuzione | Microsoft Docs"
+title: "Procedure dettagliate relative alla sicurezza e alla distribuzione"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

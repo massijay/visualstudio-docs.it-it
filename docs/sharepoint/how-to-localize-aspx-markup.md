@@ -1,5 +1,5 @@
 ---
-title: "Procedura: localizzare il markup ASPX | Microsoft Docs"
+title: "Procedura: localizzare il markup ASPX"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

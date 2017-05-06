@@ -1,5 +1,5 @@
 ---
-title: "Procedura: creare un ricevitore di eventi per un&#39;istanza di elenco specifica | Microsoft Docs"
+title: "Procedura: creare un ricevitore di eventi per un&#39;istanza di elenco specifica"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

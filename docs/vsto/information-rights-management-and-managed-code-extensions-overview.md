@@ -1,5 +1,5 @@
 ---
-title: "Cenni preliminari sul servizio Information Rights Management e sulle estensioni di codice gestito | Microsoft Docs"
+title: "Cenni preliminari sul servizio Information Rights Management e sulle estensioni di codice gestito"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

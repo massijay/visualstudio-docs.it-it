@@ -1,5 +1,5 @@
 ---
-title: "Procedure dettagliate ed esempi di sviluppo di applicazioni per Microsoft Office | Microsoft Docs"
+title: "Procedure dettagliate ed esempi di sviluppo di applicazioni per Microsoft Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

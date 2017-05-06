@@ -1,5 +1,5 @@
 ---
-title: "Procedura: distribuire e pubblicare una soluzione SharePoint in un sito SharePoint locale | Microsoft Docs"
+title: "Procedura: distribuire e pubblicare una soluzione SharePoint in un sito SharePoint locale"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: sviluppare applicazioni di Office mediante gli assembly di interoperabilit&#224; primari | Microsoft Docs"
+title: "Procedura: sviluppare applicazioni di Office mediante gli assembly di interoperabilit&#224; primari"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

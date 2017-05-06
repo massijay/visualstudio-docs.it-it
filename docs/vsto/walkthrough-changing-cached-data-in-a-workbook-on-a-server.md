@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: modifica dei dati memorizzati nella cache di una cartella di lavoro contenuta in un server | Microsoft Docs"
+title: "Procedura dettagliata: modifica dei dati memorizzati nella cache di una cartella di lavoro contenuta in un server"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

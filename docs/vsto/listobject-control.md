@@ -1,5 +1,5 @@
 ---
-title: "Controllo ListObject | Microsoft Docs"
+title: "Controllo ListObject"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

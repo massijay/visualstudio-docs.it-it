@@ -1,5 +1,5 @@
 ---
-title: "Panoramica dei modelli di progetto di Office | Microsoft Docs"
+title: "Panoramica dei modelli di progetto di Office"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

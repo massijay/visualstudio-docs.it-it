@@ -1,5 +1,5 @@
 ---
-title: "Modelli di progetto e di elementi di progetto SharePoint | Microsoft Docs"
+title: "Modelli di progetto e di elementi di progetto SharePoint"
 ms.custom: ""
 ms.date: "02/22/2017"
 ms.prod: "visual-studio-dev14"

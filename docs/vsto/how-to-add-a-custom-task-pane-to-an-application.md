@@ -1,5 +1,5 @@
 ---
-title: "Procedura: aggiungere un riquadro attivit&#224; personalizzato a un&#39;applicazione | Microsoft Docs"
+title: "Procedura: aggiungere un riquadro attivit&#224; personalizzato a un&#39;applicazione"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

@@ -1,5 +1,5 @@
 ---
-title: "Utilizzo degli elementi di posta | Microsoft Docs"
+title: "Utilizzo degli elementi di posta"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"

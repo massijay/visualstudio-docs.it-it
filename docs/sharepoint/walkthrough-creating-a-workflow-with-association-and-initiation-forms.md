@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: creazione di un flusso di lavoro con form di associazione e di avvio | Microsoft Docs"
+title: "Procedura dettagliata: creazione di un flusso di lavoro con form di associazione e di avvio"
 ms.custom: ""
 ms.date: "02/02/2017"
 ms.prod: "visual-studio-dev14"
