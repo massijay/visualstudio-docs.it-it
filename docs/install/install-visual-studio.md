@@ -36,18 +36,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
 ms.openlocfilehash: 059dd2068c5aa0d55f94f293d8430a1f401354ba
+ms.contentlocale: it-it
 ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="install-visual-studio-2017"></a>Installare Visual Studio 2017
-In questo articolo viene presentato un nuovo modo per installare Visual Studio! Nella versione più recente è stata semplificata la procedura che consente di selezionare e installare solo le funzionalità necessarie. È anche stato ridotto il footprint minimo di Visual Studio in modo che possa essere installato più rapidamente, limitando l'impatto sul sistema.  
+In questo articolo viene presentato un nuovo modo per installare Visual Studio! Nella versione più recente è stata semplificata la procedura che consente di selezionare e installare solo le funzionalità necessarie. È anche stato ridotto il footprint minimo di Visual Studio in modo che possa essere installato più rapidamente, limitando l'impatto sul sistema.
 
  Per altre informazioni sulle novità, vedere le [note sulla versione](https://www.visualstudio.com/news/releasenotes/vs15-relnotes) Microsoft. Per informazioni più dettagliate sulla riprogettazione dell'esperienza di installazione, vedere i post di blog Microsoft "[Faster and leaner Visual Studio installer](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer/)" (Programma di installazione di Visual Studio più rapido e più semplice) e "[Anatomy of a low-impact Visual Studio installation](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install/)" (Anatomia di un'istallazione di Visual Studio a basso impatto).  
 
- Tutto pronto? Sarà illustrata una procedura dettagliata. Ma veniamo al dunque.  
+ Tutto pronto? Sarà illustrata una procedura dettagliata. Ma veniamo al dunque.
 
 ## <a name="install-the-installer"></a>Installare il programma di installazione  
  Con il download di Visual Studio 2017 viene scaricato un programma di bootstrap che installa a sua volta il nuovo programma di installazione semplificato. Questo nuovo programma di installazione include tutto il necessario per personalizzare l'installazione.  
