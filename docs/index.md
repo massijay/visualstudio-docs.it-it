@@ -3,10 +3,11 @@ layout: HubPage
 hide_bc: true
 title: Documentazione di Visual Studio
 description: Informazioni su come usare Visual Studio 2017 per lo sviluppo di applicazioni, servizi e strumenti nel linguaggio preferito per le piattaforme e i dispositivi desiderati.
-translationtype: Human Translation
-ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
-ms.openlocfilehash: 5a8448dff45473fa40892fb07604759a9d015021
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2831d252fbc9601e62c372ac3df7704e1dc65f2a
+ms.openlocfilehash: a8f12e3418da5ec6fe778d3a7eaed610c120a859
+ms.contentlocale: it-it
+ms.lasthandoff: 05/10/2017
 
 ---
 <div id="main" class="v2">
@@ -201,7 +202,7 @@ ms.lasthandoff: 03/31/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Python (anteprima)</h3>
+                                                    <h3>Python</h3>
                                                     <p>Sviluppo interattivo per le app Python, con framework noti come Django e Flask.</p>
                                                 </div>
                                             </div>
@@ -247,6 +248,25 @@ ms.lasthandoff: 03/31/2017
                                     </div>
                                 </a>
                             </li>                            
+                            <li>        
+                                <a href="https://go.microsoft.com/fwlink/?linkid=834748">        
+                                  <div class="cardSize">        
+                                    <div class="cardPadding">        
+                                      <div class="card">        
+                                        <div class="cardImageOuter">        
+                                          <div class="cardImage bgdAccent1 cardScaleImage">        
+                                            <img data-scaleimage="./images/vs_web-6.svg" src="./images/vs_web-6.svg" alt="" />        
+                                        </div>        
+                                        </div>        
+                                          <div class="cardText">        
+                                            <h3>Applicazioni analitiche e di analisi scientifica dei dati</h3>        
+                                            <p>Linguaggi e strumenti per la creazione di applicazioni di analisi scientifica dei dati, tra cui Python, R e F#.</p>        
+                                        </div>        
+                                      </div>        
+                                    </div>        
+                                  </div>        
+                                </a>        
+                            </li>
                             <li>
                                 <a href="https://go.microsoft.com/fwlink/?linkid=833075">
                                     <div class="cardSize">
@@ -287,7 +307,7 @@ ms.lasthandoff: 03/31/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo di applicazioni per dispositivi mobili con .NET</h3>
+                                                    <h3>Sviluppo di app per dispositivi mobili con .NET</h3>
                                                     <p>Creare applicazioni multipiattaforma per iOS, Android o Windows con Xamarin.</p>
                                                 </div>
                                             </div>
@@ -589,7 +609,7 @@ ms.lasthandoff: 03/31/2017
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Dati</h3>
-                                                    <p>Creare applicazioni che si connettono ai dati virtualmente in qualsiasi prodotto di database o servizio, in qualsiasi formato, ovunque, in un computer locale, in una rete locale o in un cloud pubblico, privato o ibrido.</p>
+                                                    <p>Creare app per i dati connesse a qualsiasi database o servizio e ovunque, sia in locale che nel cloud. </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -731,7 +751,7 @@ ms.lasthandoff: 03/31/2017
                                             </div>
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833068">
-                                                    <h3>Python (anteprima)</h3>
+                                                    <h3>Python</h3>
                                                     <p>Un linguaggio di programmazione di alto livello, dinamico e orientato a oggetti, spesso usato per lo sviluppo rapido di applicazioni.</p>
                                                 </a>
                                             </div>
