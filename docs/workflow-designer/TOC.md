@@ -129,8 +129,3 @@
 ##### [Finestra di dialogo Seleziona set di regole (legacy)](select-rule-set-dialog-box-legacy.md)
 ##### [Finestra di dialogo configurazione tema (legacy)](theme-configuration-dialog-box-legacy.md)
 ##### [Finestra di dialogo Temi, finestra di progettazione del flusso di lavoro, opzioni (legacy)](themes-workflow-designer-options-dialog-box-legacy.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

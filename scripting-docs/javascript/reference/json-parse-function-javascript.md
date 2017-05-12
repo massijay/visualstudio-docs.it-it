@@ -1,0 +1,135 @@
+---
+title: "Funzione JSON.parse (JavaScript) | Microsoft Docs"
+ms.custom: ""
+ms.date: "01/18/2017"
+ms.prod: "windows-client-threshold"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-javascript"
+ms.tgt_pltfrm: ""
+ms.topic: "language-reference"
+f1_keywords: 
+  - "JSON.parse"
+dev_langs: 
+  - "JavaScript"
+  - "TypeScript"
+  - "DHTML"
+helpviewer_keywords: 
+  - "JSON.parse (metodo)"
+  - "parse JSON (metodo)"
+ms.assetid: 20f00d31-5ab5-4c3c-ab49-2534fc39a9b4
+caps.latest.revision: 41
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 41
+---
+# Funzione JSON.parse (JavaScript)
+Converte una stringa JSON \(JavaScript Object Notation\) in un oggetto.  
+  
+## Sintassi  
+  
+```  
+JSON.parse(text [, reviver])  
+```  
+  
+## Parametri  
+ `text`  
+ Obbligatorio. Stringa JSON valida.  
+  
+ `reviver`  
+ Facoltativo. Funzione che trasforma i risultati. Questa funzione viene chiamata per ogni membro dell'oggetto. Se un membro contiene oggetti annidati, questi ultimi vengono trasformati prima dell'oggetto padre. Per ciascun membro, si verifica quanto segue:  
+  
+-   Se `reviver` restituisce un valore valido, il valore del membro viene sostituito con il valore trasformato.  
+  
+-   Se `reviver` restituisce lo stesso valore che ha ricevuto, il valore del membro non viene modificato.  
+  
+-   Se `reviver` restituisce `null` o `undefined`, il membro viene eliminato.  
+  
+## Valore restituito  
+ Oggetto o matrice.  
+  
+## Eccezioni  
+ Se questa funzione provoca un errore del parser di [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)], ad esempio "SCRIPT1014: Carattere non valido", il testo di input non è conforme alla sintassi JSON. Per correggere l'errore, effettuare una delle operazioni seguenti:  
+  
+-   Modificare l'argomento `text` per conformarsi alla sintassi JSON. Per altre informazioni, vedere [Notazione della sintassi BNF](http://go.microsoft.com/fwlink/?LinkId=125203) degli oggetti JSON.  
+  
+     Se ad esempio la risposta è in formato JSONP anziché JSON pure, provare questo codice nell'oggetto della risposta:  
+  
+    ```javascript  
+    var fixedResponse = response.responseText.replace(/\\'/g, "'");  
+    var jsonObj = JSON.parse(fixedResponse);  
+    ```  
+  
+-   Assicurarsi che l'argomento `text` sia stato serializzato da un'implementazione conforme a JSON come `JSON.stringify`.  
+  
+-   Eseguire l'argomento `text` in un validator JSON come [JSLint](http://www.jslint.com/) per identificare gli errori di sintassi.  
+  
+## Esempio  
+ Nell'esempio seguente si utilizza `JSON.parse` per convertire una stringa JSON in un oggetto.  
+  
+```javascript  
+var jsontext = '{"firstname":"Jesper","surname":"Aaberg","phone":["555-0100","555-0120"]}';  
+var contact = JSON.parse(jsontext);  
+document.write(contact.surname + ", " + contact.firstname);  
+document.write(contact.phone[1]);  
+// Output:  
+// Aaberg, Jesper  
+// 555-0100  
+```  
+  
+## Esempio  
+ Di seguito viene illustrato come convertire una matrice in una stringa JSON utilizzando `JSON.stringify` e quindi come riconvertire la stringa in una matrice utilizzando `JSON.parse`.  
+  
+```javascript  
+var arr = ["a", "b", "c"];  
+var str = JSON.stringify(arr);  
+document.write(str);  
+document.write ("<br/>");  
+  
+var newArr = JSON.parse(str);  
+  
+while (newArr.length > 0) {  
+    document.write(newArr.pop() + "<br/>");  
+}  
+  
+// Output:  
+// ["a","b","c"]  
+// c  
+// b  
+// a  
+```  
+  
+## Esempio  
+ La funzione `reviver` viene spesso usata per trasformare la rappresentazione JSON di stringhe di data ISO \(International Organization for Standardization\) in oggetti `Date` in formato UTC \(Coordinated Universal Time\). In questo esempio viene usato `JSON.parse` per deserializzare una stringa di data con formato ISO. La funzione `dateReviver` restituisce oggetti `Date` per i membri che sono formattati come le stringhe di date ISO.  
+  
+```javascript  
+var jsontext = '{ "hiredate": "2008-01-01T12:00:00Z", "birthdate": "2008-12-25T12:00:00Z" }';  
+var dates = JSON.parse(jsontext, dateReviver);  
+document.write(dates.birthdate.toUTCString());  
+  
+function dateReviver(key, value) {  
+    var a;  
+    if (typeof value === 'string') {  
+        a = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2}(?:\.\d*)?)Z$/.exec(value);  
+        if (a) {  
+            return new Date(Date.UTC(+a[1], +a[2] - 1, +a[3], +a[4],  
+                            +a[5], +a[6]));  
+        }  
+    }  
+    return value;  
+};  
+  
+// Output:  
+// Thu, 25 Dec 2008 12:00:00 UTC  
+  
+```  
+  
+## Requisiti  
+ [!INCLUDE[jsv58](../../javascript/reference/includes/jsv58-md.md)]  
+  
+## Vedere anche  
+ [Funzione JSON.stringify](../../javascript/reference/json-stringify-function-javascript.md)   
+ [Metodo toJSON \(Date\)](../../javascript/reference/tojson-method-date-javascript.md)   
+ [App di esempio per il modello hub \(Windows Store\)](http://code.msdn.microsoft.com/Hub-template-sample-with-4b70002d)

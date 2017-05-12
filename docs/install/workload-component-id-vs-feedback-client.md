@@ -5,7 +5,7 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 04/06/2017
+ms.date: 05/10/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -31,9 +31,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
 ms.openlocfilehash: 6b981d8ec1594da3db8fa1384ddeeee9da519837
+ms.contentlocale: it-it
 ms.lasthandoff: 04/06/2017
 
 ---
@@ -61,7 +62,6 @@ Per altre informazioni su come usare questi ID, vedere la pagina [Usare i parame
 ID componente | Nome | Versione | Tipo di dipendenza
 --- | --- | --- | ---
 Microsoft.VisualStudio.Component.TestTools.FeedbackClient | Microsoft Feedback Client | 15.0.26208.0 | Obbligatorio
-
 ## <a name="unaffiliated-components"></a>Componenti non affiliati
 
 Questi sono i componenti non inclusi in alcun carico di lavoro, che possono per√≤ essere selezionati come un singolo componente.
@@ -69,7 +69,6 @@ Questi sono i componenti non inclusi in alcun carico di lavoro, che possono per√
 ID componente | Nome | Versione
 --- | --- | ---
 N/D | n/d | N/D
-
 
 ## <a name="see-also"></a>Vedere anche
 

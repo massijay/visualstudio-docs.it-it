@@ -2,7 +2,7 @@
 title: Installare Visual Studio 2017 | Microsoft Docs
 description: Informazioni dettagliate sull&quot;installazione di Visual Studio.
 ms.custom: 
-ms.date: 04/03/2017
+ms.date: 04/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -36,18 +36,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: af9699b63fdfb81a274affb78856817520c38b05
-ms.openlocfilehash: 47688935cec36db174c3a0c424b1705ae47c6118
-ms.lasthandoff: 04/03/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
+ms.openlocfilehash: 059dd2068c5aa0d55f94f293d8430a1f401354ba
+ms.contentlocale: it-it
+ms.lasthandoff: 04/06/2017
 
 ---
 # <a name="install-visual-studio-2017"></a>Installare Visual Studio 2017
-In questo articolo viene presentato un nuovo modo per installare Visual Studio! Nella versione più recente è stata semplificata la procedura che consente di selezionare e installare solo le funzionalità necessarie. È anche stato ridotto il footprint minimo di Visual Studio in modo che possa essere installato più rapidamente, limitando l'impatto sul sistema.  
+In questo articolo viene presentato un nuovo modo per installare Visual Studio! Nella versione più recente è stata semplificata la procedura che consente di selezionare e installare solo le funzionalità necessarie. È anche stato ridotto il footprint minimo di Visual Studio in modo che possa essere installato più rapidamente, limitando l'impatto sul sistema.
 
  Per altre informazioni sulle novità, vedere le [note sulla versione](https://www.visualstudio.com/news/releasenotes/vs15-relnotes) Microsoft. Per informazioni più dettagliate sulla riprogettazione dell'esperienza di installazione, vedere i post di blog Microsoft "[Faster and leaner Visual Studio installer](https://blogs.msdn.microsoft.com/visualstudio/2016/04/01/faster-leaner-visual-studio-installer/)" (Programma di installazione di Visual Studio più rapido e più semplice) e "[Anatomy of a low-impact Visual Studio installation](https://blogs.msdn.microsoft.com/visualstudio/2016/04/25/anatomy-of-a-low-impact-visual-studio-install/)" (Anatomia di un'istallazione di Visual Studio a basso impatto).  
 
- Tutto pronto? Sarà illustrata una procedura dettagliata. Ma veniamo al dunque.  
+ Tutto pronto? Sarà illustrata una procedura dettagliata. Ma veniamo al dunque.
 
 ## <a name="install-the-installer"></a>Installare il programma di installazione  
  Con il download di Visual Studio 2017 viene scaricato un programma di bootstrap che installa a sua volta il nuovo programma di installazione semplificato. Questo nuovo programma di installazione include tutto il necessario per personalizzare l'installazione.  
@@ -76,7 +77,7 @@ In questo articolo viene presentato un nuovo modo per installare Visual Studio! 
 
 1.  Individuare il carico di lavoro che si vuole installare nella schermata d'**installazione di Visual Studio**.  
 
-  ![Finestra di dialogo di installazione di Visual Studio 2017](media/vs2017-workloads.PNG "Installazione di Visual Studio 2017")
+  ![Finestra di dialogo di installazione di Visual Studio 2017](media/vs2017-workloads.PNG "Installare carichi di lavoro di Visual Studio")
 
      Scegliere ad esempio il carico di lavoro Sviluppo per desktop .NET. Include l'editor principale predefinito che offre supporto di base per la modifica del codice per oltre 20 linguaggi, la possibilità di aprire e modificare il codice da qualsiasi cartella senza che sia necessario un progetto e il controllo del codice sorgente integrato.  
 
@@ -90,7 +91,7 @@ In questo articolo viene presentato un nuovo modo per installare Visual Studio! 
 
 Se non si vuole usare la comoda funzionalità Carichi di lavoro per personalizzare l'installazione di Visual Studio, scegliere l'opzione **Singoli componenti** dal programma di installazione di Visual Studio, selezionare i componenti desiderati e seguire le istruzioni visualizzate.
 
-  ![Visual Studio 2017 - Installare singoli componenti](media/vs2017-workloads.PNG "Installare singoli componenti di Visual Studio")
+  ![Visual Studio 2017 - Installare singoli componenti](media/vs2017-components.PNG "Installare singoli componenti di Visual Studio")
 
 ## <a name="install-language-packs"></a>Installare i Language Pack
 
@@ -107,7 +108,10 @@ Non sempre tutto funziona correttamente. Se l'installazione di Visual Studio non
 
 ## <a name="see-also"></a>Vedere anche  
 * [Modificare Visual Studio 2017](modify-visual-studio.md)
+* [Aggiornare Visual Studio](update-visual-studio.md)
 * [Disinstallare Visual Studio 2017](uninstall-visual-studio.md)
 * [Guida dell'amministratore di Visual Studio](visual-studio-administrator-guide.md)
+* [Creare un programma di installazione offline per Visual Studio 2017](create-an-offline-installation-of-visual-studio.md)
+* [Usare i parametri della riga di comando per installare Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) 
 * [Come segnalare un problema con Visual Studio 2017](../ide/how-to-report-a-problem-with-visual-studio-2017.md)
 

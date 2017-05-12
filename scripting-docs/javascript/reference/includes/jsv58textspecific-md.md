@@ -1,0 +1,1 @@
+Modalità standard di Internet Explorer 8
