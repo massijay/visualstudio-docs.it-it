@@ -1,7 +1,7 @@
 ---
 title: Introduzione a Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/1/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -27,16 +27,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: 2659c1a3b1adfc3f462971205460942c5fe5171f
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 8001036077b8b14af80fabceafad5d3aff9b25f4
+ms.contentlocale: it-it
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="getting-started-with-python-in-visual-studio"></a>Introduzione a Python in Visual Studio
 
-Dopo avere installato Visual Studio con il carico di lavoro Python (Visual Studio 2017) o con Python Tools for Visual Studio (Visual Studio 2015 e versioni precedente), si è pronti per esplorare l'esperienza di sviluppo con Python.
+Dopo avere installato Visual Studio con il carico di lavoro Python (Visual Studio 2017) o con Python Tools for Visual Studio (Visual Studio 2015 e versioni precedente), si è pronti per esplorare l'esperienza di sviluppo con Python. (Vedere [Installazione](installation.md) se necessario.)
 
 Questa procedura dettagliata descrive come creare una nuova applicazione Python vuota, scegliere un ambiente Python per l'utilizzo e quindi iniziare a scrivere codice per osservare il funzionamento di IntelliSense. Si utilizzerà quindi la finestra REPL interattiva per un breve periodo per creare altro codice, quindi si completerà il programma e lo si eseguirà da solo e nel debugger.
 
@@ -271,4 +272,5 @@ Oltre ai collegamenti "Approfondimenti" indicati in precedenza, gli argomenti se
 - Visual Studio offre la possibilità di eseguire il debug dell'applicazione in server remoti, come spiegato in [Debug remoto multipiattaforma](debugging-cross-platform-remote.md) e [Debug remoto in Azure](debugging-azure-remote.md).
 - È possibile valutare le prestazioni del codice Python usando la funzionalità di [profilatura di Visual Studio](profiling.md).
 - Gli unit test scritti in Python possono essere integrati direttamente in Esplora test di Visual Studio, come descritto in [Setting Up Unit Testing for Python Code](unit-testing.md) (Configurazione di unit test per il codice Python).
+- [Corsi gratuiti per Python in Microsoft Virtual Academy](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
 

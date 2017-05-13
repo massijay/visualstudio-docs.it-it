@@ -1,7 +1,7 @@
 ---
 title: Configurazione, installazione e verifiche per gli utenti Mac | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 04/13/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: 0220450b828fe49e8436be2897ed374252c2d391
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: b01ab828f06a13f3f8e4c7b9c72e2f05da409840
+ms.openlocfilehash: 49baa370a6d6258f2435b80adb504d78f922b8e8
+ms.contentlocale: it-it
+ms.lasthandoff: 04/14/2017
 
 ---
 # <a name="setup-install-and-verifications-for-mac-users"></a>Configurazione, installazione e verifiche per gli utenti Mac
@@ -38,27 +39,17 @@ Questo argomento è destinato agli sviluppatori che lavorano principalmente su u
 
  Per usare Xamarin su un Mac, è necessario quanto segue:
 
--   Un account Xamarin. Visitare l'indirizzo [https://www.xamarin.com/](https://www.xamarin.com/), fare clic su **Sign In** nell'angolo superiore destro della pagina, quindi fare clic su **Create a new account** nella pagina visualizzata. Selezionare un indirizzo di posta elettronica e una password per l'account Xamarin.
-
--   Un Mac con OSX Yosemite (10.10) o versione successiva e con Xcode 7 e Xamarin 4 installati.
+-   Un Mac con macOS Sierra 10.12 o versione successiva, con Xcode e Xamarin installati.
 
 -   Una delle configurazioni seguenti:
 
     -   **Per l'esecuzione di Xamarin Studio direttamente nel Mac:** Xamarin Studio è l'ambiente di sviluppo di Xamarin che supporta la creazione di app Android, iOS e Windows tramite C#.  Per una rapida panoramica di Xamarin Studio, vedere i [cenni preliminari su Xamarin Studio](https://xamarin.com/studio) (xamarin.com).
 
-    -   **Se nel Mac è già configurato Parallels o VMWare:** eseguire Windows con Visual Studio 2015 e Xamarin 4 in Parallels o VMWare.  Con questa configurazione, Xamarin è un'estensione installata con Visual Studio che offre la possibilità di usare Visual Studio come ambiente di sviluppo per la creazione di app Android, iOS e Windows Phone tramite C#.  Si noti che è possibile ottenere una sottoscrizione gratuita di Parallels per 3 mesi nell'ambito del programma Visual Studio Developer Essentials. Vedere la pagina relativa al fatto che [Microsoft Visual Studio Developer Essentials includerà Parallels Desktop Pro e l'accesso a Parallels](http://blog.parallels.com/blog/2015/11/18/visual-studio-dev-essentials/) (blog di Parallels).
+    -   **Se nel Mac è già configurato Parallels o VMWare:** eseguire Windows con Visual Studio 2017 e Xamarin in Parallels o VMWare.  Con questa configurazione, Xamarin è un'estensione installata con Visual Studio che offre la possibilità di usare Visual Studio come ambiente di sviluppo per la creazione di app Android, iOS e Windows tramite C#.  Si noti che è possibile ottenere una sottoscrizione gratuita di Parallels per 3 mesi nell'ambito del programma Visual Studio Developer Essentials. Vedere la pagina relativa al fatto che [Microsoft Visual Studio Developer Essentials includerà Parallels Desktop Pro e l'accesso a Parallels](http://blog.parallels.com/blog/2015/11/18/visual-studio-dev-essentials/) (blog di Parallels).
 
  In questo argomento vengono fornite istruzioni per tali requisiti.  Mentre il processo di installazione è in esecuzione, è possibile esaminare l'argomento [Informazioni sullo sviluppo per dispositivi mobili con Xamarin](../cross-platform/learn-about-mobile-development-with-xamarin.md) per leggere e guardare il materiale di riferimento necessario.
 
- **Contenuto dell'argomento:**
-
--   [Installazione in ambiente Mac (ID Apple, Xcode e Xamarin)](#mac)
-
--   [Installazione di Windows in Parallels (Visual Studio e Xamarin)](#windows)
-
--   [Verificare l'ambiente](#verify)
-
-##  <a name="a-namemaca-mac-setup-apple-id-xcode-and-xamarin"></a><a name="mac"></a> Installazione in ambiente Mac (ID Apple, Xcode e Xamarin)
+##  <a name="mac"></a> Installazione di Mac (ID Apple, Xcode e Xamarin)
 
 1.  Creare un ID Apple gratuito in [ID Apple](https://appleid.apple.com/) , se non ne è già disponibile uno. Questo è necessario per l'installazione e la firma in Xcode.
 
@@ -68,34 +59,29 @@ Questo argomento è destinato agli sviluppatori che lavorano principalmente su u
 
 4.  Dopo aver completato l'installazione di Xamarin nei computer Windows e Mac, seguire le istruzioni nella pagina relativa alla [connessione al Mac tramite XMA](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/#Connecting_to_the_Mac_Using_XMA) (xamarin.com) in modo da usare iOS e il Mac da Visual Studio nel computer Windows.
 
-##  <a name="a-namewindowsa-windows-setup-inside-parallels-visual-studio-and-xamarin"></a><a name="windows"></a> Installazione di Windows in Parallels (Visual Studio e Xamarin)
+##  <a name="windows"></a> Installazione di Windows in Parallels (Visual Studio e Xamarin)
 
-1.  Usando il desktop Windows che è stato configurato in Parallels/VMWare, [scaricare e avviare il programma di installazione di qualsiasi edizione di Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) (Community, Professional o Enterprise). Visual Studio Community 2015 è l'edizione gratuita. Le edizioni Professional ed Enterprise possono essere usate per un periodo di valutazione di 30 giorni.
+1.  Usando il desktop Windows che è stato configurato in Parallels/VMWare, [scaricare e avviare il programma di installazione di qualsiasi edizione di Visual Studio 2017](https://www.visualstudio.com/downloads/) (Community, Professional o Enterprise). Visual Studio Community 2017 è l'edizione gratuita. Le edizioni Professional ed Enterprise possono essere usate per un periodo di valutazione di 30 giorni.
 
-2.  Nel programma di installazione selezionare l'installazione **personalizzata** :
+2.  All'interno del programma di installazione fare clic sul pulsante **Altre opzioni** (icona con tre barrette) _accanto ad_ **Avvio** e quindi scegliere **Modifica**:  
+  
+     ![Scelta dell'opzione Modifica nell'installazione di Visual Studio](../cross-platform/media/cross-plat-xamarin-setup-1a.png "Cross-Plat Xamarin Setup 1")  
+  
+3.  Selezionare le caselle seguenti:
 
-     ![Scelta dell'opzione Personalizzata nell'installazione di Visual Studio](../cross-platform/media/cross-plat-xamarin-setup-1.png "Cross-Plat Xamarin Setup 1")
+    1.  **Dispositivi mobili e giochi > Sviluppo di applicazioni per dispositivi mobili con .NET**. In questo modo verranno selezionati automaticamente anche vari strumenti Android in Strumenti comuni e Software Development Kit. Questa opzione eseguirà inoltre l'aggiornamento di eventuali installazioni esistenti di Xamarin.  
+  
+         ![Selezione dell'opzione Sviluppo di applicazioni per dispositivi mobili in Dispositivi mobili e giochi](../cross-platform/media/cross-plat-xamarin-setup-2a.png "Cross-Plat Xamarin Setup 2")  
+  
+    2. (Facoltativo) **Windows > Sviluppo di app per la piattaforma UWP (Universal Windows Platform)**. Sono incluse opzioni per l'installazione di immagini di emulatori che richiederanno più tempo per il download. È sempre possibile tornare al programma di installazione di Visual Studio per aggiungerle in un secondo momento.  
 
-3.  Selezionare/deselezionare le caselle seguenti:
+4.  Fare clic sul pulsante **Modifica** e attendere l'esecuzione del processo. Anche in questo caso, l'operazione richiederà un certo tempo. Nel frattempo è possibile procedere con le istruzioni di installazione del Mac e passare a [Informazioni sullo sviluppo per dispositivi mobili con Xamarin](../cross-platform/learn-about-mobile-development-with-xamarin.md).
 
-    1.  Selezionare **Sviluppo di app per dispositivi mobili multipiattaforma > C#/.NET (Xamarin)**. In questo modo verranno selezionati automaticamente anche vari strumenti Android in Strumenti comuni e Software Development Kit.
-
-         ![Selezione dell'opzione Xamarin in Sviluppo di app per dispositivi mobili multipiattaforma](../cross-platform/media/cross-plat-xamarin-setup-2.png "Cross-Plat Xamarin Setup 2")
-
-    2.  Deselezionare **Sviluppo di app per dispositivi mobili multipiattaforma > Microsoft Visual Studio Emulator for Android**.
-
-4.  Fare clic sul pulsante Installa e attendere l'esecuzione del processo. Anche in questo caso, l'operazione richiederà un certo tempo. Nel frattempo è possibile procedere con questo argomento e passare a [Informazioni sullo sviluppo per dispositivi mobili con Xamarin](../cross-platform/learn-about-mobile-development-with-xamarin.md).
-
-5.  Al termine dell'installazione, avviare Visual Studio e accedere con l'account Microsoft se viene richiesto (si tratta dello stesso account che viene usato per Windows). Verificare quindi la disponibilità di aggiornamenti per Xamarin tramite **Strumenti > Opzioni > Xamarin** o **Strumenti > Opzioni > Xamarin > Altro**, in cui è disponibile un collegamento **Verifica ora**:
-
-     ![Controllo degli aggiornamenti di Xamarin nelle opzioni di Visual Studio](../cross-platform/media/cross-plat-xamarin-setup-3.png "Cross-Plat Xamarin Setup 3")
-
-    > [!NOTE]
-    >  Assicurarsi di aggiornare Xamarin alla versione 4.0.3.214 o successiva per evitare problemi con le licenze precedenti di Xamarin.  Se si tenta di verificare la disponibilità di aggiornamenti e viene visualizzato un errore relativo agli strumenti di compilazione Microsoft, vedere il thread nei [forum di Xamarin](http://forums.xamarin.com/discussion/69015/xamarin-update-on-vs-2013-says-i-need-the-build-tools-for-vs-2015).
+5.  Al termine dell'installazione, avviare Visual Studio e accedere con l'account Microsoft se viene richiesto (si tratta dello stesso account che viene usato per Windows).
 
 6.  Dopo aver completato l'installazione di Xamarin nei computer Windows e Mac, seguire le istruzioni nella pagina relativa alla [connessione al Mac tramite XMA](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/#Connecting_to_the_Mac_Using_XMA) (xamarin.com) in modo da usare iOS da Visual Studio.
 
-##  <a name="a-nameverifya-verify-your-environment"></a><a name="verify"></a> Verificare l'ambiente
+##  <a name="verify"></a> Verificare l'ambiente
  Al termine dei programmi di installazione, dedicare alcuni minuti per verificare che tutto sia pronto per le attività di sviluppo con Xamarin.
 
 ### <a name="xamarin-studio"></a>Xamarin Studio
@@ -103,13 +89,13 @@ Questo argomento è destinato agli sviluppatori che lavorano principalmente su u
 
  ![Selezione di Xamarin Studio per visualizzare la documentazione corretta in Xamarin.com](../cross-platform/media/crossplat-xamarin-mac-1.png "CrossPlat Xamarin Mac 1")
 
- **Android**
+**Android**
 
 1.  Convalidare la creazione di un progetto Android seguendo le istruzioni nella pagina relativa alla [creazione di un progetto Android](http://developer.xamarin.com/recipes/android/general/projects/create_an_android_project/) (xamarin.com).
 
-2.  Convalidare il debug in Android Player tramite la pagina relativa all'[integrazione con la documentazione di Xamarin Studio in Android Player](https://developer.xamarin.com/guides/android/getting_started/installation/android-player/#Integration_with_Xamarin_Studio) (xamarin.com).
+2.  Convalidare il debug nell'emulatore Android tramite la pagina relativa all'[integrazione con la documentazione di Xamarin Studio in Android Player](https://developer.xamarin.com/guides/android/getting_started/installation/android-player/#Integration_with_Xamarin_Studio) (xamarin.com).
 
- **iOS**
+**iOS**
 
 1.  Convalidare la creazione di un progetto iOS seguendo le istruzioni nella pagina relativa alla [creazione di un progetto iOS](http://developer.xamarin.com/recipes/ios/general/projects/create_an_ios_project/) (xamarin.com).
 
@@ -120,9 +106,7 @@ Questo argomento è destinato agli sviluppatori che lavorano principalmente su u
 
  ![Selezione di Visual Studio per visualizzare la documentazione corretta in Xamarin.com](../cross-platform/media/crossplat-xamarin-mac-2.png "CrossPlat Xamarin Mac 2")
 
- Accedere inoltre all'account Xamarin tramite **Strumenti > Account Xamarin**.
-
- **Android**
+**Android**
 
 1.  Convalidare la creazione di un progetto Android seguendo le istruzioni nella pagina relativa alla [creazione di un progetto Android](http://developer.xamarin.com/recipes/android/general/projects/create_an_android_project/) (xamarin.com).
 
@@ -132,9 +116,9 @@ Questo argomento è destinato agli sviluppatori che lavorano principalmente su u
 
 3.  Verificare che sia possibile connettersi da Visual Studio all'emulatore installato nel Mac.  Come risultato, Xamarin Player sarà visualizzato nell'elenco degli emulatori che è possibile selezionare in Visual Studio per il debug.  A tale scopo, seguire le istruzioni nella pagina relativa alla [connessione di Visual Studio a Xamarin Android Player](http://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/android-player-with-visual-studio-in-vm/) (xamarin.com).
 
- **iOS**
+**iOS**
 
-1.  Assicurarsi che il Mac sia disponibile in rete e associato a Visual Studio, come descritto nella pagina relativa alla [connessione al Mac tramite XMA](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/#Connecting_to_the_Mac_Using_XMA) (xamarin.com).
+1.  Assicurarsi che il Mac sia disponibile in rete e associato a Visual Studio, come descritto nella pagina relativa alla [connessione al Mac](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/#Connecting_to_the_Mac) (xamarin.com).
 
 2.  Convalidare la creazione di un progetto iOS seguendo le istruzioni nella pagina relativa alla [creazione di un progetto iOS](http://developer.xamarin.com/recipes/ios/general/projects/create_an_ios_project/) (xamarin.com).
 

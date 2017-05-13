@@ -1,7 +1,7 @@
 ---
 title: "Debug in modalità mista per Python in Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 4/10/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,22 +28,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: bdc621831893f907beba7ec5ad503fe4d96c0042
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 919227fb624f4b6dc51e13ccadea8e2682b9816f
+ms.contentlocale: it-it
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="debugging-python-and-c-together"></a>Debug di codice Python e C++ in contemporanea
 
-La maggior parte dei normali debugger Python supporta solo il debug di codice Python. Nella pratica, tuttavia, Python viene usato in combinazione con C o C++ quando sono richieste prestazioni elevate o la possibilità di richiamare direttamente le API della piattaforma. Per un esempio, vedere [Creating a C++ Extension for Python](cpp-and-python.md) (Creazione di un'estensione C++ per Python). Visual Studio (usato con Python Tools for Visual Studio 2.0 e versioni successive) include funzionalità di debug in modalità mista integrate e simultanee per Python e i linguaggi nativi C/C++, con stack di chiamate combinate, la possibilità di passare tra codice Python e codice nativo, punti di interruzione per entrambi i tipi di codice e la possibilità di visualizzare rappresentazioni Python degli oggetti nei frame nativi e viceversa:
+La maggior parte dei normali debugger Python supporta solo il debug di codice Python. Nella pratica, tuttavia, Python viene usato in combinazione con C o C++ quando sono richieste prestazioni elevate o la possibilità di richiamare direttamente le API della piattaforma. Per un esempio, vedere [Creating a C++ Extension for Python](cpp-and-python.md) (Creazione di un'estensione C++ per Python). Visual Studio include funzionalità di debug in modalità mista integrate e in contemporanea per Python e i linguaggi nativi C/C++, con stack di chiamate combinate, la possibilità di passare tra codice Python e codice nativo, punti di interruzione per entrambi i tipi di codice e la possibilità di visualizzare rappresentazioni Python degli oggetti nei frame nativi e viceversa:
 
 ![Debug in modalità mista](media/mixed-mode-debugging.png) 
 
 Per un'introduzione a compilazione, test e debug dei moduli C nativi con Visual Studio, vedere [Deep Dive: Creating Native Modules](https://youtu.be/D9RlT06a1EI) (Approfondimento: creazione di moduli nativi) (youtube.com, 9m9s).
 
 > [!VIDEO https://www.youtube.com/embed/D9RlT06a1EI]
+
+> [!Note]
+> Il debug in modalità mista non è disponibile in Python Tools for Visual Studio 1.x.
 
 ## <a name="enabling-mixed-mode-debugging"></a>Abilitazione del debug in modalità mista
 

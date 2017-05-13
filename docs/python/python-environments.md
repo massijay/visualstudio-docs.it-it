@@ -1,7 +1,7 @@
 ---
-title: Ambienti Python in Python Tools for Visual Studio | Microsoft Docs
+title: Ambienti Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,18 +28,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: 1f8f68e36f94aaf253d304edaa2360333b261be3
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 9140ca7549eefc3ac221f3ca0aa54fde482c8623
+ms.contentlocale: it-it
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="python-environments"></a>Ambienti Python
 
-Il codice Python viene sempre eseguito all'interno di un particolare *ambiente* Python, che è costituito da un interprete, una libreria (in genere quella standard Python) e un set di pacchetti installati. L'insieme di questi componenti determina la sintassi e i costrutti di linguaggio validi, le funzionalità accessibili del sistema operativo e i pacchetti che è possibile usare.
+Python in Visual Studio consente di gestire facilmente più ambienti Python e di passare da uno all'altro per progetti diversi. 
 
-Con il carico di lavoro Python in Visual Studio è possibile gestire facilmente più ambienti Python e passare da uno all'altro per progetti diversi. Un ambiente include anche un database di IntelliSense per le librerie di un ambiente, in modo che digitando un'istruzione come `import` nell'editor di Visual Studio venga automaticamente visualizzato un elenco delle librerie disponibili, nonché i moduli in esse presenti.
+Nota: se non si è esperti di Python in Visual Studio, vedere prima di tutto gli argomenti seguenti su cui si basa il contenuto di questo articolo:
+
+    - [Uso di Python in Visual Studio](python-in-visual-studio.md)
+    - [Installazione del supporto di Python in Visual Studio](installation.md)
+
+Un *ambiente* Python, in cui si esegue sempre codice Python, è costituito da un interprete, una libreria (in genere quella standard Python) e un set di pacchetti installati. L'insieme di questi componenti determina la sintassi e i costrutti di linguaggio validi, le funzionalità accessibili del sistema operativo e i pacchetti che è possibile usare.
+
+In Visual Studio, un ambiente include anche un database di IntelliSense per le librerie di un ambiente, in modo che digitando un'istruzione come `import` nell'editor di Visual Studio venga automaticamente visualizzato un elenco delle librerie disponibili, nonché i moduli in esse presenti.
 
 Gli sviluppatori usano spesso un unico ambiente Python globale, ma può capitare che altri debbano gestire più ambienti globali, ambienti specifici del progetto e probabilmente anche ambienti virtuali come illustrato in questo argomento:
 
@@ -57,7 +65,7 @@ Per un video introduttivo, vedere [Visual Studio Python Tutorial Deep Dive: Inte
 
 ## <a name="selecting-and-installing-python-interpreters"></a>Selezione e installazione di interpreti Python
 
-Ad eccezione di Visual Studio 2017 Preview, il supporto per Python non include un interprete Python ed è quindi necessario installare uno degli interpreti seguenti per eseguire il codice. In generale, Visual Studio rileva automaticamente i nuovi interpreti installati e configura un ambiente appositamente per essi. In caso contrario, vedere [Creazione di un ambiente per un interprete esistente](#creating-an-environment-for-an-existing-interpreter) più avanti.
+Ad eccezione di Visual Studio 2017, il supporto per Python non include un interprete Python ed è quindi necessario installare uno degli interpreti seguenti per eseguire il codice. In generale, Visual Studio rileva automaticamente i nuovi interpreti installati e configura un ambiente appositamente per essi. In caso contrario, vedere [Creazione di un ambiente per un interprete esistente](#creating-an-environment-for-an-existing-interpreter) più avanti.
 
 | Interprete | Descrizione | 
 | --- | --- | 
@@ -82,7 +90,7 @@ In entrambi i casi, la finestra Ambienti Python viene visualizzata come una sche
 
 ![Finestra Ambienti Python](media/environments-default-view.png)
 
-Nell'esempio precedente, oltre a Python 3.4 (CPython a 32 bit) sono installate le versioni a 32 e a 64 bit di IronPython. L'ambiente predefinito in grassetto è Python 3.4, che verrà usato per tutti i nuovi progetti. Se l'elenco visualizzato non include tutti gli ambienti, significa che Python Tools for Visual Studio è installato, ma non è stato un interprete Python (vedere sopra [Selezione e installazione di interpreti Python](#selecting-and-installing-python-interpreters)).
+L'esempio precedente mostra che oltre a Python 3.4 (CPython a 32 bit) sono installate le versioni a 32 e a 64 bit di IronPython 2.7. In questo caso, l'ambiente predefinito in grassetto è Python 3.4, che verrà usato per tutti i nuovi progetti. Se l'elenco visualizzato non include tutti gli ambienti, significa che Python Tools for Visual Studio è installato in Visual Studio 2015 o versione precedente, ma non è stato installato un interprete Python (vedere sopra [Selezione e installazione di interpreti Python](#selecting-and-installing-python-interpreters)). 
 
 > [!Tip]
 > Quando la finestra **Ambienti Python* è ridotta, come illustrato in precedenza, gli ambienti vengono elencati nella parte superiore e le diverse schede nella parte inferiore. Se si espande sufficientemente la finestra, però verrà aperta una visualizzazione più ampia in cui è possibile lavorare più comodamente.

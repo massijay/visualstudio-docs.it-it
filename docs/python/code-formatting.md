@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: b9e1c2b6be671adb99a13e4a0eb4357fbba477b2
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: a14bc7e8c9194fff3a1bec2739c9e9c2480e905b
+ms.contentlocale: it-it
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -44,7 +45,7 @@ Visual Studio consente di riformattare rapidamente il codice in base a opzioni d
 
 Le opzioni vengono impostate mediante **Strumenti > Opzioni > Editor di testo > Python > Formattazione** e le relative schede secondarie e per impostazione predefinita vengono impostate in modo da corrispondere a un superset della [guida di stile PEP 8](http://www.python.org/dev/peps/pep-0008/). La scheda **Generale** determina quando viene applicata la formattazione. Le altre tre pagine secondarie sono definite nelle sezioni seguenti.
 
-Il supporto di Python in Visual Studio aggiunge anche il comando [Fill Comment Paragraph](#fill-comment-paragraph-command) (Riempi paragrafo di commento), molto utile, al menu **Modifica > Avanzate** come descritto di seguito.
+[Il supporto di Python in Visual Studio](installation.md) aggiunge anche l'utile comando [Riempi paragrafo di commento](#fill-comment-paragraph-command) al menu **Modifica > Avanzate** come descritto di seguito.
 
 ## <a name="spacing"></a>Spacing (Spaziatura)
 

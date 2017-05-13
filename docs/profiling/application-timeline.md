@@ -28,13 +28,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 5455d9a16004fef1aec02fbaf856f336c67dfb05
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4c744284c198a645440494ee79ee0e722904fda5
+ms.openlocfilehash: b6fd9ebbd931604b12c772f4e2514c86f5c9dd70
+ms.contentlocale: it-it
+ms.lasthandoff: 05/04/2017
 
 ---
-# <a name="analyze-resource-consumption-and-ui-thread-acitivity-xaml"></a>Analizzare il consumo delle risorse e l'attività del thread dell'interfaccia utente (XAML)
+# <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>Analizzare il consumo delle risorse e l'attività del thread dell'interfaccia utente (XAML)
 Utilizzare il profiler **Sequenza temporale applicazione** per individuare e correggere problemi di prestazioni correlati all’interazione dell’applicazione nelle applicazioni XAML. Questo strumento consente di migliorare le prestazioni delle applicazioni XAML fornendo una visualizzazione dettagliata dell’utilizzo delle risorse delle applicazioni. È possibile analizzare il tempo impiegato dall'applicazione nella preparazione dei fotogrammi dell'interfaccia utente (layout e rendering), per soddisfare le richieste di rete e disco e in scenari come l’avvio dell’applicazione, il caricamento delle pagine e il ridimensionamento di Windows.  
   
  **Sequenza temporale applicazione** è uno degli strumenti che possono essere avviati con il comando **Debug/Profiler prestazioni**.  
@@ -118,8 +119,8 @@ Utilizzare il profiler **Sequenza temporale applicazione** per individuare e cor
 |**Analisi**|Tempo impiegato per l'analisi dei file XAML e la creazione di oggetti.<br /><br /> Espandendo un nodo **Analisi** in **Dettagli sequenza temporale** , viene visualizzata la catena di dipendenze di tutti i file XAML analizzati in seguito all'evento radice. In questo modo, è possibile identificare l'analisi di file e la creazione di oggetti non necessarie in scenari in cui le prestazioni sono un fattore importante e quindi ottimizzarle.|  
 |**Layout**|Nelle applicazioni di grandi dimensioni, migliaia di elementi potrebbero apparire sullo schermo contemporaneamente. Ciò potrebbe comportare una bassa frequenza dei fotogrammi dell'interfaccia utente e una velocità di risposta dell’applicazione conseguentemente scarsa. L'evento Layout determina in modo accurato il costo del layout di ogni elemento (ad esempio il tempo impiegato in Arrange, Measure, ApplyTemplate, ArrangeOverride e ArrangeOverride) e crea le strutture ad albero visive che hanno preso parte a un passaggio di Layout. È possibile utilizzare questa visualizzazione per determinare quali strutture ad albero logiche devono essere eliminate o per valutare altri meccanismi di rinvio per ottimizzare il passaggio di layout.|  
 |**Rendering**|Tempo impiegato per disegnare elementi XAML sullo schermo.|  
-|**I/0**|Tempo impiegato per il recupero di dati dal disco locale o dalle risorse di rete cui è possibile accedere tramite l' [API Microsoft Windows Internet (WinINet)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa385331.aspx).|  
-|**Codice app**|Tempo impiegato per l'esecuzione del codice dell'applicazione (utente) non correlato all'analisi o al layout.|  
+|**I / 0**|Tempo impiegato per il recupero di dati dal disco locale o dalle risorse di rete cui è possibile accedere tramite l' [API Microsoft Windows Internet (WinINet)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa385331.aspx).|  
+|**App Code**|Tempo impiegato per l'esecuzione del codice dell'applicazione (utente) non correlato all'analisi o al layout.|  
 |**Altro XAML**|Tempo impiegato per l'esecuzione del codice runtime XAML.|  
   
 > [!TIP]

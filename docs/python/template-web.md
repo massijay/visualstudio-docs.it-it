@@ -1,7 +1,7 @@
 ---
-title: Modello di progetto Web in Python Tools for Visual Studio | Microsoft Docs
+title: Modello di progetto Web per Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,16 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: 2375c0c3b1a692d03d8790e400e3fea606355831
-ms.lasthandoff: 03/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 20edb7a53adf400fba94556e659b4215a0060c1b
+ms.contentlocale: it-it
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="python-web-project-templates"></a>Modelli di progetti Web Python
 
-Python Tools for Visual Studio (PTVS) include il supporto per lo sviluppo di progetti web in framework quali Bottle, Django e Flask. Oltre a modelli di progetto, viene fornito anche un'utilità di avvio del debug che è possibile configurare in modo da gestire i vari framework. PTVS non include però i framework veri e propri che devono essere installati separatamente. A tale scopo, fare clic con il pulsante destro del progetto e scegliere **Python > Install/upgrade framework**.
+Il supporto di Python in Visual Studio include il supporto per lo sviluppo di progetti Web in framework quali Bottle, Django e Flask. Oltre a modelli di progetto, viene fornito anche un'utilità di avvio del debug che è possibile configurare in modo da gestire i vari framework. Visual Studio non include però i framework veri e propri che devono essere installati separatamente. A tale scopo, fare clic con il pulsante destro del mouse sul progetto e scegliere **Python > Install/upgrade framework** (Installa/aggiorna framework).
 
 Ogni modello, accessibile tramite **File > Nuovo > Progetto**, avvia un server Web con una porta locale selezionata in modo causale, apre il browser predefinito durante il debug e consente la pubblicazione diretta in [Microsoft Azure](http://www.azure.com). Sono disponibili modelli per Bottle, Flask e Django ed è possibile usare il modello generico "Progetto Web" per altri framework, ad esempio Pyramid.
 
@@ -59,7 +60,7 @@ Per un'introduzione ai progetti Web di Python, vedere, vedere il video [Getting 
 
 ## <a name="debugging"></a>Debug
 
-Quando si apre un progetto Web per il debug, PTVS avvia il server Web in locale e apre il browser predefinito usando l'indirizzo e la porta specificati. Per specificare altre opzioni, fare clic con il pulsante destro del mouse sul progetto, scegliere **Proprietà** e selezionare la scheda **Utilità di avvio Web**:
+Quando si avvia un progetto Web per il debug, Visual Studio avvia il server Web in locale e apre il browser predefinito usando l'indirizzo e la porta specificati. Per specificare altre opzioni, fare clic con il pulsante destro del mouse sul progetto, scegliere **Proprietà** e selezionare la scheda **Utilità di avvio Web**:
 
   ![Proprietà dell'utilità di Web per il modello Web generico](media/template-web-launcher-properties.png)
 
@@ -67,7 +68,7 @@ Nel gruppo **Debug** specificare le proprietà seguenti:
 
 - **Percorsi di ricerca**, **Argomenti dello script**, **Argomenti dell'interprete** e **Percorso dell'interprete**: queste proprietà sono uguali a quelle per il [debug normale](debugging.md).
 - **URL di avvio**: specifica l'URL che verrà aperto nel browser. Il valore predefinito è `localhost`.
-- **Numero di porta**: porta da usare se non ne viene specificata nessuna nell'URL (PTVS ne seleziona una automaticamente per impostazione predefinita). Questa opzione consente di eseguire l'override del valore predefinito della variabile di ambiente `SERVER_PORT`, usata dai modelli per configurare la porta su cui è in ascolto il server di debug locale.
+- **Numero di porta**: porta da usare se non ne viene specificata nessuna nell'URL (Visual Studio ne seleziona una automaticamente per impostazione predefinita). Questa opzione consente di eseguire l'override del valore predefinito della variabile di ambiente `SERVER_PORT`, usata dai modelli per configurare la porta su cui è in ascolto il server di debug locale.
 
 Le proprietà nei gruppi **Comando esegui server** e **Comando debug server** (quest'ultimo illustrato nell'immagine) determinano la modalità di avvio del server Web. Con molti framework è richiesto l'uso di uno script esterno al progetto corrente, di conseguenza è possibile configurare qui lo script e passare il nome del modulo di avvio come parametro.
 
@@ -94,7 +95,7 @@ Il modello di progetto Web Bottle include codice boilerplate che esegue la confi
     - **Comando**: `bottle` (modulo)
     - **Argomenti**: `--debug --bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
-L'opzione `--reload` è sconsigliata quando si usa PTVS per il debug.
+L'opzione `--reload` è sconsigliata quando si usa Visual Studio per il debug.
 
 ### <a name="sample-pyramid-configuration"></a>Esempio di configurazione di Pyramid
 

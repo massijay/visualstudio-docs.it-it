@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: 002c77b27f7283ecd28d7ec5470b0ed44b2bb7a4
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: f8a0bef07667e5f876473c966ed3d14a1b84dd0b
+ms.contentlocale: it-it
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -49,11 +50,14 @@ L'approccio adottato in questo argomento è quello per le estensioni CPython sta
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Questa procedura dettagliata viene scritta per Visual Studio 2017 Preview con i carichi di lavoro **Sviluppo di applicazioni desktop con C++** e **Sviluppo Python** impostati con le opzioni predefinite (ad esempio Python 3.6 come interprete predefinito). Nel carico di lavoro **Sviluppo Python** attivare la casella **Strumenti di sviluppo nativo Python** a destra per impostare la maggior parte delle opzioni descritte in questo argomento. Questa opzione includerà anche il carico di lavoro C++ automaticamente.
+Questa procedura dettagliata è scritta per Visual Studio 2017 con i carichi di lavoro **Sviluppo di applicazioni desktop con C++** e **Sviluppo Python** impostati con le opzioni predefinite (ad esempio Python 3.6 come interprete predefinito). Nel carico di lavoro **Sviluppo Python** attivare la casella **Strumenti di sviluppo nativo Python** a destra per impostare la maggior parte delle opzioni descritte in questo argomento. Questa opzione includerà anche il carico di lavoro C++ automaticamente. 
 
 ![Selezione dell'opzione Strumenti di sviluppo nativo Python](media/cpp-install-native.png)
 
 Per altre informazioni, vedere [Installing Python Support for Visual Studio](installation.md) (Installazione del supporto Python per Visual Studio), che illustra l'uso di altre versioni di Visual Studio. Se si installa Python separatamente, assicurarsi di selezionare **Download debugging symbols** (Scarica i simboli di debug) e **Download debug binaries** (Scarica file binari di debug) nella sezione **Opzioni avanzate** del programma di installazione. Ciò consente di avere a disposizione le librerie di debug necessari se si sceglie di eseguire una build di debug.
+
+> [!Note]
+> Python è disponibile anche con il carico di lavoro **Applicazioni analitiche e di analisi scientifica dei dati** che include Anaconda 3 a 64 bit (con la versione più recente di CPython) e l'opzione **Strumenti di sviluppo nativi Python** per impostazione predefinita.
 
 ## <a name="create-the-python-application"></a>Creare un'applicazione Python
 
@@ -265,9 +269,9 @@ A questo punto è possibile chiamare il modulo del codice `tanh` e confrontare l
 
 ## <a name="debug-the-c-code"></a>Eseguire il debug del codice C++
 
-Il supporto di Python in Visual Studio include la possibilità di [eseguire il debug del codice Python e C++ insieme](debugging-mixed-mode.md). Per sperimentare questa funzionalità, seguire la procedura seguente:
+Il [supporto di Python in Visual Studio](installation.md) include la possibilità di [eseguire il debug del codice Python e C++ insieme](debugging-mixed-mode.md). Per sperimentare questa funzionalità, seguire la procedura seguente:
 
-1. Fare clic con il pulsante destro del mouse sul progetto Python in Esplora soluzioni, selezionare **Proprietà**, selezionare la scheda **Debug** e quindi selezionare l'opzione **Debug > Abilita debug codice nativo**.
+1. Fare clic con il pulsante destro del mouse sul progetto Python in Esplora soluzioni, selezionare **Proprietà**, selezionare la scheda **Debug** e quindi selezionare l'opzione **Debug > Abilita debug codice nativo** .
 
     > [!Tip]
     > Quando si abilita il debug del codice nativo, è possibile che la finestra di output di Python venga chiusa quando il programma avrà terminato l'operazione, senza che venga visualizzato il consueto messaggio "Premere un tasto qualsiasi per continuare". Per specificare una pausa, aggiungere l'opzione `-i` al campo **Esegui > Argomenti dell'interprete** della scheda **Debug** quando si abilita il debug del codice nativo. Questa opzione abilita la modalità interattiva dell'interprete di Python dopo l'esecuzione del debug del codice e quindi aspetta che venga premuto CTRL+Z, INVIO per uscire. In alternativa, se si vuole modificare il codice Python, è possibile aggiungere le istruzioni `import os` e `os.system("pause")` alla fine del programma. Questa operazione duplica la richiesta di pausa originale.
