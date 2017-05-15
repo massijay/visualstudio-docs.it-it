@@ -1,7 +1,7 @@
 ---
-title: Esecuzione di unit test in Python Tools for Visual Studio | Microsoft Docs
+title: Unit test per Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: 878bd0baaa0e08a31274645213b222bf6faeb412
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 2597583912c7694495617c53839f41aa13cda871
+ms.contentlocale: it-it
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -39,13 +40,13 @@ ms.lasthandoff: 04/10/2017
 
 Gli unit test sono parti di codice che testano altre unità di codice in un'applicazione, in genere funzioni isolate, classi e così via. Quando l'applicazione supera tutti i relativi unit test, è possibile supporre con una certa attendibilità che la relativa funzionalità di basso livello sia corretta.
 
-In Python gli unit test vengono usati frequentemente per convalidare gli scenari durante la progettazione di un programma. Python Tools for Visual Studio (PTVS) include il supporto per l'individuazione, l'esecuzione e il debug di unit test direttamente all'interno del contesto del processo di sviluppo, invece di dover eseguire separatamente tali operazioni.
+In Python gli unit test vengono usati frequentemente per convalidare gli scenari durante la progettazione di un programma. Il supporto di Python in Visual Studio include l'individuazione, l'esecuzione e il debug di unit test direttamente all'interno del contesto del processo di sviluppo, invece di dover eseguire separatamente tali operazioni.
 
 Questo argomento illustra brevemente le funzionalità degli unit test in Visual Studio con Python. Per altre informazioni di carattere generale sull'esecuzione di unit test, vedere [Eseguire unit test del codice](../test/unit-test-your-code.md).
 
 ## <a name="discovering-and-viewing-tests"></a>Individuazione e visualizzazione di test
 
-Per convenzione, PTVS identifica i test come metodi il cui nome inizia con "test". Per verificarlo, eseguire le operazioni seguenti:
+Per convenzione, Visual Studio identifica i test come metodi il cui nome inizia con "test". Per verificarlo, eseguire le operazioni seguenti:
 
 1. Aprire un [progetto Python](python-projects.md) caricato in Visual Studio, fare clic con il pulsante destro del mouse sul progetto, scegliere **Aggiungi > Nuovo elemento** e quindi selezionare **Unit test Python** seguito da **Aggiungi**.
 
@@ -98,13 +99,13 @@ I test vengono eseguiti in background ed Esplora test aggiorna lo stato di ogni 
 
 ## <a name="debugging-tests"></a>Debug di test
 
-Dal momento che gli unit test sono parti di codice, sono soggetti a bug esattamente come qualsiasi altro tipo di codice. Può quindi essere necessario talvolta eseguirli in un debugger, in cui è possibile impostare punti di interruzione, esaminare le variabili ed eseguire il codice istruzione per istruzione. PTVS offre inoltre strumenti di diagnostica.
+Dal momento che gli unit test sono parti di codice, sono soggetti a bug esattamente come qualsiasi altro tipo di codice. Può quindi essere necessario talvolta eseguirli in un debugger, in cui è possibile impostare punti di interruzione, esaminare le variabili ed eseguire il codice istruzione per istruzione. Visual Studio include anche strumenti di diagnostica.
 
 Per avviare il debug, impostare un punto di interruzione iniziale nel codice, fare clic con il pulsante destro del mouse sul test (o su una selezione) in Esplora test e quindi scegliere **Esegui debug test selezionati**. Visual Studio avvierà il debugger di Python come farebbe per il codice dell'applicazione.
 
 ![Debug di un test](media/unit-test-debugging.png)
 
-A seconda della versione di PTVS, è anche possibile usare i comandi **Analizza code coverage per i test selezionati** e **Esegui profilatura test**. Vedere la [matrice delle funzionalità](python-in-visual-studio.md#features-matrix).
+A seconda della versione di Visual Studio, è anche possibile usare i comandi **Analizza code coverage per i test selezionati** ed **Esegui profilatura test**. Vedere la [matrice delle funzionalità](python-in-visual-studio.md#features-matrix).
 
 ### <a name="known-issues"></a>Problemi noti
 

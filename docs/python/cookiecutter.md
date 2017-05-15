@@ -1,7 +1,7 @@
 ---
-title: Estensione CookieCutter con Python Tools for Visual Studio | Microsoft Docs
+title: Estensione CookieCutter per Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 7d726441c2d6953bd7b50451bec7fff05d5d71b0
-ms.openlocfilehash: e9a822b98d4cbcf2fd52d96a199e596cec4e2c3b
-ms.lasthandoff: 03/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 44aa74104cbb27de62fe739dbdd8f269fbf42c53
+ms.contentlocale: it-it
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -104,7 +105,7 @@ Le opzioni di Cookiecutter sono disponibili tramite **Tools > Options > Cookiecu
 
 ## <a name="optimizing-cookiecutter-templates-for-visual-studio"></a>Ottimizzazione dei modelli di Cookiecutter per Visual Studio
 
-Per informazioni di base sulla creazione di un modello di Cookiecutter, vedere la [documentazione di Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/first_steps.html). Si noti che l'estensione Cookiecutter per Visual Studio supporta modelli creati per Cookiecutter versione&1;.4.
+Per informazioni di base sulla creazione di un modello di Cookiecutter, vedere la [documentazione di Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/first_steps.html). Si noti che l'estensione Cookiecutter per Visual Studio supporta modelli creati per Cookiecutter versione 1.4.
 
 Il rendering predefinito delle variabili di un modello dipende dal tipo di dati (stringa o elenco):
 

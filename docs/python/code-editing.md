@@ -28,16 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: 0f2ecd6ca52a04e8813610c0f406251ef4604354
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: b71d44150662c97f355c9b0c14a7888baf6c0683
+ms.contentlocale: it-it
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="editing-python-code"></a>Modifica del codice Python
 
-Il lavoro nell'editor del codice costituisce gran parte dell'attività degli sviluppatori e il supporto di Python in Visual Studio offre funzionalità utili per aumentare la produttività, quali l'evidenziazione della sintassi IntelliSense, il completamento automatico, il supporto alla firma, gli override dei metodi, la funzione di ricerca ed esplorazione. 
+Il lavoro nell'editor del codice costituisce gran parte dell'attività degli sviluppatori e il [supporto di Python in Visual Studio](installation.md) offre funzionalità utili per aumentare la produttività, quali l'evidenziazione della sintassi IntelliSense, il completamento automatico, il supporto per la firma, gli override dei metodi e la funzionalità di ricerca ed esplorazione. 
 
 Contenuto dell'argomento:
 
