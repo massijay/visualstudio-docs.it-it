@@ -1,7 +1,7 @@
 ---
-title: Modello di progetto Web Django in Python Tools for Visual Studio | Microsoft Docs
+title: Modello di progetto Web Django per Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 5/8/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -28,18 +28,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 7f65641fbf15edfe16931badc19602a0fc773bff
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 4a5db2deb3633e8305dbf83cbe6ba8c0e3344c72
+ms.contentlocale: it-it
+ms.lasthandoff: 05/09/2017
 
 ---
 
 # <a name="django-web-project-template"></a>Modello di progetti Web Django
 
-[Django](https://www.djangoproject.com/) è un framework Python di alto livello progettato per lo sviluppo rapido, sicuro e scalabile di applicazioni Web. Python Tools for Visual Studio (PTVS) include un modello di progetto per configurare la struttura di un'applicazione Web basato su Django. Per usare il modello in Visual Studio, scegliere **File > Nuovo > Progetto**, cercare "Django" e selezionare il modello "Progetto Web Django". Il progetto risultante includerà il codice boilerplate, nonché un database SQLite predefinito. Il modello "Progetto Web Django vuoto" è simile ma non include il database.
+[Django](https://www.djangoproject.com/) è un framework Python di alto livello progettato per lo sviluppo rapido, sicuro e scalabile di applicazioni Web. Il supporto di Python in Visual Studio include un modello di progetto per configurare la struttura di un'applicazione Web basato su Django. Per usare il modello in Visual Studio, scegliere **File > Nuovo > Progetto**, cercare "Django" e selezionare il modello "Progetto Web Django". Il progetto risultante includerà il codice boilerplate, nonché un database SQLite predefinito. Il modello "Progetto Web Django vuoto" è simile ma non include il database.
 
-PTVS offre il supporto IntelliSense completo per i progetti Django:
+Visual Studio offre il supporto IntelliSense completo per i progetti Django:
 
 - Variabili di contesto passate nel modello:
 
@@ -56,7 +57,7 @@ PTVS offre il supporto IntelliSense completo per i progetti Django:
     ![IntelliSense per JavaScript](media/template-django-intellisense-js.png)
 
 
-PTVS offre inoltre [supporto completo per il debug](debugging.md) di progetti Django: 
+Visual Studio offre anche [supporto completo per il debug](debugging.md) di progetti Django: 
 
 ![Punti di interruzione](media/template-django-debugging.png)
 

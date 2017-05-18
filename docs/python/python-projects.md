@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 9328c347d548a03a536cea16bd5851817c03d5a2
-ms.openlocfilehash: eb3abd0f37e52f2b1db3793a5471b74a5e0c37ff
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 3190be68fbba464a84a7a25b2d829979944bdb1f
+ms.contentlocale: it-it
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -100,7 +101,7 @@ La tabella seguente riepiloga i modelli disponibili in Visual Studio 2017 (non t
 | Pagina Web IronPython Silverlight | Progetto IronPython che viene eseguito in un browser con Silverlight. Il codice Python dell'applicazione è incluso nella pagina Web come script. Un tag di script boilerplate estrae parte del codice JavaScript che inizializza l'esecuzione di IronPython all'interno di Silverlight, da cui il codice Python può interagire con il DOM. |
 | Windows Forms Application IronPython | Struttura di progetto che usa IronPython con l'interfaccia utente creata tramite il codice con Windows Forms. L'applicazione viene eseguita senza visualizzare alcuna console. |
 | Applicazione in background (IoT) | Supporta la distribuzione di progetti Python per l'esecuzione nei dispositivi come servizi in background. Per altre informazioni, vedere la pagina di [Windows Dev Center dedicata a IoT](https://dev.windows.com/en-us/iot). |
-| Modulo di estensione Python | Questo modello viene visualizzato in Visual C++ se sono stati installati gli **Strumenti di sviluppo nativi Python** con il carico di lavoro Python in Visual Studio 2017 Preview (vedere [Installazione](installation.md)). Offre la struttura di base per una DLL di estensione C++, simile a quella descritta in [Creating a C++ Extension for Python](cpp-and-python.md) (Creazione di un'estensione C++ per Python). |
+| Modulo di estensione Python | Questo modello viene visualizzato in Visual C++ se sono stati installati gli **Strumenti di sviluppo nativi Python** con il carico di lavoro Python in Visual Studio 2017 (vedere [Installazione](installation.md)). Offre la struttura di base per una DLL di estensione C++, simile a quella descritta in [Creating a C++ Extension for Python](cpp-and-python.md) (Creazione di un'estensione C++ per Python). |
 
 <a name="create-project-from-existing-files"</a>
 ### <a name="creating-a-project-from-existing-files"></a>Creazione di un progetto da file esistenti

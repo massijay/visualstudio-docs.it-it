@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: adf122a478b29674dc2924dcf7d42972a5a3f52e
-ms.openlocfilehash: df4d74d9fe884f3aff1998f4b0b38dbff6d1359f
-ms.lasthandoff: 04/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: fa3d69cbb34a61a327d0b4c27430ff04b670a568
+ms.contentlocale: it-it
+ms.lasthandoff: 05/09/2017
 
 ---
 
@@ -111,7 +112,10 @@ In questa procedura verrà impostato una semplice punto di interruzione per arre
 
 1. Nella finestra di dialogo **Connetti a processo** visualizzata impostare **Tipo di connessione** su **Python remote (ptvsd)** (Python remoto). Nelle versioni precedenti di Visual Studio queste opzioni sono rispettivamente **Trasporto** e **Debug remoto Python**.
 
-1. Nel campo **Destinazione della connessione**, **Qualificatore** nelle versioni precedenti, immettere `tcp://<secret>@<ip_address>:5678`, dove `<secret>` è la stringa passata a `enable_attach` nel codice Python, `<ip_address>` è l'indirizzo IP del computer remoto, che può essere un indirizzo esplicito o un nome simile a myvm.cloudapp.net, e `:5678` è il numero di porta del debug remoto. 
+1. Nel campo **Destinazione della connessione**, **Qualificatore** nelle versioni precedenti, immettere `tcp://<secret>@<ip_address>:5678`, dove `<secret>` è la stringa passata a `enable_attach` nel codice Python, `<ip_address>` è l'indirizzo IP del computer remoto, che può essere un indirizzo esplicito o un nome simile a myvm.cloudapp.net, e `:5678` è il numero di porta del debug remoto.
+
+    > [!Warning]
+    > Se si sta effettuando una connessione sulla rete Internet pubblica, è preferibile usare invece `tcps` e seguire l'istruzione seguente per [proteggere la connessione del debugger con SSL](#securing-the-debugger-connection-with-ssl).
 
 1. Premere INVIO per compilare l'elenco dei processi ptvsd disponibili su quel computer:
 
@@ -194,5 +198,5 @@ Visual Studio chiede informazioni sui potenziali problemi di certificato durante
     ![Avviso sul nome host del certificato SSL](media/remote-debugging-ssl-warning2.png)
 
 > [!Warning]
-> Al momento Visual Studio 2017 Preview si blocca se si ignorano questi avvisi. Assicurarsi di correggere tutti i problemi prima di tentare la connessione.
+> Al momento Visual Studio 2017 si blocca se si ignorano questi avvisi. Assicurarsi di correggere tutti i problemi prima di tentare la connessione.
 
