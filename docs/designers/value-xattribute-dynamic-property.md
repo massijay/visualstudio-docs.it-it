@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: c013001a52e5b894bcbcdaf9a40309505b39140c
-ms.lasthandoff: 02/22/2017
+ms.contentlocale: it-it
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="value-xattribute-dynamic-property"></a>Valore (proprietà dinamica XAttribute)
@@ -55,7 +56,7 @@ attrib.Value
 |<xref:System.ArgumentNullException>|Durante l'impostazione, `value` è `null`.|  
   
 ## <a name="remarks"></a>Note  
- Questa proprietà è equivalente alla proprietà <xref:System.Xml.Linq.XAttribute.Value%2A> della classe <xref:System.Xml.Linq.XAttribute?displayProperty=fullName>, ma supporta anche le notifiche di modifica.  
+ Questa proprietà dinamica è equivalente alla proprietà <xref:System.Xml.Linq.XAttribute.Value%2A> della classe <xref:System.Xml.Linq.XAttribute?displayProperty=fullName>, ma supporta anche le notifiche delle modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>   

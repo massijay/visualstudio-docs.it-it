@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: bf50213627703ac18257e3f0ec44c20cc7bb2cc9
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: it-it
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="anatomy-of-a-coded-ui-test"></a>Composizione di un test codificato dell'interfaccia utente
@@ -73,7 +74,7 @@ using Mouse = Microsoft.VisualStudio.TestTools.UITesting.Mouse;
 using MouseButtons = System.Windows.Forms.MouseButtons;  
 ```  
   
- Lo spazio dei nomi <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls> viene incluso per un'interfaccia utente di Windows. Per un'interfaccia utente di pagina Web, lo spazio dei nomi è <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>, mentre per un'interfaccia utente di Windows Presentation Foundation è <xref:Microsoft.VisualStudio.TestTools.UITesting.WpfControls>.  
+ Lo spazio dei nomi <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls> viene incluso per un'interfaccia utente di Windows (UI). Per l'interfaccia utente di una pagina Web, lo spazio dei nomi sarebbe <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>, mentre per un'interfaccia utente di Windows Presentation Foundation, sarebbe <xref:Microsoft.VisualStudio.TestTools.UITesting.WpfControls>.  
   
 ####  <a name="UIMapClass"></a> Classe UIMap  
  La sezione successiva del file è la classe <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>.  
@@ -83,7 +84,7 @@ using MouseButtons = System.Windows.Forms.MouseButtons;
 public partial class UIMap  
 ```  
   
- Il codice della classe inizia con un attributo <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> applicato alla classe, che viene dichiarata come classe parziale. Si noterà che l'attributo viene applicato anche a ogni classe in questo file. L'altro file che può contenere altro codice per questa classe è `UIMap.cs`, di cui si parlerà più avanti.  
+ Il codice della classe inizia con <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> applicato alla classe, che viene dichiarata come classe parziale. Si noterà che l'attributo viene applicato anche a ogni classe in questo file. L'altro file che può contenere altro codice per questa classe è `UIMap.cs`, di cui si parlerà più avanti.  
   
  La classe `UIMap` generata include il codice per ogni metodo specificato quando è stato registrato il test.  
   
@@ -94,7 +95,7 @@ public void VerifyTotal()
 public void CleanUp()  
 ```  
   
- Questa parte della classe <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> include anche il codice generato per ogni proprietà richiesta dai metodi.  
+ Questa parte della classe <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> include anche il codice generato per ogni proprietà necessaria ai metodi.  
   
 ```  
 public virtual LaunchCalculatorParams LaunchCalculatorParams  
@@ -155,7 +156,7 @@ Assert.AreEqual(
     uIItemEdit.Text);  
 ```  
   
- Il nome della casella di testo risulta sconosciuto perché lo sviluppatore dell'applicazione Windows Calculator non ha fornito un nome disponibile pubblicamente per il controllo. Il metodo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=fullName> non riesce quando il valore effettivo non è uguale a quello previsto e questo potrebbe impedire la riuscita del test. Si noti inoltre che il valore previsto include un separatore decimale seguito da uno spazio. Se si dovesse modificare la funzionalità di questo particolare test, sarà necessario consentire il separatore decimale lo spazio.  
+ Il nome della casella di testo risulta sconosciuto perché lo sviluppatore dell'applicazione Windows Calculator non ha fornito un nome disponibile pubblicamente per il controllo. Il metodo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=fullName> ha esito negativo quando il valore effettivo non è uguale al valore previsto, il che potrebbe causare la mancata riuscita del test. Si noti inoltre che il valore previsto include un separatore decimale seguito da uno spazio. Se si dovesse modificare la funzionalità di questo particolare test, sarà necessario consentire il separatore decimale lo spazio.  
   
 #####  <a name="UIMapProperties"></a> Proprietà UIMap  
  Il codice per ogni proprietà è anche standard in tutta la classe. Il seguente codice per la proprietà `AddItemsParams` viene usato nel metodo `AddItems()`.  
@@ -199,7 +200,7 @@ public class AddItemsParams
 }  
 ```  
   
- Come tutte le classi presenti nel file `UIMap.cs`, anche questa inizia con l'attributo <xref:System.CodeDom.Compiler.GeneratedCodeAttribute>. In questa piccola classe è presente un'area `Fields` che definisce le stringhe da usare come parametri per il metodo <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A?displayProperty=fullName> usato nel metodo `UIMap.AddItems()` illustrato in precedenza. È possibile scrivere il codice per sostituire i valori in questi campi delle stringhe prima che venga chiamato il metodo in cui sono usati questi parametri.  
+ Come tutte le classi nel file `UIMap.cs`, anche questa inizia con <xref:System.CodeDom.Compiler.GeneratedCodeAttribute>. In questa piccola classe è presente un'area `Fields` che definisce le stringhe da usare come parametri per il metodo <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A?displayProperty=fullName> usato nel metodo `UIMap.AddItems()` illustrato in precedenza. È possibile scrivere il codice per sostituire i valori in questi campi delle stringhe prima che venga chiamato il metodo in cui sono usati questi parametri.  
   
 ###  <a name="UIMapCS"></a> UIMap.cs  
  Per impostazione predefinita, questo file contiene una classe `UIMap` parziale senza metodi o proprietà.  
@@ -273,9 +274,9 @@ public void MyTestCleanup()
 }  
 ```  
   
- Al metodo `MyTestInitialize()` è applicato l'attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute>, che indica al framework di test di chiamare questo metodo prima di qualsiasi altro metodo di test. Analogamente, al metodo `MyTestCleanup()` è applicato l'attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute>, che indica al framework di test di chiamare questo metodo dopo che sono stati chiamati tutti gli altri metodi di test. L'uso di questi metodi è facoltativo. Per questo test, il metodo `UIMap.LaunchCalculator()` potrebbe essere chiamato da `MyTestInitialize()` e il metodo `UIMap.CloseCalculator()` potrebbe essere chiamato da `MyTestCleanup()` invece che da `CodedUITest1Method1()`.  
+ Al metodo `MyTestInitialize()` è applicato <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute>, che indica al framework di test di chiamare questo metodo prima di qualsiasi altro metodo di test. Analogamente, al metodo `MyTestCleanup()` è applicato <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute>, che indica al framework di test di chiamare questo metodo dopo che sono stati chiamati tutti gli altri metodi di test. L'uso di questi metodi è facoltativo. Per questo test, il metodo `UIMap.LaunchCalculator()` potrebbe essere chiamato da `MyTestInitialize()` e il metodo `UIMap.CloseCalculator()` potrebbe essere chiamato da `MyTestCleanup()` invece che da `CodedUITest1Method1()`.  
   
- Se si aggiungono altri metodi a questa classe usando l'attributo <xref:Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute>, il framework di test chiamerà ogni metodo durante il test.  
+ Se si aggiungono altri metodi a questa classe usando <xref:Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute>, il framework di test chiamerà ogni metodo durante il test.  
   
 ###  <a name="UIMapuitest"></a> UIMap.uitest  
  Esiste un file XML che rappresenta la struttura della registrazione del test codificato dell'interfaccia utente e di tutte le sue parti, che includono le azioni e le classi oltre ai metodi e alle proprietà di tali classi. Il file [UIMap.Designer.cs](#UIMapDesignerFile) contiene il codice generato dal Generatore di test codificati dell'interfaccia utente per riprodurre la struttura del test e fornisce la connessione al framework di test.  
