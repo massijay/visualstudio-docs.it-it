@@ -5,9 +5,10 @@ ms.author: apexprodleads
 ms.topic: landing-page
 title: Documentazione dell&quot;IDE di Visual Studio
 description: Informazioni su come l&quot;IDE di Visual Studio consente di sviluppare app usando quasi tutti i linguaggi di codice.
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
 ms.openlocfilehash: 7f55b5d4cc58620e292cc11399c086e26184081f
+ms.contentlocale: it-it
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -54,7 +55,7 @@ Le esercitazioni, i video e altra documentazione illustrano i modi per creare co
         </a>
     </li>
     <li>
-        <a href="/dotnet/articles/welcome">
+        <a href="/dotnet/welcome">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
