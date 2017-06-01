@@ -1,7 +1,7 @@
 ---
 title: Tasti di scelta rapida predefiniti in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 05/02/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,19 +34,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 230e641befbfbbb722c3f6ca21f5aab73322e61c
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4c744284c198a645440494ee79ee0e722904fda5
+ms.openlocfilehash: c3686170b93717c1e55d209a3f8bc8d2725c265d
+ms.contentlocale: it-it
+ms.lasthandoff: 05/04/2017
 
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio"></a>Tasti di scelta rapida predefiniti in Visual Studio
 Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è possibile selezionare il tasto di scelta rapida appropriato. In questi argomenti vengono elencati i tasti di scelta rapida predefiniti per il profilo di sviluppo generale, che potrebbe essere stato selezionato durante l'installazione di Visual Studio. Indipendentemente dal profilo scelto, è possibile identificare il tasto di scelta rapida per un comando aprendo la finestra di dialogo **Opzioni**, espandendo il nodo **Ambiente** e scegliendo **Tastiera**. È anche possibile personalizzare i tasti di scelta rapida assegnandone uno diverso per ciascun comando.  
-  
+
  Per un elenco di tasti di scelta rapida comuni e altre informazioni sulla produttività, vedere [Suggerimenti su Visual Studio](../ide/tips-and-tricks-for-visual-studio.md) e [Suggerimenti relativi alla produttività per Visual Studio](../ide/productivity-tips-for-visual-studio.md).  
-  
+
  Nelle sezioni della tabella illustrata di seguito sono inclusi comandi globali, in quanto è possibile accedervi da qualsiasi punto in Visual Studio mediante tasti di scelta rapida.  
-  
+
 |||||  
 |-|-|-|-|  
 |[Analizza](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)|[Modifica](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)|[Progetto](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_project)|[Test](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)|  
@@ -56,9 +57,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |[Debug](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debug)|[Test di carico](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_loadtest)|[Team](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_team)|[Finestra](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_window)|  
 |[Debugger - Menu di scelta rapida](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debugger)|[Altri menu di scelta rapida](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_otherContext)|[Menu di scelta rapida Team Foundation](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TFcontext)|[Azure](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_windowsazure)|  
 |[Hub diagnostica](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_diagnostics)||||  
-  
+
  In ogni sezione della tabella indicata di seguito sono inclusi i comandi per cui i tasti di scelta rapida sono specifici per il contesto in base a cui è denominata la sezione.  
-  
+
 |||||  
 |-|-|-|-|  
 |[ADO.NET Entity Data Model Designer](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_ADONET)|[Diagramma livello](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_layerDiagram)|[Progettazione impostazioni](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_SettingsDesigner)|[Editor immagini di VC](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcimageeditor)|  
@@ -73,39 +74,39 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |[Editor HTML](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_HTMLeditor)|[Risultati query](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_QueryResults)|[Diagramma caso d'uso UML](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_UMLusecaseDiagram)|[Progettazione interfaccia utente XAML](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_xamluidesigner)|  
 |[Progettazione Editor HTML](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_HTMLeditorDesign)|[Progettazione report](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_ReportDesigner)|[Editor tasti di scelta rapida di VC](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcaccelerator)|[Editor XML (testo)](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_xmlTextEditor)|  
 |[Visualizzazione Origine editor HTML](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_HTMLeditorSource)|[Diagramma sequenza](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_SequenceDiagram)|[Editor finestre di VC](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_vcdialogeditor)|[Progettazione XML Schema](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_xmlSchemaDesigner)|  
-  
+
 ##  <a name="bkmk_global"></a> Comandi globali  
-  
+
 ###  <a name="bkmk_analyze"></a> Analizza  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Analyze.NavigateBackward|MAIUSC+ALT+3|  
 |Analyze.NavigateForward|MAIUSC+ALT+4|  
-  
+
 ###  <a name="bkmk_architecture"></a> Architettura  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Architecture.NewDiagram|Ctrl+\\, Ctrl+N|  
-  
+
 ###  <a name="bkmk_build"></a> Compila  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Build.BuildSolution|CTRL+MAIUSC+B|  
 |Build.Cancel|CTRL+INTERR|  
 |Build.Compile|Ctrl+F7|  
 |Build.RunCodeAnalysisonSolution|ALT+F11|  
-  
+
 ###  <a name="bkmk_classview"></a> Menu di scelta rapida visualizzazione classi  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |ClassViewContextMenus.ClassViewMultiselectProjectreferencesItems.Properties|ALT+INVIO|  
-  
+
 ###  <a name="bkmk_debug"></a> Debug  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Debug.ApplyCodeChanges|ALT+F10|  
@@ -171,23 +172,23 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Debug.Watch2|CTRL+ALT+W, 2|  
 |Debug.Watch3|CTRL+ALT+W, 3|  
 |Debug.Watch4|CTRL+ALT+W, 4|  
-  
+
 ###  <a name="bkmk_debugger"></a> Debugger - Menu di scelta rapida  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |DebuggerContextMenus.BreakpointsWindow.Delete|ALT+F9, D|  
 |DebuggerContextMenus.BreakpointsWindow.GoToDisassembly|ALT+F9, A|  
 |DebuggerContextMenus.BreakpointsWindow.GoToSourceCode|ALT+F9, S|  
-  
+
 ###  <a name="bkmk_diagnostics"></a> Hub diagnostica  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |DiagnosticsHub.StopCollection|Ctrl+Alt+F2|  
-  
+
 ###  <a name="bkmk_edit"></a> Modifica  
-  
+
 |Comandi:||  
 |--------------|-|  
 |Edit.Copy|CTRL+C<br /><br /> oppure<br /><br /> CTRL+INS|  
@@ -244,9 +245,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Edit.StopSearch|ALT+F3, S|  
 |Edit.SurroundWith|CTRL+K, CTRL+S|  
 |Edit.Undo|CTRL+Z<br /><br /> oppure<br /><br /> ALT+BACKSPACE|  
-  
+
 ###  <a name="bkmk_editorContext"></a> Menu di scelta rapida editor  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |EditorContextMenus.CodeWindow.Breakpoint.BreakpointEditlabels|ALT+F9, L|  
@@ -255,9 +256,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |EditorContextMenus.CodeWindow.GoToView|CTRL+M, CTRL+G|  
 |EditorContextMenus.CodeWindow.ToggleHeaderCodeFile|CTRL+K, CTRL+O|  
 |EditorContextMenus.CodeWindow.ViewCallHierarchy|CTRL+K, CTRL+T<br /><br /> oppure<br /><br /> CTRL+K, S|  
-  
+
 ###  <a name="bkmk_file"></a> File  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |File.Exit|ALT+F4|  
@@ -271,30 +272,30 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |File.SaveAll|CTRL+MAIUSC+S|  
 |File.SaveSelectedItems|CTRL+S|  
 |File.ViewinBrowser|CTRL+MAIUSC+W|  
-  
+
 ###  <a name="bkmk_help"></a> Guida  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Help.AddandRemoveHelpContent|Ctrl+Alt+F1|  
 |Help.F1Help|F1|  
 |Help.ViewHelp|CTRL+F1|  
 |Help.WindowHelp|MAIUSC+F1|  
-  
+
 ###  <a name="bkmk_loadtest"></a> Test di carico  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |LoadTest.JumpToCounterPane|CTRL+R, Q|  
-  
+
 ###  <a name="bkmk_otherContext"></a> Altri menu di scelta rapida  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |OtherContextMenus.MicrosoftDataEntityDesignContext.AddNewDiagram|INS|  
-  
+
 ###  <a name="bkmk_project"></a> Progetto  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Project.AddExistingItem|MAIUSC+ALT+A|  
@@ -304,16 +305,16 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Project.Previewchanges|ALT+; ALT+C|  
 |Project.Publishselectedfiles|ALT+; ALT+P|  
 |Project.Replaceselectedfilesfromserver|ALT; ALT+R|  
-  
+
 ###  <a name="bkmk_projectContext"></a> Menu di scelta rapida progetti e soluzioni  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |ProjectandSolutionContextMenus.Item.MoveDown|ALT+Freccia GIÙ|  
 |ProjectandSolutionContextMenus.Item.MoveUp|ALT+Freccia SU|  
-  
+
 ###  <a name="bkmk_refactor"></a> Refactoring  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Refactor.EncapsulateField|CTRL+R, CTRL+E|  
@@ -322,26 +323,26 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Refactor.RemoveParameters|CTRL+R, CTRL+V|  
 |Refactor.Rename|CTRL+R, CTRL+R|  
 |Refactor.ReorderParameters|CTRL+R, CTRL+O|  
-  
+
 ###  <a name="bkmk_solutionexplorerGLOBAL"></a> Esplora soluzioni  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |SolutionExplorer.OpenFilesFilter|CTRL+[, O<br /><br /> oppure<br /><br /> CTRL+[, CTRL+O|  
 |SolutionExplorer.PendingChangesFilter|CTRL+[, P<br /><br /> oppure<br /><br /> CTRL+[, CTRL+P|  
 |SolutionExplorer.SyncWithActiveDocument|CTRL+[, S<br /><br /> oppure<br /><br /> CTRL+[, CTRL+S|  
-  
+
 ###  <a name="bkmk_team"></a> Team  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Team.Git.GoToGitBranches|CTRL+0, CTRL+N<br /><br /> oppure<br /><br /> CTRL+0, N|  
 |Team.Git.GoToGitChanges|CTRL+0, CTRL+G<br /><br /> oppure<br /><br /> CTRL+0, G|  
 |Team.Git.GoToGitCommits|CTRL+0, CTRL+O<br /><br /> oppure<br /><br /> Ctrl+0, O|  
 |Team.TeamExplorerSearch|CTRL+'|  
-  
+
 ###  <a name="bkmk_TFcontext"></a> Menu di scelta rapida Team Foundation  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |TeamFoundationContextMenus.Commands.GoToBuilds|CTRL+0, CTRL+B<br /><br /> oppure<br /><br /> Ctrl+0, B|  
@@ -354,16 +355,16 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |TeamFoundationContextMenus.Commands.GoToSettings|CTRL+0, CTRL+S<br /><br /> oppure<br /><br /> CTRL+0, S|  
 |TeamFoundationContextMenus.Commands.GoToWebAccess|CTRL+0, CTRL+A<br /><br /> oppure<br /><br /> CTRL+0, A|  
 |TeamFoundationContextMenus.Commands.GoToWorkItems|CTRL+0, CTRL+W<br /><br /> oppure<br /><br /> CTRL+0, W|  
-  
+
 ###  <a name="bkmk_test"></a> Test  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Test.UseCodedUITestBuilder|CTRL+\\, CTRL+C|  
 |Test.UseExistingActionRecording|CTRL+\\, CTRL+A|  
-  
+
 ###  <a name="bkmk_testexplorerGLOBAL"></a> Esplora test  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |TestExplorer.DebugAllTests|CTRL+R, CTRL+A|  
@@ -371,18 +372,18 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |TestExplorer.RepeatLastRun|CTRL+R, L|  
 |TestExplorer.RunAllTests|CTRL+R, A|  
 |TestExplorer.RunAllTestsInContext|CTRL+R, T|  
-  
+
 ###  <a name="bkmk_tools"></a> Strumenti  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Tools.AttachtoProcess|CTRL+ALT+P|  
 |Tools.CodeSnippetsManager|CTRL+K, CTRL+B|  
 |Tools.ForceGC|CTRL+MAIUSC+ALT+F12, CTRL+MAIUSC+ALT+F12|  
 |Tools.GoToCommandLine|CTRL+/|  
-  
+
 ###  <a name="bkmk_view"></a> Visualizza  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |View.AllWindows|MAIUSC+ALT+M|  
@@ -429,9 +430,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |View.WebBrowser|CTRL+ALT+R|  
 |View.ZoomIn|CTRL+MAIUSC+.|  
 |View.ZoomOut|CTRL+MAIUSC+,|  
-  
+
 ###  <a name="bkmk_window"></a> Finestra  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Window.ActivateDocumentWindow|ESC|  
@@ -460,16 +461,16 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Window.ShowEzMDIFileList|CTRL+ALT+Freccia GIÙ|  
 |Window.SolutionExplorerSearch|CTRL+;|  
 |Window.WindowSearch|ALT+'|  
-  
+
 ###  <a name="bkmk_windowsazure"></a> Azure  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |WindowsAzure.RetryMobileServiceScriptOperation|CTRL+NUM *, CTRL+R|  
 |WindowsAzure.ShowMobileServiceScriptErrorDetails|CTRL+NUM *, CTRL+D|  
-  
+
 ##  <a name="bkmk_ADONET"></a> ADO.NET Entity Data Model Designer  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |OtherContextMenus.MicrosoftDataEntityDesignContext.MoveProperties.Down|ALT+Freccia GIÙ|  
@@ -482,9 +483,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |OtherContextMenus.MicrosoftDataEntityDesignContext.RemovefromDiagram|MAIUSC+CANC|  
 |View.EntityDataModelBrowser|CTRL+1|  
 |View.EntityDataModelMappingDetails|CTRL+2|  
-  
+
 ##  <a name="bkmk_classDiagram"></a> Diagramma classi  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |ClassDiagram.Collapse|NUM -|  
@@ -494,9 +495,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Edit.NavigateToLollipop|MAIUSC+ALT+L|  
 |Edit.RemovefromDiagram|Eliminare|  
 |View.ViewCode|INVIO|  
-  
+
 ##  <a name="bkmk_codedUItest"></a> Editor di test codificati dell'interfaccia utente  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |OtherContextMenus.UITestEditorContextMenu.CopyReferencetoClipboard|CTRL+C|  
@@ -505,16 +506,16 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |OtherContextMenus.UITestEditorContextMenu.LocatetheUIControl|CTRL+MAIUSC+L|  
 |OtherContextMenus.UITestEditorContextMenu.Movecode|CTRL+ALT+C|  
 |OtherContextMenus.UITestEditorContextMenu.Splitintoanewmethod|CTRL+MAIUSC+T|  
-  
+
 ##  <a name="bkmk_dataset"></a> Editor DataSet  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |OtherContextMenus.ColumnContext.InsertColumn|INS|  
 |OtherContextMenus.DbTableContext.Add.Column|CTRL+L|  
-  
+
 ##  <a name="bkmk_diff"></a> Visualizzatore differenze  
-  
+
 |||  
 |-|-|  
 |Comandi:|Tasti di scelta rapida|  
@@ -529,23 +530,23 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Diff.SynchronizeViewToggle|CTRL+\\, CTRL+Freccia GIÙ|  
 |EditorContextMenus.CodeWindow.AddComment|CTRL+MAIUSC+K|  
 |EditorContextMenus.CodeWindow.EditLocalFile|CTRL+MAIUSC+P|  
-  
+
 ##  <a name="bkmk_DOM"></a> DOM Explorer  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |DOMExplorer.Refresh|F5|  
 |DOMExplorer.SelectElement|Ctrl+B|  
 |DOMExplorer.ShowLayout|CTRL+MAIUSC+I|  
-  
+
 ##  <a name="bkmk_FSharp"></a> F# Interactive  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |OtherContextMenus.FSIConsoleContext.CancelInteractiveEvaluation|CTRL+INTERR|  
-  
+
 ##  <a name="bkmk_graphDoc"></a> Editor di documento grafico  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Add.AddNode|INS|  
@@ -555,9 +556,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |ArchitectureContextMenus.DirectedGraphContextMenu.NewComment|CTRL+MAIUSC+K<br /><br /> oppure<br /><br /> CTRL+E, C|  
 |ArchitectureContextMenus.DirectedGraphContextMenu.Remove|Eliminare|  
 |ArchitectureContextMenus.DirectedGraphContextMenu.Rename|F2|  
-  
+
 ##  <a name="bkmk_graphicsDebugger"></a> Diagnostica grafica  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Debug.Graphics.CaptureFrame|Nessuno|  
@@ -569,15 +570,15 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Graphics.ZoomToFitInWindow|MAIUSC+ALT+9|  
 |Graphics.ZoomIn|MAIUSC+ALT+=|  
 |Graphics.ZoomOut|MAIUSC+ALT+-|  
-  
+
 ##  <a name="bkmk_HTMLeditor"></a> Editor HTML  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |OtherContextMenus.HTMLContext.GoToController|CTRL+M, CTRL+G|  
-  
+
 ##  <a name="bkmk_HTMLeditorDesign"></a> Progettazione Editor HTML  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Edit.MoveControlDown|CTRL+Freccia GIÙ|  
@@ -598,9 +599,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |View.ShowSmartTag|MAIUSC+ALT+F10|  
 |View.ViewMarkup|MAIUSC+F7|  
 |Window.PreviousTab|CTRL+PGSU|  
-  
+
 ##  <a name="bkmk_HTMLeditorSource"></a> Visualizzazione Origine editor HTML  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |OtherContextMenus.HTMLContext.GoToController|CTRL+M, CTRL+G|  
@@ -608,15 +609,15 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |View.SynchronizeViews|CTRL+MAIUSC+Y|  
 |View.ViewDesigner|MAIUSC+F7|  
 |Window.PreviousTab|CTRL+PGSU|  
-  
+
 ##  <a name="bkmk_layerDiagram"></a> Diagramma livello  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |Edit.Delete|MAIUSC+CANC|  
-  
+
 ##  <a name="bkmk_managedResources"></a> Editor risorse gestite  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Edit.EditCell|F2|  
@@ -629,17 +630,17 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Resources.Images|CTRL+2|  
 |Resources.Other|CTRL+6|  
 |Resources.Strings|CTRL+1|  
-  
+
 ##  <a name="bkmk_MergeEditor"></a> Finestra editor merge  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |TeamFoundationContextMenus.MergeContextMenu.SetFocusonLeftWindow|ALT+1|  
 |TeamFoundationContextMenus.MergeContextMenu.SetFocusonResultWindow|ALT+2|  
 |TeamFoundationContextMenus.MergeContextMenu.SetFocusonRightWindow|ALT+3|  
-  
+
 ##  <a name="bkmk_SchemaCompare"></a> Microsoft SQL Server Data Tools, Confronto schema  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |SQL.SSDTSchemaCompareCompare|MAIUSC+ALT+C|  
@@ -648,9 +649,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |SQL.SSDTSchemaComparePreviousChange|MAIUSC+ALT+,|  
 |SQL.SSDTSchemaCompareStop|ALT+INTERR|  
 |SQL.SSDTSchemaCompareWriteUpdates|MAIUSC+ALT+U|  
-  
+
 ##  <a name="bkmk_TableDesigner"></a> Microsoft SQL Server Data Tools, progettazione tabelle  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |CommitAllEdits|MAIUSC+ALT+U|  
@@ -659,9 +660,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |SQL.MovetoSchema|CTRL+R, M<br /><br /> oppure<br /><br /> CTRL+R, CTRL+M|  
 |SQL.Rename|F2<br /><br /> oppure<br /><br /> CTRL+R, R<br /><br /> oppure<br /><br /> CTRL+R, CTRL+R|  
 |ViewFileInScriptPanel|MAIUSC+ALT+PGGIÙ|  
-  
+
 ##  <a name="bkmk_TSQLeditor"></a> Microsoft SQL Server Data Tools, Editor T-SQL  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |CommitAllEdits|MAIUSC+ALT+U|  
@@ -680,9 +681,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |SQL.TSqlEditorToggleResultsPane|CTRL+D, R|  
 |TSqlEditorCloneQuery|CTRL+ALT+N|  
 |TSqlEditorDatabaseCombo|MAIUSC+ALT+PGGIÙ|  
-  
+
 ##  <a name="bkmk_linkfix"></a> Microsoft SQL Server Data Tools, T-SQL PDW Editor  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |SQL.TSqlEditorCancelQuery|ALT+INTERR|  
@@ -695,15 +696,15 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |SQL.TSqlEditorToggleResultsPane|CTRL+D, R|  
 |TSqlEditorCloneQuery|CTRL+ALT+N|  
 |TSqlEditorDatabaseCombo|MAIUSC+ALT+PGGIÙ|  
-  
+
 ##  <a name="bkmk_PageInspector"></a> Controllo pagina  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |PageInspector.Minimize|F12|  
-  
+
 ##  <a name="bkmk_QueryDesigner"></a> Progettazione query  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |QueryDesigner.CancelRetrievingData|CTRL+T|  
@@ -714,17 +715,17 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |QueryDesigner.JoinMode|CTRL+MAIUSC+J|  
 |QueryDesigner.Results|CTRL+4|  
 |QueryDesigner.SQL|CTRL+3|  
-  
+
 ##  <a name="bkmk_QueryResults"></a> Risultati query  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |SQL.QueryResultsNewRow|ALT+FINE|  
 |SQL.QueryResultsRefresh|MAIUSC+ALT+R|  
 |SQL.QueryResultsStop|ALT+INTERR|  
-  
+
 ##  <a name="bkmk_ReportDesigner"></a> Progettazione report  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Edit.BreakLine|INVIO|  
@@ -748,31 +749,31 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Edit.SizeControlUp|CTRL+MAIUSC+Freccia SU|  
 |Edit.TabLeft|MAIUSC+TAB|  
 |View.ReportData|CTRL+ALT+D|  
-  
+
 ##  <a name="bkmk_SequenceDiagram"></a> Diagramma sequenza  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |ArchitectureDesigner.Sequence.NavigateToCode|F12|  
 |Edit.Delete|MAIUSC+CANC|  
-  
+
 ##  <a name="bkmk_SettingsDesigner"></a> Progettazione impostazioni  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Edit.EditCell|F2|  
 |Edit.RemoveRow|CTRL+CANC|  
 |Edit.SelectionCancel|ESC|  
 |View.ViewCode|F7|  
-  
+
 ##  <a name="bkmk_SolutionExplorer"></a> Esplora soluzioni  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |ClassViewContextMenus.ClassViewProject.View.ViewinPageInspector|CTRL+K, CTRL+G|  
-  
+
 ##  <a name="bkmk_TeamExplorer"></a> Team Explorer  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |Edit.Delete|Eliminare|  
@@ -795,21 +796,21 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |TeamFoundationContextMenus.MyWorkPageInProgress.TfsContextMyWorkPageCreateCopyWI|MAIUSC+ALT+C|  
 |TeamFoundationContextMenus.MyWorkPageInProgress.TfsContextMyWorkPageNewLinkedWI|MAIUSC+ALT+L|  
 |View.Refresh|F5|  
-  
+
 ##  <a name="bkmk_TFBuild"></a> Team Foundation Build Detail Editor  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |View.Refresh|F5|  
-  
+
 ##  <a name="bkmk_TestExplorer"></a> Esplora test  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |TestExplorer.OpenTest|F12|  
-  
+
 ##  <a name="bkmk_TextEditor"></a> Editor di testo  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Edit.BreakLine|INVIO<br /><br /> oppure<br /><br /> MAIUSC+INVIO|  
@@ -917,40 +918,40 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |OtherContextMenus.HTMLContext.ViewinPageInspector|CTRL+K, CTRL+G|  
 |TeamFoundationContextMenus.Annotate.TfsAnnotateMoveNextRegion|ALT+PGGIÙ|  
 |TeamFoundationContextMenus.Annotate.TfsAnnotateMovePreviousRegion|ALT+PGSU|  
-  
+
 ##  <a name="bkmk_UMLactivityDiagram"></a> Diagramma attività UML  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |Edit.Delete|MAIUSC+CANC|  
-  
+
 ##  <a name="bkmk_UMLclassDiagram"></a> UML Class Diagram  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |Edit.DeleteFromModel|MAIUSC+CANC|  
-  
+
 ##  <a name="bkmk_UMLcomponentDiagram"></a> UML Component Diagram  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |Edit.DeleteFromModel|MAIUSC+CANC|  
-  
+
 ##  <a name="bkmk_UMLusecaseDiagram"></a> Diagramma caso d'uso UML  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |Edit.DeleteFromModel|MAIUSC+CANC|  
-  
+
 ##  <a name="bkmk_vcaccelerator"></a> Editor tasti di scelta rapida di VC  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Edit.NewAccelerator|INS|  
 |Edit.NextKeyTyped|CTRL+W|  
-  
+
 ##  <a name="bkmk_vcdialogeditor"></a> Editor finestre di VC  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Edit.MoveControlDown|Freccia GIÙ|  
@@ -982,9 +983,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Format.TabOrder|CTRL+D|  
 |Format.TestDialog|CTRL+T|  
 |Format.ToggleGuides|CTRL+G|  
-  
+
 ##  <a name="bkmk_vcimageeditor"></a> Editor di immagini di VC  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Image.AirBrushTool|CTRL+A|  
@@ -1024,15 +1025,15 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Image.UseSelectionAsBrush|CTRL+U|  
 |Image.ZoomIn|CTRL+MAIUSC+.<br /><br /> oppure<br /><br /> CTRL+Freccia SU|  
 |Image.ZoomOut|CTRL+MAIUSC+,<br /><br /> oppure<br /><br /> CTRL+Freccia GIÙ|  
-  
+
 ##  <a name="bkmk_vcstringeditor"></a> Editor stringhe di VC  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |Edit.NewString|INS|  
-  
+
 ##  <a name="bkmk_viewDesigner"></a> Progettazione visualizzazioni  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |QueryDesigner.CancelRetrievingData|CTRL+T|  
@@ -1043,15 +1044,15 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |QueryDesigner.JoinMode|CTRL+MAIUSC+J|  
 |QueryDesigner.Results|CTRL+4|  
 |QueryDesigner.SQL|CTRL+3|  
-  
+
 ##  <a name="bkmk_visualstudio"></a> Visual Studio  
-  
+
 |Comando|Tasto di scelta rapida|  
 |-------------|-----------------------|  
 |OtherContextMenus.ORDesignerContext.HideMethodsPane|CTRL+1|  
-  
+
 ##  <a name="bkmk_wfdesigner"></a> Progettazione Windows Form  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Edit.BreakLine|INVIO|  
@@ -1078,17 +1079,17 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Edit.SizeControlRight|CTRL+MAIUSC+Freccia DESTRA|  
 |Edit.SizeControlUp|CTRL+MAIUSC+Freccia SU|  
 |Edit.TabLeft|MAIUSC+TAB|  
-  
+
 ##  <a name="bkmk_workItemEditor"></a> Editor elementi di lavoro  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Edit.CreateCopyofWorkItem|MAIUSC+ALT+C|  
 |Edit.RefreshWorkItem|F5|  
 |Team.NewLinkedWorkItem|MAIUSC+ALT+L|  
-  
+
 ##  <a name="bkmk_WIqueryview"></a> Visualizzazione query elemento di lavoro  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Edit.CreateCopyofWorkItem|MAIUSC+ALT+C|  
@@ -1097,9 +1098,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Team.NewLinkedWorkItem|MAIUSC+ALT+L|  
 |Team.Refresh|F5|  
 |Window.Toggle|MAIUSC+ALT+V|  
-  
+
 ##  <a name="bkmk_WIresultsview"></a> Visualizzazione risultati elementi di lavoro  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Edit.CreateCopyofWorkItem|MAIUSC+ALT+C|  
@@ -1110,9 +1111,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Team.NewLinkedWorkItem|MAIUSC+ALT+L|  
 |Team.Refresh|F5|  
 |Window.Toggle|MAIUSC+ALT+V|  
-  
+
 ##  <a name="bkmk_workflowdesigner"></a> Progettazione flussi di lavoro  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Edit.CompleteWord|CTRL+K, W<br /><br /> oppure<br /><br /> CTRL+K, CTRL+W<br /><br /> oppure<br /><br /> CTRL+BARRA SPAZIATRICE<br /><br /> oppure<br /><br /> ALT+Freccia DESTRA|  
@@ -1138,9 +1139,9 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |WorkflowDesigner.ToggleSelection|CTRL+E, CTRL+S<br /><br /> oppure<br /><br /> CTRL+E, S|  
 |WorkflowDesigner.ZoomIn|CTRL+NUM +|  
 |WorkflowDesigner.ZoomOut|CTRL+NUM -|  
-  
+
 ##  <a name="bkmk_xamluidesigner"></a> Progettazione interfaccia utente XAML  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |Design.FitAll|CTRL+0|  
@@ -1149,21 +1150,26 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |Design.ZoomOut|CTRL+ALT+-|  
 |Format.EditText|F2|  
 |Format.ResetLayout.All|CTRL+MAIUSC+R|  
+|Esegui codice del progetto|Ctrl+F9|  
+|Timeline.Hide (solo Blend)|CTRL+H|  
+|Timeline.Lock (solo Blend)|CTRL+L|  
+|Timeline.Show (solo Blend)|CTRL+MAIUSC+H|  
+|Timeline.Unlock (solo Blend)|CTRL+MAIUSC+L|  
 |View.EdgeLeftMoveLeft|CTRL+MAIUSC+,|  
 |View.EdgeLeftMoveRight|CTRL+MAIUSC+.|  
 |View.EdgeRightMoveLeft|CTRL+MAIUSC+ALT+,|  
 |View.EdgeRightMoveRight|CTRL+MAIUSC+ALT+.|  
-|Esegui codice del progetto|Ctrl+F9|  
-  
+|View.ShowPropertyMarkerMenu|CTRL+BARRA SPAZIATRICE|  
+
 ##  <a name="bkmk_xmlTextEditor"></a> Editor XML (testo)  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |XML.StartXSLTDebugging|ALT+F5|  
 |XML.StartXSLTWithoutDebugging|CTRL+Alt+F5|  
-  
+
 ##  <a name="bkmk_xmlSchemaDesigner"></a> Progettazione XML Schema  
-  
+
 |Comandi:|Tasti di scelta rapida|  
 |--------------|------------------------|  
 |GraphView.BottomtoTop|ALT+Freccia SU|  
@@ -1174,7 +1180,8 @@ Per accedere più agevolmente a vari controlli e finestre in Visual Studio, è p
 |XsdDesigner.ShowContentModelView|CTRL+2|  
 |XsdDesigner.ShowGraphView|CTRL+3|  
 |XsdDesigner.ShowStartView|CTRL+1|  
-  
+
 ## <a name="see-also"></a>Vedere anche  
  [Image Editor for Icons](/cpp/windows/image-editor-for-icons)  (Editor di immagini per icone)  
  [Utilizzo di IntelliSense](../ide/using-intellisense.md)
+

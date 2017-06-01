@@ -1,0 +1,105 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Visual Studio
+    tocHref: /visualstudio/
+    topicHref: /visualstudio
+    items:
+    - name: Documentazione
+      tocHref: /visualstudio/
+      topicHref: /visualstudio/welcome-to-visual-studio
+      items:
+      - name: Multipiattaforma
+        tocHref: /visualstudio/cross-platform/
+        topicHref: /visualstudio/cross-platform/cross-platform-mobile-development-in-visual-studio
+      - name: Strumenti dati
+        tocHref: /visualstudio/data-tools/ 
+        topicHref: /visualstudio/data-tools/accessing-data-in-visual-studio
+      - name: Extensibility
+        tocHref: /visualstudio/extensibility/
+        topicHref: /visualstudio/extensibility/extensibility-in-visual-studio
+        items:
+        - name: All'interno di Visual Studio SDK
+          tocHref: /visualstudio/extensibility/internals/
+          topicHref: /visualstudio/extensibility/internals/inside-the-visual-studio-sdk
+        - name: Estendibilità del debugger
+          tocHref: /visualstudio/extensibility/debugger/
+          topicHref: /visualstudio/extensibility/debugger/visual-studio-debugger-extensibility
+        - name: Linee guida sull'esperienza utente
+          tocHref: /visualstudio/extensibility/ux-guidelines/
+          topicHref: /visualstudio/extensibility/visual-studio-user-experience-guidelines
+      - name: IDE
+ 
+        tocHref: /visualstudio/ide/
+        topicHref: /visualstudio/ide/index
+        items:
+        - name: Distribuzione
+          tocHref: /visualstudio/deployment/
+          topicHref: /visualstudio/deployment/deploying-applications-services-and-components
+        - name: Finestre di progettazione
+          tocHref: /visualstudio/designers/
+          topicHref: /visualstudio/designers/designing-user-interfaces
+        - name: 'IDE di C#'
+          tocHref: /visualstudio/csharp-ide/
+          topicHref: /visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp
+        - name: IDE di Visual Basic
+          tocHref: /visualstudio/vb-ide/
+          topicHref: /visualstudio/vb-ide/refactoring-vb
+        - name: Qualità del codice
+          tocHref: /visualstudio/code-quality/
+          topicHref: /visualstudio/code-quality/analyzing-application-quality-by-using-code-analysis-tools
+        - name: Modellazione dell'architettura
+          tocHref: /visualstudio/modeling/
+          topicHref: /visualstudio/modeling/analyze-and-model-your-architecture
+        - name: Debug
+          tocHref: /visualstudio/debugger/ 
+          topicHref: /visualstudio/debugger/index
+          items:
+          - name: DIA SDK
+            tocHref: /visualstudio/debugger/debug-interface-access/
+            topicHref: /visualstudio/debugger/debug-interface-access/debug-interface-access-sdk
+        - name: Profilatura
+          tocHref: /visualstudio/profiling/
+          topicHref: /visualstudio/profiling/index
+        - name: Test
+          tocHref: /visualstudio/test/
+          topicHref: /visualstudio/test/improve-code-quality
+        - name: Progettazione flussi di lavoro
+          tocHref: /visualstudio/workflow-designer/
+          topicHref: /visualstudio/workflow-designer/developing-applications-with-the-workflow-designer
+        - name: Riferimento
+          tocHref: /visualstudio/ide/reference/
+          topicHref: /visualstudio/ide/reference/visual-studio-reference
+          items:
+          - name: Strumenti XML
+            tocHref: /visualstudio/xml-tools/
+            topicHref: /visualstudio/xml-tools/xml-tools-in-visual-studio
+          - name: MSBuild
+            tocHref: /visualstudio/msbuild/
+            topicHref: /visualstudio/msbuild/msbuild1
+      - name: Installazione
+        tocHref: /visualstudio/install/
+        topicHref: /visualstudio/install/install-visual-studio
+      - name: JavaScript
+        tocHref: /visualstudio/javascript/
+        topicHref: /visualstudio/javascript/javascript-in-visual-studio
+      - name: 'Portabilità, migrazione, aggiornamento'
+        tocHref: /visualstudio/porting/
+        topicHref: /visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects
+      - name: Python
+        tocHref: /visualstudio/python/
+        topicHref: /visualstudio/python/getting-started-with-python
+      - name: Office e SharePoint
+        tocHref: /visualstudio/vsto/
+        topicHref: /visualstudio/vsto/office-and-sharepoint-development-in-visual-studio
+        items:
+        - name: SharePoint
+          tocHref: /visualstudio/sharepoint/
+          topicHref: /visualstudio/sharepoint/create-sharepoint-solutions
+        - name: VSTO
+ 
+          tocHref: /visualstudio/vsto/
+          topicHref: /visualstudio/vsto/create-vsto-add-ins-for-office-by-using-visual-studio
+
+

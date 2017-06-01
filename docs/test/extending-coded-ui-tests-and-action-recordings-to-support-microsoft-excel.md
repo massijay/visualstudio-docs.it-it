@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 612a2a800227d3a0bd1b416160058c44ba3e2cd8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 2ad95e87681907117eb9a3329716a3dd590bd6b8
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel"></a>Estensione di test codificati dell'interfaccia utente e registrazioni delle azioni per supportare Microsoft Excel
@@ -79,7 +80,7 @@ Panoramica dell'architettura
   
  "`%CommonProgramFiles(x86)%\Microsoft Shared\VSTT\<version number>\UITestExtensionPackages\*.*`", dove il numero di versione potrebbe essere 11.0, 12.0 e così via a seconda della versione di Visual Studio.  
   
- I file DLL e PDB di `ExcelUICommunicationHelper` vengono copiati in `"%ProgramFiles(x86)%\Microsoft Visual Studio <version number>\Common7\IDE\PrivateAssemblies”`.  
+ I file DLL e PDB di `ExcelUICommunicationHelper` vengono copiati in `"%ProgramFiles(x86)%\Microsoft Visual Studio <version number>\Common7\IDE\PrivateAssemblies"`.  
   
  Potrebbe essere necessario modificare i percorsi esatti per la copia, ma non è richiesta alcuna installazione aggiuntiva. In un computer a 64 bit usare il prompt dei comandi a 32 bit di Visual Studio Enterprise per eseguire il file `CopyDrop.bat`.  
   
