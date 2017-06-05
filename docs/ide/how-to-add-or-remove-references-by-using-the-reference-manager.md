@@ -41,13 +41,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 1e73cc14de8a94b2e2ce631834e36b6bc30fa7a6
+ms.contentlocale: it-it
 ms.lasthandoff: 02/22/2017
 
 ---
-# <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>How to: Add or Remove References By Using the Reference Manager
+# <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Procedura: Aggiungere o rimuovere riferimenti mediante Gestione riferimenti
 È possibile usare la finestra di dialogo **Gestione riferimenti** per aggiungere e gestire riferimenti a componenti sviluppati da esperti indipendenti, da Microsoft o da altre società. Se si sviluppa un’app Universal Windows, il progetto fa riferimento automaticamente a tutte le DLL SDK Windows corrette. Se si sviluppa un'applicazione .NET, il progetto fa automaticamente riferimento a mscorlib. dll. Alcune API .NET vengono esposte nei componenti che è necessario aggiungere manualmente. I riferimenti ai componenti COM o ai componenti personalizzati devono essere aggiunti manualmente.  
 
 ## <a name="adding-and-removing-a-reference"></a>Aggiunta e rimozione di un riferimento  
