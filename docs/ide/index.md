@@ -3,8 +3,8 @@ layout: LandingPage
 author: jasongroce
 ms.author: apexprodleads
 ms.topic: landing-page
-title: Documentazione dell&quot;IDE di Visual Studio
-description: Informazioni su come l&quot;IDE di Visual Studio consente di sviluppare app usando quasi tutti i linguaggi di codice.
+title: Documentazione dell'IDE di Visual Studio
+description: Informazioni su come l'IDE di Visual Studio consente di sviluppare app usando quasi tutti i linguaggi di codice.
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 0e5a449ef396e7b9fd23a2c018bdc7f8791b7b38
 ms.openlocfilehash: 7f55b5d4cc58620e292cc11399c086e26184081f
@@ -126,8 +126,6 @@ Le esercitazioni, i video e altra documentazione illustrano i modi per creare co
         </div>
         </a>
     </li>
-</ul>
-<ul class="panelContent cardsFTitle">    
     <li>
         <a href="https://mva.microsoft.com/product-training/visual-studio-courses">
         <div class="cardSize">
