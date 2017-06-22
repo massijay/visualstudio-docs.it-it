@@ -26,16 +26,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 060dc127a1cc08dcf28a59feaa774b0094e42d56
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 3be7ff30658fc7e0de4cf04cab71fdae44b1b15e
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="making-coded-ui-tests-wait-for-specific-events-during-playback"></a>Impostazione dei test codificati dell'interfaccia utente per l'attesa di eventi specifici durante la riproduzione
-Nella riproduzione di un test codificato dell'interfaccia utente è possibile fare in modo che il test attenda che si verifichino determinati eventi, ad esempio che venga visualizzata finestra, venga nascosto l'indicatore di stato e così via. A tale scopo, usare il metodo UITestControl.WaitForControlXXX() appropriato, come descritto nella tabella seguente. Per un esempio di test codificato dell'interfaccia utente, in cui si attende che un controllo venga abilitato usando il metodo <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A>, vedere [Procedura dettagliata: creazione, modifica e gestione di un test codificato dell'interfaccia utente](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md).  
+Nella riproduzione di un test codificato dell'interfaccia utente è possibile fare in modo che il test attenda che si verifichino determinati eventi, ad esempio che venga visualizzata finestra, venga nascosto l'indicatore di stato e così via. A tale scopo, usare il metodo UITestControl.WaitForControlXXX() appropriato, come descritto nella tabella seguente. Per un esempio di test codificato dell'interfaccia utente in cui si attende che un controllo venga abilitato usando il metodo <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.WaitForControlEnabled%2A>, vedere [Procedura dettagliata: creazione, modifica e gestione di un test codificato dell'interfaccia utente](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md).  
   
- **Requirements**  
+ **Requisiti**  
   
  Visual Studio Enterprise  
   
@@ -113,7 +114,7 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
   
  I metodi hanno un overload per accettare il timeout esplicito in millisecondi. Tuttavia, quando l'operazione di attesa restituisce una ricerca implicita del controllo o quando l'applicazione è occupata, il tempo di attesa effettivo potrebbe essere superiore al timeout specificato.  
   
- Le funzioni precedenti sono avanzate e flessibili e dovrebbero soddisfare quasi tutte le condizioni. Tuttavia, nel caso in cui questi metodi non soddisfino le proprie esigenze e sia necessario inserire <xref:Microsoft.VisualStudio.TestTools.UITesting.Playback.Wait%2A> o <xref:System.Threading.Thread.Sleep%2A> nel codice, è consigliabile usare l'API Playback.Wait() invece di Thread.Sleep(). per questi motivi:  
+ Le funzioni precedenti sono avanzate e flessibili e dovrebbero soddisfare quasi tutte le condizioni. Tuttavia, nel caso in cui questi metodi non soddisfino le proprie esigenze e sia necessario inserire <xref:Microsoft.VisualStudio.TestTools.UITesting.Playback.Wait%2A> o <xref:System.Threading.Thread.Sleep%2A> nel codice, è consigliabile usare l'API Playback.Wait() invece di Thread.Sleep() per questi motivi:  
   
  È possibile usare la proprietà <xref:Microsoft.VisualStudio.TestTools.UITesting.PlaybackSettings.ThinkTimeMultiplier%2A> per modificare la durata della sospensione. Per impostazione predefinita, questa variabile è 1, ma è possibile aumentarla o diminuirla per modificare il tempo di attesa in tutto il codice. Ad esempio, se si sta eseguendo un test su una rete lenta o si sta verificando un altro caso di prestazioni ridotte, è possibile impostare questa variabile in una posizione (o anche nel file di configurazione) su 1,5 per aggiungere il 50% in più di attesa in tutte le posizioni.  
   
@@ -124,7 +125,7 @@ UITestControl.WaitForCondition<UITestControl[]>(new UITestControl[] { statusText
   
  **Linee guida**  
   
- Per altre informazioni, vedere [Test per la distribuzione continua con Visual Studio 2012 - Capitolo 5: automazione dei test di sistema](http://go.microsoft.com/fwlink/?LinkID=255196).  
+ Per altre informazioni, vedere [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196) (Test per la distribuzione continua con Visual Studio 2012 - Capitolo 5: automazione dei test di sistema)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Usare l'automazione dell'interfaccia utente per testare il codice](../test/use-ui-automation-to-test-your-code.md)   

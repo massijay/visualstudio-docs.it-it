@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 1a51a8dbf28be35febf4a0954a997e542ffd0f09
 ms.openlocfilehash: a05e0509ec092f810e0990fbc838707d126595e1
-ms.lasthandoff: 02/22/2017
+ms.contentlocale: it-it
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="how-to-use-the-concurrency-visualizer-markers-sdk"></a>Procedura: utilizzare l'SDK dei marcatori del visualizzatore di concorrenza
@@ -112,7 +113,7 @@ Questo argomento illustra come usare l'SDK del visualizzatore di concorrenza per
     using Microsoft.ConcurrencyVisualizer.Instrumentation;  
     ```  
   
-3.  Aggiungere il codice per creare tre intervalli nella serie di marcatori predefiniti e scrivere un flag, un messaggio e un avviso, uno per ogni intervallo. Viene creato un oggetto <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Span> chiamando il metodo statico [EnterSpan](assetId:///EnterSpan?qualifyHint=False&autoUpgrade=True). Per scrivere nella serie predefinita, è possibile usare i metodi di scrittura statici della classe <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers>.  
+3.  Aggiungere il codice per creare tre intervalli nella serie di marcatori predefiniti e scrivere un flag, un messaggio e un avviso, uno per ogni intervallo. Viene creato un oggetto <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Span> tramite la chiamata al metodo statico [EnterSpan](assetId:///EnterSpan?qualifyHint=False&autoUpgrade=True). Per scrivere nella serie predefinita, vengono usati i metodi statici di scrittura della classe <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers>.  
   
     ```VB  
   
@@ -157,7 +158,7 @@ Questo argomento illustra come usare l'SDK del visualizzatore di concorrenza per
   
      ![Visualizzatore di concorrenza con marcatori e avvisi](../profiling/media/cvmarkersmanaged.png "CvMarkersManaged")  
   
-5.  Aggiungere il codice per creare una serie di marcatori personalizzati con il metodo statico <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.CreateMarkerSeries%2A>. La classe <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerSeries> contiene metodi per la creazione di intervalli e la scrittura di flag, messaggi e avvisi.  
+5.  Aggiungere codice per creare una serie di marcatori dei clienti tramite il metodo statico <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.CreateMarkerSeries%2A>. La classe <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerSeries> contiene metodi per la creazione di espansioni e la scrittura di flag, messaggi e avvisi.  
   
     ```VB  
   

@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 762fe231d277d4d9731581f2f51b21fb747358aa
-ms.openlocfilehash: 9830dbce40647453a5b7223de1873029405be9b1
-ms.lasthandoff: 04/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: a923d3fa962ee826d86a1c6946ae87a469b728d6
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="getting-started-with-visual-studio-tools-for-unity"></a>Introduzione a Visual Studio Tools per Unity
@@ -87,7 +88,7 @@ Questa sezione descrive come installare Visual Studio Tools per Unity e configur
 
  Se invece non si conosce ancora Unity, è consigliabile iniziare con un'esercitazione di base. Visitare la pagina Unity Learn per trovare esercitazioni su progetti di esempio con cui iniziare e lezioni utili per creare giochi con Unity. La pagina Unity Learn contiene esercitazioni di immediata comprensione relative a numerosi giochi di diverso tipo.  
 
- [Esercitazioni - Pagina Unity Learn](http://unity3d.com/learn/tutorials/modules)  
+ [Tutorials - Unity Learn page](http://unity3d.com/learn/tutorials/modules) (Esercitazioni - pagina Learn di Unity)  
 
 #### <a name="2---configure-unity-editor-to-use-visual-studio-tools-for-unity"></a>2 - Configurare l'editor di Unity per l'uso di Visual Studio Tools per Unity  
  Per abilitare il progetto per usare Visual Studio Tools per Unity, è sufficiente impostare Visual Studio come editor di script esterni. Nel menu principale dell'editor di Unity scegliere **Edit, Preferences** e quindi nella finestra di dialogo **Unity Preferences** scegliere **External Tools**. Impostare quindi la proprietà **External Script Editor** sulla versione di Visual Studio che si vuole usare (per questa versione di Visual Studio è necessario che sia installato Visual Studio Tools per Unity) e assicurarsi che sia impostata la proprietà **Editor Attaching**.  
@@ -109,7 +110,7 @@ Questa sezione descrive come installare Visual Studio Tools per Unity e configur
 
  Se invece non si conosce ancora Unity, è consigliabile iniziare con un'esercitazione di base. Visitare la pagina Unity Learn per trovare esercitazioni su progetti di esempio con cui iniziare e lezioni utili per creare giochi con Unity. La pagina Unity Learn contiene esercitazioni di immediata comprensione relative a numerosi giochi di diverso tipo.  
 
- [Esercitazioni - Pagina Unity Learn](http://unity3d.com/learn/tutorials/modules)  
+ [Tutorials - Unity Learn page](http://unity3d.com/learn/tutorials/modules) (Esercitazioni - pagina Learn di Unity)  
 
 #### <a name="2---configure-unity-editor-to-use-visual-studio-tools-for-unity"></a>2 - Configurare l'editor di Unity per l'uso di Visual Studio Tools per Unity  
  Se inizia da con un progetto Unity esistente o se durante la creazione del progetto non è stato importato il file unitypackage di Visual Studio Tools per Unity, è necessario importarlo ora. Nel menu principale dell'editor di Unity scegliere **Assets, Import Package, Visual Studio 2015 Tools** (l'opzione visualizzata si riferisce alla versione di Visual Studio installata).  

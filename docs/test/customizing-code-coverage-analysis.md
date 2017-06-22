@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 5778e6b7c4a93c2d03ff00fcaaaf5a25807b0a00
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90b2481b0ec4f9387fe3a2c0b733a103e8c03845
+ms.openlocfilehash: 01dc224a571144744028e98153df1c525c461156
+ms.contentlocale: it-it
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="customizing-code-coverage-analysis"></a>Personalizzazione dell'analisi code coverage
@@ -64,7 +65,7 @@ Per impostazione predefinita, lo strumento per il code coverage di Visual Studio
   
 3.  Nel menu **Test** scegliere **Impostazioni test**, **Seleziona file di impostazioni test** e selezionare il file.  
   
-4.  Quando si esegue **Analizza code coverage**, questo file `.runsettings` ne controllerà il comportamento. Non dimenticare che è necessario ripetere l'esecuzione del code coverage: i risultati del code coverage e la colorazione del codice precedenti non vengono automaticamente nascosti quando si eseguono i test o si aggiorna il codice.  
+4.  Quando si esegue **Analizza code coverage**, questo file `.runsettings` ne controllerà il comportamento. Si tenga presente che è necessario eseguire nuovamente il code coverage: i risultati del code coverage precedenti e la colorazione del codice non vengono nascosti automaticamente quando si eseguono i test o si aggiorna il codice.  
   
 5.  Per attivare e disattivare le impostazioni personalizzate, deselezionare o selezionare il file nel menu **Test**, **Impostazioni test**.  
   
@@ -284,7 +285,7 @@ Included items must then not match any entries in the exclude list to remain inc
             <!-- Match attributes on any code element: -->  
             <Attributes>  
               <Exclude>  
-                <!—Don't forget "Attribute" at the end of the name -->  
+                <!-- Don't forget "Attribute" at the end of the name -->  
                 <Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>  
                 <Attribute>^System\.Diagnostics\.DebuggerNonUserCodeAttribute$</Attribute>  
                 <Attribute>^System\.Runtime\.CompilerServices.CompilerGeneratedAttribute$</Attribute>  

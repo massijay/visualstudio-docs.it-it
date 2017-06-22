@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 04c981d458912aaf3802e727369893759faab3a5
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 1600207e0c504f4b4dcbf620e92bcc06e14ec035
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Configurazione di unit test usando un file con estensione runsettings
@@ -149,7 +150,7 @@ Gli unit test in Visual Studio possono essere configurati usando un file di tipo
 |`MaxCpuCount`|1|Determina il livello di esecuzione parallela dei test durante l'esecuzione di unit test, in base ai core disponibili nel computer.  Il motore di esecuzione dei test viene avviato come processo distinto in ogni core disponibile e assegna a ogni core un contenitore con test da eseguire, ad esempio un assembly, una DLL o un artefatto pertinente.  Il contenitore di test è l'unità di pianificazione.  In ogni contenitore, i test vengono eseguiti in base al framework di test.  Se sono presenti molti contenitori di questo tipo, non appena termina l'esecuzione dei test in un contenitore, i processi vengono assegnati al successivo contenitore disponibile.<br /><br /> MaxCpuCount può essere:<br /><br /> n, dove 1 < = n < = numero di core: verranno avviati fino a n processi<br /><br /> n, dove n = qualsiasi altro valore: il numero massimo di processi avviati corrisponderà ai core disponibili nel computer|  
   
 ### <a name="diagnostic-data-adapters-data-collectors"></a>Adattatori dati di diagnostica (agenti di raccolta dati)  
- L'elemento `DataCollectors` specifica le impostazioni degli adattatori dati di diagnostica. Gli adattatori dati di diagnostica vengono usati per raccogliere informazioni aggiuntive sull'ambiente e l'applicazione sottoposta a test. Ogni adattatore dispone di impostazioni predefinite ed è necessario fornire le impostazioni solo se non si desidera usare le impostazioni predefinite.  
+ L'elemento `DataCollectors` specifica le impostazioni degli adattatori dati di diagnostica. Gli adattatori dati di diagnostica vengono usati per raccogliere informazioni aggiuntive sull'ambiente e l'applicazione sottoposta a test. Le impostazioni di ogni adattatore sono predefinite. È quindi necessario specificarle solo se non si vogliono usare quelle predefinite.  
   
 #### <a name="code-coverage-adapter"></a>Adattatore di code coverage  
  L'agente di raccolta dati di code coverage crea un log in cui le parti del codice dell'applicazione sono state eseguite nel test. Per altre informazioni sulla personalizzazione delle impostazioni per il code coverage, vedere [Customizing Code Coverage Analysis](../test/customizing-code-coverage-analysis.md) (Personalizzazione dell'analisi del code coverage).  

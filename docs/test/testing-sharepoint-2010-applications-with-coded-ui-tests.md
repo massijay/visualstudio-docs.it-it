@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 0ac46d6701e713195f9ad4f7449743308ebe92e0
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7ab8ce7199fec306a0f50344619200266a2261b8
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>Test delle applicazioni di SharePoint 2010 con test codificati dell'interfaccia utente
@@ -41,7 +42,7 @@ Includendo i test codificati dell'interfaccia utente in un'applicazione SharePoi
 -   Visual Studio Enterprise  
   
 ## <a name="what-else-should-i-know-about-coded-ui-tests"></a>Ulteriori informazioni sui test codificati dell'interfaccia utente  
- Per altre informazioni sui vantaggi associati all'uso dei test codificati dell'interfaccia utente, vedere [Usare l'automazione dell'interfaccia utente per testare il codice](../test/use-ui-automation-to-test-your-code.md) e [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 5 Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196) (Test per il recapito continuo con Visual Studio 2012 - Capitolo 5: automazione dei test di sistema).  
+ Per altre informazioni sui vantaggi associati all'uso dei test codificati dell'interfaccia utente, vedere [Usare l'automazione dell'interfaccia utente per testare il codice](../test/use-ui-automation-to-test-your-code.md) e [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196) (Test per il recapito continuo con Visual Studio 2012 - Capitolo 5: automazione dei test di sistema).  
   
  **Note**  
   
@@ -50,12 +51,12 @@ Includendo i test codificati dell'interfaccia utente in un'applicazione SharePoi
 -   ![Prerequsite](../test/media/prereq.png "Prereq") Il supporto per i controlli Visio e PowerPoint 2010 nell'applicazione SharePoint non è previsto.  
   
 ## <a name="creating-a-coded-ui-test-for-your-sharepoint-app"></a>Creazione di un test codificato dell'interfaccia utente per l'applicazione SharePoint  
- La procedura di [creazione di test codificati dell'interfaccia utente](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) per le applicazioni SharePoint 2010 è analoga a quella per la creazione di test per altri tipi di applicazioni. La registrazione e la riproduzione è supportata da tutti i controlli dell'interfaccia di modifica Web. L'interfaccia per selezionare le categorie e le Web part è costituita da soli controlli Web standard.  
+ La[creazione dei test codificati dell'interfaccia utente](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) per le applicazioni SharePoint 2010 è analoga alla creazione dei test per altri tipi di applicazioni. La registrazione e la riproduzione è supportata da tutti i controlli dell'interfaccia di modifica Web. L'interfaccia per selezionare le categorie e le Web part è costituita da soli controlli Web standard.  
   
  ![Web part di SharePoint](../test/media/cuit_sharepoint.png "CUIT_SharePoint")  
   
 > [!NOTE]
->  Se si sta registrando l'azione, convalidare le azioni prima di generare il codice. Poiché esistono numerosi comportamenti associati al passaggio del mouse, l'opzione è attivata per impostazione predefinita. Assicurarsi di rimuovere i passaggi del mouse ridondanti dai test codificati dell'interfaccia utente. Per eseguire questa operazione, è possibile modificare il codice del test o usare l'[editor di test codificati dell'interfaccia utente](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md).  
+>  Se si sta registrando l'azione, convalidare le azioni prima di generare il codice. Poiché esistono numerosi comportamenti associati al passaggio del mouse, l'opzione è attivata per impostazione predefinita. Assicurarsi di rimuovere i passaggi del mouse ridondanti dai test codificati dell'interfaccia utente. È possibile eseguire questa operazione modificando il codice del test o tramite l' [editor di test codificati dell'interfaccia utente](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md).  
   
 ## <a name="including-testing-of-office-2010-controls-within-your-sharepoint-app"></a>Inclusione dei test dei controlli di Office 2010 in un'applicazione SharePoint  
  Per abilitare l'automazione di alcune Web part di Office 2010 nell'applicazione SharePoint, è necessario apportare alcune piccole modiche al codice.  
@@ -124,7 +125,7 @@ uiGridKeyboardInputEdit.Text=value;
   
 3.  Installare [Fiddler](http://www.fiddler2.com/fiddler2/). Si tratta semplicemente di uno strumento che tiene traccia e registra il traffico HTTP.  
   
-4.  Scaricare il [progetto fiddlerXap](http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-components-postattachments/00-10-36-48-70/FiddlerXapProxy.zip). Decomprimerlo, compilarlo ed eseguire lo script "CopySLHelper.bat" per installare la DLL di supporto necessaria per testare le Web part Silverlight quando si utilizza lo strumento Fiddler.  
+4.  Scaricare il [progetto fiddlerXap](http://blogs.msdn.com/cfs-file.ashx/__key/communityserver-components-postattachments/00-10-36-48-70/FiddlerXapProxy.zip). Decomprimerlo, compilarlo ed eseguire lo script "CopySLHelper.bat" per installare la DLL di supporto necessaria per testare le Web part Silverlight quando si usa lo strumento Fiddler.  
   
  Dopo avere configurato il computer, attenersi alla seguente procedura per avviare il test dell'applicazione SharePoint 2010 con le Web part Silverlight:  
   
@@ -145,7 +146,7 @@ uiGridKeyboardInputEdit.Text=value;
 ## <a name="external-resources"></a>Risorse esterne  
   
 ### <a name="blogs"></a>Blog  
- [Test dell'interfaccia utente per SharePoint 2010 con Visual Studio 2012](http://blogs.msdn.com/b/visualstudioalm/archive/2012/11/01/ui-testing-sharepoint-2010-with-visual-studio-2012.aspx)  
+ [test dell'interfaccia utente per SharePoint 2010 con Visual Studio 2012](http://blogs.msdn.com/b/visualstudioalm/archive/2012/11/01/ui-testing-sharepoint-2010-with-visual-studio-2012.aspx)  
   
  [Informazioni sulla logica di ricerca per i controlli Silverlight nel test codificato dell'interfaccia utente](http://blogs.msdn.com/b/tapas_sahoos_blog/archive/2010/11/16/understanding-the-search-logic-for-silverlight-controls-in-coded-ui-test.aspx)  
   
@@ -154,7 +155,7 @@ uiGridKeyboardInputEdit.Text=value;
  [Indice del contenuto per il test codificato dell'interfaccia utente](http://blogs.msdn.com/b/mathew_aniyan/archive/2010/02/11/content-index-for-coded-ui-test.aspx)  
   
 ### <a name="guidance"></a>Materiale sussidiario  
- [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 5 Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196) (Test per il recapito continuo con Visual Studio 2012 - Capitolo 5: automazione dei test di sistema)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196) (Test per il recapito continuo con Visual Studio 2012 - Capitolo 5: automazione dei test di sistema)  
   
 ### <a name="forum"></a>Forum  
  [Blog di Visual Studi ALM + Team Foundation Server](http://go.microsoft.com/fwlink/?LinkID=254496)  

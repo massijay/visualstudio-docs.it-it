@@ -32,17 +32,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 5a4f1fd5bf35a6010c2d919194b8ef21073e9a18
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: it-it
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="using-the-assert-classes"></a>Utilizzo di classi Assert
 Usare le classi Assert dello spazio dei nomi UnitTestingFramework per verificare funzionalità specifiche. Un metodo di unit test verifica il codice di un metodo nel codice di sviluppo, ma segnala la correttezza del comportamento del codice soltanto se sono state incluse istruzioni Assert.  
   
 ## <a name="kinds-of-asserts"></a>Tipi di asserzioni  
- Lo spazio dei nomi <xref:Microsoft.VisualStudio.TestTools.UnitTesting> fornisce vari tipi di classi Assert:  
+ Lo spazio dei nomi <xref:Microsoft.VisualStudio.TestTools.UnitTesting> rende disponibili diversi tipi di classi Assert:  
   
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>  
   

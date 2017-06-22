@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 77e7ce26df70e41e2328442454fe78c7a663f1f3
-ms.openlocfilehash: 7ceaa18fa104d8131ad415a890cd15baf3efcacb
-ms.lasthandoff: 03/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: f01484e64f8d8c90cd38fbcdcb934ef43cfe3390
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Sviluppo di app per dispositivi mobili multipiattaforma in Visual Studio
@@ -76,16 +77,16 @@ ms.lasthandoff: 03/08/2017
 
  Se è già stato installato Visual Studio 2015, eseguire il programma di installazione da **Pannello di controllo > Programmi e funzionalità** e selezionare la stessa opzione **Personalizzato** per Xamarin, come illustrato in precedenza.
 
- Dopo aver eseguito l'installazione, i modelli di progetto vengono visualizzati nella finestra di dialogo **Nuovo progetto**. Il modo più semplice per trovare i modelli Xamarin è eseguire una ricerca con la parola "Xamarin".
+ Una volta terminata l'installazione, i modelli di progetti verranno visualizzati nella finestra di dialogo **Nuovo progetto**. Il modo più semplice per trovare i modelli Xamarin è eseguire una ricerca con la parola "Xamarin".
 
- Xamarin espone le funzionalità native di Windows, iOS e Android come oggetti .NET. In questo modo le app hanno accesso completo alle API native e ai controlli utente nativi e hanno la stessa capacità di risposta delle app scritte in linguaggi di piattaforma nativa.
+ Xamarin espone le funzionalità native di Windows, iOS e Android come oggetti .NET. In questo modo le app hanno accesso completo alle API native e ai controlli utente nativi e hanno la stessa capacità di risposta delle app scritte in linguaggi di piattaforma nativi.
 
- Dopo aver creato un progetto, sarà possibile usare tutte le funzionalità di produttività di Visual Studio. Ad esempio, si potrà usare una finestra di progettazione per creare le pagine e IntelliSense per esplorare l'API nativa della piattaforma mobile. Quando si è pronti a eseguire l'app e verificarne l'aspetto, è possibile usare l'emulatore di Visual Studio per Android o l'emulatore SDK per Android SDK, eseguire le app Windows in modo nativo oppure eseguire le app Windows nell'emulatore di Windows Phone. È anche possibile usare direttamente i dispositivi Android e Windows con tethering. Per i progetti iOS, connettersi a un Mac in rete e avviare l'emulatore Mac da Visual Studio oppure connettersi a un dispositivo con tethering.
+ Dopo aver creato un progetto, sarà possibile sfruttare tutte le funzionalità di produttività di Visual Studio. Ad esempio, si potrà usare una finestra di progettazione per creare le pagine e IntelliSense per esplorare le API native delle piattaforme mobili. Quando si è pronti a eseguire l'app e verificarne l'aspetto, è possibile usare Visual Studio Emulator for Android o l'emulatore di Android SDK, eseguire le app Windows in modo nativo oppure eseguire le app Windows nell'emulatore di Windows Phone. È anche possibile usare direttamente i dispositivi Android e Windows con tethering. Per i progetti iOS, connettersi a un Mac in rete e avviare l'emulatore Mac da Visual Studio oppure connettersi a un dispositivo con tethering.
 
 #### <a name="design-one-set-of-pages-that-render-across-all-devices-by-using-xamarinforms"></a>Progettare un insieme di pagine che eseguono il rendering in tutti i dispositivi usando Xamarin.Forms
  A seconda della complessità della progettazione delle app, è possibile provare a compilare l'app con i modelli *Xamarin.Forms* nel gruppo di modelli di progetto **App per dispositivi mobili** . Xamarin.Forms è un Toolkit dell'interfaccia utente che consente di creare un'unica interfaccia da condividere tra Android, iOS e Windows Phone.  Quando si compila una soluzione Xamarin.Forms, si otterrà un'app per Android, un'app per iOS e un'app per Windows. Per altri dettagli, vedere [Altre informazioni sullo sviluppo per dispositivi mobili con Xamarin](../cross-platform/learn-about-mobile-development-with-xamarin.md).
 
-####  <a name="ShareHTML"></a>Condividere il codice tra app per Android, iOS e Windows
+####  <a name="ShareHTML"></a> Condividere il codice tra app Android, iOS e Windows
  Se non si usa Xamarin.Forms e si sceglie di progettare singolarmente per ogni piattaforma, è possibile condividere la maggior parte del codice non di interfaccia utente tra progetti di piattaforma (Android, iOS e Windows). Sono incluse le logiche di business, l'integrazione cloud, l'accesso ai database e qualsiasi altro codice che faccia riferimento a .NET Framework. L'unico codice che non è possibile condividere è quello che fa riferimento a una specifica piattaforma.
 
  ![Condividere il codice tra le interfacce utente di Windows, iOs e Android](../cross-platform/media/sharecode.png "ShareCode")
@@ -99,9 +100,9 @@ ms.lasthandoff: 03/08/2017
 ###  <a name="WindowsHTML"></a>Sviluppare per dispositivi Windows 10
  ![Dispositivi Windows](../cross-platform/media/windowsdevices.png "WindowsDevices")
 
- Se si vuole creare una singola app destinata all'intera gamma dei dispositivi Windows 10, creare un'app di Windows universale. L'app verrà progettata usando un singolo progetto e il rendering delle pagine verrà eseguito correttamente, indipendentemente dal dispositivo usato per visualizzarle.
+ Se si vuole creare una singola app destinata all'intera gamma dei dispositivi Windows 10, creare un'app di Windows universale. L'app verrà progettata usando un progetto singolo e il rendering delle pagine verrà eseguito correttamente, indipendentemente dal dispositivo usato per visualizzarle.
 
- Iniziare con un modello di progetto app di Windows universale. Progettare visivamente le pagine e quindi aprirle in una finestra di anteprima per verificare come vengono visualizzate per vari tipi di dispositivi. Se l'aspetto di una pagina su un dispositivo non è di proprio gradimento, è possibile ottimizzare la pagina in modo da adattarla alle dimensioni dello schermo, alla risoluzione o ai vari orientamenti, ad esempio la modalità orizzontale o verticale. Tutto ciò è possibile grazie alle intuitive finestre degli strumenti e a opzioni di menu facilmente accessibili in Visual Studio. Quando si è pronti ad eseguire l'app e ad eseguire il codice un'istruzione alla volta, sono disponibili tutti gli emulatori e i simulatori per diversi tipi di dispositivi, riuniti in un unico elenco a discesa nella barra degli strumenti **Standard** .
+ Iniziare con un modello di progetto app di Windows universale. Progettare visivamente le pagine e quindi aprirle in una finestra di anteprima per verificare come vengono visualizzate per vari tipi di dispositivi. Se l'aspetto di una pagina su un dispositivo non è di proprio gradimento, è possibile ottimizzare la pagina in modo da adattarla alle dimensioni dello schermo, alla risoluzione o ai vari orientamenti, ad esempio la modalità orizzontale o verticale. Tutto ciò è possibile grazie alle intuitive finestre degli strumenti e a opzioni di menu facilmente accessibili in Visual Studio. Quando si è pronti a eseguire l'app e il codice un'istruzione alla volta, sono disponibili tutti gli emulatori e i simulatori per diversi tipi di dispositivi, riuniti in un unico elenco a discesa nella barra degli strumenti **Standard**.
 
  Windows 10 è relativamente nuovo, quindi sono disponibili anche modelli di progetto destinati a Windows 8.1. Con questii modelli di progetto le app saranno eseguibili anche su telefoni, tablet e PC Windows 10. Tuttavia, tutti i dispositivi che eseguono Windows 8.1 riceveranno un aggiornamento automatico a Windows 10; pertanto, a meno che vi siano motivi specifici per cui preferire Windows 8.1, è consigliabile usare i modelli di progetto destinati a Windows 10.
 
@@ -115,19 +116,19 @@ ms.lasthandoff: 03/08/2017
 ##  <a name="HTML"></a>Compilare un'app per Android, iOS e Windows (HTML/JavaScript)
  ![Dispositivi](../cross-platform/media/homedevices.png "HomeDevices")
 
- Gli sviluppatori Web che hanno conoscenza di HTML e JavaScript possono sviluppare per Windows, Android e iOS tramite gli Strumenti di Visual Studio per Apache Cordova. Queste app possono essere destinate a tutte e tre le piattaforme e possono essere compilate usando le competenze e i processi con cui si ha maggiore dimestichezza.
+ Gli sviluppatori Web che hanno familiarità con HTML e JavaScript possono sviluppare per Windows, Android e iOS tramite gli Strumenti di Visual Studio per Apache Cordova. Queste app possono essere destinate a tutte e tre le piattaforme e possono essere compilate usando le competenze e i processi con cui si ha maggiore dimestichezza.
 
  Apache Cordova è un framework che include un modello di plug-in. Questo plug-in offre una singola API JavaScript che è possibile usare per accedere alle funzionalità native del dispositivo di tutte e tre le piattaforme (iOS, Android e Windows).
 
- Poiché queste API sono multipiattaforma, è possibile condividere la maggior parte del codice tra tutte e tre le piattaforme, con una conseguente riduzione dei costi di sviluppo e manutenzione. Inoltre, non è necessario partire da zero. Se sono stati creati altri tipi di applicazioni Web, è possibile condividere tali file con l'app Cordova senza doverli modificare o progettare nuovamente in alcun modo.
+ Poiché queste API sono multipiattaforma, è possibile condividere la maggior parte del codice tra tutte e tre le piattaforme, con una conseguente riduzione dei costi di sviluppo e manutenzione. Non è necessario partire da zero: se sono stati creati altri tipi di applicazioni Web, è possibile condividere tali file con l'app Cordova senza doverli modificare o progettare nuovamente in alcun modo.
 
  ![App ibride per più dispositivi](../cross-platform/media/multidevicehybridapps.png "MultiDeviceHybridApps")
 
  Per iniziare, installare Visual Studio 2015 e scegliere la funzionalità **HTML/JavaScript (Apache Cordova)** durante l'installazione. Se si usa Visual Studio 2013, installare l'estensione Strumenti di Visual Studio per Apache Cordova. In entrambi i casi, gli strumenti Cordova installano automaticamente tutti i software di terze parti necessari per compilare l'app multipiattaforma.
 
- Dopo aver installato l'estensione, aprire Visual Studio e creare un progetto **Applicazione vuota (Apache Cordova)** . È quindi possibile sviluppare l'app usando JavaScript o TypeScript. È anche possibile aggiungere i plug-in per estendere la funzionalità dell'app e visualizzare le API dei plug-in in IntelliSense durante la scrittura del codice.
+ Dopo aver installato l'estensione, aprire Visual Studio e creare un progetto **App vuota (Apache Cordova)**. È quindi possibile sviluppare l'app usando JavaScript o TypeScript. È anche possibile aggiungere i plug-in per estendere la funzionalità dell'app e visualizzare le API dei plug-in in IntelliSense durante la scrittura del codice.
 
- Quando si è pronti a eseguire l'app e il codice un'istruzione alla volta, scegliere un emulatore, ad esempio l'emulatore Apache Ripple o l'emulatore di Visual Studio per Android o Windows Phone, un browser o un dispositivo che sia connesso direttamente al computer. Quindi, avviare l'app. Le app sviluppate in un computer Windows, sono eseguibili anche sul computer stesso. Tutte queste opzioni sono integrate in Visual Studio come parte degli Strumenti di Visual Studio per Apache Cordova.
+ Quando si è pronti a eseguire l'app e il codice un'istruzione alla volta, scegliere un emulatore, ad esempio l'emulatore Apache Ripple, Visual Studio Emulator for Android o l'emulatore di Windows Phone, un browser o un dispositivo che sia connesso direttamente al computer. Quindi, avviare l'app. Le app sviluppate in un computer Windows sono eseguibili anche sul computer stesso. Tutte queste opzioni sono integrate in Visual Studio come parte degli Strumenti di Visual Studio per Apache Cordova.
 
  I modelli di progetto per la creazione di app di Windows universale sono ancora disponibili in Visual Studio, quindi è possibile usarli se si prevede di interagire solo con dispositivi Windows. Se si vuole che l'app sia successivamente eseguibile anche in Android e iOS, è sempre possibile convertire il codice in un progetto Cordova. Esistono versioni open source delle API WinJS quindi è possibile riusare qualsiasi codice che usa tali API. Ciò premesso, se si prevede di interagire con altre piattaforme in futuro, è consigliabile iniziare con Strumenti di Visual Studio per Apache Cordova.
 
@@ -146,7 +147,7 @@ ms.lasthandoff: 03/08/2017
 
  ![Modello di progetto di attività nativa](../cross-platform/media/cross-plat_cpp_native.png "Cross-Plat_CPP_Native")
 
- Quando si è pronti per eseguire l'app e verificarne l'aspetto, è possibile usare l'emulatore di Visual Studio per Android. È veloce, affidabile e facile da installare e configurare.
+ Quando si è pronti per eseguire l'app e verificarne l'aspetto, è possibile usare Visual Studio Emulator for Android. È veloce, affidabile e facile da installare e configurare.
 
  È anche possibile creare una singola app destinata all'intera gamma dei dispositivi Windows 10 usando C++ e un modello di progetto app di Windows universale. Per altre informazioni, vedere la sezione precedente [Sviluppare per dispositivi Windows 10](#WindowsHTML) in questo argomento.
 
@@ -161,8 +162,8 @@ ms.lasthandoff: 03/08/2017
 |**Altre informazioni**|
 |--------------------|
 |[Scaricare Visual Studio.](http://www.visualstudio.com/products/visual-studio-community-vs) (VisualStudio.com)|
-|[Installare gli strumenti di Visual C++ per lo sviluppo di app per dispositivi mobili multipiattaforma.](https://msdn.microsoft.com/library/dn872463\(v=vs.140\).aspx) (MSDN Library)|
-|[Altre informazioni sull'uso di C++ per più piattaforme.](https://www.visualstudio.com/vs/cplusplus-mdd/) (VisualStudio.com)|
+|[Installare gli strumenti Visual C++ per Sviluppo app per dispositivi mobili multipiattaforma.](https://msdn.microsoft.com/library/dn872463\(v=vs.140\).aspx) (MSDN Library)|
+|[Altre informazioni sull'uso di C++ per interagire con più piattaforme.](https://www.visualstudio.com/vs/cplusplus-mdd/) (VisualStudio.com)|
 |[Installare gli strumenti necessari, quindi creare un'applicazione NativeActivity per Android](https://msdn.microsoft.com/library/dn872463\(v=vs.140\).aspx) (MSDN Library)|
 |[Informazioni sull'emulatore di Visual Studio per Android](http://www.visualstudio.com/explore/msft-android-emulator-vs) (VisualStudio.com)|
 |[Informazioni sulla condivisione del codice C++ con le app Android e Windows](https://www.visualstudio.com/vs/cplusplus-mdd/) (VisualStudio.com)|

@@ -32,17 +32,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 8ce2ccc55a53d03b72f0d1d81c206b2b9a980eed
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 11ae1d653bc34ccb9c8fd8834d134b7212bc4f9a
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-windows-store-apps"></a>Procedura dettagliata: creazione ed esecuzione di unit test per le applicazioni Windows Store
 In Visual Studio sono inclusi il supporto per gli unit test di app di [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] gestite e i modelli della libreria di unit test per Visual C#, Visual Basic e Visual C++.  
   
 > [!TIP]
->  Per altre informazioni sullo sviluppo di app di [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], vedere [Getting started with Windows Store apps](http://go.microsoft.com/fwlink/?LinkID=241410) (Introduzione alle app di Windows Store).  
+>  Per altre informazioni sullo sviluppo di app di [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] , vedere [Introduzione alle app di Windows Store](http://go.microsoft.com/fwlink/?LinkID=241410).  
   
  In Visual Studio sono disponibili le funzionalità di testing unità seguenti:  
   
@@ -72,7 +73,7 @@ In Visual Studio sono inclusi il supporto per gli unit test di app di [!INCLUDE[
     > [!NOTE]
     >  In Visual Studio sono inclusi i modelli della libreria di unit test per Visual C#, Visual Basic e Visual C++.  
   
-3.  (Facoltativo) Nella casella di testo **Nome** immettere il nome da usare per il progetto di unit test per [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)].  
+3.  (Facoltativo) Nella casella di testo **Nome** immettere il nome che si desidera usare per il progetto di unit test per [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)].  
   
 4.  (Facoltativo) Modificare il percorso in cui si desidera creare il progetto immettendolo nella casella di testo **Percorso** oppure scegliendo il pulsante **Sfoglia** .  
   
@@ -91,7 +92,7 @@ In Visual Studio sono inclusi il supporto per gli unit test di app di [!INCLUDE[
   
 #### <a name="to-edit-the-unit-test-projects-windows-store-application-manifest-file"></a>Per modificare il file manifesto dell'applicazione di Windows Store del progetto di unit test  
   
-1.  In Esplora soluzioni, nel nuovo progetto di unit test per [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], fare clic con il pulsante destro del mouse sul file Package.appxmanifest e scegliere **Apri**.  
+1.  In Esplora soluzioni, nel nuovo progetto di unit test per [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] , fare clic con il pulsante destro del mouse sul file Package.appxmanifest e scegliere **Apri**.  
   
      Verrà visualizzata la finestra Progettazione manifesto nella quale sarà possibile apportare le modifiche al manifesto.  
   
@@ -155,10 +156,10 @@ In Visual Studio sono inclusi il supporto per gli unit test di app di [!INCLUDE[
 ## <a name="external-resources"></a>Risorse esterne  
   
 ### <a name="videos"></a>Video  
- [Channel 9: Unit testing your Windows Store apps built using XAML](http://go.microsoft.com/fwlink/?LinkId=226285) (Testing unità delle app di Windows Store scritte in XAML)  
+ [Channel 9: Unit testing your Windows Store apps built using XAML (Testing unità delle app di Windows Store scritte in XAML)](http://go.microsoft.com/fwlink/?LinkId=226285)  
   
 ### <a name="forums"></a>Forum  
- [Visual Studio Unit Testing](http://go.microsoft.com/fwlink/?LinkId=224477) (Testing unità con Visual Studio)  
+ [Visual Studio Unit Testing (Testing unità con Visual Studio)](http://go.microsoft.com/fwlink/?LinkId=224477)  
   
 ### <a name="msdn-library"></a>MSDN Library  
  [MSDN Library - Creazione ed esecuzione di unit test per il codice esistente (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkID=223683)  

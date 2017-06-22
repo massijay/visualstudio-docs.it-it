@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1dee6e1a0e92ecf5c8be64c4c3c477cf31291203
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: fb1bcd92e8f7bda12e774b969da2c71dfc38ab2f
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="how-to-create-and-apply-a-resource"></a>Come creare e applicare una risorsa
@@ -73,14 +74,14 @@ Stili e modelli per gli elementi nella finestra di progettazione XAML vengono ar
   
     -   Applicare una risorsa a una proprietà. Nella finestra Proprietà scegliere il marcatore della proprietà accanto al valore della proprietà, quindi scegliere **Risorsa locale** o **Risorsa di sistema** e infine selezionare una risorsa disponibile dall'elenco visualizzato.  
   
-         Se una risorsa che si prevede di vedere non viene visualizzata, è possibile che il tipo della risorsa non corrisponda al tipo della proprietà.  
+         Se non viene visualizzata una risorsa prevista, è possibile che il tipo della risorsa non corrisponda al tipo della proprietà.  
   
     -   Applicare uno stile o una risorsa modello di controllo a un controllo. Aprire il menu di scelta rapida per un controllo nella finestra Struttura documento, scegliere **Modifica modello** o **Modifica modelli aggiuntivi**, quindi scegliere **Applica risorsa** e infine selezionare il nome del modello di controllo dall'elenco visualizzato.  
   
         > [!NOTE]
         >  L'opzione **Modifica modello** consente di applicare modelli di controllo. L'opzione **Modifica modelli aggiuntivi** consente di applicare altri tipi di modelli.  
   
-     Le risorse possono essere applicate in qualsiasi posizione compatibile. Una risorsa pennello, ad esempio, può essere applicata alla proprietà **Foreground** di un controllo <xref:Windows.UI.Xaml.Controls.TextBox>.  
+     Le risorse possono essere applicate in qualsiasi posizione compatibile. Ad esempio, una risorsa pennello può essere applicata alla proprietà **Foreground** di un controllo <xref:Windows.UI.Xaml.Controls.TextBox>.  
   
 ### <a name="to-edit-a-resource"></a>Per modificare una risorsa  
   

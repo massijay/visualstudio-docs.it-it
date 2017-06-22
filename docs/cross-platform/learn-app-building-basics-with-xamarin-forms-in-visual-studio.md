@@ -26,14 +26,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: f78e2b713e75c5601a07907e7f717db92571568b
-ms.openlocfilehash: 7029ac140d9d5301a4749f76a6258469995fb47a
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: c779799116a92a29a635bb0019d0c7a7bbd7dc11
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="learn-app-building-basics-with-xamarinforms-in-visual-studio"></a>Nozioni di base sulla compilazione di app con Xamarin.Forms in Visual Studio
-Dopo aver eseguito i passaggi [Configurazione e installazione](../cross-platform/setup-and-install.md) e [Verificare l'ambiente Xamarin](../cross-platform/verify-your-xamarin-environment.md), questa procedura dettagliata illustra come compilare un'app di base (mostrata sotto) con Xamarin.Forms. Con Xamarin.Forms tutto il codice dell'interfaccia utente viene scritto una sola volta in una libreria di classi portabile (PCL). Xamarin esegue quindi il rendering automatico dei controlli dell'interfaccia utente nativi per le piattaforme iOS, Android e Windows. Questo approccio è consigliato perché l'opzione PCL funziona meglio se si usano solo le API .NET supportate in tutte le piattaforme di destinazione e perché Xamarin.Forms consente di condividere il codice dell'interfaccia utente tra le piattaforme.  
+Dopo aver eseguito i passaggi [Setup and install](../cross-platform/setup-and-install.md) e [Verify your Xamarin environment](../cross-platform/verify-your-xamarin-environment.md), questa procedura dettagliata illustra come compilare un'app di base (mostrata sotto) con Xamarin.Forms. Con Xamarin.Forms tutto il codice dell'interfaccia utente viene scritto una sola volta in una libreria di classi portabile (PCL). Xamarin esegue quindi il rendering automatico dei controlli dell'interfaccia utente nativi per le piattaforme iOS, Android e Windows. Questo approccio è consigliato perché l'opzione PCL funziona meglio se si usano solo le API .NET supportate in tutte le piattaforme di destinazione e perché Xamarin.Forms consente di condividere il codice dell'interfaccia utente tra le piattaforme.  
   
  ![Esempio di app Meteo per Android, iOS e Windows Phone](../cross-platform/media/crossplat-xamarin-formsguide-1.png "CrossPlat Xamarin FormsGuide 1")  
   
@@ -57,11 +58,11 @@ Dopo aver eseguito i passaggi [Configurazione e installazione](../cross-platform
   
 1.  In Visual Studio creare una nuova soluzione **Applicazione vuota (Xamarin.Forms portabile)** e denominarla **WeatherApp**. Il modello può essere individuato più facilmente immettendo **Xamarin.Forms** nel campo di ricerca.  
   
-     Se non è presente, potrebbe essere necessario installare Xamarin o abilitare la funzionalità di Visual Studio 2015. Vedere [Configurazione e installazione](../cross-platform/setup-and-install.md).  
+     Se non è elencato, potrebbe essere necessario installare Xamarin o abilitare la funzionalità di Visual Studio 2015. Vedere [Configurazione e installazione](../cross-platform/setup-and-install.md).  
   
      ![Creazione di un nuovo progetto App vuota &#40;Xamarin.Forms portatile&#41;](../cross-platform/media/crossplat-xamarin-formsguide-2.png "CrossPlat Xamarin FormsGuide 2")  
   
-2.  Dopo aver fatto clic su OK per creare la soluzione vengono visualizzati diversi progetti singoli:  
+2.  Dopo aver fatto clic su OK per creare la soluzione, verranno visualizzati diversi progetti singoli:  
   
     -   **WeatherApp (portabile)**: la libreria di classi portabile (PCL) in cui verrà scritto il codice condiviso tra le piattaforme, inclusa la logica di business comune e il codice dell'interfaccia utente in uso con Xamarin.Forms.  
   
@@ -92,7 +93,7 @@ Dopo aver eseguito i passaggi [Configurazione e installazione](../cross-platform
   
          ![Aggiornamento del pacchetto NuGet di Xamarin.Forms](../cross-platform/media/crossplat-xamarin-formsguide-4.png "CrossPlat Xamarin FormsGuide 4")  
   
-4.  Aggiungere il pacchetto NuGet e **Newtonsoft.Json** al progetto PCL, che verranno usati per elaborare le informazioni recuperate da un servizio di dati meteo:  
+4.  Aggiungere il pacchetto NuGet e **Newtonsoft.Json** al progetto PCL, i quali verranno usati per elaborare le informazioni recuperate da un servizio di dati meteo:  
   
     -   In Gestione pacchetti NuGet (aperto nel passaggio 3) selezionare la scheda **Sfoglia** e cercare **Newtonsoft**.  
   
@@ -111,7 +112,7 @@ Dopo aver eseguito i passaggi [Configurazione e installazione](../cross-platform
 6.  Compilare la soluzione e verificare che non ci siano errori di compilazione.  
   
 ##  <a name="dataservice"></a> Scrivere un codice di servizio dati condiviso  
- **WeatherApp (Portable)** è il progetto di destinazione del codice per la libreria di classi portabile (PCL) condiviso tra le piattaforme. La libreria di classi portabile (PCL) viene inclusa automaticamente nei pacchetti di app compilati dai progetti iOS, Android e Windows Phone.  
+ **WeatherApp (portabile)** è il progetto di destinazione del codice per la libreria di classi portabile (PCL) condiviso tra le piattaforme. La libreria di classi portabile (PCL) viene inclusa automaticamente nei pacchetti di app compilati dai progetti iOS, Android e Windows Phone.  
   
  Per eseguire questo esempio è innanzitutto necessario iscriversi per una chiave API gratuita in [http://openweathermap.org/appid](http://openweathermap.org/appid).  
   
@@ -181,7 +182,7 @@ Dopo aver eseguito i passaggi [Configurazione e installazione](../cross-platform
     }  
     ```  
   
-5.  Aggiungere una terza classe alla libreria di classi portabile (PCL) denominata **Core** in cui inserire la logica di business condivisa, ad esempio una logica che forma una stringa di query usando un codice postale, chiama il servizio di dati meteo, quindi popola un'istanza della classe **Weather** .  
+5.  Aggiungere una terza classe alla libreria di classi portabile (PCL) denominata **Core** in cui inserire la logica di business condivisa, ad esempio una logica che forma una stringa di query usando un codice postale, chiama il servizio di dati meteo e quindi popola un'istanza della classe **Weather**.  
   
 6.  Sostituire il contenuto di **Core.cs** con:  
   
@@ -232,7 +233,7 @@ Dopo aver eseguito i passaggi [Configurazione e installazione](../cross-platform
 ##  <a name="uicode"></a> Iniziare a scrivere il codice dell'interfaccia utente condiviso  
  Xamarin.Forms consente di implementare il codice dell'interfaccia utente condiviso nella libreria di classi portabile (PCL). In questi passaggi verrà aggiunta una schermata alla libreria di classi portabile (PCL) con un pulsante che aggiorna il testo con i dati restituiti dal codice del servizio di dati meteo aggiunto nella sezione precedente:  
   
-1.  Aggiungere una **pagina XAML Form** denominata **WeatherPage.cs** facendo clic con il pulsante destro del mouse sul progetto **WeatherApp** e selezionando **Aggiungi > Nuovo elemento**. Nella finestra di dialogo **Aggiungi nuovo elemento** cercare "Form", selezionare la **pagina XAML Form**, quindi denominarla **WeatherPage.cs**.  
+1.  Aggiungere una **pagina XAML Form** denominata **WeatherPage.cs** facendo clic con il pulsante destro del mouse sul progetto **WeatherApp** e selezionando **Aggiungi > Nuovo elemento**. Nella finestra di dialogo **Aggiungi nuovo elemento** cercare "Form", selezionare la **pagina XAML Form** e denominarla **WeatherPage.cs**.  
   
      Xamarin.Forms è basato su XAML, quindi questo passaggio crea un file **WeatherPage.xaml** e un file code-behind annidato **WeatherPage.xaml.cs**. Ciò consente di generare l'interfaccia utente tramite XAML o il codice. In questa procedura dettagliata verranno eseguite operazioni relative a entrambi i casi.  
   
@@ -251,7 +252,7 @@ Dopo aver eseguito i passaggi [Configurazione e installazione](../cross-platform
   
      Il nome del pulsante deve essere definito usando l'attributo **x:Name** , in modo che si possa fare riferimento al pulsante tramite il nome all'interno del file code-behind.  
   
-3.  Per aggiungere un gestore eventi per l'evento **Selezionato** del pulsante per aggiornarne il testo, sostituire i contenuti di **WeatherPage.xaml.cs** con il codice seguente. Il codice postale "60601" può essere liberamente modificato.  
+3.  Per aggiungere un gestore eventi per l'evento **Clicked** del pulsante per aggiornarne il testo, sostituire il contenuto di **WeatherPage.xaml.cs** con il codice seguente. Il codice postale "60601" può essere liberamente sostituito da un altro codice.  
   
     ```c#  
     using System;  
@@ -292,7 +293,7 @@ Dopo aver eseguito i passaggi [Configurazione e installazione](../cross-platform
 5.  Compilare il progetto PCL WeatherApp per verificare che il codice sia corretto.  
   
 ##  <a name="test"></a> Testare l'app usando Visual Studio Emulator for Android  
- È ora possibile eseguire l'app. Eseguire, per ora, solo la versione Android per verificare che l'app stia ottenendo i dati dal servizio meteo. In un secondo momento verranno eseguite anche le versioni di Windows Phone e iOS dopo aver aggiunto altri elementi dell'interfaccia utente. Nota: se si esegue Visual Studio in Windows 7, la procedura resta la stessa ma verrà usato Xamarin Player.  
+ È ora possibile eseguire l'app. Eseguire prima solo la versione Android per verificare che l'app stia ottenendo i dati dal servizio meteo. In un secondo momento verranno eseguite anche le versioni Windows Phone e iOS dopo aver aggiunto altri elementi di interfaccia utente. Nota: se si esegue Visual Studio in Windows 7, la procedura è la stessa, ma verrà usato Xamarin Player.  
   
 1.  Impostare il progetto **WeatherApp.Droid** come progetto di avvio facendo clic con il pulsante destro del mouse su di esso e selezionando **Imposta come progetto di avvio**.  
   
@@ -397,9 +398,9 @@ Dopo aver eseguito i passaggi [Configurazione e installazione](../cross-platform
     </ContentPage>  
     ```  
   
-     Si noti l'uso del tag **OnPlatform** in Xamarin.Forms. Il tag**OnPlatform** seleziona un valore della proprietà specifico per la piattaforma corrente in cui è in esecuzione l'app (vedere la sezione relativa alla [sintassi XAML esterna](http://developer.xamarin.com/guides/xamarin-forms/user-interface/xaml-basics/essential_xaml_syntax/) (xamarin.com). In questo caso, viene usato per impostare un colore del testo diverso per i campi dati: bianco in Android e Windows Phone, nero in iOS. **OnPlatform** può essere usato per qualsiasi proprietà e tipo di dati per apportare modifiche specifiche per la piattaforma in qualsiasi punto del file XAML. Nel file code-behind è possibile usare [Device.OnPlatform API](http://developer.xamarin.com/guides/xamarin-forms/platform-features/device/) per lo stesso scopo.  
+     Si noti l'uso del tag **OnPlatform** in Xamarin.Forms. Il tag **OnPlatform** seleziona un valore della proprietà specifico per la piattaforma corrente in cui è in esecuzione l'app (vedere la sezione relativa alla [sintassi XAML esterna](http://developer.xamarin.com/guides/xamarin-forms/user-interface/xaml-basics/essential_xaml_syntax/) (xamarin.com). In questo caso, viene usato per impostare un colore diverso del testo per i campi dati: bianco in Android e Windows Phone, nero in iOS. **OnPlatform** può essere usato per qualsiasi proprietà e tipo di dati per apportare modifiche specifiche per la piattaforma in qualsiasi punto del file XAML. Nel file code-behind è possibile usare [Device.OnPlatform API](http://developer.xamarin.com/guides/xamarin-forms/platform-features/device/) per lo stesso scopo.  
   
-2.  In **WeatherPage.xaml.cs**sostituire il gestore eventi **GetWeatherBtn_Clicked** con il codice seguente. Questo codice verifica che sia presente un codice postale nel campo di immissione, recupera i dati da tale codice, imposta il contesto di associazione dell'intera schermata sull'istanza Weather risultante, quindi imposta il testo del pulsante su "Cerca di nuovo". Ogni etichetta nell'interfaccia utente viene associata a una proprietà della classe Weather, quindi, quando si imposta il contesto di associazione della schermata su un'istanza **Weather** , le etichette vengono aggiornate automaticamente.  
+2.  In **WeatherPage.xaml.cs**sostituire il gestore eventi **GetWeatherBtn_Clicked** con il codice seguente. Questo codice verifica che sia presente un codice postale nel campo di immissione, recupera i dati da tale codice postale, imposta il contesto di associazione dell'intera schermata sull'istanza Weather risultante, quindi imposta il testo del pulsante su "Search Again" (Cerca di nuovo). Si noti che ogni etichetta nell'interfaccia utente viene associata a una proprietà della classe Weather, quindi, quando si imposta il contesto di associazione della schermata su un'istanza **Weather**, le etichette vengono aggiornate automaticamente.  
   
     ```c#  
     private async void GetWeatherBtn_Clicked(object sender, EventArgs e)  
@@ -413,7 +414,7 @@ Dopo aver eseguito i passaggi [Configurazione e installazione](../cross-platform
     }  
     ```  
   
-3.  Eseguire l'app in tutte e tre le piattaforme, Android, iOS e Windows Phone, facendo clic con il pulsante destro del mouse sul progetto appropriato, selezionando Imposta come progetto di avvio e avviando l'app in un dispositivo o in un emulatore o simulatore. Immettere un codice postale degli Stati Uniti valido, ad esempio 60601, e premere il pulsante Get Weather per visualizzare i dati meteo per l'area, come mostrato di seguito. Ovviamente, Visual Studio deve essere connesso a un computer Mac OS X nella rete per il progetto iOS.  
+3.  Eseguire l'app in tutte e tre le piattaforme, Android, iOS e Windows Phone, facendo clic con il pulsante destro del mouse sul progetto appropriato, selezionando Imposta come progetto di avvio e avviando l'app in un dispositivo o in un emulatore o simulatore. Immettere un codice postale degli Stati Uniti valido, ad esempio 60601, e premere il pulsante Get Weather per visualizzare i dati meteo per l'area, come mostrato di seguito. Visual Studio deve ovviamente essere connesso a un computer Mac OS X nella rete per il progetto iOS.  
   
      ![Esempio di app Meteo per Android, iOS e Windows Phone](../cross-platform/media/crossplat-xamarin-formsguide-1.png "CrossPlat Xamarin FormsGuide 1")  
   

@@ -27,20 +27,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
 ms.openlocfilehash: cfa8cfb699ae20e1ae5e563545959b16802540ea
-ms.lasthandoff: 02/22/2017
+ms.contentlocale: it-it
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="wpf-data-binding-with-linq-to-xml"></a>data binding WPF con LINQ to XML
-Contenuto della sezione vengono fornite informazioni sull'utilizzo di LINQ to XML come origine dati per il data binding nelle applicazioni WPF (Windows Presentation Foundation). Questo scenario si basa sulle *proprietà dinamiche* speciali di <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> e <xref:System.Xml.Linq.XElement?displayProperty=fullName>. Nella sezione vengono documentate anche queste proprietà dinamiche.  
+Contenuto della sezione vengono fornite informazioni sull'utilizzo di LINQ to XML come origine dati per il data binding nelle applicazioni WPF (Windows Presentation Foundation). Questo scenario si basa su *proprietà dinamiche* speciali di <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> e <xref:System.Xml.Linq.XElement?displayProperty=fullName>. Nella sezione vengono documentate anche queste proprietà dinamiche.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Panoramica dei data binding WPF con LINQ to XML](../designers/wpf-data-binding-with-linq-to-xml-overview.md)|Vengono presentate le funzionalità di data binding dinamiche disponibili nello spazio dei nomi <xref:System.Xml.Linq> e viene descritto come usare queste funzionalità come origine dati per i componenti dell'interfaccia utente in WPF.|  
+|[Panoramica dei data binding WPF con LINQ to XML](../designers/wpf-data-binding-with-linq-to-xml-overview.md)|Vengono presentate le funzionalità di associazione dati dinamiche disponibili nello spazio dei nomi <xref:System.Xml.Linq> e viene descritto come usare queste funzionalità come origine dati per i componenti dell'interfaccia utente in WPF.|  
 |[Proprietà dinamiche in LINQ to XML](../designers/linq-to-xml-dynamic-properties.md)|Vengono fornite informazioni di riferimento sulle proprietà dinamiche esposte dalle classi <xref:System.Xml.Linq.XAttribute> e <xref:System.Xml.Linq.XElement>.|  
 |[Esempio di data binding WPF tramite LINQ to XML](../designers/wpf-data-binding-using-linq-to-xml-example.md)|Viene fornito un esempio WPF in cui i componenti dell'interfaccia utente vengono associati a un'origine dati XML.|  
   

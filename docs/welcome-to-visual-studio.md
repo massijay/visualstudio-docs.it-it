@@ -31,14 +31,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 7ec312bf7c85759fef700f0746c0981f263d46e2
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 362a756e434f93eb39776c76382d059cc2744cae
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="welcome-to-visual-studio-2017"></a>Visual Studio 2017
-offre tutto ciò che occorre per creare app eccezionali per dispositivi o desktop, per il Web e nel cloud. È possibile scrivere codice per iOS, Android, Linux, Windows e altri sistemi in un singolo ambiente di sviluppo integrato (IDE). Ottime funzionalità di supporto interattive per il codice (*IntelliSense*), spostamenti facili nel codice e debug semplice, compilazioni rapide e distribuzione veloce. Visual Studio consente di aumentare la produttività e semplifica le attività sia per chi lavora singolarmente sia per chi fa parte di un team più grande.  
+offre tutto il necessario per creare eccezionali desktop o per dispositivi, sia per il Web che nel cloud. È possibile scrivere codice per iOS, Android, Linux, Windows e altri sistemi in un singolo ambiente di sviluppo integrato (IDE). Ottime funzionalità di supporto interattive per il codice (*IntelliSense*), spostamenti facili nel codice e debug semplice, compilazioni rapide e distribuzione veloce. Visual Studio consente di aumentare la produttività e semplifica le attività sia per chi lavora singolarmente sia per chi fa parte di un team più grande.  
 
 > [!NOTE]
 >  Fare clic qui per le note sulla versione di [Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=834799).    
@@ -47,7 +48,7 @@ offre tutto ciò che occorre per creare app eccezionali per dispositivi o deskto
 
  Per installare Visual Studio 2017, scaricarlo dalla pagina [Download di Visual Studio](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Per altre informazioni sul processo di installazione, vedere [Installazione di Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=833223). Una volta aperto Visual Studio, sarà possibile creare un nuovo progetto o aprire un file di codice e iniziare a scrivere il codice. Scegliere il tipo di app da creare oppure [guardare la presentazione](https://go.microsoft.com/fwlink/?linkid=833058) dell'ambiente IDE di Visual Studio per acquisire familiarità con gli strumenti.
 
- Non dimenticare poi di esplorare la [Code Gallery](https://code.msdn.microsoft.com/) in cui sono disponibili esempi che consentiranno di scrivere l'app ancora più rapidamente. Guardare i numerosi video gratuiti su Visual Studio disponibili in [Channel 9](https://channel9.msdn.com/VisualStudio) e [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!jobf=Developer&lang=1033).
+ Ricordare anche di visitare la [Code Gallery](https://code.msdn.microsoft.com/) con esempi di codice che consentono di scrivere l'app ancora più rapidamente. Guardare i numerosi video gratuiti su Visual Studio disponibili in [Channel 9](https://channel9.msdn.com/VisualStudio) e [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!jobf=Developer&lang=1033).
 
 ## <a name="build-cross-platform-apps-and-games"></a>Creare app e giochi multipiattaforma  
  È possibile usare Visual Studio per creare app e giochi per Android, iOS, Linux, Windows e altri dispositivi. Altre informazioni sullo [sviluppo per dispositivi mobili multipiattaforma](cross-platform/cross-platform-mobile-development-in-visual-studio.md).  Le app di Windows universali consentono di sfruttare il codice su più piattaforme. Per altre informazioni, vedere [App di Windows universali](https://dev.windows.com/en-us/windows-apps).
@@ -99,8 +100,8 @@ Pianificare, creare ed eseguire test manuali e automatizzati per l'app. I piani 
 
 Diagnosticare l'uso della memoria e della CPU e altri problemi a livello di applicazione. Per altre informazioni, vedere [Strumenti di profilatura](profiling/profiling-tools.md).
 
-### <a name="deliver-your-teams-code-faster"></a>Fornire più rapidamente il codice del team  
- Rimuovere le barriere tra i membri del team e migliorare la collaborazione. È possibile fare di meglio automatizzando il rilascio dell'app in ogni fase nell'ambiente di sviluppo fino alla produzione. Monitorare le prestazioni e la disponibilità dell'app quando è attiva. Raccogliere i dati di utilizzo in tempo reale per conoscere come i clienti stiano effettivamente usando l'app. Per informazioni dettagliate, vedere [Gestione del ciclo di vita di DevOps e delle applicazioni](https://www.visualstudio.com/en-us/docs/vsts-tfs-overview).  
+### <a name="deliver-your-teams-code-faster"></a>Consegnare il codice al team in tempi più brevi  
+ Rimuovere le barriere tra i membri del team e migliorare la collaborazione. È possibile fare di meglio automatizzando il rilascio dell'app in ogni fase nell'ambiente di sviluppo fino alla produzione. Monitorare le prestazioni e la disponibilità dell'app quando è attiva. Raccogliere i dati di utilizzo in tempo reale per conoscere come i clienti stiano effettivamente usando l'app. Vedere [Gestione del ciclo di vita di DevOps e delle applicazioni](https://www.visualstudio.com/en-us/docs/vsts-tfs-overview) per altri dettagli.  
 
 ## <a name="whats-new"></a>Novità  
 Informazioni sulle novità di Visual Studio.
@@ -108,7 +109,7 @@ Informazioni sulle novità di Visual Studio.
 |||  
 |-|-|  
 |[Novità di Visual Studio 2017](ide/whats-new-in-visual-studio.md)|[Novità di Visual C++](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
-|[Novità di Visual C#](/dotnet/articles/csharp/csharp-7)|
+|[Novità in Visual C#](/dotnet/articles/csharp/csharp-7)|
 
 
 ## <a name="extend-visual-studio"></a>Estendere Visual Studio  

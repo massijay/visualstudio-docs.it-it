@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 91b3f224d92b9ace5df34cc74c8d7616b8458d6c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 1a47ab6e11e4c67713961078f125bb7abca23bb9
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="unit-test-your-code"></a>Eseguire unit test del codice
@@ -88,13 +89,13 @@ Gli unit test rappresentano per sviluppatori e tester un modo rapido per verific
 ## <a name="external-resources"></a>Risorse esterne  
   
 ### <a name="videos"></a>Video  
- [Channel 9: Unit testing your Windows Store apps built using XAML](http://go.microsoft.com/fwlink/?LinkId=226285) (Testing unità delle app di Windows Store scritte in XAML)  
+ [Channel 9: Unit testing your Windows Store apps built using XAML (Testing unità delle app di Windows Store scritte in XAML)](http://go.microsoft.com/fwlink/?LinkId=226285)  
   
 ### <a name="forums"></a>Forum  
  [Visual Studio Unit Testing](http://go.microsoft.com/fwlink/?LinkId=224477) (Testing unità con Visual Studio)  
   
 ### <a name="guidance"></a>Materiale sussidiario  
- [Test per la distribuzione continua con Visual Studio 2012 – Capitolo 2: Unit Testing: Test interni](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Test per la distribuzione continua con Visual Studio 2012 - Capitolo 2: Testing unità: Test interni)  
   
 ### <a name="reference"></a>Riferimento  
  [Indice dei contenuti relativi agli unit test](http://go.microsoft.com/fwlink/?LinkID=254719)  

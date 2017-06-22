@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 5c2ab4063911852bbc79b8239693a01e0818b4a9
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: f880816f383712f87624467c9ed3b45a1c2ccb8c
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>Creazione di un'interfaccia utente usando Blend per Visual Studio
@@ -72,7 +73,7 @@ Blend per Visual Studio facilita la progettazione di app per desktop Windows bas
  **Vedere un breve video:** ![Configure Installed Features] (Configurare le funzionalità installate)(../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Barra degli strumenti](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4).  
   
 ##  <a name="Assets"></a>Panoramica del pannello Asset  
- Tutti i controlli sono disponibili nel pannello **Assets**, che è simile alla **Casella degli strumenti** in Visual Studio. Oltre ai controlli, nel pannello **Assets** è disponibile tutto ciò che può essere aggiunto alla tavola da disegno, inclusi gli stili, gli elementi multimediali, i comportamenti e gli effetti.  
+ Tutti i controlli sono disponibili nel pannello **Assets**, che è simile alla **Casella degli strumenti** in Visual Studio. Oltre ai controlli, nel pannello **Asset** è disponibile tutto ciò che può essere aggiunto alla tavola da disegno, inclusi gli stili, gli elementi multimediali, i comportamenti e gli effetti.  
   
  ![Pannello Asset](../designers/media/blend5_assets_panel.png "Blend5_Assets_panel")  
   
@@ -92,12 +93,12 @@ Blend per Visual Studio facilita la progettazione di app per desktop Windows bas
 |||  
 |-|-|  
 |![](../designers/media/b1_1.png "B1_1")|**Visualizzazione Oggetti** Consente di visualizzare una struttura ad albero visuale di un documento. È possibile accedere a diversi livelli di dettaglio. È anche possibile aggiungere livelli per organizzare ulteriormente gli oggetti nella tavola da disegno. In questo modo è possibile bloccarli e nasconderli come gruppi.|  
-|![](../designers/media/b1_2.png "B1_2")|**Indicatore della modalità di registrazione** Consente di verificare se è in corso la registrazione delle modifiche delle proprietà in una sequenza temporale.|  
+|![](../designers/media/b1_2.png "B1_2")|**Indicatore della modalità di registrazione** Consente di verificare se è in corso la registrazione delle modifiche delle proprietà in una sequenza temporale.|  
 |![](../designers/media/b1_3.png "B1_3")|**Selezione storyboard** Consente di visualizzare un elenco degli storyboard creati.|  
 |![](../designers/media/b1_4.png "B1_4")|**Chiudere lo storyboard** Consente di chiudere lo storyboard corrente.|  
 |![](../designers/media/b1_5.png "B1_5")|**Opzioni di storyboard** Consente di creare, duplicare, invertire, eliminare, rinominare o chiudere uno storyboard.|  
 |![](../designers/media/b1_6.png "B1_6")|**Controlli di riproduzione** Consente di esplorare la sequenza temporale. Per spostarsi nella sequenza temporale, o *eseguire lo scrubbing*, è anche possibile trascinare l'indicatore di riproduzione.|  
-|![](../designers/media/b1_7.png "B1_7")|**Reimposta l'ambito** Consente di reimpostare l'ambito della visualizzazione oggetti sull'oggetto radice o ambito precedente. È possibile farlo solo quando si modifica uno stile o modello.|  
+|![](../designers/media/b1_7.png "B1_7")|**Reimposta l'ambito** Consente di reimpostare l'ambito della visualizzazione oggetti sull'oggetto radice o ambito precedente. È possibile solo quando si modifica uno stile o modello.|  
 |![](../designers/media/b1_8.png "B1_8")|**Registra fotogramma chiave** Consente di registrare uno snapshot delle proprietà dell'oggetto selezionato nell'istante corrente.|  
 |![](../designers/media/b1_9.png "B1_9")|**Opzioni snapping** Consente di impostare l'allineamento della sequenza temporale, la risoluzione di snap e disattivare l'allineamento della sequenza temporale.|  
 |![](../designers/media/97fa60b9-0caf-4387-9225-b57510d32209.png "97fa60b9-0caf-4387-9225-b57510d32209")|**Mostra/Nascondi**, **Blocca/Sblocca** Consente di visualizzare o nascondere le opzioni di visibilità e blocco della visualizzazione degli oggetti.|  
@@ -113,7 +114,7 @@ Blend per Visual Studio facilita la progettazione di app per desktop Windows bas
   
  ![Pannello Proprietà](../designers/media/blend5_properties_panel.png "Blend5_properties_panel")  
   
- **Categorie** Consente di espandere e comprimere le categorie delle proprietà. Fare clic su **Espandi** ![](../designers/media/6375953d-074c-421a-bbb3-6f5055b67b64.png "6375953d-074c-421a-bbb3-6f5055b67b64") o **Comprimi** ![Collapse](../designers/media/b5_collapse_button.png "b5_collapse_button") per visualizzare o nascondere i dettagli della categoria.  
+ **Categorie** Consente di espandere e comprimere le categorie delle proprietà. Fare clic su **Espandi** ![](../designers/media/6375953d-074c-421a-bbb3-6f5055b67b64.png "6375953d-074c-421a-bbb3-6f5055b67b64") o  **Comprimi** ![Collapse](../designers/media/b5_collapse_button.png "b5_collapse_button") per visualizzare o nascondere i dettagli della categoria.  
   
 |||  
 |-|-|  

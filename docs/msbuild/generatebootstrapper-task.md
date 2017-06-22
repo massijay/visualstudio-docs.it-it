@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 6a67893ef4326eaef3d3ca016f6da23e4687c780
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: e22d2cb649528d527cf37e80fda0ad49671863d3
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="generatebootstrapper-task"></a>Attività GenerateBootstrapper
@@ -167,7 +168,7 @@ Consente di rilevare, scaricare e installare automaticamente un'applicazione e i
      Se `true`, il programma di avvio automatico esegue la convalida XSD sugli elementi del programma di avvio automatico di input specificati. Il valore predefinito di questo parametro è `false`.  
   
 ## <a name="remarks"></a>Note  
- Oltre ai parametri sopra elencati, questa attività eredita i parametri dalla classe <xref:Microsoft.Build.Tasks.TaskExtension>, che a sua volta eredita dalla classe <xref:Microsoft.Build.Utilities.Task>. Per un elenco di tali parametri aggiuntivi e le rispettive descrizioni, vedere [TaskExtension Base Class](../msbuild/taskextension-base-class.md) (Classe di base TaskExtension).  
+ Oltre ai parametri elencati sopra, questa attività eredita i parametri dalla classe <xref:Microsoft.Build.Tasks.TaskExtension>, che a sua volta eredita dalla classe <xref:Microsoft.Build.Utilities.Task>. Per un elenco di questi parametri aggiuntivi e le rispettive descrizioni, vedere [TaskExtension Base Class](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa l'attività `GenerateBootstrapper` per installare un'applicazione che deve avere [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)] installato come prerequisito.  

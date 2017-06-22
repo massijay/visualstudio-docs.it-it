@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: a4c6024c6e35e8e88ce04b607a784e4adfa87d61
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: d9588eff64ef29c757b6d4224c17975e6ee9d0ee
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>Uso di stub per isolare le parti dell'applicazione tra loro per gli unit test
@@ -82,9 +83,9 @@ I *tipi stub* costituiscono una delle due tecnologie offerte dal framework Micro
 ##  <a name="How"></a> Come usare gli stub  
   
 ###  <a name="Dependency"></a> Progettare l'inserimento di dipendenze  
- Per usare gli stub, è necessario progettare l'applicazione in modo che i diversi componenti non dipendano l'uno dall'altro, ma siano dipendenti solo dalle definizioni di interfaccia. Anziché essere accoppiati in fase di compilazione, i componenti vengono connessi in fase di esecuzione. Questo modello consente di progettare software affidabile e facile da aggiornare perché le modifiche non tendono a propagarsi oltre i limiti dei componenti. Si consiglia di usarlo anche in assenza di stub. Se si scrive un nuovo codice, è facile usare il modello per l'[inserimento di dipendenze](http://en.wikipedia.org/wiki/Dependency_injection). Se si scrivono test per un software esistente, potrebbe essere necessario eseguire il refactoring. Se l'operazione è poco pratica, prendere in considerazione l'utilizzo degli shim.  
+ Per usare gli stub, è necessario progettare l'applicazione in modo che i diversi componenti non dipendano l'uno dall'altro, ma siano dipendenti solo dalle definizioni di interfaccia. Anziché essere accoppiati in fase di compilazione, i componenti vengono connessi in fase di esecuzione. Questo modello consente di progettare software affidabile e facile da aggiornare perché le modifiche non tendono a propagarsi oltre i limiti dei componenti. È consigliabile usarlo anche in assenza di stub. Se si scrive nuovo codice, è facile seguire il criterio per l'[inserimento di dipendenze](http://en.wikipedia.org/wiki/Dependency_injection). Se si scrivono test per un software esistente, potrebbe essere necessario eseguire il refactoring. Se l'operazione è poco pratica, prendere in considerazione l'utilizzo degli shim.  
   
- Questa discussione si apre con un esempio di motivazione, riportato nel diagramma. La classe StockAnalyzer legge i prezzi delle azioni e genera alcuni risultati significativi. Dispone di alcuni metodi pubblici che si desidera vengano testati. Per semplificare le operazioni, verrà esaminato un solo metodo, molto semplice, che restituisce il prezzo corrente di un'azione particolare. Si desidera scrivere uno unit test del metodo. Di seguito è riportata la prima bozza di un test:  
+ Questa discussione si apre con un esempio di motivazione, riportato nel diagramma. La classe StockAnalyzer legge i prezzi delle azioni e genera alcuni risultati significativi. Dispone di alcuni metodi pubblici che si desidera vengano testati. Per semplificare le operazioni, verrà esaminato un solo metodo, molto semplice, che restituisce il prezzo corrente di un'azione particolare. Si desidera scrivere uno unit test del metodo. Ecco la prima bozza di un test:  
   
 ```c#  
 [TestMethod]  
@@ -112,7 +113,7 @@ End Sub
   
  Si nota immediatamente un problema evidente: i prezzi delle azioni variano e pertanto generalmente l'asserzione non è corretta.  
   
- Inoltre, probabilmente il componente di StockFeed, usato da StockAnalyzer, è ancora in fase di sviluppo. Di seguito è riportata la prima bozza del codice del metodo sottoposto a test:  
+ Inoltre, probabilmente il componente di StockFeed, usato da StockAnalyzer, è ancora in fase di sviluppo. Ecco la prima bozza del codice del metodo sottoposto a test:  
   
 ```c#  
 public int GetContosoPrice()  
@@ -137,7 +138,7 @@ End Function
   
 -   Il codice di un componente dell'applicazione non deve mai esplicitamente fare riferimento a una classe di un altro componente né in una dichiarazione né in un'istruzione `new`. Diversamente, le variabili e i parametri devono essere dichiarati con le interfacce. Le istanze dei componenti devono essere create solo dal contenitore dei componenti.  
   
-     Per "componente" in questo caso si intende una classe o un gruppo di classi che si sviluppa e aggiorna contemporaneamente. In genere, un componente rappresenta il codice di un progetto di Visual Studio. È meno importante separare le classi all'interno di un componente perché vengono aggiornate contemporaneamente.  
+     Per "componente" in questo caso si intende una classe o un gruppo di classi che si sviluppa e aggiorna contemporaneamente. In genere, un componente rappresenta il codice di un progetto di Visual Studio. È meno importante separare le classi all'interno di un componente, perché vengono aggiornate contemporaneamente.  
   
      Non è pertanto importante separare i componenti dalle classi di una piattaforma relativamente stabile, ad esempio System.dll. La scritture delle interfacce per tutte queste classi creerebbero confusioni nel codice.  
   
@@ -417,7 +418,7 @@ interface IWithEvents
 ```  
   
 ###  <a name="BKMK_Generic_methods"></a> Metodi generici  
- È possibile sottoporre a stub i metodi generici fornendo un delegato per ogni creazione di istanza desiderata del metodo. Ad esempio, data la seguente interfaccia contenente un metodo generico:  
+ È possibile sottoporre a stub i metodi generici fornendo un delegato per la creazione di ogni istanza desiderata del metodo. Ad esempio, data la seguente interfaccia contenente un metodo generico:  
   
 ```c#  
 // code under test  
@@ -475,7 +476,7 @@ public void TestGetValue()
 // unit test code  
 var stub = new Fakes.MyClass();  
 stub.CallBase = false;  
-// No delegate set – default delegate:  
+// No delegate set - default delegate:  
 Assert.AreEqual(0, stub.DoVirtual(1));  
   
 stub.CallBase = true;  
@@ -490,7 +491,7 @@ Assert.AreEqual(43,stub.DoVirtual(1));
   
 1.  Le firme di metodo con puntatori non sono supportate.  
   
-2.  Le classi sealed o i metodi statici non possono essere sottoposti a stub perché i tipi stub usano l'invio di metodi virtuali. Per questi casi, usare i tipi shim come descritto in [Uso di shim per isolare l'applicazione dagli altri assembly per gli unit test](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).  
+2.  Le classi sealed o i metodi statici non possono essere sottoposti a stub perché i tipi stub si basano sull'invio di metodi virtuali. Per questi casi, usare i tipi shim come descritto in [Uso di shim per isolare l'applicazione dagli altri assembly per gli unit test](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md).  
   
 ##  <a name="BKMK_Changing_the_default_behavior_of_stubs"></a> Modifica del comportamento predefinito degli stub  
  Ogni tipo stub generato mantiene un'istanza dell'interfaccia `IStubBehavior` tramite la proprietà `IStub.InstanceBehavior`. Il comportamento viene chiamato ogni volta che un client chiama un membro senza delegato personalizzato associato. Se il comportamento non è stato impostato, verrà usata l'istanza restituita dalla proprietà `StubsBehaviors.Current`. Per impostazione predefinita, questa proprietà restituisce un comportamento che genera un'eccezione `NotImplementedException`.  
@@ -517,7 +518,7 @@ StubBehaviors.Current =
 ## <a name="external-resources"></a>Risorse esterne  
   
 ### <a name="guidance"></a>Materiale sussidiario  
- [Test per la distribuzione continua con Visual Studio 2012 – Capitolo 2: Unit Testing: Test interni](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Test per la distribuzione continua con Visual Studio 2012 - Capitolo 2: Testing unità: Test interni)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Isolamento del codice sottoposto a test con Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)
