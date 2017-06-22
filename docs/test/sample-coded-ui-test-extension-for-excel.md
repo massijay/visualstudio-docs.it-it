@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 46e8adfd4e4b66e743af8a0db5aecd3f40eb2de7
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: it-it
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="sample-coded-ui-test-extension-for-excel"></a>Estensione di esempio per i test codificati dell'interfaccia utente per Excel
@@ -48,16 +49,16 @@ Architettura di estensione di Excel
  Ereditata dalla classe <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>, è il punto di ingresso per l'estensione dei test codificati dell'interfaccia utente. L'implementazione di questa classe astratta fornisce al framework dei test codificati dell'interfaccia utente l'accesso interno al gestore tecnologia di test dell'interfaccia utente personalizzata, al provider di proprietà dei test dell'interfaccia utente e al filtro delle azioni dei test dell'interfaccia utente per il test della nuova interfaccia utente. Per altre informazioni, vedere [Classe ExtensionPackage](../test/sample-excel-extension-extensionpackage-class.md).  
   
 ### <a name="technologymanager"></a>TechnologyManager  
- Ereditata dalla classe <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager>, questa classe fornisce un gestore tecnologia per la registrazione e la riproduzione dei test. Per altre informazioni, vedere [Classe TechnologyManager](../test/sample-excel-extension-technologymanager-class.md).  
+ Ereditata dalla classe <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager>, questa classe rappresenta un gestore di tecnologia per la registrazione e la riproduzione dei test. Per altre informazioni, vedere [Classe TechnologyManager](../test/sample-excel-extension-technologymanager-class.md).  
   
 ### <a name="actionfilter"></a>ActionFilter  
- Ereditata dalla classe <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter>, questa classe fornisce una classe di base per aggregare i risultati delle azioni dei test simili in un singolo risultato. Per altre informazioni, vedere [Classe ActionFilter](../test/sample-excel-extension-actionfilter-class.md).  
+ Ereditata dalla classe <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter>, questa classe rappresenta una classe di base per l'aggregazione dei risultati delle azioni dei test simili in un unico risultato. Per altre informazioni, vedere [Classe ActionFilter](../test/sample-excel-extension-actionfilter-class.md).  
   
 ### <a name="technology-elements"></a>Elementi della tecnologia  
- Una classe di base ereditata dalla classe <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> fornisce le basi per gli elementi della tecnologia nel test dell'interfaccia utente che possono essere registrati e riprodotti. Per altre informazioni, vedere [Classi Element](../test/sample-excel-extension-element-classes.md).  
+ Una classe di base ereditata dalla classe <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement> fornisce le basi per gli elementi della tecnologia nei test dell'interfaccia utente che possono essere registrati e riprodotti. Per altre informazioni, vedere [Classi Element](../test/sample-excel-extension-element-classes.md).  
   
 ### <a name="propertyprovider"></a>PropertyProvider  
- Ereditata dalla classe <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider> , questa classe fornisce una classe di base per supportare le proprietà degli elementi dell'interfaccia utente per la registrazione e la riproduzione dei test. Per altre informazioni, vedere [Classe PropertyProvider](../test/sample-excel-extension-propertyprovider-class.md).  
+ Ereditata dalla classe <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>, questa classe costituisce una classe di base per il supporto delle proprietà degli elementi dell'interfaccia utente per la registrazione e la riproduzione dei test. Per altre informazioni, vedere [Classe PropertyProvider](../test/sample-excel-extension-propertyprovider-class.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>   

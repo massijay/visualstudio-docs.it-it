@@ -13,10 +13,11 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2cfcc962e41d67995f1e1e04b787a49edfbbfbf6
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 8d0cc37019b04d6f734d6bd604c0ddd948b6dc9f
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="running-profiling-tools-with-or-without-the-debugger"></a>Esecuzione degli strumenti di profilatura con o senza il debugger
@@ -29,17 +30,17 @@ Visual Studio offre ora una vasta gamma di strumenti per le prestazioni, alcuni 
   
 1.  Il problema si è verificato durante lo sviluppo dell'applicazione o nella versione rilasciata?  
   
-     Se il problema riscontrato dall'utente si è verificato durante la fase di sviluppo, non è necessario eseguire gli strumenti per le prestazioni in una compilazione di rilascio. Se il problema si è verificato in una versione di rilascio, è necessario riprodurre l'errore utilizzando una configurazione di rilascio e, successivamente, decidere se utilizzare il debugger per analizzare il problema in modo più approfondito.  
+     Se il problema riscontrato dall'utente si è verificato durante la fase di sviluppo, non è necessario eseguire gli strumenti per le prestazioni in una build di versione. Se il problema si è verificato in una versione di rilascio, è necessario riprodurre l'errore utilizzando una configurazione di rilascio e, successivamente, decidere se utilizzare il debugger per analizzare il problema in modo più approfondito.  
   
 2.  Il problema è causato da elevata elaborazione della CPU?  
   
-     Molti problemi sono causati da problemi operativi esterni, ad esempio l'I/O del file o la velocità di risposta della rete. Per questo motivo, non è importante se gli strumenti per le prestazioni vengono eseguiti anche senza debugger. Se il problema è causato da chiamate di CPU intensiva, aumenta la differenza tra configurazione di rilascio e configurazione di debug. Pertanto, è opportuno verificare se il problema è presente nella compilazione di rilascio, prima di utilizzare gli strumenti di debugger integrati.  
+     Molti problemi sono causati da problemi operativi esterni, ad esempio l'I/O del file o la velocità di risposta della rete. Per questo motivo, non è importante se gli strumenti per le prestazioni vengono eseguiti con o senza debugger. Se il problema è causato da chiamate di CPU intensiva, aumenta la differenza tra configurazione di rilascio e configurazione di debug. Pertanto, è opportuno verificare se il problema è presente nella compilazione di rilascio, prima di utilizzare gli strumenti di debugger integrati.  
   
 3.  È necessario misurare le prestazioni in modo preciso o si può accettare anche un valore approssimativo?  
   
-     Nelle compilazioni di debug mancano alcune funzionalità di ottimizzazione offerte dalle compilazioni di rilascio, ad esempio, le chiamate di funzioni allineate e l'archiviazione di variabili in modalità che non sono utilizzabili dal debugger. Il debbuger stesso modifica i tempi operativi poiché esegue alcune operazioni necessarie per il debug (ad esempio, l'individuazione di eccezione e di eventi di caricamento del modulo). Pertanto, i valori relativi alle prestazioni nello strumento di debugger integrato sono accurati soltanto se compresi in decine di millisecondi. I valori relativi alle prestazioni per le configurazioni di rilascio con strumenti privi di debugger non sono molto accurati.  
+     Nelle compilazioni di debug mancano alcune funzionalità di ottimizzazione offerte dalle build di versione, ad esempio l'incorporamento di chiamate di funzione e di costanti, l'eliminazione di percorsi di codice non usati e l'archiviazione di variabili in modalità non utilizzabili dal debugger. Il debbuger stesso modifica i tempi operativi poiché esegue alcune operazioni necessarie per il debug (ad esempio, l'individuazione di eccezione e di eventi di caricamento del modulo). Pertanto, i valori relativi alle prestazioni nello strumento di debugger integrato sono accurati soltanto se compresi in decine di millisecondi. I valori relativi alle prestazioni per le configurazioni di rilascio con strumenti privi di debugger non sono molto accurati.  
   
-##  <a name="a-namebkmkquickstartcollectdiagnosticdataa-collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Raccogliere dati di profilatura durante il debug  
+##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Raccogliere dati di profilatura durante il debug  
  La sezione seguente si occupa dell’esecuzione del debug in locale. È possibile trovare informazioni sul debug in un dispositivo o sul debug remoto nelle sezioni successive.  
   
 1.  Aprire il progetto di cui si vuole eseguire il debug, quindi fare clic su **Debug/Avvia debug** (oppure usare **Avvia** sulla barra degli strumenti o **F5**).  

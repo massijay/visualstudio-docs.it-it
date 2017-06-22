@@ -1,42 +1,60 @@
 ---
-title: "Marcatori di span | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.markers.span"
+title: Marcatori span | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.cv.markers.span
 ms.assetid: 736b7765-9c71-44d7-85e5-79787d13d91c
 caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Marcatori di span
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: e476a1d0f3af8a0a0c9b9159d710fc7c5680a00d
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
-Un marcatore span rappresenta una parte significativa di un'applicazione.  Ad esempio, è possibile utilizzare uno span per rappresentare un periodo di tempo durante il quale un particolare elemento di lavoro viene elaborato.  La sua lunghezza rappresenta la durata della fase dell'applicazione corrispondente.  In questa illustrazione viene mostrato uno span nel Visualizzatore di concorrenze:  
+---
+# <a name="span-markers"></a>Marcatori di span
+Un marcatore span rappresenta una fase significativa di un'applicazione. Ad esempio, è possibile usare uno span per rappresentare un intervallo di tempo durante il quale viene elaborato un particolare elemento di lavoro. La sua lunghezza rappresenta la durata della fase dell'applicazione corrispondente. La figura mostra uno span nel visualizzatore di concorrenza:  
   
- ![Marcatore espansione in Visualizzatore di concorrenza](../profiling/media/cvmarkerspan.png "CVMarkerSpan")  
-Marcatore span nel Visualizzatore di concorrenza  
+ ![Marcatore span nel visualizzatore di concorrenza](../profiling/media/cvmarkerspan.png "CVMarkerSpan")  
+Marcatore span nel visualizzatore di concorrenza  
   
-## Categoria dello span  
- Un marcatore span viene mostrato in uno dei cinque colori diversi, a seconda della categoria.  I colori sono ripetuti se sono presenti più di cinque categorie.  La categoria può essere qualsiasi intero.  La figura mostra i cinque colori possibili:  
+## <a name="span-category"></a>Categoria degli span  
+ Un marcatore span viene visualizzato in uno dei cinque diversi colori seguenti, a seconda della categoria. I colori vengono ripetuti se sono presenti più di cinque categorie. La categoria può essere un numero intero qualsiasi. La figura mostra i cinque colori possibili:  
   
- ![Cinque espansioni in categorie diverse](../profiling/media/cvmarkerspancategory.png "CVMarkerSpanCategory")  
-I colori delle prime cinque categorie span  
+ ![Cinque span in categorie diverse](../profiling/media/cvmarkerspancategory.png "CVMarkerSpanCategory")  
+Colori delle prime cinque categorie di span  
   
-## Marcatori di aggregazione span  
- Talvolta i marcatori span si verificano in modo cosi ravvicinato nel Visualizzatore della concorrenza che non possono essere disegnati singolarmente.  In questo caso, viene visualizzato un *marcatore di aggregazione span* grigio che rappresenta gli span sottostanti.  Quando si posiziona il puntatore su una di queste icone, un tooltip mostrerà il numero di span sottostanti che sono rappresentati.  Per visualizzare gli span, ingrandire.  Se facendo lo zoom viene visualizzato ancora un marcatore di aggregazione di span, è possibile visualizzare i marcatori di span sottostanti nel [Rapporto marcatori](../profiling/markers-report.md).  In questa illustrazione viene mostrato un marcatore di aggregazione span:  
+## <a name="span-aggregation-markers"></a>Marcatori di aggregazione di span  
+ Talvolta gli indicatori span si presentano a così poca distanza tra loro nel visualizzatore di concorrenza da non poter essere rappresentati singolarmente. In questo caso, viene visualizzato un *marcatore di aggregazione di span* di colore grigio che rappresenta gli span sottostanti. Quando si posiziona il puntatore del mouse su una di queste icone, compare una descrizione comando che mostra il numero di span sottostanti rappresentati. Per visualizzare gli span, fare zoom avanti. Se viene fatto zoom avanti completamente e viene visualizzato ancora un marcatore di aggregazione di span, è possibile visualizzare i marcatori span sottostanti nel [rapporto Marcatori](../profiling/markers-report.md). La figura mostra un marcatore di aggregazione di span:  
   
- ![Marcatore espansione aggregato in Visualizzatore di concorrenza](../profiling/media/cvmarkerspanaggregate.png "CVMarkerSpanAggregate")  
-Un marcatore di aggregazione span  
+ ![Marcatore span aggregato nel visualizzatore di concorrenza](../profiling/media/cvmarkerspanaggregate.png "CVMarkerSpanAggregate")  
+Marcatore di aggregazione di span  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Marcatori del visualizzatore di concorrenza](../profiling/concurrency-visualizer-markers.md)   
  [SDK del visualizzatore di concorrenza](../profiling/concurrency-visualizer-sdk.md)
