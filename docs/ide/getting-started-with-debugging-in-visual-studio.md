@@ -27,9 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 9226dacfa63287857c09e5c6945363ccafadc2c7
+ms.contentlocale: it-it
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="getting-started-with-debugging-in-visual-studio"></a>Introduzione al debug in Visual Studio
@@ -47,7 +49,7 @@ Visual Studio offre un set integrato di strumenti efficaci per il debug e la com
 
  ![Pulsante di configurazione Debug in Visual Studio](../ide/media/vs_ide_gs_debug_build_type1.PNG "Vs_ide_gs_debug_build_type1")  
 
- È anche possibile specificare una determinata piattaforma della build di destinazione, ad esempio **x86** (CPU Intel a&32; bit), **x64** (CPU Intel a&64; bit) e **ARM** (CPU ARM, supportate solo per alcuni tipi di applicazione). L'impostazione predefinita è **x86** per i progetti gestiti e nativi. Per cambiarla, fare clic sull'elenco a discesa delle piattaforme della build e selezionare una piattaforma diversa o **Gestione configurazione**  
+ È anche possibile specificare una determinata piattaforma della build di destinazione, ad esempio **x86** (CPU Intel a 32 bit), **x64** (CPU Intel a 64 bit) e **ARM** (CPU ARM, supportate solo per alcuni tipi di applicazione). L'impostazione predefinita è **x86** per i progetti gestiti e nativi. Per cambiarla, fare clic sull'elenco a discesa delle piattaforme della build e selezionare una piattaforma diversa o **Gestione configurazione**  
 
  ![Finestra di gestione della configurazione di Visual Studio](../ide/media/vs_ide_gs_debug_build_cf_mgr.PNG "Vs_ide_gs_debug_build_cf_mgr")  
 
@@ -208,9 +210,4 @@ Visual Studio offre un set integrato di strumenti efficaci per il debug e la com
  [Debugger Settings and Preparation](../debugger/debugger-settings-and-preparation.md)  (Impostazioni di debug e preparazione)  
  [Debug 64-Bit Applications](../debugger/debug-64-bit-applications.md)  (Eseguire il debug di applicazioni a 64 bit)  
  [Debugger Basics](../debugger/debugger-basics.md) (Nozioni di base sul debugger)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
