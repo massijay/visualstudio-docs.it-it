@@ -36,20 +36,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 587b403257a5fadefd32e57ecdd9914bd60a9e26
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 2bac6b9d00c52e782cf2993ce70c3bd3466aba55
+ms.contentlocale: it-it
+ms.lasthandoff: 05/30/2017
 
 ---
-# <a name="security-and-localized-satellite-assemblies"></a>Sicurezza e assembly satellite localizzati
-Se l'assembly principale usa la funzione di nome sicuro, gli assembly satellite devono essere firmati con la stessa chiave privata dell'assembly principale. Se la coppia chiave pubblica/chiave privata degli assembly satellite e dell'assembly principale non corrisponde, le risorse non verranno caricate. Per altre informazioni sulla firma degli assembly, vedere [Procedura: Firmare un assembly con un nome sicuro](http://msdn.microsoft.com/Library/2c30799a-a826-46b4-a25d-c584027a6c67).  
+# Sicurezza e assembly satellite localizzati
+<a id="security-and-localized-satellite-assemblies" class="xliff"></a>
+Se l'assembly principale usa la funzione di nome sicuro, gli assembly satellite devono essere firmati con la stessa chiave privata dell'assembly principale. Se la coppia chiave pubblica/chiave privata degli assembly satellite e dell'assembly principale non corrisponde, le risorse non verranno caricate. Per altre informazioni sulla firma degli assembly, vedere [Procedura: Firmare un assembly con un nome sicuro](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name).  
   
- In genere, può essere necessario che il gruppo di firma dell'organizzazione o un società di firma esterna usino per la firma la chiave privata. Tale necessità è dovuta alla natura della chiave privata: l'accesso è spesso limitato solo a pochi individui. Durante lo sviluppo è possibile usare la firma posticipata. per altre informazioni, vedere [Ritardo della firma di un assembly](http://msdn.microsoft.com/Library/9d300e17-5bf1-4360-97da-2aa55efd9070).  
+ In genere, può essere necessario che il gruppo di firma dell'organizzazione o un società di firma esterna usino per la firma la chiave privata. Tale necessità è dovuta alla natura della chiave privata: l'accesso è spesso limitato solo a pochi individui. Durante lo sviluppo è possibile usare la firma posticipata. per altre informazioni, vedere [Ritardo della firma di un assembly](/dotnet/framework/app-domains/delay-sign-assembly).  
   
-## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza degli assembly](http://msdn.microsoft.com/Library/1b5439c1-f3d5-4529-bd69-01814703d067)   
- [Concetti chiave sulla sicurezza](http://msdn.microsoft.com/Library/3cfced4f-ea02-4e66-ae98-d69286363e98)   
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
+ [Considerazioni sulla sicurezza degli assembly](/dotnet/framework/app-domains/assembly-security-considerations)   
+ [Concetti chiave sulla sicurezza](/dotnet/standard/security/key-security-concepts)   
  [Introduzione alle applicazioni internazionali basate su .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)   
  [Applicazioni localizzate](../ide/localizing-applications.md)   
  [Globalizzazione e localizzazione di applicazioni](../ide/globalizing-and-localizing-applications.md)

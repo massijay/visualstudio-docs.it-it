@@ -35,13 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 0baf22ca488f4500fb3f4e845a0957b6225dd327
-ms.lasthandoff: 02/22/2017
+ms.contentlocale: it-it
+ms.lasthandoff: 05/19/2017
 
 ---
-# <a name="visual-studio-command-aliases"></a>Visual Studio Command Aliases
+# Visual Studio Command Aliases
+<a id="visual-studio-command-aliases" class="xliff"></a>
 Gli alias consentono di immettere un comando nella casella **Trova/Comando** o nella finestra di **comando** usando un testo ridotto per eseguire il comando. Ad esempio, anziché immettere `>File.OpenFile` per visualizzare la finestra di dialogo **Apri file** è possibile usare l'alias predefinito `>of`.  
   
  Immettere `alias` nella finestra di **comando** per visualizzare un elenco degli alias correnti e le relative definizioni. Immettere `>cls` per cancellare il contenuto della finestra di **comando**. Per visualizzare un alias per un comando specifico, digitare `alias <command name>`.  
@@ -142,7 +144,8 @@ Gli alias consentono di immettere un comando nella casella **Trova/Comando** o n
 |Elenca processi|&#124;|Debug.ListProcesses|  
 |[Comando Elenca thread](../../ide/reference/list-threads-command.md)|~ ~*k ~\*kb|Debug.ListThreads Debug.ListTheads /AllThreads|  
   
-## <a name="see-also"></a>Vedere anche  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Visual Studio Commands](../../ide/reference/visual-studio-commands.md)  (Comandi di Visual Studio)  
  [Command Window](../../ide/reference/command-window.md)  (Finestra di comando)  
  [Casella Trova/Comando](../../ide/find-command-box.md)

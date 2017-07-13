@@ -21,7 +21,7 @@ helpviewer_keywords:
 - registering Dotfuscator
 - Dotfuscator command line
 - Dotfuscator Professional
-description: Informazioni su come eseguire l&quot;aggiornamento di Dotfuscator Community Edition gratuito incluso in Visual Studio 2017.
+description: Informazioni su come eseguire l'aggiornamento di Dotfuscator Community Edition gratuito incluso in Visual Studio 2017.
 ms.assetid: c7c60904-27f9-4f1f-b79b-ddf65041b810
 author: Joe-Sewell-PreEmptive
 manager: ghogen
@@ -39,28 +39,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 507ff049dae50698d86e1536ed21ab982da1af85
-ms.openlocfilehash: eeabf6db465f57ab373c592b01a682ed6442800f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 8ce85525f6af336682f6f8547c2f6c13dde73c8c
+ms.openlocfilehash: 60ca38639f6523cdbace4efa4aa48b48d5e9a886
+ms.contentlocale: it-it
+ms.lasthandoff: 06/23/2017
 
 ---
 
-# <a name="upgrade-dotfuscator-community-edition-ce"></a>Aggiornare Dotfuscator Community Edition (CE)
+# Aggiornare Dotfuscator Community Edition (CE)
+<a id="upgrade-dotfuscator-community-edition-ce" class="xliff"></a>
 
 Dotfuscator Community Edition (Dotfuscator CE) mette numerose funzionalità di protezione delle applicazioni e protezione avanzata a disposizione immediata di tutti gli sviluppatori che usano Microsoft Visual Studio.
 Gli utenti che eseguono l'aggiornamento della loro versione di Dotfuscator possono tuttavia sfruttare anche altre funzionalità.
 
-## <a name="registering-dotfuscator-ce"></a>Registrazione di Dotfuscator CE
+## Registrazione di Dotfuscator CE
+<a id="registering-dotfuscator-ce" class="xliff"></a>
 
 Gli utenti registrati di Dotfuscator CE ottengono l'accesso a funzionalità aggiuntive, ad esempio il [supporto della riga di comando][cli], che rendono più facile l'integrazione di Dotfuscator CE nel processo di compilazione automatico.
 
 La registrazione è veloce, semplice e gratuita.
 Per registrare Dotfuscator CE, vedere [la sezione relativa alla registrazione di Dotfuscator CE nella pagina introduttiva del manuale dell'utente completo di Dotfuscator CE][register-ce].
 
-## <a name="dotfuscator-professional"></a>Dotfuscator Professional
+## Dotfuscator Professional
+<a id="dotfuscator-professional" class="xliff"></a>
 
-Mentre Dotfuscator Community Edition offre un livello base di protezione, ***PreEmptive Protection - Dotfuscator* Professional Edition** include trasformazioni di offuscamento e funzionalità di protezione avanzate.
+Mentre Dotfuscator Community Edition offre un livello base di protezione, **_PreEmptive Protection - Dotfuscator_ Professional Edition** include trasformazioni di offuscamento e funzionalità di protezione avanzate.
 Sono inclusi:
 
 * *Protezione della proprietà intellettuale*
@@ -91,9 +95,10 @@ Dotfuscator Professional offre anche una migliore integrazione con Visual Studio
 Per altre informazioni sulle funzionalità di protezione avanzata delle applicazioni di Dotfuscator Professional, visitare la [pagina della panoramica di Dotfuscator] [ product-about] e [il confronto con Community Edition][product-compare].
 [Le versioni di valutazione completamente supportate sono disponibili su richiesta sul sito preemptive.com][eval].
 
-## <a name="see-also"></a>Vedere anche
+## Vedere anche
+<a id="see-also" class="xliff"></a>
 
-[Questo argomento nel manuale dell'utente completo di Dotfuscator CE][full]
+[Dotfuscator Community Edition User Guide][full] (Guida dell'utente di Dotfuscator CE)
 
 <!-- Copyright © 2017 PreEmptive Solutions, LLC -->
 
@@ -112,7 +117,8 @@ Per altre informazioni sulle funzionalità di protezione avanzata delle applicaz
 [product-about]: https://www.preemptive.com/products/dotfuscator/overview
 [product-compare]: https://www.preemptive.com/products/dotfuscator/compare-editions
 
-[cli]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/intro_cli.html
-[register-ce]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/gui_getstarted.html#register
+[cli]: https://www.preemptive.com/dotfuscator/ce/docs/help/intro_cli.html
+[register-ce]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_getstarted.html#register
 
-[full]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/intro_upgrades.html
+[full]: https://www.preemptive.com/dotfuscator/ce/docs/help/intro_upgrades.html
+

@@ -30,19 +30,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 5c6c36ca969d5ca9ca3957a886ce45597159bc5c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: a41015624d9c64e053770707bf09b73d8606cb03
+ms.contentlocale: it-it
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="projects-and-solutions-options-dialog-box"></a>Progetti e soluzioni, Opzioni (finestra di dialogo)
+# Progetti e soluzioni, Opzioni (finestra di dialogo)
+<a id="projects-and-solutions-options-dialog-box" class="xliff"></a>
 Imposta il percorso predefinito delle cartelle di progetto [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] e determina il comportamento predefinito della finestra **Output**, dell'**Elenco attività** e di **Esplora soluzioni** durante lo sviluppo e la compilazione dei progetti. Per accedere a questa finestra di dialogo, fare clic su **Strumenti/Opzioni**, espandere **Progetti e soluzioni** e fare clic su **Generale**.  
   
 > [!NOTE]
->  Le opzioni disponibili nelle finestre di dialogo e i nomi e i percorsi dei comandi di menu visualizzati potrebbero non corrispondere a quelli descritti nella Guida a seconda dell'edizione o delle impostazioni attive. Questo argomento della Guida è stato creato tenendo presente le **Impostazioni generali per lo sviluppo**. Per visualizzare o modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti**. Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le opzioni disponibili nelle finestre di dialogo e i nomi e i percorsi dei comandi di menu visualizzati potrebbero non corrispondere a quelli descritti nella Guida a seconda dell'edizione o delle impostazioni attive. Questo argomento della Guida è stato creato tenendo presente le **Impostazioni generali per lo sviluppo**. Per visualizzare o modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti**. Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
-## <a name="settings"></a>Impostazioni  
+## Impostazioni
+<a id="settings" class="xliff"></a>  
  **Percorso progetti**  
  Imposta il percorso predefinito in cui vengono create nuovi cartelle e directory di progetti e soluzioni. Anche diverse finestre di dialogo usano il percorso impostato in questa opzione come punto di partenza della cartella. Ad esempio, la finestra di dialogo Apri progetto usa questo percorso per il collegamento Progetti.  
   
@@ -78,5 +81,6 @@ Imposta il percorso predefinito delle cartelle di progetto [!INCLUDE[vsprvs](../
  **Richiedi ridenominazione simbolica quando vengono rinominati i file**  
  Se selezionata, viene visualizzata una finestra di messaggio che richiede se [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] deve rinominare anche tutti i riferimenti nel progetto all'elemento di codice.  
   
-## <a name="see-also"></a>Vedere anche  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Finestra di dialogo Opzioni, Progetti e soluzioni, Compila ed esegui](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)

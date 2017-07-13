@@ -30,16 +30,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4e23eb8ff0c1459c6dc5b9ac1928f8f7092c9a3e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 0616477123b4b2a08763a3871f42d67e06c1aa3a
+ms.contentlocale: it-it
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="project-properties-reference"></a>Riferimenti alle proprietà di progetto
+# Riferimenti alle proprietà di progetto
+<a id="project-properties-reference" class="xliff"></a>
 Altre informazioni su come configurare e personalizzare le proprietà del progetto.  
   
-## <a name="project-properties-pages"></a>Pagine delle proprietà del progetto  
+## Pagine delle proprietà del progetto
+<a id="project-properties-pages" class="xliff"></a>  
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
@@ -59,6 +62,6 @@ Altre informazioni su come configurare e personalizzare le proprietà del proget
 |||  
 |||  
   
-## <a name="see-also"></a>Vedere anche  
- [Introduzione a Creazione progetti](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)   
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Solutions and Projects](../../ide/solutions-and-projects-in-visual-studio.md) (Soluzioni e progetti)

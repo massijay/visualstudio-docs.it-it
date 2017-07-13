@@ -33,13 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 860a68779acb3a70a3513d5706e3bc359c9b8e99
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 7ee0bae36003baff806dc010082668bec019a837
+ms.contentlocale: it-it
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="how-to-change-fonts-and-colors-in-the-editor"></a>Procedura: modificare i tipi di carattere e i colori utilizzati nell'editor
+# Procedura: modificare i tipi di carattere e i colori utilizzati nell'editor
+<a id="how-to-change-fonts-and-colors-in-the-editor" class="xliff"></a>
 È possibile modificare il tipo di carattere predefinito, le dimensioni del carattere e i colori di sfondo e primo piano dei diversi **elementi di visualizzazione** del testo nell'Editor del codice. Quando si modificano le impostazioni del carattere tenere presente le informazioni seguenti:  
   
 -   Le impostazioni **Tipo di carattere** e **Dimensioni** sono globali per tutti gli elementi di testo in tutti gli editor di [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
@@ -49,9 +51,10 @@ ms.lasthandoff: 02/22/2017
 -   Le opzioni **Primo piano elemento**, **Sfondo elemento** e **Grassetto** possono essere impostate per ogni tipo di elemento di testo. Ad esempio, se si modificano i colori e si seleziona **Grassetto** per **Commento** e **Segnalibri**, gli altri tipi di elementi di testo non verranno modificati.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella **Guida** a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella **Guida** a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
-### <a name="to-change-the-default-font-face-size-and-colors"></a>Per modificare il tipo di carattere predefinito, le dimensioni e i colori  
+### Per modificare il tipo di carattere predefinito, le dimensioni e i colori
+<a id="to-change-the-default-font-face-size-and-colors" class="xliff"></a>  
   
 1.  Selezionare **Opzioni** dal menu **Strumenti** e nella cartella **Ambiente** selezionare **Tipi di carattere e colori**.  
   
@@ -68,7 +71,8 @@ ms.lasthandoff: 02/22/2017
   
 5.  Fare clic su **OK**.  
   
-## <a name="see-also"></a>Vedere anche  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Customizing the Editor](../../ide/customizing-the-editor.md)  (Personalizzazione dell'editor)  
  [Text Editor Options Dialog Box](../../ide/reference/text-editor-options-dialog-box.md)  (Finestra di dialogo Opzioni editor di testo)  
  [Scrittura di codice](../../ide/writing-code-in-the-code-and-text-editor.md)   

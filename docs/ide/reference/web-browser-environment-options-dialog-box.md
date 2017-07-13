@@ -42,17 +42,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 50f1d083b54ecc8418cac66086b40de8e3c69b73
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: e2852ef4eb48247a97fe513efc7cdecb89ec619a
+ms.contentlocale: it-it
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="web-browser-environment-options-dialog-box"></a>Web Browser, Ambiente, finestra di dialogo Opzioni
+# Web Browser, Ambiente, finestra di dialogo Opzioni
+<a id="web-browser-environment-options-dialog-box" class="xliff"></a>
 Consente di impostare le opzioni per il Web browser interno e per Internet Explorer. Per accedere a questa finestra di dialogo, selezionare **Opzioni** dal menu **Strumenti**, espandere la cartella **Ambiente** e selezionare **Web browser**.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere Importa/esporta impostazioni dal menu Strumenti. Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere Importa/esporta impostazioni dal menu Strumenti. Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
 > [!IMPORTANT]
 >  L'apertura di determinati file o componenti dal Web può determinare l'esecuzione del codice nel computer in uso.  
@@ -78,7 +80,8 @@ Consente di impostare le opzioni per il Web browser interno e per Internet Explo
 > [!NOTE]
 >  Usare la finestra di dialogo Esplora con per sostituire il Web browser interno di Visual Studio, vale a dire una versione di Internet Explorer, con un altro Web browser esterno.  
   
-## <a name="see-also"></a>Vedere anche  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Environment Options Dialog Box](../../ide/reference/environment-options-dialog-box.md)  (Ambiente, finestra di dialogo Opzioni)  
  [General, Environment, Options Dialog Box](../../ide/reference/general-environment-options-dialog-box.md)  (Generale, Ambiente, finestra di dialogo Opzioni)  
  [Finestra di progettazione HTML](http://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)

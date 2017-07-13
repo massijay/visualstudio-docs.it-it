@@ -32,16 +32,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 6b0b95bfd2112383229c6a36ee7b9c6cdab827eb
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 83faa2ad32073c4133295953afa6259e88eee2d5
+ms.contentlocale: it-it
+ms.lasthandoff: 05/30/2017
 
 ---
-# <a name="how-to-save-and-open-files-with-encoding"></a>Procedura: salvare e aprire file con codifica
+# Procedura: salvare e aprire file con codifica
+<a id="how-to-save-and-open-files-with-encoding" class="xliff"></a>
 È possibile salvare i file con una codifica dei caratteri specifica per supportare le lingue bidirezionali. È anche possibile specificare una codifica all'apertura di un file, in modo che Visual Studio visualizzi il file correttamente.  
   
-### <a name="to-save-a-file-with-encoding"></a>Per salvare un file con codifica  
+### Per salvare un file con codifica
+<a id="to-save-a-file-with-encoding" class="xliff"></a>  
   
 1.  Scegliere **Salva con nome** dal menu **File** e fare clic sul pulsante del menu a discesa accanto al pulsante **Salva**.  
   
@@ -55,7 +58,8 @@ ms.lasthandoff: 02/22/2017
   
      Se si vuole usare un file che viene codificato in un modo specifico, è possibile indicare a Visual Studio di usare tale codifica all'apertura del file. Il metodo usato dipende se il file fa parte del progetto.  
   
-### <a name="to-open-an-encoded-file-that-is-part-of-a-project"></a>Per aprire un file codificato che fa parte di un progetto  
+### Per aprire un file codificato che fa parte di un progetto
+<a id="to-open-an-encoded-file-that-is-part-of-a-project" class="xliff"></a>  
   
 1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file e scegliere **Apri con**.  
   
@@ -65,7 +69,8 @@ ms.lasthandoff: 02/22/2017
   
 3.  Nella finestra di dialogo **Codifica** selezionare il tipo di codifica per l'editor.  
   
-### <a name="to-open-an-encoded-file-that-is-not-part-of-a-project"></a>Per aprire un file codificato che non fa parte di un progetto  
+### Per aprire un file codificato che non fa parte di un progetto
+<a id="to-open-an-encoded-file-that-is-not-part-of-a-project" class="xliff"></a>  
   
 1.  Nel menu **File** selezionare **Apri**, scegliere **File** o **File dal Web** e quindi selezionare il file da aprire.  
   
@@ -73,6 +78,7 @@ ms.lasthandoff: 02/22/2017
   
 3.  Seguire i passaggi 2 e 3 della procedura precedente.  
   
-## <a name="see-also"></a>Vedere anche  
- [Globalizzazione di Windows Form e codifica](http://msdn.microsoft.com/Library/22e8965d-a712-42b3-8167-3ee346bd70f9)   
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
+ [Globalizzazione di Windows Form e codifica](/dotnet/framework/winforms/advanced/encoding-and-windows-forms-globalization)   
  [Globalizzazione e localizzazione di applicazioni](../ide/globalizing-and-localizing-applications.md)
