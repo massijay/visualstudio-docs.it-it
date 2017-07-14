@@ -1,13 +1,17 @@
 ---
 layout: LandingPage
-title: Profilatura in Visual Studio
-translationtype: Human Translation
-ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
-ms.openlocfilehash: 06edcb5e4d6656b3b5c3441879bc48951b0585da
-ms.lasthandoff: 03/03/2017
+title: Profilatura delle app con Visual Studio
+description: Informazioni su come usare Visual Studio 2017 per la profilatura delle prestazioni di applicazioni, servizi e strumenti nel linguaggio preferito.
+ms.technology: vs-ide-debug
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: 6b54253dadb80dd6881ba366b5bb466f4eae7706
+ms.contentlocale: it-it
+ms.lasthandoff: 06/30/2017
 
 ---
-#<a name="profiling-in-visual-studio"></a>Profilatura in Visual Studio
+# Profilatura in Visual Studio
+<a id="profiling-in-visual-studio" class="xliff"></a>
 
 Gli strumenti di profilatura e diagnostica consentono di diagnosticare l'utilizzo della memoria e della CPU e altri problemi a livello di applicazione. Con questi strumenti è possibile accumulare i dati, ad esempio i valori delle variabili, le chiamate di funzione e gli eventi, in base al tempo di esecuzione dell'applicazione nel debugger. È possibile visualizzare lo stato dell'applicazione in punti diversi durante l'esecuzione del codice. 
 
