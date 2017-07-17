@@ -22,21 +22,6 @@ caps.latest.revision: 46
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
 ms.openlocfilehash: 9a4b04dc59c409a5c68ad1fb376abb33b3859ff6
@@ -44,8 +29,10 @@ ms.contentlocale: it-it
 ms.lasthandoff: 05/24/2017
 
 ---
+
 # Creare soluzioni e progetti
 <a id="create-solutions-and-projects" class="xliff"></a>
+
 I progetti sono i contenitori logici di tutti gli elementi necessari per compilare l'applicazione. Quando si crea un progetto scegliendo **File**, **Nuovo**, **Progetto** nel menu principale, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] crea una soluzione per contenerlo. È quindi possibile aggiungere altri progetti nuovi o esistenti alla soluzione, se necessario. È possibile creare progetti dai file di codice esistenti ed è possibile creare progetti temporanei (solo .NET) che verranno eliminati al termine del loro uso.
 
 > [!NOTE]
