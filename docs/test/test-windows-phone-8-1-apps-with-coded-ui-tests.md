@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 1694abeb37e7fa0e5766dfda16a05bd5e7895885
-ms.openlocfilehash: 7d8f95b62fcf7f32b972e0d9b64a0175f7d1f47c
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 969024cd3e3db42d05e2b163b3d8a674493d8aba
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="test-windows-uwp-and-81-phone-apps-with-coded-ui-tests"></a>Testare app di Windows Phone 8.1 e UWP con test codificati dell'interfaccia utente
@@ -75,7 +76,7 @@ Usare questa procedura guidata per creare test dell'interfaccia utente per app U
     End Class  
     ```  
   
-6.  Premere F5 per eseguire l'app per Windows Phone nell'emulatore e verificare che funzioni.  
+6.  Premere F5 per eseguire l'app di Windows Phone nell'emulatore e verificare che funzioni.  
   
      ![Eseguire l'app per Windows Phone](../test/media/cuit_phone_runapp.png "CUIt_Phone_RunApp")  
   
@@ -83,7 +84,7 @@ Usare questa procedura guidata per creare test dell'interfaccia utente per app U
   
 ## <a name="deploy-the-windows-phone-app"></a>Distribuire l'app per Windows Phone  
   
-1.  Prima che un test codificato dell'interfaccia utente possa mappare i controlli di un'app, è necessario distribuirla.  
+1.  Prima che un test codificato dell'interfaccia utente possa eseguire il mapping dei controlli di un'app, è necessario distribuire quest'ultima.  
   
      ![Distribuire l'app per Windows Phone](../test/media/cuit_phone_deploy.png "CUIT_Phone_Deploy")  
   
@@ -105,7 +106,7 @@ Usare questa procedura guidata per creare test dell'interfaccia utente per app U
   
      ![Generare il test dell'interfaccia utente codificata tramite lo strumento selettore di precisione.](../test/media/cuit_phone_howgencodedialog.png "CUIT_Phone_HowGenCodeDialog")  
   
-3.  Usare lo strumento selettore di precisione per selezionare l'app, quindi copiare il valore per la proprietà **AutomationId** dell'app, che verrà usato successivamente per avviare l'app durante il test.  
+3.  Usare lo strumento selettore di precisione per selezionare l'app e quindi copiare il valore della proprietà **AutomationId** dell'app, che verrà usato successivamente per avviare l'app durante il test.  
   
      ![Copiare il valore AutomationId dell'app](../test/media/cuit_phone_getautomationid.png "CUIT_Phone_GetAutomationId")  
   
@@ -308,7 +309,7 @@ Usare questa procedura guidata per creare test dell'interfaccia utente per app U
   
      ![Compilare ed eseguire il test con Esplora test](../test/media/cuit_phone_runtestexplorer.png "CUIT_Phone_RunTestExplorer")  
   
-     L'app per Windows Phone viene avviata, l'azione per il tocco del pulsante è completata e la proprietà Text della casella di testo è popolata e convalidata tramite il metodo Assert.  
+     L'app di Windows Phone viene avviata, l'azione per il tocco del pulsante viene completata e la proprietà Text della casella di testo viene popolata e convalidata tramite il metodo Assert.  
   
      ![Esecuzione del test di Windows Phone](../test/media/cuit_phone_runtestexplorerrunning.png "CUIT_Phone_RunTestExplorerRunning")  
   
@@ -339,7 +340,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
   
  ![Selezionare la versione dell'emulatore o il dispositivo fisico](../test/media/cuit_phone_testtarget.png "CUIT_Phone_TestTarget")  
   
-### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>D: Perché non è presente un'opzione per registrare il test codificato dell'interfaccia utente nella finestra di dialogo Genera codice per test codificato dell'interfaccia utente?  
+### <a name="q-why-dont-i-see-the-option-to-record-my-coded-ui-test-in-the-generate-code-for-a-coded-ui-test-dialog"></a>D: Perché nella finestra di dialogo Genera codice per un test codificato dell'interfaccia utente non è presente un'opzione per registrare un test codificato dell'interfaccia utente personalizzato?  
  **R**: L'opzione per la registrazione non è supportata per le app per Windows Phone.  
   
 ### <a name="q-can-i-create-a-coded-ui-test-for-my-windows-phone-apps-based-on-winjs-silverlight-or-html5"></a>Q: È possibile creare un test codificato dell'interfaccia utente per le app per Windows Phone basate su WinJS, Silverlight o HTML5?  
@@ -370,7 +371,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 ### <a name="q-can-i-run-a-coded-ui-test-on-my-windows-phone-app-from-the-command-line"></a>D: È possibile eseguire un test codificato dell'interfaccia utente sull'app per Windows Phone dalla riga di comando?  
  **R**: Sì, usando un file con estensione runsettings per specificare il dispositivo di destinazione per l'esecuzione del test. Ad esempio:  
   
- **vstest.console.exe “pathToYourCodedUITestDll” /settings:devicetarget.runsettings**  
+ **vstest.console.exe "pathToYourCodedUITestDll" /settings:devicetarget.runsettings**  
   
  File con estensione runsettings di esempio:  
   
@@ -394,7 +395,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
 |Destinazione per l'esecuzione di test|Computer locale o remoto. È possibile specificare i computer quando si usa un test case automatizzato per l'esecuzione dei test. Vedere [Automatizzare un test case in Microsoft Test Manager](/devops-test-docs/test/automate-a-test-case-in-microsoft-test-manager).|Emulatore o dispositivo. Vedere, [D: È possibile eseguire i test solo nell'emulatore o si può usare anche un dispositivo fisico?](#TestingPhoneAppsCodedUI_EmulatorDevice) in questo argomento.|  
 |Esecuzione dalla riga di comando|File di impostazioni non necessario per specificare la destinazione.|File con estensione runsettings necessario per specificare la destinazione.|  
 |Classi specializzate per controlli della shell|<xref:Microsoft.VisualStudio.TestTools.UITesting.DirectUIControls.DirectUIControl>|<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl>|  
-|Controllo WebView in un'app XAML|Supportato se si usano classi specializzate Html* per interagire con gli elementi HTML. Vedere <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>.|Non supportata.|  
+|Controllo WebView in un'app XAML|Supportato se si usano classi specializzate Html* per interagire con gli elementi HTML. Vedere <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>.|Non supportato.|  
 |Esecuzione di test automatizzati da MTM|Supportata.|Non supportata.|  
 |Test basati su dati|Per informazioni sull'uso di origini dati esterne e sull'uso dell'attributo DataSource su un metodo di test, vedere [Test basati sui dati](../test/creating-a-data-driven-coded-ui-test.md).|I dati sono specificati inline, usando l'attributo DataRow su un metodo di test. Vedere [Usare test codificati dell'interfaccia utente basati sui dati sulle app per Windows Phone](#TestingPhoneAppsCodedUI_DataDriven) in questo argomento.|  
   

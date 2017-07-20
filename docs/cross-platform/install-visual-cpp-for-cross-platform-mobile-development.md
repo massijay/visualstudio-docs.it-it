@@ -30,10 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: bfe3001ddefaba1220174fecbf8e484fe4987efd
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: d284309b0243f8d551d06c53d50d5df5de8f3f3c
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="install-visual-c-for-cross-platform-mobile-development"></a>Install Visual C++ for Cross-Platform Mobile Development
@@ -42,7 +43,7 @@ ms.lasthandoff: 02/22/2017
  [Requisiti](#Requirements)   
  [Ottenere gli strumenti](#GetTheTools)   
  [Installare gli strumenti](#InstallTheTools)   
- [Installare gli strumenti per iOS](#InstallForiOS)   
+ [Install tools for iOS](#InstallForiOS)   
  [Installare o aggiornare manualmente le dipendenze](#ThirdParty)  
   
 ##  <a name="Requirements"></a> Requisiti  
@@ -100,8 +101,8 @@ ms.lasthandoff: 02/22/2017
   
 5.  Aprire Visual Studio. Se è la prima volta che si esegue Visual Studio, la configurazione e l'accesso possono richiedere tempo. Quando Visual Studio è pronto, nel menu **Strumenti** selezionare **Estensioni e aggiornamenti**, quindi **Aggiornamenti**. Se sono disponibili aggiornamenti di Visual Studio per Visual C++ per Sviluppo app per dispositivi mobili multipiattaforma o per Microsoft Visual Studio Emulator for Android, è necessario installarli.  
   
-##  <a name="InstallForiOS"></a> Installare gli strumenti per iOS  
- È possibile usare Visual C++ per Sviluppo app per dispositivi mobili multipiattaforma per modificare, eseguire il debug e distribuire codice iOS al simulatore iOS o a un dispositivo iOS ma, a causa di restrizioni di licenza, il codice deve essere compilato in remoto su Mac. Per compilare ed eseguire le app iOS usando Visual Studio, è necessario installare e configurare l'agente remoto sul Mac. Per istruzioni dettagliate sull'installazione, i prerequisiti e le opzioni di configurazione, vedere [Installare e configurare gli strumenti per la compilazione con iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md). Se non si compila per iOS, è possibile ignorare questo passaggio.  
+##  <a name="InstallForiOS"></a> Install tools for iOS  
+ È possibile usare Visual C++ per Sviluppo app per dispositivi mobili multipiattaforma per modificare, eseguire il debug e distribuire codice iOS al simulatore iOS o a un dispositivo iOS ma, a causa di restrizioni di licenza, il codice deve essere compilato in remoto su Mac. Per compilare ed eseguire le app iOS usando Visual Studio, è necessario installare e configurare l'agente remoto sul Mac. Per istruzioni dettagliate sull'installazione, prerequisiti e le opzioni di configurazione, vedere [Install And Configure Tools to Build using iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md). Se non si compila per iOS, è possibile ignorare questo passaggio.  
   
 ##  <a name="ThirdParty"></a> Installare o aggiornare manualmente le dipendenze  
  Se si decide di non installare una o più dipendenze di terze parti con il programma di installazione di Visual Studio quando si installa l'opzione Sviluppo di app per dispositivi mobili in Visual C++, è possibile installarle in un secondo momento usando la procedura descritta in [Install the tools](#InstallTheTools). Possono anche essere installate a aggiornate in modo indipendente da Visual Studio.  

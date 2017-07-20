@@ -75,25 +75,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 07dfd26933090708cf40adff5f7ceb4785686245
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 1d273749cc41eb975dc9f93329edf9a57aaae09a
+ms.contentlocale: it-it
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="manage-external-tools"></a>Gestire strumenti esterni
+# Gestire strumenti esterni
+<a id="manage-external-tools" class="xliff"></a>
 È possibile chiamare strumenti esterni direttamente in Visual Studio usando il menu **Strumenti**. Alcuni strumenti predefiniti sono disponibili nel menu **Strumenti**, ma è possibile aggiungere altri file eseguibili personalizzati.  
 
-## <a name="tools-available-on-the-visual-studio-tools-menu"></a>Strumenti disponibili nel menu Strumenti di Visual Studio
+## Strumenti disponibili nel menu Strumenti di Visual Studio
+<a id="tools-available-on-the-visual-studio-tools-menu" class="xliff"></a>
  Il menu **Strumenti** include alcuni strumenti predefiniti, ad esempio:
 
 *  **Estensioni e aggiornamenti** per la [gestione delle estensioni di Visual Studio](finding-and-using-visual-studio-extensions.md)
 *  **Gestione frammenti di codice** per l'[organizzazione dei frammenti di codice](code-snippets.md#code-snippet-manager)
 *  **PreEmptive Protection - Dotfuscator** per l'avvio di [Dotfuscator Community Edition (CE)](dotfuscator/index.md) se [installato](dotfuscator/install.md)
-*  **Personalizza** per la [personalizzazione di menu e barre degli strumenti](how-to-customize-menus-and-toolbars-in-visual-studio)
+*  **Personalizza** per la [personalizzazione di menu e barre degli strumenti](how-to-customize-menus-and-toolbars-in-visual-studio.md)
 *  **Opzioni** per l'[impostazione di un'ampia gamma di opzioni per l'IDE di Visual Studio e altri strumenti](reference/options-dialog-box-visual-studio.md)
 
-## <a name="add-new-tools-to-the-tools-menu"></a>Aggiungere nuovi strumenti al menu Strumenti 
+## Aggiungere nuovi strumenti al menu Strumenti
+<a id="add-new-tools-to-the-tools-menu" class="xliff"></a> 
  È possibile aggiungere uno strumento esterno al menu **Strumenti**. Aprire la finestra di dialogo **Strumenti esterni**, fare clic su **Aggiungi** e quindi specificare le informazioni. L'immissione seguente consente ad esempio di aprire la cartella dove si trova il file attualmente aperto in Visual Studio:  
   
 1.  Titolo: *Apri percorso file*
@@ -126,6 +130,7 @@ ms.lasthandoff: 04/05/2017
 |Directory soluzione|$(SolutionDir)|Directory della soluzione corrente (unità + percorso).|  
 |Nome file della soluzione|$(SolutionFileName)|Nome file della soluzione corrente (unità + percorso + nome file).|  
 
-## <a name="see-also"></a>Vedere anche  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Strumenti per la compilazione in C/C++](/cpp/build/reference/c-cpp-build-tools)
 

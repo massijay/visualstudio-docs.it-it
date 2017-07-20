@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: c0fa199f2ccbdc7b4e60b4295645ccf83792d435
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 8e829f0c69a777dcdcda75aa9305b9202748f23e
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyze-cpu-usage-in-a-universal-windows-app-uwp"></a>Analizzare l'utilizzo della CPU in un'app di Windows universale (UWP)
@@ -88,7 +89,7 @@ ms.lasthandoff: 03/07/2017
 ###  <a name="BKMK_CPU_utilization_timeline_graph"></a> Grafico della sequenza temporale dell'utilizzo della CPU  
  ![Grafico della sequenza temporale di CpuUtilization &#40;%&#41;](../profiling/media/cpu_use_wt_timelinegraph.png "CPU_USE_WT_TimelineGraph")  
   
- Il grafico dell'utilizzo della CPU mostra l'attività della CPU dell'app sotto forma di percentuale di tutto il tempo CPU per tutti i core del processore nel dispositivo. I dati di questo report sono stati raccolti in una macchina dual core. I due grossi picchi rappresentano l'attività della CPU per i due clic sui pulsanti. `GetMaxNumberButton_Click` viene eseguito in modo sincrono in un singolo core, pertanto è logico che l'altezza del grafico del metodo non superi mai il 50%. `GetMaxNumberAsycButton_Click` viene eseguito in modo asincrono in entrambi i core, pertanto anche in questo caso è logico che il picco relativo si avvicini all'utilizzo di tutte le risorse della CPU in entrambi i core.  
+ Il grafico dell'utilizzo della CPU mostra l'attività della CPU dell'app sotto forma di percentuale di tutto il tempo CPU per tutti i core del processore nel dispositivo. I dati di questo report sono stati raccolti in una macchina dual core. I due grossi picchi rappresentano l'attività della CPU per i due clic sui pulsanti. `GetMaxNumberButton_Click` viene eseguito in modo sincrono in un core singolo, pertanto è logico che l'altezza del grafico del metodo non superi mai il 50%. `GetMaxNumberAsycButton_Click` viene eseguito in modo asincrono in entrambi i core, pertanto anche in questo caso è logico che il picco relativo si avvicini all'utilizzo di tutte le risorse della CPU in entrambi i core.  
   
 ####  <a name="BKMK_Select_timeline_segments_to_view_details"></a> Selezionare i segmenti della sequenza temporale per visualizzare i dettagli  
  Usare le barre di selezione nella sequenza temporale **Sessione di diagnostica** per analizzare i dati di GetMaxNumberButton_Click:  
@@ -117,7 +118,7 @@ ms.lasthandoff: 03/07/2017
 |![Passaggio 4](../profiling/media/procguid_4.png "ProcGuid_4")|I nodi figlio di un metodo contengono i dati solo per le chiamate del metodo padre. Quando l'opzione **Mostra codice esterno** è disabilitata, i metodi dell'app possono contenere anche un nodo **[Codice esterno]** .|  
   
 ####  <a name="BKMK_External_Code"></a> Codice esterno  
- Il codice esterno è costituito da funzioni nei componenti del sistema e del framework che vengono eseguite dal codice scritto. Include funzioni che avviano e arrestano l'app, disegnano l'interfaccia utente, controllano il threading e forniscono altri servizi di basso livello all'app. Nella maggior parte dei casi il codice esterno è poco interessante, per questo motivo l'albero delle chiamate di Utilizzo CPU raccoglie le funzioni esterne di un metodo utente in un unico nodo **[Codice esterno]** .  
+ Il codice esterno è costituito da funzioni nei componenti del sistema e del framework che vengono eseguite dal codice scritto. Include funzioni che avviano e arrestano l'app, disegnano l'interfaccia utente, controllano il threading e forniscono altri servizi di basso livello all'app. Nella maggior parte dei casi il codice esterno è poco interessante, per questo motivo l'albero delle chiamate di Utilizzo CPU raccoglie le funzioni esterne di un metodo utente in un unico nodo **[Codice esterno]**.  
   
  Se vuoi visualizzare i percorsi delle chiamate del codice esterno, scegli **Mostra codice esterno** nell'elenco **Visualizzazione filtro** e quindi scegli **Applica**.  
   
@@ -148,7 +149,7 @@ ms.lasthandoff: 03/07/2017
   
  ![GetMaxNumberAsyncButton&#95;Fare clic sulla selezione del report](../profiling/media/cpu_use_wt_getmaxnumberasync_selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
   
- I primi due nodi sotto **[Codice esterno]** sono i metodi generati dal compilatore della classe macchina a stati. Il terzo è la chiamata al metodo originale. Espandendo i metodi generati puoi vedere ciò che succede.  
+ I primi due nodi sotto **[Codice esterno]** sono i metodi generati dal compilatore della classe macchina a stati. Il terzo è la chiamata al metodo originale. Espandendo i metodi generati è possibile vedere cosa accade.  
   
  ![Expanded GetMaxNumberAsyncButton&#95;Fare clic sull'albero](../profiling/media/cpu_use_wt_getmaxnumberasync_expandedcalltree.png "CPU_USE_WT_GetMaxNumberAsync_ExpandedCallTree")  
   
@@ -163,9 +164,9 @@ ms.lasthandoff: 03/07/2017
   
 -   Osserva che `MainPage::<GetNumberAsync>b__b` usa più tempo in [Codice esterno] rispetto a quello usato per l'esecuzione del metodo GetNumber. Gran parte di questo tempo è correlato al sovraccarico delle operazioni asincrone. Prova ad aumentare il numero di attività (impostato nella costante `NUM_TASKS` di MainPage.xaml.cs) e a ridurre il numero di iterazioni in `GetNumber` (modifica il valore di `MIN_ITERATIONS`). Esegui lo scenario di raccolta e confronta l'attività della CPU di `MainPage::<GetNumberAsync>b__b` con quella della sessione di diagnostica originale di Utilizzo CPU. Prova a ridurre le attività e ad aumentare le iterazioni.  
   
--   Gli utenti spesso non danno importanza alle reali prestazioni della tua app, bensì alle prestazioni percepite e alla velocità di risposta dell'app. Lo strumento Velocità di risposta interfaccia utente XAML mostra i dettagli dell'attività nel thread UI che influiscono sulla velocità di risposta percepita.  
+-   Gli utenti spesso non danno importanza alle reali prestazioni dell'app, bensì alle prestazioni percepite e alla velocità di risposta dell'app. Lo strumento Velocità di risposta interfaccia utente XAML mostra i dettagli dell'attività nel thread UI che influiscono sulla velocità di risposta percepita.  
   
-     Crea una nuova sessione nell'hub Prestazioni e diagnostica e aggiungi sia lo strumento Velocità di risposta interfaccia utente XAML sia lo strumento Utilizzo CPU. Esegui lo scenario di raccolta. Probabilmente il report non conterrà informazioni non note, ma sarà possibile osservare le notevoli differenze nel grafico della sequenza temporale di **Utilizzo thread UI** per i due metodi. Con le app complesse reali, la combinazione di strumenti può essere molto utile.  
+     Crea una nuova sessione nell'hub Prestazioni e diagnostica e aggiungi sia lo strumento Velocità di risposta interfaccia utente XAML sia lo strumento Utilizzo CPU. Esegui lo scenario di raccolta. Probabilmente il report non conterrà informazioni non note, ma sarà possibile osservare le notevoli differenze nel grafico della sequenza temporale di **Utilizzo thread interfaccia utente** per i due metodi. Con le app complesse reali, la combinazione di strumenti può essere molto utile.  
   
 ##  <a name="BKMK_MainPage_xaml"></a> MainPage.xaml  
   

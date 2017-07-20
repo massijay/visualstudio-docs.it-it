@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: e9a05d008f671fb79d6813a14c594b82f27697e3
-ms.openlocfilehash: 1613943840c79028e3c60db0f54a73243eb3948c
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: a2958c20bbfbd9f4f3d03946dbe230326894b1c1
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="gpu-usage"></a>Utilizzo GPU
@@ -57,7 +58,7 @@ Lo strumento Utilizzo GPU disponibile nell'hub Prestazioni e diagnostica consent
   
 1.  Nel menu principale scegliere **Debug**, quindi **Prestazioni e diagnostica** (tastiera: premere ALT+F2).  
   
-2.  Nell'hub Prestazioni e diagnostica selezionare la casella accanto a **Utilizzo GPU**. Facoltativamente, selezionare le caselle accanto agli altri strumenti a cui si è interessati. È possibile eseguire contemporaneamente svariati strumenti per le prestazioni e la diagnostica, per ottenere un quadro più completo delle prestazioni dell'app.  
+2.  Nell'hub Prestazioni e diagnostica selezionare la casella accanto a **Utilizzo GPU**. Facoltativamente, selezionare le caselle accanto agli altri strumenti a cui si è interessati. È possibile eseguire contemporaneamente svariati strumenti per prestazioni e diagnostica per ottenere un quadro più completo delle prestazioni dell'app.  
   
      ![Scegliere gli strumenti di diagnostica da usare.](media/gfx_diag_diagsession_tools.png "gfx_diag_diagsession_tools")  
   
@@ -66,9 +67,9 @@ Lo strumento Utilizzo GPU disponibile nell'hub Prestazioni e diagnostica consent
   
 3.  Scegliere il pulsante blu **Inizia** nella parte inferiore dell'hub Prestazioni e diagnostica per eseguire l'app negli strumenti selezionati.  
   
- Le informazioni di alto livello visualizzate in tempo reale includono durata dei frame, frequenza dei frame e utilizzo della GPU. Le diverse informazioni sono rappresentate in grafici distinti, ma usano una scala cronologica comune, in modo che sia possibile correlarle facilmente.  
+ Le informazioni generali visualizzate in tempo reale includono la durata e la frequenza dei fotogrammi e l'utilizzo della GPU. Le diverse informazioni sono rappresentate in grafici distinti, ma usano una scala cronologica comune, in modo che sia possibile correlarle facilmente.  
   
- I grafici **Durata frame (ms)** e **Frame al secondo (FPS)** contengono due linee rosse orizzontali che rappresentano destinazioni di prestazioni di 30 e 60 frame al secondo. Nel grafico **Durata frame** l'app supera la destinazione di prestazioni se il grafico si trova sotto la linea e non la raggiunge se il grafico si trova sopra la linea. Nel grafico Frame per secondo avviene il contrario: l'app supera la destinazione di prestazioni se il grafico si trova sopra la linea e non la raggiunge se il grafico si trova sotto la linea. In primo luogo, questi grafici consentono di ottenere un'idea generale delle prestazioni dell'app e di identificare i rallentamenti che può essere utile analizzare, ad esempio un calo improvviso della frequenza dei frame o un picco nell'utilizzo della GPU.  
+ I grafici **Durata frame (ms)** e **Frame al secondo (FPS)** contengono due linee rosse orizzontali che rappresentano destinazioni di prestazioni di 30 e 60 frame al secondo. Nel grafico **Durata frame** l'app supera la destinazione di prestazioni se il grafico si trova sotto la linea e non la raggiunge se il grafico si trova sopra la linea. Nel grafico Fotogrammi al secondo avviene il contrario: l'app supera l'obiettivo di prestazioni se il grafico si trova sopra la linea e non lo raggiunge se il grafico si trova sotto la linea. In primo luogo, questi grafici consentono di ottenere un'idea generale delle prestazioni dell'app e di identificare i rallentamenti che può essere utile analizzare, ad esempio un calo improvviso della frequenza dei fotogrammi o un picco nell'utilizzo della GPU.  
   
  Quando l'app viene eseguita nello strumento Utilizzo GPU, la sessione di diagnostica raccoglie anche informazioni dettagliate sugli eventi di grafica eseguiti nella GPU. Queste informazioni vengono usate per generare un report più dettagliato sul modo in cui l'app utilizza l'hardware. Poiché la generazione del report a partire dalle informazioni raccolte richiede del tempo, il report è disponibile solo al termine della raccolta delle informazioni nella sessione di diagnostica.  
   
@@ -84,7 +85,7 @@ Lo strumento Utilizzo GPU disponibile nell'hub Prestazioni e diagnostica consent
   
      ![Dopo la raccolta, selezionare un intervallo per visualizzare i dettagli](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")  
   
-3.  Nella parte inferiore del report scegliere il collegamento **Visualizza dettagli** nel messaggio **…Fare clic qui per visualizzare i dettagli sull'utilizzo della GPU in tale intervallo** per visualizzare una sequenza temporale dettagliata della selezione.  
+3.  Nella parte inferiore del report scegliere il collegamento **visualizzare i dettagli** nel messaggio **…Fare clic qui per visualizzare i dettagli sull'utilizzo della GPU in tale intervallo** per visualizzare una sequenza temporale dettagliata della selezione.  
   
      ![Dopo la raccolta, con intervallo selezionato](media/gfx_diag_gpu_usage_select2.png "gfx_diag_gpu_usage_select2")  
   
@@ -102,20 +103,20 @@ A partire da Visual Studio 2017, questi dati possono essere aperti con [GPUView]
   
  Nella parte inferiore viene visualizzato un elenco degli eventi di grafica che si sono verificati nel periodo di tempo esaminato nel report.  
   
- Di seguito è illustrata la finestra **Report Utilizzo GPU**:  
+ Di seguito viene illustrata la finestra **Report Utilizzo GPU**:  
   
  ![Report Utilizzo GPU con sequenze temporali per CPU e GPU](media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")  
   
  Selezionando uno degli eventi nella parte inferiore del report, nelle sequenze temporali pertinenti viene inserito un marcatore accanto agli eventi corrispondenti. In genere si tratta di un evento su un thread della CPU, che rappresenta la chiamata API, e di un secondo evento in una delle sequenze temporali della GPU, che rappresenta il punto in cui la GPU ha completato l'attività. Analogamente, se si seleziona uno degli eventi in una sequenza temporale, nella parte inferiore del report viene evidenziato l'evento corrispondente. Quando si riduce il livello di zoom sulle sequenze temporali nella parte superiore del report, sono visibili solo gli eventi che richiedono più tempo. Per visualizzare gli eventi di durata più breve, ingrandire le sequenze temporali premendo CTRL e la rotellina del dispositivo di puntamento oppure usando il controllo di ridimensionamento nell'angolo inferiore sinistro del riquadro superiore. È anche possibile trascinare il contenuto del pannello della sequenza temporale per spostarsi tra gli eventi registrati.  
   
- Per trovare più facilmente ciò che sta cercando, è possibile filtrare il report Utilizzo GPU in base a nomi di processo, ID dei thread e nome dell'evento. È anche possibile scegliere lo schermo la cui frequenza di aggiornamento determina le linee vysnc e, se l'app usa l'interfaccia ID3DUserDefinedAnnotation per raggruppare i comandi di rendering, ordinare gerarchicamente gli eventi.  
+ Per trovare più facilmente ciò che si sta cercando, è possibile filtrare il report Utilizzo GPU in base a nomi di processo, ID dei thread e nome dell'evento. È anche possibile scegliere lo schermo la cui frequenza di aggiornamento determina le linee vysnc e, se l'app usa l'interfaccia ID3DUserDefinedAnnotation per raggruppare i comandi di rendering, ordinare gerarchicamente gli eventi.  
   
  Di seguito sono disponibili maggiori dettagli:  
   
 |Controllo filtro|Descrizione|  
 |--------------------|-----------------|  
 |**Processo**|Nome del processo a cui si è interessati. Questo elenco a discesa contiene tutti i processi che hanno utilizzato la GPU durante la sessione di diagnostica. Il colore associato al processo nell'elenco a discesa è il colore dell'attività del thread nelle sequenze temporali successive.|  
-|**Thread**|ID del thread a cui si è interessati. In un'app multithread, questo consente di isolare gli specifici thread che appartengono al processo a cui si è interessati. Gli eventi associati al thread selezionato sono evidenziati in ogni sequenza temporale.|  
+|**Thread**|ID del thread a cui si è interessati. In un'app multithread, questo consente di isolare thread specifici che appartengono al processo a cui si è interessati. Gli eventi associati al thread selezionato sono evidenziati in ogni sequenza temporale.|  
 |**Schermo**|Numero dello schermo di cui è visualizzata la frequenza di aggiornamento **Nota:** alcuni driver possono essere configurati in modo da presentare più schermi fisici come un unico schermo virtuale di grandi dimensioni. È possibile che nell'elenco sia presente un solo schermo, anche se al computer sono collegati più schermi.|  
 |**Filtro**|Parole chiave a cui si è interessati. Nella parte inferiore del report saranno visualizzati solo gli eventi che corrispondono completamente o parzialmente a una parola chiave. È possibile specificare più parole chiave separandole con un punto e virgola (;).|  
 |**Hierarchy Sort** (Ordinamento gerarchia)|Casella di controllo che indica se le gerarchie degli eventi, definite mediante marcatori utente, vengono mantenute o ignorate.|  
@@ -132,10 +133,10 @@ A partire da Visual Studio 2017, questi dati possono essere aperti con [GPUView]
 |**ID thread**|ID del thread da cui proviene l'evento.|  
   
 > [!IMPORTANT]
->  Per l'attribuzione degli eventi è necessario Windows 8.1. Inoltre, se la GPU o il driver non supporta le funzionalità di strumentazione necessarie, tutti gli eventi vengono visualizzati come non attribuiti. Se si verifica questo problema, aggiornare il driver della GPU e riprovare. Per altre informazioni, vedere [Hardware e driver supportati](#hwsupport) più avanti.  
+>  Per l'attribuzione degli eventi è necessario Windows 8.1. Se la GPU o il driver non supporta le funzionalità di strumentazione necessarie, tutti gli eventi vengono visualizzati come non attribuiti. Se si verifica questo problema, aggiornare il driver della GPU e riprovare. Per altre informazioni, vedere [Hardware e driver supportati](#hwsupport) più avanti.  
   
 ## <a name="gpu-usage-settings"></a>Impostazioni di Utilizzo GPU  
- Si può configurare lo strumento Utilizzo GPU in modo da posticipare la raccolta di informazioni di profilatura, anziché iniziare a raccogliere le informazioni all'avvio dell'app. Poiché le dimensioni delle informazioni di profilatura possono essere significative, questo è utile quando si è certi che i rallentamenti nelle prestazioni dell'app compariranno solo in un momento successivo.  
+ Si può configurare lo strumento Utilizzo GPU in modo da posticipare la raccolta di informazioni di profilatura, anziché iniziare a raccogliere le informazioni all'avvio dell'app. Poiché le dimensioni delle informazioni di profilatura possono essere notevoli, questo è utile quando si è certi che i rallentamenti nelle prestazioni dell'app compariranno solo in un momento successivo.  
   
 #### <a name="to-postpone-profiling-from-the-start-of-the-app"></a>Per posticipare la profilatura rispetto all'avvio dell'app:  
   

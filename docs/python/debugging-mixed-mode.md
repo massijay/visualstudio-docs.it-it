@@ -29,16 +29,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: 919227fb624f4b6dc51e13ccadea8e2682b9816f
+ms.sourcegitcommit: 90b2481b0ec4f9387fe3a2c0b733a103e8c03845
+ms.openlocfilehash: 9e8ac0cbafe296223de68eb5b4f1b89680f61088
 ms.contentlocale: it-it
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
 # <a name="debugging-python-and-c-together"></a>Debug di codice Python e C++ in contemporanea
 
-La maggior parte dei normali debugger Python supporta solo il debug di codice Python. Nella pratica, tuttavia, Python viene usato in combinazione con C o C++ quando sono richieste prestazioni elevate o la possibilità di richiamare direttamente le API della piattaforma. Per un esempio, vedere [Creating a C++ Extension for Python](cpp-and-python.md) (Creazione di un'estensione C++ per Python). Visual Studio include funzionalità di debug in modalità mista integrate e in contemporanea per Python e i linguaggi nativi C/C++, con stack di chiamate combinate, la possibilità di passare tra codice Python e codice nativo, punti di interruzione per entrambi i tipi di codice e la possibilità di visualizzare rappresentazioni Python degli oggetti nei frame nativi e viceversa:
+La maggior parte dei normali debugger Python supporta solo il debug di codice Python. Nella pratica, tuttavia, Python viene usato in combinazione con C o C++ quando sono richieste prestazioni elevate o la possibilità di richiamare direttamente le API della piattaforma. Per un esempio, vedere [Creating a C++ Extension for Python](cpp-and-python.md) (Creazione di un'estensione C++ per Python). Quando viene caricato un progetto Python, Visual Studio include funzionalità di debug in modalità mista integrate e in contemporanea per Python e i linguaggi nativi C/C++, con stack di chiamate combinate, la possibilità di passare tra codice Python e codice nativo, punti di interruzione per entrambi i tipi di codice e la possibilità di visualizzare rappresentazioni Python degli oggetti nei frame nativi e viceversa:
 
 ![Debug in modalità mista](media/mixed-mode-debugging.png) 
 
@@ -70,6 +70,13 @@ Per un'introduzione a compilazione, test e debug dei moduli C nativi con Visual 
 
 1. È anche possibile avere a disposizione il codice sorgente Python. Il codice Python standard è disponibile in [https://www.python.org/downloads/source/](https://www.python.org/downloads/source/). Scaricare l'archivio appropriato per la versione e decomprimerlo in una cartella. Sarà possibile puntare Visual Studio a file specifici nella cartella ogni volta che verrà richiesto.
 
+> [!Note]
+> Il debug in modalità mista come descritto di seguito è abilitato solo se in Visual Studio è stato caricato un progetto Python. Tale progetto determina la modalità di debug di Visual Studio, rendendo disponibile l'opzione di modalità mista. Se, tuttavia, è stato caricato un progetto C++, come avviene quando [Python viene incorporato in un'altra applicazione come descritto in python.org](https://docs.python.org/3/extending/embedding.html), Visual Studio usa il debugger C++ nativo che non supporta il debug in modalità mista.
+>
+> In questo caso, avviare il progetto C++ senza eseguire debug (**Debug > Avvia senza eseguire debug** o CTRL + F5), quindi usare **Debug > Connetti a processo**. Nella finestra di dialogo visualizzata selezionare il processo appropriato, quindi usare il pulsante **Seleziona** per aprire la finestra di dialogo **Seleziona tipo di codice** in cui è possibile selezionare Python, come illustrato di seguito. Selezionare **OK** per chiudere la finestra di dialogo e quindi **Allega** per avviare il debugger. Si noti che potrebbe essere necessario introdurre una pausa o un ritardo nell'applicazione di C++ per assicurarsi che non chiami il progetto Python di cui si vuole eseguire il debug prima di allegare il debugger.
+>
+> ![Selezione di Python come tipo di debug quando si allega un debugger](media/mixed-mode-debugging-attach-type.png)
+
 ## <a name="mixed-mode-specific-features"></a>Funzionalità specifiche della modalità mista
 
 - [Stack di chiamate combinato](#combined-call-stack)
@@ -94,7 +101,7 @@ Quando si usano i comandi Esegui istruzione (F11) o Esci da istruzione/routine (
 
 ### <a name="pyobject-values-view-in-native-code"></a>Visualizzazione di valori PyObject nel codice nativo
 
-Quando è attivo un frame nativo (C o C++), le relative variabili locali vengono visualizzate nella finestra Variabili locali del debugger. Nei moduli di estensione Python nativi, molte di queste sono di tipo `PyObject` (ovvero un typedef per `_object`) o di alcuni altri tipi di Python fondamentali (vedere l'elenco riportato di seguito). Nel debug in modalità mista, per questi valori esiste un nodo figlio aggiuntivo denominato "visualizzazione Python". Quando viene espanso, questo nodo mostra la rappresentazione Python della variabile, identica a quella che si vedrebbe se in un frame Python fosse presente una variabile locale che fa riferimento allo stesso oggetto. Gli elementi figlio di questo nodo sono modificabili.
+Quando è attivo un frame nativo (C o C++), le relative variabili locali vengono visualizzate nella finestra Variabili locali del debugger. Nei moduli di estensione Python nativi, molte di queste sono di tipo `PyObject` (ovvero un typedef per `_object`) o di alcuni altri tipi di Python fondamentali (vedere l'elenco riportato di seguito). Nel debug in modalità mista, per questi valori esiste un nodo figlio aggiuntivo denominato "visualizzazione Python". Quando viene espanso, questo nodo illustra la rappresentazione Python della variabile, identica a quella che si vedrebbe se in un frame Python fosse presente una variabile locale che fa riferimento allo stesso oggetto. Gli elementi figlio di questo nodo sono modificabili.
 
 ![Python View (Visualizzazione Python)](media/mixed-mode-debugging-python-view.png)
 

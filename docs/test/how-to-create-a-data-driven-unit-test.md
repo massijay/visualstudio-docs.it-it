@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
 ms.openlocfilehash: 2eaf4aa44fdc1bec56bb513af54ea7db72dcf3db
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: it-it
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>Procedura: Creare uno unit test basato sui dati
@@ -63,11 +64,11 @@ Tramite il framework unit test Microsoft per il codice gestito, è possibile imp
   
 1.  Creare un'origine dati che contiene i valori usati nel metodo di test. L'origine dati può essere di qualsiasi tipo registrato nel computer che esegue il test.  
   
-2.  Aggiungere un campo privato <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> e una proprietà pubblica `TestContext` alla classe di test.  
+2.  Aggiungere un campo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> privato e una proprietà `TestContext` pubblica alla classe di test.  
   
-3.  Creare un metodo di unit test e aggiungervi un attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>.  
+3.  Creare un metodo di unit test e aggiungere un attributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> al metodo.  
   
-4.  Usare la proprietà dell'indicizzatore <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A> per recuperare i valori usati in un test.  
+4.  Usare la proprietà <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A> dell'indicizzatore per recuperare i valori da usare in un test.  
   
 ##  <a name="BKMK_The_method_under_test"></a> Metodo sottoposto a test  
  Come esempio, si supponga di avere creato:  
@@ -182,7 +183,7 @@ public void AddIntegers_FromDataSourceTest()
 ```  
   
 ###  <a name="BKMK_Using_TestContext_DataRow_to_access_the_data"></a> Uso di TestContext. DataRow per l'accesso ai dati  
- Per accedere ai dati nella tabella `AddIntegersData`, usare l'indicizzatore `TestContext.DataRow`. `DataRow` è un oggetto <xref:System.Data.DataRow>, quindi i valori delle colonne vengono recuperati in base all'indice o ai nomi delle colonne. Poiché i valori vengono restituiti come oggetti, è necessario convertirli nel tipo appropriato:  
+ Per accedere ai dati nella tabella `AddIntegersData`, usare l'indicizzatore `TestContext.DataRow`. `DataRow` è un oggetto <xref:System.Data.DataRow>, pertanto i valori delle colonne vengono recuperati in base all'indice o ai nomi delle colonne. Poiché i valori vengono restituiti come oggetti, è necessario convertirli nel tipo appropriato:  
   
 ```  
 int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);  

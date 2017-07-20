@@ -1,7 +1,7 @@
 ---
 title: "Panoramica delle funzionalità di profilatura | Microsoft Docs"
-ms.custom: 
-ms.date: 02/03/2016
+ms.custom: H1HackMay2017
+ms.date: 05/18/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -30,13 +30,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 2beee9df6c4897d1fa7d55502a7ed277a1eb6046
-ms.openlocfilehash: 4a64d7385009b6d502fc20acfbead4b49323fa4f
-ms.lasthandoff: 03/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90b2481b0ec4f9387fe3a2c0b733a103e8c03845
+ms.openlocfilehash: a219a09f96b34a434a3bf1103e560104c294eb96
+ms.contentlocale: it-it
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="profiling-feature-tour"></a>Panoramica delle funzionalità di profilatura
+# <a name="feature-tour-of-profiling-in-visual-studio"></a>Panoramica delle funzionalità di profilatura in Visual Studio
 
 Visual Studio offre un'ampia gamma di strumenti di profilatura che consentono di diagnosticare diversi tipi di problemi di prestazioni in base al tipo di app.
 
@@ -169,14 +170,14 @@ Nella tabella seguente sono riportati i diversi strumenti offerti da Visual Stud
 |Strumento di prestazioni|Desktop di Windows|Windows Store/universale|ASP.NET/ASP.NET Core|  
 |----------------------|---------------------|------------------------------|-------------|  
 |[Utilizzo memoria](../profiling/memory-usage.md)|sì|sì|sì|  
-|[Utilizzo della CPU](../profiling/cpu-usage.md)|sì|sì|sì|  
+|[Utilizzo CPU](../profiling/cpu-usage.md)|sì|sì|sì|  
 |[Utilizzo GPU](../debugger/gpu-usage.md)|sì|sì|no|  
 |[Sequenza temporale applicazione](../profiling/application-timeline.md)|sì|sì|no|  
 |[PerfTips](../profiling/perftips.md)|sì|Sì per XAML, no per HTML|sì|  
-|[Performance Explorer](../profiling/performance-explorer.md) (Esplora prestazioni)|sì|no|sì (no per ASP.NET Core)|  
+|[Esplora prestazioni](../profiling/performance-explorer.md)|sì|no|sì (no per ASP.NET Core)|  
 |[IntelliTrace](../debugger/intellitrace.md)|Solo .NET Enterprise|Solo .NET Enterprise|Solo .NET Enterprise|
 |[Utilizzo della rete](../profiling/network-usage.md)|no|sì|no| 
-|[Velocità di risposta interfaccia utente HTML](../profiling/html-ui-responsiveness.md)|no|Sì per HTML, no per XAML|no|  
+|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|no|Sì per HTML, no per XAML|no|  
 |[Memoria JavaScript](../profiling/javascript-memory.md)|no|Sì per HTML, no per XAML|no|  
 
 ## <a name="see-also"></a>Vedere anche  

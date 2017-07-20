@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 6dfb5758833d9ecda1a6ac378eb3f5069cc80561
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 1d64aafdb107e0398c25f6efed7203524c111f18
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>Uso di shim per isolare l'applicazione da altri assembly per gli unit test
@@ -89,7 +90,7 @@ I **tipi shim** sono una delle due tecnologie che il framework Microsoft Fakes u
  [Limitazioni](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md#BKMK_Limitations)  
   
 ##  <a name="BKMK_Example__The_Y2K_bug"></a> Esempio: il bug dell'anno 2000  
- Si consideri un metodo che genera un'eccezione l'1 gennaio 2000:  
+ Si consideri un metodo che genera un'eccezione il 1° gennaio 2000:  
   
 ```c#  
 // code under test  
@@ -102,7 +103,7 @@ public static class Y2KChecker {
   
 ```  
   
- Il test di questo metodo è particolarmente problematico perché il programma dipende da `DateTime.Now`, un metodo che dipende dall'orologio del computer, ovvero un metodo che dipende dall'ambiente e non deterministico. Inoltre, `DateTime.Now` è una proprietà statica pertanto in questo caso non è possibile usare un tipo stub. Questo problema è sintomatico del problema di isolamento negli unit test: i programmi che eseguono chiamate direttamente nelle API di database, che comunicano con i servizi Web e così via sono difficili da sottoporre a unit test perché la loro logica dipende dall'ambiente.  
+ Il test di questo metodo è particolarmente problematico perché il programma dipende da `DateTime.Now`, un metodo che dipende dall'orologio del computer, ovvero un metodo che dipende dall'ambiente e non deterministico. `DateTime.Now` è anche una proprietà statica. Pertanto in questo caso non è possibile usare un tipo stub. Questo problema è sintomatico del problema di isolamento negli unit test: i programmi che eseguono chiamate direttamente nelle API di database, che comunicano con i servizi Web e così via sono difficili da sottoporre a unit test perché la loro logica dipende dall'ambiente.  
   
  In questi casi è necessario usare tipi shim. I tipi shim forniscono un meccanismo di deviazione di qualsiasi metodo .NET a un delegato definito dall'utente. I tipi shim vengono generati dal codice dal generatore Fakes e usano delegati, detti tipi shim, per specificare le nuove implementazioni del metodo.  
   
@@ -133,7 +134,7 @@ using (ShimsContext.Create()
 3.  Scegliere **Aggiungi assembly Fakes** dal menu di scelta rapida.  
   
 ###  <a name="ShimsContext"></a> Usare ShimsContext  
- Quando si usano tipi shim in un framework di unit test, è necessario eseguire il wrapping del codice di test in un oggetto `ShimsContext` per controllare la durata degli shim. Se ciò non fosse posto come condizione obbligatoria, gli shim durerebbero fino all'arresto di AppDomain. Il modo più semplice per creare un oggetto `ShimsContext` consiste nell'usare il metodo statico `Create()` come mostrato nel codice seguente:  
+ Quando si usano tipi shim in un framework di unit test, è necessario eseguire il wrapping del codice di test in un oggetto `ShimsContext` per controllare la durata degli shim. Se questa non fosse una condizione obbligatoria, gli shim durerebbero fino all'arresto di AppDomain. Il modo più semplice per creare un oggetto `ShimsContext` consiste nell'usare il metodo statico `Create()` come mostrato nel codice seguente:  
   
 ```c#  
 //unit test code  
@@ -539,7 +540,7 @@ ShimFile.WriteAllTextStringString = (fileName, content) => {
 ShimsDelegates.Action<string, string> shim = null;  
 shim = (fileName, content) => {  
   try {  
-    Console.WriteLine("enter”);  
+    Console.WriteLine("enter");  
     // remove shim in order to call original method  
     ShimFile.WriteAllTextStringString = null;  
     File.WriteAllText(fileName, content);  
@@ -562,7 +563,7 @@ ShimFile.WriteAllTextStringString = shim;
 ## <a name="external-resources"></a>Risorse esterne  
   
 ### <a name="guidance"></a>Materiale sussidiario  
- [Test per la distribuzione continua con Visual Studio 2012 – Capitolo 2: Unit Testing: Test interni](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Test per la distribuzione continua con Visual Studio 2012 - Capitolo 2: Testing unità: Test interni)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Isolamento del codice sottoposto a test con Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)   

@@ -1,50 +1,53 @@
 ---
-title: "Procedura: esportare una trama con alfa premoltiplicati | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: Esportare una trama con valori alfa premoltiplicati | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05348afa-f079-4f53-a05b-ecd91d13adab
 caps.latest.revision: 4
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# Procedura: esportare una trama con alfa premoltiplicati
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: BrianPeek
+ms.author: brpeek
+manager: ghogen
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b7b38036fafe64a86a132253b2597cd6d59eec6c
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
-La pipeline del contenuto di immagine può generare trame alfa premoltiplicate da un'immagine di origine.  Possono risultare più semplici da utilizzare e più affidabili rispetto alle trame che non contengono valori alfa premoltiplicati.  
+---
+# <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>Procedura: esportare una trama con alfa premoltiplicati
+La pipeline di contenuti immagine può generare trame con valori alfa premoltiplicati da un'immagine di origine. Queste trame possono essere più semplici da usare e più solide delle trame che non contengono valori alfa premoltiplicati.  
   
- In questo documento vengono illustrate queste attività:  
+ Questo documento illustra queste attività:  
   
--   La configurazione dell'immagine di origine deve essere elaborata dalla pipeline del contenuto di immagine.  
+-   Configurazione dell'immagine di origine che deve essere elaborata dalla pipeline di contenuti immagine.  
   
--   Configurazione della pipeline del contenuto di immagine perché generi l'alfa premoltiplicato.  
+-   Configurazione della pipeline di contenuti immagine per generare valori alfa premoltiplicati.  
   
-## Alfa premoltiplicato  
- questo valore offre diversi vantaggi rispetto al valore alfa tradizionale non premoltiplicato, perché rappresenta meglio l'interazione reale della luce con i materiali fisici mediante la separazione del contributo di colore di texel \(il colore aggiunto alla scena\) dalla relativa traslucidità \(la quantità di colore sottostante di cui consente il passaggio\).  Alcuni vantaggi dei valori alfa premoltiplicati sono:  
+## <a name="premultiplied-alpha"></a>Valori alfa premoltiplicati  
+ I valori alfa premoltiplicati offrono diversi vantaggi rispetto ai valori convenzionali non premoltiplicati, perché rappresentano meglio l'interazione reale di luce con materiali fisici separando il contributo di colore del texel (il colore che viene aggiunto all'immagine) dalla traslucidità (la quantità di colore sottostante consentita). Alcuni dei vantaggi dell'uso di valori alfa premoltiplicati sono:  
   
--   La sfumatura con il valore alfa premoltiplicato è un'operazione associativa; il risultato della sfumatura di più trame semitrasparenti è lo stesso, indipendentemente dall'ordine in cui le trame vengono sfumate.  
+-   La fusione con valori alfa premoltiplicati è un'operazione associativa. Il risultato della fusione di più trame traslucide è simile, indipendentemente dall'ordine in cui vengono fuse le trame.  
   
--   A causa della natura associativa della sfumatura con il valore alfa premoltiplicato, il rendering a più passaggi degli oggetti semitrasparenti viene semplificato.  
+-   Grazie alla natura associativa della fusione con valori alfa premoltiplicati, il rendering a più passaggi degli oggetti traslucidi risulta semplificato.  
   
--   Tramite il valore alfa premoltiplicato, sia la sfumatura aggiuntiva pura \(impostando alfa su zero\) che la sfumatura linearmente interpolata possono essere archiviate simultaneamente.  Ad esempio, in un sistema di particelle, una particella di fuoco sfumata in modo additivo può diventare una particella di fumo trasparente che viene sfumata utilizzando l'interpolazione lineare.  Senza valori alfa premoltiplicati, è necessario disegnare le particelle di fuoco separatamente dalle particelle di fumo e modificare lo stato di rendering tra le chiamate di disegno.  
+-   Tramite l'uso di valori alfa premoltiplicati, la fusione correttiva pura (impostando alfa su zero) e la fusione interpolata linearmente possono essere realizzate contemporaneamente. Ad esempio, in un sistema di particelle, una particella Fuoco fusa in modo cumulativo può diventare una particella Fumo semitrasparente che viene fusa tramite l'interpolazione lineare. Senza valori alfa premoltiplicati, sarebbe necessario disegnare le particelle Fuoco separatamente dalle particelle Fumo e modificare lo stato di rendering tra le chiamate di disegno.  
   
--   La compressione delle trame che utilizzano i valori alfa premoltiplicati risulta di qualità superiore rispetto a quelle che non la utilizzano. Inoltre, queste trame e non presentano l'effetto di alone che può verificarsi quando si fondono trame che non utilizzano i valori alfa premoltiplicati.  
+-   Le trame che usano valori alfa premoltiplicati vengono compresse con una qualità superiore alle altre e non presentano bordi offuscati o "effetti aureola"causati dalla fusione di trame che non usano valori alfa premoltiplicati.  
   
-#### Per creare una trama che utilizza valori alfa premoltiplicati  
+#### <a name="to-create-a-texture-that-uses-premultiplied-alpha"></a>Per creare una trama che usa valori alfa premoltiplicati  
   
-1.  Iniziare con una trama di base.  Caricare un file di immagine esistente oppure crearne uno, come descritto in [Procedura: Creare una trama di base](../Topic/How%20to:%20Create%20a%20Basic%20Texture.md).  
+1.  Iniziare con una trama di base. Caricare un file d'immagine esistente oppure crearne uno nuovo, come illustrato in [Procedura: Creare una trama di base](../designers/how-to-create-a-basic-texture.md).  
   
-2.  Configurare il file di trama in modo che venga elaborato dalla pipeline del contenuto di immagine.  In **Esplora soluzioni** aprire il menu di scelta rapida per il file di trama, quindi scegliere **Proprietà**.  In **Proprietà di configurazione**, nella pagina **Generale**, impostare la proprietà **Tipo di elemento** su **Pipeline contenuti immagine**.  Assicurarsi che la proprietà **Contenuto** sia impostata su **Sì** e **Escludi da compilazione** sia impostata su **No**, quindi scegliere il pulsante **Applica**.  Viene visualizzata la pagina delle proprietà di configurazione **Pipeline contenuto immagine**.  
+2.  Configurare il file di trama in modo che venga elaborato dalla pipeline di contenuti immagine. In **Esplora soluzioni**, aprire il menu di scelta rapida del file della trama e scegliere **Proprietà**. Nella pagina **Proprietà di configurazione**, **Generale**, impostare la proprietà **Tipo di elemento** su **Image Content Pipeline** (Pipeline di contenuti immagine). Assicurarsi che la proprietà **Contenuto** sia impostata su **Sì** e che l'opzione **Exclude From Build** (Escludi da compilazione) sia impostata su **No**, quindi scegliere il pulsante **Applica**. Viene visualizzata la pagina delle proprietà di configurazione **Image Content Pipeline** (Pipeline di contenuti immagine).  
   
-3.  Configurare la pipeline del contenuto di immagine perché generi l'alfa premoltiplicato.  In **Proprietà di configurazione**, **Pipeline contenuti immagine**, pagina **Generale**, impostare la proprietà **Converti in formato alpha premoltiplicato** su **Sì \(\/generatepremultipliedalpha\)**.  
+3.  Configurare la pipeline di contenuti immagine per generare valori alfa premoltiplicati. Nella pagina **Proprietà di configurazione**, **Image Content Pipeline** (Pipeline di contenuti immagine), **Generale**, impostare la proprietà **Convert to pre-multiplied alpha format** (Converti in formato alfa premoltiplicato) su **Sì (/generatepremultipliedalpha)**.  
   
-4.  Scegliere il pulsante **OK**.  
+4.  Fare clic sul pulsante **OK** .  
   
- Quando si compila il progetto, la pipeline del contenuto di immagine converte l'immagine di origine dal formato di lavoro al formato di output specificato, inclusa la conversione dell'immagine in formato alfa premoltiplicato, e il risultato viene copiato nella directory di output del progetto.
+ Quando si compila il progetto, la pipeline di contenuti immagine converte l'immagine di origine dal formato di lavoro al formato di output specificato. Ciò include la conversione dell'immagine nel formato alfa premoltiplicato. Il risultato viene copiato nella directory di output del progetto.

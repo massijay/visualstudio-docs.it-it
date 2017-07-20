@@ -36,18 +36,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: b88c533d613d531a7dcc24e0610e2fb2a7a3d880
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
+ms.openlocfilehash: 5a8237e5c437878b22bd3c67a3a4ba2cdc3fa126
+ms.contentlocale: it-it
+ms.lasthandoff: 05/26/2017
 
 ---
-# <a name="prerequisites-dialog-box"></a>Prerequisites Dialog Box
+# Prerequisites Dialog Box
+<a id="prerequisites-dialog-box" class="xliff"></a>
 In questa finestra di dialogo vengono indicati i componenti dei prerequisiti installati, la modalità di installazione e l'ordine di installazione dei pacchetti.  
   
  Per accedere a questa finestra di dialogo, selezionare un nodo di progetto in **Esplora soluzioni**, quindi scegliere **Proprietà** dal menu **Progetto**. In **Progettazione progetti** fare clic sulla scheda **Pubblica** . Nella pagina **Pubblica** fare clic su **Prerequisiti**. Per i progetti di installazione, scegliere **Proprietà** dal menu **Progetto**. Quando viene visualizzata la finestra di dialogo **Pagine delle proprietà** fare clic su **Prerequisiti**.  
   
-## <a name="uielement-list"></a>Elenco UIElement  
+## Elenco UIElement
+<a id="uielement-list" class="xliff"></a>  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
@@ -58,17 +61,18 @@ In questa finestra di dialogo vengono indicati i componenti dei prerequisiti ins
 |**Scarica prerequisiti dallo stesso percorso dell'applicazione**|Specifica che i componenti dei prerequisiti devono essere installati dallo stesso percorso dell'applicazione. In questo modo vengono copiati tutti i pacchetti di prerequisiti nel percorso di pubblicazione. Per il corretto funzionamento di questa opzione, i pacchetti di prerequisiti devono essere presenti nel computer di sviluppo.|  
 |**Scarica prerequisiti dal seguente percorso**|Specifica che i componenti dei prerequisiti devono essere installati dal percorso selezionato. Per selezionare un percorso usare il pulsante **Sfoglia**.|  
   
-## <a name="prerequisites-information"></a>Informazioni sui prerequisiti  
+## Informazioni sui prerequisiti
+<a id="prerequisites-information" class="xliff"></a>  
  I componenti dei prerequisiti che sono visualizzati nella finestra di dialogo **Prerequisiti** potrebbero differire da quelli presenti nell'elenco seguente. I pacchetti dei prerequisiti elencati nella **finestra di dialogo Prerequisiti** vengono impostati automaticamente alla prima apertura della finestra di dialogo. In caso di modifiche successive al framework di destinazione del progetto, sarà necessario selezionare manualmente i prerequisiti in modo che vi sia corrispondenza.  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |**.NET Framework 3.5 SP1**|Con questo pacchetto vengono installati gli elementi seguenti:<br /><br /> -   .NET Framework versioni 2.0, 3.0 e 3.5.<br />-   Supporto per tutte le versioni di .NET Framework nei sistemi operativi a 32 bit (x86) e a 64 bit (x64).<br />-   Language Pack per ciascuna versione di .NET Framework installata con il pacchetto.<br />-   Service Pack per .NET Framework 2.0 e 3.0.<br /><br /> .NET Framework 3.0 viene fornito con Windows Vista e .NET Framework 3.5 viene fornito con [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. .NET Framework 3.5 è necessario per tutti i progetti Visual Basic e Visual C# che vengono compilati per i sistemi operativi a 32 bit e per i quali il framework di destinazione è impostato su **.NET Framework 3.5**, oltre che per i progetti Visual Basic e Visual C# compilati per i sistemi operativi a 64 bit. IA64 non è supportato. Si noti che i progetti Visual Basic e Visual C# vengono compilati per qualsiasi architettura della CPU per impostazione predefinita. Per altre informazioni, vedere [Panoramica del multitargeting di Visual Studio](../../ide/visual-studio-multi-targeting-overview.md), [Ridistribuzione di .NET Framework](http://msdn.microsoft.com/en-us/a18d0456-fd89-493e-97f4-756505bfe287) e [Prerequisiti per la distribuzione di applicazioni a 64 bit](../../deployment/deploying-prerequisites-for-64-bit-applications.md).<br /><br /> Questo elemento è selezionato per impostazione predefinita.|  
-|**.NET Framework 3.5 SP1 Client Profile**|.NET Framework Client Profile è un sottoinsieme della versione completa di .NET Framework 3.5 SP1 destinata alle applicazioni client. Fornisce un sottoinsieme semplificato delle funzionalità di Windows Presentation Foundation (WPF), Windows Form, Windows Communication Foundation (WCF) e ClickOnce. In questo modo, è possibile rendere disponibili scenari di distribuzione rapidi per WPF, Windows Form, WCF e applicazioni console destinate a .NET Framework Client Profile. Per altre informazioni, vedere [.NET Framework Client Profile](http://msdn.microsoft.com/Library/f0219919-1f02-4588-8704-327a62fd91f1).|  
+|**.NET Framework 3.5 SP1 Client Profile**|.NET Framework Client Profile è un sottoinsieme della versione completa di .NET Framework 3.5 SP1 destinata alle applicazioni client. Fornisce un sottoinsieme semplificato delle funzionalità di Windows Presentation Foundation (WPF), Windows Form, Windows Communication Foundation (WCF) e ClickOnce. In questo modo, è possibile rendere disponibili scenari di distribuzione rapidi per WPF, Windows Form, WCF e applicazioni console destinate a .NET Framework Client Profile. Per altre informazioni, vedere [.NET Framework Client Profile](/dotnet/framework/deployment/client-profile).|  
 |**Microsoft .NET Framework 4 (x86 e x64)**|Con questo pacchetto viene installato .NET Framework 4 per piattaforme x86 e x64.<br /><br /> Per altre informazioni, vedere [Panoramica del multitargeting di Visual Studio](../../ide/visual-studio-multi-targeting-overview.md), [Ridistribuzione di .NET Framework](http://msdn.microsoft.com/en-us/a18d0456-fd89-493e-97f4-756505bfe287) e [Prerequisiti per la distribuzione di applicazioni a 64 bit](../../deployment/deploying-prerequisites-for-64-bit-applications.md).<br /><br /> Questo elemento è selezionato per impostazione predefinita.|  
-|**Microsoft .NET Framework 4 Client Profile (x86 e x64)**|.NET Framework 4 Client Profile è un sottoinsieme della versione completa di .NET Framework 4 destinata alle applicazioni client. Fornisce un sottoinsieme semplificato delle funzionalità di Windows Presentation Foundation (WPF), Windows Form, Windows Communication Foundation (WCF) e ClickOnce. In questo modo, è possibile rendere disponibili scenari di distribuzione rapidi per WPF, Windows Form e applicazioni console destinate a .NET Framework 4 Client Profile. Per altre informazioni, vedere [.NET Framework Client Profile](http://msdn.microsoft.com/Library/f0219919-1f02-4588-8704-327a62fd91f1).|  
+|**Microsoft .NET Framework 4 Client Profile (x86 e x64)**|.NET Framework 4 Client Profile è un sottoinsieme della versione completa di .NET Framework 4 destinata alle applicazioni client. Fornisce un sottoinsieme semplificato delle funzionalità di Windows Presentation Foundation (WPF), Windows Form, Windows Communication Foundation (WCF) e ClickOnce. In questo modo, è possibile rendere disponibili scenari di distribuzione rapidi per WPF, Windows Form e applicazioni console destinate a .NET Framework 4 Client Profile. Per altre informazioni, vedere [.NET Framework Client Profile](/dotnet/framework/deployment/client-profile).|  
 |**Assembly di interoperabilità primari di Microsoft Office 2007**|Con questo pacchetto vengono installati gli assembly di interoperabilità primari per prodotti Microsoft Office 2007. Gli assembly di interoperabilità primari consentono l'interazione tra il codice gestito e il modello a oggetti basati su COM di un'applicazione di Microsoft Office. Per altre informazioni, vedere [Assembly di interoperabilità primari di Office](/office-dev/office-dev/office-primary-interop-assemblies).|  
-|**Microsoft Visual Basic PowerPacks versione 10.0**|I Power Pack sono componenti aggiuntivi, controlli, componenti e strumenti utili allo sviluppo di applicazioni Visual Basic. In questa versione è incluso il componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> che consente di stampare il contenuto di un Windows Form e la Printer Compatibility Library che consente di eseguire il codice Printer di Visual Basic 6.0 senza modifiche.|  
+|**Microsoft Visual Basic PowerPacks versione 10.0**|I Power Pack sono componenti aggiuntivi, controlli, componenti e strumenti utili allo sviluppo di applicazioni Visual Basic. In questa versione è incluso il componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>, che consente di stampare il contenuto di un Windows Form, e la Printer Compatibility Library, che consente di eseguire il codice Printer di Visual Basic 6.0 senza modifiche.|  
 |**Microsoft Visual F# Runtime per .NET 2.0**|Con questo pacchetto vengono installate librerie di runtime di Visual F# per sistemi operativi x86 e x64 che forniscono supporto sia per la programmazione funzionale che per la programmazione orientata a oggetti e imperativa (procedurale) tradizionale. È necessario installare questo pacchetto se l'applicazione o i relativi componenti vengono creati in Visual F# e .NET Framework 2.0, .NET Framework 3.0 o .NET Framework 3.5.<br /><br /> Per altre informazioni, vedere [Riferimenti per il linguaggio F#](http://msdn.microsoft.com/Library/16b706f8-b5f2-4ff7-b2c1-64df33cd6adf).|  
 |**Microsoft Visual F# Runtime per .NET 4.0**|Con questo pacchetto vengono installate librerie di runtime di Visual F# per sistemi operativi x86 e x64 che forniscono supporto sia per la programmazione funzionale che per la programmazione orientata a oggetti e imperativa (procedurale) tradizionale. È necessario installare questo pacchetto se l'applicazione o i relativi componenti vengono creati in Visual F# e .NET Framework 4.<br /><br /> Per altre informazioni, vedere [Riferimenti per il linguaggio F#](http://msdn.microsoft.com/Library/16b706f8-b5f2-4ff7-b2c1-64df33cd6adf).|  
 |**Microsoft Visual Studio 2010 Report Viewer**|Con questo pacchetto vengono installati nuovi controlli del visualizzatore rapporti che consentono di aggiungere funzionalità avanzate per i report di dati alle applicazioni Windows Form e ASP.NET.|  
@@ -81,7 +85,8 @@ In questa finestra di dialogo vengono indicati i componenti dei prerequisiti ins
 |**Windows Installer 3.1**|Con questo pacchetto viene installato Microsoft Windows Installer Redistributable versione 3.1 che consente l'installazione di progetti di installazione di Windows Installer. È preinstallato in Windows Server 2003 con SP1 e versioni successive.<br /><br /> Questo elemento è selezionato per impostazione predefinita.|  
 |**Windows Installer 4.5**|Con questo pacchetto viene installato Microsoft Windows Installer Redistributable versione 4.5 che consente l'installazione di progetti di installazione di Windows Installer.|  
   
-## <a name="see-also"></a>Vedere anche  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Pagina Pubblica, Creazione progetti](../../ide/reference/publish-page-project-designer.md)   
  [Prerequisiti per la distribuzione dell'applicazione](../../deployment/application-deployment-prerequisites.md)   
  [Ridistribuzione di .NET Framework](http://msdn.microsoft.com/en-us/a18d0456-fd89-493e-97f4-756505bfe287)   

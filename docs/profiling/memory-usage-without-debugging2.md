@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 9ff0dfb7330f70bb66597127347c8375f2c4c9ea
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: baf1e18c56587b071aaa25fd522e3aa1b27a0b30
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="memory-usage-without-the-debugger"></a>Utilizzo della memoria senza il debugger
@@ -75,7 +76,7 @@ ms.lasthandoff: 03/07/2017
  Per arrestare una sessione di monitoraggio senza creare un report, chiudi semplicemente la finestra di diagnostica. Per generare un rapporto dopo aver creato snapshot della memoria, scegliere **Arresta**.  
   
 ##  <a name="BKMK_Take_snapshots_to_analyze_the_memory_state_of_your_app"></a> Creare snapshot dello stato della memoria dell'app  
- Se viene riscontrato un problema di memoria su cui si vuole indagare, è possibile creare alcuni snapshot durante la sessione di diagnostica per acquisire oggetti in memoria in determinati momenti. Dato che un'app usa un gran numero di tipi di oggetti, potresti voler concentrare la tua analisi su un solo scenario. È anche una buona idea acquisire uno snapshot di base dell'app prima che si verifichi un problema di memoria, un altro dopo che il problema si presenta per la prima volta e uno o più snapshot aggiuntivi se puoi ripetere lo scenario.  
+ Se viene riscontrato un problema di memoria su cui si vuole indagare, è possibile creare alcuni snapshot durante la sessione di diagnostica per acquisire oggetti in memoria in determinati momenti. Dato che un'app usa un gran numero di tipi di oggetti, potresti voler concentrare la tua analisi su un solo scenario. È anche una buona idea acquisire uno snapshot di base dell'app prima che si verifichi un problema di memoria, un altro dopo che il problema si presenta per la prima volta e uno o più snapshot aggiuntivi se si può ripetere lo scenario.  
   
  Per raccogliere snapshot, avvia una nuova sessione di diagnostica. Scegliere **Crea snapshot** quando si vogliono acquisire i dati di memoria. Per generare un rapporto, scegliere **Arresta**.  
   

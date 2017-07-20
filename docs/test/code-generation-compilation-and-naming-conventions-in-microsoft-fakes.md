@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 2aff9b2c34bf8897adc7edee3a1205317258fc0f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 5acc74abd56b128bf9df708ab7c0f3451c6eb270
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="code-generation-compilation-and-naming-conventions-in-microsoft-fakes"></a>Generazione del codice, compilazione e convenzioni di denominazione in Microsoft Fakes
@@ -40,15 +41,32 @@ Questo argomento illustra problemi e opzioni di generazione e compilazione di co
 -   Visual Studio Enterprise  
   
 ##  <a name="BKMK_In_this_topic"></a> Contenuto dell'argomento  
- [Generazione e compilazione di codice](#BKMK_Code_generation_and_compilation)  
   
--   [Configurazione della generazione di codice degli stub](#BKMK_Configuring_code_generation_of_stubs) • [Filtro dei tipi](#BKMK_Type_filtering) • [Generazione di stub per classi concrete e metodi virtuali](#BKMK_Stubbing_concrete_classes_and_virtual_methods) • [Tipi interni](#BKMK_Internal_types) • [Ottimizzazione dei tempi di compilazione](#BKMK_Optimizing_build_times) • [Come evitare conflitti di nome tra gli assembly](#BKMK_Avoiding_assembly_name_clashing)  
+-   [Generazione e compilazione di codice](#BKMK_Code_generation_and_compilation)  
   
- [Convenzioni di denominazione Fakes](#BKMK_Fakes_naming_conventions)  
+-   [Configurazione della generazione di codice degli stub](#BKMK_Configuring_code_generation_of_stubs)
   
--   [Convenzioni di denominazione dei tipi shim e stub](#BKMK_Shim_type_and_stub_type_naming_conventions) • [Convenzioni di denominazione delle proprietà dei delegati shim o dei campi dei delegati stub](#BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions) • [Convenzioni di denominazione dei tipi di parametro](#BKMK_Parameter_type_naming_conventions) • [Regole ricorsive](#BKMK_Recursive_rules)  
+-   [Filtro dei tipi](#BKMK_Type_filtering)
   
- [Risorse esterne](#BKMK_External_resources)  
+-   [Generazione di stub per classi concrete e metodi virtuali](#BKMK_Stubbing_concrete_classes_and_virtual_methods)
+  
+-   [Tipi interni](#BKMK_Internal_types)
+  
+-   [Ottimizzazione dei tempi di compilazione](#BKMK_Optimizing_build_times)
+  
+-   [Come evitare conflitti di nome tra gli assembly](#BKMK_Avoiding_assembly_name_clashing)  
+  
+-   [Convenzioni di denominazione Fakes](#BKMK_Fakes_naming_conventions)  
+  
+-   [Convenzioni di denominazione dei tipi shim e stub](#BKMK_Shim_type_and_stub_type_naming_conventions)
+  
+-   [Convenzioni di denominazione delle proprietà dei delegati shim o dei campi dei delegati stub](#BKMK_Shim_delegate_property_or_stub_delegate_field_naming_conventions)
+  
+-   [Convenzioni di denominazione dei tipi di parametro](#BKMK_Parameter_type_naming_conventions)
+  
+-   [Regole ricorsive](#BKMK_Recursive_rules)  
+  
+-   [Risorse esterne](#BKMK_External_resources)  
   
 -   [Linee guida](#BKMK_Guidance)  
   
@@ -285,7 +303,7 @@ attribute of the Assembly element in the .fakes:
 |**Tipo di matrice**`T[]`|`TArray`|  
 |Tipo di **matrice multidimensionale** `T[ , , ]`|`T3`|  
 |Tipo di **puntatore** `T*`|`TPtr`|  
-|**Tipo generico** `T<R1, …>`|`TOfR1`|  
+|**Tipo generico** `T<R1, ...>`|`TOfR1`|  
 |**Argomento di tipo generico**`!i` del tipo `C<TType>`|`Ti`|  
 |**Argomento di metodo generico**`!!i` del metodo `M<MMethod>`|`Mi`|  
 |**Tipo annidato**`N.T`|Vengono aggiunti `N` e quindi `T`.|  
@@ -300,7 +318,7 @@ attribute of the Assembly element in the .fakes:
 ##  <a name="BKMK_External_resources"></a> Risorse esterne  
   
 ###  <a name="BKMK_Guidance"></a> Materiale sussidiario  
- [Test per la distribuzione continua con Visual Studio 2012 – Capitolo 2: Unit Testing: Test interni](http://go.microsoft.com/fwlink/?LinkID=255188)  
+ [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Test per il recapito continuo con Visual Studio 2012 - Capitolo 2: Testing unità: Test interni)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Isolamento del codice sottoposto a test con Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)

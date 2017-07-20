@@ -1,19 +1,39 @@
 ---
-title: "Creare app con interfaccia utente nativa con Xamarin in Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tgt-pltfrm-cross-plat"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creare app con interfaccia utente nativa con Xamarin in Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- tgt-pltfrm-cross-plat
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 30f137e6-595d-4ce7-b8f5-415b07c1caa2
 caps.latest.revision: 31
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 23
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 48b5010ae161b2ce6ad22513afbca4a8e5fe82d3
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Creare app con interfaccia utente nativa con Xamarin in Visual Studio
 Dopo aver eseguito le operazioni descritte in [Configurazione e installazione](../cross-platform/setup-and-install.md) e [Verificare l'ambiente Xamarin](../cross-platform/verify-your-xamarin-environment.md), questa procedura dettagliata illustra come compilare un'app Xamarin di base (vedere sotto) con i livelli dell'interfaccia utente nativa. Con l'interfaccia utente nativa il codice condiviso si trova in una libreria di classi portabile (PCL) e i singoli progetti di piattaforma contengono le definizioni dell'interfaccia utente.  
@@ -52,7 +72,7 @@ Dopo aver eseguito le operazioni descritte in [Configurazione e installazione](.
 >      -   [Hello, Xamarin.Forms](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms/quickstart/)  
 >     -   [Hello, Xamarin.Forms Multiscreen](https://developer.xamarin.com/guides/cross-platform/xamarin-forms/getting-started/hello-xamarin-forms-multiscreen/)  
   
-##  <a name="a-namesolutiona-set-up-your-solution"></a><a name="solution"></a> Configurare la soluzione  
+##  <a name="solution"></a> Configurare la soluzione  
  Questi passaggi consentono di creare una soluzione Xamarin con interfaccia utente nativa che contiene una libreria di classi portabile (PCL) per il codice condiviso e due pacchetti NuGet aggiunti.  
   
 1.  In Visual Studio creare una nuova soluzione **App vuota (nativa portatile)** e denominarla **WeatherApp**. Il modello può essere individuato più facilmente immettendo **nativa portatile** nel campo di ricerca.  
@@ -71,7 +91,7 @@ Dopo aver eseguito le operazioni descritte in [Configurazione e installazione](.
   
      In ogni progetto nativo si ha accesso alla finestra di progettazione nativa per la piattaforma corrispondente e si possono implementare schermate specifiche della piattaforma.  
   
-3.  Aggiungere il pacchetto NuGet e **Newtonsoft.Json** al progetto PCL, che verranno usati per elaborare le informazioni recuperate da un servizio di dati meteo:  
+3.  Aggiungere il pacchetto **Newtonsoft.Json** e NuGet al progetto PCL, che verranno usati per elaborare le informazioni recuperate da un servizio di dati meteo:  
   
     -   Fare clic con il pulsante destro del mouse sulla **soluzione WeatherApp** in Esplora soluzioni e selezionare **Gestisci pacchetti NuGet per la soluzione**.  
   
@@ -91,8 +111,8 @@ Dopo aver eseguito le operazioni descritte in [Configurazione e installazione](.
   
 5.  Compilare la soluzione e verificare che non ci siano errori di compilazione.  
   
-##  <a name="a-namedataservicea-write-shared-data-service-code"></a><a name="dataservice"></a> Scrivere un codice di servizio dati condiviso  
- **WeatherApp (Portable)** è il progetto di destinazione del codice per la libreria di classi portabile (PCL) condiviso tra le piattaforme. La libreria di classi portabile (PCL) viene inclusa automaticamente nei pacchetti di app compilati dai progetti iOS, Android e Windows Phone.  
+##  <a name="dataservice"></a> Scrivere un codice di servizio dati condiviso  
+ **WeatherApp (portabile)** è il progetto di destinazione del codice per la libreria di classi portabile (PCL) condiviso tra le piattaforme. La libreria di classi portabile (PCL) viene inclusa automaticamente nei pacchetti di app compilati dai progetti iOS, Android e Windows Phone.  
   
  Nei passaggi seguenti viene aggiunto codice alla libreria di classi portabile (PCL) per accedere e archiviare i dati dal servizio meteo:  
   
@@ -162,7 +182,7 @@ Dopo aver eseguito le operazioni descritte in [Configurazione e installazione](.
     }  
     ```  
   
-6.  Aggiungere una terza classe alla libreria di classi portabile (PCL) denominata **Core** in cui inserire la logica di business condivisa, ad esempio una logica che forma una stringa di query usando un codice postale, chiama il servizio di dati meteo, quindi popola un'istanza della classe **Weather** .  
+6.  Aggiungere una terza classe alla libreria di classi portabile (PCL) denominata **Core** in cui inserire la logica di business condivisa, ad esempio una logica che forma una stringa di query usando un codice postale, chiama il servizio di dati meteo e quindi popola un'istanza della classe **Weather** .  
   
 7.  Sostituire il contenuto di **Core.cs** con:  
   
@@ -220,7 +240,7 @@ Dopo aver eseguito le operazioni descritte in [Configurazione e installazione](.
   
 10. Compilare il progetto PCL **WeatherApp** per verificare che il codice sia corretto.  
   
-##  <a name="a-nameandroida-design-ui-for-android"></a><a name="Android"></a> Progettare l'interfaccia utente per Android  
+##  <a name="Android"></a> Progettare l'interfaccia utente per Android  
  Verrà ora progettata l'interfaccia utente, che verrà connessa al codice condiviso, e quindi verrà eseguita l'app.  
   
 ### <a name="design-the-look-and-feel-of-your-app"></a>Progettare l'aspetto dell'app  
@@ -254,7 +274,7 @@ Dopo aver eseguito le operazioni descritte in [Configurazione e installazione](.
     |**textStyle**|`bold`|  
   
     > [!TIP]
-    >  Notare che molte proprietà non includono un elenco a discesa di valori selezionabili.  Può quindi risultare difficile individuare il valore di stringa da usare per una data proprietà. Per suggerimenti provare a cercare il nome di una proprietà nella pagina della classe [R.attr](http://developer.android.com/reference/android/R.attr.html) .  
+    >  Si noti che molte proprietà non includono un elenco a discesa di valori selezionabili.  Può quindi risultare difficile individuare il valore di stringa da usare per una data proprietà. Per suggerimenti provare a cercare il nome di una proprietà nella pagina della classe [R.attr](http://developer.android.com/reference/android/R.attr.html) .  
     >   
     >  Cercando in Internet viene spesso visualizzata una pagina del sito Web [http://stackoverflow.com/](http://stackoverflow.com/) in cui altri utenti hanno usato la stessa proprietà.  
   
@@ -279,8 +299,8 @@ Dopo aver eseguito le operazioni descritte in [Configurazione e installazione](.
   
     |Proprietà|Valore|  
     |--------------|-----------|  
-    |**text**|**Zip Code**|  
-    |**id**|`@+id/ZipCodeLabel`|  
+    |**testo**|**Zip Code**|  
+    |**ID**|`@+id/ZipCodeLabel`|  
     |**layout_marginLeft**|`10dp`|  
     |**layout_marginTop**|`5dp`|  
   
@@ -301,7 +321,7 @@ Dopo aver eseguito le operazioni descritte in [Configurazione e installazione](.
   
     |Proprietà|Valore|  
     |--------------|-----------|  
-    |**id**|`@+id/zipCodeEntry`|  
+    |**ID**|`@+id/zipCodeEntry`|  
     |**layout_marginLeft**|`10dp`|  
     |**layout_marginBottom**|`10dp`|  
     |**width**|`165dp`|  
@@ -324,8 +344,8 @@ Dopo aver eseguito le operazioni descritte in [Configurazione e installazione](.
   
     |Proprietà|Valore|  
     |--------------|-----------|  
-    |**id**|`@+id/weatherBtn`|  
-    |**text**|**Get Weather**|  
+    |**ID**|`@+id/weatherBtn`|  
+    |**testo**|**Get Weather**|  
     |**layout_marginLeft**|`20dp`|  
     |**layout_alignBottom**|`@id/zipCodeEntry`|  
     |**width**|`165dp`|  
@@ -523,7 +543,7 @@ Dopo aver eseguito le operazioni descritte in [Configurazione e installazione](.
 > [!TIP]
 >  Il codice sorgente completo per questo progetto si trova nell'[archivio mobile-samples in GitHub](https://github.com/xamarin/mobile-samples/tree/master/Weather).  
   
-##  <a name="a-namewindowsa-design-ui-for-windows-phone"></a><a name="Windows"></a> Progettare l'interfaccia utente per Windows Phone  
+##  <a name="Windows"></a> Progettare l'interfaccia utente per Windows Phone  
  Verrà ora progettata l'interfaccia utente per Windows Phone, che verrà connessa al codice condiviso, e quindi verrà eseguita l'app.  
   
 ### <a name="design-the-look-and-feel-of-your-app"></a>Progettare l'aspetto dell'app  
@@ -629,7 +649,7 @@ Dopo aver eseguito le operazioni descritte in [Configurazione e installazione](.
 > [!TIP]
 >  Il codice sorgente completo per questo progetto si trova nell'[archivio mobile-samples in GitHub](https://github.com/xamarin/mobile-samples/tree/master/Weather).  
   
-##  <a name="a-namenexta-next-steps"></a><a name="next"></a> Passaggi successivi  
+##  <a name="next"></a> Passaggi successivi  
  **Aggiungere l'interfaccia utente per iOS alla soluzione**  
   
  È possibile estendere questo esempio aggiungendo l'interfaccia utente nativa per iOS. Per eseguire questa operazione, è necessario connettersi a un computer Mac nella rete locale in cui siano installati Xcode e Xamarin. Al termine dell'operazione, è possibile usare la finestra di progettazione iOS direttamente in Visual Studio. Per l'app completa, vedere l'[archivio mobile-samples in GitHub](https://github.com/xamarin/mobile-samples/tree/master/Weather).  
@@ -642,10 +662,5 @@ Dopo aver eseguito le operazioni descritte in [Configurazione e installazione](.
   
 ## <a name="see-also"></a>Vedere anche  
  [Sito per gli sviluppatori di Xamarin](http://developer.xamarin.com/)   
- [Centro sviluppatori Windows](https://dev.windows.com/en-us)   
+ [Windows Dev Center](https://dev.windows.com/en-us)   
  [Poster di riferimento rapido Swift e C#](http://aka.ms/scposter)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

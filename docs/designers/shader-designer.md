@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ff6e473c6e5b2d7a24a4e906d2f592742e3c2d14
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: af7472d5152babe2088ae3cc49caaf718a539878
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="shader-designer"></a>Finestra di progettazione shader
@@ -131,7 +132,7 @@ Questo documento descrive come usare la finestra di progettazione shader di [!IN
   
 -   Nella barra degli strumenti **Modalità progettazione shader** scegliere la forma desiderata.  
   
-####  <a name="a-namewwsmaterialparametersa-textures-and-material-parameters"></a><a name="WWS_MaterialParameters"></a> Trame e parametri di materiale  
+####  <a name="WWS_MaterialParameters"></a> Trame e parametri di materiale  
  Molti shader si basano su trame e proprietà di materiali per produrre un aspetto univoco per ogni tipo di oggetto nell'app. Per vedere l'aspetto che avrà lo shader nell'app, è possibile impostare le trame e le proprietà di materiali usate per il rendering dell'anteprima per trovare una corrispondenza con le trame e i parametri che possono essere usati nell'app.  
   
 ###### <a name="to-bind-a-different-texture-to-a-texture-register-or-to-modify-other-material-parameters"></a>Per associare una trama diversa a un registro di trama o modificare altri parametri di materiali  
@@ -145,7 +146,7 @@ Questo documento descrive come usare la finestra di progettazione shader di [!IN
 |Parametro|Proprietà|  
 |---------------|----------------|  
 |**Trama 1** - **Trama 8**|**Accesso**:                             **Pubblico** per consentire l'impostazione della proprietà dall'editor dei modelli. **Privato** in caso contrario.<br /><br /> **Nome file**: percorso completo del file della trama associato a questo registro di trama.|  
-|**Ambiente materiale**|**Accesso**:                             **Pubblico** per consentire l'impostazione della proprietà dall'editor dei modelli. **Privato** in caso contrario.<br /><br /> **Valore**: colore con riflessione diffusa del pixel corrente, in base all'illuminazione indiretta, ovvero alla luce ambientale.|  
+|**Ambiente materiale**|**Accesso**:                             **Pubblico** per consentire l'impostazione della proprietà dall'editor dei modelli. **Privato** in caso contrario.<br /><br /> **Valore**: colore con riflessione diffusa del pixel corrente, in base all'illuminazione indiretta ovvero alla luce ambientale.|  
 |**Materiale diffuso**|**Accesso**: **Pubblico** per consentire l'impostazione della proprietà dall'editor dei modelli. **Privato** in caso contrario.<br /><br /> **Value**: colore che descrive il modo in cui il pixel corrente diffonde l'illuminazione diretta.|  
 |**Materiale emissivo**|**Accesso**:                              **Pubblico** per consentire l'impostazione della proprietà dall'editor dei modelli. **Privato** in caso contrario.<br /><br /> **Valore**: contributo di colore del pixel corrente, in base all'illuminazione autofornita.|  
 |**Materiale speculare**|**Accesso**:                              **Pubblico** per consentire l'impostazione della proprietà dall'editor dei modelli. **Privato** in caso contrario.<br /><br /> **Valore**: colore che descrive il modo in cui l'illuminazione diretta viene riflessa dal pixel corrente.|  
@@ -182,8 +183,8 @@ Questo documento descrive come usare la finestra di progettazione shader di [!IN
 |Selezionare tutto|CTRL+A|  
 |Eliminare la selezione corrente|Eliminare|  
 |Annullare la selezione corrente|Escape|  
-|Zoom avanti|CTRL+rotellina del mouse avanti<br /><br /> Segno più (+)|  
-|Zoom indietro|CTRL+rotellina del mouse indietro<br /><br /> Segno meno (-)|  
+|Fare zoom avanti|CTRL+rotellina del mouse avanti<br /><br /> Segno più (+)|  
+|Fare zoom indietro|CTRL+rotellina del mouse indietro<br /><br /> Segno meno (-)|  
 |Fare una panoramica dell'area di progettazione verso l'alto|Rotellina del mouse indietro<br /><br /> PGGIÙ|  
 |Fare una panoramica dell'area di progettazione verso il basso|Rotellina del mouse avanti<br /><br /> PGSU|  
 |Fare una panoramica dell'area di progettazione verso sinistra|MAIUSC+rotellina del mouse indietro<br /><br /> Rotellina del mouse a sinistra<br /><br /> MAIUSC+PGGIÙ|  

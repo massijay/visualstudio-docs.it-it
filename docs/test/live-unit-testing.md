@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: edb6c75d35f89df363a07eb24ba31e203bc6672e
-ms.openlocfilehash: 30261d8b75029bac15c9ab881d9f43c1a717d8cd
-ms.lasthandoff: 03/15/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b699132bf1a31d3ef9dc3ba5af3f99c22890c632
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 
@@ -102,7 +103,7 @@ Per abilitare Live Unit Testing, selezionare **Test**, **Live Unit Testing**, **
 
 ##    <a name="viewing-coverage-visualization-in-the-editor-as-you-type"></a>Accesso alla visualizzazione del code coverage nell'editor durante la digitazione
 
-Dopo l'abilitazione, Live Unit Testing aggiorna le singole righe di codice nell'editor di Visual Studio in modo da indicare se il codice scritto è coperto da unit test e se i test coperti vengono superati.  La figura seguente mostra le righe di codice con test superati e non superati, nonché le righe di codice non coperte dai test. Le righe contraddistinte da un segno di spunta (“✓”) verde sono coperte solo da test superati, quelle contraddistinte da una “🞩” rossa sono coperte da uno o più test non superati, mentre quelle contraddistinte da un simbolo “” blu non sono coperte da alcun test.
+Dopo l'abilitazione, Live Unit Testing aggiorna le singole righe di codice nell'editor di Visual Studio in modo da indicare se il codice scritto è coperto da unit test e se i test coperti vengono superati.  La figura seguente mostra le righe di codice con test superati e non superati, nonché le righe di codice non coperte dai test. Le righe contraddistinte da un segno di spunta "✓" verde sono coperte solo da test superati, quelle contraddistinte da una "🞩" rossa sono coperte da uno o più test non superati, mentre quelle contraddistinte da un simbolo "" blu non sono coperte da alcun test.
 
   ![Immagine](./media/lut-codewindow.png)
 

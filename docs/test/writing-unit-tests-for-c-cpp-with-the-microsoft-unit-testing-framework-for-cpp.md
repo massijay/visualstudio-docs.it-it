@@ -27,10 +27,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: 84549f28f33933eacbf44742b5be129df8ab780e
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 203cc6111870cbf3342fd84c5931a0dadc2bdde0
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="writing-unit-tests-for-cc-with-the-microsoft-unit-testing-framework-for-c"></a>Scrittura di unit test per C/C++ con il framework di testing unità Microsoft per C++.
@@ -46,7 +47,7 @@ In Visual Studio, è possibile creare unit test per il codice non gestito scritt
   
 2.  Rendere la DLL accessibile al progetto di test:  
   
-    -   `#include` un file `.h` che contiene le dichiarazioni delle funzioni esternamente accessibili della DLL.  
+    -   Usare `#include` per un file `.h` che contiene le dichiarazioni delle funzioni della DLL accessibili dall'esterno.  
   
          Il file `.h` deve contenere dichiarazioni di funzione contrassegnate da `_declspec(dllimport)`. In alternativa, è possibile esportare i metodi usando un file DEF. Per altre informazioni, vedere [Importazione ed esportazione](/cpp/build/importing-and-exporting).  
   

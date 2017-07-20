@@ -1,42 +1,45 @@
 ---
-title: "Procedura: esportare una trama che contiene mipmap | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: Esportare una trama che contiene mipmap | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3d1ad14b-44fb-4cf0-a995-5e2f60026524
 caps.latest.revision: 7
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Procedura: esportare una trama che contiene mipmap
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: BrianPeek
+ms.author: brpeek
+manager: ghogen
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 2176086d813109a92f1e2467498d3f1ad4b18c5e
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
-La pipeline del contenuto di immagine può generare mipmap da un'immagine di origine come parte della fase di compilazione del progetto.  Quando non è necessario specificare manualmente il contenuto dell'immagine di ogni livello MIP, come può essere richiesto per ottenere determinati effetti, la generazione di mipmap in fase di compilazione assicura che il contenuto della mipmap sia sempre sincronizzato ed elimina il costo di prestazioni della generazione di mipmap in fase di esecuzione.  
+---
+# <a name="how-to-export-a-texture-that-contains-mipmaps"></a>Procedura: esportare una trama che contiene mipmap
+La pipeline di contenuti immagine può generare mipmap da un'immagine di origine come parte della fase di compilazione del progetto. Se non è necessario specificare manualmente il contenuto dell'immagine di ogni livello MIP, operazione che è possibile eseguire per ottenere alcuni effetti, la creazione di mipmap in fase di compilazione garantisce che il contenuto mipmap sia sempre sincronizzato e consente di eliminare i costi di prestazione per generare mipmap in fase di esecuzione.  
   
- In questo documento vengono illustrate queste attività:  
+ Questo documento illustra queste attività:  
   
--   La configurazione dell'immagine di origine deve essere elaborata dalla pipeline del contenuto di immagine.  
+-   Configurazione dell'immagine di origine che deve essere elaborata dalla pipeline di contenuti immagine.  
   
--   Configurazione della pipeline del contenuto di immagine perché generi mipmap.  
+-   Configurazione di pipeline di contenuti immagine per generare mipmap.  
   
-## Esportazione delle mipmap  
- Il mapping MIP fornisce automaticamente il livello di dettaglio nello spazio dello schermo per le superfici strutturate in un gioco 3D o in un'applicazione.  Migliora le prestazioni di rendering di un gioco o di un'applicazione calcolando anticipatamente le versioni sottocampionate di una trama in modo che l'operazione non debba essere ripetuta ogni volta che una trama viene campionata.  
+## <a name="exporting-mipmaps"></a>Esportazione di mipmap  
+ La creazione di mipmap offre un livello di dettaglio automatico sullo spazio della schermata per aree con trame in giochi 3D o in app. Migliora le prestazioni di rendering di un gioco o di un'app pre-elaborando versioni a campionamento ridotto di una trama in modo che l'intera trama non debba essere elaborata ogni volta che viene campionata.  
   
-#### Per esportare una trama con mipmap  
+#### <a name="to-export-a-texture-that-has-mipmaps"></a>Per esportare una trama che contiene mipmap  
   
-1.  Iniziare con una trama di base.  Caricare un file di immagine esistente oppure crearne uno, come descritto in [Procedura: Creare una trama di base](../Topic/How%20to:%20Create%20a%20Basic%20Texture.md).  Per supportare le mipmap, specificare una trama con valori di larghezza e altezza multipli di due ed equivalenti, ad esempio 64x64, 256x256 o 512x512.  
+1.  Iniziare con una trama di base. Caricare un file d'immagine esistente oppure crearne uno nuovo, come illustrato in [Procedura: Creare una trama di base](../designers/how-to-create-a-basic-texture.md). Per supportare le mipmap, specificare una trama la cui larghezza e altezza corrispondano a un valore esponenziale con base due, ad esempio, 64 x 64, 256 x 256 o 512 x 512.  
   
-2.  Configurare il file di trama appena creato in modo che venga elaborato dalla pipeline del contenuto di immagine.  In **Esplora soluzioni** aprire il menu di scelta rapida per il file di trama appena creato, quindi scegliere **Proprietà**.  In **Proprietà di configurazione**, nella pagina **Generale**, impostare la proprietà **Tipo di elemento** su **Pipeline contenuti immagine**.  Assicurarsi che la proprietà **Contenuto** sia impostata su **Sì** e **Escludi da compilazione** sia impostata su **No**, quindi scegliere il pulsante **Applica**.  Viene visualizzata la pagina delle proprietà di configurazione **Pipeline contenuto immagine**.  
+2.  Configurare il file di trama appena creato in modo che venga elaborato dalla pipeline di contenuti immagine. In **Esplora soluzioni** aprire il menu di scelta rapida per il file di trama appena creato e quindi scegliere **Proprietà**. Nella pagina **Proprietà di configurazione**, **Generale**, impostare la proprietà **Tipo di elemento** su **Image Content Pipeline** (Pipeline di contenuti immagine). Assicurarsi che la proprietà **Contenuto** sia impostata su **Sì** e che l'opzione **Exclude From Build** (Escludi da compilazione) sia impostata su **No**, quindi scegliere il pulsante **Applica**. Viene visualizzata la pagina delle proprietà di configurazione **Image Content Pipeline** (Pipeline di contenuti immagine).  
   
-3.  Configurare la pipeline del contenuto di immagine perché generi mipmap.  In **Proprietà di configurazione**, **Pipeline contenuti immagine**, pagina **Generale** impostare la proprietà **Genera MIP** su **Sì \(\/generatemips\)**.  
+3.  Configurare la pipeline di contenuti immagine per generare mipmap. Nella pagina **Proprietà di configurazione**, **Image Content Pipeline** (Pipeline di contenuti immagine), **Generale**, impostare la proprietà **Genera MIP** su **Sì (/generatemips)**.  
   
-4.  Scegliere il pulsante **OK**.  
+4.  Fare clic sul pulsante **OK** .  
   
- Quando si compila il progetto, la pipeline del contenuto di immagine converte l'immagine di origine dal formato di lavoro al formato di output specificato, inclusi livelli MIP, e il risultato viene copiato nella directory di output del progetto.
+ Quando si compila il progetto, la pipeline di contenuti immagine converte l'immagine di origine dal formato di lavoro al formato di output specificato, includendo i livelli MIP. Il risultato viene copiato nella directory di output del progetto.

@@ -1,7 +1,7 @@
 ---
 title: 'Procedura: Creare e rimuovere dipendenze di progetto | Microsoft Docs'
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 06/21/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -36,49 +36,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 397db9439dbeead2d719f2cb8778f499d1dcb52c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d2f4eba36e9069a35cf279ccf1c78f72a51d77a1
+ms.openlocfilehash: 896da11aa3bc92d153608dc09778817a77eaf7d6
+ms.contentlocale: it-it
+ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="how-to-create-and-remove-project-dependencies"></a>Procedura: creare e rimuovere dipendenze di progetto
+# Procedura: creare e rimuovere dipendenze di progetto
+<a id="how-to-create-and-remove-project-dependencies" class="xliff"></a>
 Quando si compila una soluzione che contiene più progetti, può essere necessario prima compilare alcuni progetti, per generare il codice usato da altri progetti. Quando un progetto usa codice eseguibile generato da un altro progetto, il progetto che genera il codice viene definito come dipendenza del progetto che usa il codice. Tali relazioni di dipendenza possono essere definite nella finestra di dialogo **Dipendenze progetto**.  
-  
-### <a name="to-assign-dependencies-to-projects"></a>Per assegnare le dipendenze ai progetti  
-  
+
+### Per assegnare le dipendenze ai progetti
+<a id="to-assign-dependencies-to-projects" class="xliff"></a>  
+
 1.  Selezionare un progetto in Esplora soluzioni.  
-  
+
 2.  Nel menu **Proprietà** scegliere **Dipendenze progetto**.  
-  
+
      Viene visualizzata la finestra di dialogo **Dipendenze progetto**.  
-  
+
     > [!NOTE]
     >  L'opzione **Dipendenze progetto** è disponibile solo in una soluzione con più progetti.  
-  
+
 3.  Nella scheda **Dipendenze** selezionare un progetto dal menu a discesa **Progetto**.  
-  
+
 4.  Nel campo **Dipendente da** selezionare la casella di controllo di qualsiasi altro progetto da compilare prima del progetto specificato.  
-  
+
  La soluzione deve contenere più di un progetto per poter creare dipendenze di progetto.  
-  
-### <a name="to-remove-dependencies-from-projects"></a>Per rimuovere dipendenze dai progetti  
-  
+
+### Per rimuovere dipendenze dai progetti
+<a id="to-remove-dependencies-from-projects" class="xliff"></a>  
+
 1.  Selezionare un progetto in Esplora soluzioni.  
-  
+
 2.  Nel menu **Proprietà** scegliere **Dipendenze progetto**.  
-  
+
      Viene visualizzata la finestra di dialogo **Dipendenze progetto**.  
-  
+
     > [!NOTE]
     >  L'opzione **Dipendenze progetto** è disponibile solo in una soluzione con più progetti.  
-  
+
 3.  Nella scheda **Dipendenze** selezionare un progetto dal menu a discesa **Progetto**.  
-  
+
 4.  Nel campo **Dipendente da** deselezionare le caselle di controllo accanto agli altri progetti che non sono più dipendenze del progetto specificato.  
-  
-## <a name="see-also"></a>Vedere anche  
+
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Compilazione e pulizia di progetti e soluzioni in Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)   
  [Compiling and Building](../ide/compiling-and-building-in-visual-studio.md)  (Compilazione e creazione)  
  [Understanding Build Configurations](../ide/understanding-build-configurations.md)  (Informazioni sulle configurazioni delle compilazioni)  
- [NIB Procedura: Modificare le proprietà e le impostazioni di configurazione dei progetti](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [Gestione delle proprietà di progetti e soluzioni](managing-project-and-solution-properties.md)
+
+

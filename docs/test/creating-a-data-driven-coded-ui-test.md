@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9885f3cff76b9c5e1d053550be80c4b68cf9de1b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 2c4cb515c4442b3c48c42f47f9116e9ff536a5f4
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="creating-a-data-driven-coded-ui-test"></a>Creazione di un test codificati dell'interfaccia utente basato sui dati
@@ -58,7 +59,7 @@ Per testare condizioni diverse, è possibile eseguire il test più volte con val
   
      ![Registrare le azioni](../test/media/cuit_datadriven_cuitbuilder.png "CUIT_dataDriven_CUITBuilder")  
   
-4.  Aggiungere 1 più 2, mettere in pausa la registrazione e generare il metodo di test. I valori di input dell'utente verranno in seguito sostituiti con valori di un file di dati.  
+4.  Aggiungere 1 più 2, mettere in pausa la registrazione e generare il metodo di test. I valori di input dell'utente saranno poi sostituiti con i valori di un file di dati.  
   
      ![Generare un metodo di test](../test/media/cuit_datadriven_cuitbuildergencode.png "CUIT_dataDriven_CUITBuilderGenCode")  
   
@@ -78,7 +79,7 @@ Per testare condizioni diverse, è possibile eseguire il test più volte con val
   
      Nella finestra Esplora test viene visualizzato il risultato del test che mostra se il test è stato superato o meno. Per aprire la finestra Esplora test, scegliere **Windows** dal menu **TEST** e quindi scegliere **Esplora test**.  
   
-6.  Poiché un'origine dati può essere usata anche per i valori di parametro di asserzione, che sono usati dal test per verificare i valori previsti, viene aggiunta un'asserzione per convalidare la somma dei due numeri. Posizionare il cursore nel metodo di test indicato sopra, aprire il menu di scelta rapida, scegliere **Genera codice per test codificato dell'interfaccia utente** e **Usa il generatore di test codificati dell'interfaccia utente**.  
+6.  Poiché un'origine dati può essere usata anche per i valori del parametro relativo all'asserzione, che sono usati dal test per verificare i valori previsti, viene aggiunta un'asserzione per convalidare la somma dei due numeri. Posizionare il cursore nel metodo di test indicato sopra, aprire il menu di scelta rapida, scegliere **Genera codice per test codificato dell'interfaccia utente** e **Usa il generatore di test codificati dell'interfaccia utente**.  
   
      Mappare il controllo di testo nella calcolatrice che visualizza la somma.  
   
@@ -127,15 +128,15 @@ Per testare condizioni diverse, è possibile eseguire il test più volte con val
   
      ![Popolare il file CSV con dati](../test/media/cuit_datadriven_adddatatocsvfile.png "CUIT_dataDriven_AddDataToCSVFile")  
   
-3.  È importante salvare il file CSV usando la codifica corretta. Scegliere **Opzioni di salvataggio avanzate** dal menu **FILE** e quindi scegliere **Unicode (UTF-8 senza firma digitale) – Codepage 65001** come codifica.  
+3.  È importante salvare il file CSV usando la codifica corretta. Scegliere **Opzioni di salvataggio avanzate** dal menu **FILE** e scegliere **Unicode (UTF-8 senza firma digitale) - Tabella codici 65001** come codifica.  
   
-4.  Il file CSV deve essere copiato nella directory di output; diversamente, non è possibile eseguire il test. Usare la finestra Proprietà per copiarlo.  
+4.  Il file con estensione csv deve essere copiato nella directory di output; diversamente, non è possibile eseguire il test. Usare la finestra Proprietà per copiarlo.  
   
      ![Distribuire il file CSV](../test/media/cuit_datadriven_deploycsvfile.png "CUIT_dataDriven_DeployCSVFile")  
   
-     Dopo aver creato il set di dati, è associare i dati al test.  
+     Dopo aver creato il set di dati, associare i dati al test.  
   
-#### <a name="step-3--add-data-source-binding"></a>Passaggio3: aggiungere l'associazione origine dati  
+#### <a name="step-3---add-data-source-binding"></a>Passaggio 3: aggiungere l'associazione origine dati  
   
 1.  Per associare l'origine dati, aggiungere un attributo `DataSource` all'interno dell'attributo `[TestMethod]` che si trova immediatamente sopra il metodo di test.  
   
@@ -163,7 +164,7 @@ Per testare condizioni diverse, è possibile eseguire il test più volte con val
   
      Il test verrà quindi configurato in modo da usare i valori del file di origine dati.  
   
-#### <a name="step-4--use-the-data-in-the-coded-ui-test"></a>Passaggio 4: usare i dati nel test codificato dell'interfaccia utente  
+#### <a name="step-4---use-the-data-in-the-coded-ui-test"></a>Passaggio 4: usare i dati nel test codificato dell'interfaccia utente  
   
 1.  Aggiungere `using Microsoft.VisualStudio.TestTools.UITesting.WinControls` alla parte superiore del file CodedUITest.cs:  
   
@@ -212,7 +213,7 @@ Per testare condizioni diverse, è possibile eseguire il test più volte con val
   
 3.  Salvare la soluzione.  
   
-#### <a name="step-5--run-the-data-driven-test"></a>Passaggio 5: esecuzione del test basato sui dati  
+#### <a name="step-5---run-the-data-driven-test"></a>Passaggio 5: eseguire il test basato sui dati  
   
 1.  Eseguire di nuovo il test per verificare che ora sia basato sui dati.  
   
@@ -220,7 +221,7 @@ Per testare condizioni diverse, è possibile eseguire il test più volte con val
   
  **Linee guida**  
   
- Per altre informazioni, vedere [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Test per la distribuzione continua con Visual Studio 2012 - Capitolo 2: Unit test: test interni) e [Testing for Continuous Delivery with Visual Studio 2012 – Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196) (Test per la distribuzione continua con Visual Studio 2012 - Capitolo 5: Automazione dei test di sistema)  
+ Per altre informazioni, vedere [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 2: Unit Testing: Testing the Inside](http://go.microsoft.com/fwlink/?LinkID=255188) (Testing per il recapito continuo con Visual Studio 2012 - Capitolo 2: Testing unità: test interni) [Testing for Continuous Delivery with Visual Studio 2012 - Chapter 5: Automating System Tests](http://go.microsoft.com/fwlink/?LinkID=255196) (Testing per il recapito continuo con Visual Studio 2012 - Capitolo 5: Automazione dei test di sistema)  
   
 ## <a name="q--a"></a>Domande e risposte  
   

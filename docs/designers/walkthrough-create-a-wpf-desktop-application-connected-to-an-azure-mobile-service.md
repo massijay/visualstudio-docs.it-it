@@ -28,19 +28,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: df243cc90a27f971c4e57eb6f9f6a251513d8fb2
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7716a0e9249c67760ae7b31160dcae89b77b9ca7
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>Procedura dettagliata: Creare un'applicazione desktop WPF connessa a un servizio mobile di Azure
 È possibile usare Windows Presentation Foundation (WPF) per creare rapidamente un'applicazione desktop moderna che usa un servizio mobile di Azure per archiviare e fornire i dati.  
   
-##  <a name="a-namerequirementsa-prerequisites"></a><a name="Requirements"></a> Prerequisiti  
- Per completare questa procedura dettagliata, sono necessari gli elementi seguenti:  
+##  <a name="Requirements"></a> Prerequisiti  
+ Per completare la procedura dettagliata sarà necessario disporre di:  
   
--   Visual Studio 2015: qualsiasi versione che supporta lo sviluppo WPF.  
+-   Visual Studio 2015: qualsiasi versione che supporti lo sviluppo WPF.  
   
 -   Un account Microsoft Azure attivo.  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 02/22/2017
      In **Esplora soluzioni**verranno aggiunti i riferimenti necessari.  
   
     > [!NOTE]
-    >  Se non si accettano le condizioni di licenza, scegliere il pulsante **Non accetto** . Non sarà possibile completare il resto della procedura dettagliata.  
+    >  Se non si accettano le condizioni di licenza, scegliere il pulsante **I Decline** (Non accetto). Non sarà possibile completare il resto della procedura dettagliata.  
   
 ## <a name="create-the-user-interface"></a>Creare l'interfaccia utente  
  Il passaggio successivo consiste nel creare l'interfaccia utente per l'applicazione. Verrà creato prima di tutto un controllo utente riutilizzabile che visualizza un layout affiancato standard a due riquadri. Il controllo utente verrà quindi aggiunto alla finestra principale dell'applicazione e verranno aggiunti anche i controlli per immettere e visualizzare i dati, infine verrà scritto il codice per definire l'interazione con il back-end del servizio mobile.  
@@ -222,10 +223,10 @@ ms.lasthandoff: 02/22/2017
   
 1.  In **Esplora soluzioni**aprire il file **MainWindow.xaml** .  
   
-2.  **Importante**: questo passaggio è solo per C#. Se si usa Visual Basic, andare al passaggio successivo. Nel riquadro inferiore della finestra di progettazione trovare la riga `xmlns:local=”clr-namespace:WPFQuickStart”` e sostituirla con il codice XAML seguente:  
+2.  **Importante**: questo passaggio è solo per C#. Se si usa Visual Basic, andare al passaggio successivo. Nel riquadro inferiore della finestra di progettazione trovare la riga `xmlns:local="clr-namespace:WPFQuickStart"` e sostituirla con il codice XAML seguente:  
   
     ```xaml  
-    xmlns:local=”clr-namespace:WPFQuickStart.Common”  
+    xmlns:local="clr-namespace:WPFQuickStart.Common"  
     ```  
   
 3.  Nella finestra di dialogo **Proprietà** espandere il nodo della categoria **Common** e scegliere la proprietà **Title** , quindi immettere `WPF Todo List` e premere **INVIO** .  

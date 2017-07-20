@@ -37,21 +37,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 029f33f42611ed1c6671c6d3080dbff5b02e3870
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: b34b280b3558003c5c3ad92515d773bc7d45fdda
+ms.contentlocale: it-it
+ms.lasthandoff: 05/24/2017
 
 ---
-# <a name="options-text-editor-c-intellisense"></a>Opzioni, Editor di testo, C#, IntelliSense
+# Opzioni, Editor di testo, C#, IntelliSense
+<a id="options-text-editor-c-intellisense" class="xliff"></a>
 Usare la pagina delle proprietà **IntelliSense** per modificare le impostazioni che hanno effetto sul comportamento di IntelliSense per Visual C#. È possibile accedere alla pagina delle proprietà **IntelliSense** facendo clic su **Opzioni** nel menu **Strumenti**, quindi su **C#** nella cartella **Editor di testo** e infine su **IntelliSense**.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
  La pagina delle proprietà **IntelliSense** include le proprietà seguenti:  
   
-## <a name="completion-lists"></a>Elenchi di completamento  
+## Elenchi di completamento
+<a id="completion-lists" class="xliff"></a>  
  **Mostra elenco di completamento dopo la digitazione di un carattere**  
  Quando questa opzione è selezionata, IntelliSense visualizza automaticamente l'elenco di completamento quando si inizia a digitare. Quando questa opzione non è selezionata, il completamento di IntelliSense è ancora disponibile tramite il menu **IntelliSense** o premendo CTRL+BARRA SPAZIATRICE.  
   
@@ -61,7 +64,8 @@ Usare la pagina delle proprietà **IntelliSense** per modificare le impostazioni
  **Inserisci frammenti di codice in elenchi di completamento**  
  Quando questa opzione è selezionata, IntelliSense aggiunge gli alias per i frammenti di codice C# all'elenco di completamento. Se l'alias del frammento di codice corrisponde a una parola chiave, ad esempio [class](/dotnet/csharp/language-reference/keywords/class), la parola chiave viene sostituita dal collegamento. Per altre informazioni, vedere [Frammenti di codice Visual C#](../../ide/visual-csharp-code-snippets.md).  
   
-## <a name="selection-in-completion-lists"></a>Selezione negli elenchi di completamento  
+## Selezione negli elenchi di completamento
+<a id="selection-in-completion-lists" class="xliff"></a>  
  **Commit alla digitazione dei seguenti caratteri:**  
  Specifica tutti i caratteri che eseguono il completamento automatico IntelliSense per l'elemento selezionato nell'elenco di completamento dopo la digitazione.  
   
@@ -81,11 +85,13 @@ Usare la pagina delle proprietà **IntelliSense** per modificare le impostazioni
   
  `else|` (posizione del cursore)  
   
-## <a name="intellisense-member-selection"></a>Selezione IntelliSense membri  
+## Selezione IntelliSense membri
+<a id="intellisense-member-selection" class="xliff"></a>  
  **Preseleziona membri utilizzati più di recente**  
- Quando questa opzione è selezionata, IntelliSense preseleziona i membri recentemente selezionati nella casella popup Elenca membri per il completamento automatico del nome dell'oggetto durante la sessione corrente nell'ambiente di sviluppo integrato (IDE). La cronologia dei membri utilizzati più di recente viene cancellata tra ogni sessione nell'ambiente di sviluppo integrato. Per altre informazioni, vedere [IntelliSense per i membri usati di recente](../../misc/intellisense-for-most-recently-used-members.md).  
+ Quando questa opzione è selezionata, IntelliSense preseleziona i membri recentemente selezionati nella casella popup Elenca membri per il completamento automatico del nome dell'oggetto durante la sessione corrente nell'ambiente di sviluppo integrato (IDE). La cronologia dei membri utilizzati più di recente viene cancellata tra ogni sessione nell'ambiente di sviluppo integrato. Per altre informazioni, vedere [IntelliSense per i membri usati di recente](../../ide/visual-csharp-intellisense.md#most-recently-used-members).  
   
-## <a name="see-also"></a>Vedere anche  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Generale, Ambiente, finestra di dialogo Opzioni](../../ide/reference/general-environment-options-dialog-box.md)   
  [Commenti relativi alla documentazione XML](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)   
  [Utilizzo di IntelliSense](../../ide/using-intellisense.md)

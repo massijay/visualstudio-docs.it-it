@@ -44,7 +44,7 @@ ms.lasthandoff: 03/03/2017
 # <a name="convert-dialog-box"></a>Finestra di dialogo Converti
 La finestra di dialogo **Converti** consente di selezionare uno strumento di conversione per creare un progetto da un progetto precedente, ad esempio un progetto [!INCLUDE[vbprvblong](../../ide/reference/includes/vbprvblong_md.md)] da un progetto di Visual Basic 6. È inoltre possibile usare lo strumento [Visual Studio Project Converter](http://go.microsoft.com/fwlink/?LinkID=246465), disponibile sul sito Web CodePlex, per aggiornare i progetti creati in versioni precedenti di Visual Studio.  
   
- [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)].  
+ [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
   
 ## <a name="opening-the-convert-dialog-box"></a>Apertura della finestra di dialogo Converti  
   

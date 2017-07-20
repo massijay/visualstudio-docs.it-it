@@ -30,10 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 2981d5082fdbcc9f15c1b36552787e0a78727e38
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: da79533a7a40b6e1b79c66f023beba2c1162bd08
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Utilità della riga di comando del visualizzatore di concorrenza (CVCollectionCmd)
@@ -59,7 +60,7 @@ L'utilità riga di comando Visualizzatore di concorrenza (CVCollectionCmd.exe) p
   
 |Opzione|Descrizione|Parametri|Valori restituiti|  
 |------------|-----------------|----------------|-------------------|  
-|Query|Indica se è possibile avviare la raccolta.|Nessuno|0 se la raccolta è pronta per l'avvio.<br /><br /> 1  se è già in corso una raccolta.<br /><br /> 2 se non sono in corso raccolte, ma sono già state abilitate una o più delle sessioni [ETW](http://msdn.microsoft.com/Library/ac99a063-e2d2-40cc-b659-d23c2f783f92) necessarie.|  
+|Query|Indica se è possibile avviare la raccolta.|Nessuno|0 se la raccolta è pronta per l'avvio.<br /><br /> 1  se è già in corso una raccolta.<br /><br /> 2 se non è in corso alcuna raccolta, ma sono già state abilitate una o più delle sessioni [ETW](http://msdn.microsoft.com/Library/ac99a063-e2d2-40cc-b659-d23c2f783f92) necessarie.|  
 |Launch|Esegue il processo specificato nel Visualizzatore di concorrenza.|Percorso del file eseguibile.|0 se l'esecuzione è riuscita.<br /><br /> 1 se l'esecuzione non è riuscita poiché non è stato possibile avviare l'applicazione di destinazione.<br /><br /> 13 se l'esecuzione non è riuscita poiché CVCollectionCmd non ha autorizzazioni sufficienti per scrivere nella directory di output specificata.|  
 |Attach|Inizia la raccolta di una traccia a livello di sistema. In caso contrario, si connette a un processo, se ne è stato specificato uno.|Nessuno.|0 se la connessione è riuscita.<br /><br /> 1 se la connessione non è riuscita poiché il processo specificato non è valido o è ambiguo.<br /><br /> 13 se la connessione non è riuscita poiché CVCollectionCmd non ha autorizzazioni sufficienti per scrivere nella directory di output specificata.|  
 |Detach|Arresta la raccolta.|Nessuno.|0 se la disconnessione è riuscita.<br /><br /> 1 se la disconnessione non è riuscita poiché la raccolta non è attualmente in corso.<br /><br /> 2 se la disconnessione non è riuscita poiché non è stato possibile arrestarla.|  
@@ -83,8 +84,8 @@ L'utilità riga di comando Visualizzatore di concorrenza (CVCollectionCmd.exe) p
 |Tag|Descrizione|Valori|  
 |---------|-----------------|------------|  
 |Config|Delimita il file di configurazione complessivo.|Deve contenere gli elementi seguenti:<br /><br /> -   MinorVersion<br />-   MajorVersion|  
-|MajorVersion|Specifica la versione principale del file di configurazione.|Deve essere 1 per progetti [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]. Se è diverso da 1, l'utilità non funzionerà.|  
-|MinorVersion|Specifica la versione secondaria del file di configurazione.|Deve essere 0 per progetti [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]. Se è diverso da 0, l'utilità non funzionerà.|  
+|MajorVersion|Specifica la versione principale del file di configurazione.|Deve essere 1 per progetti [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] . Se è diverso da 1, l'utilità non funzionerà.|  
+|MinorVersion|Specifica la versione secondaria del file di configurazione.|Deve essere 0 per progetti [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] . Se è diverso da 0, l'utilità non funzionerà.|  
 |IncludeEnvSymbolPath|Imposta un valore che determina se è usato il percorso simboli di ambiente (_NT_SYMBOL_PATH).|-   True<br />-   False|  
 |DeleteEtlsAfterAnalysis|Imposta un valore che determina se i file ETL sono eliminati dopo il completamento dell'analisi.|-   True<br />-   False|  
 |SymbolPath|Specifica il percorso del server di simboli. Per altre informazioni, vedere [Usare il server di simboli Microsoft per ottenere il file di simboli di debug](http://go.microsoft.com/fwlink/?LinkID=149389).|Nome di directory o URL.|  

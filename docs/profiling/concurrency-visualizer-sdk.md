@@ -1,62 +1,80 @@
 ---
-title: "SDK del visualizzatore di concorrenza | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.cv.sdk.about"
+title: SDK del visualizzatore di concorrenza | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.cv.sdk.about
 ms.assetid: 4b22cdf9-59b1-4c88-a6d8-1644a4a11e08
 caps.latest.revision: 11
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# SDK del visualizzatore di concorrenza
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 0d5c4895cb77388e45442dccdbfdd98884e81c18
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
-È possibile modificare il codice sorgente utilizzando l'SDK del Visualizzatore di concorrenza per visualizzare informazioni aggiuntive nel Visualizzatore di concorrenza.  È possibile associare dati aggiuntivi alle fasi e agli eventi nel codice.  Queste visualizzazioni aggiuntive sono note come *marcatori*.  Per una procedura dettagliata introduttiva, vedere [Introduzione al Visualizzatore di concorrenze SDK](http://go.microsoft.com/fwlink/?LinkId=235405).  
+---
+# <a name="concurrency-visualizer-sdk"></a>SDK del visualizzatore di concorrenza
+Con l'SDK del visualizzatore di concorrenza è possibile instrumentare il codice sorgente in modo che nel visualizzatore di concorrenza siano visualizzate informazioni aggiuntive. È possibile associare i dati aggiuntivi a fasi ed eventi nel codice. Queste visualizzazioni aggiuntive sono note come *marcatori*.  Per una procedura dettagliata introduttiva, vedere [Introducing the Concurrency Visualizer SDK](http://go.microsoft.com/fwlink/?LinkId=235405).(Introduzione all'SDK del visualizzatore di concorrenza).  
   
-## Proprietà  
- Le flag, gli intervalli e i messaggi dispongono di due proprietà: categoria e priorità.  Nella finestra di dialogo [Impostazioni avanzate](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md), è possibile utilizzare queste proprietà per filtrare il set di marcatori visualizzato.  Inoltre, queste proprietà influiscono sulla rappresentazione visiva dei marcatori.  Ad esempio, la dimensione delle flag viene utilizzata per rappresentare la priorità.  Inoltre, il colore viene utilizzato per indicare la categoria.  
+## <a name="properties"></a>Proprietà  
+ Flag, span e messaggi hanno due proprietà: categoria e importanza. Nella finestra di dialogo [Impostazioni avanzate](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) è possibile usare queste proprietà per filtrare il set di marcatori visualizzati. Queste proprietà influiscono anche sulla rappresentazione visiva dei marcatori. Ad esempio, l'importanza è rappresentata dalla dimensione dei flag, mentre il colore viene usato per indicare la categoria.  
   
-## Utilizzo di base  
- Il Visualizzatore di concorrenza espone un provider predefinito che si può utilizzare per generare i marcatori.  Il provider è già registrato con il Visualizzatore di concorrenza e non è necessario eseguire alcuna operazione per far apparire i marcatori all'interno dell'interfaccia utente.  
+## <a name="basic-usage"></a>Utilizzo di base  
+ Il visualizzatore di concorrenza espone un provider predefinito che è possibile usare per generare i marcatori. Il provider è già registrato nel visualizzatore di concorrenza e non è necessario eseguire altre operazioni per visualizzare i marcatori nell'interfaccia utente.  
   
-### C\# e Visual Basic  
- In C\#, Visual Basic e altro codice gestito, viene utilizzato il provider predefinito chiamando <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers>.  Esso espone quattro funzioni per la generazione dei marcatori: <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteFlag%2A>, <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.EnterSpan%2A>, <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteMessage%2A> e <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteAlert%2A>.  Esistono overload multipli per queste funzioni, a seconda che si desiderino utilizzare le impostazioni predefinite per le proprietà.  L'overload più semplice accetta un solo parametro di tipo stringa che specifica la descrizione dell'evento.  La descrizione viene visualizzata nei report del Visualizzatore di concorrenza.  
+### <a name="c-and-visual-basic"></a>C# e Visual Basic  
+ In C#, Visual basic e altro codice gestito usare il provider predefinito chiamando <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers>. Espone le quattro funzioni per la generazione di marcatori: <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteFlag%2A>, <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.EnterSpan%2A>, <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteMessage%2A> e <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.Markers.WriteAlert%2A>. Sono disponibili più overload per queste funzioni, a seconda che si voglia o meno usare le impostazioni predefinite per le proprietà.  L'overload più semplice accetta solo un parametro di stringa che specifica la descrizione dell'evento. La descrizione viene visualizzata nei rapporti del visualizzatore di concorrenza.  
   
-##### Per aggiungere il supporto all'SDK ad un progetto C\# o Visual Basic  
+##### <a name="to-add-sdk-support-to-a-c-or-visual-basic-project"></a>Per aggiungere un SDK a un progetto C# o Visual Basic  
   
-1.  Sulla barra dei menù, scegliere **Analizza**, **Visualizzatore di concorrenza**, **Aggiungi SDK al progetto**.  
+1.  Nella barra dei menu scegliere **Analizza**, **Visualizzatore di concorrenza**, **Aggiungi SDK al progetto**.  
   
-2.  Selezionare il progetto in cui si desidera accedere all'SDK quindi premere il pulsante **Aggiungi SDK al progetto selezionato**.  
+2.  Scegliere il progetto in cui si vuole aggiungere l'SDK e selezionare il pulsante **Aggiungi SDK al progetto selezionato**.  
   
-3.  Aggiungere le importazioni oppure le istruzioni using al codice.  
+3.  Aggiungere un'istruzione imports o using al codice.  
   
-    ```c#  
+    ```CSharp  
     using Microsoft.ConcurrencyVisualizer.Instrumentation;  
     ```  
   
-    ```vb  
+    ```VB  
     Imports Microsoft.ConcurrencyVisualizer.Instrumentation  
     ```  
   
-### C\+\+  
- In C\+\+, creare un oggetto [Classe marker\_series](../profiling/marker-series-class.md) e utilizzarlo per chiamare le funzioni.  La classe `marker_series` espone tre funzioni per la generazione dei marcatori, [Metodo marker\_series::write\_flag](../profiling/marker-series-write-flag-method.md), [Metodo marker\_series::write\_message](../profiling/marker-series-write-message-method.md) e [Metodo marker\_series::write\_alert](../profiling/marker-series-write-alert-method.md).  
+### <a name="c"></a>C++  
+ In C++ creare un oggetto [classe marker_series](../profiling/marker-series-class.md) e usarlo per chiamare le funzioni.  La classe `marker_series` espone tre funzioni per la generazione di indicatori: [marker_series::write_flag Method](../profiling/marker-series-write-flag-method.md), [marker_series::write_message Method](../profiling/marker-series-write-message-method.md) e [marker_series::write_alert Method](../profiling/marker-series-write-alert-method.md).  
   
-##### Per aggiungere il supporto all'SDK ad un progetto C\+\+ o C  
+##### <a name="to-add-sdk-support-to-a-c-or-c-project"></a>Per aggiungere un SDK a un progetto C++ o C  
   
-1.  Sulla barra dei menù, scegliere **Analizza**, **Visualizzatore di concorrenza**, **Aggiungi SDK al progetto**.  
+1.  Nella barra dei menu scegliere **Analizza**, **Visualizzatore di concorrenza**, **Aggiungi SDK al progetto**.  
   
-2.  Selezionare il progetto in cui si desidera accedere all'SDK quindi premere il pulsante **Aggiungi SDK al progetto selezionato**.  
+2.  Scegliere il progetto in cui si vuole aggiungere l'SDK e selezionare il pulsante **Aggiungi SDK al progetto selezionato**.  
   
-3.  Per C\+\+, includere `cvmarkersobj.h`.  Per C, includere `cvmarkers.h`.  
+3.  Per C++, includere `cvmarkersobj.h`. Per C, includere `cvmarkers.h`.  
   
 4.  Aggiungere un'istruzione using al codice.  
   
@@ -64,68 +82,68 @@ caps.handback.revision: 11
     using namespace Concurrency::diagnostic;  
     ```  
   
-5.  Creare un nuovo oggetto `marker_series` e passarlo al costruttore di `span`.  
+5.  Creare un oggetto `marker_series` e passarlo al costruttore `span`.  
   
-    ```cpp  
+    ```C++  
   
     marker_series mySeries;  
     span s(mySeries, _T("Span description"));  
   
     ```  
   
-## Utilizzo Personalizzato  
- Per scenari avanzati, l'SDK del Visualizzatore di concorrenza espone un maggiore controllo.  Due concetti principali sono associati a scenari più avanzati: provider di marcatori e serie di marcatori.  I provider di marcatori sono dei provider ETW diversi \(ognuno con un GUID diverso\).  Le serie di marcatori sono canali seriali di eventi generati da un provider.  È possibile utilizzarli per organizzare gli eventi generati da un provider di marcatori.  
+## <a name="custom-usage"></a>Utilizzo personalizzato  
+ Per gli scenari avanzati, l'SDK del visualizzatore di concorrenza espone maggiore controllo.  A scenari più avanzati sono associati due concetti principali: provider marcatori e serie di marcatori. I provider marcatori sono provider ETW diversi, ognuno dei quali ha un GUID specifico. Le serie di marcatori sono canali di eventi seriali generati da un provider, che possono essere usate per organizzare gli eventi generati da un provider marcatori.  
   
-#### Per utilizzare un nuovo provider di marcatori in un progetto C\# o Visual Basic.  
+#### <a name="to-use-a-new-marker-provider-in-a-c-or-visual-basic-project"></a>Per usare un nuovo provider marcatori in un progetto C# o Visual Basic  
   
 1.  Creare un oggetto <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerWriter>.  Il costruttore accetta un GUID.  
   
-2.  Per registrare il provider, aprire la finestra di dialogo [Impostazioni avanzate](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) del Visualizzatore di concorrenza.  Selezionare la scheda **Marcatori** quindi premere il pulsante **Aggiungi nuovo provider**.  Nella finestra di dialogo [Impostazioni avanzate](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md), immettere il GUID utilizzato per creare il provider e una descrizione del provider.  
+2.  Per registrare il provider, aprire la finestra di dialogo [Impostazioni avanzate](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) del visualizzatore di concorrenza.  Selezionare la scheda **Marcatori** e selezionare il pulsante **Aggiungi nuovo provider**. Nella finestra di dialogo [Impostazioni avanzate](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) immettere il GUID usato per creare il provider e una descrizione del provider.  
   
-#### Per utilizzare un nuovo provider di marcatori in un progetto C\+\+ o C  
+#### <a name="to-use-a-new-marker-provider-in-a-c-or-c-project"></a>Per usare un nuovo provider marcatori in un progetto C++ o C  
   
-1.  Utilizzare la funzione `CvInitProvider` per inizializzare un PCV\_PROVIDER.  Il costruttore accetta un GUID\* ed un PCV\_PROVIDER\*.  
+1.  Usare la funzione `CvInitProvider` per inizializzare un PCV_PROVIDER.  Il costruttore accetta un GUID* e PCV_PROVIDER*\*.  
   
-2.  Per registrare il provider, aprire la finestra di dialogo [Impostazioni avanzate](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md).  Selezionare la scheda **Marcatori** quindi premere il pulsante **Aggiungi nuovo provider**.  In questa finestra di dialogo, immettere il GUID utilizzato per creare il provider e una descrizione del provider.  
+2.  Per registrare il provider, aprire la finestra di dialogo [Impostazioni avanzate](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md).  Selezionare la scheda **Marcatori** e selezionare il pulsante **Aggiungi nuovo provider**. Nella finestra di dialogo immettere il GUID usato per creare il provider e una descrizione del provider.  
   
-#### Per utilizzare una serie di marcatori in un progetto C\# o Visual Basic  
+#### <a name="to-use-a-marker-series-in-a-c-or-visual-basic-project"></a>Per usare una serie di marcatori in un progetto C# o Visual Basic  
   
-1.  Per utilizzare una nuova <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerSeries>, prima crearla utilizzando un oggetto <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerWriter> e quindi generare gli eventi del marcatore direttamente dalla nuova serie.  
+1.  Per usare un nuova serie <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerSeries>, è necessario prima crearla tramite un oggetto <xref:Microsoft.ConcurrencyVisualizer.Instrumentation.MarkerWriter>. A questo punto è possibile generare gli eventi marcatori direttamente dalla nuova serie.  
   
-    ```c#  
-    MarkerSeries series1 = myMarkerWriter.CreateMarkerSeries(″Series 1″);  
-    series1.WriteFlag(″My flag″);  
+    ```CSharp  
+    MarkerSeries series1 = myMarkerWriter.CreateMarkerSeries("Series 1");  
+    series1.WriteFlag("My flag");  
     ```  
   
-    ```vb  
-    Dim series1 As New myMarkerWriter.CreateMarkerSeries(″Series 1″)  
-    series1.WriteFlag(″My flag″)  
+    ```VB  
+    Dim series1 As New myMarkerWriter.CreateMarkerSeries("Series 1")  
+    series1.WriteFlag("My flag")  
     ```  
   
-#### Per utilizzare una serie di marcatori in un progetto C\+\+  
+#### <a name="to-use-a-marker-series-in-a-c-project"></a>Per usare una serie di marcatori in un progetto C++  
   
-1.  Creare un oggetto `marker_series`.  È possibile generare eventi da questa nuova serie.  
+1.  Creare un oggetto `marker_series`.  Gli eventi possono essere generati da questa serie nuova.  
   
     ```scr  
     marker_series series;  
     series.write_flag(_T("Hello world!"));  
     ```  
   
-#### Per utilizzare una serie di marcatori in un progetto C  
+#### <a name="to-use-a-marker-series-in-a-c-project"></a>Per usare una serie di marcatori in un progetto C  
   
-1.  Utilizzare la funzione `CvCreateMarkerSeries` per creare un PCV\_MARKERSERIES.  
+1.  Usare la funzione `CvCreateMarkerSeries` per creare PCV_MARKERSERIES.  
   
-    ```cpp  
+    ```C++  
     PCV_MARKERSERIES series;  
     CvCreatemarkerSeries(myProvider, _T("My Series"), &series);  
     CvWriteFlag(series, _T("Writing a flag"));  
     ```  
   
-## Argomenti correlati  
+## <a name="related-topics"></a>Argomenti correlati  
   
 |Titolo|Descrizione|  
-|------------|-----------------|  
-|[riferimento alla libreria C\+\+](../profiling/cpp-library-reference.md)|Descrive l'API del Visualizzatore di concorrenza per C\+\+.|  
-|[riferimento alla libreria C](../profiling/c-library-reference.md)|Descrive l'API del Visualizzatore di concorrenza per C.|  
-|<xref:Microsoft.ConcurrencyVisualizer.Instrumentation>|Descrive l'API del Visualizzatore di concorrenza per il codice gestito.|  
-|[Visualizzatore di concorrenze](../profiling/concurrency-visualizer.md)|Informazioni di riferimento relative a visualizzazioni e rapporti dei file di dati di profilatura generati tramite il metodo di concorrenza e che includono di dati di esecuzione di thread.|
+|-----------|-----------------|  
+|[C++ Library Reference](../profiling/cpp-library-reference.md) (Riferimento alla libreria C++)|Viene descritta l'API del visualizzatore di concorrenza per C++.|  
+|[C Library Reference](../profiling/c-library-reference.md) (Riferimento alla libreria C)|Viene descritta l'API del visualizzatore di concorrenza per C.|  
+|<xref:Microsoft.ConcurrencyVisualizer.Instrumentation>|Viene descritta l'API del visualizzatore di concorrenza per il codice gestito.|  
+|[Visualizzatore di concorrenza](../profiling/concurrency-visualizer.md)|Informazioni di riferimento sulle visualizzazioni e sui rapporti dei file di dati di profilatura che sono generati tramite il metodo di concorrenza e che includono dati di esecuzione thread.|

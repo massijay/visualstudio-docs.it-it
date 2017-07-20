@@ -1,43 +1,60 @@
 ---
-title: "How to: Split a Class into Partial Classes (Class Designer) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Class Designer, partial classes"
-  - "partial classes, Class Designer"
+title: 'Procedura: Dividere una classe in classi parziali (Progettazione classi) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Class Designer, partial classes
+- partial classes, Class Designer
 ms.assetid: 6f6b0b30-3996-4569-9200-20482b3adf90
 caps.latest.revision: 10
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# How to: Split a Class into Partial Classes (Class Designer)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 63aad78bdc7df685ca3a73ec16a9cbc87b78151f
+ms.openlocfilehash: 9d74565f8e7e5b89e1716e9e2d88e2e18e077124
+ms.contentlocale: it-it
+ms.lasthandoff: 07/14/2017
 
-È possibile dividere la dichiarazione di una classe o struttura tra diverse dichiarazioni utilizzando la parola chiave `Partial` in Visual Basic o la parola chiave `partial` in Visual C\#.  È possibile utilizzare tutte le dichiarazioni parziali desiderate, in tutti i diversi file di origine desiderati o in uno soltanto.  Tutte le dichiarazioni, tuttavia, devono trovarsi in un assembly e in uno spazio dei nomi identici.  
+---
+# <a name="how-to-split-a-class-into-partial-classes-class-designer"></a>Procedura: dividere una classe in classi parziali (Progettazione classi)
+È possibile dividere la dichiarazione di una classe o struttura in più dichiarazioni usando la parola chiave `Partial` in Visual Basic o la parola chiave `partial` in Visual C#. Si può usare il numero di dichiarazioni parziali desiderato, in un numero qualsiasi di file di origine differenti oppure in un singolo file di origine. Tutte le dichiarazioni, tuttavia, devono trovarsi nello stesso assembly e nello stesso spazio dei nomi.  
   
- Le classi parziali sono utili in diverse situazioni.  Ad esempio, quando si lavora su progetti di grandi dimensioni, la separazione di una classe in più file ne consente l'utilizzo contemporaneo da parte di più programmatori.  Quando si utilizza codice generato da Visual Studio, è possibile modificare la classe senza dover ricreare il file di origine  \(gli esempi di codice generato da Visual Studio includono codice wrapper di servizi Web e Windows Form\). È pertanto possibile creare codice che utilizzi classi generate automaticamente senza dover modificare il file creato da Visual Studio.  
+ Le classi parziali sono utili in varie situazioni. Ad esempio, quando si lavora su progetti di grandi dimensioni, la separazione di una classe in più file consente a più programmatori di lavorare in contemporanea. Quando si lavora con il codice generato da Visual Studio, è possibile modificare la classe senza dover ricreare il file di origine. (Il codice wrapper per Windows Form e per servizi Web è un esempio di codice generato da Visual Studio.) È possibile creare codice che usa classi generate automaticamente senza dover modificare il file creato da Visual Studio.  
   
- Sono disponibili due tipi di metodi parziali.  Tali metodi vengono denominati dichiarazione e implementazione sia in Visual C\# sia in Visual Basic.  
+ Esistono due tipi di metodi parziali, chiamati dichiarazione e implementazione in Visual C# e Visual Basic.  
   
- Progettazione classi supporta classi e metodi parziali.  La forma del tipo nel diagramma classi si riferisce a un singolo percorso della dichiarazione per la classe parziale.  Se la classe parziale viene definita in più file, è possibile specificare il percorso della dichiarazione utilizzato da Progettazione classi impostando la proprietà **Percorso nuovi membri** nella finestra **Proprietà**.  In altre parole, quando si fa doppio clic sulla forma di una classe, Progettazione classi passa al file di origine che contiene la dichiarazione di classe identificata dalla proprietà **Percorso nuovi membri**.  Quando si fa doppio clic su un metodo parziale nella forma di una classe, Progettazione classi passa alla dichiarazione del metodo parziale.  Anche la proprietà **Nome file** nella finestra **Proprietà** si riferisce al percorso della dichiarazione.  Per le classi parziali, **Nome file** elenca tutti i file che contengono codice di dichiarazione e di implementazione per tali classi.  Per i metodi parziali, invece, **Nome file** elenca solo il file che contiene la dichiarazione del metodo parziale.  
+ Progettazione classi supporta classi e metodi parziali. La forma del tipo nel diagramma classi fa riferimento a una singola posizione di dichiarazione per la classe parziale. Se la classe parziale è definita in più file, è possibile specificare la posizione di dichiarazione che verrà usata da Progettazione classi impostando la proprietà **Percorso nuovi membri** nella finestra **Proprietà**. In altre parole, quando si fa doppio clic su una forma di classe, Progettazione classi passa al file di origine che contiene la dichiarazione di classe identificata dalla proprietà **Percorso nuovi membri**. Quando si fa doppio clic su un metodo parziale in una forma di classe, Progettazione classi passa alla dichiarazione del metodo parziale. Inoltre, nella finestra **Proprietà** la proprietà **Nome file** fa riferimento alla posizione di dichiarazione. Per le classi parziali, **Nome file** elenca tutti i file che contengono codice di dichiarazione e implementazione per tale classe. Per i metodi parziali, tuttavia, **Nome file** elenca solo il file che contiene la dichiarazione del metodo parziale.  
   
- Negli esempi riportati di seguito la definizione della classe `Employee` viene suddivisa in due dichiarazioni, ciascuna delle quali definisce una diversa routine.  Le due definizioni parziali contenute negli esempi possono trovarsi in un unico file di origine o in due file di origine diversi.  
+ L'esempio seguente suddivide la definizione della classe `Employee` in due dichiarazioni, ognuna delle quali definisce una routine differente. Le due definizioni parziali negli esempi possono trovarsi in un singolo file di origine o in due file di origine differenti.  
   
 > [!NOTE]
->  In Visual Basic vengono utilizzate definizioni di classi parziali per separare il codice generato da Visual Studio da quello creato dall'utente.  Il codice viene separato in file di origine distinti.  In **Progettazione Windows Form**, ad esempio, vengono definite classi parziali per controlli come `Form`.  In questi controlli il codice generato non deve essere modificato.  
+>  Visual Basic usa definizioni di classi parziali per separare il codice generato da Visual Studio dal codice creato dall'utente. Il codice viene separato in file di origine distinti. Ad esempio, **Progettazione Windows Form** definisce classi parziali per controlli come `Form`. In questi controlli il codice generato non deve essere modificato.  
   
- Per ulteriori informazioni sui tipi parziali in Visual Basic, vedere [Partial](/dotnet/visual-basic/language-reference/modifiers/partial).  
+ Per altre informazioni sui tipi parziali in Visual Basic, vedere [Partial](/dotnet/visual-basic/language-reference/modifiers/partial).  
   
-## Esempio  
- Per suddividere una definizione di classe in Visual Basic, utilizzare la parola chiave `Partial`, come mostrato nell'esempio riportato di seguito.  
+## <a name="example"></a>Esempio  
+ Per suddividere una definizione di classe in Visual Basic, usare la parola chiave `Partial`, come illustrato nell'esempio seguente.  
   
 ```vb#  
 ' First part of class definition.  
@@ -53,8 +70,8 @@ Partial Public Class Employee
 End Class  
 ```  
   
-## Esempio  
- Per suddividere una definizione di classe in Visual C\#, utilizzare la parola chiave `partial`, come mostrato nell'esempio riportato di seguito.  
+## <a name="example"></a>Esempio  
+ Per suddividere una definizione di classe in Visual C#, usare la parola chiave `partial`, come illustrato nell'esempio seguente.  
   
 ```c#  
 // First part of class definition.  
@@ -74,8 +91,8 @@ public partial class Employee
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classi e metodi parziali](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)   
- [parziale \(Tipo\)](/dotnet/csharp/language-reference/keywords/partial-type)   
- [parziale \(Metodo\) \(Riferimenti per C\#\)](/dotnet/csharp/language-reference/keywords/partial-method)   
+ [parziale (Tipo)](/dotnet/csharp/language-reference/keywords/partial-type)   
+ [parziale (Metodo) (Riferimenti per C#)](/dotnet/csharp/language-reference/keywords/partial-method)   
  [Partial](/dotnet/visual-basic/language-reference/modifiers/partial)

@@ -30,10 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 0d129b4820944f5717c63243cb8550bc4fed3385
-ms.openlocfilehash: 380b65540d8f5c6ea6d8a8adf1f3c5575f5dd9dc
-ms.lasthandoff: 03/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 09c33f3cc331af03659922e178e4089f177132de
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="profiling-tools"></a>Strumenti di profilatura
@@ -52,7 +53,7 @@ Gli strumenti di profilatura e diagnostica consentono di diagnosticare l'utilizz
 ## <a name="memory-usage"></a>Utilizzo memoria  
  ![DiagMemorySmall](../profiling/media/diagmemorysmall.png "DiagMemorySmall")  
   
- È possibile rilevare perdite di memoria e memoria inefficiente mentre si sta eseguendo il debug con lo strumento **Utilizzo memoria** , che consente di creare snapshot dell'heap di memoria gestito e nativo. È possibile usare questo strumento con le applicazioni desktop, le app universali di Windows e le applicazioni ASP.NET. Lo strumento **Utilizzo memoria** può essere eseguito dalla finestra **Strumenti di diagnostica** durante il debug (**Debug / Windows / Mostra strumenti di diagnostica**) o all'esterno del debugger (**Debug / Profiler prestazioni**). Per altre informazioni, vedere [Utilizzo memoria](../profiling/memory-usage.md) e [Utilizzo memoria senza debug](../profiling/Memory-Usage-without-Debugging2.md).  
+ È possibile rilevare perdite e inefficienze di funzionamento della memoria durante il debug con lo strumento **Utilizzo memoria**, che consente di creare snapshot dell'heap di memoria gestito e nativo. È possibile usare questo strumento con le applicazioni desktop, le app universali di Windows e le applicazioni ASP.NET. Lo strumento **Utilizzo memoria** può essere eseguito dalla finestra **Strumenti di diagnostica** durante il debug (**Debug / Windows / Mostra strumenti di diagnostica**) o all'esterno del debugger (**Debug / Profiler prestazioni**). Per altre informazioni, vedere [Utilizzo memoria](../profiling/memory-usage.md) e [Utilizzo memoria senza debug](../profiling/Memory-Usage-without-Debugging2.md).  
   
 ## <a name="cpu-usage"></a>Utilizzo CPU  
  ![DiagCPUSmall](../profiling/media/diagcpusmall.png "DiagCPUSmall")  
@@ -98,7 +99,7 @@ Gli strumenti di profilatura e diagnostica consentono di diagnosticare l'utilizz
  [IntelliTrace](../debugger/intellitrace.md) consente di registrare eventi specifici, esaminare i dati della finestra **Variabili locali** durante gli eventi del debugger e le chiamate di funzioni, nonché gli errori di debug difficili da riprodurre.  IntelliTrace è principalmente uno strumento di debug, ma offre anche informazioni che possono essere usate per l'analisi delle prestazioni. È possibile usare questo strumento solo in Visual Studio Enterprise con applicazioni desktop, universali di Windows ASP.NET in C#. IntelliTrace è disponibile nella finestra **Strumenti di diagnostica** durante il debug (**Debug / Windows / Mostra strumenti di diagnostica**).  
   
 ## <a name="profiling-in-production"></a>Profilatura in fase di produzione  
- L'approccio consigliato per la profilatura in fase di produzione consiste nell'eseguire l'operazione dalla [riga di comando usando vsperf.exe](../profiling/using-the-profiling-tools-from-the-command-line.md) per raccogliere un profilo della CPU. Per il supporto per la profilatura remota nei servizi app di Azure, è possibile eseguire la profilatura da [Esplora Server o il portale di Kudu](https://azure.microsoft.com/en-us/blog/remote-profiling-support-in-azure-app-service/).  
+ L'approccio consigliato per la profilatura in fase di produzione è eseguire la profilatura dalla [riga di comando usando vsperf.exe](../profiling/using-the-profiling-tools-from-the-command-line.md) per raccogliere un profilo della CPU. Per il supporto per la profilatura remota nei servizi app di Azure, è possibile eseguire la profilatura da [Esplora Server o il portale di Kudu](https://azure.microsoft.com/en-us/blog/remote-profiling-support-in-azure-app-service/).  
   
 ## <a name="which-tool-should-i-use"></a>Quale strumento utilizzare?  
  Nella tabella seguente sono riportati i diversi strumenti offerti da Visual Studio e i diversi tipi di progetto con cui possono essere usati:  
@@ -106,14 +107,14 @@ Gli strumenti di profilatura e diagnostica consentono di diagnosticare l'utilizz
 |Strumento di prestazioni|Desktop di Windows|Windows Store/universale|ASP.NET/ASP.NET Core|  
 |----------------------|---------------------|------------------------------|-------------|  
 |[Utilizzo memoria](../profiling/memory-usage.md)|sì|sì|sì|  
-|[Utilizzo della CPU](../profiling/cpu-usage.md)|sì|sì|sì|  
+|[Utilizzo CPU](../profiling/cpu-usage.md)|sì|sì|sì|  
 |[Utilizzo GPU](../debugger/gpu-usage.md)|sì|sì|no|  
 |[Sequenza temporale applicazione](../profiling/application-timeline.md)|sì|sì|no|  
 |[PerfTips](../profiling/perftips.md)|sì|Sì per XAML, no per HTML|sì|  
-|[Performance Explorer](../profiling/performance-explorer.md) (Esplora prestazioni)|sì|no|sì (no per ASP.NET Core)|  
+|[Esplora prestazioni](../profiling/performance-explorer.md)|sì|no|sì (no per ASP.NET Core)|  
 |[IntelliTrace](../debugger/intellitrace.md)|Solo .NET Enterprise|Solo .NET Enterprise|Solo .NET Enterprise|
 |[Utilizzo della rete](../profiling/network-usage.md)|no|sì|no| 
-|[Velocità di risposta interfaccia utente HTML](../profiling/html-ui-responsiveness.md)|no|Sì per HTML, no per XAML|no|  
+|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|no|Sì per HTML, no per XAML|no|  
 |[Memoria JavaScript](../profiling/javascript-memory.md)|no|Sì per HTML, no per XAML|no|  
   
 ## <a name="see-also"></a>Vedere anche  
