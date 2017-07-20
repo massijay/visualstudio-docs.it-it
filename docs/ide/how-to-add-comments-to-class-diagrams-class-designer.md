@@ -1,42 +1,59 @@
 ---
-title: "How to: Add Comments to Class Diagrams (Class Designer) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.classdesigner.comment"
-helpviewer_keywords: 
-  - "annotations, class diagrams"
-  - "class diagrams, adding comment shapes"
-  - "comment shapes"
+title: 'Procedura: Aggiungere commenti a diagrammi classi (Progettazione classi) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.classdesigner.comment
+helpviewer_keywords:
+- annotations, class diagrams
+- class diagrams, adding comment shapes
+- comment shapes
 ms.assetid: d54005d5-a29d-4c4e-b153-feb6e84dd44f
 caps.latest.revision: 11
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# How to: Add Comments to Class Diagrams (Class Designer)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 63aad78bdc7df685ca3a73ec16a9cbc87b78151f
+ms.openlocfilehash: fe17aaf87c9ec8af55e6e175103e795991a02b5a
+ms.contentlocale: it-it
+ms.lasthandoff: 07/14/2017
 
-È possibile utilizzare forme Commenti per inserire annotazioni nei diagrammi classi.  Una forma Commenti è caratterizzata da un'unica proprietà, **Testo**, in cui è possibile digitare testo.  Le forme Commenti esistono solo sulla superficie del diagramma e non nel codice.  
+---
+# <a name="how-to-add-comments-to-class-diagrams-class-designer"></a>Procedura: aggiungere commenti a diagrammi classi (Progettazione classi)
+È possibile usare le forme Commenti per annotare i diagrammi classi. Una forma Commenti ha una sola proprietà, **Testo**, in cui è possibile digitare il testo. Le forme Commenti esistono solo sulla superficie del diagramma e non nel codice.  
   
- I commenti si trovano nella visualizzazione del diagrammaclassi in **Progettazione classi**. Se si apre un secondo diagramma classi nello stesso progetto, i commenti creati nella prima visualizzazione non risulteranno visibili.  Se si elimina un diagramma, verranno eliminati anche tutti i commenti in esso contenuti.  
+ Un commento risiede nella visualizzazione del diagramma classi in **Progettazione classi**. Se si apre un secondo diagramma classi nello stesso progetto, i commenti creati nella prima visualizzazione non sono visibili. Se si elimina un diagramma, vengono eliminati anche tutti i commenti in esso contenuti.  
   
- È possibile ridimensionare una forma Commenti ma non modificarne altre caratteristiche dell'aspetto, ad esempio il colore di sfondo, il tipo o la dimensione del carattere.  
+ È possibile ridimensionare una forma Commenti, ma non è possibile modificare altri elementi dell'aspetto della forma, come colore di sfondo, tipo di carattere o dimensioni del carattere.  
   
-### Per aggiungere un commento  
+### <a name="to-add-a-comment"></a>Per aggiungere un commento  
   
-1.  Trascinare un commento dalla **Casella degli strumenti Progettazione classi** nel diagramma classi.  
+1.  Trascinare un commento dalla **casella degli strumenti di Progettazione classi** nel diagramma classi.  
   
-2.  Fare clic nella nuova forma Commenti nel diagramma e digitare il testo desiderato.  
+2.  Fare clic sulla nuova forma Commenti nel diagramma e digitare il testo desiderato.  
   
-## Vedere anche  
- [Working with Class Diagrams \(Class Designer\)](../ide/working-with-class-diagrams-class-designer.md)   
- [Working with Class Diagrams \(Class Designer\)](../ide/working-with-class-diagrams-class-designer.md)   
- [How to: Customize Class Diagrams \(Class Designer\)](../ide/how-to-customize-class-diagrams-class-designer.md)
+## <a name="see-also"></a>Vedere anche  
+ [Working with Class Diagrams (Class Designer)](../ide/working-with-class-diagrams-class-designer.md)  (Uso di diagrammi classi (Progettazione classi))  
+ [Working with Class Diagrams (Class Designer)](../ide/working-with-class-diagrams-class-designer.md)  (Uso di diagrammi classi (Progettazione classi))  
+ [Procedura: Personalizzare i diagrammi classi (Progettazione classi)](../ide/how-to-customize-class-diagrams-class-designer.md)
