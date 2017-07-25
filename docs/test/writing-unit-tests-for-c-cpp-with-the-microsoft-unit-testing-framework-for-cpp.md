@@ -28,10 +28,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 203cc6111870cbf3342fd84c5931a0dadc2bdde0
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: c7d4f4f00d8d89b77f18b2a1b355a445c05dfb6b
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="writing-unit-tests-for-cc-with-the-microsoft-unit-testing-framework-for-c"></a>Scrittura di unit test per C/C++ con il framework di testing unità Microsoft per C++.
@@ -414,6 +414,6 @@ In Visual Studio, è possibile creare unit test per il codice non gestito scritt
  [Utilizzo di Microsoft.VisualStudio.TestTools.CppUnitTestFramework](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md)   
  [Panoramica sull'interoperabilità sul codice gestito e non gestito](http://msdn.microsoft.com/library/ms973872.aspx)   
  [Debug del codice nativo](../debugger/debugging-native-code.md)   
- [Procedura dettagliata: creazione e utilizzo di una libreria a collegamento dinamico (C++)](http://msdn.microsoft.com/Library/3ae94848-44e7-4955-bbad-7d40f493e941)   
+ [Procedura dettagliata: creazione e utilizzo di una libreria a collegamento dinamico (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)   
  [Importazione ed esportazione](/cpp/build/importing-and-exporting)
 

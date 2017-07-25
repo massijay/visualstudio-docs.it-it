@@ -37,14 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 7a92736406aedb3706f5101af3e10ec8bb5d3fe4
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: e1e6b68c59aa10204bd985b9bf8d17e8256936d5
+ms.contentlocale: it-it
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="registerassembly-task"></a>Attività RegisterAssembly
-Legge i metadati all'interno dell'assembly specificato e aggiunge le voci necessarie al Registro di sistema, consentendo ai client COM di creare classi [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] in modo trasparente. Il comportamento di questa attività è simile, ma non identico, a quello di [Regasm.exe (strumento di registrazione dell'assembly)](http://msdn.microsoft.com/Library/e190e342-36ef-4651-a0b4-0e8c2c0281cb).  
+Legge i metadati all'interno dell'assembly specificato e aggiunge le voci necessarie al Registro di sistema, consentendo ai client COM di creare classi [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] in modo trasparente. Il comportamento di questa attività è simile, ma non identico, a quello di [Regasm.exe (strumento di registrazione dell'assembly)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool).  
   
 ## <a name="parameters"></a>Parametri  
  Nella tabella che segue vengono descritti i parametri dell'attività `RegisterAssembly`.  
@@ -57,7 +58,7 @@ Legge i metadati all'interno dell'assembly specificato e aggiunge le voci necess
 |`TypeLibFiles`|Parametro di output <xref:Microsoft.Build.Framework.ITaskItem>`[]` facoltativo.<br /><br /> Specifica la libreria dei tipi da generare dall'assembly specificato. La libreria dei tipi generata contiene le definizioni dei tipi accessibili definiti all'interno dell'assembly. La libreria dei tipi viene generata solo se viene soddisfatta una delle condizioni seguenti:<br /><br /> -   Nel percorso specificato non è presente una libreria dei tipi con lo stesso nome.<br />-   La libreria dei tipi esistente è precedente all'assembly passato.<br /><br /> Se la libreria dei tipi è successiva all'assembly passato, non ne verrà creata una nuova ma l'assembly verrà comunque registrato.<br /><br /> Se questo parametro è specificato, è necessario che contenga lo stesso numero di elementi del parametro `Assemblies`. In caso contrario, l'attività avrà esito negativo. Se non è specificato alcun valore, il nome dell'assembly verrà usato per impostazione predefinita e l'estensione dell'elemento verrà modificata in tlb.|  
   
 ## <a name="remarks"></a>Note  
- Oltre ai parametri sopra elencati, questa attività eredita i parametri dalla classe <xref:Microsoft.Build.Tasks.TaskExtension>, che a sua volta eredita dalla classe <xref:Microsoft.Build.Utilities.Task>. Per un elenco di tali parametri aggiuntivi e le rispettive descrizioni, vedere [TaskExtension Base Class](../msbuild/taskextension-base-class.md) (Classe di base TaskExtension).  
+ Oltre ai parametri elencati sopra, questa attività eredita i parametri dalla classe <xref:Microsoft.Build.Tasks.TaskExtension>, che a sua volta eredita dalla classe <xref:Microsoft.Build.Utilities.Task>. Per un elenco di questi parametri aggiuntivi e le rispettive descrizioni, vedere [TaskExtension Base Class](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente l'attività `RegisterAssembly` viene usata per registrare l'assembly specificato dalla raccolta di elementi `MyAssemblies`.  
@@ -78,5 +79,5 @@ Legge i metadati all'interno dell'assembly specificato e aggiunge le voci necess
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tasks](../msbuild/msbuild-tasks.md)  (Attività)  
- [Task Reference](../msbuild/msbuild-task-reference.md) (Riferimento alle attività)
+ [Attività](../msbuild/msbuild-tasks.md)   
+ [Riferimento alle attività](../msbuild/msbuild-task-reference.md)

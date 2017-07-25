@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: a116306cdd3fc0cd636077bf2a0d6bc87b49e96b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: e13a7e293038cf3a9b085d14e428767c561e5e3e
+ms.contentlocale: it-it
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="vsinstr-warnings"></a>Avvisi di VSInstr
@@ -45,7 +46,7 @@ La tabella seguente elenca gli avvisi generati dallo strumento VSInstr.exe. Per 
 |Numero di avviso|Descrizione|  
 |--------------------|-----------------|  
 |**VSP2000**|Errore interno Impossibile ottenere il nome del file di modulo per questo eseguibile.|  
-|**VSP2001**|\<nome assembly> è un assembly con nome sicuro. Deve essere firmato di nuovo prima dell'esecuzione.<br /><br /> Questo avviso viene visualizzato quando un assembly firmato viene instrumentato. È possibile usare lo strumento sn.exe per firmare nuovamente il file binario o disattivare temporaneamente il requisito del nome sicuro. Per altre informazioni, vedere [Sn.exe (Strong Name Tool)](http://msdn.microsoft.com/Library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6).|  
+|**VSP2001**|\<nome assembly> è un assembly con nome sicuro. Deve essere firmato di nuovo prima dell'esecuzione.<br /><br /> Questo avviso viene visualizzato quando un assembly firmato viene instrumentato. È possibile usare lo strumento sn.exe per firmare nuovamente il file binario o disattivare temporaneamente il requisito del nome sicuro. Per altre informazioni, vedere [Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool).|  
 |**VSP2002**|Impossibile trovare la funzione \<nome funzione> nel file \<nome file><br /><br /> Questo avviso viene visualizzato quando non è possibile individuare una funzione nel file specificato.|  
 |**VSP2003**|Impossibile trovare cross-jump alla funzione \<nome funzione> nel file \<nome file>.<br /><br /> Questo avviso viene visualizzato se VSInstr non è in grado di annullare i cross-jump, che vengono usati per l'ottimizzazione del codice.|  
 |**VSP2004**|La funzione \<nome funzione> è stata esclusa mediante l'opzione della riga di comando EXCLUDE, ma era una funzione richiesta in quanto contenente un cross-jump.<br /><br /> Questo avviso viene visualizzato se la funzione è stata esclusa mediante l'opzione EXCLUDE, ma è necessaria nel corso del processo di strumentazione. Il profiler include automaticamente la funzione richiesta.|  

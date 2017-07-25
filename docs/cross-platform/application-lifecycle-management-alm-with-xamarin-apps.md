@@ -29,10 +29,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 1464a7e654c68828e132e2d6973c9e558ebe23a5
+ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
+ms.openlocfilehash: e5ed1f9b6771b489218d2c6118454f1070535b6d
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="application-lifecycle-management-alm-with-xamarin-apps"></a>Application Lifecycle Management (ALM) con app Xamarin
@@ -81,7 +81,7 @@ Xamarin consente di compilare le app per dispositivi mobili multipiattaforma des
 |-------------|----------------------------|-------------------------|  
 |[Usare il controllo della versione di Team Foundation](http://msdn.microsoft.com/Library/1d629052-c65d-4c5d-81eb-eaa4413fe285) o di Visual Studio Team Services|Sì||  
 |[Introduzione a Git in Team Services](http://msdn.microsoft.com/Library/32f46ecd-1b03-4ef0-a9c4-8a120da2b03f)|Sì||  
-|[Analisi del codice/migliorare la qualità del codice (riferimenti, modifiche suggerite e così via)](http://msdn.microsoft.com/Library/73baa961-c21f-43fe-bb92-3f59ae9b5945)|Sì||  
+|[Migliorare la qualità del codice](/visualstudio/test/improve-code-quality)|Sì||  
 |[Trovare le modifiche apportate al codice e altri elementi della cronologia](../ide/find-code-changes-and-other-history-with-codelens.md)|Sì|Ad eccezione dei limiti specifici tra le piattaforme dove l'implementazione viene risolta solo dopo la fase di esecuzione.|  
 |[Usare le mappe del codice per eseguire il debug delle applicazioni](../modeling/use-code-maps-to-debug-your-applications.md)|Sì||  
   
@@ -109,7 +109,7 @@ Xamarin consente di compilare le app per dispositivi mobili multipiattaforma des
 |[Usare l'automazione dell'interfaccia utente per testare il codice](../test/use-ui-automation-to-test-your-code.md)|Solo Windows|La registrazione dei test dell'interfaccia utente di Visual Studio è disponibile solo per Windows. Per tutte le piattaforme, vedere [Xamarin Test Recorder](https://www.xamarin.com/test-cloud/recorder).|  
   
 ## <a name="improve-code-quality"></a>Migliorare la qualità del codice  
- Collegamento di riferimento: **[Migliorare la qualità del codice](http://msdn.microsoft.com/Library/73baa961-c21f-43fe-bb92-3f59ae9b5945)**  
+ Collegamento di riferimento: **[Migliorare la qualità del codice](/visualstudio/test/improve-code-quality)**  
   
 |Funzionalità|Supportato con Xamarin|Commenti aggiuntivi|  
 |-------------|----------------------------|-------------------------|  
