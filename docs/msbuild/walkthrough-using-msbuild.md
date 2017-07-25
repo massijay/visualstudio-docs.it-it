@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3ba7680d46345f2b49019659c715cfb418933d39
-ms.openlocfilehash: ecfd08a410983561f3c1e761eb25302b6d9281c4
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 34c78f4573bc2b11e738c3722cefaa8e294287b5
+ms.contentlocale: it-it
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="walkthrough-using-msbuild"></a>Procedura dettagliata: utilizzo di MSBuild
@@ -454,7 +455,7 @@ $(PropertyName)
 1.  Nell'editor del codice sostituire l'attività Message con questa riga:  
   
     ```xml  
-    <Message Text="Compile item type contains @(XFiles)" />  
+    <Message Text="XFiles item type contains @(XFiles)" />  
     ```  
   
 2.  Aggiungere questo gruppo di elementi immediatamente dopo l'elemento Import:  
@@ -476,7 +477,7 @@ $(PropertyName)
 5.  Esaminare l'output. Dovrebbe essere visualizzata questa riga:  
   
     ```  
-    Compile item type contains Form1.cs;Program.cs;Properties/Resources.resx  
+    XFiles item type contains Form1.cs;Program.cs;Properties/Resources.resx  
     ```  
   
 ## <a name="item-metadata"></a>Metadati degli elementi  
@@ -596,3 +597,4 @@ $(PropertyName)
 ## <a name="see-also"></a>Vedere anche
 [Panoramica di MSBuild](../msbuild/msbuild.md)  
  [Riferimenti a MSBuild](../msbuild/msbuild-reference.md)
+
