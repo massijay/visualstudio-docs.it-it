@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 5b55bd1c7b6be5c8fabafded8cd3a658ec9602d8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 001e8d8c1a6371d76b1a52826da16d471f07c1ba
+ms.contentlocale: it-it
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="how-to-create-a-nullable-type-class-designer"></a>Procedura: creare un tipo nullable (Progettazione classi)
@@ -87,5 +88,5 @@ Alcuni tipi di valore non sempre hanno (o hanno bisogno di) un valore definito. 
  <xref:System.Nullable%601>   
  [Tipi nullable](/dotnet/csharp/programming-guide/nullable-types/index)   
  [Uso dei tipi nullable](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types)   
- [Procedura: Identificare un tipo nullable](http://msdn.microsoft.com/Library/d4b67ee2-66e8-40c1-ae9d-545d32c71387)   
+ [Procedura: Identificare un tipo nullable](/dotnet/csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type)   
  [Tipi di valori nullable](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types)

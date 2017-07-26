@@ -31,10 +31,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: 2c709b5aa90ff4f5f70f0411c7f4f1870d1725d4
+ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
+ms.openlocfilehash: c77f0321e50a27635e083d656cf6ba8011a4ef4d
 ms.contentlocale: it-it
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 05/11/2017
 
 ---
 # <a name="how-to-define-settings-in-a-response-file"></a>Come definire impostazioni in un file di risposta
@@ -103,4 +103,6 @@ In questo esempio verrà installato Visual Studio Enterprise con sei carichi di 
     ]
 }
 ```
+## <a name="see-also"></a>Vedere anche
+* [ID dei carichi di lavoro e dei componenti di Visual Studio 2017](workload-and-component-ids.md)
 

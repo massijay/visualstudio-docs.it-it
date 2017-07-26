@@ -31,15 +31,16 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 15f7678c7d0cba1afaa71e0443efc756880d99cc
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 078619c93e18fd25dfbc728d75835f5af58988fe
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="get-started-with-visual-studio"></a>Introduzione a Visual Studio
 
-Visual Studio è uno strumento potente per lo sviluppo di applicazioni. Se non è ancora stato fatto, scaricare e installare [Visual Studio](https://www.visualstudio.com/vs/). Vedere il video [Getting Started with Visual Studio - Setting up your IDE](https://www.youtube.com/watch?v=xLCedknQkN0&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=1) (Introduzione a Visual Studio - Configurazione dell'IDE) per altre informazioni su come scaricare Visual Studio e configurarlo in base alle proprie preferenze.
+Visual Studio è uno strumento potente per lo sviluppo di applicazioni. Se non è ancora stato fatto, scaricare e installare [Visual Studio](https://www.visualstudio.com/vs/). Per altre informazioni su come scaricare Visual Studio e configurarlo in base alle proprie preferenze, vedere il video [Getting Started with Visual Studio - Setting up your IDE](https://www.youtube.com/watch?v=xLCedknQkN0&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=1) (Introduzione a Visual Studio - Configurazione dell'IDE).
 
 ## <a name="visual-studio-tour"></a>Presentazione di Visual Studio
 Visual Studio include un gruppo di finestre degli strumenti, menu e barre degli strumenti noti come l'ambiente di sviluppo integrato o IDE. L'IDE di Visual Studio consente di eseguire le attività di sviluppo. Ecco una rapida panoramica degli elementi dell'IDE che probabilmente verranno usati più di frequente.
@@ -55,7 +56,7 @@ Alcuni tipi di soluzioni possono includere finestre dette *form*, ad esempio for
 
 ### <a name="solution-explorer"></a>Esplora soluzioni
 
-Una finestra degli strumenti chiamata **Esplora soluzioni** elenca tutti i file di codice. Esplora soluzioni consente di organizzare il codice raggruppando i file in progetti e soluzioni. Il progetto in grassetto viene chiamato *progetto di avvio*. Si tratta del primo codice che viene eseguito all'avvio della soluzione. Il progetto di avvio può essere modificato. Per altre informazioni, vedere il video [Getting Started with Visual Studio - Building blocks of the IDE](https://www.youtube.com/watch?v=JHc3_gsCmZg&index=2&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK) (Introduzione a Visual Studio - Blocchi predefiniti dell'IDE)
+Una finestra degli strumenti chiamata **Esplora soluzioni** elenca tutti i file di codice. Esplora soluzioni consente di organizzare il codice raggruppando i file in progetti e soluzioni. Il progetto in grassetto viene chiamato *progetto di avvio*. Si tratta del primo codice eseguito all'avvio della soluzione. Il progetto di avvio può essere modificato. Per altre informazioni, vedere il video [Getting Started with Visual Studio - Building blocks of the IDE](https://www.youtube.com/watch?v=JHc3_gsCmZg&index=2&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK) (Introduzione a Visual Studio - Blocchi predefiniti dell'IDE).
 
 ![Nodi compressi di Esplora soluzioni](../ide/media/VSIDE_SolutionExplorer2_callouts.png)
 
@@ -79,7 +80,7 @@ Si noti che le icone della barra degli strumenti e i comandi di menu possono cam
 ### <a name="team-explorer"></a>Team Explorer
 **Team Explorer** consente di connettersi agli strumenti di controllo del codice sorgente, come ad esempio [Git](https://git-scm.com/) e [Controllo della versione di Team Foundation](https://www.visualstudio.com/en-us/docs/tfvc/overview) per archiviare il codice in locale o condividerlo con altri utenti su un servizio ospitato. È possibile usarlo anche per tenere traccia delle attività e altro ancora.
 
-Vedere i video [Getting Started with Visual Studio - Building blocks of the IDE](https://www.youtube.com/watch?v=JHc3_gsCmZg&index=2&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK) (Introduzione a Visual Studio - Blocchi predefiniti dell'IDE) e [Getting Started with Visual Studio - Opening a project from Source Control](https://www.youtube.com/watch?v=pc9vX_4RGV4&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=3) (Introduzione a Visual Studio - Aprire un progetto dal controllo del codice sorgente) per altre informazioni.
+Per altre informazioni, vedere i video [Getting Started with Visual Studio - Building blocks of the IDE](https://www.youtube.com/watch?v=JHc3_gsCmZg&index=2&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK) (Introduzione a Visual Studio - Blocchi predefiniti dell'IDE) e [Getting Started with Visual Studio - Opening a project from Source Control](https://www.youtube.com/watch?v=pc9vX_4RGV4&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=3) (Introduzione a Visual Studio - Aprire un progetto dal controllo del codice sorgente).
 
 ![Team Explorer](../ide/media/TeamExplorer.png)
 

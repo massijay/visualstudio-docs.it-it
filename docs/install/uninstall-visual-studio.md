@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
-ms.openlocfilehash: 3aa97878f868f59d0e5dbdb6eb1eac7268e9efd3
-ms.lasthandoff: 04/06/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b430c85c7ef2979a9052685529cace6879432b96
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 
@@ -43,7 +44,7 @@ In questa pagina viene descritta la procedura di disinstallazione di Visual Stud
 
 1.  Individuare il programma di installazione di Visual Studio all'interno del computer in uso.  
 
-     Ad esempio, in un computer che esegue l'Aggiornamento dell'anniversario di Windows 10, selezionare **Start** e scorrere fino alla lettera **P** in cui viene visualizzato come **Programma di installazione di Visual Studio**.  
+     Ad esempio, in un computer che esegue l'Aggiornamento dell'anniversario di Windows 10 selezionare **Start** e scorrere fino alla lettera **P** in cui viene visualizzato come **Programma di installazione di Visual Studio**.  
 
      ![Programma di installazione di Visual Studio](media/vs2017-locate-the-visual-studio-installer.PNG "Individuare il programma di installazione di Microsoft Visual Studio")
 

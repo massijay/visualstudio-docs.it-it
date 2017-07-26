@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: efcb84a2cc8b681f3509e397776f86bf7c832a74
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 8700d4814494aafb6558f354d5904ed647c1f5a7
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="how-to-distribute-code-snippets"></a>Procedura: distribuire i frammenti di codice
@@ -41,7 +42,7 @@ ms.lasthandoff: 02/22/2017
  Per creare estensioni di Visual Studio, è necessario installare Visual Studio SDK. Individuare la versione di VSSDK che corrisponde all'installazione di Visual Studio in [Visual Studio Downloads](https://www.visualstudio.com/downloads/).  
 
 ## <a name="setting-up-the-extension"></a>Configurazione dell'estensione  
- In questa procedura si userà lo stesso frammento di codice Hello World creato in [Procedura dettagliata: creazione di un frammento di codice](../ide/walkthrough-creating-a-code-snippet.md). Il testo .snippet verrà fornito in modo che non sia necessario tornare indietro e crearlo.  
+ In questa procedura si userà lo stesso frammento di codice Hello World creato in [Procedura dettagliata: creazione di un frammento di codice](../ide/walkthrough-creating-a-code-snippet.md). Il testo del file con estensione snippet è fornito. Non è quindi necessario tornare indietro e crearlo.  
 
 1.  Creare un nuovo progetto VSIX denominato **TestSnippet**. (**File / Nuovo / Progetto / Visual C# (o Visual Basic / Extensibility**)  
 

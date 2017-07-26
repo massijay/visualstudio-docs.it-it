@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: ccee6976f7c98e62211eb2bda4dec7da7334e031
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
+ms.openlocfilehash: 3f0056a62dc11c5584e38e9912ccd94f5b9e9b0e
+ms.contentlocale: it-it
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="application-page-project-designer-c"></a>Applicazione (pagina), Creazione progetti (C#)
@@ -51,14 +52,14 @@ Usare la pagina **Applicazione** di **Creazione progetti** per specificare le im
  Le opzioni seguenti consentono di configurare le impostazioni generali per l'applicazione.  
   
  **Nome assembly**  
- Specifica il nome del file di output che conterrà il manifesto dell'assembly. Modificando questa proprietà verrà modificata anche la proprietà **Nome output**. È anche possibile apportare questa modifica dalla riga di comando usando [/out (opzioni del compilatore C#)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option). Per accedere a questa proprietà a livello di codice, vedere <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.  
+ Specifica il nome del file di output che conterrà il manifesto dell'assembly. Modificando questa proprietà verrà modificata anche la proprietà **Nome output**. È anche possibile apportare questa modifica dalla riga di comando usando [/out (opzioni del compilatore C#)](/dotnet/csharp/language-reference/compiler-options/out-compiler-option). Per accedere a questa proprietà a livello di programmazione, vedere <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.  
   
  **Spazio dei nomi predefinito**  
  Specifica lo spazio dei nomi di base per i file aggiunti al progetto.  
   
  Per altre informazioni sulla creazione di spazi dei nomi nel codice, vedere [namespace](/dotnet/csharp/language-reference/keywords/namespace).  
   
- Per accedere a questa proprietà a livello di codice, vedere <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.  
+ Per accedere a questa proprietà a livello di programmazione, vedere <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.  
   
  **Framework di destinazione**  
  Specifica la versione di .NET Framework a cui è destinata l'applicazione. Questa opzione può avere valori diversi a seconda delle versioni di .NET Framework installate nel computer in uso.  
@@ -75,12 +76,12 @@ Usare la pagina **Applicazione** di **Creazione progetti** per specificare le im
   
  Per il progetto di un'applicazione Web è necessario specificare **Libreria di classi**.  
   
- Se si specifica l'opzione **File WinMD**, i tipi possono essere inseriti nel progetto in un qualsiasi linguaggio di programmazione Windows Runtime. Creando un pacchetto dell'output del progetto nel formato File WinMD, è possibile codificare un'applicazione in più linguaggi e fare in modo che il codice interagisca come se fosse stato scritto tutto nello stesso linguaggio. È possibile specificare questa opzione per le soluzioni destinate alle librerie Windows Runtime, tra cui le app di [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)]. Per altre informazioni, vedere [Creazione di componenti Windows Runtime in C# e Visual Basic](http://go.microsoft.com/fwlink/?LinkId=231895).  
+ Se si specifica l'opzione **File WinMD**, i tipi possono essere inseriti nel progetto in un qualsiasi linguaggio di programmazione Windows Runtime. Creando un pacchetto dell'output del progetto nel formato File WinMD, è possibile codificare un'applicazione in più linguaggi e fare in modo che il codice interagisca come se fosse stato scritto tutto nello stesso linguaggio. È possibile specificare questa opzione per le soluzioni destinate alle librerie Windows Runtime, tra cui le app di [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)]. Per altre informazioni, vedere [Creazione di componenti Windows Runtime in C# e Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).  
   
 > [!NOTE]
->  Windows Runtime può fare in modo che i tipi appaiano come oggetti nativi in qualsiasi linguaggio siano usati. Ad esempio, le applicazioni JavaScript che interagiscono con Windows Runtime usano quest'ultimo come un set di oggetti JavaScript, mentre le applicazioni C# usano la libreria come una raccolta di oggetti .NET. Creando un pacchetto dell'output del progetto nel formato File WinMD, è possibile sfruttare la stessa tecnologia usata da Windows Runtime.  
+>  Windows Runtime può fare in modo che i tipi appaiano come oggetti nativi in qualsiasi linguaggio siano usati. Ad esempio, le applicazioni JavaScript che interagiscono con Windows Runtime usano quest'ultimo come un set di oggetti JavaScript, mentre le applicazioni C# usano la libreria come una raccolta di oggetti .NET. Creando un pacchetto dell'output del progetto nel formato di file WinMD, è possibile sfruttare la stessa tecnologia usata da Windows Runtime.  
   
- Per altre informazioni sulla proprietà **Tipo di applicazione**, vedere [/target (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/target-compiler-option) (/target (opzioni del compilatore C#)). Per informazioni su come accedere a questa proprietà a livello di codice, vedere <xref:VSLangProj.ProjectProperties.OutputType%2A>.  
+ Per altre informazioni sulla proprietà **Tipo di applicazione**, vedere [/target (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/target-compiler-option) (/target (opzioni del compilatore C#)). Per informazioni su come accedere a questa proprietà a livello di programmazione, vedere <xref:VSLangProj.ProjectProperties.OutputType%2A>.  
   
  **Informazioni assembly**  
  Se si fa clic su questo pulsante viene visualizzata la [finestra di dialogo Informazioni assembly](../../ide/reference/assembly-information-dialog-box.md).  
@@ -90,7 +91,7 @@ Usare la pagina **Applicazione** di **Creazione progetti** per specificare le im
   
  Per impostazione predefinita, nel progetto di un'applicazione browser WPF, il valore di questa opzione è **(Non impostato)**. L'altra opzione è *NomeProgetto*.App. In questo tipo di progetto è necessario impostare l'URI di avvio per caricare una risorsa interfaccia utente all'avvio dell'applicazione. A tale scopo, aprire il file Application.xaml nel progetto e impostare la proprietà `StartupUri` su un file con estensione xaml del progetto, ad esempio Window1.xaml. Per un elenco di elementi radice accettabili, vedere <xref:System.Windows.Application.StartupUri%2A>. È anche necessario definire un metodo `public static void Main()` in una classe del progetto. Questa classe verrà visualizzata nell'elenco **Oggetto di avvio** come *NomeProgetto.NomeClasse*. Sarà quindi possibile selezionare la classe come oggetto di avvio.  
   
- Per altre informazioni, vedere [/main (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/main-compiler-option) (/main (opzioni del compilatore C#)). Per accedere a questa proprietà a livello di codice, vedere <xref:VSLangProj.ProjectProperties.StartupObject%2A>.  
+ Per altre informazioni, vedere [/main (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/main-compiler-option) (/main (opzioni del compilatore C#)). Per accedere a questa proprietà a livello di programmazione, vedere <xref:VSLangProj.ProjectProperties.StartupObject%2A>.  
   
 ## <a name="resources"></a>Risorse  
  Le opzioni seguenti consentono di configurare le impostazioni generali per l'applicazione.  
@@ -99,9 +100,9 @@ Usare la pagina **Applicazione** di **Creazione progetti** per specificare le im
  Per impostazione predefinita, questo pulsante di opzione è selezionato e sono abilitate le opzioni **Icona** e **Manifesto**. Ciò consente di selezionare un'icona personalizzata o diverse opzioni di generazione del manifesto. Deselezionare questo pulsante di opzione solo se si specifica un file di risorse per il progetto.  
   
  **Icona**  
- Consente di impostare il file con estensione ico che si vuole usare come icona di programma. Fare clic sul pulsante con i puntini di sospensione per cercare un elemento grafico esistente o digitare il nome del file voluto. Per altre informazioni, vedere [/win32icon (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option) (/win32icon (opzioni del compilatore C#)). Per accedere a questa proprietà a livello di codice, vedere <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.  
+ Consente di impostare il file con estensione ico che si vuole usare come icona di programma. Fare clic sul pulsante con i puntini di sospensione per cercare un elemento grafico esistente o digitare il nome del file voluto. Per altre informazioni, vedere [/win32icon (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option) (/win32icon (opzioni del compilatore C#)). Per accedere a questa proprietà a livello di programmazione, vedere <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.  
   
- **Manifesto**  
+ **Manifest**  
  Consente di selezionare un'opzione di generazione del manifesto quando l'applicazione viene eseguita in Windows Vista sotto Controllo dell'account utente. Questa opzione può avere i valori seguenti:  
   
 -   **Incorpora manifesto con impostazioni predefinite**. Supporta la modalità di funzionamento tipica di Visual Studio in Windows Vista, che prevede l'incorporazione delle informazioni di sicurezza nel file eseguibile dell'applicazione, specificando che `requestedExecutionLevel` deve essere `AsInvoker`. Questa è l'opzione predefinita.  
@@ -113,7 +114,7 @@ Usare la pagina **Applicazione** di **Creazione progetti** per specificare le im
  **File di risorse**  
  Selezionare questo pulsante di opzione se si specifica un file di risorse per il progetto. Se si seleziona questa opzione, le opzioni **Icona** e **Manifesto** vengono disabilitate.  
   
- Immettere un nome di percorso o usare il pulsante Sfoglia (**...**) per aggiungere un file di risorse Win32 al progetto.  
+ Immettere un nome di percorso o usare il pulsante Sfoglia (**...** ) per aggiungere un file di risorse Win32 al progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Managing Application Properties](../../ide/application-properties.md) (Gestione delle proprietà delle applicazioni)  

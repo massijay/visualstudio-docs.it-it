@@ -1,19 +1,39 @@
 ---
-title: "Come sbloccare Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/23/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Come sbloccare Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 01/23/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ffb580a1-8b5d-48f5-b811-87f8036f50ea
 caps.latest.revision: 8
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 8
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 4a1e79dbceb4c0cfd02dab4b3132190e44ac3273
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
+
 ---
 # <a name="how-to-unlock-visual-studio"></a>Come sbloccare Visual Studio
 È possibile valutare gratuitamente Visual Studio per un massimo di 30 giorni. Quando si accede all'IDE, sarà possibile estendere il periodo di valutazione fino a 90 giorni. Per continuare a usare Visual Studio, è possibile sbloccare l'IDE nei modi seguenti:  
@@ -22,7 +42,7 @@ caps.handback.revision: 8
   
 2.  Immettendo un codice Product Key.  
   
-## <a name="to-unlock-visual-studio-using-an-online-subscription"></a>Per sbloccare Visual Studio usando una sottoscrizione online  
+## <a name="to-unlock-visual-studio-using-an-online-subscription"></a>Per sbloccare Visual Studio usando un abbonamento online  
  Per sbloccare Visual Studio usando un abbonamento per MSDN o Visual Studio Online associato a un account Microsoft oppure a un account aziendale o dell'istituto di istruzione:  
   
 1.  Fare clic sul pulsante "Accedi" nell'angolo superiore destro dell'IDE oppure scegliere File > Impostazioni account per aprire la finestra di dialogo Impostazioni account e fare clic sul pulsante "Accedi".  
@@ -48,7 +68,7 @@ caps.handback.revision: 8
   
  ![Finestra di dialogo Informazioni utente di Visual Studio](../ide/media/vs2013_userinfo.png "VS2013_UserInfo")  
   
- Questo messaggio indica che, anche se è possibile che l'abbonamento sia ancora valido, il token della licenza usato da Visual Studio per mantenere aggiornato l'abbonamento non è stato aggiornato ed è diventato obsoleto a causa di uno dei motivi seguenti:  
+ Questo messaggio indica che, anche se è possibile che l'abbonamento sia ancora valido, il token della licenza usato da Visual Studio per mantenere aggiornata la sottoscrizione non è stato aggiornato ed è diventato obsoleto per uno dei motivi seguenti:  
   
 1.  Visual Studio non è stato usato o non è stata disponibile alcuna connessione a Internet per un lungo periodo di tempo.  
   
@@ -66,13 +86,8 @@ caps.handback.revision: 8
   
 1.  Rinnovare l'abbonamento. Per visualizzare altre informazioni sulla licenza in uso, passare alla finestra di dialogo File > Impostazioni account e quindi verificare le informazioni sulla licenza nella parte destra della finestra di dialogo.  
   
-2.  Se si ha un altro abbonamento associato a un account diverso, aggiungere tale account all'elenco Tutti gli account nel lato sinistro della finestra di dialogo File > Impostazioni account facendo clic sul collegamento "Aggiungi un account".  
+2.  Se si ha un'altra sottoscrizione associata a un account diverso, aggiungere tale account all'elenco Tutti gli account sul lato sinistro della finestra di dialogo File > Impostazioni account facendo clic sul collegamento "Aggiungi un account".  
   
 ## <a name="see-also"></a>Vedere anche  
  [Signing in to Visual Studio](../ide/signing-in-to-visual-studio.md) (Accesso a Visual Studio)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

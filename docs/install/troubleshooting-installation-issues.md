@@ -1,6 +1,6 @@
 ---
 title: Risoluzione dei problemi relativi all&quot;installazione | Microsoft Docs
-description: '{{PLACEHOLDER}}'
+description: "Non sempre tutto funziona correttamente. Se l&quot;installazione o l&quot;aggiornamento di Visual Studio ha esito negativo, questa pagina può risultare utile."
 ms.date: 04/14/2017
 ms.reviewer: 
 ms.suite: 
@@ -31,13 +31,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: d8125873ab5a92d9af26c556cb2f953a606c28d9
+ms.sourcegitcommit: d9de84bed187c62962a76424aabdc5f355dff4dc
+ms.openlocfilehash: e6c301a7b784c5966d4f7216e67067ef6ce3ed70
 ms.contentlocale: it-it
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 05/15/2017
 
 ---
-# <a name="troubleshooting-visual-studio-2017-installation-and-upgrade-failures"></a>Risoluzione dei problemi di installazione e aggiornamento di Visual Studio 2017
+# <a name="troubleshooting-visual-studio-2017-installation-and-upgrade-issues"></a>Risoluzione dei problemi di installazione e aggiornamento di Visual Studio 2017
 
 ## <a name="symptoms"></a>Sintomi
 Quando si tenta di installare o aggiornare Microsoft Visual Studio 2017, l'operazione ha esito negativo.
@@ -58,7 +58,7 @@ Il programma di bootstrap dell'installazione di Visual Studio è un file eseguib
 2. Eliminare la directory del programma di installazione di Visual Studio. In genere, la directory è C:\Program Files (x86)\Microsoft Visual Studio\Installer.
 3. Eseguire il programma di bootstrap dell'installazione di Visual Studio. Il programma di bootstrap è disponibile nella cartella Download con un nome file che segue il modello ```vs_[Visual Studio edition]__*.exe```. Se non si trova l'applicazione, è possibile scaricare il programma di bootstrap accedendo alla [pagina dei download di Visual Studio](https://www.visualstudio.com/downloads/) e facendo clic su **Download** per l'edizione di Visual Studio in uso. Eseguire il file eseguibile per reimpostare i metadati di installazione.
 4. Provare di nuovo a installare o ad aggiornare Visual Studio. Se i problemi di installazione persistono, procedere al passaggio 4 di seguito.
-<br/>**Nota:** con questo passaggio verranno reinstallati i file del programma di installazione di Visual Studio e ripristinati i metadati di installazione. 
+<br/>**Nota:** con questo passaggio verranno reinstallati i file del programma di installazione di Visual Studio e ripristinati i metadati di installazione.
 
 ### <a name="step-4---report-a-problem"></a>Passaggio 4: Segnalare un problema
 In alcune situazioni, ad esempio quando sono presenti file danneggiati, può essere necessario esaminare i problemi singolarmente:
@@ -92,6 +92,4 @@ Ecco una tabella dei problemi noti e di alcune soluzioni che possono essere util
 | ----------- | ---------------------- | -------- |
 | Gli utenti non anno accesso ai file. | Autorizzazioni (ACL) | Assicurarsi di modificare le autorizzazioni (ACL) in modo da consentire l'accesso in lettura ad altri utenti *prima* di condividere l'installazione offline. |
 | Non è possibile installare nuovi carichi di lavoro, componenti o lingue.  | `--layout`  | Assicurarsi di avere accesso a Internet se si esegue l'installazione da un layout parziale e si selezionano carichi di lavoro, componenti o lingue non disponibili nel layout precedente. |
-
-
 

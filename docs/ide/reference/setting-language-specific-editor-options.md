@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: fb24d1c3e48b1125e025b89fe25cfb362ced11be
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: ab506c0d3bdf9a03ee2212d6e4767d8443c604e5
+ms.contentlocale: it-it
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="setting-language-specific-editor-options"></a>Impostazione delle opzioni dell'editor specifiche del linguaggio
@@ -72,5 +73,5 @@ In [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sono disponibili
  [Personalizzazione dell'editor](../../ide/customizing-the-editor.md)  
  Vengono forniti collegamenti ad argomenti in cui sono illustrati i numerosi aspetti dell'editor di cui è possibile impostare le preferenze.  
   
- [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+ [Personalizzare l'IDE di Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)  
  Vengono forniti collegamenti ad argomenti in cui viene illustrato come personalizzare le impostazioni, i tasti di scelta rapida e altre funzionalità dell'ambiente di sviluppo integrato.

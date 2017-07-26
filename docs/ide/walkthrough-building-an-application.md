@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 4f237be3ffdfe2bca52e885822a9fbfbbf97ba6a
-ms.openlocfilehash: 738e8c25509253872274a49303b2b02a8f7ba1a6
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: dc4bcdcc11e357979641268ae77a8e39f8408f7a
+ms.contentlocale: it-it
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="walkthrough-building-an-application"></a>Procedura dettagliata: compilazione di un'applicazione
@@ -51,7 +52,7 @@ Completando questa procedura dettagliata è possibile acquisire familiarità con
  [Creare una build di versione](../ide/walkthrough-building-an-application.md#BKMK_releasebuild)  
   
 ##  <a name="BKMK_installapp"></a> Installare l'applicazione di esempio  
- Usare la finestra di dialogo **Estensioni e aggiornamenti** per trovare e installare l'esempio [Introduzione alla creazione di applicazioni WPF](http://code.msdn.microsoft.com/Introduction-to-Building-b8d16419?SRC=VSIDE) nella raccolta esempi del sito Web Microsoft. La raccolta esempi offre un'ampia gamma di progetti e codice di esempio che è possibile scaricare ed esaminare durante la pianificazione e lo sviluppo delle applicazioni.  
+ Usare la finestra di dialogo **Estensioni e aggiornamenti** per trovare e installare l'esempio [Introduction to Building WPF Applications](http://code.msdn.microsoft.com/Introduction-to-Building-b8d16419?SRC=VSIDE) (Introduzione alla creazione di applicazioni WPF) nella raccolta esempi del sito Web Microsoft. La raccolta esempi offre un'ampia gamma di progetti e codice di esempio che è possibile scaricare ed esaminare durante la pianificazione e lo sviluppo delle applicazioni.  
   
 #### <a name="to-install-the-sample-application"></a>Per installare l'applicazione di esempio  
   
@@ -271,7 +272,7 @@ Completando questa procedura dettagliata è possibile acquisire familiarità con
  Congratulazioni: questa procedura dettagliata è stata completata correttamente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura dettagliata: Compilazione di un progetto (C++)](http://msdn.microsoft.com/Library/d459bc03-88ef-48d0-9f9a-82d17f0b6a4d)   
+ [Procedura dettagliata: Compilazione di un progetto (C++)](/cpp/ide/walkthrough-building-a-project-cpp)   
  [Cenni preliminari sulla precompilazione del progetto di applicazione Web ASP.NET](http://msdn.microsoft.com/en-us/b940abbd-178d-4570-b441-52914fa7b887)   
  [Procedura dettagliata: uso di MSBuild](../msbuild/walkthrough-using-msbuild.md)
 

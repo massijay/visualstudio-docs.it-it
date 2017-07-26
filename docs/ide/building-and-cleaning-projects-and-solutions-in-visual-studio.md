@@ -42,21 +42,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: ce6f346f77217e61d93879118610934422cdc642
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: f43b470f07e8b90c62d17c7905ad458a22d41ff1
+ms.contentlocale: it-it
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="building-and-cleaning-projects-and-solutions-in-visual-studio"></a>Compilazione e pulizia di progetti e soluzioni in Visual Studio
 Tramite le procedure descritte in questo argomento è possibile compilare, ricompilare o pulire tutti o alcuni progetti o elementi di progetto di una soluzione. Per un'esercitazione dettagliata, vedere [Walkthrough: Building an Application](../ide/walkthrough-building-an-application.md) (Procedura dettagliata: Compilazione di un'applicazione).  
   
 > [!NOTE]
->  L'interfaccia utente dell'edizione di Visual Studio in uso potrebbe essere diversa da quanto descritto in questo argomento, a seconda delle impostazioni attive. Per modificare le impostazioni, aprire il menu **Strumenti** e quindi scegliere **Importa/Esporta impostazioni**. Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  L'interfaccia utente dell'edizione di Visual Studio in uso potrebbe essere diversa da quanto descritto in questo argomento, a seconda delle impostazioni attive. Per modificare le impostazioni, aprire il menu **Strumenti** e quindi scegliere **Importa/Esporta impostazioni**. Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
   
 ### <a name="to-build-rebuild-or-clean-an-entire-solution"></a>Per compilare, ricompilare o pulire un'intera soluzione  
   
-1.  In **Esplora soluzioni** scegliere una soluzione o aprire la soluzione voluta.  
+1.  In **Esplora soluzioni**  scegliere una soluzione o aprire la soluzione voluta.  
   
 2.  Nella barra dei menu, scegliere **Compila** e quindi scegliere uno dei comandi seguenti:  
   
@@ -71,7 +72,7 @@ Tramite le procedure descritte in questo argomento è possibile compilare, ricom
   
 ### <a name="to-build-or-rebuild-a-single-project"></a>Per compilare o ricompilare un progetto singolo  
   
-1.  In **Esplora soluzioni** scegliere un progetto o aprire il progetto voluto.  
+1.  In **Esplora soluzioni**  scegliere un progetto o aprire il progetto voluto.  
   
 2.  Sulla barra dei menu scegliere **Compila** e quindi scegliere **Compila***NomeProgetto* o **Ricompila***NomeProgetto*.  
   
@@ -115,7 +116,7 @@ Tramite le procedure descritte in questo argomento è possibile compilare, ricom
   
 1.  In **Esplora soluzioni** scegliere più file che dispongono di azioni che possono essere compilate, aprire il menu di scelta rapida per uno di questi file e quindi scegliere **Compila**.  
   
-     Se i file hanno dipendenze, vengono compilati in ordine di dipendenza. L'operazione di compilazione non riesce se i file richiedono un'intestazione precompilata non disponibile quando si esegue la compilazione. L'operazione di compilazione usa la configurazione della soluzione attiva corrente.  
+     Se i file hanno dipendenze, vengono compilati in ordine di dipendenza. L'operazione di compilazione non riesce se i file richiedono un'intestazione precompilata che non disponibile in fase di compilazione. L'operazione di compilazione usa la configurazione della soluzione attiva corrente.  
   
 ### <a name="to-stop-a-build"></a>Per interrompere una compilazione  
   

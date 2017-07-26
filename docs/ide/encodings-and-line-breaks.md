@@ -1,49 +1,66 @@
 ---
-title: "Codifiche e interruzioni di riga | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.Encoding"
-helpviewer_keywords: 
-  - "editor, interruzioni di riga"
-  - "codifica"
-  - "caratteri di interruzione di riga"
-  - "interruzioni di riga"
-  - "Visual Studio, codifica"
-  - "Visual Studio, caratteri di interruzione di riga"
+title: Codifiche e interruzioni di riga | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.Encoding
+helpviewer_keywords:
+- line breaks
+- encoding
+- Visual Studio, encoding
+- editors, line breaks
+- line break characters
+- Visual Studio, line break characters
 ms.assetid: 8f9b3ffc-7b8d-44f4-87cb-dc29105be12d
 caps.latest.revision: 8
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Codifiche e interruzioni di riga
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 34c400c280096acb7e0ce272fa717cbc2f8f0d8a
+ms.contentlocale: it-it
+ms.lasthandoff: 05/24/2017
 
-In Visual Studio è possibile utilizzare il  **Opzioni di salvataggio di File\/Advanced** le impostazioni per determinare il tipo di interruzione di riga caratteri si desidera.  È inoltre possibile modificare la codifica di un file con le stesse impostazioni.  
+---
+# <a name="encodings-and-line-breaks"></a>Codifiche e interruzioni di riga
+In Visual Studio è possibile usare le impostazioni **File/Opzioni di salvataggio avanzate** per determinare il tipo di caratteri dell'interruzione di riga. Con le stesse impostazioni è anche possibile modificare la codifica di un file.  
   
 > [!NOTE]
->  Se si dispongono di determinati tipi di impostazioni di sviluppo \(sviluppo Web, F\#, Visual Basic\) potrebbe non essere visualizzato  **Opzioni di salvataggio avanzate** dal menu.  Per modificare le impostazioni \(ad esempio, in generale\), aprire  **degli strumenti \/ Importa \/ Esporta impostazioni**.  Per ulteriori informazioni, vedere  [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Se si usano determinati tipi di impostazioni di sviluppo (Visual Basic, F #, sviluppo Web), l'impostazione **Opzioni di salvataggio avanzate** potrebbe non essere visualizzata nel menu. Per modificare le impostazioni (ad esempio in Generale), aprire **Strumenti / Importa ed Esporta impostazioni**. Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
   
- In Visual Studio i seguenti caratteri vengono interpretati come interruzioni di riga:  
+ In Visual Studio i caratteri seguenti vengono interpretati come interruzioni di riga:  
   
--   CRLF: ritorno un capo \+ avanzamento riga, caratteri Unicode 000D \+ 000A  
+-   CRLF: ritorno a capo + avanzamento riga, caratteri Unicode 000D + 000A  
   
 -   LF: avanzamento riga, carattere Unicode 000A  
   
--   NEL: riga successiva, carattere Unicode 0085  
+-   NEL:rRiga successiva, carattere Unicode 0085  
   
--   LS: separatore di riga, carattere Unicode 2028  
+-   LF: separatore di riga, carattere Unicode 2028  
   
 -   PS: separatore di paragrafo, carattere Unicode 2029  
   
- Testo copiato da altre applicazioni mantiene la codifica originale e i caratteri di interruzione di riga.  Ad esempio, quando si copia testo da blocco note e incollarlo in un file di testo in Visual Studio, il testo presenta le stesse impostazioni che aveva in blocco note.  
+ Il testo che viene copiato da altre applicazioni mantiene la codifica e i caratteri originali dell'interruzione di riga. Ad esempio, quando il testo viene copiato da Blocco note e incollato in un file di testo in Visual Studio, il testo mantiene le stesse impostazioni che aveva in Blocco note.  
   
- Quando si apre un file con caratteri di interruzione di riga diversi, si può vedere una finestra di dialogo che chiede se i caratteri di interruzione di riga incoerenti devono essere normalizzati e il tipo di interruzioni di riga selezionate.
+ Quando si apre un file con caratteri diversi dell'interruzione di riga, è possibile che venga visualizzata una finestra di dialogo in cui si chiede se normalizzare i caratteri dell'interruzione di riga incoerenti e quale tipo di interruzione di riga scegliere.

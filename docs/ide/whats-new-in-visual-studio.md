@@ -31,10 +31,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: edc126208bb401c8dba9a6be722cbd0dbda21caf
-ms.openlocfilehash: 720048b861bfb208489a62340efca28ae88d1951
+ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
+ms.openlocfilehash: 28c6a166a423b3341ae32676830861eaa78cb40d
 ms.contentlocale: it-it
-ms.lasthandoff: 04/22/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Novità di Visual Studio 2017
@@ -155,7 +155,7 @@ L'esperienza è stata aggiornata per consentire spostamenti più efficienti e co
 
 * **Vai a** (CTRL+F12) &ndash; consente di spostarsi da qualsiasi tipo o membro di base alle varie implementazioni corrispondenti.
 
-* **Vai a tutti** (CTRL+T o CTRL+,) &ndash; consente di passare direttamente a qualsiasi dichiarazione di file/tipo/membro/simbolo. È possibile filtrare l'elenco dei risultati o usare la sintassi di query ad esempio, "f termineRicerca" per i file, "t termineRicerca" per i tipi e così via.
+* **Vai a tutti** (CTRL+T o CTRL+,) &ndash; consente di passare direttamente a qualsiasi dichiarazione di file/tipo/membro/simbolo. È possibile filtrare l'elenco dei risultati o usare la sintassi di query, ad esempio "f Terminericerca" per i file, "t Terminericerca" per i tipi e così via.
 
  ![Vai a tutti migliorato](../ide/media/vs2017ide-navigation-go-to.png "Esempio della funzionalità Vai a tutti migliorata")
 
@@ -203,7 +203,7 @@ Per inoltrare suggerimenti su come migliorare Visual Studio o per segnalare un p
 
 ## <a name="see-also"></a>Vedere anche  
 * [Novità di Visual C++](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio)
-* [Novità di C#](https://docs.microsoft.com/en-us/dotnet/articles/csharp/csharp-7)  
+* [Novità di C#](https://docs.microsoft.com/en-us/dotnet/csharp/csharp-7)  
 * [What's New for Team Foundation Server](https://www.visualstudio.com/en-us/docs/whats-new) (Novità per Team Foundation Server)
 * [Note sulla versione di Visual Studio](https://www.visualstudio.com/news/vs2015-vs)
 

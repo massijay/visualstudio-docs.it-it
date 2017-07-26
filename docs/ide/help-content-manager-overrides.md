@@ -28,10 +28,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e8657d2ff12e911286fd120d3d19e16aed838db6
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: c4889d40e9ca53cccf7de384e609eb959d8981f5
 ms.contentlocale: it-it
-ms.lasthandoff: 02/22/2017
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="help-content-manager-overrides"></a>Ovverride di Gestione contenuto della Guida
