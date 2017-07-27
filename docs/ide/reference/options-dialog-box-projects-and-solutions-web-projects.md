@@ -16,10 +16,10 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: dc7a0c10390de67b56a83d2824224bed24125db0
-ms.openlocfilehash: 5d6a77a0ff273bd5a3f243183526d90a09fa3c1a
+ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
+ms.openlocfilehash: cebc1598001459d6ab1c920fa390273242e893e0
 ms.contentlocale: it-it
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 
@@ -41,5 +41,5 @@ Selezionare questa opzione per usare IIS Express anziché il server di sviluppo 
 Se questa opzione è selezionata, l'utente riceve un avviso quando l'applicazione Web che prova a eseguire viene compilata con errori.
 
 ## <a name="see-also"></a>Vedere anche  
-- [Finestra di dialogo Opzioni, Progetti e soluzioni](../../ide/projects-and-solutions-options-dialog-box.md)
-- [Finestra di dialogo Opzioni, Progetti e soluzioni, Compila ed esegui](../../ide/reference/options-dialog-box-projects-and-solutions-web-projects.md)
+- [Finestra di dialogo Opzioni, Progetti e soluzioni](projects-and-solutions-options-dialog-box.md)
+- [Finestra di dialogo Opzioni, Progetti e soluzioni, Compila ed esegui](options-dialog-box-projects-and-solutions-web-projects.md)
