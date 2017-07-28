@@ -40,8 +40,7 @@ ms.lasthandoff: 06/23/2017
 
 ---
 
-# Dotfuscator Community Edition (CE)
-<a id="dotfuscator-community-edition-ce" class="xliff"></a>
+# <a name="dotfuscator-community-edition-ce"></a>Dotfuscator Community Edition (CE)
 
 *PreEmptive Protection - Dotfuscator* offre una soluzione di protezione completa per applicazioni .NET, facilmente integrabile in un ciclo di sviluppo software sicuro.
 Questa soluzione offre funzionalità di protezione avanzata ed eliminazione per le applicazioni progettate per desktop, dispositivi mobili o server e per le applicazioni incorporate, in modo da proteggere segreti commerciali e altri dati di proprietà intellettuale, ridurre gli attacchi di pirateria e i rischi di contraffazione, nonché evitare manomissioni e operazioni di debug non autorizzate.
@@ -49,8 +48,7 @@ Dotfuscator viene eseguito sugli assembly compilati senza richiedere altre attiv
 
 ![](media/header.svg)
 
-## Importanza della protezione
-<a id="why-protection-matters" class="xliff"></a>
+## <a name="why-protection-matters"></a>Importanza della protezione
 
 La **protezione della proprietà intellettuale** è importante.
 Il codice dell'applicazione contiene dettagli di progettazione e implementazione che possono essere considerati proprietà intellettuale.
@@ -64,8 +62,7 @@ Dotfuscator può consentire all'applicazione di [rilevare, segnalare e gestire u
 
 Per altre informazioni su come Dotfuscator è integrabile in un ciclo di sviluppo software sicuro, vedere la [pagina SDL App Protection][sdl-protection] (Protezione delle app nel ciclo di sviluppo software) di PreEmptive Solutions.
 
-## Nozioni di base su Dotfuscator CE
-<a id="about-dotfuscator-ce" class="xliff"></a>
+## <a name="about-dotfuscator-ce"></a>Nozioni di base su Dotfuscator CE
 
 Microsoft Visual Studio 2017 include una copia gratuita per uso personale di ***PreEmptive Protection - Dotfuscator* Community Edition**, noto anche con il nome di Dotfuscator CE.
 Per istruzioni su come installare la versione di Dotfuscator CE inclusa in Visual Studio 2017, vedere la [pagina Installation][install] (Installazione).
@@ -86,8 +83,7 @@ Dotfuscator CE offre funzionalità predefinite per la protezione di base,
 ma altre misure di protezione delle applicazioni sono disponibili per gli utenti registrati di Dotfuscator CE e per gli utenti di *PreEmptive Protection - Dotfuscator* Professional Edition, la soluzione più avanzata di [offuscamento .NET][net-obfuscator] attualmente disponibile.
 Per informazioni su come migliorare Dotfuscator, vedere la [pagina Upgrades][upgrades] (Aggiornamenti).
 
-## Introduzione
-<a id="getting-started" class="xliff"></a>
+## <a name="getting-started"></a>Introduzione
 
 Per iniziare a usare Dotfuscator CE da Visual Studio, digitare `dotfuscator` nella barra di ricerca **Avvio veloce** (CTRL+Q).
 
@@ -96,8 +92,7 @@ Per iniziare a usare Dotfuscator CE da Visual Studio, digitare `dotfuscator` nel
 
 È anche possibile ottenere la **versione più recente** di Dotfuscator CE dalla [pagina di download di Dotfuscator sul sito preemptive.com][download].
 
-## Documentazione completa
-<a id="full-documentation" class="xliff"></a>
+## <a name="full-documentation"></a>Documentazione completa
 
 Questa pagina e le relative pagine secondarie presentano una panoramica di alto livello delle funzionalità di Dotfuscator CE e forniscono [istruzioni per l'installazione dello strumento][install].
 
