@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9b29250916c91c98176585bbdb8c5a4018dbd6c7
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
+ms.openlocfilehash: 3524c21503d0432d509c607ea157f3fe675b443d
+ms.contentlocale: it-it
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="how-to-create-item-templates"></a>Procedura: creare modelli di elementi
@@ -43,7 +44,7 @@ I passaggi inclusi nella [prima procedura](../ide/how-to-create-item-templates.m
 
  La procedura guidata esegue automaticamente molte operazioni per la creazione del modello di base, ma in molti casi sarà necessario modificare manualmente il file con estensione vstemplate dopo aver esportato il modello. Ad esempio, se si vuole includere l'elemento nella finestra di dialogo**Aggiungi nuovo elemento** per un progetto app di [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], è necessario eseguire alcuni passaggi aggiuntivi. La [seconda procedura](../ide/how-to-create-item-templates.md#modify_template) di questo argomento illustra come eseguire tale operazione.  
 
- Per specificare che il modello deve essere visualizzato solo per determinati sottotipi di progetto, ad esempio Office, Database o Web, vedere [questa sezione](../ide/how-to-create-multi-file-item-templates.md#enable_templates).  
+ Per specificare che il modello deve essere visualizzato solo per determinati sottotipi di progetto, ad esempio Office, Database o Web, vedere [questa sezione](#enable_templates).  
 
  In alcuni casi può essere utile o necessario creare manualmente un modello di elemento da zero. La [terza procedura](../ide/how-to-create-item-templates.md#create_template) illustra come eseguire tale operazione.  
 
@@ -80,11 +81,13 @@ I passaggi inclusi nella [prima procedura](../ide/how-to-create-item-templates.m
 
 3.  Aprire il file vstemplate in Visual Studio.  
 
-4.  Per un progetto C# di Windows 8.1 Store, nel file vstemplate aggiungere il codice XML seguente all'interno del tag di apertura e chiusura `<TemplateData>` : `<TemplateGroupID>WinRT-Managed</TemplateGroupID>`.  
+4.  Per un progetto C# di Windows universale, nel file vstemplate aggiungere il codice XML seguente all'interno del tag `<TemplateData>` di apertura: `<TemplateID>Microsoft.CSharp.Class</TemplateID>`. 
 
-     Un progetto C# di Windows 8.1 Store usa un valore `WinRT-Native-6.3`. Per Windows 10 e per altri tipi di progetto, vedere [Elemento TemplateGroupID (modelli di Visual Studio)](../extensibility/templategroupid-element-visual-studio-templates.md).  
+    Per un progetto C# di Windows 8.1 Store, nel file vstemplate aggiungere il codice XML seguente all'interno del tag di apertura e chiusura `<TemplateData>` : `<TemplateGroupID>WinRT-Managed</TemplateGroupID>`.  
 
-     Nell'esempio seguente è indicato l'intero contenuto di un file vstemplate dopo che è stata aggiunta la riga di codice XML `<TemplateGroupID>WinRT-Managed</TemplateGroupID>`. Questo esempio è specifico per i progetti C#. È possibile modificare gli elementi <ProjectTpe> e \< [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)> per specificare altri tipi di progetto e di linguaggio.  
+    Un progetto C# di Windows 8.1 Store usa un valore `WinRT-Native-6.3`. Per Windows 10 e per altri tipi di progetto, vedere [Elemento TemplateGroupID (modelli di Visual Studio)](../extensibility/templategroupid-element-visual-studio-templates.md).  
+
+    Nell'esempio seguente è indicato l'intero contenuto di un file vstemplate dopo che è stata aggiunta la riga di codice XML `<TemplateGroupID>WinRT-Managed</TemplateGroupID>`. Questo esempio è specifico per i progetti C#. È possibile modificare gli elementi <ProjectTpe> e \< [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md)> per specificare altri tipi di progetto e di linguaggio.  
 
     ```xml  
     <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">  
@@ -116,8 +119,9 @@ I passaggi inclusi nella [prima procedura](../ide/how-to-create-item-templates.m
  È ora possibile aggiungere un elemento basato su questo modello a un progetto [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] tramite la finestra di dialogo **Aggiungi nuovo elemento**.  
 
  Per altre informazioni sui nomi dei parametri, vedere [Parametri di modello](../ide/template-parameters.md).  
-
-### <a name="to-enable-templates-for-specific-project-sub-types"></a>Per abilitare i modelli per specifici sottotipi di progetto  
+  
+ 
+### <a name="enable_templates"></a>Per abilitare i modelli per sottotipi di progetto specifici  
 
 1.  L'ambiente di sviluppo consente di rendere disponibili gli elementi di progetto nella finestra di dialogo Aggiungi elemento di determinati progetti. Usare questa procedura per rendere disponibili elementi personalizzati per progetti Windows, Web, Office o di database.  
 

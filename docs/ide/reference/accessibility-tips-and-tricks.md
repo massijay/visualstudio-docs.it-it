@@ -1,7 +1,7 @@
 ---
-title: "Suggerimenti sull&quot;accessibilità | Microsoft Docs"
+title: "Suggerimenti sull'accessibilità | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 06/27/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -29,42 +29,48 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: c1e4fdf79ac11095501ca8823ff247cb48374824
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: 837df3bb8da963fa12ee02b39d19509336873d21
+ms.contentlocale: it-it
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="accessibility-tips-and-tricks"></a>Suggerimenti sull'accessibilità
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] include funzionalità di accessibilità incorporate che consentono di operare facilmente dalla tastiera e usare utilità per la lettura o altri dispositivi di assistenza per utenti disabili. In questo argomento sono riportati alcuni suggerimenti per l'ottimizzazione di [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] relativamente all'accessibilità, nonché alcune utili combinazioni di tasti.  
-  
-> [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
+Visual Studio include funzionalità di accessibilità incorporate che consentono di operare facilmente dalla tastiera e usare utilità per la lettura o altri dispositivi di assistenza per utenti disabili. In questo argomento sono riportati alcuni suggerimenti per l'ottimizzazione di Visual Studio relativamente all'accessibilità, nonché alcune utili combinazioni di tasti. Le combinazioni di tasti di scelta rapida consentono di eseguire attività in Visual Studio usando la tastiera.
+
 ## <a name="save-your-ide-settings"></a>Salvare le impostazioni IDE  
- È possibile personalizzare l'esperienza IDE salvando il layout delle finestre, lo schema di mappatura della tastiera e altre preferenze. Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="common-windows-shortcut-key-combinations"></a>Combinazioni di tasti comuni di Windows  
- Per eseguire attività all'interno di [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] è possibile usare molte delle combinazioni di tasti standard di Windows. Tra queste combinazioni di tasti sono incluse le seguenti:  
-  
-|Descrizione|Combinazione di tasti|  
-|-----------------|---------------------|  
-|Consente di attivare e disattivare l'impostazione Contrasto elevato|**ALT di sinistra + MAIUSC di sinistra + STAMP**|  
-|Consente di selezionare o deselezionare l'opzione di una casella di controllo in una finestra di dialogo|**BARRA SPAZIATRICE**|  
-|Consente di visualizzare le proprietà dell'elemento selezionato. Ad esempio, consente di spostare lo stato attivo alla finestra Proprietà, se è selezionato un modulo, o di aprire la finestra di dialogo Pagina delle proprietà, se è selezionato un progetto.|**ALT+INVIO**|  
-|Consente di visualizzare le voci dell'elenco attivo, quale un elenco a discesa, in una finestra di dialogo|**ALT** + Freccia GIÙ|  
-|Consente di visualizzare le voci di un elenco a discesa attivo in una griglia|**MAIUSC** + **ALT** + **Freccia GIÙ**|  
-  
-## <a name="hidden-visual-studio-shortcut-key-combinations"></a>Combinazioni di tasti nascoste di Visual Studio  
- Alcune funzionalità prevedono combinazioni di tasti che non vengono visualizzate nella finestra di dialogo Opzioni del riquadro Ambiente\Tastiera. Tra queste combinazioni di tasti sono incluse le seguenti:  
-  
+ È possibile personalizzare l'esperienza IDE salvando il layout delle finestre, lo schema di mappatura della tastiera e altre preferenze. Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
+
+## <a name="accessing-toolbars"></a>Accesso alle barre degli strumenti
+Come molte finestre degli strumenti, l'IDE di Visual Studio include alcune barre degli strumenti. Le combinazioni di tasti di scelta rapida seguenti consentono di accedervi.
+
 |Funzionalità|Descrizione|Combinazione di tasti|  
 |-------------|-----------------|---------------------|  
-|Finestra della casella degli strumenti|Consente di passare da una scheda all'altra della casella degli strumenti|**CTRL** + **Freccia SU**<br /><br /> e<br /><br /> **CTRL** + **Freccia GIÙ**|  
-|Finestra della casella degli strumenti|Consente di aggiungere un controllo della casella degli strumenti a un modulo o una finestra di progettazione|**INVIO**|  
-|Tastiera, Ambiente, finestra di dialogo Opzioni|Consente di eliminare una combinazione di tasti immessa nell'opzione **Premi tasti di scelta rapida**|**BACKSPACE**|  
-|Tutte le finestre degli strumenti|Consente di selezionare il primo pulsante della barra degli strumenti della finestra|**MAIUSC** + **ALT**|  
-|Barre degli strumenti dell'IDE|Consente di selezionare il primo pulsante della barra degli strumenti Standard|**ALT**, **CTRL** + **TAB** **Nota:** premere nuovamente **CTRL** + **TAB** per selezionare il primo pulsante della successiva barra degli strumenti dell'IDE.|  
-  
+|Barre degli strumenti dell'IDE|Consente di selezionare il primo pulsante della barra degli strumenti Standard.|**ALT**, **CTRL** + **TAB**|  
+|Barre degli strumenti della finestra degli strumenti|Consentono di spostare lo stato attivo nelle barre degli strumenti in una finestra degli strumenti. <br> <br> **NOTA:** questo procedimento funziona per la maggior parte delle finestre degli strumenti, ma solo quando lo stato attivo è in una finestra degli strumenti. È anche necessario scegliere MAIUSC prima di ALT. In alcune finestre degli strumenti, ad esempio Team Explorer, è necessario tenere premuto MAIUSC per qualche istante prima di scegliere ALT.|**MAIUSC** + **ALT**|
+|Barre degli strumenti|Consente di passare al primo elemento nella barra degli strumenti successiva (quando una barra degli strumenti ha lo stato attivo).|**CTRL** + **TAB**|
+
+## <a name="other-useful-shortcut-key-combinations"></a>Altre combinazioni di tasti utili  
+Tra le altre combinazioni di tasti utili ricordiamo le seguenti.
+
+|Funzionalità|Descrizione|Combinazione di tasti|  
+|-------------|-----------------|---------------------|  
+|IDE|Consente di attivare e disattivare l'impostazione Contrasto elevato. <br> <br> **Nota:** scelta rapida standard di Windows|**ALT di sinistra + MAIUSC di sinistra + STAMP**|  
+|Finestra di dialogo|Consente di selezionare o deselezionare l'opzione di una casella di controllo in una finestra di dialogo. <br> <br> **Nota:** scelta rapida standard di Windows|**BARRA SPAZIATRICE**|  
+|Menu di scelta rapida|Consentono di aprire un menu di scelta rapida (clic con il pulsante destro del mouse). <br> <br> **Nota:** scelta rapida standard di Windows|**MAIUSC** + **F10**|
+|Menu|Consente di accedere rapidamente a una voce di menu con i rispettivi tasti di scelta rapida. Scegliere **ALT** seguito dalle lettere sottolineate in un menu per attivare il comando. Ad esempio, per visualizzare la finestra di dialogo Apri progetto in Visual Studio selezionare **ALT** + **F** + **O** + **P**.  <br><br> **Nota:** scelta rapida standard di Windows|**ALT** + **[lettera]**|
+|Finestra della casella degli strumenti|Consente di passare da una scheda all'altra della casella degli strumenti.|**CTRL** + **Freccia SU**<br /><br /> e<br /><br /> **CTRL** + **Freccia GIÙ**|  
+|Finestra della casella degli strumenti|Consente di aggiungere un controllo della casella degli strumenti a un form o finestra di progettazione.|**INVIO**|  
+|Tastiera, Ambiente, finestra di dialogo Opzioni|Consente di eliminare una combinazione di tasti immessa nell'opzione **Premi tasti di scelta rapida**.|**BACKSPACE**|  
+
+> [!NOTE]
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  
+
 ## <a name="see-also"></a>Vedere anche  
  [Accessibility Features of Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md) (Funzionalità di accessibilità di Visual Studio)
+
+ [Procedura: Personalizzare menu e barre degli strumenti in Visual Studio](../../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)
+
+ [Personalizzare l'IDE di Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)
+

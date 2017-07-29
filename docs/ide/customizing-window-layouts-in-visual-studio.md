@@ -1,34 +1,54 @@
 ---
-title: "Personalizzazione del layout delle finestre in Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/23/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.windows"
-  - "vs.environment"
-helpviewer_keywords: 
-  - "nascondere automaticamente le finestre"
-  - "layout personalizzati"
-  - "configurazioni finestre personalizzate"
-  - "modalità di debug"
-  - "finestre del documento [Visual Studio]"
-  - "modalità di interfaccia"
-  - "layout [Visual Studio], gestione delle finestre"
-  - "MDI, modalità di interfaccia finestra"
-  - "più monitor"
-  - "Documenti a schede (modalità)"
-  - "finestre [Visual Studio], gestione"
+title: Personalizzare il layout delle finestre in Visual Studio | Microsoft Docs
+ms.custom: 
+ms.date: 01/23/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.windows
+- vs.environment
+helpviewer_keywords:
+- windows [Visual Studio], managing
+- custom window configurations
+- layout [Visual Studio], window management
+- document windows [Visual Studio]
+- interface modes
+- AutoHide windows
+- MDI, window interface modes
+- multiple monitors
+- Tabbed Document mode
+- debug mode
+- custom layouts
 ms.assetid: 7517ff13-76de-4ecf-9c1b-eb9b7ff4d718
 caps.latest.revision: 27
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 8ab795965dc205cd783f469d134d64fb2b5dacf6
+ms.contentlocale: it-it
+ms.lasthandoff: 05/24/2017
+
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Personalizzare il layout delle finestre in Visual Studio
 In Visual Studio è possibile personalizzare la posizione, la dimensione e il comportamento delle finestre per creare layout di finestra ottimali per i vari flussi di lavoro relativi allo sviluppo. Quando si personalizza il layout, l'IDE memorizza le modifiche apportate. Se, ad esempio, si modifica la posizione di ancoraggio di **Esplora soluzioni** e quindi si chiude Visual Studio, al successivo avvio di **Esplora soluzioni** , anche se si utilizza un altro computer, la finestra risulterà ancorata nella stessa posizione. È anche possibile fornire un nome a un layout personalizzato e salvarlo, quindi passare da un layout all'altro con un unico comando. È ad esempio possibile creare un layout per la modifica e un altro per il debug e passare dall'uno all'altro usando il comando di menu **Finestra &#124; Applica layout finestra**.  
@@ -74,7 +94,7 @@ In Visual Studio è possibile personalizzare la posizione, la dimensione e il co
  Le finestre dei documenti e degli strumenti possono essere disposte trascinandole, utilizzando i comandi nel menu **Finestra** e facendo clic con il pulsante destro del mouse sulla barra del titolo della finestra da disporre.  
 
 > [!NOTE]
->  I nomi o i percorsi visualizzati per alcuni elementi dell'interfaccia utente di Visual Studio nelle istruzioni seguenti potrebbero essere diversi nel computer in uso. La versione di Visual Studio in uso e le impostazioni configurate determinano questi elementi. Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  I nomi o i percorsi visualizzati per alcuni elementi dell'interfaccia utente di Visual Studio nelle istruzioni seguenti potrebbero essere diversi nel computer in uso. La versione di Visual Studio in uso e le impostazioni configurate determinano questi elementi. Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
 
 ### <a name="dock-windows"></a>Ancorare le finestre  
  Quando si seleziona e si trascina la barra del titolo di una finestra degli strumenti oppure la scheda della finestra del documento, viene visualizzata una guida a forma di rombo. Durante l'operazione di trascinamento, quando il cursore si trova sopra una delle frecce nel rombo, viene visualizzata un'area ombreggiata che mostra la posizione in cui verrà ancorata la finestra se viene rilasciato il mouse in quel preciso momento.  
@@ -103,7 +123,7 @@ In Visual Studio è possibile personalizzare la posizione, la dimensione e il co
  ![Nascondi automaticamente](../ide/media/vs2015_auto_hide.png "vs2017_auto_hide")  
 
 > [!NOTE]
->  Per specificare se l'opzione Nascondi automaticamente debba essere applicata alle finestre degli strumenti singolarmente o in gruppi ancorati, selezionare o deselezionare **Nascondi automaticamente ha effetto solo sulla finestra degli strumenti attiva** nella finestra di dialogo **Opzioni** . Per altre informazioni, vedere [General, Environment, Options Dialog Box](../ide/reference/general-environment-options-dialog-box.md) (Finestra di dialogo Generale, Ambiente, Opzioni).  
+>  Per specificare se l'opzione Nascondi automaticamente debba essere applicata alle finestre degli strumenti singolarmente o in gruppi ancorati, selezionare o deselezionare **Nascondi automaticamente ha effetto solo sulla finestra degli strumenti attiva** nella finestra di dialogo **Opzioni** . Per altre informazioni, vedere [General, Environment, Options Dialog Box](../ide/reference/general-environment-options-dialog-box.md).  
 
 > [!NOTE]
 >  Le finestre degli strumenti con l'opzione Nascondi automaticamente abilitata potrebbero essere temporaneamente visualizzate quando la finestra ha lo stato attivo. Per nascondere di nuovo la finestra, selezionare un elemento all'esterno della finestra corrente. Quando la finestra non è nello stato attivo, non viene più visualizzata.  
@@ -130,7 +150,7 @@ In Visual Studio è possibile personalizzare la posizione, la dimensione e il co
 
 ##### <a name="create-a-ui-project-and-customize-the-layout"></a>Creare un progetto per interfaccia utente e personalizzare il layout  
 
-1.  Nella finestra di dialogo **Nuovo progetto** crear un'applicazione desktop WPF di Visual C# e assegnarle il nome desiderato. Si supponga che questo sia il progetto in cui si lavorerà sull'interfaccia utente e che quindi si voglia dare più spazio alla finestra di progettazione spostando quindi le altre finestre degli strumenti.  
+1.  Nella finestra di dialogo **Nuovo progetto** creare un'applicazione desktop WPF di Visual C# e assegnarle il nome desiderato. Si supponga che questo sia il progetto in cui si lavorerà nell'interfaccia utente e che quindi si voglia dare più spazio alla finestra di progettazione spostando le altre finestre degli strumenti.  
 
 2.  Se sono disponibili più monitor, spostare le finestre **Esplora soluzioni** e **Proprietà** sul secondo monitor. In un sistema con un solo monitor provare a chiudere tutte le finestre eccetto quella di progettazione.  
 
@@ -138,7 +158,7 @@ In Visual Studio è possibile personalizzare la posizione, la dimensione e il co
 
 4.  Premere F5 per attivare la modalità di debug in Visual Studio. Regolare la posizione delle finestre di debug Auto, Stack di chiamate e Output nel modo desiderato. Il layout che si sta per creare verrà applicato sia alla modalità di modifica che a quella di debug.  
 
-5.  Quando i layout in modalità di modifica o di debug sono quelli voluti, dal menu principale scegliere **Finestra >Salva layout finestra**. Assegnare a questo layout il nome “Finestra di progettazione”.  
+5.  Quando i layout in modalità di modifica o di debug sono quelli voluti, dal menu principale scegliere **Finestra >Salva layout finestra**. Assegnare a questo layout il nome "Finestra di progettazione".  
 
      Notare che al nuovo layout viene assegnato il tasto di scelta rapida successivo dell'elenco riservato CTRL+ALT+1...0.  
 
@@ -148,7 +168,7 @@ In Visual Studio è possibile personalizzare la posizione, la dimensione e il co
 
 2.  In Esplora soluzioni fare clic con il pulsante destro del mouse sul nuovo progetto e scegliere **Visualizza in Esplora oggetti**. Verrà visualizzata la finestra **Esplora oggetti di SQL Server** che consente di accedere a tabelle, viste e altri oggetti nel database. È possibile impostare la finestra come mobile o lasciarla ancorata. Regolare le altre finestre degli strumenti nel modo desiderato. Per maggior realismo è possibile aggiungere un database effettivo, ma questa operazione non è necessaria ai fini di questa procedura dettagliata.  
 
-3.  Quando il layout è quello voluto, dal menu principale scegliere **Finestra > Salva layout finestra**. Assegnare a questo layout il nome “Progetto di database”. Non è necessario creare per questo progetto anche un layout per la modalità di debug.  
+3.  Quando il layout è quello voluto, dal menu principale scegliere **Finestra > Salva layout finestra**. Assegnare a questo layout il nome "Progetto di database". Per questo progetto non è necessario creare anche un layout per la modalità di debug.  
 
 ##### <a name="switch-between-the-layouts"></a>Passare da un layout a un altro  
 
@@ -175,9 +195,4 @@ In Visual Studio è possibile personalizzare la posizione, la dimensione e il co
 ## <a name="related-topics"></a>Argomenti correlati  
 
 [How to: Move Around in the IDE](../ide/how-to-move-around-in-the-visual-studio-ide.md) (Procedura: Spostarsi all'interno dell'IDE)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -30,17 +30,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: 954bd5e0ba38d7a538700cba175933cc8303c863
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: 165fe357bd9849ca2588542614449558eae52740
+ms.contentlocale: it-it
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="best-practices-for-using-code-snippets"></a>Procedure consigliate per l'utilizzo dei frammenti di codice
 Il codice in un frammento illustra solo il modo più semplice per eseguire un'operazione. Per la maggior parte delle applicazioni, il codice deve essere modificato per essere adattato all'applicazione.  
   
 ## <a name="handling-exceptions"></a>Gestione delle eccezioni  
- In genere, i blocchi Try... Catch dei frammenti di codice raccolgono e rigenerano tutte le eccezioni. Questo comportamento potrebbe anche non essere idoneo al progetto in uso. Per ogni eccezione, esistono infatti modi diversi di rispondere. Vedere ad esempio [Procedura: Gestire un'eccezione usando Try/Catch (Guida per programmatori C#)](http://msdn.microsoft.com/Library/ca8e3773-980e-4767-8633-7408540e9818) e [Try...Catch...Finally Statement](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement) (Istruzione Try...Catch...Finally).  
+ In genere, i blocchi Try... Catch dei frammenti di codice raccolgono e rigenerano tutte le eccezioni. Questo comportamento potrebbe anche non essere idoneo al progetto in uso. Per ogni eccezione, esistono infatti modi diversi di rispondere. Vedere ad esempio [Procedura: Gestire un'eccezione usando Try/Catch (Guida per programmatori C#)](/dotnet/csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch) e [Try...Catch...Finally Statement](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement) (Istruzione Try...Catch...Finally).  
   
 ## <a name="file-locations"></a>Percorsi dei file  
  Quando i percorsi dei file vengono adattati all'applicazione, considerare quanto segue:  
@@ -49,7 +50,7 @@ Il codice in un frammento illustra solo il modo più semplice per eseguire un'op
   
 -   Ricerca di una posizione sicura. Non è sicuro archiviare i il file nella cartella radice (C:\\). Per i dati dell'applicazione, è consigliabile scegliere la cartella \Dati applicazioni. Per i singoli dati utente, l'applicazione può creare un file per ogni utente nella cartella Documenti.  
   
--   Uso di un nome di file valido. È possibile usare i comandi <xref:System.Windows.Forms.OpenFileDialog> e <xref:System.Windows.Forms.SaveFileDialog> per ridurre la probabilità di usare nomi di file non validi. Tenere presente che tra il momento in cui l'utente seleziona un file e il momento in cui il codice lo modifica, il file potrebbe essere eliminato. Può anche succedere che l'utente non abbia le autorizzazioni per scrivere il file.  
+-   Uso di un nome di file valido. È possibile usare i controlli <xref:System.Windows.Forms.OpenFileDialog> e <xref:System.Windows.Forms.SaveFileDialog> per ridurre la probabilità di nomi di file non validi. Tenere presente che tra il momento in cui l'utente seleziona un file e il momento in cui il codice lo modifica, il file potrebbe essere eliminato. Può anche succedere che l'utente non abbia le autorizzazioni per scrivere il file.  
   
 ## <a name="security"></a>Sicurezza  
  In base a dove un frammento viene usato nel codice sorgente e a come viene modificato all'interno del codice, il livello di protezione cambia. Di seguito sono elencati alcuni aspetti da considerare.  

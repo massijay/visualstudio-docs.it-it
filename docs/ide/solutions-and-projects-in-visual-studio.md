@@ -1,7 +1,7 @@
 ---
 title: Soluzioni e progetti in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 06/12/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -69,10 +69,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: a88acb10478c5beb68cc6a12334f00145d183b1d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 8ce85525f6af336682f6f8547c2f6c13dde73c8c
+ms.openlocfilehash: 28dfbb85790cfda2c3d840ce2d57468b5421bee0
+ms.contentlocale: it-it
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Soluzioni e progetti in Visual Studio
@@ -86,19 +87,19 @@ Quando si crea un’app, un’applicazione, un sito Web, uno script, un plug-in 
 
  Un progetto è contenuto, in senso logico e all’interno di un file system, in una *soluzione*che può contenere uno o più progetti, insieme alle informazioni di compilazione, alle impostazioni di finestra di Visual Studio ed eventuali file misti che non sono associati ad alcun progetto. In senso letterale, la soluzione è un file di testo con un formato univoco specifico. In genere, non è destinato a essere modificato manualmente.  
 
- Una soluzione dispone un file con estensione suo associata che archivia le impostazioni, le preferenze e le informazioni di configurazione per ogni utente che ha lavorato al progetto.  
+ Una soluzione ha un file con estensione *suo* associato che archivia le impostazioni, le preferenze e le informazioni di configurazione per ogni utente che ha lavorato al progetto.  
 
  Nel diagramma seguente viene illustrata la relazione tra progetti e soluzioni e gli elementi in essi contenuti dal punto di vista logico.  
 
- ![Progetti e soluzioni di Visual Studio](../ide/media/vs2015_project_diagram.png "vs2015_project_diagram")  
+ ![Progetti e soluzioni di Visual Studio](../ide/media/vside-project-diagram.png)  
 
  È inoltre possibile creare modelli di progetto e modelli di elemento personalizzati. Per altre informazioni, vedere [Creazione di modelli di progetti e di elementi](../ide/creating-project-and-item-templates.md).  
 
 ## <a name="creating-new-projects"></a>Creazione di nuovi progetti  
- Il modo più semplice per creare un nuovo progetto consiste nell’iniziare con un modello di progetto predefinito costituito da un set di file di codice generati in precedenza, file di configurazione, risorse e impostazioni che consentono di iniziare la creazione di un particolare tipo di applicazione o sito Web in un determinato linguaggio di programmazione. Questi modelli sono quelli visualizzati nella finestra di dialogo **Nuovo progetto** quando si sceglie **File &#124; Nuovo &#124; Progetto** o **File &#124; Nuovo &#124; Sito Web** dal menu principale e quindi si inizia a navigare. Per altre informazioni, vedere [Creazione di soluzioni e progetti](../ide/creating-solutions-and-projects.md) e  [Creazione di progetti da modelli](http://msdn.microsoft.com/en-us/7c36d86a-6b79-4480-8228-0f925f1204b2).  
+ Il modo più semplice per creare un nuovo progetto consiste nell’iniziare con un modello di progetto predefinito costituito da un set di file di codice generati in precedenza, file di configurazione, risorse e impostazioni che consentono di iniziare la creazione di un particolare tipo di applicazione o sito Web in un determinato linguaggio di programmazione. Questi modelli sono quelli visualizzati nella finestra di dialogo **Nuovo progetto** quando si sceglie **File &#124; Nuovo &#124; Progetto** o **File &#124; Nuovo &#124; Sito Web** dal menu principale e quindi si inizia a navigare. Per altre informazioni, vedere [Creazione di soluzioni e progetti](../ide/creating-solutions-and-projects.md).  
 
 ## <a name="managing-projects-in-solution-explorer"></a>Gestione di progetti in Esplora soluzioni  
- Dopo aver creato un nuovo progetto, viene utilizzato **Esplora soluzioni** per visualizzare e gestire progetti e soluzioni e i relativi articoli associati. Nella figura seguente viene illustrato Esplora Server con una soluzione C# contenente due progetti.  
+ Dopo aver creato un nuovo progetto, viene utilizzato **Esplora soluzioni** per visualizzare e gestire progetti e soluzioni e i relativi articoli associati. La figura seguente illustra Esplora soluzioni con una soluzione C# contenente due progetti.  
 
  ![Esplora soluzioni](../ide/media/vs2015_solution_explorer.png "vs2015_solution_explorer")  
 

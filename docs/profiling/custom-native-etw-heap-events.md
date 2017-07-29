@@ -1,5 +1,5 @@
 ---
-title: Personalizzare gli eventi dell&quot;heap ETW nativo | Microsoft Docs
+title: Personalizzare gli eventi dell'heap ETW nativo | Microsoft Docs
 ms.custom: 
 ms.date: 02/24/2017
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 83fbf12dce91f79d537b574ea9903af5d6e61d1f
-ms.openlocfilehash: 0cc24f68ddef374f539c299d87cede8a13fac1a2
-ms.lasthandoff: 02/28/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 795bf9746c4ae48ac04141a05ba56462ecb90482
+ms.openlocfilehash: afc044be4d63b7a292a6d94e360366913bd28883
+ms.contentlocale: it-it
+ms.lasthandoff: 06/23/2017
 
 ---
 
 # <a name="custom-native-etw-heap-events"></a>Personalizzare gli eventi dell'heap ETW nativo
 
-Visual Studio contiene un'ampia gamma di [strumenti di profilatura e diagnostica](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools), tra cui un profiler nativo della memoria.  Il profiler esegue l'hook degli [eventi ETW](https://msdn.microsoft.com/en-us/library/windows/desktop/aa363668(v=vs.85).aspx) dal provider di heap e offre un'analisi delle modalità di allocazione e uso della memoria.  Per impostazione predefinita, questo strumento consente di analizzare solo le allocazioni effettuate dall'heap standard di Windows ed eventuali allocazioni esterne all'heap nativo non vengono visualizzate.
+Visual Studio contiene un'ampia gamma di [strumenti di profilatura e diagnostica](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools), tra cui un profiler nativo della memoria.  Il profiler esegue l'hook degli [eventi ETW](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) dal provider di heap e offre un'analisi delle modalità di allocazione e uso della memoria.  Per impostazione predefinita, questo strumento consente di analizzare solo le allocazioni effettuate dall'heap standard di Windows ed eventuali allocazioni esterne all'heap nativo non vengono visualizzate.
 
 Vi sono molti i casi in cui può essere utile usare il proprio heap personalizzato ed evitare il sovraccarico di allocazioni dall'heap standard.  Ad esempio, è possibile usare [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) per allocare una grande quantità di memoria all'avvio dell'app o del gioco e quindi gestire i propri blocchi all'interno di tale elenco.  In questo scenario lo strumento profiler della memoria vedrà solo l'allocazione iniziale e non la gestione personalizzata eseguita all'interno del blocco di memoria.  Tuttavia, se si usa utilizza il provider ETW dell'heap nativo personalizzato, è possibile consentire allo strumento di sapere quali allocazioni vengono create all'esterno dell'heap standard.
 

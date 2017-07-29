@@ -1,19 +1,39 @@
 ---
-title: "Passaggio 10: scrivere codice per pulsanti aggiuntivi e una casella di controllo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Passaggio 10: scrivere codice per pulsanti aggiuntivi e una casella di controllo | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 185cf370-ab39-4ac0-b6bc-601d5b95a4a2
 caps.latest.revision: 21
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 19
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: d89b7cf0a81ed9987f8a09fb6e3139deb13f579e
+ms.contentlocale: it-it
+ms.lasthandoff: 05/19/2017
+
 ---
 # <a name="step-10-write-code-for-additional-buttons-and-a-check-box"></a>Passaggio 10: scrivere codice per pulsanti aggiuntivi e una casella di controllo
 Ora si è pronti per completare gli altri quattro metodi. È possibile copiare e incollare questo codice, ma se si desidera ottenere il massimo vantaggio da questa esercitazione, digitare il codice e utilizzare IntelliSense.  
@@ -29,16 +49,10 @@ Ora si è pronti per completare gli altri quattro metodi. È possibile copiare e
   
 -   Aggiungere il codice seguente al file di codice Form1 (Form1.cs o Form1.vb). Scegliere la scheda **VB** per visualizzare il codice Visual Basic.  
   
-     [!code-vb[VbExpressTutorial1Step9_10#2](../ide/codesnippet/VisualBasic/step-10-write-code-for-additional-buttons-and-a-check-box_1.vb)]
-     [!code-cs[VbExpressTutorial1Step9_10#2](../ide/codesnippet/CSharp/step-10-write-code-for-additional-buttons-and-a-check-box_1.cs)]  
+     [!code-vb[VbExpressTutorial1Step9_10#2](../ide/codesnippet/VisualBasic/step-10-write-code-for-additional-buttons-and-a-check-box_1.vb)]  [!code-cs[VbExpressTutorial1Step9_10#2](../ide/codesnippet/CSharp/step-10-write-code-for-additional-buttons-and-a-check-box_1.cs)]  
   
 ### <a name="to-continue-or-review"></a>Per continuare o rivedere l'esercitazione  
   
 -   Per andare al passaggio successivo dell'esercitazione, vedere [Passaggio 11: eseguire il programma e provare altre funzionalità](../ide/step-11-run-your-program-and-try-other-features.md).  
   
 -   Per tornare al passaggio precedente dell'esercitazione, vedere [Passaggio 9: rivedere, commentare e testare il codice](../ide/step-9-review-comment-and-test-your-code.md).
-
-
-<!--HONumber=Feb17_HO4-->
-
-

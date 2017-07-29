@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2ce4f6545e3497b829234a6f21983a406059d3e0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 99f7756369fe4848fc5641009e95bbba23c95227
+ms.contentlocale: it-it
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="visual-c-intellisense"></a>IntelliSense per Visual C#
@@ -53,7 +54,7 @@ IntelliSense per Visual C# è disponibile durante la codifica nell'editor e dura
   
 -   [Metodi di estensione](#ExtensionMethods)  
   
- L’Elenco di completamento in C# può escludere i token irrilevanti e preselezionare quelli pertinenti al contesto. Per altre informazioni, vedere [Elenchi di completamento filtrati in C#](../misc/filtered-completion-lists-in-csharp.md) e [Elementi dell'elenco di completamento preselezionati in C#](../misc/pre-selected-completion-list-items-in-csharp.md).  
+ L’Elenco di completamento in C# può escludere i token irrilevanti e preselezionare quelli pertinenti al contesto. Per altre informazioni, vedere [Elenchi di completamento filtrati](#filtered-completion-lists).  
   
 ###  <a name="CodeSnippets"></a> Frammenti di codice negli elenchi di completamento  
  In Visual C#, l'elenco di completamento include frammenti di codice che consentono di inserire facilmente corpi predefiniti di codice nel programma. I frammenti di codice vengono visualizzati nell'elenco di completamento come [Elemento Shortcut (frammenti di codice IntelliSense)](http://msdn.microsoft.com/en-us/052cc97a-5c70-42f8-b398-4c3adf670cfa) del frammento.  Per altre informazioni sui frammenti di codice disponibili per impostazione predefinita in Visual C#, vedere [Frammenti di codice Visual C#](../ide/visual-csharp-code-snippets.md).  
@@ -69,7 +70,7 @@ IntelliSense per Visual C# è disponibile durante la codifica nell'editor e dura
   
  I metodi di estensione usano un'icona diversa rispetto ai metodi di istanza. Per un elenco di icone dell’elenco, vedere [Icone di Visualizzazione classi e Visualizzatore oggetti](../ide/class-view-and-object-browser-icons.md). Se un metodo di istanza e un metodo di estensione con lo stesso nome sono entrambi inclusi in un ambito, nell'elenco di completamento viene visualizzata l'icona del metodo di estensione.  
   
-### <a name="filtered-completion-lists"></a>Elenchi di completamento filtrati  
+### <a name="filtered-completion-lists"></a> Elenchi di completamento filtrati  
  I membri non necessari vengono rimossi dall'elenco di completamento IntelliSense usando dei filtri.  
   
  In Visual C# vengono filtrati gli elenchi di completamento disponibili per le voci riportate di seguito:  
@@ -85,6 +86,8 @@ IntelliSense per Visual C# è disponibile durante la codifica nell'editor e dura
 -   **Inizializzatori di oggetto:** solo i membri che possono essere inizializzati verranno visualizzati nell'elenco di completamento.  
   
 -   **Nuova parola chiave**: quando si digita `new` e si preme la BARRA SPAZIATRICE, viene visualizzato un elenco di completamento. In base al contesto del codice, viene selezionata automaticamente una voce nell'elenco. Per le dichiarazioni e per le istruzioni return nei metodi, ad esempio, vengono selezionate automaticamente delle voci nell'elenco di completamento.  
+  
+-   **Parola chiave enum**: quando si preme la BARRA SPAZIATRICE dopo il segno di uguale per un'assegnazione enum, viene visualizzato un elenco di completamento. In base al contesto del codice, viene selezionata automaticamente una voce nell'elenco. Dopo aver digitato la parola chiave return e quando si crea una dichiarazione, ad esempio, le voci nell'elenco di completamento vengono selezionate automaticamente.  
   
 -   **Operatori as e is**: quando si preme la BARRA SPAZIATRICE dopo aver digitato la parola chiave `as` o `is`, viene visualizzato automaticamente un elenco di completamento filtrato.  
   
@@ -112,7 +115,7 @@ IntelliSense per Visual C# è disponibile durante la codifica nell'editor e dura
  ![Aggiungi using, immagine smart tag espansa](../ide/media/addusesmartexp.gif "AddUseSmartExp")  
   
 ### <a name="organize-usings"></a>Organizza using  
- L'opzione **Organizza using** consente di ordinare e rimuovere le dichiarazioni `using` e `extern` senza modificare il comportamento del codice sorgente. Nel tempo i file di origine possono diventare troppo grandi e difficili da leggere a causa di direttive `using` superflue e non organizzate. Le opzioni **Organizza using`using` compattano il codice sorgente rimuovendo le direttive** inutilizzate e migliorano la leggibilità mettendole in ordine.  
+ L'opzione **Organizza using** consente di ordinare e rimuovere le dichiarazioni `using` e `extern` senza modificare il comportamento del codice sorgente. Nel tempo i file di origine possono diventare troppo grandi e difficili da leggere a causa di direttive `using` superflue e non organizzate. Le opzioni **Organizza using`using` compattano il codice sorgente rimuovendo le direttive**  inutilizzate e migliorano la leggibilità mettendole in ordine.  
   
  Per visualizzare le opzioni disponibili nell'ambiente di sviluppo integrato (IDE) di Visual Studio, nel menu **Modifica** scegliere **IntelliSense** e quindi selezionare **Organizza using**. IDE fornisce le seguenti opzioni per l'organizzazione e la rimozione delle direttive `usings`:  
   
@@ -125,6 +128,8 @@ IntelliSense per Visual C# è disponibile durante la codifica nell'editor e dura
  IntelliSense offre un'opzione che consente di implementare automaticamente i membri di una classe base astratta mentre si usa l'editor di codice. Per implementare i membri di una classe base astratta è in genere necessario creare una nuova definizione di metodo per ciascun metodo della classe base astratta nella classe derivata. Usando IntelliSense, una volta digitato il nome di una classe base astratta in una dichiarazione di classe viene visualizzato uno smart tag, che offre la possibilità di implementare automaticamente i metodi della classe base. Lo smart tag offre la possibilità di implementare automaticamente i metodi della classe base.  
   
  Gli stub di metodo generati con la funzionalità di implementazione di una classe base astratta vengono modellati in base al frammento di codice definito nel file MethodStub.snippet. I frammenti di codice sono modificabili. Per altre informazioni, vedere [Procedura dettagliata: creazione di un frammento di codice](../ide/walkthrough-creating-a-code-snippet.md).  
+  
+<a name="generate-from-usage></a>  
   
 ### <a name="generate-from-usage"></a>Generazione dall'utilizzo  
  La funzionalità di **generazione dall'utilizzo** consente di usare le classi e i membri prima di definirli. È possibile generare uno stub per qualsiasi classe, costruttore, metodo, proprietà, campo o enumerazione che si desidera utilizzare, ma che non è ancora stato definito. È possibile generare nuovi tipi e membri senza abbandonare la posizione corrente nel codice. Ciò riduce al minimo l'interruzione del flusso di lavoro.  
@@ -169,8 +174,6 @@ IntelliSense per Visual C# è disponibile durante la codifica nell'editor e dura
   
 > [!NOTE]
 >  Usare il comando **Posizione precedente** nel menu **Visualizza** (CTRL+-) per tornare all'istruzione di associazione dell'evento.  
-  
- L'attività seguente mostra come IntelliSense aggancia automaticamente un gestore eventi denominato `button1_Click` a un campo evento denominato `button1.Click`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [IDE di Visual Studio](../ide/visual-studio-ide.md)

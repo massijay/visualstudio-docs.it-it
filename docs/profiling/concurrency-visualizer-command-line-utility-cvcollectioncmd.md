@@ -31,10 +31,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: da79533a7a40b6e1b79c66f023beba2c1162bd08
+ms.sourcegitcommit: c559290c8e88c8b4e37feabc7014188fad15434d
+ms.openlocfilehash: f219ae7937ea3810b58faa34f6320a627ede99ae
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Utilità della riga di comando del visualizzatore di concorrenza (CVCollectionCmd)
@@ -60,7 +60,7 @@ L'utilità riga di comando Visualizzatore di concorrenza (CVCollectionCmd.exe) p
   
 |Opzione|Descrizione|Parametri|Valori restituiti|  
 |------------|-----------------|----------------|-------------------|  
-|Query|Indica se è possibile avviare la raccolta.|Nessuno|0 se la raccolta è pronta per l'avvio.<br /><br /> 1  se è già in corso una raccolta.<br /><br /> 2 se non è in corso alcuna raccolta, ma sono già state abilitate una o più delle sessioni [ETW](http://msdn.microsoft.com/Library/ac99a063-e2d2-40cc-b659-d23c2f783f92) necessarie.|  
+|Query|Indica se è possibile avviare la raccolta.|Nessuno|0 se la raccolta è pronta per l'avvio.<br /><br /> 1  se è già in corso una raccolta.<br /><br /> 2 se non è in corso alcuna raccolta, ma sono già state abilitate una o più delle sessioni [ETW](/dotnet/framework/wcf/samples/etw-tracing) necessarie.|  
 |Launch|Esegue il processo specificato nel Visualizzatore di concorrenza.|Percorso del file eseguibile.|0 se l'esecuzione è riuscita.<br /><br /> 1 se l'esecuzione non è riuscita poiché non è stato possibile avviare l'applicazione di destinazione.<br /><br /> 13 se l'esecuzione non è riuscita poiché CVCollectionCmd non ha autorizzazioni sufficienti per scrivere nella directory di output specificata.|  
 |Attach|Inizia la raccolta di una traccia a livello di sistema. In caso contrario, si connette a un processo, se ne è stato specificato uno.|Nessuno.|0 se la connessione è riuscita.<br /><br /> 1 se la connessione non è riuscita poiché il processo specificato non è valido o è ambiguo.<br /><br /> 13 se la connessione non è riuscita poiché CVCollectionCmd non ha autorizzazioni sufficienti per scrivere nella directory di output specificata.|  
 |Detach|Arresta la raccolta.|Nessuno.|0 se la disconnessione è riuscita.<br /><br /> 1 se la disconnessione non è riuscita poiché la raccolta non è attualmente in corso.<br /><br /> 2 se la disconnessione non è riuscita poiché non è stato possibile arrestarla.|  
@@ -170,3 +170,4 @@ L'utilità riga di comando Visualizzatore di concorrenza (CVCollectionCmd.exe) p
 </LocalConfig>  
   
 ```
+

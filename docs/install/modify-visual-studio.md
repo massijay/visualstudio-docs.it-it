@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 47c39bd711b69efdb863d71f11e3e472054a3ce3
-ms.openlocfilehash: dc52353b476d38b7c069aa4acd95ceaa260717c4
-ms.lasthandoff: 04/06/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: f8d907587deb8e14e777d9c69f07da6d819143e5
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="modify-visual-studio-2017-by-adding-or-removing-workloads-and-components"></a>Modificare Visual Studio 2017 aggiungendo o rimuovendo carichi di lavoro e componenti
@@ -49,7 +50,7 @@ Ecco come fare.
 
 1.  Individuare il programma di installazione di Visual Studio all'interno del computer in uso.  
 
-     Ad esempio, in un computer che esegue l'Aggiornamento dell'anniversario di Windows 10, selezionare **Start** e scorrere fino alla lettera **P** in cui viene visualizzato come **Programma di installazione di Visual Studio**.  
+     Ad esempio, in un computer che esegue l'Aggiornamento dell'anniversario di Windows 10 selezionare **Start** e scorrere fino alla lettera **P** in cui viene visualizzato come **Programma di installazione di Visual Studio**.  
 
      ![Programma di installazione di Visual Studio](media/vs2017-locate-the-visual-studio-installer.PNG "Individuare il programma di installazione di Microsoft Visual Studio")
 

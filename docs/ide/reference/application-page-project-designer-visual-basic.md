@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d95f62f61261c9c5c9af36e3bb2ee6fe66d63d2a
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6fbf89668d47d55d1d77a1d7f11765567fc73405
+ms.openlocfilehash: 4be8a1f36d81e2cb36d9daab9817f04d18ecb94a
+ms.contentlocale: it-it
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Application Page, Project Designer (Visual Basic)
@@ -51,7 +52,7 @@ Usare la pagina **Applicazione** di Creazione progetti per specificare le impost
  Le opzioni seguenti consentono di configurare le impostazioni generali per un'applicazione.  
   
  **Nome assembly**  
- Specifica il nome del file di output che conterrà il manifesto dell'assembly. Se si modifica questa proprietà, viene modificata anche la proprietà **Nome output**. È anche possibile eseguire questa modifica al prompt dei comandi tramite [/out (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/out). Per informazioni su come accedere a questa proprietà a livello di codice, vedere <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.  
+ Specifica il nome del file di output che conterrà il manifesto dell'assembly. Se si modifica questa proprietà, viene modificata anche la proprietà **Nome output**. È anche possibile eseguire questa modifica al prompt dei comandi tramite [/out (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/out). Per informazioni su come accedere a questa proprietà a livello di programmazione, vedere <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.  
   
  **Spazio dei nomi radice**  
  Specifica lo spazio dei nomi di base per tutti i file nel progetto. Ad esempio, se si imposta lo **Spazio dei nomi radice** su `Project1` e nel codice è presente una `Class1` all'esterno di qualsiasi spazio dei nomi, lo spazio dei nomi di questa sarà `Project1.Class1`. Se nel codice una `Class2` fosse presente in uno spazio dei nomi `Order`, lo spazio dei nomi sarebbe `Project1.Order.Class2`.  
@@ -65,7 +66,7 @@ Usare la pagina **Applicazione** di Creazione progetti per specificare le impost
   
  Per altre informazioni sulla proprietà rootnamespace, vedere [/rootnamespace](/dotnet/visual-basic/reference/command-line-compiler/rootnamespace).  
   
- Per informazioni su come accedere a questa proprietà a livello di codice, vedere <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.  
+ Per informazioni su come accedere a questa proprietà a livello di programmazione, vedere <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.  
   
  **Framework di destinazione (tutte le configurazioni)**  
  Specifica la versione di .NET Framework a cui è destinata l'applicazione. Questa opzione può avere valori diversi a seconda delle versioni di .NET Framework installate nel computer in uso.  
@@ -82,15 +83,15 @@ Usare la pagina **Applicazione** di Creazione progetti per specificare le impost
   
  Per il progetto di un'applicazione Web è necessario specificare **Libreria di classi**.  
   
- Se si specifica l'opzione **File WinMD**, i tipi possono essere inseriti nel progetto in un qualsiasi linguaggio di programmazione Windows Runtime. Creando un pacchetto dell'output del progetto nel formato File WinMD, è possibile codificare un'applicazione in più linguaggi e fare in modo che il codice interagisca come se fosse stato scritto tutto nello stesso linguaggio. È possibile usare l'opzione **File WinMD** per le soluzioni destinate alle librerie Windows Runtime, tra cui le app di [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)]. Per altre informazioni, vedere [Creazione di componenti Windows Runtime in C# e Visual Basic](http://go.microsoft.com/fwlink/?LinkId=231895).  
+ Se si specifica l'opzione **File WinMD**, i tipi possono essere inseriti nel progetto in un qualsiasi linguaggio di programmazione Windows Runtime. Creando un pacchetto dell'output del progetto nel formato File WinMD, è possibile codificare un'applicazione in più linguaggi e fare in modo che il codice interagisca come se fosse stato scritto tutto nello stesso linguaggio. È possibile usare l'opzione **File WinMD** per le soluzioni destinate alle librerie Windows Runtime, tra cui le app di [!INCLUDE[win8_appname_long](../../debugger/includes/win8_appname_long_md.md)]. Per altre informazioni, vedere [Creazione di componenti Windows Runtime in C# e Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).  
   
 > [!NOTE]
->  Windows Runtime può fare in modo che i tipi appaiano come oggetti nativi in qualsiasi linguaggio siano usati. Ad esempio, le applicazioni JavaScript che interagiscono con Windows Runtime usano quest'ultimo come un set di oggetti JavaScript, mentre le applicazioni C# usano la libreria come una raccolta di oggetti .NET. Creando un pacchetto dell'output del progetto nel formato File WinMD, è possibile sfruttare la stessa tecnologia usata da Windows Runtime.  
+>  Windows Runtime può fare in modo che i tipi appaiano come oggetti nativi in qualsiasi linguaggio siano usati. Ad esempio, le applicazioni JavaScript che interagiscono con Windows Runtime usano quest'ultimo come un set di oggetti JavaScript, mentre le applicazioni C# usano la libreria come una raccolta di oggetti .NET. Creando un pacchetto dell'output del progetto nel formato di file WinMD, è possibile sfruttare la stessa tecnologia usata da Windows Runtime.  
   
- Per altre informazioni sulla proprietà **Tipo di applicazione**, vedere [/target (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/target). Per informazioni su come accedere a questa proprietà a livello di codice, vedere <xref:VSLangProj.ProjectProperties.OutputType%2A>.  
+ Per altre informazioni sulla proprietà **Tipo di applicazione**, vedere [/target (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/target). Per informazioni su come accedere a tale proprietà a livello di programmazione, vedere <xref:VSLangProj.ProjectProperties.OutputType%2A>.  
   
  **Icona**  
- Consente di impostare il file con estensione ico che si vuole usare come icona di programma. Selezionare **\<Sfoglia...>** per individuare un elemento grafico esistente. Per altre informazioni, vedere [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) o [/win32icon (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option) (/win32icon (opzioni del compilatore C#)). Per accedere a questa proprietà a livello di codice, vedere <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.  
+ Consente di impostare il file con estensione ico che si vuole usare come icona di programma. Selezionare  **\<Sfoglia...>** per individuare un elemento grafico esistente. Per altre informazioni, vedere [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon) o [/win32icon (C# Compiler Options)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option) (/win32icon (opzioni del compilatore C#)). Per accedere a questa proprietà a livello di programmazione, vedere <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>.  
   
  **Modulo di avvio/oggetto di avvio/URI di avvio**  
  Consente di specificare il modulo di avvio o il punto di ingresso dell'applicazione.  
@@ -101,7 +102,7 @@ Usare la pagina **Applicazione** di Creazione progetti per specificare le impost
   
  Se l'opzione **Abilita framework applicazione** è deselezionata, questo elenco diventa **Oggetto di avvio** e mostra sia moduli e classi o moduli con `Sub Main`.  
   
- **Oggetto di avvio** definisce il punto di ingresso da chiamare durante il caricamento dell'applicazione. In genere è impostato sul modulo principale dell'applicazione o sulla procedura `Sub Main` da eseguire all'avvio dell'applicazione. Poiché le librerie di classi non hanno un punto di ingresso, l'unica opzione disponibile per questa proprietà è **(Nessuno)**. Per altre informazioni, vedere [/main](/dotnet/visual-basic/reference/command-line-compiler/main). Per accedere a questa proprietà a livello di codice, vedere <xref:VSLangProj.ProjectProperties.StartupObject%2A>.  
+ **Oggetto di avvio** definisce il punto di ingresso da chiamare durante il caricamento dell'applicazione. In genere è impostato sul modulo principale dell'applicazione o sulla procedura `Sub Main` da eseguire all'avvio dell'applicazione. Poiché le librerie di classi non hanno un punto di ingresso, l'unica opzione disponibile per questa proprietà è **(Nessuno)**. Per altre informazioni, vedere [/main](/dotnet/visual-basic/reference/command-line-compiler/main). Per accedere a questa proprietà a livello di programmazione, vedere <xref:VSLangProj.ProjectProperties.StartupObject%2A>.  
   
  **Informazioni assembly**  
  Fare clic su questo pulsante per visualizzare la [finestra di dialogo Informazioni assembly](../../ide/reference/assembly-information-dialog-box.md).  
@@ -172,7 +173,7 @@ Usare la pagina **Applicazione** di Creazione progetti per specificare le impost
  **Visualizza eventi applicazione**  
  Fare clic su questo pulsante per visualizzare il file di classe parziale `Application` (Application.xaml.vb) in un editor di codice. Se il file non esiste, Creazione progetti ne crea uno con il nome della classe e dello spazio dei nomi appropriati.  
   
- L'oggetto <xref:System.Windows.Application> genera eventi quando si verificano determinate modifiche di stato dell'applicazione (ad esempio, all'avvio o alla chiusura dell'applicazione). Per l'elenco completo degli eventi esposti da questa classe, vedere <xref:System.Windows.Application>. Questi eventi vengono gestiti nella sezione del codice utente della classe parziale `Application`.  
+ L'oggetto <xref:System.Windows.Application> genera eventi quando si verificano determinate modifiche di stato dell'applicazione (ad esempio, all'avvio o all'arresto dell'applicazione). Per un elenco completo degli eventi esposti da questa classe, vedere <xref:System.Windows.Application>. Questi eventi vengono gestiti nella sezione del codice utente della classe parziale `Application`.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Managing Application Properties](../../ide/application-properties.md) (Gestione delle proprietà dell'applicazione) 

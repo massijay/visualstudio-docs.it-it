@@ -1,6 +1,6 @@
 ---
 title: Installare Dotfuscator Community Edition (CE) | Microsoft Docs
-ms.date: 2017-02-08
+ms.date: 2017-06-22
 ms.prod: visual-studio-dev15
 ms.devlang: dotnet
 ms.technology:
@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 507ff049dae50698d86e1536ed21ab982da1af85
-ms.openlocfilehash: 4831a41cc82ecb1030d61263f46b1d41ec0c37a1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 8ce85525f6af336682f6f8547c2f6c13dde73c8c
+ms.openlocfilehash: fb5356632ecf8183945b1d50ba940ed05abcf96f
+ms.contentlocale: it-it
+ms.lasthandoff: 06/23/2017
 
 ---
 
@@ -52,7 +53,7 @@ Di conseguenza, Dotfuscator Community Edition (Dotfuscator CE) non è installato
 
 > [!NOTE]
 > Oltre alle versioni di Dotfuscator CE incluse nelle versioni di Visual Studio, PreEmptive Solutions offre periodicamente anche versioni aggiornate sul proprio sito Web.
-> Se si vuole scaricare la **versione più recente** direttamente anziché eseguire l'installazione da Visual Studio, ** [fare clic qui per passare alla pagina di download di Dotfuscator][download]**.
+> Se si vuole scaricare la **versione più recente** direttamente anziché eseguire l'installazione da Visual Studio,  **[fare clic qui per passare alla pagina di download di Dotfuscator][download]**.
 
 ## <a name="within-visual-studio"></a>Da Visual Studio
 
@@ -60,7 +61,7 @@ Di conseguenza, Dotfuscator Community Edition (Dotfuscator CE) non è installato
 
 1. Nella barra di ricerca dell'**Avvio veloce** (CTRL + Q) digitare `dotfuscator`. <br/> <br/> ![](media/install_from_vs_12.png) <br/> <br/>
 2. Nei risultati visualizzati nell'Avvio veloce, sotto l'intestazione *Installa*, selezionare **PreEmptive Protection - Dotfuscator (Individual Component)**.
-  * Se invece sotto l'intestazione *Menu* viene visualizzato **Strumenti → PreEmptive Protection - Dotfuscator** vuol dire che Dotfuscator CE è già installato. Per informazioni dettagliate sull'uso, vedere la [pagina introduttiva della Guida dell'utente completa di Dotfuscator CE][get-started].
+  * Se invece sotto l'intestazione *Menu* viene visualizzato **Strumenti - PreEmptive Protection - Dotfuscator** vuol dire che Dotfuscator CE è già installato. Per informazioni dettagliate sull'uso, vedere la [pagina introduttiva della Guida dell'utente completa di Dotfuscator CE][get-started].
 3. Viene visualizzata la finestra del programma di installazione di Visual Studio, preconfigurato per installare Dotfuscator CE.
   * Potrebbe essere necessario specificare credenziali di amministratore per continuare.
 4. Chiudere tutte le istanze dell'IDE di Visual Studio. <br/> <br/> ![](media/install_from_vs_345.png) <br/> <br/>
@@ -87,13 +88,14 @@ Al termine dell'installazione, è possibile iniziare a usare Dotfuscator CE. Per
 
 ## <a name="see-also"></a>Vedere anche
 
-[Questo argomento nella Guida dell'utente completa di Dotfuscator CE][full]
+[Dotfuscator Community Edition User Guide][full] (Guida dell'utente di Dotfuscator CE)
 
 <!-- Copyright © 2017 PreEmptive Solutions, LLC -->
 
 [2017-install]: https://www.visualstudio.com/downloads/#vs-2017
-[get-started]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/gui_getstarted.html
+[get-started]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_getstarted.html
 
 [download]: https://www.preemptive.com/products/dotfuscator/downloads
 
-[full]: https://www.preemptive.com/dotfuscator/ce/docs/help/5.27/intro_install.html
+[full]: https://www.preemptive.com/dotfuscator/ce/docs/help/intro_install.html
+

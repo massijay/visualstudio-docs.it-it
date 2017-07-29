@@ -19,10 +19,11 @@ caps.latest.revision: 13
 author: kempb
 ms.author: kempb
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1901f0dde22fb44ecf3d1b549505590125999700
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 65cb324c1a7ed91ad5209da7826a1899657a414f
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="adding-visual-studio-editor-support-for-other-languages"></a>Aggiunta del supporto di altri linguaggi all'editor di Visual Studio
@@ -75,13 +76,13 @@ Informazioni su come l'editor di Visual Studio supporti la lettura e il passaggi
   
 |Nome cartella|Descrizione|  
 |-----------------|-----------------|  
-|\\*\<nome linguaggio>*|Cartella del linguaggio. Sostituire *\<nome linguaggio>* con il nome del linguaggio, ad esempio, **\Matlab**.|  
+|\\*\<nome linguaggio>*|Cartella del linguaggio. Sostituire  *\<nome linguaggio>* con il nome del linguaggio, ad esempio, **\Matlab**.|  
 |\Syntaxes|Cartella della grammatica. Contiene i file della grammatica con estensione json per il linguaggio, ad esempio **Matlab.json**.|  
 |\Snippets|Cartella dei frammenti. Contiene frammenti di codice per il linguaggio.|  
   
  In Windows %userprofile% si risolve nel percorso c:\Users\\*\<nome utente>*. Se nel sistema non esiste la cartella delle estensioni, è necessario crearla. Se la cartella esiste già, verrà nascosta.  
   
- Per informazioni dettagliate su come creare grammatiche TextMate, vedere [TextMate – Introduction to Language Grammars: How to add source code syntax highlighting embedded in HTML](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/) (TextMate: introduzione alle grammatiche dei linguaggi: come aggiungere l'evidenziazione della sintassi del codice sorgente incorporata nell'HTML) e [Notes on how to create a Language Grammar and Custom Theme for a Textmate Bundle](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle) (Note sulla creazione della grammatica di un linguaggio e di un tema personalizzato per un bundle TextMate).  
+ Per informazioni dettagliate su come creare grammatiche TextMate, vedere [TextMate - Introduction to Language Grammars: How to add source code syntax highlighting embedded in HTML](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/) (TextMate: introduzione alle grammatiche dei linguaggi: come aggiungere l'evidenziazione della sintassi del codice sorgente incorporata in HTML) e [Notes on how to create a Language Grammar and Custom Theme for a Textmate Bundle](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle) (Note sulla creazione della grammatica di un linguaggio e di un tema personalizzato per un bundle TextMate).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visual Studio 2013 Navigate To Improvements](https://blogs.msdn.microsoft.com/mvpawardprogram/2013/10/22/visual-studio-2013-navigate-to-improvements/)  (Miglioramenti della funzione Navigate To (Passa a) di Visual Studio 2013)  

@@ -28,14 +28,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: d580064a03291aad49134674bd42413ae05e3e72
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 99d1cfc816d5fd64367ff4524de89776ef25a4b8
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="talk-to-us"></a>Talk to Us
-Siamo interessati alle idee dei nostri utenti per migliorare i nostri prodotti e la nostra documentazione. Non possiamo rispondere sempre personalmente, ma ci accerteremo che commenti e suggerimenti arrivino alla persona o al team giusti.  
+Siamo interessati alle idee dei nostri utenti per migliorare i nostri prodotti e la nostra documentazione. Non possiamo sempre rispondere personalmente, ma ci assicureremo che commenti e suggerimenti vengano inviati alla persona o al team appropriato.  
 
 ## <a name="i-want-to-report-a-problem-with-visual-studio"></a>Segnalare un problema con Visual Studio  
  Se usando Visual Studio si riscontrano problemi, ad esempio arresti anomali, prestazioni ridotte, comportamenti imprevisti e così via, fare una segnalazione usando lo strumento **Segnala un problema**. Basta fare clic sull'icona di commenti e suggerimenti accanto a **QuickLaunch** o scegliere **Guida &#124; Commenti e suggerimenti &#124; Segnala un problema** dal menu principale. Per altre informazioni, vedere [Come segnalare un problema con Visual Studio 2017](how-to-report-a-problem-with-visual-studio-2017.md).  

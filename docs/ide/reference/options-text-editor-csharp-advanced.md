@@ -38,19 +38,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d0d1bb04347f3b4ce4578a15acf8f9118a6ba02d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
+ms.openlocfilehash: 61a061b6a58b18451fc53c8d53f77889cc1ea253
+ms.contentlocale: it-it
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="options-text-editor-c-advanced"></a>Opzioni, Editor di testo, C#, Avanzate
 Usare questa finestra di dialogo per modificare le impostazioni di formattazione dell'editor, di refactoring del codice e dei commenti della documentazione XML per Visual C#. Per accedere a questa finestra di dialogo, fare clic su **Opzioni** nel menu **Strumenti**, spandere la cartella **Editor di testo**, espandere **C#** e quindi fare clic su **Avanzate**.  
   
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
-## <a name="outlining"></a>Struttura  
+## <a name="outlining"></a>struttura  
  Attiva modalità struttura all'apertura del file  
  Se selezionata, visualizza automaticamente la struttura del file di codice che consente di creare blocchi comprimibili del codice. Alla prima apertura di un file, i blocchi #regions e i blocchi di codice inattivi vengono compressi.  
   
@@ -91,7 +92,7 @@ Usare questa finestra di dialogo per modificare le impostazioni di formattazione
   
 ## <a name="organize-usings"></a>Organizza using  
  Inserisci prima le direttive 'System' durante l'ordinamento delle direttive using  
- Se selezionata, le direttive using `System` vengono visualizzate prima delle altre direttive using. Per altre informazioni, vedere [Ordina using](../../misc/sort-usings.md).  
+ Se selezionata, le direttive using `System` vengono visualizzate prima delle altre direttive using. Per altre informazioni, vedere Organizza using in [IntelliSense per Visual C#](../../ide/visual-csharp-intellisense.md#automatic-code-generation).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Commenti relativi alla documentazione XML](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)   

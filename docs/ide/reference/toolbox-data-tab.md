@@ -1,50 +1,65 @@
 ---
-title: "Casella degli strumenti, Scheda Dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Casella degli strumenti, scheda Dati"
-  - "Scheda Dati, Casella degli strumenti"
-  - "dati [Visual Studio], Casella degli strumenti"
+title: Casella degli strumenti, scheda Dati | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Toolbox, Data tab
+- Data tab, Toolbox
+- data [Visual Studio], Toolbox
 ms.assetid: 2ae38b2a-29d2-461c-a67d-29dad274bf45
 caps.latest.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Casella degli strumenti, Scheda Dati
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: bfe6b74b10829ac06d07b3e22b969b8ed6357972
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
-Consente di visualizzare oggetti dati che è possibile aggiungere a form e componenti.  La scheda **Dati** della **Casella degli strumenti** viene visualizzata quando si crea un progetto a cui è associata una finestra di progettazione.  Per impostazione predefinita, la **Casella degli strumenti** viene visualizzata nell'ambiente di sviluppo integrato di Visual Studio; se è necessario visualizzarla, è sufficiente scegliere **Casella degli strumenti** dal menu **Visualizza**.  
+---
+# <a name="toolbox-data-tab"></a>Casella degli strumenti, scheda Dati
+Visualizza gli oggetti dati che è possibile aggiungere a form e componenti. La scheda **Dati** della **Casella degli strumenti** viene visualizzata quando si crea un progetto a cui è associata una finestra di progettazione. Per impostazione predefinita, la **Casella degli strumenti** viene visualizzata nell'ambiente di sviluppo integrato di Visual Studio; se è necessario visualizzare la **Casella degli strumenti**, selezionare **Casella degli strumenti** dal menu **Visualizza**.  
   
 > [!TIP]
->  La Configurazione guidata origine dati consente di creare e configurare automaticamente la maggior parte degli elementi di dati.  Per ulteriori informazioni, vedere [Creating Data Applications with Visual Studio](http://msdn.microsoft.com/it-it/28edce21-220a-484c-b461-a75b0232d293).  
+>  La Configurazione guidata origine dati consente di creare e configurare automaticamente la maggior parte degli elementi di dati. Per altre informazioni, vedere [Add new data sources](../../data-tools/add-new-data-sources.md) (Aggiungere nuove origini dati).  
   
-## Elenco degli elementi dell'interfaccia utente  
- Per passare direttamente alla pagina di riferimento di .NET Framework relativa a un componente, premere **F1** sull'elemento nella **Casella degli strumenti** o sul componente nella barra della finestra di progettazione.  
+## <a name="ui-element-list"></a>Elenco degli elementi dell'interfaccia utente  
+ Per passare direttamente alla pagina di riferimento di .NET Framework per un componente, premere **F1** sull'elemento nella **Casella degli strumenti** o sul componente nella barra della finestra di progettazione.  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|<xref:System.Data.DataSet>|Consente di aggiungere un'istanza di un dataset tipizzato o non tipizzato al form o al componente.  Quando si trascina questo oggetto su una finestra di progettazione, viene visualizzata una finestra di dialogo che consente di selezionare una classe DataSet tipizzata esistente o di specificare che si desidera creare un nuovo DataSet non tipizzato vuoto. **Note:**  L'oggetto <xref:System.Data.DataSet> nella **Casella degli strumenti** non viene utilizzato per creare una nuova classe e un nuovo schema di un DataSet tipizzato.  Per ulteriori informazioni, vedere [Procedura: creare un dataset tipizzato](../../data-tools/create-and-configure-datasets-in-visual-studio.md).|  
-|<xref:System.Windows.Forms.DataGridView>|Fornisce un sistema efficiente e flessibile per visualizzare i dati in formato tabulare.|  
+|<xref:System.Data.DataSet>|Aggiunge un'istanza di un set di dati tipizzato o non tipizzato al form o al componente. Quando si trascina questo oggetto in una finestra di progettazione, viene visualizzata una finestra di dialogo che consente di selezionare una classe Dataset tipizzata esistente o di specificare che si vuole creare un nuovo set di dati non tipizzato vuoto. **Nota:** l'oggetto <xref:System.Data.DataSet> nella **Casella degli strumenti** non viene usato per creare una nuova classe e un nuovo schema di set di dati tipizzato. Per altre informazioni, vedere [Create and configure datasets](../../data-tools/create-and-configure-datasets-in-visual-studio.md) (Creare e configurare set di dati).|  
+|<xref:System.Windows.Forms.DataGridView>|Offre un sistema efficiente e flessibile per visualizzare i dati in formato tabulare.|  
 |<xref:System.Windows.Forms.BindingSource>|Semplifica il processo di associazione dei controlli a un'origine dati sottostante.|  
-|<xref:System.Windows.Forms.BindingNavigator>|Rappresenta l’interfaccia utente di navigazione e modifica per i controlli associati a dati contenuti in un form.|  
+|<xref:System.Windows.Forms.BindingNavigator>|Rappresenta l’interfaccia utente di spostamento e modifica per i controlli associati a dati contenuti in un form.|  
   
-## Vedere anche  
- [Procedure dettagliate relative ai dati](../Topic/Data%20Walkthroughs.md)   
- [Associazione di controlli Windows Form ai dati in Visual Studio](../../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Cenni preliminari sulle applicazioni dati in Visual Studio](../../data-tools/overview-of-data-applications-in-visual-studio.md)   
- [Connessione ai dati in Visual Studio](../../data-tools/connecting-to-data-in-visual-studio.md)   
- [Preparazione dell'applicazione al ricevimento di dati](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [Recupero di dati nell'applicazione](../../data-tools/fetching-data-into-your-application.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Accesso ai dati in Visual Studio](../../data-tools/accessing-data-in-visual-studio.md)   
+ [Visual Studio data tools for .NET](../../data-tools/visual-studio-data-tools-for-dotnet.md)  (Strumenti dati di Visual Studio per .NET)  
+ [Strumenti di set di dati in Visual Studio](../../data-tools/dataset-tools-in-visual-studio.md)   
  [Associazione di controlli ai dati in Visual Studio](../../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [Modifica di dati nell'applicazione](../../data-tools/editing-data-in-your-application.md)   
- [Convalida dei dati](../Topic/Validating%20Data.md)   
+ [Associazione di controlli Windows Form ai dati in Visual Studio](../../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
+ [Modificare i dati nei set di dati](../../data-tools/edit-data-in-datasets.md)   
+ [Convalidare i dati nei set di dati](../../data-tools/validate-data-in-datasets.md)   
  [Salvataggio di dati](../../data-tools/saving-data.md)

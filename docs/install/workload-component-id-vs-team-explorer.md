@@ -32,10 +32,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 293d694cfff4c375b342d8322483c84fbbeb446c
-ms.openlocfilehash: 7a4538f04e18630da5adeb8189716a5ac34f3c47
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: b253c07b8d9798128f918463e6a3a47692ee231b
 ms.contentlocale: it-it
-ms.lasthandoff: 04/07/2017
+ms.lasthandoff: 05/13/2017
 
 ---
 
@@ -47,7 +47,7 @@ Tenere presenti anche le note seguenti relative a questa pagina:
 
 * Esiste una sezione a parte per ogni carico di lavoro, seguita dall'ID del carico di lavoro e da una tabella dei componenti disponibili per il carico di lavoro.
 * Per impostazione predefinita, i componenti di tipo **Obbligatorio** verranno installati quando si installa il carico di lavoro. È anche possibile scegliere di installare i componenti di tipo **Consigliato** e **Facoltativo**.
-* È stata inoltre aggiunta una sezione con l'elenco dei componenti aggiuntivi non affiliati ad alcun carico di lavoro.
+* È stata anche aggiunta una sezione con l'elenco dei componenti aggiuntivi non affiliati ad alcun carico di lavoro.
 
 Per altre informazioni su come usare questi ID, vedere la pagina [Usare i parametri della riga di comando per installare Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md). Per un elenco di ID di componenti e carichi di lavoro per altri prodotti, vedere la pagina [ID dei carichi di lavoro e dei componenti di Visual Studio 2017](workload-and-component-ids.md).
 

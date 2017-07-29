@@ -27,18 +27,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3f4740d442a7ef24803d6360cdcc480d9d6fca84
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5b67a4c254e2410302997dee5ec36a2243c6ed11
+ms.openlocfilehash: 29db26d6c885b297ff3b8c39776c9fe59ca3ea05
+ms.contentlocale: it-it
+ms.lasthandoff: 06/10/2017
 
 ---
 # <a name="adding-references-using-nuget-versus-an-extension-sdk"></a>Aggiunta di riferimenti utilizzando NuGet o SDK di estensione
 Per offrire un pacchetto destinato al consumo all'interno di progetti di Visual Studio, è possibile usare l'estensione NuGet di Visual Studio o un SDK (Software Development Kit). Questo argomento semplifica la scelta dell'estensione più adatta all'attività in corso descrivendo le analogie e le differenze tra i due meccanismi.  
   
--   NuGet è un sistema open source di gestione dei pacchetti che semplifica il processo di incorporazione di librerie nella soluzione di un progetto. Per altre informazioni, vedere [NuGet Overview](http://go.microsoft.com/fwlink/?LinkId=254877) (Panoramica di NuGet).  
+-   NuGet è un sistema open source di gestione dei pacchetti che semplifica il processo di incorporazione di librerie nella soluzione di un progetto. Per altre informazioni, vedere la [documentazione di NuGet](http://docs.microsoft.com/nuget).  
   
--   Un SDK è una raccolta di file che in Visual Studio vengono trattati come un unico elemento di riferimento. Nella finestra di dialogo **Gestione riferimenti** sono elencati tutti gli SDK pertinenti al progetto che risulta aperto quando si visualizza la finestra di dialogo. Se si aggiunge un SDK a un progetto, è possibile accedere a tutti i contenuti dell'SDK stesso tramite IntelliSense, la **casella degli strumenti**, le finestre di progettazione, il **Visualizzatore oggetti** e MSBuild, nonché tramite le funzioni di distribuzione, debug e creazione dei pacchetti. Per altre informazioni sugli SDK, vedere [Creating a Software Development Kit](../extensibility/creating-a-software-development-kit.md) (Creazione di un SDK).  
+-   Un SDK è una raccolta di file che in Visual Studio vengono trattati come un unico elemento di riferimento. Nella finestra di dialogo **Gestione riferimenti** sono elencati tutti gli SDK rilevanti per il progetto che risulta aperto quando si visualizza la finestra di dialogo. Se si aggiunge un SDK a un progetto, è possibile accedere a tutti i contenuti dell'SDK stesso tramite IntelliSense, la **casella degli strumenti**, le finestre di progettazione, il **Visualizzatore oggetti** e MSBuild, nonché tramite le funzioni di distribuzione, debug e creazione dei pacchetti. Per altre informazioni sugli SDK, vedere [Creating a Software Development Kit](../extensibility/creating-a-software-development-kit.md) (Creazione di un SDK).  
   
 ## <a name="which-mechanism-should-i-use"></a>Scelta del meccanismo  
  La tabella seguente consente di confrontare le funzionalità di riferimento di un SDK con le funzionalità di riferimento di NuGet.  

@@ -1,7 +1,7 @@
 ---
-title: "Panoramica delle funzionalità dell&quot;IDE di Visual Studio | Microsoft Docs"
+title: "Panoramica delle funzionalità dell'IDE di Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 06/28/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -26,10 +26,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 06cdfb076120ffd7459a16b56c659bb86942cd7f
-ms.openlocfilehash: c8276097c53ea49d223c43ada5511ab5d5f38036
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: 8d2c20b32201b3df85e5150828565eee84d66375
+ms.contentlocale: it-it
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="visual-studio-ide-feature-tour"></a>Panoramica delle funzionalità dell'IDE di Visual Studio
@@ -142,10 +143,10 @@ Non sempre funziona tutto perfettamente. Durante la scrittura del codice è nece
 
 ![Debug](../ide/media/VSIDE_Tour_Debugging.png)
 
-Per le operazioni di test, Visual Studio supporta unit test, IntelliTest, test di carico, test delle prestazioni e altro ancora. Per altri dettagli sul processo di debug di Visual Studio, vedere [Tour delle funzionalità del debugger](https://review.docs.microsoft.com/visualstudio/debugger/debugger-feature-tour?branch=mikejo-tour). Per altre informazioni sui test, vedere [Strumenti di test](https://www.visualstudio.com/vs/testing-tools/). Per altre informazioni su come migliorare le prestazioni delle app, vedere [Strumenti di profilatura](https://docs.microsoft.com/visualstudio/profiling/profiling-tools).
+Per le operazioni di test, Visual Studio supporta unit test, IntelliTest, test di carico, test delle prestazioni e altro ancora. Per altri dettagli sul processo di debug di Visual Studio, vedere [Tour delle funzionalità del debugger](../debugger/debugger-feature-tour.md). Per altre informazioni sui test, vedere [Strumenti di test](https://www.visualstudio.com/vs/testing-tools/). Per altre informazioni su come migliorare le prestazioni delle app, vedere [Panoramica delle funzionalità di profilatura](../profiling/profiling-feature-tour.md).
 
 ## <a name="deploy-your-finished-application"></a>Distribuire l'applicazione completata  
-Quando l'applicazione è pronta per la distribuzione a utenti o clienti, Visual Studio fornisce gli strumenti appropriati, a seconda che si tratti di una distribuzione per Windows Store, per un sito SharePoint o tramite tecnologie InstallShield o Windows Installer. Tutti gli strumenti sono accessibili dall'IDE. Per altre informazioni, vedere [Distribuzione di applicazioni, servizi e componenti](../deployment/deploying-applications-services-and-components.md).
+Quando l'applicazione è pronta per la distribuzione a utenti o clienti, Visual Studio offre gli strumenti appropriati, a seconda che si tratti di una distribuzione per Windows Store, per un sito SharePoint o tramite le tecnologie InstallShield o Windows Installer. Tutti gli strumenti sono accessibili dall'IDE. Per altre informazioni, vedere [Distribuzione di applicazioni, servizi e componenti](../deployment/deploying-applications-services-and-components.md).
 
 ## <a name="quick-tour-of-the-ide"></a>Panoramica delle funzionalità dell'IDE
 Per fornire una panoramica visiva di alto livello di Visual Studio, l'immagine seguente mostra Visual Studio con un progetto aperto con varie finestre degli strumenti fondamentali che molto probabilmente verranno usate.
@@ -233,7 +234,7 @@ Scegliendo un servizio nella pagina **Servizi connessi** viene avviata la proced
 Se Visual Studio non include la funzionalità esatta di cui si ha bisogno, è possibile aggiungerla. È possibile personalizzare l'IDE in base al flusso e allo stile di lavoro personali, aggiungere il supporto per strumenti esterni non ancora integrati in Visual Studio e modificare le funzionalità esistenti per aumentare la produttività. Visual Studio offre strumenti, controlli e modelli resi disponibili da Microsoft, dai partner e dalla community. Per altre informazioni sull'estensione di Visual Studio, vedere [Estendi Visual Studio IDE](https://www.visualstudio.com/vs/extend/).
 
 ## <a name="learn-more-and-find-out-whats-new"></a>Altre informazioni e novità
-Se è la prima volta che si usa Visual Studio, è possibile partire dalle nozioni di base iniziando con [Introduzione a Visual Studio](../ide/get-started-with-visual-studio.md) oppure seguire i corsi gratuiti su Visual Studio disponibili in [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!index=2&lang=1033).
+Se è la prima volta che si usa Visual Studio, è possibile iniziare dalle nozioni di base con [Introduzione a Visual Studio](../ide/get-started-with-visual-studio.md) oppure seguire i corsi gratuiti su Visual Studio disponibili in [Microsoft Virtual Academy](https://mva.microsoft.com/product-training/visual-studio-courses#!index=2&lang=1033).
 Per scoprire le nuove funzionalità di Visual Studio 2017, vedere [Novità di Visual Studio 2017](../ide/whats-new-in-visual-studio.md).
 
 La presentazione dell'IDE di Visual Studio e di alcune delle funzionalità principali del programma è così completa.

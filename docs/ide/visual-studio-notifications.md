@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: d5369897f905889b45d079a9da3ee772acae6a2a
-ms.openlocfilehash: 6d097a34e0346c1f27ed6debb49f0ee83a509e14
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 562b3eb92d35b00a136b19c3e659468cadcefba5
+ms.contentlocale: it-it
+ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="visual-studio-notifications"></a>Notifiche di Visual Studio

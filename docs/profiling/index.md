@@ -3,15 +3,14 @@ layout: LandingPage
 title: Profilatura delle app con Visual Studio
 description: Informazioni su come usare Visual Studio 2017 per la profilatura delle prestazioni di applicazioni, servizi e strumenti nel linguaggio preferito.
 ms.technology: vs-ide-debug
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
-ms.openlocfilehash: 6b54253dadb80dd6881ba366b5bb466f4eae7706
+ms.translationtype: HT
+ms.sourcegitcommit: 5c28e68b89f6583dc35a91b275693c11e0259dfd
+ms.openlocfilehash: e90fc5b4997acd7a9228e8132eb00f6f32ed2d3d
 ms.contentlocale: it-it
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-# Profilatura in Visual Studio
-<a id="profiling-in-visual-studio" class="xliff"></a>
+# <a name="profiling-in-visual-studio"></a>Profilatura in Visual Studio
 
 Gli strumenti di profilatura e diagnostica consentono di diagnosticare l'utilizzo della memoria e della CPU e altri problemi a livello di applicazione. Con questi strumenti è possibile accumulare i dati, ad esempio i valori delle variabili, le chiamate di funzione e gli eventi, in base al tempo di esecuzione dell'applicazione nel debugger. È possibile visualizzare lo stato dell'applicazione in punti diversi durante l'esecuzione del codice. 
 
@@ -53,7 +52,7 @@ Gli strumenti di profilatura e diagnostica consentono di diagnosticare l'utilizz
         </a>
     </li>
     <li>
-        <a href="https://www.youtube.com/watch?v=e-3txyAFzmw">
+        <a href="https://docs.microsoft.com/en-us/visualstudio/profiling/beginners-guide-to-performance-profiling.md#video">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -63,7 +62,7 @@ Gli strumenti di profilatura e diagnostica consentono di diagnosticare l'utilizz
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Guarda un video sugli strumenti di diagnostica (VS 2015)</h3>
+                        <h3>Guarda un video sugli strumenti di diagnostica</h3>
                     </div>
                 </div>
             </div>
