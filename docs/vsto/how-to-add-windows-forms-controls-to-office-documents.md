@@ -37,7 +37,7 @@ caps.handback.revision: 53
   
 -   [Aggiunta di controlli in fase di esecuzione in componenti aggiuntivi VSTO](#runtimeaddin)  
   
- ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere l'argomento relativo alla [procedura di aggiunta di controlli all'area di un documento in fase di esecuzione](http://go.microsoft.com/fwlink/?LinkId=132782).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere l'argomento relativo alla [procedura di aggiunta di controlli all'area di un documento in fase di esecuzione](http://go.microsoft.com/fwlink/?LinkId=132782).  
   
 ##  <a name="designtime"></a> Aggiunta di controlli in fase di progettazione  
  Sono disponibili varie modalità di aggiunta di controlli Windows Form al documento in un progetto a livello di documento in fase di progettazione.  

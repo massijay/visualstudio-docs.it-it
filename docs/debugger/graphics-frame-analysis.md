@@ -98,7 +98,7 @@ Usare l'analisi dei frame di grafica in Analizzatore grafica di Visual Studio pe
 #### Rilevanza statistica  
  Per evidenziare le variazioni di rendering con rilevanza maggiore, l'analisi dei frame determina la rilevanza statistica di ogni variante di rendering e mostra in grassetto le varianti più significative.  Le varianti che migliorano le prestazioni sono mostrate in verde, mentre quelle che le riducono sono mostrate in rosso.  I risultati non significativi a livello statistico sono mostrati in testo normale.  
   
- ![Rilevanza statistica della variante per le chiamate di disegno](~/docs/debugger/graphics/media/pix_frame_analysis_summary_stats.png "pix\_frame\_analysis\_summary\_stats")  
+ ![Rilevanza statistica della variante per le chiamate di disegno](~/debugger/graphics/media/pix_frame_analysis_summary_stats.png "pix\_frame\_analysis\_summary\_stats")  
   
  Per determinare la rilevanza statistica, l'analisi dei frame usa il [test t di Student](http://www.wikipedia.org/wiki/Student%27s_t-test).  
   

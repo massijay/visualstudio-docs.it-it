@@ -20,7 +20,7 @@ caps.handback.revision: 22
 
 Quando si crea un visualizzatore di immagini, il primo passaggio consiste nella creazione di un progetto di applicazione Windows Form.  
   
- ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "PlayVideo") Per una versione video di questo argomento, vedere [Esercitazione 1: creare un visualizzatore di immagini in Visual Basic \- Video 1](http://go.microsoft.com/fwlink/?LinkId=205209) oppure [Esercitazione 1: creare un visualizzatore di immagini in C\# \- Video 1](http://go.microsoft.com/fwlink/?LinkId=205199).  In questi video viene utilizzata una versione precedente di Visual Studio, pertanto vi sono piccole differenze in alcuni comandi di menu e altri elementi dell'interfaccia utente.  Tuttavia, i concetti e le procedure funzionano in modo analogo nella versione corrente di Visual Studio.  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "PlayVideo") Per una versione video di questo argomento, vedere [Esercitazione 1: creare un visualizzatore di immagini in Visual Basic \- Video 1](http://go.microsoft.com/fwlink/?LinkId=205209) oppure [Esercitazione 1: creare un visualizzatore di immagini in C\# \- Video 1](http://go.microsoft.com/fwlink/?LinkId=205199).  In questi video viene utilizzata una versione precedente di Visual Studio, pertanto vi sono piccole differenze in alcuni comandi di menu e altri elementi dell'interfaccia utente.  Tuttavia, i concetti e le procedure funzionano in modo analogo nella versione corrente di Visual Studio.  
   
 ### Per creare un progetto Applicazione Windows Form  
   
@@ -40,7 +40,7 @@ Finestra di dialogo Nuovo progetto
     > [!NOTE]
     >  Il layout delle finestre potrebbe non essere esattamente uguale a questa illustrazione.  Il layout preciso della finestra dipende dalla versione di Visual Studio, dal linguaggio di programmazione in uso e da altri fattori.  Tuttavia, è necessario verificare che tutte e tre le finestre siano visualizzate.  
   
-     ![Finestra IDE](~/docs/ide/media/express_ideoverview_visio.png "Express\_IDEOverview\_Visio")  
+     ![Finestra IDE](~/ide/media/express_ideoverview_visio.png "Express\_IDEOverview\_Visio")  
 Finestra IDE  
   
      L'interfaccia contiene tre finestre: una finestra principale, **Esplora soluzioni** e **Proprietà**.  
@@ -62,7 +62,7 @@ Finestra IDE
   
      In alternativa, scegliere il pulsante **Salva tutto** sulla barra degli strumenti, come illustrato nella figura seguente.  
   
-     ![Pulsante della barra degli strumenti Salva tutto](~/docs/ide/media/express_iconsaveall.png "Express\_IconSaveAll")  
+     ![Pulsante della barra degli strumenti Salva tutto](~/ide/media/express_iconsaveall.png "Express\_IconSaveAll")  
 Pulsante della barra degli strumenti Salva tutto  
   
      In Visual Studio il nome della cartella e il nome del progetto vengono compilati automaticamente. Il progetto viene quindi salvato nella cartella dei progetti.  

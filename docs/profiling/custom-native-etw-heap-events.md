@@ -67,7 +67,7 @@ Foo* pFoo3 = (Foo*)mPool.allocate();
 
 Uno snapshot dello strumento [Utilizzo memoria](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage) senza rilevamento dell'heap personalizzato indicherebbe semplicemente la singola allocazione di 8192 byte e nessuna delle allocazioni personalizzate create dal pool:
 
-![Allocazione di heap di Windows](~/docs/profiling/media/heap-example-windows-heap.png)
+![Allocazione di heap di Windows](~/profiling/media/heap-example-windows-heap.png)
 
 La procedura riportata di seguito consente di usare questo strumento per verificare l'uso della memoria nell'heap personalizzato.
 
@@ -158,17 +158,17 @@ Questa libreria può essere usata facilmente in C e C++.
 ## <a name="tracking-memory-usage"></a>Verificare l'uso della memoria
 Dopo aver definito le chiamate, è possibile verificare l'uso dell'heap personalizzato con lo strumento **Utilizzo memoria** standard di Visual Studio.  Per altre informazioni sull'uso di questo strumento, vedere la documentazione relativa a [Utilizzo memoria](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage). Verificare di avere abilitato la profilatura dell'heap con gli snapshot, poiché altrimenti non verrà visualizzato l'uso dell'heap personalizzato. 
 
-![Abilitare la profilatura dell'heap](~/docs/profiling/media/heap-enable-heap.png)
+![Abilitare la profilatura dell'heap](~/profiling/media/heap-enable-heap.png)
 
 Per visualizzare la verifica dell'heap personalizzato, usare l'elenco a discesa **Heap** situato in alto a destra nella finestra **Snapshot** e modificare la visualizzazione da *Heap NT* al proprio heap denominato in precedenza.
 
-![Selezione dell'heap](~/docs/profiling/media/heap-example-custom-heap.png)
+![Selezione dell'heap](~/profiling/media/heap-example-custom-heap.png)
 
 Usando l'esempio di codice precedente, con `MemoryPool` che crea un oggetto `VSHeapTracker::CHeapTracker` e il metodo `allocate` che ora chiama il metodo `AllocateEvent`, ora appare il risultato dell'allocazione personalizzata, che indica 3 istanze per un totale di 24 byte, tutti di tipo `Foo`.
 
 L'*heap NT* predefinito ha lo stesso aspetto di prima, con l'aggiunta dell'oggetto `CHeapTracker`.
 
-![Heap NT con strumento di rilevamento](~/docs/profiling/media/heap-example-windows-heap.png)
+![Heap NT con strumento di rilevamento](~/profiling/media/heap-example-windows-heap.png)
 
 Come con l'heap standard di Windows, è possibile usare questo strumento per confrontare gli snapshot e verificare la presenza di spazi inutilizzati ed errori nell'heap personalizzato, descritto nella documentazione principale di [Utilizzo memoria](https://docs.microsoft.com/en-us/visualstudio/profiling/memory-usage).
 

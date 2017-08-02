@@ -90,7 +90,7 @@ Al termine dei programmi di installazione (vedere [Configurazione e installazion
   
     -   Selezionare una destinazione **Emulator 8.1** o un dispositivo collegato nell'elenco a discesa di debug di Visual Studio come illustrato di seguito e avviare il debugger premendo F5.  
   
-         ![Selezionare un emulatore Windows Phone come destinazione di debug](~/docs/cross-platform/media/crossplat-xamarin-verify-4.png "CrossPlat Xamarin Verify 4")  
+         ![Selezionare un emulatore Windows Phone come destinazione di debug](~/cross-platform/media/crossplat-xamarin-verify-4.png "CrossPlat Xamarin Verify 4")  
   
     -   In caso di problemi di funzionamento dell'emulatore, vedere [Risoluzione dei problemi relativi all'emulatore Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/jj681694.aspx).  
   
@@ -106,11 +106,11 @@ Al termine dei programmi di installazione (vedere [Configurazione e installazion
   
     2.  Selezionare la destinazione **iPhoneSimulator** nell'elenco a discesa di compilazione di Visual Studio come illustrato di seguito oppure la destinazione **iPhone** per un dispositivo con tethering. Se non è elencato alcun simulatore, avviare Xcode nel Mac, selezionare **Xcode->Preferences** e fare clic su **Download**. In **Components** dovrebbero essere visualizzate le versioni del simulatore disponibili per il download. Altre istruzioni per il debug sono disponibili nella pagina relativa al [debug](https://developer.xamarin.com/guides/ios/deployment,_testing,_and_metrics/debugging_in_xamarin_ios/#Debugging_on_the_Simulator) di Xamarin (xamarin.com).  
   
-         ![Selezione della destinazione di compilazione di iPhoneSimulator](~/docs/cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin Verify 5")  
+         ![Selezione della destinazione di compilazione di iPhoneSimulator](~/cross-platform/media/crossplat-xamarin-verify-5.png "CrossPlat Xamarin Verify 5")  
   
     3.  Selezionare una destinazione iPhone dall'elenco a discesa di debug di Visual Studio come illustrato di seguito e avviare il debugger premendo F5. Verrà avviato il simulatore nel Mac, in cui è possibile interagire con l'app, mentre viene eseguito il debug in Visual Studio. Se un iPhone o iPad fisico è connesso al Mac, il dispositivo verrà visualizzato qui e potrà essere selezionato. Se non è elencato alcun dispositivo o simulatore, verificare la connessione al Mac facendo riferimento all'argomento indicato nel passaggio 1 sopra o passando a **Strumenti** >**iOS** >**Xamarin Mac Agent**  
   
-         ![Selezione di una destinazione di debug iPhone](~/docs/cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin Verify 6")  
+         ![Selezione di una destinazione di debug iPhone](~/cross-platform/media/crossplat-xamarin-verify-6.png "CrossPlat Xamarin Verify 6")  
   
     4.  Se si verificano problemi di connessione al Mac, leggere la pagina dedicata alla [risoluzione dei problemi di connessione](http://developer.xamarin.com/guides/ios/getting_started/installation/windows/xamarin-mac-agent/xma-troubleshooting/) (xamarin.com).  
   

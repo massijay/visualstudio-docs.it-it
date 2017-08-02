@@ -52,7 +52,7 @@ Il supporto per Python in Visual Studio include vari [modelli di progetto](pytho
 
 1. I modelli di Python sono disponibili in **Modelli > Altri linguaggi > Python** a sinistra oppure semplicemente cercando "Python":
 
-    ![Finestra di dialogo Nuovo progetto con visualizzati i progetti Python](~/docs/python/media/getting-started-new-project.png)
+    ![Finestra di dialogo Nuovo progetto con visualizzati i progetti Python](~/python/media/getting-started-new-project.png)
 
 1. Selezionare il modello "Python Application" (Applicazione Python), specificare una cartella per il progetto e selezionare **OK**. Se si vuole creare immediatamente un repository locale per il progetto, selezionare anche l'opzione **Aggiungi al controllo del codice sorgente**.
 
@@ -61,11 +61,11 @@ Il supporto per Python in Visual Studio include vari [modelli di progetto](pytho
 
 1. Dopo poco, il progetto verrà aperto nella finestra Esplora soluzioni di Visual Studio. In questa finestra è possibile esplorare i file e cartelle del progetto, oltre a gestire gli ambienti.
 
-    ![Esplora soluzioni con un progetto Python](~/docs/python/media/getting-started-solution-explorer-1.png)
+    ![Esplora soluzioni con un progetto Python](~/python/media/getting-started-solution-explorer-1.png)
 
 1. Espandere il nodo **Python Environments** (Ambienti Python). Verrà visualizzato l'interprete Python predefinito corrente per questo progetto. Se si espande anche il nodo di questo interprete, verrà visualizzato un elenco delle librerie disponibili in tale ambiente:
 
-    ![Ambiente Python visualizzato in Esplora soluzioni](~/docs/python/media/getting-started-solution-explorer-2.png)
+    ![Ambiente Python visualizzato in Esplora soluzioni](~/python/media/getting-started-solution-explorer-2.png)
 
 1. Se si usa Visual Studio 2015 o una versione precedente, non è disponibile un interprete Python installato per impostazione predefinita. Per questo processo, fare riferimento a [Selecting and installing Python interpreters](python-environments.md#selecting-and-installing-python-interpreters) (Selezione e installazione di interpreti Python).
 
@@ -82,11 +82,11 @@ Il supporto per Python in Visual Studio include vari [modelli di progetto](pytho
 
 1. Iniziare a digitare `print("Hello world")` e notare che IntelliSense di Visual Studio visualizza le opzioni di completamento automatico durante la digitazione. L'opzione con contorno nell'elenco a discesa è il completamento predefinito usato quando si preme TAB. Questa funzionalità può essere molto utile in presenza di istruzioni o identificatori più lunghi.
 
-    ![Popup di completamento automatico IntelliSense](~/docs/python/media/getting-started-coding-1.png)
+    ![Popup di completamento automatico IntelliSense](~/python/media/getting-started-coding-1.png)
 
 1. In IntelliSense vengono mostrate informazioni diverse a seconda dell'istruzione usata, della funzione chiamata e così via. Con la funzione `print`, quando si digita `(` per impostare la chiamata, vengono visualizzate informazioni complete sulla sintassi della funzione e viene addirittura indicato in grassetto l'argomento corrente che è necessario specificare (**value** in questo caso):
 
-    ![Popup di completamento automatico IntelliSense per una funzione](~/docs/python/media/getting-started-coding-2.png)
+    ![Popup di completamento automatico IntelliSense per una funzione](~/python/media/getting-started-coding-2.png)
 
 1. Completare l'istruzione in modo che corrisponda alla seguente:
 
@@ -96,28 +96,28 @@ Il supporto per Python in Visual Studio include vari [modelli di progetto](pytho
 
 1. Per eseguire il codice, selezionare il pulsante **Avvia** sulla barra degli strumenti illustrato di seguito, premere F5 o scegliere la voce di menu **Debug > Avvia debug**.
 
-    ![Pulsante Avvia sulla barra degli strumenti di debug](~/docs/python/media/getting-started-coding-3.png)
+    ![Pulsante Avvia sulla barra degli strumenti di debug](~/python/media/getting-started-coding-3.png)
 
     > [!Note]
     > Se viene visualizzato un messaggio in Visual Studio 2015 o versioni precedenti per segnalare che non sono disponibili interpreti, vedere [Selecting and installing a Python interpreter](python-environments.md#selecting-and-installing-python-interpreters) (Selezione e installazione di un interprete Python) perché in queste versioni non ne viene installato uno per impostazione predefinita.
 
 1. Visual Studio eseguirà il codice usando l'ambiente predefinito nel progetto e visualizzerà i risultati in una finestra di comando. Premere un tasto per chiudere la finestra e terminare la sessione di debug.
 
-    ![Pulsante Avvia sulla barra degli strumenti di debug](~/docs/python/media/getting-started-coding-4.png)
+    ![Pulsante Avvia sulla barra degli strumenti di debug](~/python/media/getting-started-coding-4.png)
 
 1. Oltre a istruzioni e funzioni, IntelliSense offre completamenti per le istruzioni `import`. Ciò consente di individuare facilmente i moduli disponibili nell'ambiente e i membri disponibili in ogni modulo. Nell'editor eliminare la riga `print` e iniziare a digitare `import`. Verrà visualizzato un elenco di moduli:
 
-    ![IntellSense che mostra i moduli disponibili per un'istruzione import](~/docs/python/media/getting-started-coding-5.png)
+    ![IntellSense che mostra i moduli disponibili per un'istruzione import](~/python/media/getting-started-coding-5.png)
 
 1. Completare la riga digitando o selezionando `sys`.
 
 1. Nella riga successiva digitare `from` per visualizzare nuovamente un elenco di moduli:
 
-    ![IntellSense che mostra i moduli disponibili per un'istruzione from](~/docs/python/media/getting-started-coding-6.png)
+    ![IntellSense che mostra i moduli disponibili per un'istruzione from](~/python/media/getting-started-coding-6.png)
 
 1. Selezionare o digitare `math`, quindi continuare a digitare uno spazio e `import` per visualizzare i membri del modulo:
 
-    ![IntellSense che mostra i membri del modulo](~/docs/python/media/getting-started-coding-7.png)
+    ![IntellSense che mostra i membri del modulo](~/python/media/getting-started-coding-7.png)
 
 1. Completare l'importazione dei membri `sin`, `cos` e `radians`, osservando i completamenti automatici disponibili per ogni membro. Al termine, il codice dovrebbe essere simile al seguente:
 
@@ -145,15 +145,15 @@ La finestra interattiva di Visual Studio per Python offre un'esperienza completa
 
 1. Per aprire la finestra interattiva, selezionare **View > Other Windows > Python Interactive Windows** (Visualizza > Altre finestre > Finestre interattive Python) dal menu principale di Visual Studio. La finestra verrà visualizzata con il consueto prompt REPL di Python >>>. Si noti che è possibile usare il menu a discesa sulla barra degli strumenti per cambiare ambiente in qualsiasi momento:
 
-    ![Finestra interattiva di Python](~/docs/python/media/getting-started-interactive-1.png)
+    ![Finestra interattiva di Python](~/python/media/getting-started-interactive-1.png)
 
 1. Immettere alcune istruzioni (ad esempio `print("hello")`) ed espressioni (ad esempio `123/567`) per visualizzare i risultati immediati:
 
-    ![Risultati immediati nella finestra interattiva di Python](~/docs/python/media/getting-started-interactive-2.png)
+    ![Risultati immediati nella finestra interattiva di Python](~/python/media/getting-started-interactive-2.png)
 
 1. Quando si inizia a scrivere un'istruzione su più righe, ad esempio una definizione di funzione, la finestra interattiva mostra il prompt ... per le righe di continuazione, per le quali è disponibile il rientro automatico, diversamente dall'ambiente REPL dalla riga di comando:
 
-    ![Finestra interattiva di Python con continuazione dell'istruzione](~/docs/python/media/getting-started-interactive-3.png)
+    ![Finestra interattiva di Python con continuazione dell'istruzione](~/python/media/getting-started-interactive-3.png)
 
 1. La finestra interattiva offre una cronologia completa di tutti gli elementi immessi e migliora l'ambiente REPL dalla riga di comando con elementi della cronologia su più righe. Ad esempio, è possibile richiamare facilmente l'intera definizione della funzione `f` di sopra come singola unità e modificare in modo semplice il nome in `make_double`, invece di dover ricreare la funzione riga per riga.
 
@@ -166,7 +166,7 @@ La finestra interattiva di Visual Studio per Python offre un'esperienza completa
 
 1. Selezionare tutto il codice in hello.py (incluse le istruzioni `import`), fare clic con il pulsante destro del mouse e scegliere **Send to Interactive** (Invia a finestra interattiva) (CTRL+INVIO). Il codice viene incollato immediatamente nella finestra interattiva ed eseguito. Dato che il codice definisce una funzione, è possibile testare rapidamente la funzione chiamandola più volte:
 
-    ![Invio di codice alla finestra interattiva](~/docs/python/media/getting-started-interactive-4.png)
+    ![Invio di codice alla finestra interattiva](~/python/media/getting-started-interactive-4.png)
 
 1. Il comando **Send to Interactive** (Invia a finestra interattiva) consente in effetti di incollare più righe di codice (ad esempio, un frammento trovato online) nella finestra interattiva, operazione che non è possibile eseguire direttamente. Ad esempio, copiare il codice seguente e provare a incollarlo (CTRL+V) nella finestra interattiva. Si noterà che non accade nulla. È comunque possibile incollarlo nell'editor, selezionarlo e usare il comando **Send to Interactive** (Invia a finestra interattiva) per vederlo in esecuzione.
 
@@ -176,13 +176,13 @@ La finestra interattiva di Visual Studio per Python offre un'esperienza completa
       print(s) 
   ```
 
-    ![Incollare più righe di codice tramite l'invio alla finestra interattiva](~/docs/python/media/getting-started-interactive-5.png)
+    ![Incollare più righe di codice tramite l'invio alla finestra interattiva](~/python/media/getting-started-interactive-5.png)
 
 1. Dato che la definizione della funzione è presente nella cronologia REPL come singola unità, è facile tornare indietro e apportare qualsiasi modifica, per poi testare di nuovo la funzione.
 
 1. Quando si è soddisfatti del codice scritto, è possibile selezionarlo nella finestra interattiva, fare clic con il pulsante destro del mouse e scegliere **Copia codice**, quindi incollarlo nell'editor. La funzionalità speciale del comando **Copia codice** è l'omissione automatica di qualsiasi output, così come del testo dei prompt >>> e .... Ad esempio, se si usa il comando con la selezione illustrata di seguito:
 
-  ![Comando Copia codice nella finestra interattiva](~/docs/python/media/getting-started-interactive-6.png)
+  ![Comando Copia codice nella finestra interattiva](~/python/media/getting-started-interactive-6.png)
 
   verrà incollato solo quanto segue:
 
@@ -236,17 +236,17 @@ Oltre a consentire di gestire i progetti, rendendo disponibili un'esperienza di 
 
 1. Impostare un punto di interruzione sulla prima riga della funzione `main` facendo clic nel margine grigio a sinistra della riga oppure posizionare il cursore nella riga e usare il comando *Debug > Attiva/Disattiva punto di interruzione** (F9). Verrà visualizzato un punto rosso nel margine grigio per indicare il punto di interruzione, come indicato dalla freccia blu di seguito:
 
-    ![Impostazione di un punto di interruzione](~/docs/python/media/getting-started-debugging-1.png)
+    ![Impostazione di un punto di interruzione](~/python/media/getting-started-debugging-1.png)
 
 1. Avviare di nuovo il debugger. Si noterà che l'esecuzione del codice si interrompe in corrispondenza della riga con il punto di interruzione. È così possibile vedere lo stack di chiamate ed esaminare le variabili locali nella finestra Variabili locali:
 
-    ![Esperienza dell'interfaccia utente per i punti di interruzione per Python](~/docs/python/media/getting-started-debugging-2.png)
+    ![Esperienza dell'interfaccia utente per i punti di interruzione per Python](~/python/media/getting-started-debugging-2.png)
 
 1. Esaminare alcune iterazioni del ciclo `for` riga per riga usando F10, il comando **Debug > Esegui istruzione/routine** o il pulsante della barra degli strumenti Esegui istruzione/routine. Questo significa che il debugger eseguirà ogni chiamata a `make_dot_string`, ma non si fermerà all'interno di tale funzione, a meno che non venga impostato un punto di interruzione.
 
 1. Sulla barra degli strumenti, i tre pulsanti per l'esecuzione riga per riga illustrati di seguito sono, da sinistra a destra: Esegui istruzione, Esegui istruzione/routine ed Esci da istruzione/routine:
 
-    ![Pulsanti della barra degli strumenti per l'esecuzione riga per riga](~/docs/python/media/getting-started-debugging-3.png)
+    ![Pulsanti della barra degli strumenti per l'esecuzione riga per riga](~/python/media/getting-started-debugging-3.png)
 
 1. Eseguire ora l'istruzione `make_dot_string` con il comando Esegui istruzione (F11). Si noterà il passaggio dal ciclo `for` a tale funzione. Eseguendo di nuovo il comando si torna al ciclo `for`, ma se la funzione includesse altre righe, si passerebbe a ognuna di esse, una alla volta. Se ci si trova in una funzione e si vuole eseguire il resto delle righe e poi tornare al codice chiamante, usare il comando Esci da istruzione/routine (MAIUSC+F11).
 
@@ -254,7 +254,7 @@ Oltre a consentire di gestire i progetti, rendendo disponibili un'esperienza di 
 
 1. Eseguire in questo modo centinaia di iterazioni di un ciclo può essere noioso, quindi è possibile aggiungere una condizione per il punto di interruzione impostato in precedenza, in modo che l'esecuzione venga interrotta solo quando il valore di `i` supera un determinato valore, ad esempio 1600. A tale scopo, fare clic con il pulsante destro del mouse sul punto rosso del punto di interruzione e scegliere **Condizione**. Nella finestra Impostazioni del punto di interruzione visualizzata immettere `i > 1600` come espressione e selezionare **Chiudi**. A questo punto premere F5 per continuare. Il programma verrà eseguito per un po' prima di interrompersi nuovamente. 
 
-    ![Impostazione di una condizione per il punto di interruzione](~/docs/python/media/getting-started-debugging-4.png)
+    ![Impostazione di una condizione per il punto di interruzione](~/python/media/getting-started-debugging-4.png)
 
 1. Per completare il programma, è possibile attivare nuovamente il punto di interruzione e premere F5. Visual Studio ritorna alla modalità di modifica al termine del debug.
 

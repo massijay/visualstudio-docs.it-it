@@ -51,7 +51,7 @@ manager: "ghogen"
   
 4.  Nella finestra Debugger JIT di Visual Studio selezionare la versione di Visual Studio da usare per il debug.  
   
-     ![JustInTimeDebugger](~/docs/debugger/media/justintimedebugger.png "JustInTimeDebugger")  
+     ![JustInTimeDebugger](~/debugger/media/justintimedebugger.png "JustInTimeDebugger")  
   
 5.  Viene avviata una nuova istanza di Visual Studio e l'esecuzione viene arrestata in corrispondenza del metodo `Debugger.Launch()`.  
   

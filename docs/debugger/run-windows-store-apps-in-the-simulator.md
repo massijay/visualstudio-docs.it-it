@@ -42,9 +42,9 @@ Il simulatore di Visual Studio per le app di Windows Store è un'applicazione de
 ##  <a name="BKMK_Choose_an_interaction_mode"></a> Scegliere una modalità di interazione  
  È possibile scegliere le modalità di interazione seguenti  
   
--   ![Pulsante modalità mouse](~/docs/debugger/media/simulator_mousemodebtn.png "SIMULATOR\_MouseModeBtn") Modalità mouse: imposta la modalità di interazione sui movimenti del mouse. I movimenti del mouse includono clic, doppio clic e trascinamento.  
+-   ![Pulsante modalità mouse](~/debugger/media/simulator_mousemodebtn.png "SIMULATOR\_MouseModeBtn") Modalità mouse: imposta la modalità di interazione sui movimenti del mouse. I movimenti del mouse includono clic, doppio clic e trascinamento.  
   
--   ![Pulsante emulazione tocco di avvio](~/docs/debugger/media/simulator_starttouchemulationbtn.png "SIMULATOR\_StartTouchEmulationBtn") Emulazione tocco di avvio: imposta la modalità di interazione sui movimenti tocco di un singolo dito. Gli eventi di un singolo dito includono tocco, trascinamento e scorrimento rapido.  
+-   ![Pulsante emulazione tocco di avvio](~/debugger/media/simulator_starttouchemulationbtn.png "SIMULATOR\_StartTouchEmulationBtn") Emulazione tocco di avvio: imposta la modalità di interazione sui movimenti tocco di un singolo dito. Gli eventi di un singolo dito includono tocco, trascinamento e scorrimento rapido.  
   
      ![Simulator one finger target](../debugger/media/simulator_onefinger.png "SIMULATOR\_OneFinger") L'icona di bersaglio singolo indica la posizione degli eventi nel simulatore. Usa il mouse per posizionare il puntatore.  
   
@@ -53,7 +53,7 @@ Il simulatore di Visual Studio per le app di Windows Store è un'applicazione de
 ## Zoom indietro\/avanti  
  Imposta la modalità di interazione per i movimenti zoom indietro e avanti di due dita.  
   
--   ![Siimulator two finger target](~/docs/debugger/media/simulator_twofinger.png "SIMULATOR\_TwoFinger")  
+-   ![Siimulator two finger target](~/debugger/media/simulator_twofinger.png "SIMULATOR\_TwoFinger")  
   
      La doppia icona di destinazione indica la posizione di due dita sullo schermo del dispositivo.  
   
@@ -108,7 +108,7 @@ Il simulatore di Visual Studio per le app di Windows Store è un'applicazione de
   
 -   Per impostare il percorso in cui si trovano la schermate, scegliere il pulsante **Impostazioni cattura di schermata** e scegliere il percorso dal menu di scelta rapida.  
   
-     ![Menu di scelta rapida Impostazioni cattura di schermata](~/docs/debugger/media/simulator_screenshotsettingscntxmnu.png "SIMULATOR\_ScreenShotSettingsCntxMnu")  
+     ![Menu di scelta rapida Impostazioni cattura di schermata](~/debugger/media/simulator_screenshotsettingscntxmnu.png "SIMULATOR\_ScreenShotSettingsCntxMnu")  
   
 ##  <a name="BKMK_Simulate_network_connection_properties"></a> Simulare le proprietà di connessione di rete  
  Puoi consentire agli utenti dell'app di gestire il costo delle connessioni di rete a consumo mantenendo il controllo sulle modifiche dello stato relative ai costi della connessione di rete o del piano dati e consentendo all'app di usare queste informazioni per evitare di dover sostenere costi aggiuntivi per il roaming o il superamento di un limite di trasferimento dati specificato. Le API [Windows.Networking.Connectivity](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.aspx) consentono di rispondere agli eventi [NetworkStatusChanged](https://msdn.microsoft.com/en-us/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) e [TriggerType](https://msdn.microsoft.com/en-us/library/windows/apps/windows.applicationmodel.background.systemtrigger.triggertype.aspx) che consentono l'accesso. Vedere [Guida introduttiva: Gestione dei vincoli di costo per le reti a consumo](http://msdn.microsoft.com/library/windows/apps/Hh750310.aspx).  

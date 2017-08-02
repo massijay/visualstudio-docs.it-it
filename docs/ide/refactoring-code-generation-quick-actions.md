@@ -51,7 +51,7 @@ Visual Studio genera automaticamente parti di codice sorgente, consentendo agli 
 
 <a name="#quick-actions"></a>
 ## <a name="quick-actions"></a>Azioni rapide
-Le azioni rapide consentono di generare codice, effettuarne il refactoring o modificarlo in altro modo con facilità tramite un'unica azione.  Queste azioni possono essere applicate tramite l'icona Lampadina ![Icona Lampadina piccola](~/docs/ide/media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall") o premendo **Ctrl + .** quando il cursore si trova sulla riga di codice appropriata.
+Le azioni rapide consentono di generare codice, effettuarne il refactoring o modificarlo in altro modo con facilità tramite un'unica azione.  Queste azioni possono essere applicate tramite l'icona Lampadina ![Icona Lampadina piccola](~/ide/media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall") o premendo **Ctrl + .** quando il cursore si trova sulla riga di codice appropriata.
 
 * [Azioni rapide](quick-actions.md)
 * [Stili di codice e azioni rapide](code-styles-and-quick-actions.md)

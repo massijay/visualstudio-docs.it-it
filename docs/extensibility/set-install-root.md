@@ -49,13 +49,13 @@ A partire da Visual Studio 2017 e VSIX v3 (versione 3), è ora disponibile un su
 
 Per supportare l'installazione di queste directory, il progetto VSIX deve essere installato "per istanza per computer". Questo può essere abilitato selezionando la casella di controllo "all users" nella finestra di progettazione Extension. vsixmanifest:
 
-![controllare tutti gli utenti](~/docs/extensibility/media/check-all-users.png)
+![controllare tutti gli utenti](~/extensibility/media/check-all-users.png)
 
 ## <a name="how-to-set-the-installroot"></a>Come impostare la directory principale di installazione
 
 Per impostare le directory di installazione, è possibile utilizzare il **proprietà** finestra in Visual Studio. Ad esempio, è possibile impostare il `InstallRoot` proprietà di un riferimento di progetto a uno dei percorsi precedenti:
 
-![installare le proprietà radice](~/docs/extensibility/media/install-root-properties.png)
+![installare le proprietà radice](~/extensibility/media/install-root-properties.png)
 
 Verranno aggiunti alcuni metadati corrispondente `ProjectReference` proprietà all'interno di file con estensione csproj del progetto VSIX:
 
@@ -73,7 +73,7 @@ Verranno aggiunti alcuni metadati corrispondente `ProjectReference` proprietà a
 
 Se si desidera installare un sottopercorso sotto il `InstallRoot`, è possibile farlo impostando il `VsixSubPath` come proprietà di `InstallRoot` proprietà. Ad esempio, supponiamo si desidera visualizzare l'output del riferimento di progetto per installare ' [installdir]\MSBuild\MyCompany\MySDK\1.0'. Questo scopo, usiamo facilmente con la finestra di progettazione di proprietà:
 
-![set sottopercorso](~/docs/extensibility/media/set-subpath.png)
+![set sottopercorso](~/extensibility/media/set-subpath.png)
 
 Le modifiche corrispondenti apportate csproj avrà un aspetto simile al seguente:
 

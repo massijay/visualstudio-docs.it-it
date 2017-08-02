@@ -52,7 +52,7 @@ Dopo aver installato R Tools per Visual Studio (RTVS), da [How to install R Tool
 1. Scegliere **File > Nuovo > Progetto** (CTRL+MAIUSC+N)
 1. Selezionare "Progetto R" in **Modelli > R**, assegnare un nome e un percorso al progetto e selezionare **OK**:
 
-   ![Finestra di dialogo Nuovo progetto per R in Visual Studio (RTVS in VS2017)](~/docs/rtvs/media/getting-started-01-new-project.png)
+   ![Finestra di dialogo Nuovo progetto per R in Visual Studio (RTVS in VS2017)](~/rtvs/media/getting-started-01-new-project.png)
 
 1. Una volta creato il progetto, si noterà quanto segue:
 
@@ -67,29 +67,29 @@ Dopo aver installato R Tools per Visual Studio (RTVS), da [How to install R Tool
 
 1. Accertarsi che la finestra interattiva funzioni digitando `3 + 4` e quindi scegliendo INVIO per visualizzare il risultato:
 
-    ![Finestra R interattivo in Visual Studio 2017 (VS2017)](~/docs/rtvs/media/getting-started-02-interactive1.png)
+    ![Finestra R interattivo in Visual Studio 2017 (VS2017)](~/rtvs/media/getting-started-02-interactive1.png)
 
 1. Immettere un codice un po' più complicato, `ds <- c(1.5, 6.7, 8.9) * 1:12`, e immettere `ds` per visualizzare il risultato:
 
-    ![Altro esempio interattivo per R in Visual Studio](~/docs/rtvs/media/getting-started-03-interactive2.png)
+    ![Altro esempio interattivo per R in Visual Studio](~/rtvs/media/getting-started-03-interactive2.png)
 
 1. Digitare `mean(ds)` ma si noti che non appena si digita `m` o `me`, Visual Studio IntelliSense avvia le opzioni di completamento automatico, come illustrato di seguito. Quando viene selezionato il completamento che si vuole scegliere nell'elenco, premere TAB per inserirlo. È possibile modificare la selezione con il mouse o i tasti di direzione.
 
-    ![Visualizzazione di IntelliSense quando si immette codice](~/docs/rtvs/media/getting-started-04-intellisense1.png)
+    ![Visualizzazione di IntelliSense quando si immette codice](~/rtvs/media/getting-started-04-intellisense1.png)
 
 1. Dopo aver completato `mean`, digitare la parentesi aperta `(`. Si noterà che IntelliSense visualizza la Guida in linea per la funzione:
 
-    ![IntelliSense visualizza la Guida in linea per una funzione](~/docs/rtvs/media/getting-started-05-intellisense2.png)
+    ![IntelliSense visualizza la Guida in linea per una funzione](~/rtvs/media/getting-started-05-intellisense2.png)
 
 1. Completare la riga `mean(ds)` e premere INVIO per visualizzare il risultato (`[1] 39.51667`).
 
 1. La finestra interattiva è integrata con la Guida, quindi immettere `?mean`, ad esempio, per visualizzare la Guida per tale funzione nella finestra **Guida di R** in Visual Studio. Per altre informazioni su questa funzionalità, vedere [Help in R Tools for Visual Studio](getting-started-help.md) (Guida di R Tools per Visual Studio).
 
-    ![Finestra Guida di R in Visual Studio](~/docs/rtvs/media/getting-started-06-help.png)
+    ![Finestra Guida di R in Visual Studio](~/rtvs/media/getting-started-06-help.png)
 
 1. Alcuni comandi, come ad esempio `plot(1:100)`, aprono una nuova finestra in Visual Studio quando non è possibile visualizzare l'output direttamente nella finestra interattiva:
 
-    ![Visualizzazione di un tracciato in Visual Studio](~/docs/rtvs/media/getting-started-07-plot-window.png)
+    ![Visualizzazione di un tracciato in Visual Studio](~/rtvs/media/getting-started-07-plot-window.png)
 
 La finestra interattiva consente anche di rivedere la cronologia, caricare e salvare le aree di lavoro, collegarsi a un debugger e interagire con i file di codice sorgente per le operazioni di scelta rapida copia e incolla. Per altri dettagli, vedere [Uso della finestra R interattivo](interactive-repl.md).
 
@@ -113,7 +113,7 @@ Ad esempio, la procedura seguente crea un breve codice per esplorare i [teoremi 
 
 1. Per visualizzare rapidamente i risultati, selezionare tutto il codice, premendo CTRL + A, e premere CTRL + INVIO o fare clic con il pulsante destro del mouse e scegliere **Esegui in finestra interattiva**. In questo modo tutto il codice selezionato viene immesso nella finestra interattiva come se fosse stato digitato direttamente. Il risultato viene poi visualizzato nella finestra del tracciato:
 
-    ![Visualizzazione di un tracciato in Visual Studio](~/docs/rtvs/media/getting-started-08-plot1.png)
+    ![Visualizzazione di un tracciato in Visual Studio](~/rtvs/media/getting-started-08-plot1.png)
 
 1. Per una singola riga è sufficiente premere CTRL + INVIO in qualsiasi momento per eseguire la riga nella finestra interattiva.
 
@@ -132,7 +132,7 @@ Ad esempio, la procedura seguente crea un breve codice per esplorare i [teoremi 
 
 1. Premere nuovamente CTRL + A e CTRL + INVIO per rieseguire il codice e produrre quanto segue:
 
-    ![Doppio tracciato aggiornato in Visual Studio](~/docs/rtvs/media/getting-started-09-plot2.png)
+    ![Doppio tracciato aggiornato in Visual Studio](~/rtvs/media/getting-started-09-plot2.png)
 
 1. Il problema è che la scala verticale viene determinata dal primo tracciato, quindi il secondo (con `lines`) non vi rientra. Per risolvere il problema, impostare il parametro `ylim` della chiamata `plot`, ma per eseguire questa operazione correttamente è necessario aggiungere codice per calcolare il valore verticale massimo. Eseguire questa operazione riga per riga nella finestra interattiva non è pratico, in quanto sarebbe necessario modificare il codice per usare `samp.means` prima di chiamare `plot`. In un file di codice tuttavia, è possibile apportare facilmente le modifiche appropriate:
 
@@ -154,7 +154,7 @@ Ad esempio, la procedura seguente crea un breve codice per esplorare i [teoremi 
 
 1. Selezionare ancora CTRL + A e CTRL + INVIO per visualizzare il risultato:
 
-    ![Doppio tracciato aggiornato in Visual Studio, ridimensionato correttamente](~/docs/rtvs/media/getting-started-10-plot3.png)
+    ![Doppio tracciato aggiornato in Visual Studio, ridimensionato correttamente](~/rtvs/media/getting-started-10-plot3.png)
 
 Nell'editor è possibile eseguire altre operazioni. Per informazioni dettagliate, vedere [Editing R code in Visual Studio](code-editing.md) (Modifica di codice R in Visual Studio), [IntelliSense](code-intellisense.md), e [Code snippets](code-snippets.md) (Frammenti di codice).
 
@@ -166,23 +166,23 @@ Uno dei principali vantaggi di Visual Studio è l'interfaccia utente di debug. R
 
 1. Con il file `script.R` creato nella sezione precedente, impostare un punto di interruzione sulla riga che inizia con `pop <-` posizionando il cursore sulla riga e premendo F9 o selezionando il comando di menu **Debug > Imposta/Rimuovi punto di interruzione**. È possibile eseguire questa operazione in un unico passaggio facendo clic sul margine sinistro, o sul margine rilegatura, della riga, laddove viene visualizzato il punto di interruzione rosso:
 
-    ![Impostazione di un punto di interruzione nell'editor](~/docs/rtvs/media/getting-started-11-debug1.png)
+    ![Impostazione di un punto di interruzione nell'editor](~/rtvs/media/getting-started-11-debug1.png)
 
 1. Avviare il debugger con il codice in `script.R` selezionando il pulsante **Source startup file** (File di avvio di origine) sulla barra degli strumenti, selezionando le voci di menu **Debug > Source startup file** (File di avvio di origine), o premendo F5. In questo modo si avvia la modalità di debug di Visual Studio e viene eseguito il codice. L'esecuzione del codice si interrompe, tuttavia, nel punto in cui è stato impostato il punto di interruzione:
 
-    ![Arresto in corrispondenza del punto di interruzione nel debugger di Visual Studio](~/docs/rtvs/media/getting-started-12-debug2.png)
+    ![Arresto in corrispondenza del punto di interruzione nel debugger di Visual Studio](~/rtvs/media/getting-started-12-debug2.png)
 
 1. Durante il debug, Visual Studio consente di esaminare il codice riga per riga, nonché di eseguire funzioni o di uscire dalle funzioni, nel contesto di chiamata. Queste funzionalità, insieme ad altre, sono disponibili nel menu **Debug**, nel menu di scelta rapida visualizzato facendo clic con il pulsante destro del mouse, e nella barra degli strumenti Debug:
 
-    ![Barra degli strumenti Debug in Visual Studio](~/docs/rtvs/media/getting-started-13-debug3.png)
+    ![Barra degli strumenti Debug in Visual Studio](~/rtvs/media/getting-started-13-debug3.png)
 
 1. Quando l'esecuzione si arresta in corrispondenza del punto di interruzione, è possibile esaminare i valori delle variabili. Individuare la finestra **Auto** in Visual Studio e selezionare la scheda nella parte inferiore denominata **Variabili locali**. La finestra **Variabili locali** visualizza le variabili locali nel punto corrente all'interno del programma. Se il programma è stato arrestato in corrispondenza del punto di interruzione impostato in precedenza, si noterà che la variabile `pop` non è ancora definita. A questo punto usare il comando **Debug > Esegui istruzione/routine** (F10). Verrà visualizzato il valore per pop:
 
-    ![Finestra Variabili locali in Visual Studio](~/docs/rtvs/media/getting-started-14-debug4.png)
+    ![Finestra Variabili locali in Visual Studio](~/rtvs/media/getting-started-14-debug4.png)
 
 1. Per esaminare le variabili in ambiti diversi, tra cui l'ambito globale e gli ambiti package, usare [Esplora variabili](variable-explorer.md) illustrato di seguito. Esplora variabili offre anche la possibilità di passare a una visualizzazione tabulare con colonne ordinabili e di esportare i dati in un file con estensione csv.
 
-    ![Visualizzazione estesa di Esplora variabili](~/docs/rtvs/media/variable-explorer-expanded-results.png)
+    ![Visualizzazione estesa di Esplora variabili](~/rtvs/media/variable-explorer-expanded-results.png)
 
 1. È possibile continuare l'esecuzione del programma riga per riga oppure selezionare **Continua** (F5) per completare l'esecuzione fino alla fine, o fino al punto di interruzione successivo.
 

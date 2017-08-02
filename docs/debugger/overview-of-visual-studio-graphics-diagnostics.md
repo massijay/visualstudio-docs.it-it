@@ -77,7 +77,7 @@ manager: "ghogen"
 ### Barra degli strumenti di grafica \(Analizzatore grafica\)  
  La barra degli strumenti di grafica consente di accedere rapidamente alle finestre dello strumento Analizzatore grafica.  
   
- ![Barra degli strumenti grafica in modalità diagnostica grafica](~/docs/debugger/graphics/media/vsg_toolbar.png "vsg\_toolbar")  
+ ![Barra degli strumenti grafica in modalità diagnostica grafica](~/debugger/graphics/media/vsg_toolbar.png "vsg\_toolbar")  
   
 ### Documento di log della grafica  
  Il documento di log della grafica è la finestra degli strumenti più importante di Analizzatore grafica.  Questa finestra rappresenta tutti i frame acquisiti eseguendo l'app in Diagnostica grafica.  Da qui è possibile selezionare un altro frame da esaminare o selezionare uno specifico pixel da esaminare con lo strumento Cronologia pixel.  L'immagine del buffer frame mostrata in questo documento cambia in modo da riflettere l'evento attualmente selezionato, consentendo di visualizzarne l'effetto nel tempo sul buffer frame.  

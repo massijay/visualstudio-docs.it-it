@@ -41,7 +41,7 @@ caps.handback.revision: 15
   
 2.  Aggiungere due controlli alla Web part, ovvero una casella di testo e un pulsante.  Non modificarne i nomi predefiniti, TextBox1 e Button1 rispettivamente.  
   
-3.  Aggiungere due voci alla proprietà **Voci di controllo sicure** della Web part.  A tale scopo, selezionare il pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/docs/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) accanto alla proprietà **Voci di controllo sicure** nella finestra **Proprietà**.  
+3.  Aggiungere due voci alla proprietà **Voci di controllo sicure** della Web part.  A tale scopo, selezionare il pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) accanto alla proprietà **Voci di controllo sicure** nella finestra **Proprietà**.  
   
      Verrà visualizzata la finestra di dialogo **Voci di controllo sicure**.  
   
@@ -77,7 +77,7 @@ caps.handback.revision: 15
   
 7.  In **Assembly aggiuntivi** selezionare il bottone **Aggiungi** e quindi selezionare **Aggiungi assembly esistente** dall'elenco.  
   
-8.  Nella finestra di dialogo **Aggiungi assembly esistente**, selezionare il pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/docs/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) accanto a **Percorso origine**.  
+8.  Nella finestra di dialogo **Aggiungi assembly esistente**, selezionare il pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) accanto a **Percorso origine**.  
   
 9. Scegliere l'assembly dalla soluzione SharePoint creato nel passaggio 1 e quindi scegliere il pulsante **Apri**.  
   

@@ -74,7 +74,7 @@ caps.handback.revision: 30
   
  Per informazioni generali sul funzionamento dei componenti aggiuntivi VSTO, vedere [Architettura dei componenti aggiuntivi VSTO](../vsto/architecture-of-vsto-add-ins.md).  
   
- ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere la [procedura per automatizzare PowerPoint da un componente aggiuntivo di Excel](http://go.microsoft.com/fwlink/?LinkID=130300).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere la [procedura per automatizzare PowerPoint da un componente aggiuntivo di Excel](http://go.microsoft.com/fwlink/?LinkID=130300).  
   
 ### Modello di programmazione dei componenti aggiuntivi di Excel  
  Quando si crea un progetto di componente aggiuntivo VSTO per Excel, Visual Studio genera una classe, chiamata `ThisAddIn`, che costituisce la base della soluzione. Questa classe fornisce un punto di partenza per la scrittura del codice ed espone anche il modello a oggetti di Excel nel componente aggiuntivo VSTO.  

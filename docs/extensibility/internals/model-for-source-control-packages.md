@@ -21,7 +21,7 @@ caps.handback.revision: 13
 
 Il modello seguente rappresenta un esempio di implementazione di controllo del codice sorgente.  Nel modello, le interfacce che è necessario implementare i servizi dell'ambiente che è necessario chiamare.  Come tutti i servizi, effettivamente chiama i metodi di interfaccia particolare ottenuto dal servizio.  I nomi delle classi sono identificati per semplificare osservare come il controllo del codice sorgente viene eseguito.  
   
- ![Esempi SCC&#95;TUP](~/docs/extensibility/internals/media/scc_tup.gif "SCC\_TUP")  
+ ![Esempi SCC&#95;TUP](~/extensibility/internals/media/scc_tup.gif "SCC\_TUP")  
 Progetto di controllo del codice sorgente di esempio  
   
 ## Interfacce  

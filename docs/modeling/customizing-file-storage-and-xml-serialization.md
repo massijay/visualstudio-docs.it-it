@@ -51,11 +51,11 @@ Quando l'utente salva un'istanza o *modello*, di un linguaggio specifico di domi
 ## <a name="the-default-serialization-scheme"></a>Lo schema di serializzazione predefinito  
  Per creare un esempio di questo argomento, è stata utilizzata la seguente definizione DSL.  
   
- ![Diagramma di definizione DSL &#45; modello di albero genealogico](~/docs/modeling/media/familyt_person.png "FamilyT_Person")  
+ ![Diagramma di definizione DSL &#45; modello di albero genealogico](~/modeling/media/familyt_person.png "FamilyT_Person")  
   
  Questo DSL utilizzato per creare un modello che ha l'aspetto seguente sullo schermo.  
   
- ![Diagramma, casella degli strumenti e finestra di esplorazione dell'albero genealogico](~/docs/modeling/media/familyt_instance.png "FamilyT_Instance")  
+ ![Diagramma, casella degli strumenti e finestra di esplorazione dell'albero genealogico](~/modeling/media/familyt_instance.png "FamilyT_Instance")  
   
  Questo modello è stato salvato e quindi riaperto nell'editor di testo XML:  
   

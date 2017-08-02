@@ -32,7 +32,7 @@ Gli utenti possono visualizzare e modificare il progetto configurazione\-dipende
   
  Esistono due tipi di carattere generale su finestre di dialogo di **ProgettoPagine delle proprietà** disponibili in [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  Nel primo, per i progetti di Visual Basic., ad esempio, le pagine delle proprietà visualizzate tramite un formato di campo, come illustrato nel seguente schermata.  Nel secondo, illustrato più avanti in questa sezione, la pagina delle proprietà contiene una griglia delle proprietà simile a quella presente nella Finestra Proprietà.  
   
- ![Pagina delle proprietà di Visual Basic](~/docs/extensibility/internals/media/vsvbproppages.gif "vsVBPropPages")  
+ ![Pagina delle proprietà di Visual Basic](~/extensibility/internals/media/vsvbproppages.gif "vsVBPropPages")  
 Finestra di dialogo pagine delle proprietà del progetto con il formato e la struttura ad albero di campo  
   
  La struttura ad albero nella finestra di dialogo pagine delle proprietà non viene sviluppata utilizzando <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>.  L'ambiente, in base al nome del livello passato da <xref:Microsoft.VisualStudio.OLE.Interop.ISpecifyPropertyPages> e interfacce di <xref:Microsoft.VisualStudio.Shell.Interop.IVsPropertyPage> , lo compila.  
@@ -57,7 +57,7 @@ Finestra di dialogo pagine delle proprietà del progetto con il formato e la str
   
  Il secondo tipo di pagine delle proprietà visualizzate negli esempi ospita un form della griglia delle proprietà, come illustrato nel seguente schermata.  
   
- ![Pagina delle proprietà di VC](~/docs/extensibility/internals/media/vsvcproppages.gif "vsVCPropPages")  
+ ![Pagina delle proprietà di VC](~/extensibility/internals/media/vsvcproppages.gif "vsVCPropPages")  
 Finestra di dialogo pagine delle proprietà con la griglia delle proprietà  
   
  Le interfacce `IVSMDPropertyBrowser` e `IVSMDPropertyGrid` \(dichiarati in vsmanaged.h\) vengono utilizzate per creare e popolare la griglia delle proprietà di una finestra di dialogo o di una finestra.  

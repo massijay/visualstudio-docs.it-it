@@ -47,7 +47,7 @@ Questa pagina include informazioni dettagliate per l'installazione di Visual Stu
 ##  <a name="custom"></a> Confronto tra installazione predefinita e installazione personalizzata  
  Quando si installa Visual Studio 2015, è possibile includere o escludere i componenti che verranno usati ogni giorno. Questo vuol dire che un'installazione predefinita sarà spesso di dimensioni inferiori e verrà eseguita più rapidamente rispetto a un'installazione personalizzata. Significa anche che molti componenti che venivano installati per impostazione predefinita nelle versioni precedenti, ora sono considerati componenti personalizzati che è necessario selezionare in modo esplicito in questa versione.  
   
- ![Finestra di dialogo di installazione di Visual Studio 2015](~/docs/ide/media/vs2015_setup_screen.png "VS2015\_Setup\_screen")  
+ ![Finestra di dialogo di installazione di Visual Studio 2015](~/ide/media/vs2015_setup_screen.png "VS2015\_Setup\_screen")  
   
  I componenti personalizzati includono Visual C\+\+, Visual F\#, SQL Server Data Tools, strumenti mobili multipiattaforma e SDK, oltre a SDK ed estensioni di terze parti. Se i componenti personalizzati non vengono selezionati durante l'installazione iniziale, è possibile installarli in un secondo momento.  
   

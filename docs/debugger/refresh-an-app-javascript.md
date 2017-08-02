@@ -28,7 +28,7 @@ caps.handback.revision: 20
 # Aggiornare un&#39;applicazione (JavaScript)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Si applica a Windows e Windows Phone](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Si applica a Windows e Windows Phone](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  Puoi apportare modifiche al codice durante il debug e poi aggiornare un'app Windows Store con JavaScript scegliendo il pulsante **Aggiorna applicazione Windows** sulla barra degli strumenti **Debug**.  Facendo clic su questo pulsante, l'app viene ricaricata senza arrestare e riavviare il debugger.  La funzionalità di aggiornamento ti consente di modificare il codice HTML, CSS e JavaScript e visualizzare rapidamente i risultati.  Questa funzionalità è supportata per app Windows Store e Windows Phone Store.  
   
@@ -77,7 +77,7 @@ caps.handback.revision: 20
     Hello!  
     ```  
   
-7.  Fai clic sul pulsante **Aggiorna applicazione Windows**, che ha un aspetto simile a ![Pulsante Aggiorna app di Windows](~/docs/debugger/media/js_refresh.png "JS\_Refresh") o premi F4.  
+7.  Fai clic sul pulsante **Aggiorna applicazione Windows**, che ha un aspetto simile a ![Pulsante Aggiorna app di Windows](~/debugger/media/js_refresh.png "JS\_Refresh") o premi F4.  
   
 8.  Torna all'app.  L'app viene ricaricata senza riavviare il debugger e viene visualizzato il nuovo titolo della pagina.  
   

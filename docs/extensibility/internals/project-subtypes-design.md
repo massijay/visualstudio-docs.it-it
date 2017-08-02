@@ -52,7 +52,7 @@ I sottotipi di progetto let Vspackage estendere i progetti basati su Microsoft B
   
  Nella figura seguente viene illustrata una rappresentazione schematica di un aggregato a più livelli sottotipo di progetto.  
   
- ![Rappresentazione grafica dei progetti multilivello Visual Studio](~/docs/extensibility/internals/media/vs_multilevelprojectflavor.gif "VS\_MultilevelProjectFlavor")  
+ ![Rappresentazione grafica dei progetti multilivello Visual Studio](~/extensibility/internals/media/vs_multilevelprojectflavor.gif "VS\_MultilevelProjectFlavor")  
 Sottotipo multilivello di progetto  
   
  Un aggregato a più livelli sottotipo di progetto è costituito da tre livelli, un progetto di base, che verranno aggregati da un sottotipo di progetto, quindi ulteriormente aggregato da un sottotipo avanzato di progetto.  È incentrata sulla figura di alcune interfacce di supporto disponibili come una parte dell'architettura di sottotipo di progetto [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .  
@@ -62,7 +62,7 @@ Sottotipo multilivello di progetto
   
  I seguenti stati attivi mostrato nell'implementazione delle estensioni di automazione, l'oggetto di esplorazione di configurazione del progetto in particolare, utilizzato dai sottotipi di progetto per estendere il sistema di progetto di base.  
   
- ![Rappresentazione dell'Extender automatico delle caratteristiche dei progetti VS](~/docs/extensibility/internals/media/vs_projectflavorautoextender.gif "VS\_ProjectFlavorAutoExtender")  
+ ![Rappresentazione dell'Extender automatico delle caratteristiche dei progetti VS](~/extensibility/internals/media/vs_projectflavorautoextender.gif "VS\_ProjectFlavorAutoExtender")  
 Proiettare l'Extender di automazione del sottotipo.  
   
  I sottotipi di progetto possono ulteriormente estendere il sistema di progetto di base estendendo il modello a oggetti di automazione.  Questi sono definiti come parte dell'oggetto ActiveX DTE e vengono utilizzati per estendere l'oggetto del progetto, l'oggetto di `ProjectItem` e l'oggetto di `Configuration` .  Per ulteriori informazioni, vedere [Estendere il modello a oggetti del progetto di Base](../../extensibility/internals/extending-the-object-model-of-the-base-project.md).  

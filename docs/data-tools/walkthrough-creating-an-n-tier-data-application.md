@@ -49,7 +49,7 @@ Le applicazioni dati *a più livelli* sono applicazioni con accesso ai dati e so
   
 -   Scrivere il codice per popolare le tabelle dati.  
   
- ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "PlayVideo") Per una versione video di questo argomento, vedere [Procedura: creazione di un'applicazione dati a più livelli](http://go.microsoft.com/fwlink/?LinkId=115188).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "PlayVideo") Per una versione video di questo argomento, vedere [Procedura: creazione di un'applicazione dati a più livelli](http://go.microsoft.com/fwlink/?LinkId=115188).  
   
 ## Prerequisiti  
  Per completare questa procedura dettagliata, è necessario:  

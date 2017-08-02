@@ -39,7 +39,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="create-dependency-diagrams-from-your-code"></a>Creare diagrammi di dipendenza dal codice
 Per visualizzare l'architettura di alto livello, logica del sistema software, creare un *diagramma dipendenze* in Visual Studio. Per assicurarsi che il codice rimanga coerenza con la progettazione, convalidare il codice con un diagramma di dipendenze. È possibile creare diagrammi di dipendenza per i progetti Visual c# .NET e Visual Basic .NET. Per informazioni sulle versioni di Visual Studio che supportano questa funzionalità, vedere [supporto della versione per l'architettura e strumenti di modellazione](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)  
   
- ![Creare un diagramma di dipendenze](~/docs/modeling/media/layerdiagramvisualizecode.png "LayerDiagramVisualizeCode")  
+ ![Creare un diagramma di dipendenze](~/modeling/media/layerdiagramvisualizecode.png "LayerDiagramVisualizeCode")  
   
  Un diagramma di dipendenza consente di organizzare gli elementi di soluzione Visual Studio in gruppi logici e astratti denominati *livelli*. È possibile utilizzare i livelli per descrivere le attività principali che tali elementi eseguono oppure i componenti principali del sistema. Ogni livello può contenere altri livelli che descrivono attività più dettagliate. È inoltre possibile specificare il desiderate o esistenti *dipendenze* tra livelli. Tali dipendenze, rappresentate come frecce, mostrano quali livelli possono utilizzare o utilizzano attualmente la funzionalità rappresentata da altri livelli. Per gestire controllo a livello di architettura nel codice, mostrare le dipendenze desiderate nel diagramma, quindi convalidare il codice in base al diagramma.  
   
@@ -88,7 +88,7 @@ Per visualizzare l'architettura di alto livello, logica del sistema software, cr
 
 7. Mostra l'architettura dell'applicazione corrente. Decidere l'architettura sia desiderato e modificare di conseguenza il diagramma di dipendenze.
 
-![Diagramma di dipendenze generato da una mappa codici](~/docs/modeling/media/dependency-validation-01.png)
+![Diagramma di dipendenze generato da una mappa codici](~/modeling/media/dependency-validation-01.png)
   
 ##  <a name="a-namecreatelayersa-create-layers-from-artifacts"></a><a name="CreateLayers"></a>Creare livelli da elementi  
  È possibile creare livelli da elementi presenti in una soluzione di Visual Studio, ad esempio progetti, file di codice, spazi dei nomi, classi e metodi. In questo modo vengono creati automaticamente collegamenti tra livelli ed elementi, che vengono inclusi nel processo di convalida dei livelli.  

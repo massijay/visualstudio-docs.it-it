@@ -32,7 +32,7 @@ caps.handback.revision: 46
   
  Nell'esempio seguente viene illustrato come aggiungere una proprietà personalizzata in una personalizzazione a livello di documento per Excel e come assegnare un valore a tale proprietà.  
   
- ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere [Procedura: Accedere e modificare le proprietà personalizzate dei documenti in Microsoft Word](http://go.microsoft.com/fwlink/?LinkId=136772).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere [Procedura: Accedere e modificare le proprietà personalizzate dei documenti in Microsoft Word](http://go.microsoft.com/fwlink/?LinkId=136772).  
   
 ## Esempio  
  [!code-csharp[Trin_VstcoreProgramming#6](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreProgramming/CS/ThisWorkbook.cs#6)]

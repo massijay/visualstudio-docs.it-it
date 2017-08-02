@@ -48,7 +48,7 @@ Questa procedura dettagliata dimostra come usare Diagnostica grafica di [!INCLUD
   
 #### Per acquisire informazioni grafiche  
   
--   Scegliere **Acquisisci** sulla barra degli strumenti Diagnostica grafica.![Icona pulsante acquisizione grafica](~/docs/debugger/graphics/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")  
+-   Scegliere **Acquisisci** sulla barra degli strumenti Diagnostica grafica.![Icona pulsante acquisizione grafica](~/debugger/graphics/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics")  
   
      \-oppure\-  
   

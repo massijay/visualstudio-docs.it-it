@@ -103,7 +103,7 @@ Per compilare codice multipiattaforma per dispositivi Android, iOS e Windows è 
   
      Ecco come viene visualizzata l'app predefinita in Visual Studio Emulator for Android.  
   
-     ![Emulatore in cui viene eseguita l'app](~/docs/cross-platform/media/cppmdd_emulator_running_app.PNG "CppMDD\_Emulator\_Running\_App")  
+     ![Emulatore in cui viene eseguita l'app](~/cross-platform/media/cppmdd_emulator_running_app.PNG "CppMDD\_Emulator\_Running\_App")  
   
     > [!TIP]
     >  All'avvio dell'emulatore in Visual Studio, il processo di caricamento e distribuzione del codice richiede qualche istante.  Una volta avviata l'app, è possibile impostare i punti di interruzione e usare il debugger per eseguire il codice un'istruzione alla volta, esaminare le variabili locali e controllare i valori.  

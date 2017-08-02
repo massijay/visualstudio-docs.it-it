@@ -49,11 +49,11 @@ I progetti vengono sempre gestiti all'interno di una *soluzione* di Visual Studi
 1. Scegliere **File > Nuovo > progetto...** (CTRL+MAIUSC+N)
 1. Selezionare "Progetto R" in **Modelli > R**, assegnare un nome e un percorso al progetto e selezionare **OK**:
 
-    ![Finestra di dialogo Nuovo progetto per R in Visual Studio (RTVS in VS2017)](~/docs/rtvs/media/getting-started-01-new-project.png)
+    ![Finestra di dialogo Nuovo progetto per R in Visual Studio (RTVS in VS2017)](~/rtvs/media/getting-started-01-new-project.png)
 
 Verrà creato un progetto con un file `script.R` aperto nell'editor. Si noti anche che in **Esplora soluzioni** sono presenti altri due file per il progetto:
 
-![Contenuto di un progetto R creato dal modello](~/docs/rtvs/media/projects-template-results.png)
+![Contenuto di un progetto R creato dal modello](~/rtvs/media/projects-template-results.png)
 
 Il file `.Rhistory` registra tutti i comandi immessi dall'utente nella finestra [R interattivo](interactive-repl.md). È possibile aprire una finestra dedicata per la cronologia con il comando **R Tools > Windows > Cronologia**. Tale finestra ha un pulsante della barra degli strumenti e voci di menu contestuale per cancellare il contenuto della cronologia.
 
@@ -133,7 +133,7 @@ Le soluzioni di Visual Studio rappresentano un modo pratico per raccogliere e ge
 
 Nell'esempio seguente la soluzione contiene un progetto R con un modello compilato tramite R e Azure Machine Learning, un progetto Python/scikit-learn, un progetto C++ contenente moduli per un processo di calcolo intensivo, un progetto SQL per la gestione dei dati e un progetto Python/Bottle per il sito Web in cui viene pubblicato il risultato:
 
-![Esplora soluzioni di Visual Studio con più progetti correlati in una soluzione](~/docs/rtvs/media/projects-polyglot.png)
+![Esplora soluzioni di Visual Studio con più progetti correlati in una soluzione](~/rtvs/media/projects-polyglot.png)
 
 Il progetto evidenziato in grassetto è il progetto di "avvio" per la soluzione. Per cambiarlo, fare clic con il pulsante destro del mouse su un altro progetto e selezionare **Imposta come progetto di avvio**.
 

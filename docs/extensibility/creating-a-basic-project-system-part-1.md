@@ -75,7 +75,7 @@ In Visual Studio, i progetti sono contenitori utilizzati dagli sviluppatori per 
   
 3.  Rendere l'icona distinti. Questa icona verrà visualizzata nel **Nuovo progetto** la finestra di dialogo più avanti nella procedura dettagliata.  
   
-     ![Icona Progetto semplice](~/docs/extensibility/media/simpleprojicon.png "SimpleProjIcon")  
+     ![Icona Progetto semplice](~/extensibility/media/simpleprojicon.png "SimpleProjIcon")  
   
 4.  L'icona di salvare e chiudere l'editor delle icone.  
   
@@ -471,7 +471,7 @@ In Visual Studio, i progetti sono contenitori utilizzati dagli sviluppatori per 
   
 2.  Nel **proprietà** windows, ridurre la bitmap di 16x16 pixel. Rendere la bitmap distinti.  
   
-     ![Comando Progetto semplice](~/docs/extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
+     ![Comando Progetto semplice](~/extensibility/media/simpleprojprojectcomm.png "SimpleProjProjectComm")  
   
 3.  Nel **proprietà** finestra, modifica il **azione di compilazione** della bitmap a **risorsa incorporata**.  
   
@@ -546,7 +546,7 @@ In Visual Studio, i progetti sono contenitori utilizzati dagli sviluppatori per 
   
 2.  Nel progetto appena creato, si noti che SimpleProjectNode.bmp è utilizzata come icona di nodo del progetto.  
   
-     ![Progetto semplice, nuovo nodo di progetto](~/docs/extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")  
+     ![Progetto semplice, nuovo nodo di progetto](~/extensibility/media/simpleprojnewprojectnode.png "SimpleProjNewProjectNode")  
   
 3.  Aprire Program.cs nell'editor di codice. Verrà visualizzato il codice sorgente che è simile al seguente codice.  
   
@@ -649,6 +649,6 @@ In Visual Studio, i progetti sono contenitori utilizzati dagli sviluppatori per 
   
 6.  Avviare il debug del progetto. Il nuovo progetto deve compilare, eseguire e visualizzare "Hello VSX." Nella finestra della console.  
   
-     ![Comando Progetto semplice](~/docs/extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
+     ![Comando Progetto semplice](~/extensibility/media/simpleprojcommand.png "SimpleProjCommand")  
   
  La procedura è stata completata. È stato implementato un sistema di base del progetto gestito.

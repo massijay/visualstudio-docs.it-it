@@ -98,7 +98,7 @@ Questa finestra di dialogo consente di modificare le impostazioni globali di [!I
   
 |Margine di selezione attivato|Margine di selezione disattivato|  
 |-------------------------|--------------------------|  
-|![HTMLpageSelectionMarginOn screenshot](~/docs/ide/reference/media/vxselmaron.gif "vxSelmaron")|![HTMLpageSelectionMarginOff screenshot](~/docs/ide/reference/media/vxselmaroff.gif "vxSelmaroff")|  
+|![HTMLpageSelectionMarginOn screenshot](~/ide/reference/media/vxselmaron.gif "vxSelmaron")|![HTMLpageSelectionMarginOff screenshot](~/ide/reference/media/vxselmaroff.gif "vxSelmaroff")|  
   
  Margine indicatore  
  Quando questa opzione è selezionata, viene visualizzato un margine verticale all'esterno del bordo sinistro dell'area di testo dell'editor. Quando si fa clic su questo margine vengono visualizzate un'icona e un tooltip relativi al testo. Ad esempio, nel margine indicatore vengono visualizzati punti di interruzione o collegamenti dell'Elenco attività. Le informazioni del margine indicatore non vengono stampate.  

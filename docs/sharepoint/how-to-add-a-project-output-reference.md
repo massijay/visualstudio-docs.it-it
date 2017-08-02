@@ -36,7 +36,7 @@ caps.handback.revision: 14
   
 2.  In **Esplora soluzioni**, scegliere un elemento nel nodo di progetto SharePoint.  
   
-3.  Nella finestra **Proprietà**, scegliere la proprietà **Riferimenti all'output del progetto**, quindi scegliere il bottone accanto ad essa con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/docs/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\).  
+3.  Nella finestra **Proprietà**, scegliere la proprietà **Riferimenti all'output del progetto**, quindi scegliere il bottone accanto ad essa con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\).  
   
 4.  Nella finestra di dialogo **Riferimenti all'output del progetto**, scegliere il bottone **Aggiungi**.  
   

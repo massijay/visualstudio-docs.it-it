@@ -52,7 +52,7 @@ L'approccio adottato in questo argomento è quello per le estensioni CPython sta
 
 Questa procedura dettagliata è scritta per Visual Studio 2017 con i carichi di lavoro **Sviluppo di applicazioni desktop con C++** e **Sviluppo Python** impostati con le opzioni predefinite (ad esempio Python 3.6 come interprete predefinito). Nel carico di lavoro **Sviluppo Python** attivare la casella **Strumenti di sviluppo nativo Python** a destra per impostare la maggior parte delle opzioni descritte in questo argomento. Questa opzione includerà anche il carico di lavoro C++ automaticamente. 
 
-![Selezione dell'opzione Strumenti di sviluppo nativo Python](~/docs/python/media/cpp-install-native.png)
+![Selezione dell'opzione Strumenti di sviluppo nativo Python](~/python/media/cpp-install-native.png)
 
 Per altre informazioni, vedere [Installing Python Support for Visual Studio](installation.md) (Installazione del supporto Python per Visual Studio), che illustra l'uso di altre versioni di Visual Studio. Se si installa Python separatamente, assicurarsi di selezionare **Download debugging symbols** (Scarica i simboli di debug) e **Download debug binaries** (Scarica file binari di debug) nella sezione **Opzioni avanzate** del programma di installazione. Ciò consente di avere a disposizione le librerie di debug necessari se si sceglie di eseguire una build di debug.
 
@@ -278,7 +278,7 @@ Il [supporto di Python in Visual Studio](installation.md) include la possibilit�
 
 1. Nel codice C++, impostare un punto di interruzione nella prima riga all'interno del metodo `tanh` e quindi avviare il debugger. Si noterà che il debugger interrompe l'esecuzione quando viene chiamato tale codice:
 
-    ![Interruzione in un punto del codice C++](~/docs/python/media/cpp-debugging.png)
+    ![Interruzione in un punto del codice C++](~/python/media/cpp-debugging.png)
 
 1. A questo punto è possibile scorrere il codice C++, esaminare le variabili e così via, come descritto in [Debugging C++ and Python Together](debugging-mixed-mode.md) (Esecuzione del debug di C++ e Python insieme).
 

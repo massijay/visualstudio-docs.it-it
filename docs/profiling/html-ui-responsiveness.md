@@ -66,7 +66,7 @@ Questo argomento descrive come isolare i problemi di prestazioni nelle app usand
   
      Se si vuole modificare la destinazione di analisi del profiler, scegliere **Modifica destinazione**.  
   
-     ![Cambia destinazione analisi](~/docs/profiling/media/js_tools_target.png "JS_Tools_Target")  
+     ![Cambia destinazione analisi](~/profiling/media/js_tools_target.png "JS_Tools_Target")  
   
      Sono disponibili le seguenti opzioni per la destinazione di analisi:  
   
@@ -117,7 +117,7 @@ Questo argomento descrive come isolare i problemi di prestazioni nelle app usand
   
 8.  Se hai aggiunto contrassegni utente, questi vengono visualizzati nella [Visualizzare la sequenza temporale della sessione di diagnostica](#Ruler) del profiler. La figura seguente mostra un contrassegno utente singolo usato per specificare una determinata operazione nel codice.  
   
-     ![Righello della diagnostica con contrassegno utente](~/docs/profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
+     ![Righello della diagnostica con contrassegno utente](~/profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
   
 9. Identificare un'area di interesse nella sequenza temporale e nei grafici del profiler usando i contrassegni utente, gli eventi del ciclo di vita dell'app o i dati visualizzati nei grafici. Di seguito sono riportate alcune linee guida che facilitano l'analisi e l'utilizzo dei dati nei grafici:  
   
@@ -131,7 +131,7 @@ Questo argomento descrive come isolare i problemi di prestazioni nelle app usand
   
      Nella figura seguente viene mostrato il grafico dell'utilizzo della CPU con un'area di interesse evidenziata.  
   
-     ![Grafico dell'utilizzo della CPU](~/docs/profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
+     ![Grafico dell'utilizzo della CPU](~/profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
   
 11. Nella sezione [Visualizzare i dettagli della sequenza temporale](#TimelineDetails) sono disponibili informazioni dettagliate sugli eventi che si verificano troppo spesso o il cui completamento richiede troppo tempo. Ad esempio, cerca quanto segue:  
   
@@ -174,7 +174,7 @@ if (performance && performance.mark) {
   
  La figura seguente mostra il righello di diagnostica con un unico contrassegno utente e la relativa descrizione comando.  
   
- ![Righello della diagnostica con contrassegno utente](~/docs/profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
+ ![Righello della diagnostica con contrassegno utente](~/profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
   
  È possibile anche creare eventi generati da strumenti nella visualizzazione dei dettagli della sequenza temporale per mostrare il tempo trascorso tra due contrassegni utente. Il codice seguente permette di aggiungere un secondo contrassegno utente e una misura del tempo trascorso tra l'esecuzione dei due contrassegni utenti. Il codice precedente mostra il primo contrassegno utente.  
   
@@ -199,7 +199,7 @@ if (performance.mark && performance.measure) {
   
  Ecco come appare la sequenza temporale della sessione di diagnostica con una descrizione comando visualizzata per diversi eventi del ciclo di vita dell'app:  
   
- ![Righello della sessione di diagnostica](~/docs/profiling/media/js_htmlvizprof_ruler.png "JS_HTMLVizProf_Ruler")  
+ ![Righello della sessione di diagnostica](~/profiling/media/js_htmlvizprof_ruler.png "JS_HTMLVizProf_Ruler")  
   
  La sequenza temporale mostra quando si verificano eventi del ciclo di vita dell'app, ad esempio l'evento di attivazione, nonché i contrassegni utente (triangoli con l'etichetta Contrassegno utente) che è possibile aggiungere al codice. È possibile selezionare gli eventi per visualizzare descrizioni comandi con informazioni aggiuntive. Per ulteriori informazioni sui contrassegni utente, vedi [Contrassegnare il codice per l'analisi](#ProfileMark) in questo argomento.  
   
@@ -219,7 +219,7 @@ if (performance.mark && performance.measure) {
   
  Questo esempio mostra l'aspetto del grafico relativo all'utilizzo della CPU:  
   
- ![Grafico dell'utilizzo della CPU](~/docs/profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
+ ![Grafico dell'utilizzo della CPU](~/profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
   
  Usare questo grafico per:  
   
@@ -303,7 +303,7 @@ if (performance.mark && performance.measure) {
   
  Per filtrare la decodifica immagine, il download speculativo e gli eventi GC, deseleziona l'opzione **Attività in background** dall'icona filtro nel riquadro inferiore. Poiché questi eventi non sono molto utilizzabili, sono nascosti per impostazione predefinita.  
   
- ![Applicazione di filtri agli eventi nella sequenza temporale](~/docs/profiling/media/js_htmlvizprofiler_event_filter.png "JS_HTMLVizProfiler_Event_Filter")  
+ ![Applicazione di filtri agli eventi nella sequenza temporale](~/profiling/media/js_htmlvizprofiler_event_filter.png "JS_HTMLVizProfiler_Event_Filter")  
   
  Per filtrare gli eventi di richiesta HTTP, deselezionare l'opzione **Traffico di rete** dall'icona filtro nel riquadro inferiore. Per impostazione predefinita, questi eventi sono visibili nel grafico dettagli cronologia.  
   
@@ -317,7 +317,7 @@ if (performance.mark && performance.measure) {
 ###  <a name="GroupFrames"></a> Raggruppare gli eventi per frame  
  Puoi raggruppare gli eventi inclusi nella visualizzazione dei dettagli della sequenza temporale in base a singoli frame. Questi eventi frame sono eventi generati da strumenti e rappresentano i contenitori eventi di primo livello per tutte le operazioni relativa al thread dell'interfaccia utente che si verificano tra eventi Paint. Per abilitare questa visualizzazione, selezionare **Raggruppa eventi di primo livello in base ai frame**.  
   
- ![Raggruppamento degli eventi di livello superiore per frame](~/docs/profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")  
+ ![Raggruppamento degli eventi di livello superiore per frame](~/profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")  
   
  Quando si raggruppano gli eventi in base ai frame, ogni evento di primo livello nella visualizzazione dei dettagli della sequenza temporale rappresenta un frame.  
   

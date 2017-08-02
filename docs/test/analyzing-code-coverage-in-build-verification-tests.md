@@ -49,7 +49,7 @@ L'analisi del code coverage in Microsoft Visual Studio mostra la quantità di co
   
          In **Test automatizzati** selezionare **Assembly di test** e premere il pulsante con i puntini di sospensione **[...]** alla fine della riga. Nella finestra di dialogo **Aggiungi/Modifica esecuzione dei test** in **Test Runner** scegliere **Visual Studio Test Runner**.  
   
- ![Impostazione della definizione di compilazione per il code coverage](~/docs/test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")  
+ ![Impostazione della definizione di compilazione per il code coverage](~/test/media/codecoverage-plaincc.png "CodeCoverage-plainCC")  
   
  Dopo la compilazione, i risultati di code coverage vengono visualizzati nel riepilogo della compilazione.  
   

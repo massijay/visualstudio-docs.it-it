@@ -67,7 +67,7 @@ Questo argomento descrive come creare unit test per una DLL in C++ per app di Wi
   
 3.  Assegnare al progetto il nome `RooterLibTests`, specificare il percorso, assegnare alla soluzione il nome `RooterLib` e verificare che l'opzione **Crea directory per soluzione** sia selezionata.  
   
-     ![Specificare un nome e un percorso per il progetto e la soluzione](~/docs/test/media/ute_cpp_windows_unittestlib_createspecs.png "UTE_Cpp_windows_UnitTestLib_CreateSpecs")  
+     ![Specificare un nome e un percorso per il progetto e la soluzione](~/test/media/ute_cpp_windows_unittestlib_createspecs.png "UTE_Cpp_windows_UnitTestLib_CreateSpecs")  
   
 4.  Nel nuovo progetto aprire **unittest1.cpp**.  
   
@@ -100,7 +100,7 @@ Questo argomento descrive come creare unit test per una DLL in C++ per app di Wi
   
      Il progetto di test viene compilato ed eseguito. Verrà visualizzata la finestra di Esplora test con il test elencato in **Test superati**. Nel riquadro di riepilogo nella parte inferiore della finestra sono disponibili ulteriori dettagli sul test selezionato.  
   
-     ![Esplora test](~/docs/test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
+     ![Esplora test](~/test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")  
   
 ##  <a name="BKMK_Add_the_DLL_project_to_the_solution"></a> Aggiungere il progetto di DLL alla soluzione  
   
@@ -211,7 +211,7 @@ Questo argomento descrive come creare unit test per una DLL in C++ per app di Wi
   
 5.  In Esplora test scegliere **Esegui tutto**.  
   
-     ![Test di base superato](~/docs/test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
+     ![Test di base superato](~/test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")  
   
  È stato installato il test e i progetti di codice, e verificato che sia possibile eseguire test che eseguono funzioni nel progetto di codice. Ora è possibile iniziare a scrivere test e codici reali.  
   

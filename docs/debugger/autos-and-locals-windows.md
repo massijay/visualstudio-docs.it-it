@@ -109,7 +109,7 @@ static void Main(string[] args) { int a, b, c, d; a = 1; b = 2; c = 3; d = 4; in
 ## Barra degli strumenti Posizione di debug  
  La barra degli strumenti **Posizione di debug** può essere usata per selezionare la funzione, il thread o il processo desiderato. Impostare un punto di interruzione e avviare il debug \(se questa barra degli strumenti non è visualizzata, è possibile abilitarla facendo clic in una parte vuota dell'area della barra degli strumenti; quando viene visualizzato un elenco delle barre degli strumenti, selezionare **Posizione di debug**\). Quando viene raggiunto il punto di interruzione, l'esecuzione si interrompe e viene visualizzata la barra degli strumenti Posizione di debug, ovvero la riga inferiore nella figura seguente:  
   
- ![DebugLocationToolbar](~/docs/debugger/media/debuglocationtoolbar.png "DebugLocationToolbar")  
+ ![DebugLocationToolbar](~/debugger/media/debuglocationtoolbar.png "DebugLocationToolbar")  
   
  È anche possibile cambiare il contesto specificando chiamate di funzioni, thread o processi diversi facendo doppio clic sull'elemento nella finestra **Stack di chiamate**, **Thread** o **Processi**.  
   

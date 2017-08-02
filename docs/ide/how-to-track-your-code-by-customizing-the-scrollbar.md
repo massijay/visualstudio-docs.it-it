@@ -32,11 +32,11 @@ Quando si usano file di codice lunghi, può risultare difficile tenere presente 
   
      Ecco l'aspetto della barra di scorrimento dopo la ricerca di una stringa.  Si noti che vengono visualizzate tutte le istanze della stringa.  
   
-     ![Barra di scorrimento dopo la ricerca di una stringa.](~/docs/ide/media/enhancedscrollbarsearch.png "EnhancedScrollbarSearch")  
+     ![Barra di scorrimento dopo la ricerca di una stringa.](~/ide/media/enhancedscrollbarsearch.png "EnhancedScrollbarSearch")  
   
      Ecco la barra di scorrimento dopo la sostituzione di tutte le istanze della stringa.  È possibile vedere immediatamente che l'operazione ha provocato alcuni problemi.  
   
-     ![Barra di scorrimento dopo la sostituzione di una stringa con errori](~/docs/ide/media/enhancedscrollbarreplace.png "EnhancedScrollbarReplace")  
+     ![Barra di scorrimento dopo la sostituzione di una stringa con errori](~/ide/media/enhancedscrollbarreplace.png "EnhancedScrollbarReplace")  
   
 ### Per impostare la modalità di visualizzazione per la barra di scorrimento  
   
@@ -46,10 +46,10 @@ Quando si usano file di codice lunghi, può risultare difficile tenere presente 
   
      Ecco come appare l'esempio di ricerca quando è attivata la modalità mappa e la larghezza viene impostata su Media:  
   
-     ![Barra di scorrimento in modalità mappa](~/docs/ide/media/enhancedscrollbar.png "EnhancedScrollbar")  
+     ![Barra di scorrimento in modalità mappa](~/ide/media/enhancedscrollbar.png "EnhancedScrollbar")  
   
 2.  In modalità mappa, per consentire le anteprime del codice quando si sposta il cursore verso l'alto e il basso nella barra di scorrimento, selezionare l'opzione **Mostra descrizione comando anteprima**.  L'aspetto è il seguente:  
   
-     ![Barra di scorrimento con una descrizione comando](~/docs/ide/media/enhancedscrollbarsearchtooltip.png "EnhancedScrollbarSearchTooltip")  
+     ![Barra di scorrimento con una descrizione comando](~/ide/media/enhancedscrollbarsearchtooltip.png "EnhancedScrollbarSearchTooltip")  
   
      Se si vogliono mantenere il comportamento di scorrimento della modalità mappa e la descrizione comando anteprima ma non si desidera vedere la panoramica del codice sorgente, è possibile impostare **Panoramica origine** su **Off**.

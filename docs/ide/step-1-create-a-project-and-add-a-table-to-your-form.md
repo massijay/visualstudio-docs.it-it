@@ -102,7 +102,7 @@ Il primo passaggio nella creazione di un gioco delle coppie consiste nel creare 
   
      Ora il form è strutturato e deve apparire come l'immagine seguente.  
   
-     ![Form iniziale del gioco di abbinamenti](~/docs/ide/media/express_tut4step1.png "Express_Tut4Step1")  
+     ![Form iniziale del gioco di abbinamenti](~/ide/media/express_tut4step1.png "Express_Tut4Step1")  
 Form iniziale del gioco di abbinamenti  
   
 ### <a name="to-continue-or-review"></a>Per continuare o rivedere l'esercitazione  

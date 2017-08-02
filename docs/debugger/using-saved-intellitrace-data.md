@@ -120,7 +120,7 @@ Passare a specifici punti nell'esecuzione di un'applicazione quando si avvia il 
   
      Se il metodo è incluso nel codice dell'applicazione, Visual Studio passa a tale metodo.  
   
-     ![Passare al codice dell'applicazione da un evento di prestazioni](~/docs/debugger/media/ffr_itsummarypageperformancegotocode.png "FFR\_ITSummaryPagePerformanceGoToCode")  
+     ![Passare al codice dell'applicazione da un evento di prestazioni](~/debugger/media/ffr_itsummarypageperformancegotocode.png "FFR\_ITSummaryPagePerformanceGoToCode")  
   
      È possibile esaminare altri valori registrati, lo stack di chiamate, eseguire un'istruzione alla volta nel codice o usare la finestra **IntelliTrace** per [spostarsi in avanti o indietro tra gli altri metodi](../debugger/intellitrace.md) chiamati durante questo evento di prestazioni.  
   

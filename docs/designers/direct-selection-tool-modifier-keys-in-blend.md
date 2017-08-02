@@ -22,8 +22,8 @@ Nella tabella seguente vengono elencati i tasti di scelta rapida che è possibil
   
 |Per|Eseguire questa operazione|Puntatore|  
 |---------|--------------------------------|---------------|  
-|Visualizzare i punti di controllo di tangente per un punto di un tracciato|Fare clic su un punto di un tracciato|![](~/docs/designers/media/cfcc5f41-a666-4524-a958-50b9051130ca.png "cfcc5f41\-a666\-4524\-a958\-50b9051130ca")<br /><br /> Puntatore di spostamento del punto|  
-|Spostare un punto di un tracciato|Trascinare un punto di un tracciato|![](~/docs/designers/media/cfcc5f41-a666-4524-a958-50b9051130ca.png "cfcc5f41\-a666\-4524\-a958\-50b9051130ca")<br /><br /> Puntatore di spostamento del punto|  
+|Visualizzare i punti di controllo di tangente per un punto di un tracciato|Fare clic su un punto di un tracciato|![](~/designers/media/cfcc5f41-a666-4524-a958-50b9051130ca.png "cfcc5f41\-a666\-4524\-a958\-50b9051130ca")<br /><br /> Puntatore di spostamento del punto|  
+|Spostare un punto di un tracciato|Trascinare un punto di un tracciato|![](~/designers/media/cfcc5f41-a666-4524-a958-50b9051130ca.png "cfcc5f41\-a666\-4524\-a958\-50b9051130ca")<br /><br /> Puntatore di spostamento del punto|  
 |Visualizzare i punti di controllo di tangente per un segmento compreso tra due punti di un tracciato|Fare clic su un segmento di un tracciato|![](../designers/media/2ace930f-98fa-410b-92cf-7a4b88503ee7.png "2ace930f\-98fa\-410b\-92cf\-7a4b88503ee7")<br /><br /> Puntatore di spostamento del segmento|  
 |Spostare un segmento compreso tra due punti di un tracciato|Trascinare un segmento di un tracciato|![](../designers/media/2ace930f-98fa-410b-92cf-7a4b88503ee7.png "2ace930f\-98fa\-410b\-92cf\-7a4b88503ee7")<br /><br /> Puntatore di spostamento del segmento|  
 |Modificare l'angolo di una tangente per un punto di un tracciato|Fare clic su un punto o su un segmento di un tracciato per visualizzare i punti di controllo di tangente e trascinare quindi uno dei punti di fine della tangente.|![](../designers/media/beb1a907-1e50-450c-aab3-4d7026f5e426.png "beb1a907\-1e50\-450c\-aab3\-4d7026f5e426")<br /><br /> Puntatore di spostamento della tangente|  

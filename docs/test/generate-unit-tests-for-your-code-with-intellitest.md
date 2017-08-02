@@ -60,7 +60,7 @@ I comandi di menu **Crea IntelliTest** ed **Esegui IntelliTest**:
   
 2.  Fare clic con il pulsante destro del mouse nel codice e scegliere **Esegui IntelliTest** per generare gli unit test per il codice nel metodo.  
   
-     ![Fare clic con il pulsante destro del mouse per generare unit test](~/docs/test/media/runpex.png "RunPEX")  
+     ![Fare clic con il pulsante destro del mouse per generare unit test](~/test/media/runpex.png "RunPEX")  
   
      IntelliTest esegue il codice più volte con input diversi. Ogni esecuzione viene rappresentata nella tabella che mostra i dati di test di input e l'output o l'eccezione risultante.  
   
@@ -92,7 +92,7 @@ I comandi di menu **Crea IntelliTest** ed **Esegui IntelliTest**:
   
      Visualizzare gli avvisi per decidere le azioni da intraprendere.  
   
-     ![Visualizzare gli avvisi](~/docs/test/media/pexviewwarning.png "PEXViewWarning")  
+     ![Visualizzare gli avvisi](~/test/media/pexviewwarning.png "PEXViewWarning")  
   
 2.  Dopo aver esaminato il codice e aver compreso le parti da testare, è possibile correggere l'avviso per consentire la scelta delle classi da usare per testare l'interfaccia.  
   
@@ -154,7 +154,7 @@ Specificare la relazione generale tra input e output da verificare con gli unit 
   
  Accettare il formato predefinito per generare i test o modificare la modalità di denominazione del progetto e dei test. È possibile creare un nuovo progetto di test o salvare i test in un progetto esistente.  
   
- ![Creare IntelliTest nel formato MSTest predefinito](~/docs/test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")  
+ ![Creare IntelliTest nel formato MSTest predefinito](~/test/media/pexcreateintellitestmstest.png "PEXCreateIntelliTestMSTest")  
 
 <a name="extend-framework"></a>  
 ### <a name="q-can-i-use-other-unit-test-frameworks-with-intellitest"></a>D: È possibile usare altri framework di unit test con IntelliTest?  

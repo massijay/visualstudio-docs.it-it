@@ -35,7 +35,7 @@ caps.handback.revision: 25
 ## Determinando se i dati del documento sono già aperti  
  La tabella in esecuzione il documento \(RDT\) nella barra di \(IDE\) avanzamento delle guide dell'ambiente di sviluppo integrato \(IDE\) se i dati di un documento sono già aperti, come illustrato nel diagramma seguente.  
   
- ![Grafica DocDataView](~/docs/extensibility/media/docdataview.gif "Docdataview")  
+ ![Grafica DocDataView](~/extensibility/media/docdataview.gif "Docdataview")  
 Visualizzazioni multiple  
   
  Per impostazione predefinita, ogni visualizzazione \(oggetto visualizzazione di documento\) è contenuta nella propria struttura della finestra \(<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>\).  Come già accennato, tuttavia, i dati del documento può essere visualizzato nelle visualizzazioni multiple.  Per abilitare questa opzione, verrà esaminato il RDT per determinare se il documento in questione sia già aperto in un editor.  When the IDE calls <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> to create the editor, a non\-NULL value returned in the `punkDocDataExisting` parameter indicates that the document is already open in another editor.  Per ulteriori informazioni sull'RDT viene eseguita, vedere [Tabella Document in esecuzione](../extensibility/internals/running-document-table.md).  

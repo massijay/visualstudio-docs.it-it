@@ -58,7 +58,7 @@ IntelliSense è il termine generale per numerose funzionalità: Elenca membri, I
   
  Il parametro in grassetto indica il parametro successivo richiesto durante la digitazione della funzione.  Per le funzioni in overload, è possibile usare i tasti FRECCIA SU e FRECCIA GIÙ per visualizzare informazioni sui parametri alternativi per gli overload della funzione.  
   
- ![Informazioni sul parametro](~/docs/ide/media/vs2015_param_info.png "VS2015\_param\_Info")  
+ ![Informazioni sul parametro](~/ide/media/vs2015_param_info.png "VS2015\_param\_Info")  
   
  Se si annotano funzioni e parametri con commenti relativi alla documentazione XML, i commenti verranno visualizzati come informazioni sui parametri.  Per altre informazioni, vedere [Inserimento di commenti al codice XML](../ide/supplying-xml-code-comments.md).  
   
@@ -67,11 +67,11 @@ IntelliSense è il termine generale per numerose funzionalità: Elenca membri, I
 ## Informazioni rapide  
  Informazioni rapide visualizza la dichiarazione completa per ogni identificatore incluso nel codice.  
   
- ![Informazioni rapide di Visual Studio](~/docs/ide/media/vs2015_quick_info.png "VS2015\_Quick\_info")  
+ ![Informazioni rapide di Visual Studio](~/ide/media/vs2015_quick_info.png "VS2015\_Quick\_info")  
   
  Quando si seleziona un membro nella casella **Elenca membri**, vengono visualizzate anche le informazioni rapide.  
   
- ![Informazioni sui parametri in un file di codice C&#35;](~/docs/ide/media/vs2015_paraminfo.png "VS2015\_ParamInfo")  
+ ![Informazioni sui parametri in un file di codice C&#35;](~/ide/media/vs2015_paraminfo.png "VS2015\_ParamInfo")  
   
  È possibile richiamare manualmente le informazioni rapide facendo clic su **Modifica\/IntelliSense\/Informazioni rapide**, digitando CTRL\+I, oppure facendo clic sul pulsante **Informazioni rapide** sulla barra degli strumenti dell'editor.  
   

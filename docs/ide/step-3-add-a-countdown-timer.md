@@ -115,7 +115,7 @@ Nella terza parte di questa esercitazione si aggiungerà un timer per il conto a
   
      Il timer avvia il conto alla rovescia. Quando il tempo è scaduto, il quiz termina e viene visualizzata la risposta. Nella figura seguente viene illustrato il quiz in corso.  
   
-     ![Quiz matematico in corso](~/docs/ide/media/express_addcountdown.png "Express_AddCountdown")  
+     ![Quiz matematico in corso](~/ide/media/express_addcountdown.png "Express_AddCountdown")  
 Quiz matematico in corso  
   
 ### <a name="to-continue-or-review"></a>Per continuare o rivedere l'esercitazione  

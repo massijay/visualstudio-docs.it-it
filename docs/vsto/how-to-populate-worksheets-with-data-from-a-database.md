@@ -30,7 +30,7 @@ caps.handback.revision: 38
   
  Nell'esempio seguente viene mostrato come aggiungere controlli con associazione a dati in progetti a livello di documento mediante una finestra di progettazione.  Per un esempio relativo all'aggiunta in fase di esecuzione di controlli con associazione a dati nei progetti a livello di applicazione, vedere [Procedura dettagliata: Data binding complesso in un progetto di componente aggiuntivo VSTO](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md).  
   
- ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere la [procedura relativa al trasferimento di dati in una cartella di lavoro di Excel](http://go.microsoft.com/fwlink/?LinkID=130277)e [la procedura relativa all'utilizzo di dati di database in Excel](http://go.microsoft.com/fwlink/?LinkID=130287).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere la [procedura relativa al trasferimento di dati in una cartella di lavoro di Excel](http://go.microsoft.com/fwlink/?LinkID=130277)e [la procedura relativa all'utilizzo di dati di database in Excel](http://go.microsoft.com/fwlink/?LinkID=130287).  
   
 ## Aggiunta di un controllo con associazione a dati a un foglio di lavoro in fase di progettazione  
   

@@ -43,7 +43,7 @@ caps.handback.revision: 21
   
      Verrà visualizzata la finestra di dialogo **Aggiungi assembly esistente**.  
   
-4.  Fare clic sui puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/docs/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) e selezionare l'assembly da aggiungere.  È consigliabile utilizzare un percorso relativo dell'assembly selezionato per motivi di portabilità.  
+4.  Fare clic sui puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) e selezionare l'assembly da aggiungere.  È consigliabile utilizzare un percorso relativo dell'assembly selezionato per motivi di portabilità.  
   
 5.  Per **Destinazione Distribuzione** fare clic sul pulsante di opzione **GlobalAssemblyCache** per distribuire l'assembly in Global Assembly Cache o scegliere il pulsante di opzione **WebApplication** per distribuire l'assembly nella cartella WebApplication sul server su cui è avviato SharePoint.  
   
@@ -81,7 +81,7 @@ caps.handback.revision: 21
   
 2.  Dal riquadro **Risorse classe** scegliere il pulsante **Fare clic qui per aggiungere un nuovo elemento**.  
   
-3.  Nella colonna **Nome file** fare clic sui puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/docs/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) e selezionare la risorsa di classe da aggiungere.  
+3.  Nella colonna **Nome file** fare clic sui puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) e selezionare la risorsa di classe da aggiungere.  
   
 ## Eliminazione di assembly personalizzati  
  È possibile eliminare gli assembly da un pacchetto di SharePoint o i controlli sicuri e le risorse di classe dagli assembly esistenti.  

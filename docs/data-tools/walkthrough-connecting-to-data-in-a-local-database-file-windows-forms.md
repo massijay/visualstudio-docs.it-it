@@ -92,9 +92,9 @@ robots: noindex,nofollow
   
 2.  Per eseguire l'applicazione e visualizzare i dati aggiunti nella procedura dettagliata precedente, premere F5.  
   
-3.  Scegliere l'icona di aggiunta gialla \(![Pulsante Aggiungi in Windows Form](~/docs/data-tools/media/addrecord.png "AddRecord")\), aggiungere un record cliente e quindi salvare le modifiche scegliendo l'icona del disco \(![Pulsante Salva in Windows Form](~/docs/data-tools/media/saveinwf.png "SaveInWF")\).  
+3.  Scegliere l'icona di aggiunta gialla \(![Pulsante Aggiungi in Windows Form](~/data-tools/media/addrecord.png "AddRecord")\), aggiungere un record cliente e quindi salvare le modifiche scegliendo l'icona del disco \(![Pulsante Salva in Windows Form](~/data-tools/media/saveinwf.png "SaveInWF")\).  
   
-4.  Per eliminare il record appena creato, selezionarlo e quindi scegliere l'icona di eliminazione rossa \(![Pulsante Elimina in Windows Form](~/docs/data-tools/media/deleterecord.png "DeleteRecord")\).  
+4.  Per eliminare il record appena creato, selezionarlo e quindi scegliere l'icona di eliminazione rossa \(![Pulsante Elimina in Windows Form](~/data-tools/media/deleterecord.png "DeleteRecord")\).  
   
 ## Passaggi successivi  
  È possibile creare o modificare gli oggetti nel dataset se si apre l'origine dati in [Creazione e modifica di dataset tipizzati](../data-tools/creating-and-editing-typed-datasets.md).  È possibile inoltre aggiungere logica di convalida agli eventi <xref:System.Data.DataTable.ColumnChanging> o <xref:System.Data.DataTable.RowChanging> delle tabelle dati presenti nel dataset.  Vedere [Convalida dei dati nei dataset](../data-tools/validate-data-in-datasets.md).  

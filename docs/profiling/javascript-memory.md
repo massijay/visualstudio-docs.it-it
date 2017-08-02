@@ -99,7 +99,7 @@ JavaScript Memory Analyzer, disponibile in Visual Studio, ti aiuta a comprendere
   
      Per impostazione predefinita, viene analizzato il progetto di avvio corrente. Per modificare la destinazione di analisi, scegli **Cambia destinazione**.  
   
-     ![Cambia destinazione analisi](~/docs/profiling/media/js_tools_target.png "JS_Tools_Target")  
+     ![Cambia destinazione analisi](~/profiling/media/js_tools_target.png "JS_Tools_Target")  
   
      Sono disponibili le seguenti opzioni per la destinazione di analisi:  
   
@@ -177,7 +177,7 @@ JavaScript Memory Analyzer, disponibile in Visual Studio, ti aiuta a comprendere
   
      Nella figura seguente viene illustrato un esempio di un secondo e di un terzo snapshot.  
   
-     ![Secondo e terzo snapshot](~/docs/profiling/media/js_mem_leak_workflow.png "JS_Mem_Leak_Workflow")  
+     ![Secondo e terzo snapshot](~/profiling/media/js_mem_leak_workflow.png "JS_Mem_Leak_Workflow")  
   
      Creando uno snapshot della linea di base e quindi un secondo e un terzo snapshot in questo flusso di lavoro, potrai escludere più facilmente le modifiche non associate a perdite di memoria. Ad esempio, potrebbero esserci modifiche previste, come l'aggiornamento delle intestazioni e dei piè di pagina di una pagina, che comportano modifiche nell'utilizzo della memoria, ma che potrebbero non essere correlate alle perdite di memoria.  
   
@@ -213,7 +213,7 @@ JavaScript Memory Analyzer, disponibile in Visual Studio, ti aiuta a comprendere
   
  Il grafico relativo alla memoria mostra una visualizzazione in tempo reale della memoria di processo dell'app, inclusi i byte privati, la memoria nativa e l'heap JavaScript. Il grafico relativo alla memoria è una visualizzazione scorrevole della memoria di processo. e ha l'aspetto seguente:  
   
- ![Grafico della memoria di JavaScript Memory Analyzer](~/docs/profiling/media/js_mem_memory_graph.png "JS_Mem_Memory_Graph")  
+ ![Grafico della memoria di JavaScript Memory Analyzer](~/profiling/media/js_mem_memory_graph.png "JS_Mem_Memory_Graph")  
   
  Se hai aggiunto contrassegni utente al codice dell'app (vedi [Associate source code with memory usage data](#JSConsoleCommands)), nel grafico relativo all'uso della memoria appare un triangolo capovolto che indica il punto iniziale di questa sezione del codice.  
   
@@ -252,7 +252,7 @@ JavaScript Memory Analyzer, disponibile in Visual Studio, ti aiuta a comprendere
   
  Questa figura mostra la visualizzazione Tipi in un dettaglio snapshot, con i dati sull'utilizzo della memoria ordinati in base alle dimensioni conservate.  
   
- ![Visualizzazione dei dettagli dello snapshot con problemi potenziali](~/docs/profiling/media/js_mem_snapshot_details.png "JS_Mem_Snapshot_Details")  
+ ![Visualizzazione dei dettagli dello snapshot con problemi potenziali](~/profiling/media/js_mem_snapshot_details.png "JS_Mem_Snapshot_Details")  
   
  Nella visualizzazione dei dettagli dello snapshot puoi esaminare i dati sull'utilizzo della memoria in base al tipo, alla radice o al dominatore scegliendo l'opzione desiderata sulla barra degli strumenti:  
   
@@ -308,7 +308,7 @@ JavaScript Memory Analyzer, disponibile in Visual Studio, ti aiuta a comprendere
   
 -   **Tutti gli oggetti nello snapshot #\<numero>**. Con questa impostazione di filtro non viene escluso nessuno oggetto sull'heap.  
   
- Per mostrare riferimenti a oggetti non corrispondenti al filtro **Ambito** corrente, selezionare **Mostra riferimenti non corrispondenti** nell'elenco delle impostazioni ![elenco a discesa Impostazioni in Memory Analyzer](~/docs/profiling/media/js_mem_settings.png "JS_Mem_Settings") nell'angolo in alto a destra del riquadro. Se abiliti questa impostazioni, i riferimenti non corrispondenti saranno visualizzati in testo grigio.  
+ Per mostrare riferimenti a oggetti non corrispondenti al filtro **Ambito** corrente, selezionare **Mostra riferimenti non corrispondenti** nell'elenco delle impostazioni ![elenco a discesa Impostazioni in Memory Analyzer](~/profiling/media/js_mem_settings.png "JS_Mem_Settings") nell'angolo in alto a destra del riquadro. Se abiliti questa impostazioni, i riferimenti non corrispondenti saranno visualizzati in testo grigio.  
   
 > [!TIP]
 >  Ti consigliamo di seguire la procedura descritta in [Isolate a memory leak](#Isolate) e quindi di usare gli oggetti rimasti dopo l'applicazione del filtro **Ambito** per identificare gli oggetti in cui si verificano perdite di memoria.  
@@ -316,7 +316,7 @@ JavaScript Memory Analyzer, disponibile in Visual Studio, ti aiuta a comprendere
 ##  <a name="FoldObjects"></a> Visualizzare gli oggetti in base al dominatore  
  Nelle visualizzazioni Tipi e Dominatori puoi scegliere se visualizzare gli oggetti ridotti nei rispettivi dominatori (visualizzazione predefinita della scheda Dominatori). Se è selezionata questa visualizzazione, solo i dominatori saranno mostrati nella visualizzazione di primo livello degli oggetti. Gli oggetti discendenti da oggetti non globali sono nascosti dalla visualizzazione di primo livello. Nel caso di alcune app, ciò può aiutare a chiarire quali sono gli oggetti che provocano una perdita di memoria, grazie alla riduzione di rumore nei dati.  
   
- Per attivare o disattivare la visualizzazione degli oggetti in base al dominatore, scegli il pulsante **Riduci gli oggetti in base a quello dominante** . ![Riduzione di oggetti nei relativi dominatori](~/docs/profiling/media/js_mem_fold_objects.png "JS_Mem_Fold_Objects")  
+ Per attivare o disattivare la visualizzazione degli oggetti in base al dominatore, scegli il pulsante **Riduci gli oggetti in base a quello dominante** . ![Riduzione di oggetti nei relativi dominatori](~/profiling/media/js_mem_fold_objects.png "JS_Mem_Fold_Objects")  
   
  Per altre informazioni sui dominatori, vedi [Visualizzare i dettagli dello snapshot](#SnapshotDetails).  
   
@@ -334,7 +334,7 @@ JavaScript Memory Analyzer, disponibile in Visual Studio, ti aiuta a comprendere
 > [!NOTE]
 >  I riferimenti circolari sono mostrati con un asterisco (*) e una descrizione informativa e non possono essere espansi. In caso contrario, impedirebbero di spostarsi verso l'alto nell'albero dei riferimenti e identificare gli oggetti che conservano memoria.  
   
- Per altre informazioni sull'identificazione di oggetti equivalenti, scegliere **Visualizza ID oggetto** nell'elenco delle impostazioni ![elenco a discesa Impostazioni in Memory Analyzer](~/docs/profiling/media/js_mem_settings.png "JS_Mem_Settings") nell'angolo in alto a destra del riquadro superiore. Questa opzione consente di visualizzare gli ID oggetto accanto ai nomi degli oggetti nell'elenco **Identificatore/i** (gli ID vengono visualizzati in tutte le visualizzazioni, non solo nell'elenco dei riferimenti a oggetti). Gli oggetti con lo stesso ID sono riferimenti condivisi.  
+ Per altre informazioni sull'identificazione di oggetti equivalenti, scegliere **Visualizza ID oggetto** nell'elenco delle impostazioni ![elenco a discesa Impostazioni in Memory Analyzer](~/profiling/media/js_mem_settings.png "JS_Mem_Settings") nell'angolo in alto a destra del riquadro superiore. Questa opzione consente di visualizzare gli ID oggetto accanto ai nomi degli oggetti nell'elenco **Identificatore/i** (gli ID vengono visualizzati in tutte le visualizzazioni, non solo nell'elenco dei riferimenti a oggetti). Gli oggetti con lo stesso ID sono riferimenti condivisi.  
   
  Di seguito viene mostrato l'elenco di riferimenti a oggetti per un elemento selezionato con ID visualizzati.  
   
@@ -343,7 +343,7 @@ JavaScript Memory Analyzer, disponibile in Visual Studio, ti aiuta a comprendere
 ##  <a name="BuiltInValues"></a> Mostrare oggetti incorporati  
  Per impostazione predefinita, le visualizzazioni Dominatori e Tipi mostrano solo gli oggetti creati nell'app. Questo ti consente di escludere le informazioni non necessarie e di isolare i problemi correlati all'app. Talvolta può comunque essere utile visualizzare tutti gli oggetti generati per l'app dal runtime JavaScript.  
   
- Per visualizzare questi oggetti, scegliere **Mostra incorporati** nell'elenco delle impostazioni ![elenco a discesa Impostazioni in Memory Analyzer](~/docs/profiling/media/js_mem_settings.png "JS_Mem_Settings") nell'angolo in alto a destra del riquadro.  
+ Per visualizzare questi oggetti, scegliere **Mostra incorporati** nell'elenco delle impostazioni ![elenco a discesa Impostazioni in Memory Analyzer](~/profiling/media/js_mem_settings.png "JS_Mem_Settings") nell'angolo in alto a destra del riquadro.  
   
 ##  <a name="Save"></a> Salvare file delle sessioni di diagnostica  
  I riepiloghi degli snapshot di diagnostica e le visualizzazioni dei dettagli associate vengono salvati come file con estensione diagsession. **Esplora soluzioni** visualizza le sessioni di diagnostica precedenti nella cartella Sessioni di diagnostica. In **Esplora soluzioni**puoi aprire sessioni precedenti oppure rimuovere o rinominare file.  

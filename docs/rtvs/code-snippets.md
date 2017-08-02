@@ -49,13 +49,13 @@ Di seguito alcuni semplici esempi:
 
 I frammenti di codice sono molto più che un semplice completamento di caratteri. Ad esempio, non è più necessario dover ricordare i nomi dei parametri nella chiamata di funzioni complesse, come in questo frammento di codice per la lettura di un file CSV con la funzione `read.csv`:
 
-![Animazione dell'uso di un frammento di codice per inserire una chiamata a read.csv](~/docs/rtvs/media/code-snippet-expansion.gif)
+![Animazione dell'uso di un frammento di codice per inserire una chiamata a read.csv](~/rtvs/media/code-snippet-expansion.gif)
 
 In questo caso, durante la digitazione di `readc`, IntelliSense visualizza un elenco di completamento. Selezionare il completamento nel menu a discesa e premere TAB per selezionare `readc`. Premere nuovamente TAB per espandere il frammento. Per questo motivo, l'espansione del frammento equivale spesso a "digitare il frammento e premere TAB due volte". Nella maggior parte dei casi, la prima volta che si preme TAB si completa la selezione di IntelliSense e la seconda volta si attiva l'espansione.
 
 Per visualizzare tutti i frammenti disponibili, aprire la finestra di dialogo **Strumenti > Gestione frammenti di codice...**  (CTRL+K,B) e selezionare **R** per **Linguaggio**. Espandere i gruppi e selezionare singoli frammenti per visualizzare una descrizione e il testo del collegamento:
 
-![Finestra di dialogo dei frammenti di codice per R](~/docs/rtvs/media/code-snippet-dialog.png)
+![Finestra di dialogo dei frammenti di codice per R](~/rtvs/media/code-snippet-dialog.png)
 
 Per creare frammenti di codice personalizzati, attenersi alle istruzioni in [Procedura dettagliata: creazione di un frammento di codice](../ide/walkthrough-creating-a-code-snippet.md). Un frammento di codice è in definitiva semplicemente un file XML. Di seguito è ad esempio riportato il frammento per l'operazione di pipe (collegamento `>`)
 

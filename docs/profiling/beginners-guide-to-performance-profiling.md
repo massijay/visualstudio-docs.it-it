@@ -63,7 +63,7 @@ In questo argomento viene illustrata l'analisi dell'utilizzo della CPU nel norma
 
 4.  È possibile scegliere se visualizzare **Utilizzo CPU**, [Utilizzo memoria](../profiling/Memory-Usage.md) o entrambi usando l'impostazione **Seleziona strumenti** della barra degli strumenti. Se si usa Visual Studio Enterprise, è anche possibile abilitare o disabilitare IntelliTrace in **Strumenti/Opzioni/IntelliTrace**.
 
-     ![Mostra strumenti di diagnostica](~/docs/profiling/media/DiagToolsSelectTool.png "DiagToolsSelectTool")
+     ![Mostra strumenti di diagnostica](~/profiling/media/DiagToolsSelectTool.png "DiagToolsSelectTool")
 
      In questa sede ci si occupa principalmente dell'utilizzo della CPU, quindi verificare che l'opzione **Utilizzo CPU** è abilitata (è abilitata per impostazione predefinita).
 
@@ -71,7 +71,7 @@ In questo argomento viene illustrata l'analisi dell'utilizzo della CPU nel norma
 
      Al termine del caricamento dell'applicazione viene visualizzato il riepilogo degli strumenti di diagnostica.
 
-     ![Strumenti di diagnostica Scheda Riepilogo](~/docs/profiling/media/DiagToolsSummaryTab.png "DiagToolsSummaryTab")
+     ![Strumenti di diagnostica Scheda Riepilogo](~/profiling/media/DiagToolsSummaryTab.png "DiagToolsSummaryTab")
 
      Per altre informazioni sugli eventi, vedere l'articolo relativo a come [eseguire ricerche e applicare filtri nella scheda Eventi della finestra Strumenti di diagnostica](http://blogs.msdn.com/b/visualstudioalm/archive/2015/11/12/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window.aspx)
 
@@ -79,7 +79,7 @@ In questo argomento viene illustrata l'analisi dell'utilizzo della CPU nel norma
 
 7.  Quando il debugger è in pausa, abilitare la raccolta dei dati relativi all'utilizzo della CPU e quindi aprire la scheda **Utilizzo CPU**.
 
-     ![Strumenti di diagnostica - Abilitare profilatura CPU](~/docs/profiling/media/DiagToolsEnableCPUProfiling.png "DiagToolsEnableCPUProfiling")
+     ![Strumenti di diagnostica - Abilitare profilatura CPU](~/profiling/media/DiagToolsEnableCPUProfiling.png "DiagToolsEnableCPUProfiling")
 
      Quando si sceglie **Abilita profilatura CPU** Visual Studio avvia la registrazione delle funzioni e del tempo necessario per eseguirle. È possibile visualizzare i dati raccolti solo quando l'applicazione viene interrotta in un punto di interruzione.
 
@@ -89,15 +89,15 @@ In questo argomento viene illustrata l'analisi dell'utilizzo della CPU nel norma
 
 9.  Selezionare l'area da analizzare nella sequenza temporale della CPU (deve essere un'area che indica dati di profilatura).
 
-     ![Strumenti di diagnostica Selezione di un segmento di tempo](~/docs/profiling/media/DiagToolsSelectTimeSegment.png "DiagToolsSelectTimeSegment")
+     ![Strumenti di diagnostica Selezione di un segmento di tempo](~/profiling/media/DiagToolsSelectTimeSegment.png "DiagToolsSelectTimeSegment")
 
      Il profiler inizia a preparare i dati di thread. Attendere il completamento.
 
-     ![Strumenti di diagnostica - Preparazione thread](~/docs/profiling/media/DiagToolsPreparingThreads.png "DiagToolsPreparingThreads")
+     ![Strumenti di diagnostica - Preparazione thread](~/profiling/media/DiagToolsPreparingThreads.png "DiagToolsPreparingThreads")
   
      Lo strumento Utilizzo CPU consente di visualizzare il report nella scheda **Utilizzo CPU**.
   
-     ![Strumenti di diagnostica - Scheda Utilizzo CPU](~/docs/profiling/media/DiagToolsCPUUsageTab.png "DiagToolsCPUUsageTab")
+     ![Strumenti di diagnostica - Scheda Utilizzo CPU](~/profiling/media/DiagToolsCPUUsageTab.png "DiagToolsCPUUsageTab")
 
      A questo punto, è possibile iniziare ad analizzare i dati.
 
@@ -107,7 +107,7 @@ In questo argomento viene illustrata l'analisi dell'utilizzo della CPU nel norma
 
 1. Nell'elenco delle funzioni esaminare le funzioni che eseguono il maggior numero di operazioni.
 
-    ![Strumenti di diagnostica Elenco funzioni di Utilizzo CPU](~/docs/profiling/media/DiagToolsCPUUsageFunctionList.png "DiagToolsCPUUsageFunctionList")
+    ![Strumenti di diagnostica Elenco funzioni di Utilizzo CPU](~/profiling/media/DiagToolsCPUUsageFunctionList.png "DiagToolsCPUUsageFunctionList")
 
     > [!TIP]
     > Le funzioni sono elencate in ordine a partire da quelle che svolgono la maggior parte del lavoro (non sono in ordine di chiamata). Ciò consente di identificare rapidamente le funzioni in esecuzione da più tempo.
@@ -116,7 +116,7 @@ In questo argomento viene illustrata l'analisi dell'utilizzo della CPU nel norma
 
     Quando si fa doppio clic su una funzione viene aperta la visualizzazione **Chiamante/Chiamato** nel riquadro a sinistra. 
 
-    ![Strumenti di diagnostica Visualizzazione Chiamante Chiamato](~/docs/profiling/media/DiagToolsCallerCallee.png "DiagToolsCallerCallee")
+    ![Strumenti di diagnostica Visualizzazione Chiamante Chiamato](~/profiling/media/DiagToolsCallerCallee.png "DiagToolsCallerCallee")
 
     In questa visualizzazione la funzione selezionata viene visualizzata nell'intestazione e nella casella **Funzione corrente** (GetNumber, in questo esempio). La funzione che ha chiamato la funzione corrente viene visualizzata a sinistra, sotto **Funzioni chiamanti**, e tutte le funzioni chiamate dalla funzione corrente sono riportate nella casella **Funzioni chiamate** sulla destra. Selezionare una delle due caselle per modificare la funzione corrente.
 
@@ -131,7 +131,7 @@ In questo argomento viene illustrata l'analisi dell'utilizzo della CPU nel norma
  
     Ogni area numerata nella figura si riferisce a un passaggio della procedura.
   
-    ![Strumenti di diagnostica Albero delle chiamate](~/docs/profiling/media/DiagToolsCallTree.png "DiagToolsCallTree")
+    ![Strumenti di diagnostica Albero delle chiamate](~/profiling/media/DiagToolsCallTree.png "DiagToolsCallTree")
   
 |||
 |-|-|
@@ -154,7 +154,7 @@ Il codice esterno rappresenta funzioni nei componenti del sistema e del framewor
   
 Per visualizzare i percorsi delle chiamate del codice esterno, scegliere **Mostra codice esterno** dall'elenco **Visualizzazione filtro** e quindi scegliere **Applica**.  
   
-![Scegliere Visualizzazione filtro, quindi Mostra codice esterno](~/docs/profiling/media/DiagToolsShowExternalCode.png "DiagToolsShowExternalCode")  
+![Scegliere Visualizzazione filtro, quindi Mostra codice esterno](~/profiling/media/DiagToolsShowExternalCode.png "DiagToolsShowExternalCode")  
   
 Tieni presente che numerose catene di chiamate del codice esterno sono molto annidate, pertanto la larghezza della colonna Nome funzione può superare la larghezza di visualizzazione in quasi tutti i monitor, ad eccezione di quelli più grandi. Quando ciò si verifica, i nomi delle funzioni sono visualizzati come **[…]**.
   

@@ -23,7 +23,7 @@ caps.handback.revision: 5
 # Scelte rapide da tastiera (HTML e JavaScript)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Si applica a Windows e Windows Phone](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Si applica a Windows e Windows Phone](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  Tasti di scelta rapida in Visual Studio per il debug delle app di Store scritte in HTML e JavaScript.  
   

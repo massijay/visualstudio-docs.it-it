@@ -18,7 +18,7 @@ caps.handback.revision: 11
 # Analizzare la qualit&#224; del codice della app dello Store con l&#39;analisi statica del codice di Visual Studio
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Si applica a Windows e Windows Phone](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Si applica a Windows e Windows Phone](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  Lo strumento di analisi del codice disponibile in Visual Studio esamina il codice alla ricerca di un set di errori comuni e di violazioni delle procedure di programmazione ottimali. Gli avvisi di analisi del codice sono diversi rispetto agli errori e avvisi del compilatore. Lo strumento di analisi del codice cerca infatti modelli di codice specifici che risultano validi ma che potrebbero causare problemi a te o ad altre persone che utilizzano il codice. L'analisi del codice può inoltre trovare difetti all'interno del codice che di solito sono difficili da individuare tramite l'esecuzione di test. L'esecuzione dello strumento di analisi del codice a intervalli regolari durante il processo di sviluppo può migliorare la qualità dell'app completata.  
   

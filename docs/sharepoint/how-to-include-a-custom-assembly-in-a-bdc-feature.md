@@ -37,7 +37,7 @@ caps.handback.revision: 16
   
 2.  Scegliere **Finestra Proprietà** dal menu **Visualizza**.  
   
-3.  Nella finestra **Proprietà** selezionare la proprietà **Assemblies**, quindi fare clic sul pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/docs/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\).  
+3.  Nella finestra **Proprietà** selezionare la proprietà **Assemblies**, quindi fare clic sul pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\).  
   
      Verrà visualizzata la finestra di dialogo **Assegna assembly a cui viene fatto riferimento agli oggetti LobSystem**.  
   

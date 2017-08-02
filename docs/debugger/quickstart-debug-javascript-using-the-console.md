@@ -29,7 +29,7 @@ caps.handback.revision: 7
 # Guida introduttiva: Eseguire il debug di JavaScript con la console
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Si applica a Windows e Windows Phone](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Si applica a Windows e Windows Phone](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  È possibile usare la finestra Console JavaScript per interagire con le app di Windows Store compilate con JavaScript ed eseguirne il debug. Queste funzionalità sono supportate per app di [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], app di Windows Phone Store e app create con Strumenti di Visual Studio per Apache Cordova. Per informazioni di riferimento sui comandi della console, vedi [Comandi della console JavaScript](../debugger/javascript-console-commands.md).  
   
@@ -161,7 +161,7 @@ caps.handback.revision: 7
   
      Quando l'esecuzione raggiunge la funzione `updateImages()`, l'app passa alla modalità di interruzione e la riga corrente dell'esecuzione del programma viene evidenziata in giallo.  
   
-     ![Uso della modalità di interruzione con la console JavaScript](~/docs/debugger/media/js_breakmode.png "JS\_BreakMode")  
+     ![Uso della modalità di interruzione con la console JavaScript](~/debugger/media/js_breakmode.png "JS\_BreakMode")  
   
      Puoi modificare i valori delle variabili in modo che abbiano immediatamente effetto sullo stato del programma senza terminare la sessione di debug corrente.  
   
@@ -199,7 +199,7 @@ caps.handback.revision: 7
   
  La figura seguente mostra l'elenco Destinazione nella finestra Console JavaScript.  
   
- ![Selezione della destinazione nella finestra della console JavaScript](~/docs/debugger/media/js_console_target.png "JS\_Console\_Target")  
+ ![Selezione della destinazione nella finestra della console JavaScript](~/debugger/media/js_console_target.png "JS\_Console\_Target")  
   
  Puoi anche cambiare il contesto di esecuzione usando il comando `cd`, ma devi ricordare il nome dell'altro contesto di esecuzione e il riferimento che usi deve essere incluso nell'ambito. L'elenco **Destinazione** offre un accesso migliore ad altri contesti di esecuzione.  
   

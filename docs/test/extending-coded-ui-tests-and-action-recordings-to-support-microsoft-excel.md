@@ -42,7 +42,7 @@ Il framework di test per i test codificati dell'interfaccia utente e le registra
   
  In questa sezione viene presentata un'estensione del test codificato dell'interfaccia utente in grado di registrare e riprodurre test di Fogli di lavoro di Excel. Ogni parte dell'estensione viene spiegata sia in questa sezione che nei commenti del codice, a beneficio degli sviluppatori che vogliono creare una tale estensione.  
   
- ![Architettura di test dell'interfaccia utente](~/docs/test/media/ui_testarch.png "UI_TestArch")  
+ ![Architettura di test dell'interfaccia utente](~/test/media/ui_testarch.png "UI_TestArch")  
 Panoramica dell'architettura  
   
 ## <a name="download-the-sample"></a>Scaricare l'esempio  

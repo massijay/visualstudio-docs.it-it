@@ -92,7 +92,7 @@ manager: "ghogen"
   
 6.  Al termine della configurazione viene visualizzata la finestra del debugger remoto.  
   
-     ![RemoteDebuggerWindow](~/docs/debugger/media/remotedebuggerwindow.png "RemoteDebuggerWindow")  
+     ![RemoteDebuggerWindow](~/debugger/media/remotedebuggerwindow.png "RemoteDebuggerWindow")  
   
  Per arrestare il debugger remoto è possibile scegliere **File \/ Esci** nella finestra. Il debugger remoto può essere riavviato dal menu **Start** o dalla riga di comando:  
   
@@ -170,7 +170,7 @@ manager: "ghogen"
   
 7.  Per la configurazione **Debug**, selezionare la casella di controllo **Distribuisci**.  
   
-     ![RemoteDebugCplusDeploy](~/docs/debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")  
+     ![RemoteDebugCplusDeploy](~/debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")  
   
 8.  Avviare il debug \(**Debug \/ Avvia debug** o **F5**\).  
   

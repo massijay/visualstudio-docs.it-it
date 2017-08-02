@@ -75,7 +75,7 @@ ms.lasthandoff: 02/22/2017
 ####  <a name="a-namebkmkmodalerrormessagedialogsa-modal-error-message-dialogs"></a><a name="BKMK_ModalErrorMessageDialogs"></a>Finestre di messaggio di errore modale  
  Una finestra di messaggio di errore modale viene utilizzata per visualizzare un messaggio di errore che richiede la conferma dell'utente o un'azione.  
   
- ![Messaggio di errore modale](~/docs/extensibility/ux-guidelines/media/0901-01_modalerrormessage.png "01_ModalErrorMessage&0901;")  
+ ![Messaggio di errore modale](~/extensibility/ux-guidelines/media/0901-01_modalerrormessage.png "01_ModalErrorMessage&0901;")  
   
  **Una finestra di messaggio di errore modale segnalazione all'utente di una stringa di connessione non valida per un database**  
   
@@ -88,14 +88,14 @@ ms.lasthandoff: 02/22/2017
   
  La barra di stato ha anche colori per aggiungere interesse visivo e il valore funzionale comunicando vari cambiamenti di stato IDE, ad esempio quando l'IDE è in modalità debug.  
   
- ![Modifiche ai colori della barra di stato dell'IDE](~/docs/extensibility/ux-guidelines/media/0901-02_idestatusbar.png "02_IDEStatusBar&0901;")  
+ ![Modifiche ai colori della barra di stato dell'IDE](~/extensibility/ux-guidelines/media/0901-02_idestatusbar.png "02_IDEStatusBar&0901;")  
   
  **Colori della barra di stato IDE**  
   
 ####  <a name="a-namebkmkembeddedinfobara-embedded-infobar"></a><a name="BKMK_EmbeddedInfobar"></a>Barra informazioni incorporata  
  Utilizzare una barra informazioni nella parte superiore di una finestra del documento o una finestra degli strumenti per informare l'utente di uno stato o una condizione. Inoltre possibile includere comandi in modo che l'utente può avere un modo per effettuare con facilità un'azione. Sulla barra informazioni sono un controllo standard della shell. Evitare di crearne uno personalizzato, che agiscono e vengono visualizzati non coerente con altri utenti nell'IDE. Vedere [visualizzazione](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars) per indicazioni sull'utilizzo e i dettagli di implementazione.  
   
- ![Barra informazioni incorporata](~/docs/extensibility/ux-guidelines/media/0901-03_embeddedinfobar.png "03_EmbeddedInfobar&0901;")  
+ ![Barra informazioni incorporata](~/extensibility/ux-guidelines/media/0901-03_embeddedinfobar.png "03_EmbeddedInfobar&0901;")  
   
  **Una barra informazioni incorporate in una finestra del documento, avvisa l'utente che è in modalità debug cronologico dell'IDE e l'editor non risponderà esattamente come avviene in modalità di debug standard.**  
   
@@ -114,21 +114,21 @@ ms.lasthandoff: 02/22/2017
   
  La finestra delle notifiche non è attualmente estendibile.  
   
- ![Finestra di Visual Studio notifiche](~/docs/extensibility/ux-guidelines/media/0901-06_vsnotificationswindow.png "06_VSNotificationsWindow&0901;")  
+ ![Finestra di Visual Studio notifiche](~/extensibility/ux-guidelines/media/0901-06_vsnotificationswindow.png "06_VSNotificationsWindow&0901;")  
   
  **Finestra di Visual Studio notifiche degli strumenti**  
   
 ####  <a name="a-namebkmkerrorlista-error-list"></a><a name="BKMK_ErrorList"></a>Elenco errori  
  Una notifica all'interno dell'elenco di errori indicano errori e avvisi che si è verificato durante la compilazione e o processo di compilazione e consente all'utente di spostarsi nel codice di errore codice specifico.  
   
- ![Elenco errori](~/docs/extensibility/ux-guidelines/media/0901-08_errorlist.png "08_ErrorList&0901;")  
+ ![Elenco errori](~/extensibility/ux-guidelines/media/0901-08_errorlist.png "08_ErrorList&0901;")  
   
  **Elenco di errori in Visual Studio**  
   
 ####  <a name="a-namebkmkembeddedstatusbarsa-embedded-status-bars"></a><a name="BKMK_EmbeddedStatusBars"></a>Barre di stato incorporata  
  Poiché la barra di stato IDE è dinamica, con contesto area client impostato per la finestra di documento attivo e le informazioni di aggiornamento nel contesto dell'utente e/o di risposte del sistema, è difficile mantenere una visualizzazione continua delle informazioni o fornire lo stato su processi asincroni a lungo termine. Ad esempio, la barra di stato IDE non è appropriata per le notifiche dei risultati dei test eseguiti per più esecuzioni e/o le selezioni delle voci immediatamente utilizzabili. È importante mantenere tali informazioni sullo stato nel contesto della finestra del documento o lo strumento in cui l'utente effettua una selezione o avvia un processo.  
   
- ![Barra di stato incorporata](~/docs/extensibility/ux-guidelines/media/0901-09_embeddedstatusbar.png "09_EmbeddedStatusBar&0901;")  
+ ![Barra di stato incorporata](~/extensibility/ux-guidelines/media/0901-09_embeddedstatusbar.png "09_EmbeddedStatusBar&0901;")  
   
  **Barra di stato incorporata in Visual Studio**  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 02/22/2017
 ####  <a name="a-namebkmknotificationbubblesa-notification-bubbles"></a><a name="BKMK_NotificationBubbles"></a>Bolle di notifica  
  Fumetti notifica possono essere visualizzati come informativi all'interno di un editor o la finestra di progettazione o come parte dell'area di notifica di Windows. L'utente visualizza le bolle come i problemi che consentono di risolvere in un secondo momento, che è un vantaggio per le notifiche non critiche. Le bolle non sono appropriate per le informazioni critiche che l'utente deve risolvere immediatamente. Se si utilizza fumetti notifica in Visual Studio, seguire la [linee guida per Windows Desktop per fumetti notifica](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742472\(v=vs.85\).aspx).  
   
- ![Fumetto della notifica](~/docs/extensibility/ux-guidelines/media/0901-07_notificationbubbles.png "07_NotificationBubbles&0901;")  
+ ![Fumetto della notifica](~/extensibility/ux-guidelines/media/0901-07_notificationbubbles.png "07_NotificationBubbles&0901;")  
   
  **Fumetto della notifica nell'area di notifica di Windows utilizzato per Visual Studio**  
   
@@ -191,14 +191,14 @@ ms.lasthandoff: 02/22/2017
 #### <a name="progress-bars"></a>Indicatori di stato  
   
 ##### <a name="indeterminate"></a>Indeterminato  
- ![Indicatore di stato indeterminato](~/docs/extensibility/ux-guidelines/media/0901-04_indeterminate.png "04_Indeterminate&0901;")  
+ ![Indicatore di stato indeterminato](~/extensibility/ux-guidelines/media/0901-04_indeterminate.png "04_Indeterminate&0901;")  
   
  **Indicatore di stato indeterminato**  
   
  "Indeterminato" significa che lo stato generale di un'operazione o processo non può essere determinato. Utilizzare le barre di stato indeterminato per operazioni che richiedono una quantità di tempo illimitata o che accedono a un numero sconosciuto di oggetti. Utilizzare una descrizione testuale a complemento di ciò che accade. Utilizzare i timeout dei limiti per operazioni basate sul tempo. Barre di stato indeterminato utilizzano animazioni per mostrare che lo stato di avanzamento è stata effettuata, ma non forniscono altre informazioni. Non scegliere un indicatore di stato indeterminato basato solo sull'eventuale mancanza di accuratezza da solo.  
   
 ##### <a name="determinate"></a>Determinata  
- ![Indicatore di stato determinato](~/docs/extensibility/ux-guidelines/media/0901-05_determinate.png "05_Determinate&0901;")  
+ ![Indicatore di stato determinato](~/extensibility/ux-guidelines/media/0901-05_determinate.png "05_Determinate&0901;")  
   
  **Indicatore di stato determinato**  
   
@@ -217,12 +217,12 @@ ms.lasthandoff: 02/22/2017
 #### <a name="other-progress-indicators"></a>Altri indicatori di stato  
   
 ##### <a name="ants-animated-horizontal-dots"></a>ANTS (animati punti orizzontale)  
- ![Stato di avanzamento ants](~/docs/extensibility/ux-guidelines/media/0903-01_ants.png "0903&01;_Ants")  
+ ![Stato di avanzamento ants](~/extensibility/ux-guidelines/media/0903-01_ants.png "0903&01;_Ants")  
   
  "Formiche," animati punti orizzontali, fornire un riferimento visivo per un processo del server di andata e ritorno indeterminato.  
   
 ##### <a name="spinner-progress-ring"></a>Spinner (anello di stato)  
- ![Indicatore di avanzamento](~/docs/extensibility/ux-guidelines/media/0903-02_spinner.png "0903&02;_Spinner")  
+ ![Indicatore di avanzamento](~/extensibility/ux-guidelines/media/0903-02_spinner.png "0903&02;_Spinner")  
   
  La casella di selezione (noto anche come un "anello di stato") è un indicatore di stato indeterminato utilizzato principalmente in relazione a scelta rapida dell'interfaccia utente. Visualizzare una casella di selezione in prossimità al relativo contenuto correlato, ad esempio un'intestazione di categoria testuale, messaggistica o controllo.  
   
@@ -234,69 +234,69 @@ ms.lasthandoff: 02/22/2017
 ##### <a name="status-bar"></a>Barra di stato  
  La barra di stato fornisce all'applicazione una posizione in cui visualizzare i messaggi e informazioni utili per l'utente senza interrompere le attività dell'utente. In genere visualizzato nella parte inferiore di una finestra, lo stato di avanzamento sarà un riquadro di suggerimento di strumenti che include un messaggio relativo alla misura dello stato di avanzamento in combinazione con un indicatore.  
   
- ![Barra di stato con indicatore di stato](~/docs/extensibility/ux-guidelines/media/0903-03_statusbarprogressbar.png "0903&03;_StatusBarProgressBar")  
+ ![Barra di stato con indicatore di stato](~/extensibility/ux-guidelines/media/0903-03_statusbarprogressbar.png "0903&03;_StatusBarProgressBar")  
   
  **Barra di stato con indicatore di stato**  
   
- ![Barra di stato con messaggistica](~/docs/extensibility/ux-guidelines/media/0903-04_statusbarmessage.png "0903&04;_StatusBarMessage")  
+ ![Barra di stato con messaggistica](~/extensibility/ux-guidelines/media/0903-04_statusbarmessage.png "0903&04;_StatusBarMessage")  
   
  **Barra di stato con la descrizione testuale**  
   
 ##### <a name="infobar"></a>Barra informazioni  
  È simile alla barra di stato, la barra informazioni fornisce notifica contesto e messaggistica, che può anche essere abbinata a indicatori di stato indeterminato, ad esempio la barra di stato o una casella di selezione. Barra informazioni non deve fornire lo stato di avanzamento livello granulare o indicazione di stato determinato. Vedere [visualizzazione](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars).  
   
- ![Barra informazioni con indicatore di stato e messaggistica](~/docs/extensibility/ux-guidelines/media/0903-05_infobar.png "0903&05;_InfoBar")  
+ ![Barra informazioni con indicatore di stato e messaggistica](~/extensibility/ux-guidelines/media/0903-05_infobar.png "0903&05;_InfoBar")  
   
  **Barra informazioni con indicatore di stato e la descrizione testuale**  
   
- ![Barra informazioni in una finestra](~/docs/extensibility/ux-guidelines/media/0903-06_infobarinwindow.png "0903&06;_InfoBarInWindow")  
+ ![Barra informazioni in una finestra](~/extensibility/ux-guidelines/media/0903-06_infobarinwindow.png "0903&06;_InfoBarInWindow")  
   
  **Barra informazioni nella finestra Analisi codice**  
   
 ##### <a name="inline"></a>Inline  
  Indica lo stato di avanzamento inline può essere rappresentato da uno dei tipi di caricatore lo stato di avanzamento. In genere è associata l'indicatore di stato con funzionalità di messaggistica, ma questo non è un requisito.  
   
- ![Indicatore di avanzamento inline](~/docs/extensibility/ux-guidelines/media/0903-07_inlinespinner.png "0903&07;_InlineSpinner")  
+ ![Indicatore di avanzamento inline](~/extensibility/ux-guidelines/media/0903-07_inlinespinner.png "0903&07;_InlineSpinner")  
   
  **Casella combinata con la descrizione testuale di selezione**  
   
- ![Indicatori di stato in pila inline](~/docs/extensibility/ux-guidelines/media/0903-08_inlinestackedprogress.png "0903&08;_InlineStackedProgress")  
+ ![Indicatori di stato in pila inline](~/extensibility/ux-guidelines/media/0903-08_inlinestackedprogress.png "0903&08;_InlineStackedProgress")  
   
  **Barre di stato determinato in pila**  
   
- ![Messaggistica sullo stato inline](~/docs/extensibility/ux-guidelines/media/0903-09_inlinetext.png "0903&09;_InlineText")  
+ ![Messaggistica sullo stato inline](~/extensibility/ux-guidelines/media/0903-09_inlinetext.png "0903&09;_InlineText")  
   
  **Testo inline Esplora server: aggiornamento...**  
   
 ##### <a name="tool-windows"></a>Finestre degli strumenti  
  Indicazione di stato globale è rappresentato da una barra di stato indeterminato trova direttamente sotto la barra degli strumenti.  
   
- ![Indicatore di stato indeterminato globale](~/docs/extensibility/ux-guidelines/media/0903-23_globalindeterminate.png "0903&23;_GlobalIndeterminate")  
+ ![Indicatore di stato indeterminato globale](~/extensibility/ux-guidelines/media/0903-23_globalindeterminate.png "0903&23;_GlobalIndeterminate")  
   
  **Barra di stato indeterminato globale di Team Explorer**  
   
 ##### <a name="dialogs"></a>Finestre di dialogo  
  Finestre di dialogo può contenere i tipi di stato di avanzamento del caricatore. Gli indicatori di stato possono essere associati con la messaggistica nonché combinati con più livelli di indicazione di stato di avanzamento per rappresentare granulare e processi secondari.  
   
- ![Finestra di dialogo con più tipi di indicatori di stato di avanzamento](~/docs/extensibility/ux-guidelines/media/0903-11_dialog.png "0903&11;_Dialog")  
+ ![Finestra di dialogo con più tipi di indicatori di stato di avanzamento](~/extensibility/ux-guidelines/media/0903-11_dialog.png "0903&11;_Dialog")  
   
  **Finestra di dialogo Visual Studio con più tipi di indicatori di stato di avanzamento e processi simultanei**  
   
- ![Finestra di dialogo con caricatore dello stato e messaggistica](~/docs/extensibility/ux-guidelines/media/0903-12_dialog2.png "0903&12;_Dialog2")  
+ ![Finestra di dialogo con caricatore dello stato e messaggistica](~/extensibility/ux-guidelines/media/0903-12_dialog2.png "0903&12;_Dialog2")  
   
  **Finestra di dialogo Visual Studio con caricatore dello stato e messaggistica inline dei comandi**  
   
 ##### <a name="document-well"></a>Documento e  
  Il documento può anche visualizzare più tipi di stato del caricatore in combinazione con i controlli.  
   
- ![Lo stato di avanzamento e di messaggistica nel documento](~/docs/extensibility/ux-guidelines/media/0903-13_documentwell.png "0903&13;_DocumentWell")  
+ ![Lo stato di avanzamento e di messaggistica nel documento](~/extensibility/ux-guidelines/media/0903-13_documentwell.png "0903&13;_DocumentWell")  
   
  **Barra di stato indeterminato di sotto della barra degli strumenti**  
   
 ##### <a name="output-window"></a>Finestra di output  
  La finestra di Output è appropriata per la gestione di progressione di processo e lo stato di avanzamento tramite messaggistica testuale inline. È consigliabile utilizzare la barra di stato e qualsiasi Output finestra avanzamento.  
   
- ![Messaggistica sullo stato nella finestra di Output](~/docs/extensibility/ux-guidelines/media/0903-14_outputwindow.png "0903&14;_OutputWindow")  
+ ![Messaggistica sullo stato nella finestra di Output](~/extensibility/ux-guidelines/media/0903-14_outputwindow.png "0903&14;_OutputWindow")  
   
  **Finestra di output con stato del processo in corso e attendere la messaggistica**  
   
@@ -305,7 +305,7 @@ ms.lasthandoff: 02/22/2017
 ### <a name="overview"></a>Panoramica  
  Visualizzazione assegnare all'utente un indicatore vicino al relativo punto di attenzione e utilizzo del controllo barra informazioni condivise assicura la coerenza nell'aspetto e l'interazione.  
   
- ![Barra informazioni](~/docs/extensibility/ux-guidelines/media/0904-01_infobar.png "0904&01;_Infobar")  
+ ![Barra informazioni](~/extensibility/ux-guidelines/media/0904-01_infobar.png "0904&01;_Infobar")  
   
  **Visualizzazione in Visual Studio**  
   
@@ -377,7 +377,7 @@ public InfoBarModel(string text, IEnumerable<IVsInfoBarActionItem> actionItems, 
   
  Di seguito è riportato un esempio che crea un InfoBarModel con un testo con un collegamento ipertestuale, un pulsante di azione e un'icona.  
   
- ![Barra informazioni con collegamento ipertestuale](~/docs/extensibility/ux-guidelines/media/0904-02_infobarhyperlink.png "0904&02;_InfobarHyperlink")  
+ ![Barra informazioni con collegamento ipertestuale](~/extensibility/ux-guidelines/media/0904-02_infobarhyperlink.png "0904&02;_InfobarHyperlink")  
   
 ```  
 var infoBar = new InfoBarModel(  
@@ -495,31 +495,31 @@ public interface IVsInfoBarUIEvents
 ### <a name="field-validation"></a>Convalida campo  
  Convalida di moduli e campi è costituita da tre componenti: un controllo, un'icona e una descrizione comando. Sebbene diversi tipi di controlli è possono utilizzare questo, una casella di testo verrà utilizzata come esempio.  
   
- ![Campo convalida (vuoto)](~/docs/extensibility/ux-guidelines/media/0905-01_fieldvalidation.png "0905&01;_FieldValidation")  
+ ![Campo convalida (vuoto)](~/extensibility/ux-guidelines/media/0905-01_fieldvalidation.png "0905&01;_FieldValidation")  
   
  Se il campo è obbligatorio, deve essere presente filigrana testo indicante ** \<obbligatorio >** e lo sfondo del campo deve essere chiaro giallo (VSColor: `Environment.ControlEditRequiredBackground`) e primo piano deve essere grigio (VSColor: `Environment.ControlEditRequiredHintText`):  
   
- ![Campo di convalida con etichetta "Obbligatorio"](~/docs/extensibility/ux-guidelines/media/0905-02_fieldvalidationrequired.png "0905&02;_FieldValidationRequired")  
+ ![Campo di convalida con etichetta "Obbligatorio"](~/extensibility/ux-guidelines/media/0905-02_fieldvalidationrequired.png "0905&02;_FieldValidationRequired")  
   
  Il programma può determinare che il controllo è in uno stato di *il contenuto non valido inserito* quando lo stato attivo viene spostato su un altro controllo o quando l'utente fa clic su un pulsante di conferma [OK] o quando l'utente salva il documento o il form.  
   
  Quando si determina lo stato del contenuto non valido, viene visualizzata un'icona all'interno del controllo o semplicemente accanto a esso. La descrizione dell'errore dovrebbe essere visualizzato al passaggio del mouse sull'icona o il controllo. Inoltre, dovrebbe visualizzato un bordo di 1 pixel intorno al controllo che sta creando lo stato non valido.  
   
- ![Specifiche del layout della convalida campo](~/docs/extensibility/ux-guidelines/media/0905-03_layoutspecs.png "0905&03;_LayoutSpecs")  
+ ![Specifiche del layout della convalida campo](~/extensibility/ux-guidelines/media/0905-03_layoutspecs.png "0905&03;_LayoutSpecs")  
   
  **Specifiche del layout per la convalida dei campi**  
   
 #### <a name="acceptable-variations-for-icon-location"></a>Variazioni accettabili per le icone  
  Esistono innumerevoli casi in cui gli utenti devono essere informati sugli errori di convalida. Se si considera il tipo di controllo e la configurazione dell'interfaccia utente, scegliere la posizione sull'icona della situazione.  
   
- ![Posizioni accettabili per icona](~/docs/extensibility/ux-guidelines/media/0905-04_iconlocation.png "0905&04;_IconLocation")  
+ ![Posizioni accettabili per icona](~/extensibility/ux-guidelines/media/0905-04_iconlocation.png "0905&04;_IconLocation")  
   
  **Variazioni accettabili per le posizioni icona convalida campo**  
   
 #### <a name="validation-requiring-a-round-trip-to-a-server-or-network-connection"></a>Convalida che richiede un round trip a un server o connessione di rete  
  In alcuni casi, è necessario un round trip al server per verificare il contenuto e sarebbe importante visualizzare lo stato utente, la verifica e gli stati di errore. La figura riportata di seguito viene illustrato un esempio di questo caso e l'interfaccia utente consigliata.  
   
- ![Convalida che prevede un round trip a un server](~/docs/extensibility/ux-guidelines/media/0905-05_roundtrip.png "0905&05;_RoundTrip")  
+ ![Convalida che prevede un round trip a un server](~/extensibility/ux-guidelines/media/0905-05_roundtrip.png "0905&05;_RoundTrip")  
   
  **Convalida che prevede un round trip a un server**  
   
@@ -528,13 +528,13 @@ public interface IVsInfoBarUIEvents
 #### <a name="in-place-warning-text"></a>Testo dell'avviso sul posto  
  Quando c'è spazio disponibile per inserire il messaggio di errore vicino al controllo in uno stato di errore, questo è preferibile utilizzare la descrizione comando da solo.  
   
- ![Avviso sul posto](~/docs/extensibility/ux-guidelines/media/0905-06_inplacewarning.png "0905&06;_InPlaceWarning")  
+ ![Avviso sul posto](~/extensibility/ux-guidelines/media/0905-06_inplacewarning.png "0905&06;_InPlaceWarning")  
   
  **Testo dell'avviso sul posto**  
   
 #### <a name="watermarks"></a>Filigrane  
  Talvolta un intero controllo o finestra è in stato di errore. In questo caso, utilizzare una filigrana per indicare l'errore.  
   
- ![Filigrana](~/docs/extensibility/ux-guidelines/media/0905-07_watermark.png "0905&07;_Watermark")  
+ ![Filigrana](~/extensibility/ux-guidelines/media/0905-07_watermark.png "0905&07;_Watermark")  
   
  **Convalida campo filigrana**

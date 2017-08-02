@@ -65,9 +65,9 @@ In alcune situazioni, ad esempio quando sono presenti file danneggiati, può ess
 
 1. Scaricare ed eseguire lo [strumento di raccolta dei log di Microsoft Visual Studio e .NET Framework](https://www.microsoft.com/en-us/download/details.aspx?id=12493). Questo strumento raccoglie e compila i log di installazione disponibili per Visual Studio, .NET Framework e SQL Server.
 2. Aprire il programma di installazione di Visual Studio e quindi fare clic su **Segnala un problema** per aprire Visual Studio Feedback Tool.
-![È possibile usare il pulsante Commenti e suggerimenti per aprire lo strumento di feedback](~/docs/install/media/report-a-problem.png)
+![È possibile usare il pulsante Commenti e suggerimenti per aprire lo strumento di feedback](~/install/media/report-a-problem.png)
 3. Specificare un titolo per la segnalazione del problema e fornire i relativi dettagli. Fare clic su **Avanti** per accedere alla sezione **Allegati** e quindi allegare il file di log generato (in genere, è disponibile in %TEMP%\vslogs.zip).
-![Premere il pulsante Segnala un nuovo problema e seguire la procedura necessaria](~/docs/install/media/problem-report-details.png)
+![Premere il pulsante Segnala un nuovo problema e seguire la procedura necessaria](~/install/media/problem-report-details.png)
 4. Fare clic su **Avanti** per controllare la segnalazione del problema e quindi fare clic su **Invia**.
 
 ### <a name="step-5---run-installcleanupexe-to-clean-up-installation-files"></a>Passaggio 5: Eseguire InstallCleanup.exe per pulire i file di installazione

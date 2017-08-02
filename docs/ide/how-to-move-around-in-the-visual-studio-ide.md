@@ -74,7 +74,7 @@ L'ambiente di sviluppo integrato (IDE) è stato progettato per consentire all'ut
   
  Lo **strumento di spostamento dell'IDE** funziona in modo analogo allo strumento di selezione delle applicazioni di Windows. Non è disponibile dai menu. Per accedervi, è necessario utilizzare i tasti di scelta rapida. È possibile usare uno dei due comandi per accedere allo **strumento di spostamento dell'IDE** (illustrato di seguito) e passare da un file all'altro, in base all'ordine che si preferisce.  
   
- ![Strumento di spostamento dell'IDE di Visual Studio](~/docs/ide/media/vs2015_ide_navigator.png "VS2015_IDE_Navigator")  
+ ![Strumento di spostamento dell'IDE di Visual Studio](~/ide/media/vs2015_ide_navigator.png "VS2015_IDE_Navigator")  
   
  `Window.PreviousDocumentWindowNav` consente di passare al file utilizzato più di recente, mentre `Window.NextDocumentWindowNav` consente di spostarsi in ordine inverso. Le impostazioni generali per lo sviluppo assegnano la combinazione CTRL + MAIUSC + TAB a `Window.PreviousDocumentWindowNav` e quella CTRL + TAB a `Window.NextDocumentWindowNav`.  
   

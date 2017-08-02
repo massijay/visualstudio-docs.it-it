@@ -33,7 +33,7 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  Quando viene raggiunta la fine dell'intervallo, la ricerca effettuata dal metodo <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A> riprende dall'inizio dell'intervallo.  È necessario assicurarsi che il codice non ripeta la ricerca all'infinito.  Nella routine di esempio viene illustrato un metodo per gestire questo problema mediante la proprietà <xref:Microsoft.Office.Interop.Excel.Range.Address%2A>.  
   
- ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere la procedura dettagliata relativa all'[utilizzo del metodo Find in un componente aggiuntivo di Excel](http://go.microsoft.com/fwlink/?LinkID=130294).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere la procedura dettagliata relativa all'[utilizzo del metodo Find in un componente aggiuntivo di Excel](http://go.microsoft.com/fwlink/?LinkID=130294).  
   
 ### Per cercare testo in un intervallo di fogli di lavoro  
   

@@ -84,11 +84,11 @@ Usare questa procedura guidata per creare test dell'interfaccia utente per app U
   
 1.  Creare un nuovo progetto di test codificato dell'interfaccia utente per l'app di Windows Store.  
   
-     ![Nuovo progetto di test codificato dell'interfaccia utente &#40;app di Windows Store&#41;](~/docs/test/media/cuit_windowsstore_newproject.png "CUIT_WindowsStore_NewProject")  
+     ![Nuovo progetto di test codificato dell'interfaccia utente &#40;app di Windows Store&#41;](~/test/media/cuit_windowsstore_newproject.png "CUIT_WindowsStore_NewProject")  
   
 2.  Scegliere di modificare la mappa dell'interfaccia utente usando lo strumento selettore di precisione.  
   
-     ![Scegliere l'opzione per modificare il mapping dell'interfaccia utente o aggiungere asserzioni](~/docs/test/media/cuit_windowsstoreapp_createproject_gencodedialog.png "CUIT_WindowsStoreApp_CreateProject_GenCodeDialog")  
+     ![Scegliere l'opzione per modificare il mapping dell'interfaccia utente o aggiungere asserzioni](~/test/media/cuit_windowsstoreapp_createproject_gencodedialog.png "CUIT_WindowsStoreApp_CreateProject_GenCodeDialog")  
   
 3.  Usare lo strumento selettore di precisione nel Generatore di test codificati dell'interfaccia utente per selezionare il riquadro dell'app, fare clic con il pulsante destro del mouse su **AutomationId** e scegliere **Copia valore negli Appunti**. Il valore presente negli Appunti verrà usato più avanti per scrivere l'azione per l'avvio dell'app per i test.  
   
@@ -116,7 +116,7 @@ Usare questa procedura guidata per creare test dell'interfaccia utente per app U
   
 9. Aggiungere e generare il codice per l'asserzione.  
   
-     ![Generare il codice per l'asserzione della casella di testo](~/docs/test/media/cuit_windowsstoreapp_textbox_generate_assertion.png "CUIT_WindowsStoreApp_Textbox_Generate_Assertion")  
+     ![Generare il codice per l'asserzione della casella di testo](~/test/media/cuit_windowsstoreapp_textbox_generate_assertion.png "CUIT_WindowsStoreApp_Textbox_Generate_Assertion")  
   
 10. **Visual C#**  
   

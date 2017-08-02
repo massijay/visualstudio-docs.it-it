@@ -23,7 +23,7 @@ caps.handback.revision: 15
 # Eseguire applicazioni Windows Store in un computer locale
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Si applica solo a Windows](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+![Si applica solo a Windows](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Per eseguire il debug, test o analisi delle prestazioni su un'app Windows Store, puoi eseguire l'app sullo stesso computer che ospita Visual Studio.  Se lo schermo del dispositivo è abilitato per il tocco, puoi verificare la funzionalità completa dell'app, altrimenti dovrai limitarti ai movimenti con il mouse e la tastiera.  
   
@@ -47,7 +47,7 @@ caps.handback.revision: 15
   
 -   In progetti C\# e Visual Basic fai clic su **Debug** e seleziona **Computer locale** nell'elenco a discesa **Dispositivo di destinazione**.  
   
-     ![Pagina delle proprietà del progetto C&#35; e Visual Basic](~/docs/debugger/media/vsrun_cs_vb_projprop_local.png "VSRUN\_CS\_VB\_ProjProp\_Local")  
+     ![Pagina delle proprietà del progetto C&#35; e Visual Basic](~/debugger/media/vsrun_cs_vb_projprop_local.png "VSRUN\_CS\_VB\_ProjProp\_Local")  
   
 -   In progetti C\+\+ e JavaScript espandi il nodo **Proprietà di configurazione**, fai clic su **Debug** e seleziona **Debugger locale** nell'elenco **Debugger da avviare**.  
   

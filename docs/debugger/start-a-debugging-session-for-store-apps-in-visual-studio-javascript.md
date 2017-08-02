@@ -26,7 +26,7 @@ caps.handback.revision: 24
 # Avviare una sessione di debug per le app dello Store in Visual Studio (JavaScript)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Si applica a Windows e Windows Phone](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Si applica a Windows e Windows Phone](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  Questo argomento descrive come avviare una sessione di debug per le app di Windows Store scritte in JavaScript e HTML5. Puoi avviare il debug con una sola sequenza di tasti oppure puoi configurare la sessione di debug per scenari specifici e poi scegliere il modo in cui avviare l'app.  
   
@@ -67,7 +67,7 @@ caps.handback.revision: 24
 -   [Collegare il debugger](#BKMK_Attach_the_debugger)  
   
 ##  <a name="BKMK_The_easy_way_to_start_debugging"></a> Il modo più semplice per avviare il debug  
- ![Si applica solo a Windows](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Si applica solo a Windows](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
 1.  Apri la soluzione dell'app in Visual Studio.  
   
@@ -75,7 +75,7 @@ caps.handback.revision: 24
   
 3.  Premi F5.  
   
- ![Si applica solo a Windows Phone](~/docs/debugger/media/phone_only_content.png "phone\_only\_content")  
+ ![Si applica solo a Windows Phone](~/debugger/media/phone_only_content.png "phone\_only\_content")  
   
  Visual Studio compila e avvia l'app con il debugger collegato. L'esecuzione continua fino a raggiungere un punto di interruzione, se sospendi manualmente l'esecuzione, si verifica un'eccezione non gestita o l'app termina. Per altre informazioni, vedi [Guida introduttiva: Eseguire il debug di HTML e CSS](../debugger/quickstart-debug-html-and-css.md).  
   
@@ -97,7 +97,7 @@ caps.handback.revision: 24
 ###  <a name="BKMK_Choose_the_deployment_target"></a> Scegliere la destinazione di distribuzione  
  Puoi distribuire ed eseguire il debug di un'app nel computer Visual Studio, nel simulatore di Visual Studio sul computer locale o in un computer remoto. Scegli la destinazione nell'elenco **Debugger da avviare** nella pagina delle proprietà **Debug** per il progetto.  
   
- ![Si applica solo a Windows](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Si applica solo a Windows](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Per un'app di Windows Store, scegli una di queste opzioni nell'elenco **Dispositivo di destinazione**:  
   
@@ -113,12 +113,12 @@ caps.handback.revision: 24
   
 -   Fai clic sulla freccia in giù nella casella **Nome computer** e scegli **\<Trova...\>**. Quindi, scegli il computer remoto nella finestra di dialogo **Seleziona connessione debugger remoto**.  
   
-     ![Selezionare connessione debugger remoto](~/docs/debugger/media/vsrun_pro_selectremotedebuggerdlg.png "VSRUN\_PRO\_SelectRemoteDebuggerDlg")  
+     ![Selezionare connessione debugger remoto](~/debugger/media/vsrun_pro_selectremotedebuggerdlg.png "VSRUN\_PRO\_SelectRemoteDebuggerDlg")  
   
     > [!NOTE]
     >  Nella finestra di dialogo Seleziona connessione debugger remoto sono visualizzati i computer sulla subnet locale e i computer collegati direttamente al computer che esegue Visual Studio tramite un cavo Ethernet. Per specificare un altro computer, immetti il nome nella casella **Nome computer**.  
   
- ![Si applica solo a Windows Phone](~/docs/debugger/media/phone_only_content.png "phone\_only\_content")  
+ ![Si applica solo a Windows Phone](~/debugger/media/phone_only_content.png "phone\_only\_content")  
   
  Per un'app di Windows Store Phone, scegli **Dispositivo** o uno degli emulatori nell'elenco **Dispositivo di destinazione**.  
   
@@ -145,7 +145,7 @@ caps.handback.revision: 24
 -   Scegli **Sì** per avviare immediatamente l'app.  
   
 ###  <a name="BKMK__Optional__Disable_network_loopbacks"></a> \(Facoltativo\) Disabilitare i loopback di rete  
- ![Si applica solo a Windows](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Si applica solo a Windows](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Per motivi di sicurezza, a un'app di Windows Store installata in modalità standard non è consentito effettuare chiamate di rete al dispositivo in cui è installata. Per impostazione predefinita, la distribuzione di Visual Studio crea una esenzione da questa regola per l'app distribuita. Questa esenzione ti consente di verificare le procedure di comunicazione in un singolo computer. Prima di inviare l'app a Windows Store, dovrai testare l'app senza l'esenzione.  
   

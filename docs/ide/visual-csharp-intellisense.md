@@ -108,11 +108,11 @@ IntelliSense per Visual C# è disponibile durante la codifica nell'editor e dura
   
  Per avviare l'operazione di aggiunta della direttiva using, posizionare il cursore sul riferimento a un tipo che non può essere risolto. Quando, ad esempio, si crea un'applicazione console e quindi si aggiunge `XmlTextReader` al corpo del metodo `Main`, viene visualizzato uno smart tag al di sotto dell'ultimo carattere a destra di `XmlTextReader` perché costituisce un riferimento a un tipo che non può essere risolto.  
   
- ![Aggiungi using, immagine smart tag](~/docs/ide/media/addusesmart.gif "AddUseSmart")  
+ ![Aggiungi using, immagine smart tag](~/ide/media/addusesmart.gif "AddUseSmart")  
   
  È quindi possibile richiamare l'operazione di aggiunta della direttiva using scegliendo tale comando dal sottomenu **Risolvi** del menu **IntelliSense** o dal menu di scelta rapida oppure richiamando l'operazione tramite lo smart tag. Lo smart tag viene visualizzato soltanto quando il cursore è posizionato in corrispondenza o in prossimità del tipo non associato.  
   
- ![Aggiungi using, immagine smart tag espansa](~/docs/ide/media/addusesmartexp.gif "AddUseSmartExp")  
+ ![Aggiungi using, immagine smart tag espansa](~/ide/media/addusesmartexp.gif "AddUseSmartExp")  
   
 ### <a name="organize-usings"></a>Organizza using  
  L'opzione **Organizza using** consente di ordinare e rimuovere le dichiarazioni `using` e `extern` senza modificare il comportamento del codice sorgente. Nel tempo i file di origine possono diventare troppo grandi e difficili da leggere a causa di direttive `using` superflue e non organizzate. Le opzioni **Organizza using`using` compattano il codice sorgente rimuovendo le direttive**  inutilizzate e migliorano la leggibilità mettendole in ordine.  
@@ -161,11 +161,11 @@ IntelliSense per Visual C# è disponibile durante la codifica nell'editor e dura
   
  Quando si digita l'operatore `+=` dopo un campo evento in un file con estensione cs, IntelliSense chiede di premere il tasto TAB. Questa operazione consente di inserire una nuova istanza di un delegato che punta al metodo che gestisce l'evento.  
   
- ![Associazione automatica dei pulsanti](~/docs/ide/media/vxautohookup.gif "vxAutoHookUp")  
+ ![Associazione automatica dei pulsanti](~/ide/media/vxautohookup.gif "vxAutoHookUp")  
   
  Se si preme TAB, IntelliSense termina automaticamente l'istruzione per l'utente e visualizza il riferimento al gestore eventi come testo selezionato nell'editor del codice. Per completare l'associazione automatica dell'evento, IntelliSense chiede di premere di nuovo il tasto TAB per creare uno stub vuoto per il gestore eventi.  
   
- ![Genera gestore eventi](~/docs/ide/media/vxgenerateeventhandler.gif "vxGenerateEventHandler")  
+ ![Genera gestore eventi](~/ide/media/vxgenerateeventhandler.gif "vxGenerateEventHandler")  
   
 > [!NOTE]
 >  Se un nuovo delegato creato da IntelliSense fa riferimento a un gestore eventi esistente, IntelliSense comunica queste informazioni nella descrizione comando. È quindi possibile modificare questo riferimento. Il testo è già selezionato nell'editor del codice. In caso contrario, l'associazione automatica dell'evento è a questo punto completata.  

@@ -23,7 +23,7 @@ caps.handback.revision: 8
 
 Gli handle dell'ambiente di salvataggio, salvataggio come e salvare tutti i controlli.  Quando un utente seleziona **Salvare**, **Salva con nome**, o **Salva tutto** dal menu File o si chiude la soluzione, con conseguente **Salva tutto**, il seguente processo si verifica.  
   
- ![Editor standard](~/docs/extensibility/internals/media/public.gif "Public")  
+ ![Editor standard](~/extensibility/internals/media/public.gif "Public")  
 Salvare, salva con nome e salvare qualsiasi gestione di comando per un editor standard  
   
  Questo processo è in dettaglio i passaggi seguenti:  

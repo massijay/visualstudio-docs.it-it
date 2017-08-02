@@ -31,7 +31,7 @@ caps.handback.revision: 26
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere la [procedura per creare un elenco in Excel connesso a un elenco di SharePoint](http://go.microsoft.com/fwlink/?LinkID=130263).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere la [procedura per creare un elenco in Excel connesso a un elenco di SharePoint](http://go.microsoft.com/fwlink/?LinkID=130263).  
   
 ### Per associare dati a un controllo ListObject  
   

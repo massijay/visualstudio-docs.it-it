@@ -40,11 +40,11 @@ manager: "ghogen"
   
 2.  Nel menu **Visualizza** scegliere **Altre finestre** \> **Origini dati**.  
   
-     ![Visualizza, Altre finestre, Origini dati](~/docs/data-tools/media/viewdatasources.png "ViewDataSources")  
+     ![Visualizza, Altre finestre, Origini dati](~/data-tools/media/viewdatasources.png "ViewDataSources")  
   
 3.  Nella finestra **Origini dati** fare clic su **Aggiungi nuova origine dati**.  
   
-     ![Aggiungi nuova origine dati](~/docs/data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
+     ![Aggiungi nuova origine dati](~/data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
   
 4.  Nella pagina **Seleziona un tipo di origine dati** scegliere **Database**, quindi scegliere **Avanti**.  
   
@@ -87,11 +87,11 @@ manager: "ghogen"
   
 2.  Nel menu **Visualizza** scegliere **Altre finestre** \> **Origini dati**.  
   
-     ![Visualizza, Altre finestre, Origini dati](~/docs/data-tools/media/viewdatasources.png "ViewDataSources")  
+     ![Visualizza, Altre finestre, Origini dati](~/data-tools/media/viewdatasources.png "ViewDataSources")  
   
 3.  Nella finestra **Origini dati** fare clic su **Aggiungi nuova origine dati**.  
   
-     ![Aggiungi nuova origine dati](~/docs/data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
+     ![Aggiungi nuova origine dati](~/data-tools/media/dataaddnewdatasource.png "dataAddNewDataSource")  
   
 4.  Nella pagina **Seleziona un tipo di origine dati** scegliere **Database**, quindi scegliere **Avanti**.  
   

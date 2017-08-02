@@ -59,14 +59,14 @@ Esplora Test consente di eseguire unit test da Visual Studio o progetti unit tes
   
  Esplora test può eseguire test da più progetti di test in una soluzione e da classi di test appartenenti a progetti di codice di produzione. I progetti di test possono usare framework di unit test diversi. Se il codice sottoposto a test è scritto per .NET Framework, il progetto di test può essere scritto in qualsiasi linguaggio destinato anche a .NET Framework, indipendentemente dal linguaggio del codice di destinazione. I progetti in codice C/C++ nativo devono essere testati tramite un framework di unit test C++.  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
   
 ##  <a name="BKMK_Run_tests_in_Test_Explorer"></a> Eseguire test in Esplora test  
  [Eseguire i test](#BKMK_Run_tests) **&#124;** [Eseguire i test dopo ogni compilazione](#BKMK_Run_tests_after_every_build)  
   
  Quando si compila il progetto di test, i test vengono visualizzati in Esplora test. Se Esplora test non è visualizzato, scegliere **Test** dal menu di Visual Studio, quindi scegliere **Windows**e infine **Esplora test**.  
   
- ![Esplora unit test](~/docs/ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![Esplora unit test](~/ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
  Quando si eseguono, si scrivono e si rieseguono i test, Esplora test mostra i risultati nei gruppi predefiniti **Test non superati**, **Test superati**, **Test ignorati** e **Test non eseguiti**. È possibile modificare la modalità con cui Esplora test raggruppa i test.  
   
@@ -74,7 +74,7 @@ Esplora Test consente di eseguire unit test da Visual Studio o progetti unit tes
   
  ![Eseguire test dalla barra degli strumenti di Esplora test](../test/media/ute_toolbar.png "UTE_ToolBar")  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
   
 ###  <a name="BKMK_Run_tests"></a> Eseguire i test  
  È possibile eseguire tutti i test nella soluzione, tutti i test in un gruppo o un set di test selezionati. Eseguire una delle operazioni seguenti:  
@@ -89,7 +89,7 @@ Esplora Test consente di eseguire unit test da Visual Studio o progetti unit tes
   
  Mentre il test viene eseguito, la barra Superato/Non superato nella parte superiore della finestra Esplora test mostra un'animazione. Al termine dell'esecuzione del test, la barra Superato/Non superato diventa verde se tutti i test sono stati superati o rossa se un test non è stato superato.  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
   
 ###  <a name="BKMK_Run_tests_after_every_build"></a> Eseguire i test dopo ogni compilazione  
   
@@ -98,9 +98,9 @@ Esplora Test consente di eseguire unit test da Visual Studio o progetti unit tes
   
 |||  
 |-|-|  
-|![Esecuzione dopo la compilazione](~/docs/test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|Per eseguire gli unit test dopo ogni compilazione locale, scegliere **Test** dal menu standard e quindi scegliere **Esegui test dopo compilazione** sulla barra degli strumenti di Esplora test.|  
+|![Esecuzione dopo la compilazione](~/test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|Per eseguire gli unit test dopo ogni compilazione locale, scegliere **Test** dal menu standard e quindi scegliere **Esegui test dopo compilazione** sulla barra degli strumenti di Esplora test.|  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
   
 ##  <a name="BKMK_View_test_results"></a> Visualizzare i risultati dei test  
  [Visualizzare i dettagli dei test](#BKMK_View_test_details) **&#124;** [Visualizzare il codice sorgente di un metodo di test](#BKMK_View_the_source_code_of_a_test_method)  
@@ -110,7 +110,7 @@ Esplora Test consente di eseguire unit test da Visual Studio o progetti unit tes
 ###  <a name="BKMK_View_test_details"></a> Visualizzare i dettagli dei test  
  Per visualizzare i dettagli di un singolo test, selezionare il test.  
   
- ![Dettagli sull'esecuzione dei test](~/docs/test/media/ute_testdetails.png "UTE_TestDetails")  
+ ![Dettagli sull'esecuzione dei test](~/test/media/ute_testdetails.png "UTE_TestDetails")  
   
  Il riquadro dei dettagli del test mostra le informazioni seguenti:  
   
@@ -126,12 +126,12 @@ Esplora Test consente di eseguire unit test da Visual Studio o progetti unit tes
   
 -   Analisi dello stack al momento del mancato superamento del test.  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
   
 ###  <a name="BKMK_View_the_source_code_of_a_test_method"></a> Visualizzare il codice sorgente di un metodo di test  
  Per visualizzare il codice sorgente per un metodo di test nell'editor di Visual Studio, selezionare il test e quindi scegliere **Apri Test** dal menu di scelta rapida (tastiera: F12).  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
   
 ##  <a name="BKMK_Group_and_filter_the_test_list"></a> Raggruppare e filtrare l'elenco dei test  
  [Raggruppamento dell'elenco di test](#BKMK_Grouping_the_test_list) **&#124;** [Raggruppare per tratti](#BKMK_Group_by_traits) **&#124;** [Eseguire ricerche e applicare filtri nell'elenco dei test](#BKMK_Search_and_filter_the_test_list)  
@@ -139,7 +139,7 @@ Esplora Test consente di eseguire unit test da Visual Studio o progetti unit tes
  Esplora test consente di raggruppare i test in categorie predefinite. La maggior parte dei framework di unit test eseguiti in Esplora Test consente di definire categorie personalizzate e coppie categoria/valore per raggruppare i test. È anche possibile filtrare l'elenco dei test in base a stringhe corrispondenti nelle proprietà dei test.  
   
 ###  <a name="BKMK_Grouping_the_test_list"></a> Raggruppamento dell'elenco di test  
- Per modificare la modalità di organizzazione dei test, scegliere la freccia rivolta verso il basso accanto al pulsante **Raggruppa** ![Pulsante Raggruppa di Esplora test](~/docs/test/media/ute_groupby_btn.png "UTE_GroupBy_btn") e selezionare un nuovo criterio di raggruppamento.  
+ Per modificare la modalità di organizzazione dei test, scegliere la freccia rivolta verso il basso accanto al pulsante **Raggruppa** ![Pulsante Raggruppa di Esplora test](~/test/media/ute_groupby_btn.png "UTE_GroupBy_btn") e selezionare un nuovo criterio di raggruppamento.  
   
  ![Raggruppare i test per categoria in Esplora test](../test/media/ute_groupbycategory.png "UTE_GroupByCategory")  
   
@@ -152,7 +152,7 @@ Esplora Test consente di eseguire unit test da Visual Studio o progetti unit tes
 |**Tratti**|Raggruppa i test in base a coppie categoria/valore definite. La sintassi per specificare i valori e le categorie dei tratti è definita dal framework di unit test.|  
 |**Progetto**|Raggruppa i test in base al nome dei progetti.|  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
   
 ###  <a name="BKMK_Group_by_traits"></a> Raggruppare per tratti  
  Una tratto è in genere una coppia nome/valore di una categoria, ma può anche essere una singola categoria. I tratti possono essere assegnati ai metodi identificati come metodi di test dal framework di unit test. Un framework di unit test può definire le categorie dei tratti. È possibile aggiungere valori alle categorie dei tratti per definire coppie nome/valore personalizzate per le categorie. La sintassi per specificare i valori e le categorie dei tratti è definita dal framework di unit test.  
@@ -200,7 +200,7 @@ TEST_METHOD(Method1)
 |`TEST_OWNER(ownerAlias)`|Usare il tratto Owner predefinito per specificare un proprietario del metodo di test.|  
 |`TEST_PRIORITY(priority)`|Usare il tratto Priority predefinito per assegnare priorità relative ai metodi di test.|  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
   
 ###  <a name="BKMK_Search_and_filter_the_test_list"></a> Eseguire ricerche e applicare filtri nell'elenco dei test  
  È possibile usare i filtri di Esplora Test per limitare i metodi di test nei progetti che vengono visualizzati ed eseguiti.  
@@ -244,7 +244,7 @@ FullName:"MyClass" - FullName:"PerfTest"
   
  restituisce tutti i test che includono "MyClass" nel nome, ad eccezione dei test che includono anche "PerfTest" nel nome.  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
   
 ##  <a name="BKMK_Create_custom_playlists"></a> Creare playlist personalizzate  
  È possibile creare e salvare un elenco di test da eseguire o visualizzare come gruppo. Quando si seleziona una playlist, i test inclusi nell'elenco saranno visualizzati in Esplora test. È possibile aggiungere un test a più playlist e tutti i test del progetto saranno disponibili quando si sceglie la playlist predefinita **Tutti i test**.  
@@ -259,7 +259,7 @@ FullName:"MyClass" - FullName:"PerfTest"
   
  Se i singoli test non hanno dipendenze che ne impediscono l'esecuzione in qualsiasi ordine, attivare l'esecuzione parallela dei test con l'interruttore ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") sulla barra degli strumenti. Questo può ridurre notevolmente il tempo impiegato per eseguire tutti i test.  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
   
 ##  <a name="BKMK_Debug_and_analyze_unit_tests"></a> Eseguire il debug e l'analisi di unit test  
  [Eseguire il debug di unit test](#BKMK_Debug_unit_tests) **&#124;** [Diagnosticare i problemi di prestazioni dei metodi di test](#BKMK_Diagnose_test_method_performance_issues) **&#124;** [Analizzare il code coverage di unit test](#BKMK_Analyzeunit_test_code_coverage)  
@@ -276,7 +276,7 @@ FullName:"MyClass" - FullName:"PerfTest"
   
  Per altre informazioni sul debugger, vedere [Debugging in Visual Studio](../debugger/debugging-in-visual-studio.md).  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
   
 ###  <a name="BKMK_Diagnose_test_method_performance_issues"></a> Diagnosticare i problemi di prestazioni dei metodi di test  
  Per diagnosticare il motivo per cui un metodo di test richiede troppo tempo, selezionare il metodo in Esplora Test e quindi scegliere Profilo dal menu di scelta rapida. Vedere [Esplora prestazioni](../profiling/performance-explorer.md).  
@@ -302,7 +302,7 @@ FullName:"MyClass" - FullName:"PerfTest"
   
  Per altre informazioni, vedere [Uso di code coverage per determinare la quantità di codice testato](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS_BackToTop") [Sommario](#BKMK_Contents)  
   
 ##  <a name="BKMK_External_resources"></a> Risorse esterne  
   

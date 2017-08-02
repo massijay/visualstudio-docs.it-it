@@ -57,15 +57,15 @@ Vedere anche gli argomenti su [IntelliSense](code-intellisense.md), sui [frammen
 
 Oltre ad applicare un colore alle diverse parti del codice, ad esempio stringhe, commenti e parole chiave, RTVS evidenzia e abilita anche i collegamenti nei commenti:
 
-![Colorazione della sintassi per il codice R](~/docs/rtvs/media/editing-syntax-colors.png)
+![Colorazione della sintassi per il codice R](~/rtvs/media/editing-syntax-colors.png)
 
 Per personalizzare i tipi di carattere e alcuni colori di evidenziazione, selezionare il comando **Strumenti > Opzioni**, passare ad **Ambiente > Tipi di carattere e colori** e modificare le impostazioni per gli elementi correlati a R nella casella **Elementi visualizzati:**:
 
-![Tipi di carattere e opzioni di colore per il codice R](~/docs/rtvs/media/editing-syntax-colors-options.png)
+![Tipi di carattere e opzioni di colore per il codice R](~/rtvs/media/editing-syntax-colors-options.png)
 
 Visual Studio sottolinea anche gli errori di sintassi nell'editor:
 
-![Evidenziazione degli errori di sintassi nel codice R](~/docs/rtvs/media/editing-syntax-error.png)
+![Evidenziazione degli errori di sintassi nel codice R](~/rtvs/media/editing-syntax-error.png)
 
 Per modificare questo comportamento, vedere l'impostazione **Avanzate > Controllo della sintassi** nelle [opzioni dell'editor](#editor-options).
 
@@ -73,11 +73,11 @@ Per modificare questo comportamento, vedere l'impostazione **Avanzate > Controll
 
 Durante la digitazione del codice, RTVS offre il completamento automatico come descritto nella pagina su [IntelliSense](code-intellisense.md). Esegue anche la formattazione automatica, completando ad esempio il codice con graffe e parentesi: 
 
-![Animazione della formattazione inline](~/docs/rtvs/media/editing-inline-formatting.gif)
+![Animazione della formattazione inline](~/rtvs/media/editing-inline-formatting.gif)
 
 Durante la digitazione di chiamate a funzioni con molti parametri, è spesso utile poter allineare i parametri per rendere il codice più leggibile. RTVS ricorda il rientro impostato per i parametri e lo applica automaticamente alle righe successive:
 
-![Animazione del rientro automatico](~/docs/rtvs/media/editing-auto-indentation.gif)
+![Animazione del rientro automatico](~/rtvs/media/editing-auto-indentation.gif)
 
 Per modificare questo comportamento, vedere le [opzioni dell'editor](#editor-options) descritte di seguito per il gruppo **Tabulazioni**.
 
@@ -85,7 +85,7 @@ Le aree di codice comprimibili consentono di nascondere temporaneamente parte de
 
 Per creare un'area personalizzata, racchiudere il codice interessato con commenti che terminano con `---`. Il piccolo controllo + /- a sinistra del codice consente di espandere e comprimere le aree:
 
-![Creazione di un'area comprimibile con commenti](~/docs/rtvs/media/editing-collapsible-regions.gif)
+![Creazione di un'area comprimibile con commenti](~/rtvs/media/editing-collapsible-regions.gif)
  
 Per impostazione predefinita, Visual Studio inserisce gli spazi quando si preme TAB. Anche in questo caso è possibile modificare tale comportamento, seguendo le istruzioni descritte in [Opzioni, Editor di testo, Tutti i linguaggi](../ide/reference/options-text-editor-all-languages.md).
 
@@ -99,7 +99,7 @@ Si aprirà una nuova finestra dell'editor contenente il codice sorgente per la f
 
 **Visualizza definizione**, se richiamata dal menu di scelta rapida o con ALT+F12, inserisce un'area scorrevole di sola lettura contenente il codice sorgente della funzione sotto la chiamata di funzione:
 
-![Animazione per Visualizza definizione](~/docs/rtvs/media/editing-peek-definition.gif)
+![Animazione per Visualizza definizione](~/rtvs/media/editing-peek-definition.gif)
 
 ## <a name="sending-code-to-the-interactive-window"></a>Invio di codice alla finestra interattiva
 
@@ -131,7 +131,7 @@ Le opzioni di formattazione, tra cui la disabilitazione della formattazione, ven
 
 RTVS offre un collegamento per la generazione di commenti [Roxygen](http://roxygen.org/) che usa i nomi dei parametri di una funzione. È sufficiente digitare `###` in una riga vuota sopra la definizione della funzione:
 
-![Animazione dell'inserimento di un commento Roxygen](~/docs/rtvs/media/editing-roxygen-comments.gif)
+![Animazione dell'inserimento di un commento Roxygen](~/rtvs/media/editing-roxygen-comments.gif)
 
 ## <a name="editor-options"></a>Opzioni dell'editor
 

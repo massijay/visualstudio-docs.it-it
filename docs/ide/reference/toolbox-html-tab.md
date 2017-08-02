@@ -53,12 +53,12 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
  Per impostazione predefinita, nella scheda HTML sono disponibili i seguenti strumenti.  
 
  **Puntatore**  
- ![Puntatore pagina HTML finestra di progettazione mobile ASP.NET](~/docs/ide/reference/media/vxpointer.gif "vxPointer")  
+ ![Puntatore pagina HTML finestra di progettazione mobile ASP.NET](~/ide/reference/media/vxpointer.gif "vxPointer")  
 
  Questo strumento viene selezionato per impostazione predefinita quando si fa clic su una delle schede della casella degli strumenti e non è possibile eliminarlo. Il puntatore consente di trascinare oggetti nell'area di visualizzazione Progettazione, ridimensionarli e riposizionarli nella pagina o nel form. Per altre informazioni, vedere [Uso della casella degli strumenti](../../ide/using-the-toolbox.md).  
 
  **Input (Pulsante)**  
- ![Pulsante pagina Web HTML](~/docs/ide/reference/media/vxbutton.gif "vxButton")  
+ ![Pulsante pagina Web HTML](~/ide/reference/media/vxbutton.gif "vxButton")  
 
  Consente di inserire un elemento `input` di `type="button"`. Per modificare il testo visualizzato, modificare la proprietà `name`. Per impostazione predefinita, come primo pulsante viene inserito `id="Button1"`, come secondo pulsante `id="Button2"` e così via.  
 
@@ -69,7 +69,7 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
 ```  
 
  **Input (Reimposta)**  
- ![Screenshot HTMLpageResetButton](~/docs/ide/reference/media/vxreset.gif "vxReset")  
+ ![Screenshot HTMLpageResetButton](~/ide/reference/media/vxreset.gif "vxReset")  
 
  Consente di inserire un elemento `input` di `type="reset"`. Per modificare il testo visualizzato, modificare la proprietà `name`. Per impostazione predefinita, come primo pulsante di reimpostazione viene inserito `id="Reset1"`, come secondo `id="Reset2"` e così via.  
 
@@ -80,7 +80,7 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
 ```  
 
  **Input (Invia)**  
- ![Screenshot HTMLpageToolbarSubmitButton](~/docs/ide/reference/media/vxsubmit.gif "vxSubmit")  
+ ![Screenshot HTMLpageToolbarSubmitButton](~/ide/reference/media/vxsubmit.gif "vxSubmit")  
 
  Consente di inserire un elemento `input` di `type="submit"`. Per modificare il testo visualizzato, modificare la proprietà `name`. Per impostazione predefinita, come primo pulsante di invio viene inserito `id="Submit1"`, come secondo `id="Submit2"` e così via.  
 
@@ -91,7 +91,7 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
 ```  
 
  **Input (Testo)**  
- ![Screenshot HTMLpageToolbarTextField](~/docs/ide/reference/media/vxtextfield.gif "vxTextfield")  
+ ![Screenshot HTMLpageToolbarTextField](~/ide/reference/media/vxtextfield.gif "vxTextfield")  
 
  Consente di inserire un elemento `input` di `type="text"` nel documento. Per modificare il testo predefinito visualizzato, modificare l'attributo `value`. Per impostazione predefinita, come primo campo di testo viene inserito `id="Text1"`, come secondo `id="Text2"` e così via.  
 
@@ -105,7 +105,7 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
 >  È consigliabile convalidare tutto l'input degli utenti. Per altre informazioni, vedere [Validating User Input in ASP.NET Web Pages (Razor) Sites](https://docs.microsoft.com/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites) (Convalida dell'input utente nelle pagine Web ASP.NET).  
 
  **Input (File)**  
- ![Campo File pagina HTML](~/docs/ide/reference/media/vxfilefield.gif "vxFilefield")  
+ ![Campo File pagina HTML](~/ide/reference/media/vxfilefield.gif "vxFilefield")  
 
  Consente di inserire un elemento `input` di `type="file"` nel documento. Per impostazione predefinita, come primo campo file viene inserito `id="File1"`, come secondo `id="File2"` e così via.  
 
@@ -119,7 +119,7 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
 >  È consigliabile convalidare tutto l'input degli utenti. Per altre informazioni, vedere [Validating User Input in ASP.NET Web Pages (Razor) Sites](https://docs.microsoft.com/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites) (Convalida dell'input utente nelle pagine Web ASP.NET).  
 
  **Input (Password)**  
- ![Campo password Visual Studio](~/docs/ide/reference/media/vxpassword.gif "vxPassword")  
+ ![Campo password Visual Studio](~/ide/reference/media/vxpassword.gif "vxPassword")  
 
  Consente di inserire un elemento `input` di `type="password"`. Per impostazione predefinita, come primo campo file password viene inserito `id="Password1"`, come secondo `id="Password2"` e così via.  
 
@@ -133,7 +133,7 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
 >  Se l'applicazione trasmette nomi utente e password, è necessario configurare il sito Web per usare SSL (Secure Sockets Layer) per la crittografia della trasmissione. Per altre informazioni, vedere "Securing Connections with SSL" (Protezione delle connessioni con SSL) in [IIS Operations Guide](http://go.microsoft.com/fwlink/?linkid=47856) (Guida operativa di IIS). È poi consigliabile convalidare tutto l'input degli utenti. Per altre informazioni, vedere [Validating User Input in ASP.NET Web Pages (Razor) Sites](https://docs.microsoft.com/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites) (Convalida dell'input utente nelle pagine Web ASP.NET).  
 
  **Input (Casella di controllo)**  
- ![Opzione Checkbox casella degli strumenti pagina Web HTML](~/docs/ide/reference/media/vxcheckbox.gif "vxCheckbox")  
+ ![Opzione Checkbox casella degli strumenti pagina Web HTML](~/ide/reference/media/vxcheckbox.gif "vxCheckbox")  
 
  Consente di inserire un elemento `input` di `type="checkbox"`. Per modificare il testo visualizzato, modificare la proprietà `name`. Per impostazione predefinita, come prima casella di controllo viene inserito `id="Checkbox1"`, come seconda `id="Checkbox2"` e così via.  
 
@@ -144,7 +144,7 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
 ```  
 
  **Input (Pulsante di opzione)**  
- ![Screenshot VisualStudioHTMLpageRadioButton](~/docs/ide/reference/media/vxradio.gif "vxRadio")  
+ ![Screenshot VisualStudioHTMLpageRadioButton](~/ide/reference/media/vxradio.gif "vxRadio")  
 
  Consente di inserire un elemento `input` di `type="radio"`. Per modificare il testo visualizzato, modificare la proprietà `name`. Per impostazione predefinita, come primo pulsante di opzione viene inserito `id="Radio1"`, come secondo `id="Radio2"` e così via.  
 
@@ -155,7 +155,7 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
 ```  
 
  **Input (Nascosto)**  
- ![Elemento nascosto pagina HTML](~/docs/ide/reference/media/vxhidden.gif "vxhidden")  
+ ![Elemento nascosto pagina HTML](~/ide/reference/media/vxhidden.gif "vxhidden")  
 
  Consente di inserire un elemento `input` di `type="hidden"`. Per impostazione predefinita, come primo campo nascosto viene inserito `id="Hidden1"`, come secondo `id="Hidden2"` e così via.  
 
@@ -166,7 +166,7 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
 ```  
 
  **Area di testo**  
- ![Area testo casella degli strumenti pagina HTML](~/docs/ide/reference/media/vxtextarea.gif "vxTextarea")  
+ ![Area testo casella degli strumenti pagina HTML](~/ide/reference/media/vxtextarea.gif "vxTextarea")  
 
  Consente di inserire un elemento `textarea`. È possibile ridimensionare l'area di testo oppure usare le barre di scorrimento per visualizzare il testo che si estende oltre l'area di visualizzazione. Per modificare il testo predefinito visualizzato, modificare l'attributo `value`. Per impostazione predefinita, come prima area di testo viene inserito `id="textarea1"`, come seconda `id=" textarea 2"` e così via.  
 
@@ -180,7 +180,7 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
 >  È consigliabile convalidare tutto l'input degli utenti. Per altre informazioni, vedere [Validating User Input in ASP.NET Web Pages (Razor) Sites](https://docs.microsoft.com/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites) (Convalida dell'input utente nei siti di pagine Web ASP.NET (Razor)).  
 
  **Tabella**  
- ![Screenshot HTMLpageToolbarTable](~/docs/ide/reference/media/vxtable.gif "vxTable")  
+ ![Screenshot HTMLpageToolbarTable](~/ide/reference/media/vxtable.gif "vxTable")  
 
  Consente di inserire un elemento `table`.  
 
@@ -191,7 +191,7 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
 ```  
 
 **Immagine**  
- ![Elemento immagine pagina HTML](~/docs/ide/reference/media/vximage.gif "vxImage")  
+ ![Elemento immagine pagina HTML](~/ide/reference/media/vximage.gif "vxImage")  
 
  Consente di inserire un elemento `img`. Modificare questo elemento per specificare il testo `src` e `alt`.  
 
@@ -202,7 +202,7 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
 ```  
 
  **Seleziona**  
- ![Elenco a discesa casella degli strumenti pagina HTML](~/docs/ide/reference/media/vxdropdown.gif "vxDropdown")  
+ ![Elenco a discesa casella degli strumenti pagina HTML](~/ide/reference/media/vxdropdown.gif "vxDropdown")  
 
  Consente di inserire un elemento `select` a discesa senza attributo `size`. Per impostazione predefinita, come prima casella di riepilogo viene inserito `id="select1"`, come seconda `id="select2"` e così via.  
 
@@ -215,7 +215,7 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
  È possibile creare un elemento `select` aumentando il valore della proprietà Size.  
 
  **Righello orizzontale**  
- ![Elemento righello orizzontale pagina HTML](~/docs/ide/reference/media/vxhorizontal.gif "vxHorizontal")  
+ ![Elemento righello orizzontale pagina HTML](~/ide/reference/media/vxhorizontal.gif "vxHorizontal")  
 
  Consente di inserire un elemento `hr`. Per aumentare lo spessore della linea, modificare l'attributo `size`.  
 
@@ -226,7 +226,7 @@ La scheda **HTML** della casella degli strumenti contiene componenti utili nelle
 ```  
 
  **Div**  
- ![Etichetta pagina HTML](~/docs/ide/reference/media/vxlabel.gif "vxLabel")  
+ ![Etichetta pagina HTML](~/ide/reference/media/vxlabel.gif "vxLabel")  
 
  Consente di inserire un elemento `div` che include un attributo `ms_positioning="FlowLayout"`. Tranne che per i valori relativi a larghezza e altezza, questo elemento è identico a un pannello di layout flusso. Per formattare il testo contenuto nell'elemento `div`, aggiungere un attributo `class="stylename"` al tag di apertura.  
 

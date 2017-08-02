@@ -59,7 +59,7 @@ caps.handback.revision: 58
   
 -   Microsoft [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] o Microsoft Outlook 2010.  
   
- ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione correlata, vedere il video su [come usare i riquadri attività in Outlook](http://go.microsoft.com/fwlink/?LinkID=130309).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione correlata, vedere il video su [come usare i riquadri attività in Outlook](http://go.microsoft.com/fwlink/?LinkID=130309).  
   
 ## Creazione del progetto  
  I riquadri attività personalizzati vengono implementati nei componenti aggiuntivi VSTO. Creare innanzitutto un progetto di componente aggiuntivo VSTO per Outlook.  

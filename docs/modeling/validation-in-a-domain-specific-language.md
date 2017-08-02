@@ -140,7 +140,7 @@ public partial class ParentsHaveChildren
   
  L'esempio si applica al seguente modello di dominio. La relazione ParentsHaveChildren include ruoli denominati Child e Parent.  
   
- ![Diagramma di definizione DSL &#45; modello di albero genealogico](~/docs/modeling/media/familyt_person.png "FamilyT_Person")  
+ ![Diagramma di definizione DSL &#45; modello di albero genealogico](~/modeling/media/familyt_person.png "FamilyT_Person")  
   
 ## <a name="validation-categories"></a>Categorie di convalida  
  Nel <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> attributo, specificare quando deve essere eseguito il metodo di convalida.  

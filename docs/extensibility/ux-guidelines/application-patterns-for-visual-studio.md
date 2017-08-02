@@ -88,16 +88,16 @@ Finestre di Visual Studio degli strumenti dispongono di diversi stati, alcuni de
   
 -   **Documento a schede** finestre degli strumenti possono essere ancorate anche all'interno del documento. Ciò è utile per finestre degli strumenti di grandi dimensioni, ad esempio il Visualizzatore oggetti, che richiedono più ampia di ancoraggio per i bordi del frame, è possibile.  
   
-![Stati della finestra dello strumento in Visual Studio](~/docs/extensibility/ux-guidelines/media/0702-01_toolwindowstates.png "0702-01_ToolWindowStates")<br />Stati della finestra degli strumenti in Visual Studio
+![Stati della finestra dello strumento in Visual Studio](~/extensibility/ux-guidelines/media/0702-01_toolwindowstates.png "0702-01_ToolWindowStates")<br />Stati della finestra degli strumenti in Visual Studio
   
 #### <a name="single-instance-and-multi-instance"></a>A istanza singola e multi-istanza  
 Finestre degli strumenti sono a istanza singola o multi-istanza. Alcune finestre degli strumenti a istanza singola potrebbero essere associati alla finestra del documento attivo, mentre le finestre degli strumenti multi-istanza potrebbero non. Finestre degli strumenti di multi-istanza rispondono il **finestra &gt; nuova finestra** comando creando una nuova istanza della finestra. L'immagine seguente illustra una finestra degli strumenti, se si abilita il comando nuova finestra quando è attiva un'istanza della finestra:  
   
-![Finestra degli strumenti, l'abilitazione di comando 'Nuova finestra' quando è attiva un'istanza della finestra](~/docs/extensibility/ux-guidelines/media/0702-02_toolwindowenablingcommand.png "0702-02_ToolWindowEnablingCommand")<br />Finestra degli strumenti, l'abilitazione di comando 'Nuova finestra' quando è attiva un'istanza della finestra  
+![Finestra degli strumenti, l'abilitazione di comando 'Nuova finestra' quando è attiva un'istanza della finestra](~/extensibility/ux-guidelines/media/0702-02_toolwindowenablingcommand.png "0702-02_ToolWindowEnablingCommand")<br />Finestra degli strumenti, l'abilitazione di comando 'Nuova finestra' quando è attiva un'istanza della finestra  
   
 Le finestre degli strumenti a istanza singola possono essere nascoste o visualizzate, mentre le finestre degli strumenti multi-istanza possono essere chiusa nonché nascoste. Tutte le finestre degli strumenti possono essere ancorate, collegata a schede, a virgola mobile o impostare come finestra figlio Multiple-Document Interface (MDI) (simile a una finestra del documento). Tutte le finestre degli strumenti devono rispondere ai comandi nel menu finestra Gestione finestra appropriata:  
   
-![Comandi della finestra Gestione nel menu finestra di Visual Studio](~/docs/extensibility/ux-guidelines/media/0702-03_windowmanagementcontrols.png "0702-03_WindowManagementControls")<br />Comandi della finestra Gestione nel menu finestra di Visual Studio
+![Comandi della finestra Gestione nel menu finestra di Visual Studio](~/extensibility/ux-guidelines/media/0702-03_windowmanagementcontrols.png "0702-03_WindowManagementControls")<br />Comandi della finestra Gestione nel menu finestra di Visual Studio
   
 #### <a name="document-specific-tool-windows"></a>Finestre degli strumenti specifici del documento  
 Alcune finestre degli strumenti sono progettati per modificare in base a un determinato tipo di documento. Queste finestre vengono aggiornati continuamente per riflettere funzionalità applicabili alla finestra del documento attivo nell'IDE.  
@@ -330,7 +330,7 @@ Prendere in considerazione le differenze tra questi tipi di base delle finestre 
 ####  <a name="BKMK_SimpleDialogs"></a>Finestre di dialogo semplice  
 Una semplice finestra di dialogo è una presentazione dei controlli in una finestra modale. In questa presentazione potrebbe includere le variazioni del pattern di controllo complessi, ad esempio un selettore del campo. Per i dialoghi semplice, seguire il layout generale standard, nonché qualsiasi layout specifici necessari per i raggruppamenti di controllo complessa.
   
-![> Crea chiave con nome sicuro è riportato un esempio di finestra di dialogo semplice in Visual Studio.](~/docs/extensibility/ux-guidelines/media/0704-01_createstrongnamekey.png "0704-01_CreateStrongNameKey")<br />Crea chiave con nome sicuro è riportato un esempio di finestra di dialogo semplice in Visual Studio.
+![> Crea chiave con nome sicuro è riportato un esempio di finestra di dialogo semplice in Visual Studio.](~/extensibility/ux-guidelines/media/0704-01_createstrongnamekey.png "0704-01_CreateStrongNameKey")<br />Crea chiave con nome sicuro è riportato un esempio di finestra di dialogo semplice in Visual Studio.
   
 ####  <a name="BKMK_LayeredDialogs"></a>Finestre di dialogo a più livelli  
 Le finestre di dialogo a più livelli include schede, dashboard e strutture incorporate. Vengono utilizzati per ottimizzare immobiliare quando sono presenti più gruppi di controlli disponibili in un singolo elemento di interfaccia utente. I raggruppamenti sono disposti in modo che l'utente può scegliere di raggruppamento per visualizzare in qualsiasi momento.  
@@ -339,7 +339,7 @@ Nel caso più semplice, il meccanismo per passare da raggruppamenti è un contro
   
 Il **strumenti &gt; opzioni** finestra di dialogo è riportato un esempio di finestra di dialogo a più livelli utilizzando una struttura ad albero incorporato:  
   
-![Strumenti > Opzioni è riportato un esempio di finestra di dialogo a più livelli in Visual Studio.](~/docs/extensibility/ux-guidelines/media/0704-02_toolsoptions.png "0704-02_ToolsOptions")<br />Strumenti > Opzioni è riportato un esempio di finestra di dialogo a più livelli in Visual Studio.
+![Strumenti > Opzioni è riportato un esempio di finestra di dialogo a più livelli in Visual Studio.](~/extensibility/ux-guidelines/media/0704-02_toolsoptions.png "0704-02_ToolsOptions")<br />Strumenti > Opzioni è riportato un esempio di finestra di dialogo a più livelli in Visual Studio.
   
 ####  <a name="BKMK_Wizards"></a>Procedure guidate  
 Procedure guidate sono utili per indirizzare l'utente attraverso una sequenza di passaggi logica per il completamento di un'attività. Una serie di scelte disponibili nei pannelli sequenziali, e l'utente deve continuare a ogni passaggio prima di procedere al successivo. Una volta sufficienti valori predefiniti sono disponibili, il **fine** pulsante è abilitato.  
@@ -395,12 +395,12 @@ Essere coerente con le configurazioni del controllo esistenti che eseguono la st
   
 -   I pulsanti della Guida nella barra del titolo sono stati deprecati. Non verranno aggiunte alle nuove finestre di dialogo. Quando sono presenti, avviano un argomento della Guida che è concettualmente attinenti all'attività.  
   
- ![Specifiche delle linee guida per le barre del titolo nelle finestre di dialogo di Visual Studio](~/docs/extensibility/ux-guidelines/media/0704-03_titlebarspecs.png "0704-03_TitleBarSpecs")<br />Specifiche delle linee guida per le barre del titolo nelle finestre di dialogo di Visual Studio
+ ![Specifiche delle linee guida per le barre del titolo nelle finestre di dialogo di Visual Studio](~/extensibility/ux-guidelines/media/0704-03_titlebarspecs.png "0704-03_TitleBarSpecs")<br />Specifiche delle linee guida per le barre del titolo nelle finestre di dialogo di Visual Studio
   
 #### <a name="control-buttons"></a>Pulsanti di controllo  
 In generale, **OK**, **Annulla**, e **Guida** devono essere disposti orizzontalmente i pulsanti nell'angolo inferiore destro della finestra di dialogo. Se una finestra di dialogo dispone di diversi altri pulsanti nella parte inferiore della finestra di dialogo che presenta visual confusione con i pulsanti di controllo, è consentita la pila verticale alternativa.  
   
-![Configurazioni accettabile per i pulsanti di controllo nelle finestre di dialogo di Visual Studio](~/docs/extensibility/ux-guidelines/media/0704-04_controlbuttonconfig.png "0704-04_ControlButtonConfig")<br />Configurazioni accettabile per i pulsanti di controllo nelle finestre di dialogo di Visual Studio
+![Configurazioni accettabile per i pulsanti di controllo nelle finestre di dialogo di Visual Studio](~/extensibility/ux-guidelines/media/0704-04_controlbuttonconfig.png "0704-04_ControlButtonConfig")<br />Configurazioni accettabile per i pulsanti di controllo nelle finestre di dialogo di Visual Studio
   
 La finestra di dialogo deve includere un pulsante di controllo predefinito. Per determinare il comando migliore da utilizzare come valore predefinito, scegliere le opzioni seguenti (elencate in ordine di priorità):  
   
@@ -446,7 +446,7 @@ Corridoi e i dashboard sono pannelli che fungono da punti alle altre finestre di
   
 In alternativa, un'interfaccia utente che offre tutte le funzionalità disponibili in un'unica raccolta piuttosto che le funzionalità meno comuni in posizioni distinte di refactoring è semplicemente un dashboard.  
   
-![Concetto hallway per esporre un'interfaccia utente aggiuntiva in Outlook](~/docs/extensibility/ux-guidelines/media/0704-08_hallway.png "0704-08_Hallway")<br />Concetto hallway per esporre un'interfaccia utente aggiuntiva in Outlook
+![Concetto hallway per esporre un'interfaccia utente aggiuntiva in Outlook](~/extensibility/ux-guidelines/media/0704-08_hallway.png "0704-08_Hallway")<br />Concetto hallway per esporre un'interfaccia utente aggiuntiva in Outlook
   
 ##### <a name="adaptive-ui"></a>Interfaccia utente adattivo  
 Mostrare o nascondere l'interfaccia utente in base all'utilizzo o Self-segnalati esperienza di un utente è un altro modo per presentare l'interfaccia utente necessaria nascondendo altre parti. Questa operazione è sconsigliata in Visual Studio, come gli algoritmi per decidere quando visualizzare o nascondere l'interfaccia utente possono risultare difficili, e le regole saranno sempre errate per alcuni set di case.  
@@ -509,10 +509,10 @@ L'utente deve essere sempre in grado di determinare l'effetto di un'operazione d
   
 | Puntatore del mouse | Comando | Descrizione |  
 | :---: | --- | --- |  
-| ![Icona di "Nessun trascinamento" del mouse](~/docs/extensibility/ux-guidelines/media/0706-01_mousenodrop.png "0706 01_MouseNoDrop") | Nessun rilascio | Elemento non può essere rilasciato nella posizione specificata. |  
-| ![Icona "copia" del mouse](~/docs/extensibility/ux-guidelines/media/0706-02_mousecopy.png "0706 02_MouseCopy") | Copia | Elemento verrà copiato nel percorso di destinazione. |  
-| ![Mouse "Sposta" icona](~/docs/extensibility/ux-guidelines/media/0706-03_mousemove.png "0706 03_MouseMove") | Move | Elemento verrà spostato nel percorso di destinazione. |  
-| ![Icona "Aggiungi riferimento" del mouse](~/docs/extensibility/ux-guidelines/media/0706-04_mouseaddref.png "0706 04_MouseAddRef") | Aggiungi riferimento | Verrà aggiunto un riferimento all'elemento selezionato nel percorso di destinazione. |
+| ![Icona di "Nessun trascinamento" del mouse](~/extensibility/ux-guidelines/media/0706-01_mousenodrop.png "0706 01_MouseNoDrop") | Nessun rilascio | Elemento non può essere rilasciato nella posizione specificata. |  
+| ![Icona "copia" del mouse](~/extensibility/ux-guidelines/media/0706-02_mousecopy.png "0706 02_MouseCopy") | Copia | Elemento verrà copiato nel percorso di destinazione. |  
+| ![Mouse "Sposta" icona](~/extensibility/ux-guidelines/media/0706-03_mousemove.png "0706 03_MouseMove") | Move | Elemento verrà spostato nel percorso di destinazione. |  
+| ![Icona "Aggiungi riferimento" del mouse](~/extensibility/ux-guidelines/media/0706-04_mouseaddref.png "0706 04_MouseAddRef") | Aggiungi riferimento | Verrà aggiunto un riferimento all'elemento selezionato nel percorso di destinazione. |
 
 #### <a name="reference-based-projects"></a>Progetti di tipo riferimento  
  Nella tabella seguente sono riepilogate le operazioni di trascinamento e rilascio (nonché Taglia/Copia/Incolla) che devono essere eseguite in base alla natura di chiavi di elemento e il modificatore di origine selezionato per i progetti di destinazione in base a cui fa riferimento:  

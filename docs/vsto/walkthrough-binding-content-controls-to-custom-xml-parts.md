@@ -89,15 +89,15 @@ caps.handback.revision: 50
     > [!NOTE]  
     >  Se la scheda **Sviluppatore** non è visibile, è necessario prima di tutto visualizzarla.  Per altre informazioni, vedere [Procedura: visualizzare la scheda Sviluppo nella barra multifunzione](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).  
   
-6.  Nel gruppo **Controlli** scegliere il pulsante **Testo** ![PlainTextContentControl](~/docs/vsto/media/plaintextcontrol.gif "PlainTextContentControl") per aggiungere un <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> alla prima cella.  
+6.  Nel gruppo **Controlli** scegliere il pulsante **Testo** ![PlainTextContentControl](~/vsto/media/plaintextcontrol.gif "PlainTextContentControl") per aggiungere un <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> alla prima cella.  
   
 7.  Nella seconda colonna della tabella, scegliere la seconda riga \(accanto a **Data assunzione**\).  
   
-8.  Nel gruppo **Controlli** scegliere il pulsante **Selezione data** ![DatePickerContentControl](~/docs/vsto/media/datepicker.gif "DatePickerContentControl") per aggiungere un <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> alla seconda cella.  
+8.  Nel gruppo **Controlli** scegliere il pulsante **Selezione data** ![DatePickerContentControl](~/vsto/media/datepicker.gif "DatePickerContentControl") per aggiungere un <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> alla seconda cella.  
   
 9. Nella seconda colonna della tabella selezionare la terza riga \(accanto a **Posizione**\).  
   
-10. Nel gruppo **Controlli** scegliere il pulsante **Elenco a discesa** ![DropDownListContentControl](~/docs/vsto/media/dropdownlist.gif "DropDownListContentControl") per aggiungere un <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> all'ultima cella.  
+10. Nel gruppo **Controlli** scegliere il pulsante **Elenco a discesa** ![DropDownListContentControl](~/vsto/media/dropdownlist.gif "DropDownListContentControl") per aggiungere un <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> all'ultima cella.  
   
  È l'intera interfaccia utente per questo progetto.  Se si esegue il progetto a questo punto, è possibile digitare un testo nella prima riga e selezionare una data nella seconda riga.  Il passaggio successivo consiste nell'allegare i dati che si vogliano visualizzare al documento in un file XML.  
   

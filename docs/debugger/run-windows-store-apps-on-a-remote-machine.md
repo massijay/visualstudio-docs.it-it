@@ -23,7 +23,7 @@ caps.handback.revision: 43
 # Eseguire app di Windows Store in un computer remoto
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Si applica solo a Windows](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+![Si applica solo a Windows](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Tramite l'applicazione Visual Studio Remote Tools è possibile avviare, eseguire il debug, profilare e testare un'applicazione Windows Store in esecuzione su un dispositivo utilizzando un secondo computer che esegue Visual Studio. L'esecuzione su un dispositivo remoto può essere particolarmente efficiente quando il computer che esegue Visual Studio non supporta le funzionalità specifiche delle applicazioni Windows Store, come il tocco, la georilevazione e l'orientamento fisico. In questo argomento vengono descritte le procedure per configurare e avviare una sessione remota.  
   
@@ -147,7 +147,7 @@ caps.handback.revision: 43
 ##  <a name="BKMK_ConnectVS"></a> Configurazione del progetto di Visual Studio per il debug remoto  
  Specificare il dispositivo remoto a cui è possibile connettersi nelle proprietà del progetto. La procedura varia in base al linguaggio di programmazione. Puoi digitare il nome di rete del dispositivo remoto o selezionarlo nella finestra di dialogo Seleziona connessione debugger remoto.  
   
- ![Finestra di dialogo per la selezione della connessione del debugger remoto](~/docs/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
+ ![Finestra di dialogo per la selezione della connessione del debugger remoto](~/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
   
  Nella finestra di dialogo sono elencati solo i dispositivi che eseguono il debugger remoto presenti sulla subnet locale del computer con installato Visual Studio.  
   
@@ -166,7 +166,7 @@ caps.handback.revision: 43
 4.  Immettere il nome di rete del dispositivo remoto nella casella **Computer remoto** o selezionare **Trova** per scegliere il dispositivo nella finestra di dialogo **Seleziona connessione debugger remoto**.  
   
 ###  <a name="BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects"></a> Scelta del dispositivo remoto per progetti JavaScript e C\+\+  
- ![Proprietà del progetto C&#43;&#43; per il debug remoto](~/docs/debugger/media/vsrun_cpp_projprop_remote.png "VSRUN\_CPP\_ProjProp\_Remote")  
+ ![Proprietà del progetto C&#43;&#43; per il debug remoto](~/debugger/media/vsrun_cpp_projprop_remote.png "VSRUN\_CPP\_ProjProp\_Remote")  
   
 1.  In Esplora soluzioni seleziona il nome del progetto, quindi scegli **Proprietà** dal menu di scelta rapida.  
   

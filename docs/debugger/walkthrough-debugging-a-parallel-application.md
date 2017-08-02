@@ -104,7 +104,7 @@ In questa procedura dettagliata viene illustrato come utilizzare le finestre **A
   
      Lo stack di chiamate del thread principale viene visualizzato in una casella, mentre gli stack di chiamate degli altri quattro thread sono raggruppati in un'altra casella.  I quattro thread vengono raggruppati insieme in quanto i rispettivi stack frame condividono gli stessi contesti del metodo, vale a dire si trovano negli stessi metodi: `A`, `B` e `C`.  Per visualizzare gli ID e i nomi dei thread che condividono la stessa casella, passare il mouse sull'intestazione \(**4 thread**\).  Il thread corrente viene visualizzato in grassetto, come mostrato nell'illustrazione seguente.  
   
-     ![Descrizione comando che mostra ID e nomi dei thread](~/docs/debugger/media/pdb_walkthrough_1a.png "PDB\_Walkthrough\_1A")  
+     ![Descrizione comando che mostra ID e nomi dei thread](~/debugger/media/pdb_walkthrough_1a.png "PDB\_Walkthrough\_1A")  
   
      La freccia gialla indica lo stack frame attivo del thread corrente.  Per ottenere ulteriori informazioni, passarvi sopra il mouse.  
   
@@ -114,7 +114,7 @@ In questa procedura dettagliata viene illustrato come utilizzare le finestre **A
   
      Un'evidenziazione blu attorno a una casella indica che il thread corrente è parte di quella casella.  Il thread corrente è inoltre indicato dallo stack frame in grassetto nella descrizione comandi.  Facendo doppio clic sul thread principale nella finestra Thread, si osserverà che l'evidenziazione blu nella finestra **Stack in parallelo** si sposta di conseguenza.  
   
-     ![Thread principale evidenziato nella finestra Stack in parallelo](~/docs/debugger/media/pdb_walkthrough_1c.png "PDB\_Walkthrough\_1C")  
+     ![Thread principale evidenziato nella finestra Stack in parallelo](~/debugger/media/pdb_walkthrough_1c.png "PDB\_Walkthrough\_1C")  
   
 #### Per riprendere l'esecuzione fino al secondo punto di interruzione  
   
@@ -213,7 +213,7 @@ In questa procedura dettagliata viene illustrato come utilizzare le finestre **A
   
 5.  Scegliere **Finestre** dal menu **Debug**, quindi **Attività in parallelo**.  Nell'illustrazione seguente viene mostrata la finestra **Attività in parallelo**.  
   
-     ![Quattro attività in esecuzione nella finestra Attività in parallelo](~/docs/debugger/media/pdw_walkthrough_6.png "PDW\_Walkthrough\_6")  
+     ![Quattro attività in esecuzione nella finestra Attività in parallelo](~/debugger/media/pdw_walkthrough_6.png "PDW\_Walkthrough\_6")  
   
      Per ogni attività in esecuzione è possibile visualizzare il relativo ID, restituito dalla proprietà omonima, l'ID e il nome del thread che la esegue e il relativo percorso \(passando il mouse sul percorso viene visualizzata una descrizione comandi con l'intero stack di chiamate\).  Inoltre, nella colonna **Attività** è possibile visualizzare il metodo passato nell'attività, in altre parole il punto iniziale.  
   
@@ -241,7 +241,7 @@ In questa procedura dettagliata viene illustrato come utilizzare le finestre **A
   
      Quando in precedenza si utilizzava la finestra **Stack in parallelo**, venivano visualizzati i thread dell'applicazione.  Visualizzando nuovamente la finestra **Stack in parallelo**, questa volta si vedranno le attività dell'applicazione.  A tale proposito, selezionare **Attività** nella casella in alto a sinistra.  Nell'illustrazione che segue viene mostrata la visualizzazione Attività.  
   
-     ![Visualizzazione thread nella finestra Stack in parallelo](~/docs/debugger/media/pdb_walkthrough_8.png "PDB\_Walkthrough\_8")  
+     ![Visualizzazione thread nella finestra Stack in parallelo](~/debugger/media/pdb_walkthrough_8.png "PDB\_Walkthrough\_8")  
   
      I thread che al momento non eseguono attività non vengono mostrati nella visualizzazione Attività della finestra **Stack in parallelo**.  Inoltre, per i thread che eseguono attività, alcuni stack frame che non sono importanti per le attività vengono filtrati dalla parte superiore e dalla parte inferiore dello stack.  
   
@@ -267,7 +267,7 @@ In questa procedura dettagliata viene illustrato come utilizzare le finestre **A
   
      Fare clic con il pulsante destro del mouse su S.P nella finestra **Stack in parallelo**, quindi scegliere **Passa a thread**.  La finestra passerà alla visualizzazione Thread e verrà visualizzato il thread corrispondente.  È possibile vedere entrambe le attività nello stesso thread.  
   
-     ![Thread evidenziato nella visualizzazione thread](~/docs/debugger/media/pdb_walkthrough_9b.png "PDB\_Walkthrough\_9B")  
+     ![Thread evidenziato nella visualizzazione thread](~/debugger/media/pdb_walkthrough_9b.png "PDB\_Walkthrough\_9B")  
   
      Questo è un altro vantaggio della visualizzazione Attività nella finestra **Stack in parallelo** rispetto alla finestra **Thread**.  
   
@@ -287,7 +287,7 @@ In questa procedura dettagliata viene illustrato come utilizzare le finestre **A
   
      È possibile raggruppare le attività in base alle colonne.  Nella finestra **Attività in parallelo** fare clic con il pulsante destro del mouse sull'intestazione di colonna **Stato**, quindi scegliere **Raggruppa per stato**.  Nell'illustrazione seguente viene mostrata la finestra **Attività in parallelo** raggruppata in base allo stato.  
   
-     ![Attività raggruppate nella finestra Attività in parallelo](~/docs/debugger/media/pdb_walkthrough_12.png "PDB\_Walkthrough\_12")  
+     ![Attività raggruppate nella finestra Attività in parallelo](~/debugger/media/pdb_walkthrough_12.png "PDB\_Walkthrough\_12")  
   
      È anche possibile raggruppare in base alle altre colonne.  Raggruppando le attività, è possibile concentrarsi su un sottoinsieme di attività.  Ogni gruppo comprimibile presenta un conteggio degli elementi raggruppati insieme.  È anche possibile contrassegnare rapidamente tutti gli elementi nel gruppo facendo clic sul pulsante **Contrassegna** a destra del pulsante **Comprimi**.  
   

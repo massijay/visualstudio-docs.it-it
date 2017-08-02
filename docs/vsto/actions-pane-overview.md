@@ -34,7 +34,7 @@ caps.handback.revision: 100
 > [!NOTE]  
 >  Il riquadro azioni è diverso dai riquadri attività.  I riquadri attività personalizzati sono associati all'applicazione e non a un documento specifico.  È possibile creare riquadri attività personalizzati in componenti aggiuntivi VSTO per alcune applicazioni di Microsoft Office.  Per altre informazioni, vedere [Riquadri attività personalizzati](../vsto/custom-task-panes.md).  
   
- ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere [Procedura: Usare controlli WPF all'interno di un riquadro azioni di Excel](http://go.microsoft.com/fwlink/?LinkId=132763).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere [Procedura: Usare controlli WPF all'interno di un riquadro azioni di Excel](http://go.microsoft.com/fwlink/?LinkId=132763).  
   
 ## Visualizzazione del riquadro azioni  
  Il riquadro azioni è rappresentato dalla classe <xref:Microsoft.Office.Tools.ActionsPane>.  Quando si crea un progetto a livello di documento, un'istanza di questa classe è disponibile per il codice usando il campo `ActionsPane` della classe `ThisWorkbook` \(per Excel\) o `ThisDocument` \(per Word\) nel progetto.  Per visualizzare il riquadro azioni, aggiungere un controllo Windows Form alla proprietà <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> del campo `ActionsPane`.  L'esempio di codice seguente aggiunge un controllo denominato `actions` al riquadro azioni.  

@@ -84,11 +84,11 @@ static void Main(string[] args) { int a, b, c; a = 1; b = 2; c = 0; for (int i =
   
  Prendendo come esempio sempre il codice riportato nella sezione precedente, è possibile calcolare la media dei tre valori come segue:  
   
- ![WatchExpression](~/docs/debugger/media/watchexpression.png "WatchExpression")  
+ ![WatchExpression](~/debugger/media/watchexpression.png "WatchExpression")  
   
  In generale, le regole per la valutazione delle espressioni nella finestra **Espressioni di controllo** sono le stesse delle regole per la valutazione delle espressioni nel linguaggio di codifica. Se l'espressione contiene un errore di sintassi, è possibile aspettarsi lo stesso errore del compilatore che verrebbe visualizzato nell'editor del codice. Di seguito è riportato un esempio:  
   
- ![WatchExpressionError](~/docs/debugger/media/watchexpressionerror.png "WatchExpressionError")  
+ ![WatchExpressionError](~/debugger/media/watchexpressionerror.png "WatchExpressionError")  
   
 ##  <a name="bkmk_refreshWatch"></a> Aggiornamento dei valori delle espressioni di controllo che non sono aggiornati  
  In alcuni casi è possibile che venga visualizzata un'icona di aggiornamento \(un cerchio con due frecce o un cerchio con due linee ondulate\) quando un'espressione viene valutata nella finestra **Espressioni di controllo**.  Si supponga ad esempio che la valutazione delle proprietà sia disattivata \(**Strumenti\/Opzioni\/Debug\/Abilita valutazione delle proprietà e altre chiamate di funzioni implicite**\) e di avere il codice seguente:  

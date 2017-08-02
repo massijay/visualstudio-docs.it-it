@@ -200,13 +200,13 @@ Questa procedura dettagliata descrive i passaggi per identificare e risolvere un
   
 7.  Seleziona una porzione di uno-due secondi nella parte centrale del grafico di utilizzo della CPU (fai clic e trascina o usa i tasti freccia e TAB). La figura seguente mostra il grafico di utilizzo della CPU dopo una selezione. L'area non condivisa è la sezione.  
   
-     ![Grafico Utilizzo CPU](~/docs/profiling/media/js_htmlviz_app_cpu.png "JS_HTMLViz_App_CPU")  
+     ![Grafico Utilizzo CPU](~/profiling/media/js_htmlviz_app_cpu.png "JS_HTMLViz_App_CPU")  
   
 8.  Scegliere **Zoom avanti**.  
   
      Il grafico cambia per mostrare in maggior dettaglio il periodo selezionato. La figura seguente mostra il grafico di utilizzo della CPU dopo l'esecuzione dello zoom avanti. I dati specifici possono variare, ma il modello generale rimane tale.  
   
-     ![Visualizzazione con livello di zoom aumentato](~/docs/profiling/media/js_htmlviz_app_zoom.png "JS_HTMLViz_App_Zoom")  
+     ![Visualizzazione con livello di zoom aumentato](~/profiling/media/js_htmlviz_app_zoom.png "JS_HTMLViz_App_Zoom")  
   
      I dettagli della sequenza temporale nel riquadro inferiore riguardano il periodo selezionato.  
   

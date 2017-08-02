@@ -144,7 +144,7 @@ typedef struct _CrtMemBlockHeader
  Nuovi oggetti \(0xCD\)  
  I nuovi oggetti vengono riempiti con il valore 0xCD al momento dell'allocazione.  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Contenuto](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Contenuto](#BKMK_Contents)  
   
 ##  <a name="BKMK_Types_of_blocks_on_the_debug_heap"></a> Tipi di blocchi sull'heap di debug  
  Ciascun blocco di memoria dell'heap di debug viene assegnato a uno di cinque tipi di allocazione.  Questi tipi vengono registrati e visualizzati nei report in modo diverso per il rilevamento di perdite e i report sullo stato.  È possibile specificare il tipo di un blocco allocandolo mediante una chiamata diretta a una delle funzioni di allocazione dello heap di debug quale [\_malloc\_dbg](/visual-cpp/c-runtime-library/reference/malloc-dbg).  I cinque tipi di blocchi di memoria dell'heap di debug \(impostati nel membro **nBlockUse** della struttura **\_CrtMemBlockHeader**\) sono i seguenti:  
@@ -178,7 +178,7 @@ freedbg(pbData, _CLIENT_BLOCK|(MYSUBTYPE<<16));
 #define _BLOCK_SUBTYPE(block)       (block >> 16 & 0xFFFF)  
 ```  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Contenuto](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Contenuto](#BKMK_Contents)  
   
 ##  <a name="BKMK_Check_for_heap_integrity_and_memory_leaks"></a> Verificare l'integrità dell'heap e le perdite di memoria  
  È necessario accedere a diverse funzionalità dell'heap di debug dall'interno del codice.  Nella seguente sezione vengono descritte alcune funzionalità e le relative modalità di utilizzo.  
@@ -199,7 +199,7 @@ freedbg(pbData, _CLIENT_BLOCK|(MYSUBTYPE<<16));
 |**\_CRTDBG\_CHECK\_CRT\_DF**|Off|Fa sì che i blocchi contrassegnati come tipo **\_CRT\_BLOCK** vengano inclusi nelle operazioni di rilevamento di perdite e differenze tra stati.  Quando questo bit è off, la memoria utilizzata internamente dalla libreria di runtime viene ignorata durante queste operazioni.|  
 |**\_CRTDBG\_LEAK\_CHECK\_DF**|Off|Fa sì che il controllo delle perdite di memoria venga eseguito al termine del programma mediante una chiamata a **\_CrtDumpMemoryLeaks**.  Se l'applicazione non ha liberato tutta la memoria allocata, verrà generato un report di errore.|  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Contenuto](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Contenuto](#BKMK_Contents)  
   
 ##  <a name="BKMK_Configure_the_debug_heap"></a> Configurare l'heap di debug  
  Tutte le chiamate alle funzioni dell'heap, quali `malloc`, `free`, `calloc`, `realloc`, `new` e `delete` vengono risolte nelle versioni di debug di tali funzioni che operano nell'heap di debug.  Quando si libera un blocco di memoria, l'heap di debug controlla automaticamente l'integrità dei buffer presenti da entrambi i lati dell'area allocata e genera un messaggio di errore se si è verificata una sovrascrittura.  
@@ -234,7 +234,7 @@ tmpFlag &= ~_CRTDBG_CHECK_CRT_DF;
 _CrtSetDbgFlag( tmpFlag );  
 ```  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Contenuto](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Contenuto](#BKMK_Contents)  
   
 ##  <a name="BKMK_new__delete__and__CLIENT_BLOCKs_in_the_C___debug_heap"></a> new, delete e \_CLIENT\_BLOCK nell'heap di debug C\+\+  
  Le versioni di debug della libreria di runtime C contengono le versioni di debug degli operatori C\+\+ `new` e `delete`.  Se si utilizza il tipo di allocazione `_CLIENT_BLOCK`, è necessario chiamare la versione di debug dell'operatore `new` in modo diretto oppure creare macro che sostituiscano l'operatore `new` nella modalità di debug, come illustrato nell'esempio che segue:  
@@ -272,7 +272,7 @@ int main( )   {
   
  La versione di debug dell'operatore `delete` può essere utilizzata con tutti i tipi di blocco e non è necessario apportare alcuna modifica al programma quando si compila una versione di rilascio.  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Contenuto](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Contenuto](#BKMK_Contents)  
   
 ##  <a name="BKMK_Heap_State_Reporting_Functions"></a> Funzioni per la creazione di report sullo stato dello heap  
  **\_CrtMemState**  
@@ -309,7 +309,7 @@ typedef struct _CrtMemState
 |[\_CrtMemDumpAllObjectsSince](/visual-cpp/c-runtime-library/reference/crtmemdumpallobjectssince)|Esegue il dump di informazioni su tutti gli oggetti allocati dopo la generazione di un dato snapshot dell'heap o dall'inizio dell'esecuzione.  Ogni volta che esegue il dump di un blocco **\_CLIENT\_BLOCK**, chiama una funzione hook fornita dall'applicazione, qualora ne sia stata installata una mediante **\_CrtSetDumpClient**.|  
 |[\_CrtDumpMemoryLeaks](/visual-cpp/c-runtime-library/reference/crtdumpmemoryleaks)|Determina se si sono verificate perdite di memoria dall'inizio dell'esecuzione del programma e, in caso positivo, esegue il dump di tutti gli oggetti allocati.  Ogni volta che **\_CrtDumpMemoryLeaks** esegue il dump di un blocco **\_CLIENT\_BLOCK**, chiama una funzione hook fornita dall'applicazione, qualora ne sia stata installata una mediante **\_CrtSetDumpClient**.|  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Contenuto](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Contenuto](#BKMK_Contents)  
   
 ##  <a name="BKMK_Track_Heap_Allocation_Requests"></a> Rilevare le richieste di allocazione dell'heap  
  Sebbene conoscere il nome del file sorgente e il numero di riga in cui viene eseguita un'asserzione o una macro per la creazione di report sia spesso molto utile per individuare la causa di un problema, non è sempre così per le funzioni di allocazione heap.  Sebbene le macro possano essere inserite in numerosi punti appropriati nella struttura ad albero logica di un'applicazione, un'allocazione è spesso inclusa in una speciale routine che viene richiamata in momenti diversi da più posizioni differenti.  La difficoltà non risiede in genere nel sapere quale riga di codice ha eseguito un'allocazione errata, ma piuttosto nel capire quale delle migliaia di allocazioni eseguite da tale riga di codice è responsabile del problema e perché.  
@@ -364,7 +364,7 @@ int addNewRecord(struct RecStruct *prevRecord,
   
  Il nome del file di origine e il numero di riga in cui è stata effettuata la chiamata a `addNewRecord` verranno memorizzati in ciascun blocco allocato nell'heap di debug e verranno indicati quando il blocco verrà esaminato.  
   
- ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Contenuto](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Contenuto](#BKMK_Contents)  
   
 ## Vedere anche  
  [Debug del codice nativo](../debugger/debugging-native-code.md)

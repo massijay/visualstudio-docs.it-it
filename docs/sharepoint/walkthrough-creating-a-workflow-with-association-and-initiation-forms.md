@@ -275,15 +275,15 @@ caps.handback.revision: 37
   
 6.  Nella finestra **Proprietà** immettere un valore *taskToken* per la proprietà **CorrelationToken**  
   
-7.  Espandere la proprietà **CorrelationToken** selezionando il segno più \(![Più di TreeView](~/docs/sharepoint/media/plus.gif "Più di TreeView")\) accanto ad essa.  
+7.  Espandere la proprietà **CorrelationToken** selezionando il segno più \(![Più di TreeView](~/sharepoint/media/plus.gif "Più di TreeView")\) accanto ad essa.  
   
 8.  Scegliere la freccia a discesa della proprietà sottostante **OwnerActivityName** e impostare il valore *Workflow1*.  
   
-9. Selezionare la proprietà **TaskId**, quindi selezionare il pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/docs/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) per visualizzare la finestra di dialogo **Associa proprietà**.  
+9. Selezionare la proprietà **TaskId**, quindi selezionare il pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) per visualizzare la finestra di dialogo **Associa proprietà**.  
   
 10. Scegliere la scheda **Associazione a un nuovo membro**, scegliere il pulsante di opzione **Crea campo** quindi scegliere il pulsante **OK**.  
   
-11. selezionare la proprietà **TaskProperties**, quindi selezionare il pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/docs/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) per visualizzare la finestra di dialogo **Associa proprietà**.  
+11. selezionare la proprietà **TaskProperties**, quindi selezionare il pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) per visualizzare la finestra di dialogo **Associa proprietà**.  
   
 12. Scegliere la scheda **Associazione a un nuovo membro**, scegliere il pulsante di opzione **Crea campo** quindi scegliere il pulsante **OK**.  
   
@@ -363,7 +363,7 @@ caps.handback.revision: 37
   
 5.  Nella finestra **Proprietà** selezionare la freccia a discesa della proprietà **Condizione** e quindi impostare il valore *Code Condition*.  
   
-6.  Espandere la proprietà **Condizione** selezionando il segno più \(![Più di TreeView](~/docs/sharepoint/media/plus.gif "Più di TreeView")\) accanto ad essa, quindi impostarne il valore su *checkApprovalNeeded*.  
+6.  Espandere la proprietà **Condizione** selezionando il segno più \(![Più di TreeView](~/sharepoint/media/plus.gif "Più di TreeView")\) accanto ad essa, quindi impostarne il valore su *checkApprovalNeeded*.  
   
 7.  In Progettazione flussi di lavoro aprire il menu di scelta rapida per l'attività **logToHistoryListActivity1** e quindi selezionare **Genera gestori** per generare un metodo vuoto per l'evento `MethodInvoking`.  
   

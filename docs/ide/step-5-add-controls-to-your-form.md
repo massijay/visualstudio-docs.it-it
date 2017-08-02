@@ -18,7 +18,7 @@ caps.handback.revision: 20
 # <a name="step-5-add-controls-to-your-form"></a>Passaggio 5: aggiungere controlli al form
 In questo passaggio si aggiungono controlli, ad esempio un controllo `PictureBox` e un controllo `CheckBox`, al form. Si aggiungeranno quindi pulsanti al form.  
   
- ![link to video](~/docs/data-tools/media/playvideo.gif "PlayVideo")Per una versione video di questo argomento, vedere [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 2](http://go.microsoft.com/fwlink/?LinkId=205211) (Esercitazione 1: creare un visualizzatore di immagini in Visual Basic - Video 2) o [Tutorial 1: Create a Picture Viewer in C# - Video 2](http://go.microsoft.com/fwlink/?LinkId=205200) (Esercitazione 1: creare un visualizzatore di immagini in C# - Video 2). In questi video viene usata una versione precedente di Visual Studio, pertanto vi sono piccole differenze in alcuni comandi di menu e altri elementi dell'interfaccia utente. Tuttavia, i concetti e le procedure funzionano in modo analogo nella versione corrente di Visual Studio.  
+ ![link to video](~/data-tools/media/playvideo.gif "PlayVideo")Per una versione video di questo argomento, vedere [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 2](http://go.microsoft.com/fwlink/?LinkId=205211) (Esercitazione 1: creare un visualizzatore di immagini in Visual Basic - Video 2) o [Tutorial 1: Create a Picture Viewer in C# - Video 2](http://go.microsoft.com/fwlink/?LinkId=205200) (Esercitazione 1: creare un visualizzatore di immagini in C# - Video 2). In questi video viene usata una versione precedente di Visual Studio, pertanto vi sono piccole differenze in alcuni comandi di menu e altri elementi dell'interfaccia utente. Tuttavia, i concetti e le procedure funzionano in modo analogo nella versione corrente di Visual Studio.  
   
 ### <a name="to-add-controls-to-your-form"></a>Per aggiungere controlli al form  
   
@@ -30,7 +30,7 @@ In questo passaggio si aggiungono controlli, ad esempio un controllo `PictureBox
   
 4.  Scegliere il nuovo controllo PictureBox per selezionarlo, quindi scegliere il triangolo nero sul nuovo controllo PictureBox per visualizzare il relativo elenco attività, come illustrato nell'immagine seguente.  
   
-     ![Attività di PictureBox](~/docs/ide/media/express_pictureboxtasks.png "Express_PictureBoxTasks")  
+     ![Attività di PictureBox](~/ide/media/express_pictureboxtasks.png "Express_PictureBoxTasks")  
 Attività di PictureBox  
   
     > [!NOTE]
@@ -45,7 +45,7 @@ Attività di PictureBox
   
 7.  Scegliere TableLayoutPanel nel form, quindi aggiungere un controllo **CheckBox** al form. Fare doppio clic sull'elemento **CheckBox** nella Casella degli strumenti per aggiungere un nuovo controllo CheckBox alla cella libera successiva della tabella. Poiché un controllo PictureBox occupa le prime due celle, in TableLayoutPanel viene aggiunto un controllo CheckBox alla cella inferiore sinistra. Scegliere la proprietà **Text** e digitare la parola **Stretch**, come illustrato nell'immagine.  
   
-     ![Controllo TextBox con la proprietà Stretch](~/docs/ide/media/express_pictureviewercheckbox.png "Express_PictureViewerCheckbox")  
+     ![Controllo TextBox con la proprietà Stretch](~/ide/media/express_pictureviewercheckbox.png "Express_PictureViewerCheckbox")  
 Controllo TextBox con la proprietà Stretch  
   
 8.  Scegliere TableLayoutPanel nel form, quindi passare al gruppo **Contenitori** nella Casella degli strumenti (dove si è ottenuto il controllo TableLayoutPanel) e fare doppio clic sull'elemento **FlowLayoutPanel** per aggiungere un nuovo controllo all'ultima cella di PictureBox (in basso a destra). Ancorare quindi FlowLayoutPanel in TableLayoutPanel, scegliendo **Ancora nel contenitore padre** nell'elenco attività a forma di triangolo nero di FlowLayoutPanel o impostando la proprietà **Dock** di FlowLayoutPanel su **Fill**.  
@@ -71,7 +71,7 @@ Controllo TextBox con la proprietà Stretch
   
 5.  Scegliere il pulsante **Chiudi** per selezionarlo. Tenere premuto CTRL e scegliere gli altri tre pulsanti, in modo che siano tutti selezionati. Mentre tutti i pulsanti sono selezionati, andare alla finestra **Proprietà** e scorrere verso l'alto fino alla proprietà **AutoSize**. Questa proprietà consente di ridimensionare automaticamente il pulsante in modo che si adatti a tutto il testo. Impostarla su **true**. I pulsanti sono ora ridimensionati correttamente e si trovano nell'ordine corretto. Finché i quattro pulsanti sono selezionati, è possibile modificare contemporaneamente le quattro proprietà **AutoSize**. Nell'immagine riportata di seguito vengono illustrati i quattro pulsanti.  
   
-     ![Visualizzatore immagini con quattro pulsanti](~/docs/ide/media/express_autosize.png "Express_AutoSize")  
+     ![Visualizzatore immagini con quattro pulsanti](~/ide/media/express_autosize.png "Express_AutoSize")  
 Visualizzatore immagini con quattro pulsanti  
   
 6.  Ora eseguire nuovamente il programma per visualizzare il form con il nuovo layout. La scelta dei pulsanti e della casella di controllo non produce ancora nessun risultato, ma i controlli funzioneranno a breve.  

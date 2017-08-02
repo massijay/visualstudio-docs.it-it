@@ -46,7 +46,7 @@ ms.lasthandoff: 06/23/2017
 Questa soluzione offre funzionalità di protezione avanzata ed eliminazione per le applicazioni progettate per desktop, dispositivi mobili o server e per le applicazioni incorporate, in modo da proteggere segreti commerciali e altri dati di proprietà intellettuale, ridurre gli attacchi di pirateria e i rischi di contraffazione, nonché evitare manomissioni e operazioni di debug non autorizzate.
 Dotfuscator viene eseguito sugli assembly compilati senza richiedere altre attività di programmazione e nemmeno l'accesso al codice sorgente.
 
-![](~/docs/ide/dotfuscator/media/header.svg)
+![](~/ide/dotfuscator/media/header.svg)
 
 ## <a name="why-protection-matters"></a>Importanza della protezione
 

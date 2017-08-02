@@ -46,7 +46,7 @@ In questo documento viene illustrato come utilizzare l'editor di modello per mod
   
  Qui un modello con punto pivot modificato:  
   
- ![Modello di casa con punto pivot modificato](~/docs/designers/media/digit-modified-model.png "Digit\-Modified\-Model")  
+ ![Modello di casa con punto pivot modificato](~/designers/media/digit-modified-model.png "Digit\-Modified\-Model")  
   
 ## Vedere anche  
  [Procedura: Creare un modello tridimensionale di base](../Topic/How%20to:%20Create%20a%20Basic%203-D%20Model.md)   

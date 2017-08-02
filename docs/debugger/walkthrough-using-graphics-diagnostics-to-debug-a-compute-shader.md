@@ -32,7 +32,7 @@ Questa procedura dettagliata illustra come usare gli strumenti di diagnostica de
 ## Scenario  
  In questo scenario è stata scritta una simulazione di dinamica del fluidi in cui viene usato DirectCompute per eseguire le parti con calcoli complessi dell'aggiornamento della simulazione.  Quando l'applicazione viene eseguita, il rendering del dataset e l'interfaccia utente sono corretti, ma la simulazione non si comporta come previsto.  Usando Diagnostica grafica, è possibile acquisire il problema in un log di grafica in modo da poter eseguire il debug dell'applicazione.  Nell'app, il problema si presenta nel modo seguente:  
   
- ![Il comportamento del fluido simulato non è corretto.](~/docs/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_problem.png "gfx\_diag\_demo\_compute\_shader\_fluid\_problem")  
+ ![Il comportamento del fluido simulato non è corretto.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_problem.png "gfx\_diag\_demo\_compute\_shader\_fluid\_problem")  
   
  Per informazioni su come acquisire i problemi di grafica in un log di grafica, vedere [Cattura informazioni grafica](../debugger/capturing-graphics-information.md).  
   
@@ -55,13 +55,13 @@ Questa procedura dettagliata illustra come usare gli strumenti di diagnostica de
   
 2.  Controllare l'**Elenco eventi di grafica** per cercare l'evento di disegno tramite cui viene eseguito il rendering del dataset.  Per semplificare questa operazione, immettere `Draw` nella casella **Cerca** nell'angolo superiore destro della finestra **Elenco eventi di grafica**.  questo modo l'elenco viene filtrato in modo da contenere solo gli eventi nei cui titoli compare "Draw".  In questo scenario viene rilevato che si sono verificati questi eventi di disegno:  
   
-     ![Elenco eventi con eventi di disegno.](~/docs/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_2.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_2")  
+     ![Elenco eventi con eventi di disegno.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_2.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_2")  
   
 3.  Spostarsi in ogni evento di disegno durante la visualizzazione della destinazione di rendering nella scheda del documento di log della grafica.  
   
 4.  Arrestare l'operazione quando nella destinazione di rendering viene visualizzato innanzitutto il set di dati di cui è stato eseguito il rendering.  In questo scenario il rendering del dataset viene eseguito nel primo evento di disegno.  L'errore nella simulazione è indicato:  
   
-     ![Questo evento di disegno esegue il rendering del set di dati di simulazione.](~/docs/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_3.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_3")  
+     ![Questo evento di disegno esegue il rendering del set di dati di simulazione.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_3.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_3")  
   
 5.  A questo punto, controllare l'**Elenco eventi di grafica** per cercare l'evento `Dispatch` che aggiorna la simulazione.  Poiché è probabile che la simulazione venga aggiornata prima che venga eseguito il rendering, è possibile concentrarsi prima sugli eventi `Dispatch` che si verificano prima dell'evento di disegno che esegue il rendering dei risultati.  Per semplificare questa procedura, modificare la casella **Cerca** in `Draw;Dispatch;CSSetShader(`.  Questo consente di filtrare l'elenco in modo che contenga anche `Dispatch` e gli eventi `CSSetShader` oltre agli eventi di disegno.  In questo scenario viene rilevato che prima dell'evento di disegno si sono verificati diversi eventi `Dispatch`:  
   
@@ -89,7 +89,7 @@ Questa procedura dettagliata illustra come usare gli strumenti di diagnostica de
   
 3.  Esaminare il codice sorgente del compute shader per il passaggio di integrazione per ricercare l'origine dell'errore.  Quando si usa la diagnostica della grafica per eseguire il debug del codice del compute shader di HLSL, è possibile avanzare nel codice e usare altri strumenti di debug comuni, ad esempio le finestre Espressioni di controllo.  In questo scenario viene determinato che non sembra essere presente alcun errore nel compute shader che esegue il passaggio di integrazione.  
   
-     ![Debug del compute shader IntegrateCS.](~/docs/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_7.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_7")  
+     ![Debug del compute shader IntegrateCS.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_7.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_7")  
   
 4.  Per arrestare il debug del compute shader, nella barra degli strumenti **Debug** scegliere **Arresta debug** \(tastiera: MAIUSC\+F5\).  
   
@@ -101,12 +101,12 @@ Questa procedura dettagliata illustra come usare gli strumenti di diagnostica de
   
 6.  Esaminare il passaggio di calcolo della forza nel codice sorgente del compute shader.  In questo scenario viene determinato che l'origine dell'errore si trova in questo punto.  
   
-     ![Debug del compute shader ForceCS&#95;Simple.](~/docs/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_9.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_9")  
+     ![Debug del compute shader ForceCS&#95;Simple.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_9.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_9")  
   
  Dopo aver definito la posizione dell'errore, è possibile arrestare il debug e modificare il codice sorgente del compute shader per calcolare correttamente la distanza tra le particelle interattive.  In questo scenario è sufficiente modificare la riga `float2 diff = N_position + P_position;` in `float2 diff = N_position - P_position;`:  
   
- ![Codice del compute shader con correzione.](~/docs/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_10.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_10")  
+ ![Codice del compute shader con correzione.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_step_10.png "gfx\_diag\_demo\_compute\_shader\_fluid\_step\_10")  
   
  In questo scenario poiché i compute shader vengono compilati in fase di esecuzione, l'app può essere riavviata solo dopo aver apportato le modifiche per osservare come influiscono sulla simulazione.  Non è necessario ricompilare l'app.  Quando si esegue l'app, si scopre che ora la simulazione funziona correttamente.  
   
- ![Il comportamento del fluido simulato è corretto.](~/docs/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_resolution.png "gfx\_diag\_demo\_compute\_shader\_fluid\_resolution")
+ ![Il comportamento del fluido simulato è corretto.](~/debugger/graphics/media/gfx_diag_demo_compute_shader_fluid_resolution.png "gfx\_diag\_demo\_compute\_shader\_fluid\_resolution")

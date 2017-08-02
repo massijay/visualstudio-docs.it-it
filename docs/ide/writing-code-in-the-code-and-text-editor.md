@@ -141,11 +141,11 @@ L'editor di Visual Studio include diverse funzionalità che semplificano la scri
 ## <a name="navigate-and-find-code"></a>Eseguire ricerche e spostarsi nel codice  
 È possibile spostarsi in un documento in diversi modi. Oltre alle operazioni standard, è possibile usare i pulsanti **Posizione precedente** (CTRL+MENO) e **Posizione successiva** (CTRL+MAIUSC+MENO) nella barra degli strumenti per spostare il punto di inserimento nelle posizioni precedenti o tornare alle posizioni più recenti nel documento attivo. Questi pulsanti conservano le ultime 20 posizioni del punto di inserimento.
 
-![Pulsanti di spostamento per spostarsi avanti e indietro](~/docs/ide/media/vs2017_nav_buttons.png)
+![Pulsanti di spostamento per spostarsi avanti e indietro](~/ide/media/vs2017_nav_buttons.png)
 
 Nella funzionalità Visualizzatore di struttura dell'editor del codice sono visualizzate le *guide per strutture*, ovvero linee verticali tratteggiate che indicano la presenza di parentesi graffe corrispondenti nella codebase. In questo modo risulta più agevole visualizzare l'inizio e la fine dei blocchi logici.
 
-![Visualizzatore di struttura](~/docs/ide/media/vside_structure_visualizer.png)
+![Visualizzatore di struttura](~/ide/media/vside_structure_visualizer.png)
 
 Per disabilitare le guide per strutture, passare a **Strumenti**, **Opzioni**, **Editor di testo**, **Generale** e deselezionare la casella **Mostra guide per strutture**.
 
@@ -167,7 +167,7 @@ I comandi seguenti sono metodi di spostamento specifici per il codice:
 
  Per trovare codice in una codebase, è anche possibile usare la **barra di spostamento** (caselle a discesa nella parte superiore della finestra del codice) e scegliere un tipo o un membro per accedervi direttamente. La barra di spostamento viene visualizzata quando si modifica il codice in una codebase Visual Basic, C# o C++.
 
- ![Barra di spostamento per il codice](~/docs/ide/media/vside_navigation_bar.png)
+ ![Barra di spostamento per il codice](~/ide/media/vside_navigation_bar.png)
 
  Per nascondere la barra di spostamento, modificare l'opzione **Barra di navigazione** nelle impostazioni Tutti i linguaggi dell'editor di testo (**Strumenti**, **Opzioni**, **Editor di testo**, **Tutti i linguaggi** oppure modificare le impostazioni per i singoli linguaggi). È possibile spostarsi tra le caselle a discesa come segue:  
 
@@ -194,7 +194,7 @@ Il comando **Vai a** di Visual Studio consente di eseguire una ricerca mirata de
 1. Nel menu principale scegliere **Modifica**, **Vai a**. Viene visualizzata una piccola casella di testo nell'angolo superiore dell'editor del codice.
 1. Immettere il nome dell'elemento di codice da cercare nella casella di testo.
 
-    ![Finestra Passa a](~/docs/ide/media/vside_navigatetowindow.png "Finestra Passa a")
+    ![Finestra Passa a](~/ide/media/vside_navigatetowindow.png "Finestra Passa a")
 
     Durante la digitazione i risultati vengono visualizzati in un elenco a discesa sotto la casella di testo.
 1. Per passare a un elemento, selezionarlo nell'elenco.
@@ -217,11 +217,11 @@ Ad esempio, per limitare la ricerca ai soli simboli di codice, premere CTRL+T (o
 
 È anche possibile modificare rapidamente il filtro di ricerca scegliendo i pulsanti sulla barra degli strumenti della finestra di dialogo Vai a. I pulsanti per la modifica dei filtri si trovano sul lato sinistro, mentre quelli per la modifica dell'ambito della ricerca sono sul lato destro.
 
-![](~/docs/ide/media/vside_navigation_toolbar.png)
+![](~/ide/media/vside_navigation_toolbar.png)
 
 Se si usa la [notazione camel](https://en.wikipedia.org/wiki/Camel_case) per maiuscole e minuscole nel codice, è possibile trovare gli elementi di codice più rapidamente immettendo solo le lettere maiuscole dei nomi degli elementi di codice. Ad esempio, se nel codice è presente un tipo denominato `CredentialViewModel`, è possibile restringere la ricerca scegliendo il filtro Tipo ("t") e quindi immettendo solo le lettere maiuscole del nome (`CVM`) nella finestra di dialogo Vai a.
 
-![Finestra Passa a - ricerca con lettere maiuscole](~/docs/ide/media/vside_capitalsearch.png)
+![Finestra Passa a - ricerca con lettere maiuscole](~/ide/media/vside_capitalsearch.png)
 
 Questa funzionalità può essere utile se il codice contiene nomi lunghi.
 
@@ -239,7 +239,7 @@ I risultati vengono visualizzati in una finestra degli strumenti denominata **'*
 
 È anche possibile passare con il puntatore del mouse su un risultato della ricerca qualsiasi per visualizzare un'anteprima dell'elemento restituito.
 
-![Finestra degli strumenti Trova tutti i riferimenti](~/docs/ide/media/vside_findallreferences.png)
+![Finestra degli strumenti Trova tutti i riferimenti](~/ide/media/vside_findallreferences.png)
 
 Per mantenere i risultati della ricerca, scegliere il pulsante **Mantieni risultati**. Quando si sceglie questo pulsante, i risultati della ricerca corrente rimangono in questa finestra e i nuovi risultati vengono visualizzati in una nuova finestra degli strumenti.
 

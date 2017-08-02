@@ -20,7 +20,7 @@ caps.handback.revision: 18
 
 In questo passaggio si utilizza la finestra **Proprietà** per modificare l'aspetto del form.  
   
- ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "PlayVideo") Per una versione video di questo argomento, vedere [Esercitazione 1: creare un visualizzatore di immagini in Visual Basic \- Video 1](http://go.microsoft.com/fwlink/?LinkId=205209) oppure [Esercitazione 1: creare un visualizzatore di immagini in C\# \- Video 1](http://go.microsoft.com/fwlink/?LinkId=205199).  In questi video viene utilizzata una versione precedente di Visual Studio, pertanto vi sono piccole differenze in alcuni comandi di menu e altri elementi dell'interfaccia utente.  Tuttavia, i concetti e le procedure funzionano in modo analogo nella versione corrente di Visual Studio.  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "PlayVideo") Per una versione video di questo argomento, vedere [Esercitazione 1: creare un visualizzatore di immagini in Visual Basic \- Video 1](http://go.microsoft.com/fwlink/?LinkId=205209) oppure [Esercitazione 1: creare un visualizzatore di immagini in C\# \- Video 1](http://go.microsoft.com/fwlink/?LinkId=205199).  In questi video viene utilizzata una versione precedente di Visual Studio, pertanto vi sono piccole differenze in alcuni comandi di menu e altri elementi dell'interfaccia utente.  Tuttavia, i concetti e le procedure funzionano in modo analogo nella versione corrente di Visual Studio.  
   
 ### Per impostare le proprietà del form  
   
@@ -41,7 +41,7 @@ Finestra Proprietà
   
 4.  Tornare a Progettazione Windows Form.  Fare clic sul quadratino di trascinamento nella parte inferiore destra del form, ovvero il quadratino bianco in basso a destra del form il cui aspetto è il seguente.  
   
-     ![Quadratino di trascinamento](~/docs/ide/media/express_bottomrt_drag.png "Express\_BottomRT\_Drag")  
+     ![Quadratino di trascinamento](~/ide/media/express_bottomrt_drag.png "Express\_BottomRT\_Drag")  
 Quadratino di trascinamento  
   
      Trascinare il punto di controllo per ridimensionare il form in modo che sia più largo e leggermente più alto.  

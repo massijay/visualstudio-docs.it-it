@@ -25,7 +25,7 @@ Il debug cronologico è una modalità di debug che dipende dalle informazioni ra
 ## Perché utilizzare il debug cronologico?  
  Impostazione di punti di interruzione per individuare i bug può essere una questione piuttosto hit\-or\-miss.  È possibile impostare un punto di interruzione simile al punto nel codice in cui si ritiene che il bug sia quindi eseguire l'applicazione nel debugger e spero che il punto di interruzione ottiene accesso e il luogo in cui l'esecuzione si interrompe è in grado di rivelare l'origine del bug.  In caso contrario, sarà necessario provare a impostare un punto di interruzione in un'altra posizione nel codice ed eseguire nuovamente il debugger, eseguire i passi del test più volte fino a individuare il problema.  
   
- ![impostazione di un punto di interruzione](~/docs/debugger/media/breakpointprocesa.png "BreakpointProcesa")  
+ ![impostazione di un punto di interruzione](~/debugger/media/breakpointprocesa.png "BreakpointProcesa")  
   
  È possibile utilizzare IntelliTrace e il debug cronologico portati in giro nell'applicazione e controllare lo stato \(stack di chiamate e le variabili locali\) senza dover impostare punti di interruzione, riavviare il debug e ripetere i passi del test.  Ciò consente di risparmiare molto tempo, soprattutto quando il bug si trova approfondita in uno scenario di test che richiede molto tempo per eseguire.  
   
@@ -71,7 +71,7 @@ private static int AddInt(int add)
   
 4.  Aprire il **gli strumenti di diagnostica** finestra \(**Debug \/ Mostra strumenti di diagnostica**\).  La finestra codici dovrebbe risultare simile alla seguente:  
   
-     ![Finestra del codice al punto di interruzione](~/docs/debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")  
+     ![Finestra del codice al punto di interruzione](~/debugger/media/historicaldebuggingbreakpoint.png "HistoricalDebuggingBreakpoint")  
   
 5.  Verrà visualizzata una doppia freccia accanto al margine sinistro, appena sopra il punto di interruzione.  Quest'area viene chiamata la barra di navigazione e viene utilizzata per il debug cronologico.  Fare clic sulla freccia.  
   
@@ -79,7 +79,7 @@ private static int AddInt(int add)
   
      La finestra del codice è ora simile al seguente:  
   
-     ![finestra del codice in modalità Debug cronologico](~/docs/debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")  
+     ![finestra del codice in modalità Debug cronologico](~/debugger/media/historicaldebuggingback.png "HistoricalDebuggingBack")  
   
 6.  Ora è possibile eseguire il `AddAll()` metodo \(**F11**, o **Esegui istruzione** pulsante nella barra di navigazione.  Passo avanti \(**F10**, o **passare alla prossima connessione** nella barra di navigazione.  La riga rosa contiene ora il `j = AddInt(j);` riga.  **F10** in questo caso non esegue le istruzioni per la riga di codice successiva.  Al contrario, i passaggi per la successiva chiamata di funzione.  Il debug cronologico consente di passare da una chiamata a altra e ignora le righe di codice che non includono una chiamata di funzione.  
   

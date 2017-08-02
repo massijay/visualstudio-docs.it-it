@@ -70,7 +70,7 @@ Rispetto a un certificato emesso da un'autorità attendibile, un certificato aut
 
 Per questo motivo in RTVS viene sempre visualizzato questo avviso al momento della connessione a un server con un certificato autofirmato:
 
-![Finestra di dialogo di avviso per certificato autofirmato](~/docs/rtvs/media/workspaces-remote-self-signed-certificate-warning.png)
+![Finestra di dialogo di avviso per certificato autofirmato](~/rtvs/media/workspaces-remote-self-signed-certificate-warning.png)
 
 Per emettere un certificato autofirmato:
 
@@ -93,7 +93,7 @@ Per informazioni, vedere [self-signed certificates](https://en.wikipedia.org/wik
 
 Per installare il certificato nel computer remoto, eseguire `certlm.msc` (lo strumento di gestione certificati) da un prompt dei comandi. Fare clic con il pulsante destro del mouse sulla cartella **Personal** e selezionare il comando **All Tasks > Import** (Tutte le attività > Importa):
 
-![Comando Import (Importa) per il certificato](~/docs/rtvs/media/workspaces-remote-certificate-import.png)
+![Comando Import (Importa) per il certificato](~/rtvs/media/workspaces-remote-certificate-import.png)
 
 
 ### <a name="granting-permissions-to-read-the-ssl-certificates-private-key"></a>Concessione delle autorizzazioni per la lettura della chiave privata del certificato SSL
@@ -105,7 +105,7 @@ Dopo aver importato il certificato, concedere all'account `NETWORK SERVICE` le a
 1. Fare clic con il pulsante destro del mouse sul certificato e selezionare il comando Manage Private Keys (Gestisci chiavi private) in All Tasks (Tutte le attività).
 1. Nella finestra di dialogo visualizzata selezionare **Add** (Aggiungi) e immettere `NETWORK SERVICE` come nome dell'account:
 
-    ![Finestra di dialogo Manage Private Keys (Aggiungi chiavi private), aggiunta di NETWORK_SERVICE](~/docs/rtvs/media/workspaces-remote-manage-private-key-dialog.png)
+    ![Finestra di dialogo Manage Private Keys (Aggiungi chiavi private), aggiunta di NETWORK_SERVICE](~/rtvs/media/workspaces-remote-manage-private-key-dialog.png)
 
 1. Selezionare **OK** due volte per chiudere le finestre di dialogo e salvare le modifiche.
 

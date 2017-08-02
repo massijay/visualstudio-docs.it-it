@@ -27,7 +27,7 @@ manager: "ghogen"
 # Visualizzare i listener di eventi DOM
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Si applica a Windows e Windows Phone](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Si applica a Windows e Windows Phone](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  Nella scheda **Eventi** di DOM Explorer vengono visualizzati gli eventi associati a un elemento DOM. Ogni nodo principale nella scheda **Eventi** rappresenta un evento con sottoscrittori attivi. Il nodo principale contiene i sottonodi che rappresentano i listener di eventi registrati per l'evento specifico. Oltre a visualizzare i listener di eventi, puoi usare questa scheda per spostarti nel percorso del listener di eventi nel codice JavaScript. Le informazioni contenute in questo argomento sono applicabili alle app di Windows Store compilate con HTML e JavaScript.  
   
@@ -45,7 +45,7 @@ manager: "ghogen"
   
 2.  Con il modello aperto in Visual Studio seleziona **Emulator 8.1 WVGA 4in 512MB** nell'elenco a discesa sulla barra degli strumenti Debug nel debugger:  
   
-     ![Selezione di una destinazione per il debug](~/docs/debugger/media/js_dom_debug_target_emu.png "JS\_DOM\_Debug\_Target\_Emu")  
+     ![Selezione di una destinazione per il debug](~/debugger/media/js_dom_debug_target_emu.png "JS\_DOM\_Debug\_Target\_Emu")  
   
 3.  Premi F5 per eseguire l'app in modalità debug.  
   
@@ -71,7 +71,7 @@ manager: "ghogen"
   
 11. Per identificare rapidamente i listener per gli elementi padre nella gerarchia DOM, scegli un elemento padre nell'elenco della gerarchia nella parte inferiore di DOM Explorer.  
   
-     ![Selezione degli elementi padre nella gerarchia DOM](~/docs/debugger/media/js_dom_breadcrumbs.png "JS\_DOM\_Breadcrumbs")  
+     ![Selezione degli elementi padre nella gerarchia DOM](~/debugger/media/js_dom_breadcrumbs.png "JS\_DOM\_Breadcrumbs")  
   
      La scheda **Eventi** mostra i listener di eventi per qualsiasi elemento scelto nell'elenco della gerarchia.  
   

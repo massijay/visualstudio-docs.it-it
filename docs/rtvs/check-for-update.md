@@ -44,7 +44,7 @@ Questa è la versione di rilascio 1.0 di RTVS, disponibile in [aka.ms/rtvs-curre
 
 È possibile controllare la versione da **Guida > Informazioni su** in Visual Studio e scorrendo verso il basso fino alla voce **R Tools per Visual Studio**:
 
-![Controllo della versione RTVS in Visual Studio (VS2017)](~/docs/rtvs/media/current-version.png)
+![Controllo della versione RTVS in Visual Studio (VS2017)](~/rtvs/media/current-version.png)
 
 Vedere la pagina relativa all'[installazione](installation.md) per i requisiti di Visual Studio e Windows.
 

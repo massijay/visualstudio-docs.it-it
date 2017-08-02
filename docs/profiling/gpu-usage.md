@@ -39,7 +39,7 @@ Lo strumento Utilizzo GPU disponibile nell'hub Prestazioni e diagnostica consent
   
  Questa è la finestra **Report Utilizzo GPU**:  
   
- ![Report Utilizzo GPU con sequenze temporali per CPU e GPU](~/docs/profiling/media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")  
+ ![Report Utilizzo GPU con sequenze temporali per CPU e GPU](~/profiling/media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")  
   
 ## <a name="requirements"></a>Requisiti  
  Di seguito sono elencati i requisiti aggiuntivi per lo strumento Utilizzo GPU rispetto ai requisiti di Diagnostica grafica.  
@@ -60,7 +60,7 @@ Lo strumento Utilizzo GPU disponibile nell'hub Prestazioni e diagnostica consent
   
 2.  Nell'hub Prestazioni e diagnostica selezionare la casella accanto a **Utilizzo GPU**. Facoltativamente, selezionare le caselle accanto agli altri strumenti a cui si è interessati. È possibile eseguire contemporaneamente svariati strumenti per prestazioni e diagnostica per ottenere un quadro più completo delle prestazioni dell'app.  
   
-     ![Scegliere gli strumenti di diagnostica da usare.](~/docs/profiling/media/gfx_diag_diagsession_tools.png "gfx_diag_diagsession_tools")  
+     ![Scegliere gli strumenti di diagnostica da usare.](~/profiling/media/gfx_diag_diagsession_tools.png "gfx_diag_diagsession_tools")  
   
     > [!NOTE]
     >  Non tutti gli strumenti per le prestazioni e la diagnostica possono essere eseguiti contemporaneamente.  
@@ -79,15 +79,15 @@ Lo strumento Utilizzo GPU disponibile nell'hub Prestazioni e diagnostica consent
   
 1.  Nella parte inferiore della finestra della sessione di diagnostica scegliere il collegamento **Arresta raccolta** o premere **Arresta** nell'angolo superiore sinistro.  
   
-     ![Raccogliere informazioni sugli intervalli per GPU e CPU.](~/docs/profiling/media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")  
+     ![Raccogliere informazioni sugli intervalli per GPU e CPU.](~/profiling/media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")  
   
 2.  Nella parte superiore del report selezionare in uno dei grafici una sezione che mostra il problema da analizzare. La selezione può essere lunga fino a 3 secondi. Le sezioni più lunghe vengono troncate nella parte iniziale.  
   
-     ![Dopo la raccolta, selezionare un intervallo per visualizzare i dettagli](~/docs/profiling/media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")  
+     ![Dopo la raccolta, selezionare un intervallo per visualizzare i dettagli](~/profiling/media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")  
   
 3.  Nella parte inferiore del report scegliere il collegamento **visualizzare i dettagli** nel messaggio **…Fare clic qui per visualizzare i dettagli sull'utilizzo della GPU in tale intervallo** per visualizzare una sequenza temporale dettagliata della selezione.  
   
-     ![Dopo la raccolta, con intervallo selezionato](~/docs/profiling/media/gfx_diag_gpu_usage_select2.png "gfx_diag_gpu_usage_select2")  
+     ![Dopo la raccolta, con intervallo selezionato](~/profiling/media/gfx_diag_gpu_usage_select2.png "gfx_diag_gpu_usage_select2")  
   
  Viene aperto un nuovo documento a schede che contiene il report. Il report sull'utilizzo della GPU consente di vedere il momento in cui nella CPU viene avviato un evento di grafica, il momento in cui l'evento raggiunge la GPU e il tempo impiegato dalla GPU per eseguirlo. Queste informazioni sono utili per identificare i colli di bottiglia e le opportunità di aumentare il parallelismo nel codice.  
 
@@ -95,7 +95,7 @@ Lo strumento Utilizzo GPU disponibile nell'hub Prestazioni e diagnostica consent
 ## <a name="export-to-gpuview-or-windows-performance-analyzer"></a>Esportare in GPUView o Windows Performance Analyzer
 A partire da Visual Studio 2017, questi dati possono essere aperti con [GPUView](/windows-hardware/drivers/display/using-gpuview) e [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) facendo clic sui collegamenti **Apri in GpuView** o **Apri in WPA** nella parte inferiore destra della sessione di diagnostica.
 
-![Apri in...](~/docs/profiling/media/gfx_diag_open_in.png)
+![Apri in...](~/profiling/media/gfx_diag_open_in.png)
 <!-- /VERSIONLESS -->
 
 ## <a name="using-the-gpu-usage-report"></a>Uso del report Utilizzo GPU  
@@ -105,7 +105,7 @@ A partire da Visual Studio 2017, questi dati possono essere aperti con [GPUView]
   
  Di seguito viene illustrata la finestra **Report Utilizzo GPU**:  
   
- ![Report Utilizzo GPU con sequenze temporali per CPU e GPU](~/docs/profiling/media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")  
+ ![Report Utilizzo GPU con sequenze temporali per CPU e GPU](~/profiling/media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")  
   
  Selezionando uno degli eventi nella parte inferiore del report, nelle sequenze temporali pertinenti viene inserito un marcatore accanto agli eventi corrispondenti. In genere si tratta di un evento su un thread della CPU, che rappresenta la chiamata API, e di un secondo evento in una delle sequenze temporali della GPU, che rappresenta il punto in cui la GPU ha completato l'attività. Analogamente, se si seleziona uno degli eventi in una sequenza temporale, nella parte inferiore del report viene evidenziato l'evento corrispondente. Quando si riduce il livello di zoom sulle sequenze temporali nella parte superiore del report, sono visibili solo gli eventi che richiedono più tempo. Per visualizzare gli eventi di durata più breve, ingrandire le sequenze temporali premendo CTRL e la rotellina del dispositivo di puntamento oppure usando il controllo di ridimensionamento nell'angolo inferiore sinistro del riquadro superiore. È anche possibile trascinare il contenuto del pannello della sequenza temporale per spostarsi tra gli eventi registrati.  
   
@@ -146,7 +146,7 @@ A partire da Visual Studio 2017, questi dati possono essere aperti con [GPUView]
   
 3.  In **Configurazione Profilatura GPU** nella pagina delle proprietà **Generale** deselezionare la casella di controllo **Begin profiling at app start** (Inizia profilatura all'avvio dell'app) per posticipare la profilatura.  
   
-     ![Configurare l'inizio della raccolta Utilizzo GPU](~/docs/profiling/media/gfx_diag_gpu_usage_config.png "gfx_diag_gpu_usage_config")  
+     ![Configurare l'inizio della raccolta Utilizzo GPU](~/profiling/media/gfx_diag_gpu_usage_config.png "gfx_diag_gpu_usage_config")  
   
 > [!IMPORTANT]
 >  Il posticipo della profilatura non è attualmente supportato per le app Direct3D 12.  

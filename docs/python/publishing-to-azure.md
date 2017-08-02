@@ -67,11 +67,11 @@ Per creare un sito temporaneo nel servizio app di Azure senza usare una sottoscr
 
 1. Quando viene richiesto di installare i pacchetti esterni, selezionare **Installa in un ambiente virtuale**. Si noti il controllo **Mostra pacchetti necessari** nella parte inferiore della finestra di dialogo che indica quali pacchetti verranno installati:
 
-  ![Installazione dei pacchetti necessari](~/docs/python/media/tutorials-common-external-packages.png)
+  ![Installazione dei pacchetti necessari](~/python/media/tutorials-common-external-packages.png)
 
 1. Selezionare l'interprete di base preferito per l'ambiente virtuale, ad esempio **Python 2.7** o **Python 3.4**, quindi fare clic su **Crea**:
 
-  ![Aggiunta di un ambiente virtuale durante la creazione di un progetto](~/docs/python/media/tutorials-common-add-virtual-environment.png)
+  ![Aggiunta di un ambiente virtuale durante la creazione di un progetto](~/python/media/tutorials-common-add-virtual-environment.png)
 
 1. Al termine, selezionare **Debug > Avvia debug** o premere F5 per testare in locale il progetto creato. Per impostazione predefinita, l'applicazione usa un repository in memoria che non richiede alcuna configurazione. Tutti i dati andranno persi dopo l'arresto del server Web.
 
@@ -85,7 +85,7 @@ Per creare un sito temporaneo nel servizio app di Azure senza usare una sottoscr
 
 1. Nella finestra di dialogo **Pubblica** selezionare **Servizio app di Microsoft Azure**:
 
-  ![Passaggio 1 della pubblicazione in Azure](~/docs/python/media/tutorials-common-publish-1.png)
+  ![Passaggio 1 della pubblicazione in Azure](~/python/media/tutorials-common-publish-1.png)
 
 1. Selezionare una destinazione:
 
@@ -94,7 +94,7 @@ Per creare un sito temporaneo nel servizio app di Azure senza usare una sottoscr
 
 1. I dettagli del servizio app vengono visualizzati nella scheda **Connessione** della finestra di dialogo **Pubblica** seguente.
 
-  ![Passaggio 2 della pubblicazione in Azure](~/docs/python/media/tutorials-common-publish-2.png)
+  ![Passaggio 2 della pubblicazione in Azure](~/python/media/tutorials-common-publish-2.png)
 
 1. Se necessario, selezionare **Avanti >** per esaminare le impostazioni aggiuntive. Se si intende di [eseguire il debug del codice Python in Azure in modalità remota](debugging-azure-remote.md), è necessario impostare **Configurazione** su **Debug**.
 1. Selezionare **Pubblica**. Dopo la distribuzione dell'applicazione in Azure, il sito verrà visualizzato nel browser predefinito. 

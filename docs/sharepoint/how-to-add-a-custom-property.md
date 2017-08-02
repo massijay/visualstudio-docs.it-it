@@ -37,7 +37,7 @@ caps.handback.revision: 9
   
 2.  Nella barra dei menu, scegliere **Visualizza**, **Finestra proprietà**.  
   
-3.  Nella finestra **Proprietà** selezionare la proprietà **Proprietà personalizzate**, quindi fare clic sul pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/docs/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\).  
+3.  Nella finestra **Proprietà** selezionare la proprietà **Proprietà personalizzate**, quindi fare clic sul pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\).  
   
      Verrà visualizzata la finestra di dialogo **Editor proprietà**.  
   

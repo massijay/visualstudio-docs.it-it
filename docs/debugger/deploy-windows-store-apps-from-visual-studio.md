@@ -23,7 +23,7 @@ caps.handback.revision: 14
 # Distribuire applicazioni Windows Store da Visual Studio
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Si applica solo a Windows](~/docs/debugger/media/windows_only_content.png "windows\_only\_content")  
+![Si applica solo a Windows](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Usando la funzionalità di distribuzione di Visual Studio, puoi compilare e registrare app Windows Store create con Visual Studio su un dispositivo di destinazione. Il modo in cui viene registrata l'app è determinato dal tipo di dispositivo, ovvero se è locale o remoto:  
   
@@ -80,13 +80,13 @@ caps.handback.revision: 14
   
 4.  Puoi digitare il nome o l'indirizzo IP del dispositivo remoto oppure selezionare il dispositivo nella finestra di dialogo  **Seleziona connessione debugger remoto**.  
   
-     ![Finestra di dialogo per la selezione della connessione del debugger remoto](~/docs/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
+     ![Finestra di dialogo per la selezione della connessione del debugger remoto](~/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
   
      Nella finestra di dialogo **Seleziona connessione debugger remoto** sono visualizzati i dispositivi presenti sulla subnet di rete locale e tutti i dispositivi direttamente collegati al computer Visual Studio tramite un cavo Ethernet.  
   
  **Indicazione del dispositivo remoto nella pagina di un progetto JavaScript o Visual C\+\+**  
   
- ![Proprietà del progetto C&#43;&#43; per il debug remoto](~/docs/debugger/media/vsrun_cpp_projprop_remote.png "VSRUN\_CPP\_ProjProp\_Remote")  
+ ![Proprietà del progetto C&#43;&#43; per il debug remoto](~/debugger/media/vsrun_cpp_projprop_remote.png "VSRUN\_CPP\_ProjProp\_Remote")  
   
 1.  Scegli **Debugger remoto** dall'elenco **Debugger da avviare**.  
   

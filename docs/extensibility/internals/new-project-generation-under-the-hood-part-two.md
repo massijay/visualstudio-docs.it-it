@@ -134,7 +134,7 @@ namespace Simple
   
  La struttura di cartelle dell'applicazione Windows risulta è simile al seguente:  
   
- ![SimpleSolution](~/docs/extensibility/internals/media/simplesolution.png "SimpleSolution")  
+ ![SimpleSolution](~/extensibility/internals/media/simplesolution.png "SimpleSolution")  
   
  Il primo e unico \<progetto > tag in legge il modello:  
   

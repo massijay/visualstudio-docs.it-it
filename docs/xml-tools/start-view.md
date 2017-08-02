@@ -33,7 +33,7 @@ La visualizzazione iniziale è il punto di avvio per Progettazione XML Schema \(
 ## Barra degli strumenti  
  È possibile spostarsi tra la visualizzazione iniziale, la [visualizzazione modello di contenuto](../xml-tools/content-model-view.md) e la [visualizzazione grafico](../xml-tools/graph-view.md) dalla barra degli strumenti di Progettazione XML Schema.  
   
- ![Barra degli strumenti di Progettazione XML Schema](~/docs/xml-tools/media/xsdstartviewtoolbar.gif "XSDStartViewToolbar")  
+ ![Barra degli strumenti di Progettazione XML Schema](~/xml-tools/media/xsdstartviewtoolbar.gif "XSDStartViewToolbar")  
   
  I seguenti pulsanti sono abilitati nella barra degli strumenti di Progettazione XSD quando è attiva la visualizzazione iniziale:  
   

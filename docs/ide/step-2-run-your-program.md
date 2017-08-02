@@ -20,7 +20,7 @@ caps.handback.revision: 14
 
 Quando è stata creata una nuova soluzione, si è effettivamente compilato un programma che è possibile eseguire.  Il programma non fa ancora molto: visualizza semplicemente una finestra vuota con **Form1** nella barra del titolo.  È tuttavia possibile eseguirlo, come illustrato di seguito.  
   
- ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "PlayVideo") Per una versione video di questo argomento, vedere [Esercitazione 1: creare un visualizzatore di immagini in Visual Basic \- Video 1](http://go.microsoft.com/fwlink/?LinkId=205209) oppure [Esercitazione 1: creare un visualizzatore di immagini in C\# \- Video 1](http://go.microsoft.com/fwlink/?LinkId=205199).  In questi video viene utilizzata una versione precedente di Visual Studio, pertanto vi sono piccole differenze in alcuni comandi di menu e altri elementi dell'interfaccia utente.  Tuttavia, i concetti e le procedure funzionano in modo analogo nella versione corrente di Visual Studio.  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "PlayVideo") Per una versione video di questo argomento, vedere [Esercitazione 1: creare un visualizzatore di immagini in Visual Basic \- Video 1](http://go.microsoft.com/fwlink/?LinkId=205209) oppure [Esercitazione 1: creare un visualizzatore di immagini in C\# \- Video 1](http://go.microsoft.com/fwlink/?LinkId=205199).  In questi video viene utilizzata una versione precedente di Visual Studio, pertanto vi sono piccole differenze in alcuni comandi di menu e altri elementi dell'interfaccia utente.  Tuttavia, i concetti e le procedure funzionano in modo analogo nella versione corrente di Visual Studio.  
   
 ### Per eseguire il programma  
   
@@ -37,12 +37,12 @@ Pulsante Avvia debug della barra degli strumenti
   
 2.  In Visual Studio viene eseguito il programma e visualizzata una finestra denominata **Form1**.  Nel diagramma seguente è illustrato il programma appena compilato.  Il programma viene eseguito e presto vi si aggiungeranno elementi.  
   
-     ![Programma dell'applicazione Windows Form in esecuzione](~/docs/ide/media/express_firstrun.png "Express\_FirstRun")  
+     ![Programma dell'applicazione Windows Form in esecuzione](~/ide/media/express_firstrun.png "Express\_FirstRun")  
 Programma applicativo Windows Form in esecuzione  
   
 3.  Tornare all'ambiente di sviluppo integrato \(IDE\) di Visual Studio e osservare la nuova barra degli strumenti.  I pulsanti aggiuntivi vengono visualizzati sulla barra degli strumenti quando si esegue un programma.  Questi pulsanti consentono di eseguire operazioni quali l'arresto e l'avvio del programma e agevolano il rilevamento di eventuali errori \(bug\).  Per questo esempio, l'utilizzo è limitato solo all'avvio e all'arresto del programma.  
   
-     ![Barra degli strumenti di debug](~/docs/ide/media/express_debugtoolbar.png "Express\_DebugToolbar")  
+     ![Barra degli strumenti di debug](~/ide/media/express_debugtoolbar.png "Express\_DebugToolbar")  
 Barra degli strumenti di debug  
   
 4.  Utilizzare uno dei metodi seguenti per arrestare il programma.  

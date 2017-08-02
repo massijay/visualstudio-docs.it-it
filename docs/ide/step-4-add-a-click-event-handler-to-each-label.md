@@ -53,7 +53,7 @@ Il gioco delle coppie funziona come segue:
   
 3.  Fare clic sul pulsante **Eventi** della barra degli strumenti della finestra **Proprietà** per visualizzare la pagina **Eventi** nella finestra **Proprietà**. Scorrere verso il basso fino all'evento **Click** e immettere **label_Click** nella casella, come illustrato nell'immagine seguente.  
   
-     ![Finestra Proprietà con evento Click visualizzato](~/docs/ide/media/express_labelclick.png "Express_labelClick")  
+     ![Finestra Proprietà con evento Click visualizzato](~/ide/media/express_labelclick.png "Express_labelClick")  
 Finestra Proprietà con evento Click visualizzato  
   
 4.  Premere il tasto INVIO. IDE aggiunge un gestore eventi Click chiamato `label_Click()` al codice e lo collega a ognuna delle etichette nel form.  

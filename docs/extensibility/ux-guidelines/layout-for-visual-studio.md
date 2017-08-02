@@ -143,7 +143,7 @@ La maggior parte delle finestre di dialogo di Visual Studio [Layout di finestra 
   
  **Figura 08.01\-h: Finestra di dialogo con tema**  
   
- ![Themed dialog dimensions](~/docs/extensibility/ux-guidelines/media/0801-i_themeddialogdimensions.png "0801\-i\_ThemedDialogDimensions")  
+ ![Themed dialog dimensions](~/extensibility/ux-guidelines/media/0801-i_themeddialogdimensions.png "0801\-i\_ThemedDialogDimensions")  
   
  **Figura 08.01\-ricerca per categorie: Finestra di dialogo con tema: dimensioni**  
   
@@ -151,7 +151,7 @@ La maggior parte delle finestre di dialogo di Visual Studio [Layout di finestra 
   
  **Figura 08.01\-j: Finestra di dialogo con tema: i tipi di carattere**  
   
- ![Themed dialog colors](~/docs/extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801\-k\_ThemedDialogColors")  
+ ![Themed dialog colors](~/extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801\-k\_ThemedDialogColors")  
   
  **Figura 08.01\-k Finestra di dialogo con tema: colori**  
   

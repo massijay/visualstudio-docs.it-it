@@ -104,7 +104,7 @@ In molti scenari di applicazioni può essere necessario usare dati provenienti d
      Il form mostra i controlli associati a dati con etichette descrittive e un controllo Toolstrip \(<xref:System.Windows.Forms.BindingNavigator>\) per lo spostamento all'interno dei record.  Nella barra dei componenti vengono visualizzati gli oggetti [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), [CustomersTableAdapter](../data-tools/tableadapter-overview.md), <xref:System.Windows.Forms.BindingSource> e <xref:System.Windows.Forms.BindingNavigator>.  
   
 ## Creazione di controlli per visualizzare i dati della tabella Orders  
- ![Finestra Origini dati con visualizzazione delle relazioni](~/docs/data-tools/media/datasources2.gif "DataSources2")  
+ ![Finestra Origini dati con visualizzazione delle relazioni](~/data-tools/media/datasources2.gif "DataSources2")  
   
 #### Per creare controlli che consentano di visualizzare gli ordini di ciascun cliente \(record figlio\)  
   

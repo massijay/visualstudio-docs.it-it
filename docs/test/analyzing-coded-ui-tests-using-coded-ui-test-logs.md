@@ -100,7 +100,7 @@ I log dei test codificati dell'interfaccia utente filtrano e registrano informaz
   
      Verrà visualizzato l'output del test in cui è incluso un collegamento al log azioni.  
   
-     ![Collegamenti dei risultati e dell'output del codificato dell'interfaccia utente](~/docs/test/media/cuit_htmlactionlog2.png "CUIT_HTMLActionLog2")  
+     ![Collegamenti dei risultati e dell'output del codificato dell'interfaccia utente](~/test/media/cuit_htmlactionlog2.png "CUIT_HTMLActionLog2")  
   
 5.  Scegliere il collegamento UITestActionLog.html.  
   

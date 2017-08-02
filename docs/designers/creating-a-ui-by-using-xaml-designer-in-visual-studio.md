@@ -82,7 +82,7 @@ Le sbarre `Grid` consentono di gestire righe e colonne in un pannello [Grid](htt
   
  Nella visualizzazione Progettazione sono disponibili comandi aggiuntivi della tavola da disegno nell'area inferiore sinistra della schermata, come illustrato di seguito:  
   
- ![Comandi della visualizzazione di progettazione](~/docs/designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")  
+ ![Comandi della visualizzazione di progettazione](~/designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")  
   
  Nella barra degli strumenti sono disponibili i comandi seguenti:  
   

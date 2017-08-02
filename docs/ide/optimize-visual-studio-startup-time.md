@@ -32,14 +32,14 @@ Per evitare di prolungare il tempo di avvio, Visual Studio 2017 evita il caricam
 
 Se Visual Studio rileva un avvio lento, viene visualizzato un messaggio popup che comunica quale estensione o finestra degli strumenti provoca il rallentamento. Il messaggio include anche un collegamento alla finestra di dialogo **Gestisci prestazioni di Visual Studio** che elenca le estensioni e le finestre degli strumenti che compromettono le prestazioni di avvio. Questa finestra di dialogo consente di modificare le impostazioni delle estensioni e delle finestre degli strumenti per migliorare le prestazioni di avvio.
 
-![Gestisci prestazioni di Visual Studio -finestra popup](~/docs/ide/media/vside_perfdialog_popup.PNG "Gestisci prestazioni di Visual Studio - finestra popup")
+![Gestisci prestazioni di Visual Studio -finestra popup](~/ide/media/vside_perfdialog_popup.PNG "Gestisci prestazioni di Visual Studio - finestra popup")
 
 La finestra di dialogo **Gestisci prestazioni di Visual Studio** include due categorie: **Estensioni** e **Finestre degli strumenti**.
 
 ### <a name="control-extensions"></a>Controllare le estensioni
 Se un'estensione sta rallentando l'avvio di Visual Studio, essa viene visualizzata nella finestra di dialogo **Gestisci prestazioni di Visual Studio** quando si sceglie uno dei tipi di estensione. Se l'impatto sul tempo di avvio (indicato nella sezione **Impatto**) è eccessivamente elevato, è possibile scegliere di disabilitare sempre l'estensione all'avvio scegliendo il pulsante **Disabilita**. È possibile riabilitare l'estensione per le sessioni future mediante il Gestore estensioni o la finestra di dialogo Gestisci prestazioni di Visual Studio.
 
-![Gestisci prestazioni di Visual Studio -estensioni](~/docs/ide/media/vside_perfdialog_extensions.PNG "Gestisci prestazioni di Visual Studio - estensioni")
+![Gestisci prestazioni di Visual Studio -estensioni](~/ide/media/vside_perfdialog_extensions.PNG "Gestisci prestazioni di Visual Studio - estensioni")
 
 Oltre alle estensioni di avvio, è anche possibile disabilitare le estensioni caricate mentre vengono caricate le soluzioni o mentre un utente digita. Scegliere lo scenario per visualizzare un elenco delle estensioni associate.
 
@@ -49,7 +49,7 @@ Se una finestra degli strumenti sta rallentando l'avvio di Visual Studio, è pos
 - **Non visualizzare la finestra all'avvio:** se si sceglie questa opzione, la finestra degli strumenti specificata verrà sempre chiusa all'apertura di Visual Studio, anche se era stata lasciata aperta in una sessione precedente. È possibile aprire la finestra degli strumenti dal menu.
 - **Nascondi automaticamente la finestra all'avvio:** se una finestra degli strumenti è stata lasciata aperta in una sessione precedente, scegliendo questa opzione il gruppo della finestra degli strumenti viene compresso all'avvio per evitarne l'inizializzazione. Questa è una scelta ottimale se si usa spesso una finestra degli strumenti, poiché la finestra degli strumenti rimane disponibile senza compromettere il tempo di avvio di Visual Studio.
 
-![Gestisci prestazioni di Visual Studio -finestre degli strumenti](~/docs/ide/media/vside_perfdialog_toolwindows.PNG "Gestisci prestazioni di Visual Studio - finestre degli strumenti")
+![Gestisci prestazioni di Visual Studio -finestre degli strumenti](~/ide/media/vside_perfdialog_toolwindows.PNG "Gestisci prestazioni di Visual Studio - finestre degli strumenti")
 
 Se successivamente si cambia idea, è possibile ripristinare una qualsiasi di queste opzioni nella finestra di dialogo **Gestisci prestazioni di Visual Studio**. Per aprire la finestra di dialogo **Gestisci prestazioni di Visual Studio**, nella barra dei menu scegliere **Guida**, **Gestisci prestazioni di Visual Studio**.
 
@@ -63,7 +63,7 @@ Poiché alcune funzionalità IDE non sono completamente disponibili quando è ab
 
 È possibile abilitare il caricamento leggero soluzioni per l'IDE nel suo insieme o per singole soluzioni. Per abilitare il caricamento leggero soluzioni per l'intero IDE, andare a **Strumenti**, **Opzioni** e quindi passare alla sezione **Progetti e soluzioni**.
 
-![Finestra di dialogo Strumenti Opzioni](~/docs/ide/media/VSIDE_LightweightSolutionLoad.png)
+![Finestra di dialogo Strumenti Opzioni](~/ide/media/VSIDE_LightweightSolutionLoad.png)
 
 Per abilitare il caricamento leggero soluzioni per una singola soluzione, scegliere il nodo della soluzione di livello superiore in Esplora soluzioni.  Nella finestra Proprietà, scegliere uno dei seguenti valori per la proprietà **Caricamento leggero**.
 
@@ -71,7 +71,7 @@ Per abilitare il caricamento leggero soluzioni per una singola soluzione, scegli
 - **Disabilitato:** il caricamento leggero soluzioni verrà disabilitato per questa soluzione indipendentemente dall'impostazione a livello di IDE.
 - **Valore predefinito:** il comportamento del caricamento leggero soluzioni verrà rinviato all'impostazione a livello di IDE.
 
-![Esplora soluzioni](~/docs/ide/media/VSIDE_LSL Solution Setting.png)
+![Esplora soluzioni](~/ide/media/VSIDE_LSL Solution Setting.png)
 
 Quando si modifica l'impostazione del caricamento leggero soluzioni, la modifica diventa effettiva al successivo caricamento della soluzione. Non è necessario riavviare l'IDE.
 
@@ -79,7 +79,7 @@ Quando si modifica l'impostazione del caricamento leggero soluzioni, la modifica
 
 Quando si apre una soluzione di grandi dimensioni in Visual Studio 2017, potrebbe essere visualizzato un messaggio popup che propone di abilitare il caricamento leggero soluzioni. Il messaggio viene visualizzato solo per le soluzioni che contengono molti progetti C#, VB o C++. Se si sceglie di **abilitare** il comando, il caricamento leggero soluzioni viene abilitato soltanto per quella soluzione. L'impostazione a livello di IDE non cambierà.
 
-![Finestra popup](~/docs/ide/media/VSIDE_LSL Popup.png)
+![Finestra popup](~/ide/media/VSIDE_LSL Popup.png)
 
 È possibile disabilitare il caricamento leggero soluzioni in un secondo momento nella finestra Proprietà della soluzione.
 

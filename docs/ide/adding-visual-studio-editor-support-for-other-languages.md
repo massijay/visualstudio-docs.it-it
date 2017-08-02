@@ -32,7 +32,7 @@ Informazioni su come l'editor di Visual Studio supporti la lettura e il passaggi
 ## <a name="syntax-colorization-statement-completion-and-navigate-to-support"></a>Supporto della colorazione della sintassi, del completamento istruzioni e di Navigate To (Passa a)  
  Alcune funzionalità dell'editor di Visual Studio, ad esempio la colorazione della sintassi, il completamento istruzioni e Navigate To (Passa a) consentono una maggiore facilità di lettura, creazione e modifica del codice. Lo screenshot seguente mostra un esempio di modifica di uno script Perl in Visual Studio. La sintassi viene colorata automaticamente. Ad esempio, i commenti nel codice sono di colore verde, il codice è nero, i percorsi sono rossi e le istruzioni sono blu. L'editor di Visual Studio applica automaticamente la colorazione della sintassi per qualsiasi linguaggio supportato. Oltre a questo, quando si inizia a immettere una parola chiave o un oggetto noto del linguaggio, la funzionalità di completamento istruzioni visualizza l'elenco delle istruzioni e degli oggetti possibili. Il completamento istruzioni consente di creare codice in modo più rapido e facile.  
   
- ![Colorazione della sintassi in uno script Perl](~/docs/ide/media/vside_perledit.png "VSIDE_PerlEdit")  
+ ![Colorazione della sintassi in uno script Perl](~/ide/media/vside_perledit.png "VSIDE_PerlEdit")  
   
  Attualmente Visual Studio supporta le funzioni di colorazione della sintassi e di completamento istruzioni per i linguaggi riportati di seguito tramite le [grammatiche TextMate](https://manual.macromates.com/en/language_grammars). Se nella tabella non è presente il linguaggio preferito, tuttavia, non è il caso di preoccuparsi: è possibile aggiungerlo.  
   

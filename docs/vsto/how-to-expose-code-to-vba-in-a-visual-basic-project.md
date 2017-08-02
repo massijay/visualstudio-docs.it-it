@@ -38,7 +38,7 @@ caps.handback.revision: 46
   
 -   [Esposizione di codice non incluso in una classe dell'elemento host](#NonHostItem)  
   
- ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere l'articolo relativo [alla chiamata di codice VSTO da VBA](http://go.microsoft.com/fwlink/?LinkId=136757) \(la pagina potrebbe essere in inglese\).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere l'articolo relativo [alla chiamata di codice VSTO da VBA](http://go.microsoft.com/fwlink/?LinkId=136757) \(la pagina potrebbe essere in inglese\).  
   
 ##  <a name="HostItemCode"></a> Esposizione di codice in una classe dell'elemento host  
  Per consentire al codice VBA di chiamare il codice di Visual Basic in una classe dell'elemento host, impostare la proprietà **EnableVbaCallers** dell'elemento host su **True**.  

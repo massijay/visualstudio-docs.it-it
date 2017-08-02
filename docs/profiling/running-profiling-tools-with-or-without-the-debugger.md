@@ -63,11 +63,11 @@ Visual Studio offre ora una vasta gamma di strumenti per le prestazioni, alcuni 
   
  La finestra dispone ora di una casella di ricerca, tramite cui si può trovare una specifica stringa ovunque nell'elenco eventi. Ad esempio, l'immagine seguente mostra i risultati della ricerca della stringa "install", che ha restituito quattro eventi:  
   
- ![DiagnosticsEventSearch](~/docs/profiling/media/diagnosticseventsearch.png "DiagnosticsEventSearch")  
+ ![DiagnosticsEventSearch](~/profiling/media/diagnosticseventsearch.png "DiagnosticsEventSearch")  
   
  È anche possibile escludere eventi dalla visualizzazione nella finestra o includerli nuovamente. Nell'elenco a discesa **Filtro** è possibile selezionare o deselezionare specifiche categorie di eventi. I nomi delle categorie sono uguali ai prefissi.  
   
- ![DiagnosticEventFilter](~/docs/profiling/media/diagnosticeventfilter.png "DiagnosticEventFilter")  
+ ![DiagnosticEventFilter](~/profiling/media/diagnosticeventfilter.png "DiagnosticEventFilter")  
   
  Per altre informazioni, vedere l'articolo relativo a come [eseguire ricerche e applicare filtri nella scheda Eventi della finestra Strumenti di diagnostica](http://blogs.msdn.com/b/visualstudioalm/archive/2015/11/12/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window.aspx).  
   
@@ -80,7 +80,7 @@ Visual Studio offre ora una vasta gamma di strumenti per le prestazioni, alcuni 
   
 3.  Nella pagina di avvio di diagnostica scegliere uno o più strumenti da eseguire nella sessione. Vengono visualizzati solo gli strumenti applicabili al tipo di progetto, al sistema operativo e al linguaggio di programmazione. Quando si sceglie uno strumento di diagnostica, le selezioni degli strumenti che non possono essere eseguiti nella stessa sessione di diagnostica sono disattivate. Ecco le possibili scelte per un'app di Windows universale in C#:  
   
-     ![Selezionare gli strumenti di diagnostica](~/docs/profiling/media/diag_selecttool.png "DIAG_SelectTool")  
+     ![Selezionare gli strumenti di diagnostica](~/profiling/media/diag_selecttool.png "DIAG_SelectTool")  
   
 4.  Per avviare la sessione di diagnostica, fare clic su **Avvia**.  
   
@@ -88,7 +88,7 @@ Visual Studio offre ora una vasta gamma di strumenti per le prestazioni, alcuni 
   
      Durante la sessione alcuni strumenti visualizzano grafici dei dati in tempo reale nella pagina di avvio degli strumenti di diagnostica.  
   
-     ![Raccogliere dati nella pagina Prestazioni e diagnostica](~/docs/profiling/media/pdhub_collectdata.png "PDHUB_CollectData")  
+     ![Raccogliere dati nella pagina Prestazioni e diagnostica](~/profiling/media/pdhub_collectdata.png "PDHUB_CollectData")  
   
 6.  Per terminare la sessione di diagnostica, scegliere **Arrestare la raccolta**.  
   
@@ -96,32 +96,32 @@ Visual Studio offre ora una vasta gamma di strumenti per le prestazioni, alcuni 
   
  È anche possibile aprire i file di sessione .diagnostic salvati dall'elenco dei file aperti di recente nella pagina di avvio degli strumenti di diagnostica.  
   
- ![Aprire un file della sessione di diagnostica salvato](~/docs/profiling/media/pdhub_openexistingdiagsession.png "PDHUB_OpenExistingDiagSession")  
+ ![Aprire un file della sessione di diagnostica salvato](~/profiling/media/pdhub_openexistingdiagsession.png "PDHUB_OpenExistingDiagSession")  
   
 ## <a name="the-profiling-report"></a>Rapporto di profilatura  
- ![Rapporto degli strumenti di diagnostica](~/docs/profiling/media/diag_report.png "DIAG_Report")  
+ ![Rapporto degli strumenti di diagnostica](~/profiling/media/diag_report.png "DIAG_Report")  
   
 |||  
 |-|-|  
-|![Passaggio 1](~/docs/profiling/media/procguid_1.png "ProcGuid_1")|La sequenza temporale mostra la durata della sessione di profilatura, gli eventi di attivazione del ciclo di vita dell'app e i contrassegni utente.|  
-|![Passaggio 2](~/docs/profiling/media/procguid_2.png "ProcGuid_2")|Puoi limitare il rapporto a una parte della sequenza temporale trascinando le barre blu per selezionare un'area della stessa.|  
-|![Passaggio 3](~/docs/profiling/media/procguid_3.png "ProcGuid_3")|Uno strumento visualizza uno o più grafici master. Se la sessione di diagnostica viene creata con più strumenti, vengono visualizzati tutti i grafici master.|  
-|![Passaggio 4](~/docs/profiling/media/procguid_4.png "ProcGuid_4")|È possibile comprimere ed espandere i singoli grafici.|  
-|![Passaggio 5](~/docs/profiling/media/procguid_6.png "ProcGuid_6")|Quando i dati includono informazioni da più strumenti, i dettagli per ogni strumento sono raccolti in schede.|  
-|![Passaggio 6](~/docs/profiling/media/procguid_6a.png "ProcGuid_6a")|Uno strumento può avere una o più visualizzazioni dettagli. La visualizzazione viene filtrata in base alla sezione selezionata della cronologia.|  
+|![Passaggio 1](~/profiling/media/procguid_1.png "ProcGuid_1")|La sequenza temporale mostra la durata della sessione di profilatura, gli eventi di attivazione del ciclo di vita dell'app e i contrassegni utente.|  
+|![Passaggio 2](~/profiling/media/procguid_2.png "ProcGuid_2")|Puoi limitare il rapporto a una parte della sequenza temporale trascinando le barre blu per selezionare un'area della stessa.|  
+|![Passaggio 3](~/profiling/media/procguid_3.png "ProcGuid_3")|Uno strumento visualizza uno o più grafici master. Se la sessione di diagnostica viene creata con più strumenti, vengono visualizzati tutti i grafici master.|  
+|![Passaggio 4](~/profiling/media/procguid_4.png "ProcGuid_4")|È possibile comprimere ed espandere i singoli grafici.|  
+|![Passaggio 5](~/profiling/media/procguid_6.png "ProcGuid_6")|Quando i dati includono informazioni da più strumenti, i dettagli per ogni strumento sono raccolti in schede.|  
+|![Passaggio 6](~/profiling/media/procguid_6a.png "ProcGuid_6a")|Uno strumento può avere una o più visualizzazioni dettagli. La visualizzazione viene filtrata in base alla sezione selezionata della cronologia.|  
   
 ## <a name="setting-the-analysis-target-to-another-device"></a>Impostazione della destinazione di analisi su un altro dispositivo  
  Prima di avviare l'app dal progetto di Visual Studio, è anche possibile eseguire sessioni di diagnostica su destinazioni alternative. Ad esempio, potrebbe essere necessario diagnosticare problemi di prestazioni in una versione dell'app installata da Windows App Store.  
   
- ![Scegliere la destinazione di analisi degli strumenti di diagnostica](~/docs/profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")  
+ ![Scegliere la destinazione di analisi degli strumenti di diagnostica](~/profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")  
   
  È possibile avviare app già installate in un dispositivo oppure collegare gli strumenti di diagnostica ad alcune app già in esecuzione. Quando si sceglie **Applicazione in esecuzione** o **Applicazione installata**, è possibile selezionare l'app da un elenco che individua le app nella destinazione di distribuzione specificata.  
   
- ![Scegliere un'app in esecuzione o installata per la diagnostica](~/docs/profiling/media/pdhub_selectrunningapp.png "PDHUB_SelectRunningApp")  
+ ![Scegliere un'app in esecuzione o installata per la diagnostica](~/profiling/media/pdhub_selectrunningapp.png "PDHUB_SelectRunningApp")  
   
  Quando si sceglie **Internet Explorer**, specificare l'URL per poter modificare la destinazione di distribuzione del telefono.  
   
- ![Specificare l'URL da visualizzare in Internet Explorer](~/docs/profiling/media/pdhub_choosephoneanalysistarget.png "PDHUB_ChoosePhoneAnalysisTarget")  
+ ![Specificare l'URL da visualizzare in Internet Explorer](~/profiling/media/pdhub_choosephoneanalysistarget.png "PDHUB_ChoosePhoneAnalysisTarget")  
   
 ## <a name="remote-debugging"></a>Remote Debugging  
  L’esecuzione di una sessione di diagnostica in un PC o tablet remoto richiede che Visual Studio Remote Tools sia installato e in esecuzione sulla destinazione remota. Per le app desktop, vedere [Debug remoto](../debugger/remote-debugging.md).  Per le app universali di Windows, vedere [Eseguire app di Windows Store in un computer remoto](../debugger/run-windows-store-apps-on-a-remote-machine.md).  
