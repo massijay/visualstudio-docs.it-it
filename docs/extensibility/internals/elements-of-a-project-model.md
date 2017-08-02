@@ -35,7 +35,7 @@ le interfacce e le implementazioni di tutti i progetti in [!INCLUDE[vsprvs](../.
   
  Nella figura seguente sono illustrate le interfacce primarie, servizi e oggetti che costituiscono l'implementazione di progetto tipica.  È possibile utilizzare l'helper di applicazione, HierUtil7, per creare gli oggetti sottostanti e altre boilerplate di programmazione.  Per ulteriori informazioni sul supporto dell'applicazione HierUtil7, vedere [Not in Build: Using HierUtil7 Project Classes to Implement a Project Type \(C\+\+\)](http://msdn.microsoft.com/it-it/a5c16a09-94a2-46ef-87b5-35b815e2f346).  
   
- ![Rappresentazione grafica dei modelli di progetto Visual Studio](../../extensibility/internals/media/vsprojectmodel.png "vsProjectModel")  
+ ![Rappresentazione grafica dei modelli di progetto Visual Studio](~/docs/extensibility/internals/media/vsprojectmodel.gif "vsProjectModel")  
 modello di progetto  
   
  Per ulteriori informazioni sulle interfacce e servizi elencati nel diagramma precedente e altre interfacce facoltative allegati al diagramma, vedere [Componenti di base del modello di progetto](../../extensibility/internals/project-model-core-components.md).  

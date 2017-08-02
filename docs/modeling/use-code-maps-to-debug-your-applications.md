@@ -42,12 +42,12 @@ Le mappe codice consentono di evitare di perdersi nelle codebase di grandi dimen
   
  Di conseguenza, iniziare l'analisi cercando il metodo `Undo`.  Il metodo si trova nella classe `PaintCanvas`.  
   
- ![Mappa codici &#45; Trovare codice](../modeling/media/codemapstoryboardpaint1.png "CodeMapStoryboardPaint1")  
+ ![Mappa codici &#45; Trovare codice](~/docs/modeling/media/codemapstoryboardpaint1.png "CodeMapStoryboardPaint1")  
   
 ## Avviare il mapping del codice  
  A questo punto è possibile avviare il mapping del metodo `undo` e le relative relazioni.  Nell'editor di codice aggiungere il metodo `undo` e i campi a cui viene fatto riferimento a una nuova mappa codice.  Quando si crea una nuova mappa, l'indicizzazione del codice potrebbe richiedere del tempo.  Ciò consente alle operazioni successive di essere eseguite più velocemente.  
   
- ![Mappa codici &#45; Visualizzare il metodo e i campi correlati](../modeling/media/codemapstoryboardpaint3.png "CodeMapStoryboardPaint3")  
+ ![Mappa codici &#45; Visualizzare il metodo e i campi correlati](~/docs/modeling/media/codemapstoryboardpaint3.png "CodeMapStoryboardPaint3")  
   
 > [!TIP]
 >  L'evidenziazione verde indica gli ultimi elementi aggiunti alla mappa.  La freccia verde indica la posizione del cursore nel codice.  Le frecce tra gli elementi rappresentano relazioni diverse.  È possibile ottenere altre informazioni sugli elementi nella mappa spostandovi sopra il mouse ed esaminando le relative descrizioni comandi.  
@@ -69,7 +69,7 @@ Le mappe codice consentono di evitare di perdersi nelle codebase di grandi dimen
   
  ![Mappa codici &#45; Trovare tutti i riferimenti](../modeling/media/codemapstoryboardpaint6.png "CodeMapStoryboardPaint6")  
   
- ![Aprire una mappa codici nell'editor del codice](../modeling/media/codemapstoryboardpaint6a.png "CodeMapStoryboardPaint6A")  
+ ![Aprire una mappa codici nell'editor del codice](~/docs/modeling/media/codemapstoryboardpaint6a.PNG "CodeMapStoryboardPaint6A")  
   
 > [!NOTE]
 >  Se si aggiungono elementi da un progetto condiviso in più applicazioni, ad esempio Windows Phone o Windows Store, tali elementi vengono sempre visualizzati nella mappa insieme al progetto di app attualmente attivo.  Se pertanto si modifica il contesto in un altro progetto di app, il contesto nella mappa viene modificato anche per tutti gli elementi appena aggiunti dal progetto condiviso.  Le operazioni eseguite con un elemento nella mappa si applicano solo agli elementi che condividono lo stesso contesto.  

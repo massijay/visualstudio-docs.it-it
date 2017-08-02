@@ -74,7 +74,7 @@ Se si vuole controllare direttamente la posizione in cui Visual Studio cerca gli
  8. Le nuove installazioni installeranno automaticamente la versione aggiornata di Visual Studio direttamente dal layout.
 
 ## <a name="controlling-notifications-in-the-visual-studio-ide"></a>Controllo delle notifiche nell'IDE di Visual Studio
-Come descritto in precedenza, Visual Studio controlla l'eventuale presenza di aggiornamenti nel percorso da cui è stato installato (ad esempio, la condivisione di rete o Internet). Se è disponibile un aggiornamento, per impostazione predefinita Visual Studio ne informa l'utente con un flag di notifica nell'angolo superiore destro della finestra: ![flag di notifica per gli aggiornamenti](media/notification-flag.png)
+Come descritto in precedenza, Visual Studio controlla l'eventuale presenza di aggiornamenti nel percorso da cui è stato installato (ad esempio, la condivisione di rete o Internet). Se è disponibile un aggiornamento, per impostazione predefinita Visual Studio ne informa l'utente con un flag di notifica nell'angolo superiore destro della finestra: ![flag di notifica per gli aggiornamenti](~/docs/install/media/notification-flag.png)
 
 Se si preferisce non informare gli utenti della disponibilità di aggiornamenti (ad esempio, se si distribuiscono gli aggiornamenti attraverso un meccanismo di distribuzione centrale del software), è possibile disabilitare queste notifiche.
 

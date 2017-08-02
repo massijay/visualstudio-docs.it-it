@@ -56,7 +56,7 @@ In alcune applicazioni, potrebbe essere necessario utilizzare dati provenienti d
   
      Nella figura seguente viene illustrata la tabella **Orders** correlata della tabella **Customers** in un dataset nella finestra **Origini dati**.  
   
-     ![Finestra Origini dati con visualizzazione delle relazioni](../data-tools/media/datasources2.gif "DataSources2")  
+     ![Finestra Origini dati con visualizzazione delle relazioni](~/docs/data-tools/media/datasources2.gif "DataSources2")  
   
 ## Vedere anche  
  [Associazione di controlli WPF ai dati in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)   

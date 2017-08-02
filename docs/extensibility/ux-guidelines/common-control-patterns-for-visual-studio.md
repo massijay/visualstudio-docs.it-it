@@ -104,7 +104,7 @@ Per la modalità di interazione tipica, seguire la [linee guida di Windows Deskt
 #### <a name="layout"></a>Layout  
 Elenchi a discesa e caselle combinate di ridimensionamento per adattare il contenuto, non si adattino alla larghezza della finestra in cui vengono visualizzati né arbitrariamente corrisponde alla lunghezza dei campi lunghi, ad esempio un percorso.  
   
-![Non è corretto: la larghezza dell'elenco a discesa è troppo lunga per il contenuto che verrà visualizzato.](../../extensibility/ux-guidelines/media/0707-03_incorrectdropdownlayout.png "0707-03_IncorrectDropDownLayout")<br />Non è corretto: la larghezza dell'elenco a discesa è troppo lunga per il contenuto che verrà visualizzato.
+![Non è corretto: la larghezza dell'elenco a discesa è troppo lunga per il contenuto che verrà visualizzato.](~/docs/extensibility/ux-guidelines/media/0707-03_incorrectdropdownlayout.png "0707-03_IncorrectDropDownLayout")<br />Non è corretto: la larghezza dell'elenco a discesa è troppo lunga per il contenuto che verrà visualizzato.
   
 ![Corretti: elenco a discesa viene ridimensionato per tener conto della crescita traduzione, ma non eccessivamente lunghe.](../../extensibility/ux-guidelines/media/0707-04_correctdropdownlayout.png "0707-04_CorrectDropDownLayout")<br />Corretti: elenco a discesa viene ridimensionato per tener conto della crescita traduzione, ma non eccessivamente lunghe. 
   
@@ -160,11 +160,11 @@ Esistono due modi per visualizzare le informazioni di testo statico.
 
 Può essere testo statico in un proprio in una finestra di dialogo senza alcun contenuto quando non si verifichino conflitti di raggruppamento. Decidere se le righe aggiuntive di una casella siano effettivamente necessarie. Un esempio è la visualizzazione di un percorso di directory in una sezione creata da una linea di gruppo, come illustrato di seguito:  
 
-![Informazioni di testo statico in controlli di testo](../../extensibility/ux-guidelines/media/DisplayingStaticText.png "DisplayingStaticText.png")<br />Informazioni di testo statico in controlli di testo
+![Informazioni di testo statico in controlli di testo](~/docs/extensibility/ux-guidelines/media/DisplayingStaticText.png "DisplayingStaticText.png")<br />Informazioni di testo statico in controlli di testo
 
 In una finestra di dialogo in cui esistono altre aree raggruppati e indipendenza delle informazioni consente di migliorare la leggibilità, e quando una sezione può essere nascosta o visualizzata (come nel **finestra proprietà** riquadro Descrizione) o si desidera siano coerenti con l'interfaccia utente simile, inserire il testo statico in una casella. Questa casella di gruppo deve essere una singola regola e colorati con il `ButtonShadow`:
 
-![Testo statico nella finestra proprietà](../../extensibility/ux-guidelines/media/PropertiesWindow.png "PropertiesWindow.png")<br />Testo statico nella finestra proprietà
+![Testo statico nella finestra proprietà](~/docs/extensibility/ux-guidelines/media/PropertiesWindow.png "PropertiesWindow.png")<br />Testo statico nella finestra proprietà
 
 ### <a name="read-only-text-box"></a>Casella di testo di sola lettura
 
@@ -172,7 +172,7 @@ Ciò consente all'utente di selezionare il testo all'interno del campo, ma non m
 
 Una casella di testo può diventare attiva (modificabile) quando un utente modifica un controllo associato, ad esempio il controllo o se si deseleziona una casella di controllo o la selezione o deselezione di un pulsante di opzione. Ad esempio, nel **strumenti &gt; opzioni** pagina riportato di seguito, il **Home Page** casella di testo diventa attiva quando il **Usa predefinito** casella di controllo è deselezionata.
 
-![Casella di testo di sola lettura, che mostra inattivo allo stato attivo](../../extensibility/ux-guidelines/media/ReadOnlyTextBox.png "ReadOnlyTextBox.png")<br />Casella di testo di sola lettura, che mostra inattivo allo stato attivo
+![Casella di testo di sola lettura, che mostra inattivo allo stato attivo](~/docs/extensibility/ux-guidelines/media/ReadOnlyTextBox.png "ReadOnlyTextBox.png")<br />Casella di testo di sola lettura, che mostra inattivo allo stato attivo
 
 ### <a name="using-text-in-dialogs"></a>Utilizzo di testo in finestre di dialogo
 
@@ -219,7 +219,7 @@ Le finestre di dialogo trarre vantaggio da linee guida filigrana leggermente div
 
 -   Le filigrane possono essere centrate o allineamento a sinistra. Applicare le regole di progettazione standard nel prendere decisioni di allineamento. Impossibile selezionare la filigrana sullo sfondo.
 
-![Esempio di testo filigrana](../../extensibility/ux-guidelines/media/WatermarkTextExample.gif)<br />Esempio di testo filigrana
+![Esempio di testo filigrana](~/docs/extensibility/ux-guidelines/media/WatermarkTextExample.gif)<br />Esempio di testo filigrana
 
 ### <a name="context-specific-dynamic-text"></a>Testo (dinamico) specifici del contesto
 
@@ -319,12 +319,12 @@ Alcuni pulsanti devono sempre utilizzare un'immagine grafica e testo per risparm
 | Funzione | Pulsante |  
 | --- | --- |  
 | Aggiunta | ![Grafica pulsante "Aggiungi"](../../extensibility/ux-guidelines/media/070703-08_buttonadd.png "070703 08_ButtonAdd") |
-| Rimuovi | ![Pulsante grafico "Rimuovi"](../../extensibility/ux-guidelines/media/070703-09_buttonremove.png "070703 09_ButtonRemove") |
+| Rimuovi | ![Pulsante grafico "Rimuovi"](~/docs/extensibility/ux-guidelines/media/070703-09_buttonremove.png "070703 09_ButtonRemove") |
 | Aggiungi tutto | ![Pulsante grafico "Aggiungi tutto"](../../extensibility/ux-guidelines/media/070703-10_buttonaddall.png "070703 10_ButtonAddAll") |
 | Rimuovi tutto | ![Pulsante grafico "Rimuovi tutto"](../../extensibility/ux-guidelines/media/070703-11_buttonremoveall.png "070703 11_ButtonRemoveAll") |
 | Sposta su | ![Pulsante grafico "Sposta su"](../../extensibility/ux-guidelines/media/070703-12_buttonmoveup.png "070703 12_ButtonMoveUp") |
-| Sposta giù | ![Pulsante grafico "Sposta giù"](../../extensibility/ux-guidelines/media/070703-13_buttonmovedown.png "070703 13_ButtonMoveDown") |
-| Eliminare | ![Pulsante grafico "Elimina"](../../extensibility/ux-guidelines/media/070703-14_buttondelete.png "070703 14_ButtonDelete") |
+| Sposta giù | ![Pulsante grafico "Sposta giù"](~/docs/extensibility/ux-guidelines/media/070703-13_buttonmovedown.png "070703 13_ButtonMoveDown") |
+| Eliminare | ![Pulsante grafico "Elimina"](~/docs/extensibility/ux-guidelines/media/070703-14_buttondelete.png "070703 14_ButtonDelete") |
   
 ##### <a name="sizing-and-spacing"></a>Ridimensionamento e la spaziatura  
 Definizione delle dimensioni per i pulsanti con interfaccia grafico sono la stessa di una versione ridotta del **[Sfoglia...]**  pulsante (26 x 23 pixel):  
@@ -371,7 +371,7 @@ Icone devono essere utilizzate in controlli visualizzazione albero solo se è ai
 #### <a name="scroll-bars"></a>Barre di scorrimento  
 Barre di scorrimento devono sempre essere nascosto se il contenuto si adatta all'interno del controllo di visualizzazione albero. È accettabile per le barre di scorrimento per essere nascosta o semi-trasparente in una finestra scorrevole e vengono visualizzati quando la finestra contenente la visualizzazione albero ha lo stato attivo o al momento del passaggio del mouse della struttura ad albero visualizzare anch'esso.  
   
-![Entrambe le barre di scorrimento orizzontale e verticale vengono visualizzate perché il contenuto è stato superato i limiti del controllo di visualizzazione albero.](../../extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705-4_Scrollbars")<br />Entrambe le barre di scorrimento orizzontale e verticale vengono visualizzate perché il contenuto è stato superato i limiti del controllo di visualizzazione albero.
+![Entrambe le barre di scorrimento orizzontale e verticale vengono visualizzate perché il contenuto è stato superato i limiti del controllo di visualizzazione albero.](~/docs/extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705-4_Scrollbars")<br />Entrambe le barre di scorrimento orizzontale e verticale vengono visualizzate perché il contenuto è stato superato i limiti del controllo di visualizzazione albero.
   
 ###  <a name="BKMK_TreeViewInteractions"></a>Interazioni di visualizzazione albero  
   

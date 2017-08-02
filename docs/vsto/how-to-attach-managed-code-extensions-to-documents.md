@@ -32,7 +32,7 @@ caps.handback.revision: 32
 > [!NOTE]  
 >  Non sarà possibile caricare la personalizzazione se il codice prevede la presenza di controlli di cui il documento specificato è privo.  
   
- ![Collegamento a video](../vsto/media/playvideo.png "Collegamento a video") Per una dimostrazione video correlata, vedere la [procedura relativa all'associazione o alla dissociazione di un assembly VSTO da un documento di Word](http://go.microsoft.com/fwlink/?LinkId=136782).  
+ ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere la [procedura relativa all'associazione o alla dissociazione di un assembly VSTO da un documento di Word](http://go.microsoft.com/fwlink/?LinkId=136782).  
   
 ### Per collegare le estensioni di codice gestito a un documento  
   

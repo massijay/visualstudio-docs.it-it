@@ -35,7 +35,7 @@ In questo passaggio verrà creato un set di simboli corrispondenti per il gioco.
   
 3.  Quando si aggiunge l'oggetto `List`, osservare la finestra di **IntelliSense** visualizzata.  Di seguito è riportato un esempio di Visual C\#, ma un testo simile apparirà quando si aggiunge un elenco in Visual Basic.  
   
-     ![Finestra Proprietà con evento Click visualizzato](../ide/media/express_listintellisense.png "Express\_ListIntellisense")  
+     ![Finestra Proprietà con evento Click visualizzato](~/docs/ide/media/express_listintellisense.png "Express\_ListIntellisense")  
 Finestra di IntelliSense  
   
     > [!NOTE]

@@ -58,7 +58,7 @@ caps.handback.revision: 64
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
- ![Collegamento a video](../vsto/media/playvideo.png "Collegamento a video") Per una dimostrazione video correlata, vedere [Binding di dati a controlli contenuto di Word 2007 con Visual Studio Tools per Office System  \(3.0\)](http://go.microsoft.com/fwlink/?LinkId=136785).  
+ ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere [Binding di dati a controlli contenuto di Word 2007 con Visual Studio Tools per Office System  \(3.0\)](http://go.microsoft.com/fwlink/?LinkId=136785).  
   
 ## Panoramica dei controlli contenuto  
  I controlli contenuto forniscono un'interfaccia utente ottimizzata sia per l'input utente sia per la stampa.  Quando si aggiunge un controllo contenuto a un documento, il controllo è identificato da un bordo, un titolo e testo temporaneo che può contenere istruzioni per l'utente.  Il bordo e il titolo del controllo non vengono visualizzati nelle versioni stampate del documento.  

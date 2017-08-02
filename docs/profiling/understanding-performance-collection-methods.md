@@ -120,7 +120,7 @@ Gli Strumenti di Profilatura di Visual Studio forniscono cinque metodi che è po
 ##  <a name="tier_interaction"></a> Interazione tra livelli  
  La profilatura dell'interazione tra livelli inserisce informazioni in un file dei dati di profilatura relativo alle chiamate sincrone di [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] tra una pagina di [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] o un'altra applicazione e un database [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)].  Nei dati sono inclusi il numero e l'ora delle chiamate e i tempi massimo e minimo.  È possibile aggiungere dati di interazione tra livelli ai dati di profilatura raccolti con il metodo di campionamento, strumentazione, memoria .NET o concorrenza.  
   
- ![Dati di profilo di interazione tra livelli](../profiling/media/tierinteraction_profilingtools.png "TierInteraction\_ProfilingTools")  
+ ![Dati di profilo di interazione tra livelli](~/docs/profiling/media/tierinteraction_profilingtools.png "TierInteraction\_ProfilingTools")  
 Dati di interazione tra livelli raccolti dagli strumenti di profilatura  
   
  [Raccolta di dati di interazione tra livelli](../profiling/collecting-tier-interaction-data.md)  

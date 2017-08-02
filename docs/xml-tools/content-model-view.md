@@ -22,7 +22,7 @@ La visualizzazione modello di contenuto fornisce una rappresentazione grafica di
   
  Nell'immagine seguente, il pannello Area di lavoro contiene sei nodi dello schema.Il nodo `purchaseOrder` è selezionato nel pannello Area di lavoro e visualizzato nell'area di progettazione.  
   
- ![Visualizzazione del modello di contenuto di Progettazione XML Schema](../xml-tools/media/xsddesigner_contentmodelview.gif "XSDDesigner\_ContentModelView")  
+ ![Visualizzazione del modello di contenuto di Progettazione XML Schema](~/docs/xml-tools/media/xsddesigner_contentmodelview.gif "XSDDesigner\_ContentModelView")  
   
 ## Pannello Area di lavoro  
  Dopo avere aggiunto nodi all'area di lavoro, l'elenco di nodi sarà visualizzato nel pannello **Area di lavoro** della visualizzazione modello di contenuto.Una volta selezionati nel pannello **Area di lavoro** i nodi vengono visualizzati nell'area di progettazione della visualizzazione modello di contenuto.Per eliminare i nodi dall'area di lavoro, utilizzare la barra degli strumenti di Progettazione XSD, il menu di scelta rapida del pannello **Area di lavoro** o il tasto CANC.  

@@ -38,7 +38,7 @@ Acquisire informazioni grafiche dall'app Direct3D così da poter usare Analizzat
   
 #### Per acquisire un frame  
   
--   Nella barra degli strumenti **Grafica** in Visual Studio selezionare il pulsante **Acquisisci frame**![Icona pulsante acquisizione grafica](../debugger/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics").  
+-   Nella barra degli strumenti **Grafica** in Visual Studio selezionare il pulsante **Acquisisci frame**![Icona pulsante acquisizione grafica](~/docs/debugger/graphics/media/debuggingdirectxgraphics.png "DebuggingDirectXGraphics").  
   
 -   Premere STAMP sulla tastiera.  
   

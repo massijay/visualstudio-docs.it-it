@@ -115,7 +115,7 @@ ms.lasthandoff: 05/13/2017
   
      Questo codice XAML crea un layout riutilizzabile con i segnaposto per i campi numero, titolo e descrizione. In fase di esecuzione i segnaposti possono essere sostituiti con un testo come illustrato nella figura seguente.  
   
-     ![Controllo utente QuickStartTask](../designers/media/wpfquickstart1.PNG "WPFQuickStart1")  
+     ![Controllo utente QuickStartTask](~/docs/designers/media/wpfquickstart1.PNG "WPFQuickStart1")  
   
 6.  In **Esplora soluzioni**espandere il nodo **QuickStartTask.xaml** e aprire il file **QuickStartTask.xaml.cs** o **QuickStartTask.xaml.vb** .  
   
@@ -302,7 +302,7 @@ ms.lasthandoff: 05/13/2017
   
      A questo punto, la progettazione dovrebbe essere simile alla figura seguente.  
   
-     ![MainWindow nella finestra di progettazione](../designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
+     ![MainWindow nella finestra di progettazione](~/docs/designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
   
     > [!NOTE]
     >  Seguendo le procedure successive è possibile che vengano visualizzati alcuni errori nell' **Elenco errori** se è aperto. Non c'è però da preoccuparsi perché tali errori non verranno più visualizzati al termine delle procedure rimanenti.  
@@ -572,7 +572,7 @@ ms.lasthandoff: 05/13/2017
   
      Verranno aggiunte due voci per l'elenco **Query and Update Data** , come illustrato nella figura seguente.  
   
-     ![Gli elementi ToDo vengono aggiunti all'elenco.](../designers/media/wpfquickstart3.PNG "WPFQuickStart3")  
+     ![Gli elementi ToDo vengono aggiunti all'elenco.](~/docs/designers/media/wpfquickstart3.PNG "WPFQuickStart3")  
   
 4.  Selezionare la casella di controllo per la voce **Do something else** nell'elenco.  
   

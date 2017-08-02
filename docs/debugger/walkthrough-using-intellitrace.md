@@ -54,7 +54,7 @@ caps.handback.revision: 4
   
      La screenshot che segue è presa da Visual Studio 2015 Update 1.  
   
-     ![IntelliTrace&#45;Update1](../debugger/media/intellitrace-update1.png "IntelliTrace\-Update1")  
+     ![IntelliTrace&#45;Update1](~/docs/debugger/media/intellitrace-update1.png "IntelliTrace\-Update1")  
   
 7.  Selezionare l'evento per espandere i dettagli.  
   
@@ -68,7 +68,7 @@ caps.handback.revision: 4
   
      La screenshot che segue è presa da Visual Studio 2015 Update 1.  
   
-     ![HistoricalDebugging&#45;Update1](../debugger/media/historicaldebugging-update1.png "HistoricalDebugging\-Update1")  
+     ![HistoricalDebugging&#45;Update1](~/docs/debugger/media/historicaldebugging-update1.png "HistoricalDebugging\-Update1")  
   
 8.  Se il bug non viene trovato, provare ad analizzare altri eventi. È anche possibile che IntelliTrace registri le informazioni sulle chiamate in modo da eseguire le chiamate alle funzioni.  
   

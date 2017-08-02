@@ -46,18 +46,18 @@ In questa pagina viene descritta la procedura di disinstallazione di Visual Stud
 
      Ad esempio, in un computer che esegue l'Aggiornamento dell'anniversario di Windows 10 selezionare **Start** e scorrere fino alla lettera **P** in cui viene visualizzato come **Programma di installazione di Visual Studio**.  
 
-     ![Programma di installazione di Visual Studio](media/vs2017-locate-the-visual-studio-installer.PNG "Individuare il programma di installazione di Microsoft Visual Studio")
+     ![Programma di installazione di Visual Studio](~/docs/install/media/vs2017-locate-the-visual-studio-installer.PNG "Individuare il programma di installazione di Microsoft Visual Studio")
 
      >[!NOTE]
      In alcuni computer il programma di installazione di Visual Studio potrebbe trovarsi sotto la lettera **"M"** come **Microsoft Visual Studio: programma di installazione**.
 
-2.  Fare clic per avviare il programma di installazione, fare clic sull'icona ![Icona Dettagli](media/vs2017uninstall-UninstallIcon.png "Seleziona l'icona Opzioni") e quindi fare clic su **Disinstalla**.  
+2.  Fare clic per avviare il programma di installazione, fare clic sull'icona ![Icona Dettagli](~/docs/install/media/vs2017uninstall-UninstallIcon.png "Seleziona l'icona Opzioni") e quindi fare clic su **Disinstalla**.  
 
-     ![Modifica di Visual Studio 2017; Modificare, avviare, ripristinare o disinstallare](media/vs2017-uninstall.PNG "Ripristinare o disinstallare Visual Studio 2017")  
+     ![Modifica di Visual Studio 2017; Modificare, avviare, ripristinare o disinstallare](~/docs/install/media/vs2017-uninstall.PNG "Ripristinare o disinstallare Visual Studio 2017")  
 
 3.  Fare clic su **OK** per confermare la scelta.
 
-     ![Modifica di Visual Studio 2017; Disinstallare il prodotto](media/vs2017-uninstall-confirm.PNG "Confermare la disinstallazione di Visual Studio 2017")  
+     ![Modifica di Visual Studio 2017; Disinstallare il prodotto](~/docs/install/media/vs2017-uninstall-confirm.PNG "Confermare la disinstallazione di Visual Studio 2017")  
 
 Se in seguito si cambia idea e si vuole reinstallare Visual Studio 2017, è sufficiente avviare nuovamente il programma di installazione di Visual Studio e quindi selezionare **Installa** nella schermata di selezione.
 

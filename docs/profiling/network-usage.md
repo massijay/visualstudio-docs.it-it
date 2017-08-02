@@ -58,7 +58,7 @@ Lo strumento di diagnostica **Rete** di Visual Studio consente di raccogliere da
   
  La finestra di report dovrebbe essere analoga alla seguente:  
   
- ![Finestra dello strumento Rete](../profiling/media/network_fullwindow.png "NETWORK_FullWindow")  
+ ![Finestra dello strumento Rete](~/docs/profiling/media/network_fullwindow.png "NETWORK_FullWindow")  
   
 ## <a name="analyzing-data"></a>Analisi dei dati  
  È possibile analizzare il traffico HTTP acquisito mentre l'applicazione è in esecuzione o anche dopo che l'applicazione è stata chiusa, selezionando una delle operazioni di rete visualizzate nella visualizzazione di riepilogo.  

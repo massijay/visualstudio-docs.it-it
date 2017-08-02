@@ -27,7 +27,7 @@ caps.handback.revision: 14
 # Finestra di dialogo di selezione URL (sviluppo per SharePoint in Visual Studio)
   Nella finestra di dialogo di selezione URL è possibile selezionare file come file di pagina master o file di immagine, contenuti nel progetto o nel server SharePoint locale.  
   
- Questa finestra di dialogo viene visualizzata se è possibile scegliere un file per impostare una proprietà.  È possibile aprire tale finestra di dialogo facendo clic sul pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](../sharepoint/media/mwellipsis.png "Ellisse di ASP.NET Mobile Designer")\) accanto alle varie proprietà nella finestra **Proprietà**.  Il pulsante con i puntini di sospensione viene visualizzato anche come un prompt IntelliSense quando si assegnano valori a determinati attributi nella visualizzazione **Origine** della finestra di progettazione.  
+ Questa finestra di dialogo viene visualizzata se è possibile scegliere un file per impostare una proprietà.  È possibile aprire tale finestra di dialogo facendo clic sul pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/docs/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) accanto alle varie proprietà nella finestra **Proprietà**.  Il pulsante con i puntini di sospensione viene visualizzato anche come un prompt IntelliSense quando si assegnano valori a determinati attributi nella visualizzazione **Origine** della finestra di progettazione.  
   
 ## Elenco UIElement  
  **Cartelle di progetto**  

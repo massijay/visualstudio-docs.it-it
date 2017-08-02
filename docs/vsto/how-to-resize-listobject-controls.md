@@ -39,7 +39,7 @@ caps.handback.revision: 46
   
  Per altre informazioni sui controlli <xref:Microsoft.Office.Tools.Excel.ListObject>, vedere [Controllo ListObject](../vsto/listobject-control.md).  
   
- ![Collegamento a video](../vsto/media/playvideo.png "Collegamento a video") Per una dimostrazione video correlata, vedere la [procedura di aggiunta di colonne a un oggetto elenco associato ai dati in fase di esecuzione](http://go.microsoft.com/fwlink/?LinkID=130318).  
+ ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere la [procedura di aggiunta di colonne a un oggetto elenco associato ai dati in fase di esecuzione](http://go.microsoft.com/fwlink/?LinkID=130318).  
   
 ##  <a name="designtime"></a> Ridimensionamento di un controllo ListObject in fase di progettazione  
  Per ridimensionare un elenco, è possibile selezionare e trascinare uno dei punti di controllo oppure è possibile ridefinirne la dimensione nella finestra di dialogo **Ridimensiona elenco**.  

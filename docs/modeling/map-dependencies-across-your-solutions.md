@@ -55,7 +55,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="map-dependencies-across-your-solutions"></a>Eseguire il mapping delle dipendenze nelle soluzioni
 Per comprendere le dipendenze in tutto il codice, visualizzarle creando mappe codice. In questo modo è possibile vedere il funzionamento complessivo del codice senza leggere file e righe di codice.  
   
- ![Visualizzare le dipendenze nelle soluzioni](../modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
+ ![Visualizzare le dipendenze nelle soluzioni](~/docs/modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
   
  **Ecco alcuni video**:  
   
@@ -101,7 +101,7 @@ Per comprendere le dipendenze in tutto il codice, visualizzarle creando mappe co
   
 2.  Selezionare i progetti, i riferimenti agli assembly, le cartelle, i file, i tipi o i membri di cui eseguire il mapping.  
   
-3.  Nel **Esplora** sulla barra degli strumenti, scegliere **Mostra in mappa codice**![creare nuovo grafico da selezionati nodi pulsante](../modeling/media/createnewgraphfromselectedbutton.gif "CreateNewGraphFromSelectedButton"). In alternativa, scegliere **Mostra in mappa codice**dal menu di scelta rapida. È anche possibile trascinare elementi da Visualizzazione classi o Visualizzatore oggetti in una mappa codice nuova o esistente.  
+3.  Nel **Esplora** sulla barra degli strumenti, scegliere **Mostra in mappa codice**![creare nuovo grafico da selezionati nodi pulsante](~/docs/modeling/media/createnewgraphfromselectedbutton.gif "CreateNewGraphFromSelectedButton"). In alternativa, scegliere **Mostra in mappa codice**dal menu di scelta rapida. È anche possibile trascinare elementi da Visualizzazione classi o Visualizzatore oggetti in una mappa codice nuova o esistente.  
   
 4.  [Visualizzare dipendenze specifiche](#SeeSpecificSource) per informazioni su come usare le mappe codice per visualizzare dipendenze specifiche nella soluzione.  
   
@@ -135,7 +135,7 @@ Per comprendere le dipendenze in tutto il codice, visualizzarle creando mappe co
   
 1.  Aprire il menu **Architettura** e scegliere **Genera mappa codici per la soluzione senza compilazione**.  
   
-     ![Comando di generazione codice mappa](../modeling/media/codemapsarchitecturemenu.png "CodeMapsArchitectureMenu")  
+     ![Comando di generazione codice mappa](~/docs/modeling/media/codemapsarchitecturemenu.png "CodeMapsArchitectureMenu")  
   
      Viene visualizzata una mappa che mostra gli assembly di primo livello e i relativi collegamenti aggregati. A una maggiore ampiezza del collegamento aggregato corrisponde un maggior numero di dipendenze che rappresenta.  
   
@@ -147,7 +147,7 @@ Per comprendere le dipendenze in tutto il codice, visualizzarle creando mappe co
   
 3.  Per eseguire il drill-down nella mappa, espandere i gruppi che rappresentano progetti e assembly. Per espandere tutti gli elementi premere **CTRL+A** per selezionare tutti i nodi e quindi scegliere **Gruppo**, **Espandi** dal menu di scelta rapida.  
   
-     ![Espansione di tutti i gruppi in una mappa codici](../modeling/media/codemapsexpandallgroups.png "CodeMapsExpandAllGroups")  
+     ![Espansione di tutti i gruppi in una mappa codici](~/docs/modeling/media/codemapsexpandallgroups.png "CodeMapsExpandAllGroups")  
   
 4.  Tuttavia, questa operazione potrebbe non essere utile per una soluzione di grandi dimensioni. Infatti, per soluzioni complesse, i limiti di memoria potrebbero impedire di espandere tutti i gruppi. In alternativa, per visualizzare gli elementi all'interno di un singolo nodo, espanderlo. Spostare il puntatore del mouse sopra il nodo, quindi scegliere il pulsante con la freccia di espansione (freccia giù) quando viene visualizzato.  
   
@@ -160,13 +160,13 @@ Per comprendere le dipendenze in tutto il codice, visualizzarle creando mappe co
   
 5.  Per semplificare la mappa e concentrarsi sulle singole parti, scegliere **Filtri** nella barra degli strumenti della mappa codice e selezionare solo i tipi di nodi e di collegamenti desiderati. Ad esempio, è possibile nascondere tutti i contenitori di Cartella soluzione e Assembly.  
   
-     ![Semplificare la mappa filtrando i contenitori](../modeling/media/codemapsfilterfoldersassemblies.png "CodeMapsFilterFoldersAssemblies")  
+     ![Semplificare la mappa filtrando i contenitori](~/docs/modeling/media/codemapsfilterfoldersassemblies.png "CodeMapsFilterFoldersAssemblies")  
   
      È anche possibile semplificare la mappa nascondendo o rimuovendo i singoli gruppi ed elementi dalla mappa, senza modificare il codice della soluzione sottostante.  
   
 6.  Per visualizzare le relazioni tra elementi, selezionarle nella mappa. I colori dei collegamenti indicano i tipi di relazione, come mostrato nel riquadro **Legenda** .  
   
-     ![Visualizzare le dipendenze nelle soluzioni](../modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
+     ![Visualizzare le dipendenze nelle soluzioni](~/docs/modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
   
      In questo esempio, i collegamenti viola sono chiamate, i collegamenti punteggiati sono riferimenti e i collegamenti azzurro rappresentano l'accesso al campo. I collegamenti verdi possono essere ereditati o possono essere *collegamenti aggregati* che indicano più di un tipo di relazione (o *categoria*).  
   
@@ -175,7 +175,7 @@ Per comprendere le dipendenze in tutto il codice, visualizzarle creando mappe co
   
 7.  Per altre informazioni su un elemento o un collegamento, spostare il puntatore su di esso finché non viene visualizzata una descrizione comando. In questo modo vengono mostrati i dettagli di un elemento di codice o delle categorie rappresentate da un collegamento.  
   
-     ![Mostra le categorie di una relazione](../modeling/media/codemapsshowlinkcatgories.png "CodeMapsShowLinkCatgories")  
+     ![Mostra le categorie di una relazione](~/docs/modeling/media/codemapsshowlinkcatgories.png "CodeMapsShowLinkCatgories")  
   
 8.  Per esaminare gli elementi e le dipendenze rappresentate da un collegamento di aggregazione, prima selezionare il collegamento, quindi aprire il relativo menu di scelta rapida. Scegliere **Mostra collegamenti partecipanti** (o **Mostra collegamenti partecipanti sulla nuova mappa codice**). I gruppi vengono espansi a entrambe le estremità del collegamento e vengono mostrati solo gli elementi e le dipendenze che partecipano al collegamento.  
   
@@ -185,15 +185,15 @@ Per comprendere le dipendenze in tutto il codice, visualizzarle creando mappe co
   
 10. Un altro modo per concentrarsi sulla mappa di soluzione complessa consiste nel generare una nuova mappa contenente gli elementi selezionati da una mappa esistente. Tenere premuto **CTRL** durante la selezione di elementi su cui si vuole concentrarsi, aprire il menu di scelta rapida e scegliere **Nuovo grafico dalla selezione**.  
   
-     ![Mostra gli elementi selezionati in una nuova mappa codice](../ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")  
+     ![Mostra gli elementi selezionati in una nuova mappa codice](~/docs/ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")  
   
 11. Il contesto contenitore viene trasferito alla nuova mappa. Nascondere le cartelle della soluzione e tutti gli altri contenitori che non si vuole visualizzare tramite il riquadro **Filtri** .  
   
-     ![Filtrare i contenitori per semplificare la visualizzazione](../modeling/media/codemapsexpandnewgroups.png "CodeMapsExpandNewGroups")  
+     ![Filtrare i contenitori per semplificare la visualizzazione](~/docs/modeling/media/codemapsexpandnewgroups.png "CodeMapsExpandNewGroups")  
   
 12. Espandere i gruppi e selezionare gli elementi della mappa per visualizzare le relazioni.  
   
-     ![Selezionare gli elementi da visualizzare le relazioni](../modeling/media/codemapsviewnewrelationships.png "CodeMapsViewNewRelationships")  
+     ![Selezionare gli elementi da visualizzare le relazioni](~/docs/modeling/media/codemapsviewnewrelationships.png "CodeMapsViewNewRelationships")  
   
  Vedere anche:  
   
@@ -215,19 +215,19 @@ Per comprendere le dipendenze in tutto il codice, visualizzarle creando mappe co
 ##  <a name="a-nameseespecificsourcea-see-specific-dependencies"></a><a name="SeeSpecificSource"></a>Visualizzare dipendenze specifiche  
  Si supponga, ad esempio, di dover eseguire una revisione del codice in alcuni file con modifiche in sospeso. Per visualizzare le dipendenze in queste modifiche, è possibile creare una mappa codice da tali file.  
   
- ![Visualizzare dipendenze specifiche su una mappa codice](../modeling/media/codemapsspecificdependenciesintro.png "CodeMapsSpecificDependenciesIntro")  
+ ![Visualizzare dipendenze specifiche su una mappa codice](~/docs/modeling/media/codemapsspecificdependenciesintro.png "CodeMapsSpecificDependenciesIntro")  
   
 ### <a name="see-specific-dependencies-in-your-solution"></a>Visualizzare dipendenze specifiche nella soluzione  
   
 1.  Aprire **Esplora soluzioni**. Selezionare i progetti, i riferimenti agli assembly, le cartelle, i file, i tipi e i membri di proprio interesse. Per trovare elementi con dipendenze da tipi o membri, aprire il menu di scelta rapida del tipo o del membro da **Esplora soluzioni**. Scegliere il tipo di dipendenza e quindi selezionare i risultati.  
   
-2.  Eseguire il mapping degli elementi e dei relativi membri. Nel **Esplora** sulla barra degli strumenti fare clic su **Mostra in mappa codice**![creare nuovo grafico da selezionati nodi pulsante](../modeling/media/createnewgraphfromselectedbutton.gif "CreateNewGraphFromSelectedButton").  
+2.  Eseguire il mapping degli elementi e dei relativi membri. Nel **Esplora** sulla barra degli strumenti fare clic su **Mostra in mappa codice**![creare nuovo grafico da selezionati nodi pulsante](~/docs/modeling/media/createnewgraphfromselectedbutton.gif "CreateNewGraphFromSelectedButton").  
   
-     ![Selezionare gli elementi che si desidera eseguire il mapping di](../modeling/media/codemapsselectinsolutionexplorer.png "CodeMapsSelectInSolutionExplorer")  
+     ![Selezionare gli elementi che si desidera eseguire il mapping di](~/docs/modeling/media/codemapsselectinsolutionexplorer.png "CodeMapsSelectInSolutionExplorer")  
   
 3.  La mappa visualizza gli elementi selezionati all'interno degli assembly in cui sono contenuti.  
   
-     ![Gli elementi visualizzati come gruppi sulla mappa selezionati](../modeling/media/codemapsshowitemsfromsolnexplorer.png "CodeMapsShowItemsFromSolnExplorer")  
+     ![Gli elementi visualizzati come gruppi sulla mappa selezionati](~/docs/modeling/media/codemapsshowitemsfromsolnexplorer.png "CodeMapsShowItemsFromSolnExplorer")  
   
      È anche possibile trascinare elementi da Esplora soluzioni, Visualizzazione classi o Visualizzatore oggetti in una mappa codice nuova o esistente. Per creare una mappa vuota, vedere [Creare una mappa codice vuota](#GetStarted). Per includere la gerarchia padre per gli elementi, tenere premuto **CTRL** quando si trascinano gli elementi oppure usare il pulsante **Includi padri** nella barra degli strumenti della mappa codice per specificare l'azione predefinita.  
   
@@ -242,9 +242,9 @@ Per comprendere le dipendenze in tutto il codice, visualizzarle creando mappe co
   
 5.  Continuare a espandere gli elementi desiderati, fino al livello di classe e membro, se necessario.  
   
-     ![Espandere i gruppi a livello di classe e membro](../modeling/media/codemapsexpandtoclassandmember.png "CodeMapsExpandToClassAndMember")  
+     ![Espandere i gruppi a livello di classe e membro](~/docs/modeling/media/codemapsexpandtoclassandmember.png "CodeMapsExpandToClassAndMember")  
   
-     Per visualizzare membri presenti nel codice ma non vengono visualizzati sulla mappa, scegliere il **recupera di nuovo figli** icona ![recupera di nuovo figli icona](../modeling/media/dependencygraph_deletednodesicon.png "DependencyGraph_DeletedNodesIcon") nell'angolo superiore sinistro di un gruppo.  
+     Per visualizzare membri presenti nel codice ma non vengono visualizzati sulla mappa, scegliere il **recupera di nuovo figli** icona ![recupera di nuovo figli icona](~/docs/modeling/media/dependencygraph_deletednodesicon.png "DependencyGraph_DeletedNodesIcon") nell'angolo superiore sinistro di un gruppo.  
   
 6.  Per visualizzare più elementi correlati a quelli sulla mappa, selezionarne uno e scegliere **Mostra correlati** nella barra degli strumenti della mappa codice, quindi selezionare il tipo di elementi correlati da aggiungere alla mappa. In alternativa, selezionare uno o più elementi, aprire il menu di scelta rapida e quindi scegliere l'opzione **Mostra** per il tipo di elementi correlati da aggiungere alla mappa. Ad esempio:  
   
@@ -287,15 +287,15 @@ Per comprendere le dipendenze in tutto il codice, visualizzarle creando mappe co
     |**Mostra tipo contenitore**|Aggiungere il tipo padre.|  
     |**Mostra tipo contenente, Namespace e Assembly**|Aggiungere la gerarchia del contenitore padre.|  
   
-     ![Mostra metodi chiamati da questo membro](../modeling/media/codemapsshowrelatedmethods.png "CodeMapsShowRelatedMethods")  
+     ![Mostra metodi chiamati da questo membro](~/docs/modeling/media/codemapsshowrelatedmethods.png "CodeMapsShowRelatedMethods")  
   
 7.  La mappa visualizza le relazioni. In questo esempio, i metodi chiamati dal metodo `Find` e la relativa posizione nella soluzione o esternamente.  
   
-     ![Visualizzare dipendenze specifiche su una mappa codice](../modeling/media/codemapsspecificdependenciesintro.png "CodeMapsSpecificDependenciesIntro")  
+     ![Visualizzare dipendenze specifiche su una mappa codice](~/docs/modeling/media/codemapsspecificdependenciesintro.png "CodeMapsSpecificDependenciesIntro")  
   
 8.  Per semplificare la mappa e concentrarsi sulle singole parti, scegliere **Filtri** nella barra degli strumenti della mappa codice e selezionare solo i tipi di nodi e di collegamenti desiderati. Ad esempio, disattivare la visualizzazione di Cartelle soluzione, Assembly e Spazi dei nomi.  
   
-     ![Utilizzare il riquadro filtro per semplificare la visualizzazione](../modeling/media/almcodemapfilterpane.png "ALMCodeMapFilterPane")  
+     ![Utilizzare il riquadro filtro per semplificare la visualizzazione](~/docs/modeling/media/almcodemapfilterpane.png "ALMCodeMapFilterPane")  
   
 ##  <a name="a-nameseesourceheadera-see-dependencies-between-c-and-c-source-files-and-header-files"></a><a name="SeeSourceHeader"></a>Visualizzare le dipendenze tra file di intestazione e i file di origine C e C++  
  Per creare mappe più complete per i progetti C++, impostare l'opzione del compilatore di informazioni di visualizzazione (**/FR**) su tali progetti. In caso contrario, viene visualizzato un messaggio con la richiesta di impostare l'opzione. Se si seleziona **OK**, l'opzione viene impostata solo per la mappa corrente. È possibile scegliere di nascondere il messaggio per tutte le mappe successive. Se si nasconde il messaggio, è possibile visualizzarlo nuovamente. Impostare la seguente chiave del Registro di sistema su `0` o eliminare la chiave:  
@@ -345,7 +345,7 @@ Per comprendere le dipendenze in tutto il codice, visualizzarle creando mappe co
   
 -   Modificare il file della mappa codice per rimuovere i nodi e i collegamenti non necessari. La modifica della mappa non influisce in alcun modo sul codice sottostante. Vedere [personalizzare le mappe codice modificando i file DGML](../modeling/customize-code-maps-by-editing-the-dgml-files.md).  
   
- ![I pulsanti Skip Build e Includi padri](../modeling/media/codemapsfilterskipbuildicons.png "CodeMapsFilterSkipBuildIcons")  
+ ![I pulsanti Skip Build e Includi padri](~/docs/modeling/media/codemapsfilterskipbuildicons.png "CodeMapsFilterSkipBuildIcons")  
   
  Sebbene Visual Studio sia in grado di funzionare con 1 GB di memoria, è consigliabile che il computer disponga di almeno 2 GB di memoria per evitare lunghi ritardi quando viene creato l'indice del codice e viene generata la mappa.  
   
@@ -362,7 +362,7 @@ Per comprendere le dipendenze in tutto il codice, visualizzarle creando mappe co
   
  Per salvare la mappa come parte del progetto specifico, sulla barra degli strumenti della mappa, scegliere **condivisione**, **spostare** \< *nome mappa codice*>**DGML in**, quindi scegliere il progetto in cui si desidera salvare la mappa.  
   
- ![Spostare una mappa in un altro progetto](../modeling/media/codemapsmovemapmenu.png "CodeMapsMoveMapMenu")  
+ ![Spostare una mappa in un altro progetto](~/docs/modeling/media/codemapsmovemapmenu.png "CodeMapsMoveMapMenu")  
   
  In Visual Studio la mappa viene salvata come file con estensione dgml da condividere con altri utenti di Visual Studio Enterprise e Visual Studio Professional.  
   

@@ -47,7 +47,7 @@ caps.handback.revision: 31
 > [!NOTE]  
 >  Nomi o percorsi visualizzati per alcuni elementi dell'interfaccia utente di Visual Studio nelle istruzioni seguenti potrebbero essere diversi nel computer in uso. La versione di Visual Studio in uso e le impostazioni configurate determinano questi elementi. Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
- ![Collegamento a video](../vsto/media/playvideo.png "Collegamento a video")Per una dimostrazione video correlata, vedere la [procedura di creazione di aree del modulo Outlook usando Visual Studio 2008](http://go.microsoft.com/fwlink/?LinkID=130305).  
+ ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video")Per una dimostrazione video correlata, vedere la [procedura di creazione di aree del modulo Outlook usando Visual Studio 2008](http://go.microsoft.com/fwlink/?LinkID=130305).  
   
 ## Progettazione di un'area del modulo usando Progettazione aree di form in Outlook  
  In questo passaggio si progetterà un'area del modulo in Outlook. L'area del modulo verrà quindi salvata in un percorso facilmente accessibile e successivamente importata in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  

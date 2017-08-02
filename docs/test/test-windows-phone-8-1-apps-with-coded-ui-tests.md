@@ -46,7 +46,7 @@ Usare questa procedura guidata per creare test dell'interfaccia utente per app U
   
 2.  In Esplora soluzioni aprire il file MainPage.xaml. Dalla casella degli strumenti trascinare un controllo Button e un controllo Textbox nell'area di progettazione.  
   
-     ![Aggiungere controlli a MainPage.xaml](../test/media/cuit_phone_app_addcontrols.png "CUIT_Phone_App_AddControls")  
+     ![Aggiungere controlli a MainPage.xaml](~/docs/test/media/cuit_phone_app_addcontrols.png "CUIT_Phone_App_AddControls")  
   
 3.  Nella finestra Proprietà assegnare un nome al controllo Button.  
   
@@ -104,7 +104,7 @@ Usare questa procedura guidata per creare test dell'interfaccia utente per app U
   
 2.  Scegliere di modificare la mappa dell'interfaccia utente usando lo strumento selettore di precisione.  
   
-     ![Generare il test dell'interfaccia utente codificata tramite lo strumento selettore di precisione.](../test/media/cuit_phone_howgencodedialog.png "CUIT_Phone_HowGenCodeDialog")  
+     ![Generare il test dell'interfaccia utente codificata tramite lo strumento selettore di precisione.](~/docs/test/media/cuit_phone_howgencodedialog.png "CUIT_Phone_HowGenCodeDialog")  
   
 3.  Usare lo strumento selettore di precisione per selezionare l'app e quindi copiare il valore della proprietà **AutomationId** dell'app, che verrà usato successivamente per avviare l'app durante il test.  
   

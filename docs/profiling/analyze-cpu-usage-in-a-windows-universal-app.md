@@ -37,7 +37,7 @@ ms.lasthandoff: 05/13/2017
 
 ---
 # <a name="analyze-cpu-usage-in-a-universal-windows-app-uwp"></a>Analizzare l'utilizzo della CPU in un'app di Windows universale (UWP)
-![Si applica a Windows e Windows Phone](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+![Si applica a Windows e Windows Phone](~/docs/debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
  Quando è necessario analizzare i problemi relativi alle prestazioni dell'app, è consigliabile partire dall'analisi dell'utilizzo della CPU. Lo strumento **Utilizzo CPU** indica i punti in cui la CPU impiega più tempo per l'esecuzione di codice. Per concentrare l'attenzione su scenari specifici, lo strumento Utilizzo CPU può essere eseguito insieme allo strumento [Sequenza temporale applicazione](../profiling/application-timeline.md), allo strumento [Utilizzo di energia](../profiling/analyze-energy-use-in-store-apps.md) oppure insieme a entrambi gli strumenti in un'unica sessione di diagnostica.  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/13/2017
   
 1.  Creare un nuovo progetto di app universale di Windows C# denominato **CpuUseDemo** usando il modello **BlankApp**.  
   
-     ![Creare il progetto CpuUseDemo](../profiling/media/cpu_use_newproject.png "CPU_USE_NewProject")  
+     ![Creare il progetto CpuUseDemo](~/docs/profiling/media/cpu_use_newproject.png "CPU_USE_NewProject")  
   
 2.  Sostituire MainPage.xaml con [questo codice](#BKMK_MainPage_xaml).  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/13/2017
 4.  Compila l'app e prova a usarla. L'app è abbastanza semplice per illustrare alcuni casi comuni di analisi dei dati di utilizzo della CPU.  
   
 ##  <a name="BKMK_Collect_CPU_usage_data"></a> Raccogliere i dati di utilizzo della CPU  
- ![Eseguire una build di rilascio dell'app nel simulatore](../profiling/media/cpu_use_wt_setsimulatorandretail.png "CPU_USE_WT_SetSimulatorAndRetail")  
+ ![Eseguire una build di rilascio dell'app nel simulatore](~/docs/profiling/media/cpu_use_wt_setsimulatorandretail.png "CPU_USE_WT_SetSimulatorAndRetail")  
   
 1.  In Visual Studio impostare la destinazione della distribuzione su **Simulatore** e la configurazione della soluzione su **Release**.  
   
@@ -72,35 +72,35 @@ ms.lasthandoff: 05/13/2017
   
 3.  Nell'hub Prestazioni e diagnostica scegliere **Utilizzo CPU** e quindi **Avvio**.  
   
-     ![Avviare la sessione di diagnostica di CpuUsage](../profiling/media/cpu_use_wt_perfdiaghub.png "CPU_USE_WT_PerfDiagHub")  
+     ![Avviare la sessione di diagnostica di CpuUsage](~/docs/profiling/media/cpu_use_wt_perfdiaghub.png "CPU_USE_WT_PerfDiagHub")  
   
 4.  All'avvio dell'app fare clic su **Get Max Number**. Attendere circa un secondo dopo la visualizzazione dell'app, quindi scegliere **Get Max Number Async**. L'attesa tra i clic sui pulsanti consente di isolare in modo più semplice le routine relative ai clic nel report di diagnostica.  
   
 5.  Dopo la visualizzazione della seconda riga di output, scegli **Arresta raccolta** nell'hub Prestazioni e diagnostica.  
   
- ![Arrestare la raccolta di dati di CpuUsage](../profiling/media/cpu_use_wt_stopcollection.png "CPU_USE_WT_StopCollection")  
+ ![Arrestare la raccolta di dati di CpuUsage](~/docs/profiling/media/cpu_use_wt_stopcollection.png "CPU_USE_WT_StopCollection")  
   
  Lo strumento Utilizzo CPU analizza i dati e visualizza il report.  
   
- ![Report di CpuUsage](../profiling/media/cpu_use_wt_report.png "CPU_USE_WT_Report")  
+ ![Report di CpuUsage](~/docs/profiling/media/cpu_use_wt_report.png "CPU_USE_WT_Report")  
   
 ##  <a name="BKMK_Analyze_the_CPU_Usage_report"></a> Analizzare il report di Utilizzo CPU  
   
 ###  <a name="BKMK_CPU_utilization_timeline_graph"></a> Grafico della sequenza temporale dell'utilizzo della CPU  
- ![Grafico della sequenza temporale di CpuUtilization &#40;%&#41;](../profiling/media/cpu_use_wt_timelinegraph.png "CPU_USE_WT_TimelineGraph")  
+ ![Grafico della sequenza temporale di CpuUtilization &#40;%&#41;](~/docs/profiling/media/cpu_use_wt_timelinegraph.png "CPU_USE_WT_TimelineGraph")  
   
  Il grafico dell'utilizzo della CPU mostra l'attività della CPU dell'app sotto forma di percentuale di tutto il tempo CPU per tutti i core del processore nel dispositivo. I dati di questo report sono stati raccolti in una macchina dual core. I due grossi picchi rappresentano l'attività della CPU per i due clic sui pulsanti. `GetMaxNumberButton_Click` viene eseguito in modo sincrono in un core singolo, pertanto è logico che l'altezza del grafico del metodo non superi mai il 50%. `GetMaxNumberAsycButton_Click` viene eseguito in modo asincrono in entrambi i core, pertanto anche in questo caso è logico che il picco relativo si avvicini all'utilizzo di tutte le risorse della CPU in entrambi i core.  
   
 ####  <a name="BKMK_Select_timeline_segments_to_view_details"></a> Selezionare i segmenti della sequenza temporale per visualizzare i dettagli  
  Usare le barre di selezione nella sequenza temporale **Sessione di diagnostica** per analizzare i dati di GetMaxNumberButton_Click:  
   
- ![GetMaxNumberButton&#95;Click selezionato](../profiling/media/cpu_use_wt_getmaxnumberreport.png "CPU_USE_WT_GetMaxNumberReport")  
+ ![GetMaxNumberButton&#95;Click selezionato](~/docs/profiling/media/cpu_use_wt_getmaxnumberreport.png "CPU_USE_WT_GetMaxNumberReport")  
   
  La sequenza temporale **Sessione di diagnostica** mostra ora il tempo trascorso nel segmento selezionato (poco più di due secondi in questo report) e filtra l'albero delle chiamate per mostrare solo i metodi eseguiti nella selezione.  
   
  Seleziona ora il segmento `GetMaxNumberAsyncButton_Click`.  
   
- ![Selezione del report di GetMaxNumberAsyncButton&#95;Click](../profiling/media/cpu_use_wt_getmaxnumberasync_selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
+ ![Selezione del report di GetMaxNumberAsyncButton&#95;Click](~/docs/profiling/media/cpu_use_wt_getmaxnumberasync_selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
   
  Questo metodo viene completato in circa un secondo in meno rispetto a `GetMaxNumberButton_Click`, ma il significato delle voci dell'albero delle chiamate è meno ovvio.  
   
@@ -108,36 +108,36 @@ ms.lasthandoff: 05/13/2017
  Per iniziare a comprendere le informazioni dell'albero delle chiamate, selezionare di nuovo il segmento `GetMaxNumberButton_Click` e analizzare i dettagli dell'albero.  
   
 ####  <a name="BKMK_Call_tree_structure"></a> Struttura dell'albero delle chiamate  
- ![GetMaxNumberButton&#95;Fare clic sull'albero delle chiamate](../profiling/media/cpu_use_wt_getmaxnumbercalltree_annotated.png "CPU_USE_WT_GetMaxNumberCallTree_annotated")  
+ ![GetMaxNumberButton&#95;Fare clic sull'albero delle chiamate](~/docs/profiling/media/cpu_use_wt_getmaxnumbercalltree_annotated.png "CPU_USE_WT_GetMaxNumberCallTree_annotated")  
   
 |||  
 |-|-|  
-|![Passaggio 1](../profiling/media/procguid_1.png "ProcGuid_1")|Il nodo di livello principale nell'albero delle chiamate di Utilizzo CPU è uno pseudo-nodo|  
-|![Passaggio 2](../profiling/media/procguid_2.png "ProcGuid_2")|Nella maggior parte delle app, quando l'opzione **Mostra codice esterno** è disabilitata, il nodo di secondo livello è un nodo **[Codice esterno]** contenente il codice di sistema e di framework che avvia e arresta l'app, disegna l'interfaccia utente, controlla la pianificazione dei thread e fornisce altri servizi di basso livello all'app.|  
-|![Passaggio 3](../profiling/media/procguid_3.png "ProcGuid_3")|Gli elementi figlio del nodo di secondo livello sono i metodi del codice utente e le routine asincrone che vengono chiamati o creati dal codice di sistema o di framework di secondo livello.|  
-|![Passaggio 4](../profiling/media/procguid_4.png "ProcGuid_4")|I nodi figlio di un metodo contengono i dati solo per le chiamate del metodo padre. Quando l'opzione **Mostra codice esterno** è disabilitata, i metodi dell'app possono contenere anche un nodo **[Codice esterno]** .|  
+|![Passaggio 1](~/docs/profiling/media/procguid_1.png "ProcGuid_1")|Il nodo di livello principale nell'albero delle chiamate di Utilizzo CPU è uno pseudo-nodo|  
+|![Passaggio 2](~/docs/profiling/media/procguid_2.png "ProcGuid_2")|Nella maggior parte delle app, quando l'opzione **Mostra codice esterno** è disabilitata, il nodo di secondo livello è un nodo **[Codice esterno]** contenente il codice di sistema e di framework che avvia e arresta l'app, disegna l'interfaccia utente, controlla la pianificazione dei thread e fornisce altri servizi di basso livello all'app.|  
+|![Passaggio 3](~/docs/profiling/media/procguid_3.png "ProcGuid_3")|Gli elementi figlio del nodo di secondo livello sono i metodi del codice utente e le routine asincrone che vengono chiamati o creati dal codice di sistema o di framework di secondo livello.|  
+|![Passaggio 4](~/docs/profiling/media/procguid_4.png "ProcGuid_4")|I nodi figlio di un metodo contengono i dati solo per le chiamate del metodo padre. Quando l'opzione **Mostra codice esterno** è disabilitata, i metodi dell'app possono contenere anche un nodo **[Codice esterno]** .|  
   
 ####  <a name="BKMK_External_Code"></a> Codice esterno  
  Il codice esterno è costituito da funzioni nei componenti del sistema e del framework che vengono eseguite dal codice scritto. Include funzioni che avviano e arrestano l'app, disegnano l'interfaccia utente, controllano il threading e forniscono altri servizi di basso livello all'app. Nella maggior parte dei casi il codice esterno è poco interessante, per questo motivo l'albero delle chiamate di Utilizzo CPU raccoglie le funzioni esterne di un metodo utente in un unico nodo **[Codice esterno]**.  
   
  Se vuoi visualizzare i percorsi delle chiamate del codice esterno, scegli **Mostra codice esterno** nell'elenco **Visualizzazione filtro** e quindi scegli **Applica**.  
   
- ![Scegliere Visualizzazione filtro e quindi Mostra codice esterno](../profiling/media/cpu_use_wt_filterview.png "CPU_USE_WT_FilterView")  
+ ![Scegliere Visualizzazione filtro e quindi Mostra codice esterno](~/docs/profiling/media/cpu_use_wt_filterview.png "CPU_USE_WT_FilterView")  
   
  Tieni presente che numerose catene di chiamate del codice esterno sono molto annidate, pertanto la larghezza della colonna Nome funzione può superare la larghezza di visualizzazione in quasi tutti i monitor, ad eccezione di quelli più grandi. Quando ciò si verifica, i nomi delle funzioni sono visualizzati come **[…]**:  
   
- ![Codice esterno annidato nell'albero delle chiamate](../profiling/media/cpu_use_wt_showexternalcodetoowide.png "CPU_USE_WT_ShowExternalCodeTooWide")  
+ ![Codice esterno annidato nell'albero delle chiamate](~/docs/profiling/media/cpu_use_wt_showexternalcodetoowide.png "CPU_USE_WT_ShowExternalCodeTooWide")  
   
  Usa la casella di ricerca per trovare il nodo che stai cercando, quindi usa la barra di scorrimento orizzontale per visualizzare i dati:  
   
- ![Ricerca di codice esterno annidato](../profiling/media/cpu_use_wt_showexternalcodetoowide_found.png "CPU_USE_WT_ShowExternalCodeTooWide_Found")  
+ ![Ricerca di codice esterno annidato](~/docs/profiling/media/cpu_use_wt_showexternalcodetoowide_found.png "CPU_USE_WT_ShowExternalCodeTooWide_Found")  
   
 ###  <a name="BKMK_Call_tree_data_columns"></a> Colonne di dati dell'albero delle chiamate  
   
 |||  
 |-|-|  
-|**CPU totale (%)**|![Equazione % dati totali](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> Percentuale dell'attività CPU dell'app nell'intervallo di tempo selezionato usata dalle chiamate alla funzione e dalle funzioni chiamate dalla funzione. Osservare che si tratta di un valore diverso da quello del grafico della sequenza temporale di **Utilizzo CPU** , che mette a confronto l'attività totale dell'app in un intervallo di tempo con la capacità CPU disponibile totale.|  
-|**CPU auto (%)**|![Equazione % auto](../profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> Percentuale dell'attività CPU dell'app nell'intervallo di tempo selezionato usata dalle chiamate alla funzione, esclusa l'attività delle funzioni chiamate dalla funzione.|  
+|**CPU totale (%)**|![Equazione % dati totali](~/docs/profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> Percentuale dell'attività CPU dell'app nell'intervallo di tempo selezionato usata dalle chiamate alla funzione e dalle funzioni chiamate dalla funzione. Osservare che si tratta di un valore diverso da quello del grafico della sequenza temporale di **Utilizzo CPU** , che mette a confronto l'attività totale dell'app in un intervallo di tempo con la capacità CPU disponibile totale.|  
+|**CPU auto (%)**|![Equazione % auto](~/docs/profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> Percentuale dell'attività CPU dell'app nell'intervallo di tempo selezionato usata dalle chiamate alla funzione, esclusa l'attività delle funzioni chiamate dalla funzione.|  
 |**CPU totale (ms)**|Numero di millisecondi usati nelle chiamate alla funzione nell'intervallo di tempo selezionato e per le funzioni chiamate dalla funzione.|  
 |**CPU auto (ms)**|Numero di millisecondi usati nelle chiamate alla funzione nell'intervallo di tempo selezionato e per le funzioni chiamate dalla funzione.|  
 |**Modulo**|Nome del modulo contenente la funzione o numero dei moduli contenenti le funzioni in un nodo [Codice esterno].|  
@@ -147,11 +147,11 @@ ms.lasthandoff: 05/13/2017
   
  Per vedere questo aspetto nel nostro esempio, seleziona di nuovo il segmento `GetMaxNumberAsyncButton_Click` nella sequenza temporale.  
   
- ![GetMaxNumberAsyncButton&#95;Fare clic sulla selezione del report](../profiling/media/cpu_use_wt_getmaxnumberasync_selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
+ ![GetMaxNumberAsyncButton&#95;Fare clic sulla selezione del report](~/docs/profiling/media/cpu_use_wt_getmaxnumberasync_selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
   
  I primi due nodi sotto **[Codice esterno]** sono i metodi generati dal compilatore della classe macchina a stati. Il terzo è la chiamata al metodo originale. Espandendo i metodi generati è possibile vedere cosa accade.  
   
- ![Expanded GetMaxNumberAsyncButton&#95;Fare clic sull'albero](../profiling/media/cpu_use_wt_getmaxnumberasync_expandedcalltree.png "CPU_USE_WT_GetMaxNumberAsync_ExpandedCallTree")  
+ ![Expanded GetMaxNumberAsyncButton&#95;Fare clic sull'albero](~/docs/profiling/media/cpu_use_wt_getmaxnumberasync_expandedcalltree.png "CPU_USE_WT_GetMaxNumberAsync_ExpandedCallTree")  
   
 -   `MainPage::GetMaxNumberAsyncButton_Click` fa molto poco: gestisce un elenco dei valori delle attività, calcola il massimo dei risultati e mostra l'output.  
   

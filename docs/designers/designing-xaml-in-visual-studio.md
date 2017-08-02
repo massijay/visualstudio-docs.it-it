@@ -48,7 +48,7 @@ Visual Studio e Blend per Visual Studio offrono strumenti visivi per la creazion
   
 -   **Un'interfaccia utente coerente:** è possibile progettare le applicazioni all'interno del contesto familiare dell'interfaccia utente di Visual Studio, che semplifica il passaggio tra IDE in modo più produttivo e piacevole. Blend per Visual Studio usa il tema scuro di Visual Studio che consente di concentrarsi sul contenuto che si sta progettando migliorando il contrasto tra il contenuto e l'interfaccia utente. Vedere [Creating a UI by using XAML Designer](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md) (Creazione di un'interfaccia utente tramite la finestra di progettazione XAML).  
   
-     ![IDE per Blend per Visual Studio ](../designers/media/blendide.png "BlendIDE")  
+     ![IDE per Blend per Visual Studio ](~/docs/designers/media/blendide.png "BlendIDE")  
   
 -   **IntelliSense XAML:** entrambi gli IDE supportano tutte le funzionalità comuni che sarebbero previste da IntelliSense incluso il completamento istruzioni, il supporto per operazioni come aggiunta di commenti e formattazione di codice e spostamento di risorse, editor di associazione e di codice.  
   
@@ -56,7 +56,7 @@ Visual Studio e Blend per Visual Studio offrono strumenti visivi per la creazion
   
 -   **Esperienza di ricaricamento file:** è possibile modificare i file XAML in Blend per Visual Studio o Visual Studio e ricaricare automaticamente i file modificati quando si passa dall’uno all’altro. Per ridurre al minimo le interruzioni di flusso di lavoro, è ora possibile impostare le preferenze di ricaricamento file nella finestra Ricarica file.  
   
-     ![Esperienza di ricaricamento file](../designers/media/blendfilereload.png "BlendFileReload")  
+     ![Esperienza di ricaricamento file](~/docs/designers/media/blendfilereload.png "BlendFileReload")  
   
 -   **Impostazioni e layout sincronizzati:** layout personalizzati consentono di salvare e applicare le personalizzazioni di layout delle finestre degli strumenti. Quando si effettua l’accesso con lo stesso account Microsoft, Visual Studio sincronizzerà queste personalizzazioni e le preferenze per Visual Studio e Blend per Visual Studio tra più computer. Vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   

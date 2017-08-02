@@ -115,7 +115,7 @@ Puoi usare gli strumenti disponibili in [!INCLUDE[blend_first](../debugger/inclu
   
 5.  Fai doppio clic su "La proprietà 'Mame' non esiste nello spazio dei nomi 'http:\/\/schemas.microsoft.com\/winfx\/2006\/xaml'". La "M" in "Mame" dovrebbe essere una "N". Sostituisci la "M" con una "N". Ora che il codice XAML può essere analizzato, l'app appare nell'area di progettazione.  
   
-     ![Debug di XAML in Blend per Visual Studio](../debugger/media/blend_debugartboard_xaml.png "blend\_debugArtboard\_XAML")  
+     ![Debug di XAML in Blend per Visual Studio](~/docs/debugger/media/blend_debugartboard_xaml.png "blend\_debugArtboard\_XAML")  
   
      Premi CTRL\+MAIUSC\+B per compilare il progetto e confermare che non vi sono altri errori.  
   

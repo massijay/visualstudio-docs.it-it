@@ -44,17 +44,17 @@ ms.lasthandoff: 02/22/2017
 La rimozione di dipendenze indesiderate è una parte importante della gestione del debito tecnico.
 La convalida delle dipendenze è ora incluso, fornendo informazioni precise sui problemi e beneficiano completamente le nuove funzionalità nell'elenco errori e nell'editor.
 
-![Convalida della dipendenza Live in azione](media/dep-validation-whatsnew-01.png)
+![Convalida della dipendenza Live in azione](~/docs/modeling/media/dep-validation-whatsnew-01.png)
 
 L'esperienza di creazione e modifica è stata modificata per modificare più facilmente individuabili e più accessibile, la terminologia da "Diagramma livello" a "Diagramma dipendenza" convalida della dipendenza.
 
 Il **architettura** menu contiene ora un comando per creare direttamente un diagramma di dipendenze:
 
-![Elemento dipendenza Live menu architettura](media/dep-validation-whatsnew-02.png)
+![Elemento dipendenza Live menu architettura](~/docs/modeling/media/dep-validation-whatsnew-02.png)
 
 ... e i nomi delle proprietà di un livello in un diagramma di dipendenze e le relative descrizioni, sono stati modificati per renderli più significativi:
 
-![Nomi delle proprietà di dipendenza Live aggiornato](media/dep-validation-whatsnew-03.png)
+![Nomi delle proprietà di dipendenza Live aggiornato](~/docs/modeling/media/dep-validation-whatsnew-03.png)
 
 Verranno visualizzati l'impatto delle modifiche immediatamente nei risultati di analisi per il codice nella soluzione corrente ogni volta che si salva il diagramma. Non devi più attendere il completamento del comando "Convalidare le dipendenze".
 

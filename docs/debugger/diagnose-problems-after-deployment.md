@@ -54,7 +54,7 @@ Per diagnosticare i problemi nell'app Web ASP.NET dopo la distribuzione usando I
   
      Se si usa un modello personalizzato, verificare che disponga di un'attività per l'indicizzazione dell'origine. In seguito verrà aggiunto un argomento MSBuild per specificare il percorso in cui salvare i file dei simboli.  
   
-     ![Impostare il percorso dei simboli nella definizione di compilazione TFS 2013](../debugger/media/ffr_tfs2013builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")  
+     ![Impostare il percorso dei simboli nella definizione di compilazione TFS 2013](~/docs/debugger/media/ffr_tfs2013builddefsymbolspath.png "FFR_TFS2013BuildDefSymbolsPath")  
   
      Per altre informazioni sui simboli, vedere [Pubblicare i dati dei simboli](../Topic/Index%20and%20publish%20symbol%20data.md).  
   
@@ -164,7 +164,7 @@ Per diagnosticare i problemi nell'app Web ASP.NET dopo la distribuzione usando I
   
      Prima di apportare modifiche, verificare di disporre dell'origine corretta. Se si usano i rami, è possibile che il ramo su cui si sta lavorando sia diverso rispetto a quello in cui Visual Studio cerca l'origine corrispondente, ad esempio il ramo della versione.  
   
-     ![Aprire la soluzione dal log di IntelliTrace](../debugger/media/ffr_itsummarypageopensolution.png "FFR_ITSummaryPageOpenSolution")  
+     ![Aprire la soluzione dal log di IntelliTrace](~/docs/debugger/media/ffr_itsummarypageopensolution.png "FFR_ITSummaryPageOpenSolution")  
   
      Se è presente un'area di lavoro mappata per questa soluzione o questo progetto, Visual Studio la seleziona per inserirvi l'origine trovata.  
   
@@ -172,7 +172,7 @@ Per diagnosticare i problemi nell'app Web ASP.NET dopo la distribuzione usando I
   
      In caso contrario, scegliere un'altra area di lavoro già mappata o crearne una nuova. Visual Studio esegue il mapping dell'intero ramo a quest'area di lavoro.  
   
-     ![Aprire dal controllo del codice sorgente &#45; creare una nuova area di lavoro](../debugger/media/ffr_openprojectfromsourcecontrol_createnewworkspace.png "FFR_OpenProjectFromSourceControl_CreateNewWorkspace")  
+     ![Aprire dal controllo del codice sorgente &#45; creare una nuova area di lavoro](~/docs/debugger/media/ffr_openprojectfromsourcecontrol_createnewworkspace.png "FFR_OpenProjectFromSourceControl_CreateNewWorkspace")  
   
      Per creare un'area di lavoro con mapping specifici o un nome diverso dal nome del computer, scegliere **Gestisci**.  
   
@@ -200,7 +200,7 @@ Per diagnosticare i problemi nell'app Web ASP.NET dopo la distribuzione usando I
   
      Se il metodo è incluso nel codice dell'applicazione, Visual Studio passa a tale metodo.  
   
-     ![Passare al codice dell'applicazione da un evento di prestazioni](../debugger/media/ffr_itsummarypageperformancegotocode.png "FFR_ITSummaryPagePerformanceGoToCode")  
+     ![Passare al codice dell'applicazione da un evento di prestazioni](~/docs/debugger/media/ffr_itsummarypageperformancegotocode.png "FFR_ITSummaryPagePerformanceGoToCode")  
   
      È possibile esaminare altri valori registrati, lo stack di chiamate, eseguire un'istruzione alla volta nel codice o usare la finestra **IntelliTrace** per [spostarsi in avanti o indietro tra gli altri metodi](../debugger/intellitrace.md) chiamati durante questo evento di prestazioni. [Che cosa sono gli altri eventi e informazioni riportati nel log IntelliTrace?](../debugger/using-saved-intellitrace-data.md)[What else can I do from here?](#WhatElse)[Servono altre informazioni sugli eventi relativi alle prestazioni?](http://blogs.msdn.com/b/visualstudioalm/archive/2013/09/20/performance-details-in-intellitrace.aspx)  
   
@@ -351,7 +351,7 @@ Per diagnosticare i problemi nell'app Web ASP.NET dopo la distribuzione usando I
   
 -   Visual Studio non è connesso a TFS.  
   
-     ![Aprire dal controllo del codice sorgente &#45; non è connesso](../debugger/media/ffr_openprojectfromsourcecontrol_notconnected.png "FFR_OpenProjectFromSourceControl_NotConnected")  
+     ![Aprire dal controllo del codice sorgente &#45; non è connesso](~/docs/debugger/media/ffr_openprojectfromsourcecontrol_notconnected.png "FFR_OpenProjectFromSourceControl_NotConnected")  
   
 -   In Visual Studio non è stata trovata la soluzione o il progetto nella raccolta del team corrente.  
   

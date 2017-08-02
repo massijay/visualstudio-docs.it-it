@@ -47,7 +47,7 @@ Gli editor in Visual Studio sono spesso associati a un servizio di linguaggio. T
   
  Nella figura seguente è illustrato un servizio di linguaggio di base.  
   
- ![Rappresentazione grafica di Language Service Model](../extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
+ ![Rappresentazione grafica di Language Service Model](~/docs/extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
 Oggetti servizio editor e della lingua di base  
   
  L'oggetto dati di documento per l'editor di componenti di base viene chiamato un buffer di testo ed è rappresentato dal <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>oggetto.</xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> L'oggetto di visualizzazione del documento è una visualizzazione di testo ed è rappresentato dal <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>oggetto.</xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow> Questi due oggetti interagiscono tramite il servizio di linguaggio per offrire una vista unificata dell'editor di componenti di base. Le informazioni dal buffer di testo e la visualizzazione di testo viene visualizzata in una finestra del documento denominato codice. Il documento di finestra di codice è gestito da un gestore di finestra di codice.  

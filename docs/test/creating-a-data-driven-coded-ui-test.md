@@ -53,7 +53,7 @@ Per testare condizioni diverse, è possibile eseguire il test più volte con val
   
 2.  Scegliere di registrare le azioni.  
   
-     ![Scegliere di registrare le azioni](../test/media/cuit_datadriven_generatecodedialog.png "CUIT_dataDriven_GenerateCodeDialog")  
+     ![Scegliere di registrare le azioni](~/docs/test/media/cuit_datadriven_generatecodedialog.png "CUIT_dataDriven_GenerateCodeDialog")  
   
 3.  Aprire l'app Calcolatrice e avviare la registrazione del test.  
   
@@ -61,7 +61,7 @@ Per testare condizioni diverse, è possibile eseguire il test più volte con val
   
 4.  Aggiungere 1 più 2, mettere in pausa la registrazione e generare il metodo di test. I valori di input dell'utente saranno poi sostituiti con i valori di un file di dati.  
   
-     ![Generare un metodo di test](../test/media/cuit_datadriven_cuitbuildergencode.png "CUIT_dataDriven_CUITBuilderGenCode")  
+     ![Generare un metodo di test](~/docs/test/media/cuit_datadriven_cuitbuildergencode.png "CUIT_dataDriven_CUITBuilderGenCode")  
   
      Chiudere il generatore di test. Il metodo viene aggiunto al test:  
   
@@ -91,7 +91,7 @@ Per testare condizioni diverse, è possibile eseguire il test più volte con val
   
 8.  Dopo aver configurato l'asserzione, generare di nuovo il codice dal generatore. In questo modo viene creato un nuovo metodo per la convalida.  
   
-     ![Generare il metodo di asserzione](../test/media/cuit_datadriven_assertiongencode.png "CUIT_dataDriven_AssertionGenCode")  
+     ![Generare il metodo di asserzione](~/docs/test/media/cuit_datadriven_assertiongencode.png "CUIT_dataDriven_AssertionGenCode")  
   
      Poiché il metodo `ValidateSum` convalida i risultati del metodo `AddNumbers`, spostarlo nella parte inferiore del blocco di codice.  
   

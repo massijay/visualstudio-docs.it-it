@@ -66,14 +66,14 @@ Si supponga di voler impostare la posizione degli oggetti, quali immagini, pulsa
 ###  <a name="Grid"></a> Grid  
  Consente di disporre gli oggetti in righe e colonne.  
   
- ![](../designers/media/98b234b2-ac3b-441f-9136-98375fee87b7.png "98b234b2-ac3b-441f-9136-98375fee87b7")  
+ ![](~/docs/designers/media/98b234b2-ac3b-441f-9136-98375fee87b7.png "98b234b2-ac3b-441f-9136-98375fee87b7")  
   
  **Vedere un breve video:** ![Configure Installed Features] (Configurare le funzionalità installate)(../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Using Grids](http://www.popscreen.com/v/6A4hj/Microsoft-Expression-Blend-Using-Grids) (Uso delle griglie).  
   
 ###  <a name="Uniform"></a> UniformGrid  
  Consente di disporre gli oggetti in aree della griglia uguali o uniformi. Questo pannello è molto utile per definire la disposizione di un elenco di immagini.  
   
- ![](../designers/media/928b9284-a7e8-4678-875a-656b80b78076.png "928b9284-a7e8-4678-875a-656b80b78076")  
+ ![](~/docs/designers/media/928b9284-a7e8-4678-875a-656b80b78076.png "928b9284-a7e8-4678-875a-656b80b78076")  
   
  (Disponibile solo per i progetti WPF)  
   
@@ -82,14 +82,14 @@ Si supponga di voler impostare la posizione degli oggetti, quali immagini, pulsa
 ###  <a name="Canvas"></a> Canvas  
  Consente di disporre gli oggetti nel modo desiderato. Quando gli utenti eseguono l'app, a questi elementi verranno assegnate posizioni fisse sullo schermo.  
   
- ![](../designers/media/e1ae27f0-3a57-454e-b580-877dcea8836d.png "e1ae27f0-3a57-454e-b580-877dcea8836d")  
+ ![](~/docs/designers/media/e1ae27f0-3a57-454e-b580-877dcea8836d.png "e1ae27f0-3a57-454e-b580-877dcea8836d")  
   
  **Vedere un breve video:** ![Configure Installed Features] (Configurare le funzionalità installate)(../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with the canvas](http://www.popscreen.com/v/6A4hT/Microsoft-Expression-Blend-Working-with-the-Canvas) (Uso di canvas).  
   
 ###  <a name="Stack"></a> StackPanel  
  Consente di disporre gli oggetti su un'unica riga orizzontalmente o verticalmente.  
   
- ![](../designers/media/a85a7b57-b0a8-495e-b985-f0291e41d093.png "a85a7b57-b0a8-495e-b985-f0291e41d093")  
+ ![](~/docs/designers/media/a85a7b57-b0a8-495e-b985-f0291e41d093.png "a85a7b57-b0a8-495e-b985-f0291e41d093")  
   
  **Vedere un breve video:** ![Configure Installed Features] (Configurare le funzionalità installate)(../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with StackPanel and WrapPanel](http://www.popscreen.com/v/6A4i5/Microsoft-Expression-Blend-Using-the-StackPanel-and-WrapPanel) (Uso di StackPanel e WrapPanel).  
   
@@ -98,7 +98,7 @@ Si supponga di voler impostare la posizione degli oggetti, quali immagini, pulsa
   
  (Disponibile solo per i progetti WPF)  
   
- ![](../designers/media/b1c415fb-9a32-4a18-aa0b-308fca994ac9.png "b1c415fb-9a32-4a18-aa0b-308fca994ac9")  
+ ![](~/docs/designers/media/b1c415fb-9a32-4a18-aa0b-308fca994ac9.png "b1c415fb-9a32-4a18-aa0b-308fca994ac9")  
   
  **Vedere un breve video:** ![Configure Installed Features] (Configurare le funzionalità installate)(../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with StackPanel and WrapPanel](http://www.popscreen.com/v/6A4i5/Microsoft-Expression-Blend-Using-the-StackPanel-and-WrapPanel) (Uso di StackPanel e WrapPanel).  
   
@@ -107,7 +107,7 @@ Si supponga di voler impostare la posizione degli oggetti, quali immagini, pulsa
   
  (Disponibile solo per i progetti WPF)  
   
- ![](../designers/media/72d46b58-9a49-4dd5-8af7-6843c0440226.png "72d46b58-9a49-4dd5-8af7-6843c0440226")  
+ ![](~/docs/designers/media/72d46b58-9a49-4dd5-8af7-6843c0440226.png "72d46b58-9a49-4dd5-8af7-6843c0440226")  
   
  **Vedere un breve video:** ![Configure Installed Features] (Configurare le funzionalità installate)(../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [WPF - DockPanel](https://www.youtube.com/watch?v=EBH_OIM-zPo).  
   
@@ -129,7 +129,7 @@ Si supponga di voler impostare la posizione degli oggetti, quali immagini, pulsa
 ###  <a name="Border"></a> Border  
  Consente di creare un bordo, uno sfondo o entrambi intorno a un oggetto. È possibile aggiungere un solo oggetto a un controllo **Border**. Per applicare un bordo o uno sfondo a più oggetti, aggiungere a **Border** il pannello di layout, quindi aggiungere gli oggetti al pannello o al controllo.  
   
- ![](../designers/media/e761238b-99fd-43c5-bbc4-57538b8289ff.png "e761238b-99fd-43c5-bbc4-57538b8289ff")  
+ ![](~/docs/designers/media/e761238b-99fd-43c5-bbc4-57538b8289ff.png "e761238b-99fd-43c5-bbc4-57538b8289ff")  
   
  **Vedere un breve video:** ![Configure Installed Features] (Configurare le funzionalità installate)(../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with Borders](http://www.popscreen.com/v/6A4hB/Microsoft-Expression-Blend-Working-with-Borders) (Uso di bordi).  
   
@@ -139,14 +139,14 @@ Si supponga di voler impostare la posizione degli oggetti, quali immagini, pulsa
 ###  <a name="Scroll"></a> ScrollViewer  
  Consente agli utenti di scorrere verso il basso in una pagina o un'area di una pagina. Dal momento che è possibile aggiungere un solo oggetto a un controllo **ScrollViewer**, è preferibile aggiungere un pannello di layout, come **Grid** o **StackPanel**.  
   
- ![](../designers/media/06b326d4-f23d-41a6-b26b-e1aff37572a7.png "06b326d4-f23d-41a6-b26b-e1aff37572a7")  
+ ![](~/docs/designers/media/06b326d4-f23d-41a6-b26b-e1aff37572a7.png "06b326d4-f23d-41a6-b26b-e1aff37572a7")  
   
 ###  <a name="View"></a> Viewbox  
  Consente di ridimensionare gli oggetti come con un controllo zoom. È possibile aggiungere un solo oggetto a un controllo **Viewbox**. Se si vuole applicare questo effetto a più oggetti, aggiungere un pannello di layout a **ViewBox** e quindi aggiungere i controlli a tale pannello.  
   
  (Disponibile solo per i progetti WPF)  
   
- ![](../designers/media/f5b13c66-d918-4141-8a16-bd8f8628687a.png "f5b13c66-d918-4141-8a16-bd8f8628687a")  
+ ![](~/docs/designers/media/f5b13c66-d918-4141-8a16-bd8f8628687a.png "f5b13c66-d918-4141-8a16-bd8f8628687a")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Working with elements in XAML Designer](../designers/working-with-elements-in-xaml-designer.md)   

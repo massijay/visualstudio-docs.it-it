@@ -79,7 +79,7 @@ Questa finestra di dialogo consente di modificare il comportamento predefinito d
  Mostra icone per ritorno a capo automatico  
  Quando questa opzione è selezionata, viene visualizzato un indicatore a forma di freccia rivolta indietro in caso di ritorno a capo automatico di una riga lunga su una seconda riga.  
   
- ![Schermata LineBreakSymbol](../../ide/reference/media/linebreak.gif "interruzione riga")  
+ ![Schermata LineBreakSymbol](~/docs/ide/reference/media/linebreak.gif "interruzione riga")  
   
  Deselezionare questa opzione per non visualizzare tali indicatori.  
   

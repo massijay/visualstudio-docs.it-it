@@ -51,7 +51,7 @@ caps.handback.revision: 78
 > [!NOTE]  
 >  Alcune attività, tuttavia, non possono essere eseguite utilizzando la finestra di progettazione della barra multifunzione.  Per ulteriori informazioni su queste attività e sulle possibili modalità di esecuzione, vedere [Cenni preliminari sulla barra multifunzione](../vsto/ribbon-overview.md).  
   
- ![Collegamento a video](../vsto/media/playvideo.png "Collegamento a video") Per una dimostrazione video correlata, vedere la procedura relativa all' [utilizzo della finestra di progettazione per personalizzare la barra multifunzione in Outlook](http://go.microsoft.com/fwlink/?LinkID=130312).  
+ ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere la procedura relativa all' [utilizzo della finestra di progettazione per personalizzare la barra multifunzione in Outlook](http://go.microsoft.com/fwlink/?LinkID=130312).  
   
 ## Aggiunta di un elemento Barra multifunzione \(finestra di progettazione visiva\) a un progetto  
  Per utilizzare la finestra di progettazione della barra multifunzione, aggiungere un nuovo elemento **Barra multifunzione \(finestra di progettazione visiva\)** al progetto.  Per ulteriori informazioni, vedere [Procedura: iniziare a personalizzare la barra multifunzione](../vsto/how-to-get-started-customizing-the-ribbon.md).  
@@ -109,7 +109,7 @@ caps.handback.revision: 78
   
 -   Aprire l'**editor della raccolta Tab**, quindi scegliere **Aggiungi**.  
   
-     Per aprire l'**editor della raccolta Tab**, nella finestra **Proprietà** selezionare la proprietà **Tabs**, quindi fare clic sul pulsante con i puntini di sospensione ![Ellisse di ASP.NET Mobile Designer](../sharepoint/media/mwellipsis.png "Ellisse di ASP.NET Mobile Designer").  
+     Per aprire l'**editor della raccolta Tab**, nella finestra **Proprietà** selezionare la proprietà **Tabs**, quindi fare clic sul pulsante con i puntini di sospensione ![Ellisse di ASP.NET Mobile Designer](~/docs/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer").  
   
  Dopo l'aggiunta di una scheda, è possibile aggiungere gruppi che contengano i controlli.  
   

@@ -85,7 +85,7 @@ Questa guida introduttiva illustra come spostarsi nel debugger di Visual Studio 
   
 1.  **Impostare un punto di interruzione.** Impostare un punto di interruzione in corrispondenza dell'istruzione `callTrack = "module function";` subito dopo la chiamata a `app.start()`. Scegliere la riga nella barra di navigazione ombreggiata dell'editor del codice sorgente \(tastiera: posizionare il cursore sulla riga e premere **F9**\).  
   
-     ![Imposta un punto di interruzione in example1](../debugger/media/dbg_jsnav_example1_breakpoint.png "DBG\_JSNAV\_example1\_breakpoint")  
+     ![Imposta un punto di interruzione in example1](~/docs/debugger/media/dbg_jsnav_example1_breakpoint.png "DBG\_JSNAV\_example1\_breakpoint")  
   
      L'icona del punto di interruzione viene visualizzata nella barra.  
   
@@ -93,13 +93,13 @@ Questa guida introduttiva illustra come spostarsi nel debugger di Visual Studio 
   
      L'esecuzione dell'app inizia e viene sospesa immediatamente prima dell'istruzione in cui è stato impostato il punto di interruzione. L'icona della riga corrente nella barra di navigazione identifica la posizione e l'istruzione corrente risulta evidenziata.  
   
-     ![Esegui a punto di interruzione](../debugger/media/dbg_jsnav_example1_run_to_breakpoint.png "DBG\_JSNAV\_example1\_run\_to\_breakpoint")  
+     ![Esegui a punto di interruzione](~/docs/debugger/media/dbg_jsnav_example1_run_to_breakpoint.png "DBG\_JSNAV\_example1\_run\_to\_breakpoint")  
   
      A questo punto è possibile controllare l'esecuzione dell'app ed esaminare lo stato del programma mentre si esegue il codice un'istruzione alla volta.  
   
 3.  **Eseguire un'istruzione nella funzione.** Scegliere **Esegui istruzione** dal menu **Debug** \(tastiera: **F11**\).  
   
-     ![Esegui istruzione in una riga di codice](../debugger/media/dbg_jsnav_example1_step_into.png "DBG\_JSNAV\_example1\_step\_into")  
+     ![Esegui istruzione in una riga di codice](~/docs/debugger/media/dbg_jsnav_example1_step_into.png "DBG\_JSNAV\_example1\_step\_into")  
   
      Si noti che il debugger passa alla riga successiva, che corrisponde a una chiamata alla funzione `example1`. Scegliere di nuovo **Esegui istruzione**. Il debugger passa alla prima riga di codice della funzione `example1`. La riga evidenziata non è stata eseguita, ma la funzione è stata caricata nello stack di chiamate ed è stata allocata la memoria per le variabili locali.  
   
@@ -113,7 +113,7 @@ Questa guida introduttiva illustra come spostarsi nel debugger di Visual Studio 
   
 5.  **Visualizzare i valori delle variabili nei suggerimenti dati.** Continuare a eseguire le istruzioni in `example1` fino a raggiungere il punto di uscita. Il debugger evidenzia la parentesi graffa chiusa della funzione. Quando si posiziona il puntatore del mouse su un nome di variabile, il nome e il valore della variabile vengono visualizzati in un suggerimento dati.  
   
-     ![Visualizza valori variabili nel suggerimento dati](../debugger/media/dbg_jsnav_data_tip.png "DBG\_JSNAV\_data\_tip")  
+     ![Visualizza valori variabili nel suggerimento dati](~/docs/debugger/media/dbg_jsnav_data_tip.png "DBG\_JSNAV\_data\_tip")  
   
 6.  **Aggiungere un'espressione di controllo per la variabile callTrack**. La variabile `callTrack` viene usata in tutta la guida introduttiva per illustrare le funzioni chiamate negli esempi. Per visualizzare più facilmente il valore della variabile, aggiungerla a una finestra Espressioni di controllo. Selezionare il nome della variabile nell'editor, quindi scegliere **Aggiungi espressione di controllo** dal menu di scelta rapida.  
   
@@ -132,14 +132,14 @@ Questa guida introduttiva illustra come spostarsi nel debugger di Visual Studio 
   
  Sia l'esecuzione che l'uscita da un'istruzione\/routine di una funzione comporta l'esecuzione della funzione.  
   
- ![Esegui istruzione, esci da istruzione nei metodi](../debugger/media/dbg_basics_stepintooverout.png "DBG\_Basics\_StepIntoOverOut")  
+ ![Esegui istruzione, esci da istruzione nei metodi](~/docs/debugger/media/dbg_basics_stepintooverout.png "DBG\_Basics\_StepIntoOverOut")  
   
 ###  <a name="BKMK_Example_2"></a> Esempio 2  
  In questo esempio proverai a eseguire un'istruzione, eseguire un'istruzione\/routine e uscire da un'istruzione\/routine delle funzioni.  
   
 1.  **Chiamare la funzione example2 nella funzione module**. Modificare la funzione `module` e sostituire la riga che segue `var callTrack = "module function"` con `example2();`.  
   
-     ![Chiama funzione example2](../debugger/media/dbg_jsnav_example2.png "DBG\_JSNAV\_example2")  
+     ![Chiama funzione example2](~/docs/debugger/media/dbg_jsnav_example2.png "DBG\_JSNAV\_example2")  
   
 2.  **Eseguire fino al punto di interruzione.** Avviare la sessione di debug scegliendo **Avvia debug** dal menu **Debug** \(tastiera: F5\). Il debugger sospende l'esecuzione in corrispondenza del punto di interruzione.  
   
@@ -147,7 +147,7 @@ Questa guida introduttiva illustra come spostarsi nel debugger di Visual Studio 
   
 4.  **Eseguire un'istruzione in example2 e in example2\_a.** Premere **F11** per eseguire un'istruzione nella funzione `example2`. Continuare a eseguire le istruzioni in `example2` fino a raggiungere la riga `var x = example2_a();`. Eseguire quindi l'istruzione in questa riga per passare al punto di ingresso di `example2_a`. Continuare a eseguire ogni istruzione in `example2_a` fino a tornare a `example2`.  
   
-     ![Esegui istruzione funzione](../debugger/media/dbg_jsnav_example2_a.png "DBG\_JSNAV\_example2\_a")  
+     ![Esegui istruzione funzione](~/docs/debugger/media/dbg_jsnav_example2_a.png "DBG\_JSNAV\_example2\_a")  
   
 5.  **Eseguire un'istruzione\/routine di una funzione.** Si noti che la riga successiva in `example2`, `var y = example2_a();` è fondamentalmente uguale alla riga precedente. È possibile eseguire tranquillamente l'istruzione\/routine in questa riga. Premere **F10** per passare dalla ripresa di `example2` a questa seconda chiamata a `example2_a`. La stringa `callTrack` indica che la funzione `example2_a` è stata eseguita due volte.  
   
@@ -167,7 +167,7 @@ Questa guida introduttiva illustra come spostarsi nel debugger di Visual Studio 
   
 1.  **Chiamare la funzione example3 nella funzione module.** Modificare la funzione `module` e sostituire la riga che segue `var callTrack = "module function";` con la riga `example3();`.  
   
-     ![Chiama example3](../debugger/media/dbg_jsnav_example3.png "DBG\_JSNAV\_example3")  
+     ![Chiama example3](~/docs/debugger/media/dbg_jsnav_example3.png "DBG\_JSNAV\_example3")  
   
 2.  **Eseguire fino al punto di interruzione.** Avviare la sessione di debug scegliendo **Avvia debug** dal menu **Debug** \(tastiera: **F5**\). Il debugger sospende l'esecuzione nel punto di interruzione della funzione `module`.  
   
@@ -177,7 +177,7 @@ Questa guida introduttiva illustra come spostarsi nel debugger di Visual Studio 
   
      Selezionare la casella di controllo **Condizione** e quindi digitare `i == 500;` nella casella di testo. Scegliere l'opzione **È true** e quindi **OK**. Il punto di interruzione consente di controllare il valore alla 500a iterazione del ciclo `for`. È possibile identificare un punto di interruzione condizionale dalla relativa icona con una croce bianca.  
   
-     ![Icona punto di interruzione condizionale](../debugger/media/dbg_jsnav_breakpoint_condition_icon.png "DBG\_JSNAV\_Breakpoint\_Condition\_icon")  
+     ![Icona punto di interruzione condizionale](~/docs/debugger/media/dbg_jsnav_breakpoint_condition_icon.png "DBG\_JSNAV\_Breakpoint\_Condition\_icon")  
   
 5.  **Eseguire fino al punto di interruzione.** Scegliere **Continua**  dal menu **Debug** \(tastiera: **F5**\). Posizionare il puntatore del mouse su `i` per verificare che il valore corrente di `i` sia 500. Si noti anche che la variabile `s` viene rappresentata come riga singola ed è molto più lunga della finestra Suggerimento dati.  
   
@@ -185,7 +185,7 @@ Questa guida introduttiva illustra come spostarsi nel debugger di Visual Studio 
   
      Verrà visualizzata la finestra del Visualizzatore testo con il valore della stringa presentato come una stringa con più righe.  
   
-     ![Visualizzatore di testo debug](../debugger/media/dbg_jsnav_text_visualizer.png "DBG\_JSNAV\_Text\_Visualizer")  
+     ![Visualizzatore di testo debug](~/docs/debugger/media/dbg_jsnav_text_visualizer.png "DBG\_JSNAV\_Text\_Visualizer")  
   
 7.  **Eseguire fino al cursore.** Selezionare la riga `callTrack += "->example3";` e quindi scegliere **Esegui fino al cursore** dal menu di scelta rapida \(tastiera: **CTRL\+F10**\). Il debugger completa le iterazioni del ciclo e quindi sospende l'esecuzione in corrispondenza della riga.  
   
@@ -211,7 +211,7 @@ Questa guida introduttiva illustra come spostarsi nel debugger di Visual Studio 
   
 1.  **Aggiungere un oggetto array alla funzione module.** Modificare la funzione `module` e sostituire la riga che segue `var callTrack = "module function"` con `var myArray = new Array(1, 2, 3);`  
   
-     ![Definizione myArray](../debugger/media/dbg_jsnav_myarray.png "DBG\_JSNAV\_myArray")  
+     ![Definizione myArray](~/docs/debugger/media/dbg_jsnav_myarray.png "DBG\_JSNAV\_myArray")  
   
 2.  **Eseguire fino al punto di interruzione.** Avviare la sessione di debug scegliendo **Avvia debug** dal menu **Debug** \(tastiera: **F5**\). Il debugger sospende l'esecuzione in corrispondenza del punto di interruzione. Eseguire un'istruzione nella riga.  
   
@@ -248,7 +248,7 @@ Questa guida introduttiva illustra come spostarsi nel debugger di Visual Studio 
   
 1.  **Chiamare la funzione example4 dalla funzione module.** Modificare la funzione `module` e sostituire la riga che segue `var callTrack = "module function"` con `example4()`:  
   
-     ![Chiama example4](../debugger/media/dbg_jsnav_example4.png "DBG\_JSNAV\_example4")  
+     ![Chiama example4](~/docs/debugger/media/dbg_jsnav_example4.png "DBG\_JSNAV\_example4")  
   
 2.  **Eseguire fino al punto di interruzione.** Avviare la sessione di debug scegliendo **Avvia debug** dal menu **Debug** \(tastiera: **F5**\). Il debugger sospende l'esecuzione in corrispondenza del punto di interruzione.  
   
@@ -258,7 +258,7 @@ Questa guida introduttiva illustra come spostarsi nel debugger di Visual Studio 
   
 5.  **Eseguire un'istruzione in example4 ed esaminare le variabili di ambito e locali** Eseguire un'istruzione \(tastiera: **F11**\) nella funzione `example4`. Poiché `example4` è definito nella funzione `module`, la funzione `module` diventa l'ambito padre.`example4` può chiamare qualsiasi funzione nella funzione `module` e accedere alle relative variabili. Espandere il nodo **\[Scope\]** nella finestra Variabili locali e notare che contiene le stesse variabili della funzione `module`.  
   
-     ![Ambito del metodo example4](../debugger/media/dbg_jsnav_locals_example4_scope.png "DBG\_JSNAV\_Locals\_example4\_scope")  
+     ![Ambito del metodo example4](~/docs/debugger/media/dbg_jsnav_locals_example4_scope.png "DBG\_JSNAV\_Locals\_example4\_scope")  
   
 6.  **Eseguire un'istruzione in example4\_a ed esaminare le variabili di ambito e locali** Continuare a eseguire istruzioni in `example4` e nella chiamata a `example4_a`. Si noti che a questo punto le variabili locali provengono da `example4_a` e il nodo **\[Scope\]** contiene ancora le variabili della funzione `module`. Anche se le variabili di `example4` sono attive, non possono essere raggiunte da `example4_a` e non fanno più parte della catena dell'ambito.  
   
@@ -284,7 +284,7 @@ Questa guida introduttiva illustra come spostarsi nel debugger di Visual Studio 
   
 1.  **Chiamare la funzione example5 nella funzione module.** Modificare la funzione `module` e sostituire la riga che segue `var callTrack = "module function";` con la riga `example5();`.  
   
-     ![Chiama example5](../debugger/media/dbg_jsnav_example5.png "DBG\_JSNAV\_example5")  
+     ![Chiama example5](~/docs/debugger/media/dbg_jsnav_example5.png "DBG\_JSNAV\_example5")  
   
 2.  **Eseguire fino al punto di interruzione.** Avviare la sessione di debug scegliendo **Avvia debug** dal menu **Debug** \(tastiera: **F5**\). Il debugger sospende l'esecuzione nel punto di interruzione della funzione.  
   
@@ -296,7 +296,7 @@ Questa guida introduttiva illustra come spostarsi nel debugger di Visual Studio 
   
 4.  **Eseguire un'istruzione nelle funzioni per raggiungere la funzione example5\_d.** Scegliere **Esegui istruzione** dal menu **Debug** \(tastiera: **F11**\) per eseguire le chiamate nel percorso di chiamate fino a raggiungere il punto di ingresso della funzione example5\_d. Ogni volta che una funzione chiama una funzione, il numero di riga della funzione chiamante viene salvato e la funzione chiamata viene posizionata all'inizio dello stack. Il numero di riga della funzione chiamante è il punto in cui la funzione chiamante ha sospeso l'esecuzione. Una freccia gialla indica la funzione attualmente in esecuzione.  
   
-     ![Finestra Stack di chiamate](../debugger/media/dbg_jsnav_callstack_windows.png "DBG\_JSNAV\_CallStack\_windows")  
+     ![Finestra Stack di chiamate](~/docs/debugger/media/dbg_jsnav_callstack_windows.png "DBG\_JSNAV\_CallStack\_windows")  
   
 5.  **Usare la finestra Stack di chiamate per passare al codice di example5\_a e impostare un punto di interruzione.** Nella finestra Stack di chiamate selezionare l'elemento di elenco `example5_a`, quindi scegliere **Vai a origine** dal menu di scelta rapida. L'editor di codice imposta il cursore in corrispondenza del ritorno a capo della funzione. Impostare un punto di interruzione in questa riga. Si noti che la riga di esecuzione corrente non è cambiata. Solo il cursore dell'editor è stato spostato.  
   

@@ -80,7 +80,7 @@ La finestra **Attività** è simile alla finestra **Thread**, l'unica differenza
 ## Visualizzazione padre\/figlio  
  \(Questa visualizzazione è disponibile solo per codice gestito\). Facendo clic con il pulsante destro del mouse su un'intestazione di colonna e scegliendo **Visualizzazione padre\/figlio**, è possibile impostare l'elenco di attività su una visualizzazione gerarchica nella quale ogni attività figlio è un nodo secondario che può essere visualizzato o nascosto nell'attività padre.  Nell'illustrazione seguente vengono mostrate le attività nella visualizzazione padre\/figlio.  
   
- ![Visualizzazione padre&#45;figlio nella finestra Attività in parallelo](../debugger/media/parallel_tasks_parentchildview.png "Parallel\_Tasks\_ParentChildView")  
+ ![Visualizzazione padre&#45;figlio nella finestra Attività in parallelo](~/docs/debugger/media/parallel_tasks_parentchildview.png "Parallel\_Tasks\_ParentChildView")  
   
 ## Contrassegno delle attività  
  È possibile contrassegnare il thread su cui un'attività è in esecuzione selezionando l'elemento dell'elenco attività e scegliendo **Flag** dal menu di scelta rapida oppure facendo clic sull'icona del flag nella prima colonna.  Se si contrassegnano diverse attività, sarà successivamente possibile ordinare in base alla colonna del contrassegno in modo da portare tutte le attività contrassegnate in cima e potersi concentrare su di esse.  È inoltre possibile utilizzare la finestra **Stack in parallelo** per visualizzare solo le attività con contrassegno.  In questo modo si possono filtrare le attività di poco interesse per il debug.  I contrassegni non vengono salvati in modo permanente tra una sessione di debug e l'altra.  

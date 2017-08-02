@@ -44,7 +44,7 @@ caps.handback.revision: 101
   
 -   [Aggiunta di controlli Windows Form ai documenti](#WindowsForms).  
   
- ![Collegamento a video](../vsto/media/playvideo.png "Collegamento a video") Per una dimostrazione video correlata, vedere l'argomento relativo alla [procedura di aggiunta di controlli all'area di un documento in fase di esecuzione](http://go.microsoft.com/fwlink/?LinkId=132782).  
+ ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere l'argomento relativo alla [procedura di aggiunta di controlli all'area di un documento in fase di esecuzione](http://go.microsoft.com/fwlink/?LinkId=132782).  
   
 ##  <a name="ControlsCollection"></a> Gestione dei controlli in fase di esecuzione usando le raccolte di controlli  
  Per aggiungere, ottenere o rimuovere i controlli in fase di esecuzione, usare i metodi di supporto degli oggetti <xref:Microsoft.Office.Tools.Excel.ControlCollection> e <xref:Microsoft.Office.Tools.Word.ControlCollection>.  

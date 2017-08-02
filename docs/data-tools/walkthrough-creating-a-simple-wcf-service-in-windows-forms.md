@@ -37,7 +37,7 @@ In questa procedura dettagliata viene illustrato come creare un semplice servizi
     > [!NOTE]
     >  Viene creato un servizio di lavoro che può essere testato e a cui è possibile accedere.  I due passaggi seguenti mostrano come modificare il metodo predefinito per usare un tipo di dati diverso.  In un'applicazione reale verrebbero aggiunte anche le funzioni dell'utente al servizio.  
   
-3.  ![File IService1](../data-tools/media/wcf2.png "wcf2")  
+3.  ![File IService1](~/docs/data-tools/media/wcf2.png "wcf2")  
   
      In **Esplora soluzioni** fare doppio clic su IService1.vb o IService1.cs, quindi trovare la seguente riga:  
   
@@ -120,7 +120,7 @@ In questa procedura dettagliata viene illustrato come creare un semplice servizi
   
 5.  Premere **F5** per eseguire il progetto.  Immettere del testo e fare clic sul pulsante.  L'etichetta visualizza "Valore immesso:" e il testo immesso.  
   
-     ![Form che visualizza il risultato](../data-tools/media/wcf10.png "wcf10")  
+     ![Form che visualizza il risultato](~/docs/data-tools/media/wcf10.png "wcf10")  
   
 ## Vedere anche  
  [Esempio di uso di servizi ASMX e WCF](http://msdn.microsoft.com/it-it/788ddf2c-2ac1-416b-8789-2fbb1e29b8fe)

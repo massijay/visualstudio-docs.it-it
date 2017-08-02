@@ -49,7 +49,7 @@ Projects
   
  L'automazione di progetto segue il percorso nel diagramma seguente.  
   
- ![Oggetti di progetto Visual Studio](../../extensibility/internals/media/projectobjects.png "ProjectObjects")  
+ ![Oggetti di progetto Visual Studio](~/docs/extensibility/internals/media/projectobjects.gif "ProjectObjects")  
 Automazione del progetto  
   
  Se non si distribuisce un oggetto di `Project` , l'ambiente restituirà ancora un oggetto generico di `Project` che contiene solo il nome del progetto.  

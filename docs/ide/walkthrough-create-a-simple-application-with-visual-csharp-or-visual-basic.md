@@ -99,7 +99,7 @@ Completando questa procedura dettagliata, si acquisirà familiarità con molti s
   
      È inoltre possibile digitare **Nuovo progetto** nella casella **Avvio veloce** per eseguire la stessa operazione.  
   
-     ![Nella casella avvio veloce specificare il nuovo progetto](../ide/media/exploreide-quicklaunchnewprojectsmall.png "ExploreIDE-QuickLaunchNewProjectsmall")  
+     ![Nella casella avvio veloce specificare il nuovo progetto](~/docs/ide/media/exploreide-quicklaunchnewprojectsmall.png "ExploreIDE-QuickLaunchNewProjectsmall")  
   
 2.  Scegliere il modello applicazione WPF in Visual Basic o Visual C# selezionando nel riquadro a sinistra **Installato**, **Modelli**, **Visual C#**, **Windows**, ad esempio, e quindi selezionando Applicazione WPF nel riquadro centrale.  Denominare il progetto HelloWPFApp nella parte inferiore della finestra di dialogo Nuovo progetto.  
   
@@ -113,7 +113,7 @@ Completando questa procedura dettagliata, si acquisirà familiarità con molti s
   
  Figura 5: elementi di progetto  
   
- ![Esplora soluzioni con i file HelloWPFApp caricati](../ide/media/exploreide-hellowpfappfiles.png "ExploreIDE-HelloWPFAppFiles")  
+ ![Esplora soluzioni con i file HelloWPFApp caricati](~/docs/ide/media/exploreide-hellowpfappfiles.png "ExploreIDE-HelloWPFAppFiles")  
   
  Dopo aver creato il progetto, sarà possibile personalizzarlo. Nella finestra **Proprietà** (disponibile nel menu **Visualizzazione** ) è possibile visualizzare e modificare le opzioni per elementi di progetto, controlli e altri elementi in un'applicazione. Utilizzando le proprietà del progetto e le pagine delle proprietà, è possibile visualizzare e modificare le opzioni per progetti e soluzioni.  
   
@@ -121,7 +121,7 @@ Completando questa procedura dettagliata, si acquisirà familiarità con molti s
   
 1.  Nella procedura illustrata di seguito verrà assegnato a MainWindow un nome più specifico. In **Esplora soluzioni**selezionare MainWindow.xaml. Dovrebbe essere visualizzata la finestra **Proprietà**, ma qualora non lo fosse scegliere il menu **Visualizzazione** e l'elemento **Finestra Proprietà**. Cambiare la proprietà **Nome file** in `Greetings.xaml`.  
   
-     ![Finestra proprietà con il nome File evidenziato](../ide/media/exploreide-filenameinpropertieswindow.png "ExploreIDE-FilenameinPropertiesWindow")  
+     ![Finestra proprietà con il nome File evidenziato](~/docs/ide/media/exploreide-filenameinpropertieswindow.png "ExploreIDE-FilenameinPropertiesWindow")  
   
      In**Esplora soluzioni** è possibile notare che il nome del file è ora Greetings.xaml e, se si espande il nodo di MainWindow.xaml (premendo il tasto freccia destra con il nodo attivo), il nome del file MainWindow.xaml.vb o MainWindow.xaml.cs è ora Greetings.xaml.vb o Greetings.xaml.cs. Questo file di codice è annidato sotto il nodo del file con estensione xaml per mostrare che sono strettamente correlati tra loro.  
   
@@ -274,7 +274,7 @@ Completando questa procedura dettagliata, si acquisirà familiarità con molti s
   
 1.  Avviare il debugger selezionando **Debug**, quindi **Avvia debug**.  
   
-     ![Avviare il comando di debug dal menu Debug](../ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
+     ![Avviare il comando di debug dal menu Debug](~/docs/ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
   
      Verrà visualizzata una finestra di dialogo in cui è indicato che si è verificata un'eccezione IOException: Impossibile individuare la risorsa 'mainwindow.xaml'.  
   
@@ -340,7 +340,7 @@ Completando questa procedura dettagliata, si acquisirà familiarità con molti s
   
 2.  Modificare la configurazione della build per HelloWPFApp da **Debug** a **Rilascio** usando il controllo a discesa sulla barra degli strumenti (al momento è selezionato "Debug").  
   
-     ![Barra degli strumenti standard con l'opzione Versione selezionata](../ide/media/exploreide-releaseversion.png "ExploreIDE-ReleaseVersion")  
+     ![Barra degli strumenti standard con l'opzione Versione selezionata](~/docs/ide/media/exploreide-releaseversion.png "ExploreIDE-ReleaseVersion")  
   
 3.  Compilare la soluzione scegliendo **Compila**, quindi **Compila soluzione** o premendo il tasto F6.  
   

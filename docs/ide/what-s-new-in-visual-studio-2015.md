@@ -33,7 +33,7 @@ Visual Studio 2015 è una famiglia integrata di strumenti di produttività per s
   
  L'esperienza di installazione di Visual Studio 2015 è stata suddivisa in componenti in modo che è necessario installare le parti che è necessario. In questo modo l'installazione più veloce per molti scenari comuni che coinvolgono lo sviluppo Web o .NET. Se altri tipi di sviluppo, ad esempio sviluppo multipiattaforma per dispositivi mobili, o si lavora in C\+\+ o F \#, scegliere **personalizzato** installazione e quindi scegliere i componenti e il SDK di terze parti facoltativo che è necessario. È inoltre possibile installare i componenti personalizzati in un secondo momento. Ad esempio, se si sceglie l'installazione di base e quindi tentare di creare un nuovo progetto C\+\+, verrà richiesto di scaricare gli strumenti di sviluppo C\+\+.  
   
- ![Finestra di dialogo di installazione di Visual Studio 2015](../ide/media/vs2015_setup_screen.png "VS2015\_Setup\_screen")  
+ ![Finestra di dialogo di installazione di Visual Studio 2015](~/docs/ide/media/vs2015_setup_screen.png "VS2015\_Setup\_screen")  
   
 ## Accedere a più account  
  Con Visual Studio 2015 la nuova esperienza di accesso ottimizzata è concepita in modo da semplificare notevolmente l'accesso alle risorse online, anche quando si hanno più account di Visual Studio. Dopo avere effettuato l'accesso a Visual Studio, si accede automaticamente a tutte le istanze di Visual Studio 2015 e Blend nel computer in uso. L'accesso  avvia automaticamente il roaming delle impostazioni. In Visual Studio 2015 l'account è condiviso tra più funzionalità e, di conseguenza, se si ha un token valido, è possibile accedere agli account di Visual Studio Team Services da **Team Explorer** e alle risorse e ai siti Web dalla sottoscrizione di Microsoft Azure in Esplora server. Le risorse di Azure sono inoltre visualizzate nella finestra di dialogo Nuovo progetto per i progetti di Application Insights, mentre gli account di Servizi mobili di Azure, Archiviazione di Azure, [Microsoft Office 365](http://msdn.microsoft.com/office/aa905340.aspx) e quello per [sviluppatori di Saleforce.com](https://developer.salesforce.com/) sono visualizzati nella nuova finestra di dialogo **Aggiungi servizio connesso**.  
@@ -64,7 +64,7 @@ Visual Studio 2015 è una famiglia integrata di strumenti di produttività per s
 ### App di Windows universale di qualsiasi dispositivo Windows 10  
  Con la piattaforma Windows universale e uno dei nostri core Windows, è possibile eseguire la stessa applicazione su qualsiasi dispositivo Windows 10 dai telefoni ai desktop. È possibile creare queste app di Windows universale usando Visual Studio 2015 e gli strumenti di sviluppo di app di Windows universale.  
   
- ![Piattaforma UWP &#40;Universal Windows Platform&#41; ](../cross-platform/media/uwp_coreextensions.png "UWP\_CoreExtensions")  
+ ![Piattaforma UWP &#40;Universal Windows Platform&#41; ](~/docs/cross-platform/media/uwp_coreextensions.png "UWP\_CoreExtensions")  
   
  È possibile eseguire le app su telefoni Windows 10, computer desktop Windows 10 o Xbox. Il pacchetto di app non cambia. Con l'introduzione del singolo core unificato Windows 10, un unico pacchetto di app può essere eseguito su tutte le piattaforme. Diverse piattaforme hanno SDK di estensione che è possibile aggiungere alla app per sfruttare i comportamenti specifici di piattaforma. Ad esempio, un SDK di estensione per dispositivi mobili gestisce la pressione del pulsante Indietro su un telefono Windows. Se si fa riferimento a un SDK di estensione nel progetto, è sufficiente aggiungere i controlli di runtime per verificare se tale SDK è disponibile nella piattaforma. In questo modo è possibile avere lo stesso pacchetto di app per ogni piattaforma.  
   
@@ -95,7 +95,7 @@ Visual Studio 2015 è una famiglia integrata di strumenti di produttività per s
 ## Menu Anteprima dispositivo  
  In progetti per la piattaforma Windows universale, la barra dei menu Anteprima dispositivo consente di vedere come verrà eseguito il rendering dell'interfaccia utente basata su XAML in diverse dimensioni dello schermo.  
   
- ![Menu Anteprima dispositivo](../ide/media/vs2015_device_preview.png "vs2015\_device\_preview")  
+ ![Menu Anteprima dispositivo](~/docs/ide/media/vs2015_device_preview.png "vs2015\_device\_preview")  
   
 ## Diagnostica della grafica di Visual Studio  
  Poiché Visual Studio 2013, gli strumenti di acquisizione Visual Studio grafica diagnostica ha aggiunto numerose nuove funzionalità, tra cui l'analisi dei Frame, supporto per Windows Phone, modifica dello shader e applica e riga di comando. È inoltre aggiunto supporto per il debug di applicazioni DirectX12. Per ulteriori informazioni, vedere [Visual Studio Graphics Diagnostics](../debugger/visual-studio-graphics-diagnostics.md).  
@@ -113,7 +113,7 @@ Visual Studio 2015 è una famiglia integrata di strumenti di produttività per s
   
  Nuovi servizi verranno aggiunti regolarmente e sarà possibile scoprirli facendo clic sul collegamento per trovare nuovi servizi nella procedura guidata.  
   
- ![Finestra di dialogo per l'aggiunta di servizi connessi](../ide/media/vs2015_addconnectedservicedialog.png "VS2015\_AddConnectedServiceDialog")  
+ ![Finestra di dialogo per l'aggiunta di servizi connessi](~/docs/ide/media/vs2015_addconnectedservicedialog.png "VS2015\_AddConnectedServiceDialog")  
   
 ## Progettare l'interfaccia utente  
  L'esperienza Blend per la progettazione di interfacce utente XAML è stata notevolmente migliorata. Blend è stato completamente riprogettato per fornire un'interfaccia utente più intuitiva, funzionalità di modifica XAML più potenti, tra cui IntelliSense e una migliore integrazione con Visual Studio. Per altre informazioni, vedere [Designing XAML in Visual Studio and Blend for Visual Studio](../designers/designing-xaml-in-visual-studio.md).  
@@ -168,7 +168,7 @@ Visual Studio 2015 è una famiglia integrata di strumenti di produttività per s
 ### Immagini ad alta risoluzione e supporto per il tocco  
  L'IDE di Visual Studio include ora immagini veramente ad alta risoluzione nelle visualizzazioni a più alta densità di elementi, ad esempio in aree quali menu, menu di scelta rapida, barre dei comandi di finestre degli strumenti e alcuni progetti in Esplora soluzioni. Su un touchscreen, nella finestra dell'editor di codice di Visual Studio è anche possibile usare movimenti come toccare e tenere premuto, avvicinare le dita, toccare e così via per ingrandire, scorrere, selezionare testo e richiamare menu di scelta rapida.  
   
- ![Supporto per il tocco nell'editor](../ide/media/vs2015_touchsupport.png "VS2015\_TouchSupport")  
+ ![Supporto per il tocco nell'editor](~/docs/ide/media/vs2015_touchsupport.png "VS2015\_TouchSupport")  
   
 ### Layout personalizzati  
  È possibile creare e archiviare layout di finestra personalizzati ed effettuarne il roaming. Ad esempio, è possibile definire un layout preferito da usare sul computer desktop e un layout diverso da usare su un portatile o su un dispositivo con uno schermo piccolo. In alternativa, si può preferire un layout per un progetto dell'interfaccia utente e un altro per un progetto di database. I tasti di scelta rapida consentono di passare rapidamente da un layout all'altro. Questi layout sono disponibili in qualsiasi istanza di Visual Studio dopo avere eseguito l'accesso. Per altre informazioni, vedere [Creare layout di finestra personalizzati](../misc/create-custom-window-layouts.md).  
@@ -189,7 +189,7 @@ Visual Studio 2015 è una famiglia integrata di strumenti di produttività per s
   
 -   Visualizzare un grafico che mostra le persone che hanno modificato il codice. consentendo di individuare i criteri delle modifiche del team e di valutarne l'impatto.  
   
-     ![CodeLens: visualizzare la cronologia delle modifiche del codice sotto forma di grafico](../ide/media/codelens.png "CodeLens")  
+     ![CodeLens: visualizzare la cronologia delle modifiche del codice sotto forma di grafico](~/docs/ide/media/codelens.png "CodeLens")  
   
 -   Individuare facilmente la data delle ultime modifiche apportate al codice.  
   
@@ -204,7 +204,7 @@ Visual Studio 2015 è una famiglia integrata di strumenti di produttività per s
   
  In questa versione, sono stati creati menu di scelta rapida per gli elementi di codice e collegamenti più facili da usare mediante il raggruppamento di comandi in sezioni relative alla selezione, alla modifica, alla gestione di gruppi e alla modifica del layout del contenuto dei gruppi. Si noti inoltre che i progetti di test vengono visualizzati in uno stile diverso da altri progetti e che le icone per gli elementi nella mappa sono state aggiornate a versioni più appropriate.  
   
- ![Mostra gli elementi selezionati in una nuova mappa codici](../ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")  
+ ![Mostra gli elementi selezionati in una nuova mappa codici](~/docs/ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")  
   
  Questi miglioramenti includono:  
   

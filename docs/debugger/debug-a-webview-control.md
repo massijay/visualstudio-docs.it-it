@@ -23,7 +23,7 @@ caps.handback.revision: 10
 # Debug di un controllo WebView
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Si applica a Windows e Windows Phone](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Si applica a Windows e Windows Phone](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  Per esaminare ed eseguire il debug dei controlli `WebView` in un'app di Windows Runtime, puoi configurare Visual Studio in modo da collegare Script Debugger all'avvio dell'app.  A partire da Visual Studio 2013 Update 2, sono disponibili due modi per interagire con i controlli `WebView` tramite il debugger:  
   
@@ -78,7 +78,7 @@ caps.handback.revision: 10
   
 5.  Nella finestra Console, seleziona la pagina Web o un `iFrame` visualizzato mediante il controllo `WebView` nell'elenco **Destinazione**.  
   
-     ![Selezione della destinazione nella finestra della console JavaScript](../debugger/media/js_console_target.png "JS\_Console\_Target")  
+     ![Selezione della destinazione nella finestra della console JavaScript](~/docs/debugger/media/js_console_target.png "JS\_Console\_Target")  
   
     > [!NOTE]
     >  Tramite la console puoi interagire con un singolo `WebView`, `iFrame`, contratto di condivisione o Web worker alla volta.  Ogni elemento richiede un'istanza separata dell'host della piattaforma Web \(WWAHost.exe\).  Puoi interagire con un solo host alla volta.  

@@ -27,7 +27,7 @@ caps.handback.revision: 33
 # Eseguire il debug del layout usando DOM Explorer
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Si applica a Windows e Windows Phone](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Si applica a Windows e Windows Phone](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  La scheda **Layout** di DOM Explorer mostra il [modello di riquadro CSS](http://go.microsoft.com/fwlink/?LinkID=238778) per l'elemento selezionato in un'app [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], un'app di Windows Phone Store o un'applicazione creata con Strumenti di Visual Studio per Apache Cordova. È possibile usare questa rappresentazione visiva del modello di riquadro per identificare e modificare i valori correlati al layout che hanno effetto sull'aspetto degli elementi.  
   
@@ -61,7 +61,7 @@ caps.handback.revision: 33
   
 5.  A seconda del progetto di avvio, seleziona **Emulator 8.1 WVGA 4 inch 512MB** o **Simulatore** nell'elenco a discesa sulla barra degli strumenti Debug \(il valore predefinito è **Computer locale**\).  
   
-     ![Selezione di una destinazione per il debug](../debugger/media/js_dom_debug_target_emu.png "JS\_DOM\_Debug\_Target\_Emu")  
+     ![Selezione di una destinazione per il debug](~/docs/debugger/media/js_dom_debug_target_emu.png "JS\_DOM\_Debug\_Target\_Emu")  
   
 6.  Premere F5 per eseguire l'app in modalità debug.  
   

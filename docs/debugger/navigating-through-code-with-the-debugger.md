@@ -77,7 +77,7 @@ Esistono diversi modi per spostarsi all'interno del codice nel debugger: è poss
   
      Per impostare un punto di interruzione semplice nel codice, aprire il file di origine nell'editor di Visual Studio. Impostare il cursore sulla riga di codice che si desidera interrompere, quindi scegliere **Punto di interruzione**, **Inserisci punto di interruzione** dal menu di scelta rapida \(tastiera: **F9**\). Il debugger interrompe l'esecuzione subito prima che la riga venga eseguita.  
   
-     ![Imposta punto di interruzione](../debugger/media/dbg_basics_setbreakpoint.png "DBG\_Basics\_SetBreakpoint")  
+     ![Imposta punto di interruzione](~/docs/debugger/media/dbg_basics_setbreakpoint.png "DBG\_Basics\_SetBreakpoint")  
   
      I punti di interruzione in Visual Studio forniscono un'ampia gamma di funzionalità aggiuntive, ad esempio punti di interruzione e punti di analisi condizionali. Vedere [Uso di punti di interruzione](../debugger/using-breakpoints.md).  
   
@@ -116,12 +116,12 @@ Esistono diversi modi per spostarsi all'interno del codice nel debugger: è poss
   
  Se la funzione è sottoposta a overload o è disponibile nello spazio dei nomi, è possibile scegliere le funzioni desiderate nella finestra di dialogo **Seleziona punti di interruzione**.  
   
- ![Finestra di dialogo Seleziona punti di interruzione](../debugger/media/dbg_execution_overloadedbreakpoints.png "DBG\_Execution\_OverloadedBreakpoints")  
+ ![Finestra di dialogo Seleziona punti di interruzione](~/docs/debugger/media/dbg_execution_overloadedbreakpoints.png "DBG\_Execution\_OverloadedBreakpoints")  
   
 ##  <a name="BKMK_Set_the_next_statement_to_execute"></a> Impostare l'istruzione successiva da eseguire  
  Dopo aver inserito un'interruzione nel debugger è possibile spostare il punto di esecuzione per impostare la successiva istruzione di codice da eseguire. La posizione dell'istruzione successiva da eseguire è contrassegnata da una freccia gialla visualizzata sul margine di una finestra di origine o di una finestra Disassembly. Mediante lo spostamento della freccia, è possibile ignorare un segmento di codice oppure tornare a una riga eseguita precedentemente. È possibile usare questa opzione in alcune situazioni, ad esempio quando si desidera ignorare una sezione di codice che contiene un bug noto.  
   
- ![Example2](../debugger/media/dbg_basics_example2.png "DBG\_Basics\_Example2")  
+ ![Example2](~/docs/debugger/media/dbg_basics_example2.png "DBG\_Basics\_Example2")  
   
  Per impostare l'istruzione successiva da eseguire, utilizzare una di queste procedure:  
   

@@ -78,7 +78,7 @@ caps.handback.revision: 52
   
 3.  Nella finestra **Proprietà** espandere la proprietà **\(DataBindings\)**.  
   
-4.  Accanto alla proprietà **\(Avanzate\)** fare clic sul pulsante con i puntini di sospensione \(![Schermata VisualStudioEllipsesButton](../vsto/media/vbellipsesbutton.png "Schermata VisualStudioEllipsesButton")\).  
+4.  Accanto alla proprietà **\(Avanzate\)** fare clic sul pulsante con i puntini di sospensione \(![Schermata VisualStudioEllipsesButton](~/docs/vsto/media/vbellipsesbutton.png "Schermata VisualStudioEllipsesButton")\).  
   
 5.  Nella finestra di dialogo **Formattazione e associazione avanzata** fare clic nell'elenco a discesa **Modalità aggiornamento origine dati** e selezionare uno dei valori seguenti:  
   

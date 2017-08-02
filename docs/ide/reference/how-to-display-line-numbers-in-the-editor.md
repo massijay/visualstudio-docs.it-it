@@ -56,7 +56,7 @@ ms.lasthandoff: 05/24/2017
   
 1.  Nella barra dei menu scegliere **Strumenti**, **Opzioni**. Espandere il nodo **Editor di testo** e selezionare il nodo per il linguaggio in uso o **Tutti i linguaggi** per attivare i numeri di riga in tutti i linguaggi, oppure è possibile digitare il **numero di riga** nella casella **Avvio veloce**.  
   
-2.  ![Opzioni per la visualizzazione di numeri di riga nell'editor](../../ide/reference/media/vs_displaylinenumbers.png "VS_DisplayLineNumbers")  
+2.  ![Opzioni per la visualizzazione di numeri di riga nell'editor](~/docs/ide/reference/media/vs_displaylinenumbers.png "VS_DisplayLineNumbers")  
   
 > [!NOTE]
 >  A seconda del linguaggio o delle impostazioni, è possibile che sia necessario selezionare la casella di controllo **Mostra tutte le impostazioni** nella finestra di dialogo **Opzioni** per visualizzare il sottonodo **Tutti i linguaggi**.  

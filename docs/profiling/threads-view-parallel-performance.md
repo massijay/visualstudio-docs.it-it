@@ -68,7 +68,7 @@ Visualizzazione thread è la visualizzazione più dettagliata e avanzata disponi
   
  Di seguito è riportata una descrizione della visualizzazione thread:  
   
- ![Visualizzazione thread](../profiling/media/threadsviewnarrowing.png "ThreadsViewNarrowing")  
+ ![Visualizzazione thread](~/docs/profiling/media/threadsviewnarrowing.png "ThreadsViewNarrowing")  
 Visualizzazione Thread  
   
  Inizialmente i thread sono disposti nell'ordine in cui vengono creati, in modo che il thread dell'applicazione principale sarà il primo.  È possibile utilizzare l'opzione di ordinamento presente nell'angolo superiore sinistro della visualizzazione per ordinare i thread in base a un altro criterio \(ad esempio, secondo i thread che svolgono la maggior quantità di lavoro di esecuzione\).  

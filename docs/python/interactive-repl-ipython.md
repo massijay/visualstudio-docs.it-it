@@ -58,17 +58,17 @@ La finestra interattiva di Visual Studio in modalità IPython costituisce un amb
 
 1. Se la configurazione è corretta, l'output visualizzato sarà simile al seguente:
 
-    ![Output di configurazione di IPython ](media/ipython-repl-01.png)
+    ![Output di configurazione di IPython ](~/docs/python/media/ipython-repl-01.png)
 
 1. Aprire Visual Studio, passare alla finestra Ambienti Python (**Visualizza > Altre finestre > Ambienti Python**) e selezionare l'ambiente Python.
 1. Osservare la scheda **pip** e assicurarsi che l'elenco includa `IPython` e `matplotlib`. In caso contrario, installarli qui.
 1. Selezionare la scheda **Panoramica**, selezionare **Configura opzioni interattive**, impostare **Modalità interattiva** su IPython e fare clic su **OK**:
 
-    ![Impostazione della modalità interattiva su IPython](media/ipython-repl-02.png)
+    ![Impostazione della modalità interattiva su IPython](~/docs/python/media/ipython-repl-02.png)
 
 1. Selezionare **Apri finestra interattiva** per visualizzare la finestra interattiva in modalità IPython con PyLab. Se è stata appena cambiata la modalità interattiva, potrebbe essere necessario reimpostare la finestra:
 
-    ![Finestra interattiva in modalità IPython](media/ipython-repl-03.png)
+    ![Finestra interattiva in modalità IPython](~/docs/python/media/ipython-repl-03.png)
 
 1. Immettere il codice seguente:
 
@@ -80,7 +80,7 @@ La finestra interattiva di Visual Studio in modalità IPython costituisce un amb
 
 1. Dopo aver immesso l'ultima riga, verrà visualizzato un grafico inline, che è possibile ridimensionare trascinando nell'angolo inferiore destro se si desidera.
 
-    ![Grafico inline nella finestra interattiva](media/ipython-repl-04.png)
+    ![Grafico inline nella finestra interattiva](~/docs/python/media/ipython-repl-04.png)
 
 1. Invece di digitare in REPL, è possibile scrivere codice nell'editor, selezionarlo, fare clic con il pulsante destro del mouse e scegliere il comando **Invia alla finestra** (CTRL+E, E). Provare a incollare il codice seguente nell'editor, selezionandolo con CTRL+A e quindi inviandolo alla finestra interattiva. Si noti che Visual Studio invia il codice alla finestra interattiva in un unico blocco per evitare che vengano visualizzati grafici intermedi o parziali.
 
@@ -105,15 +105,15 @@ La finestra interattiva di Visual Studio in modalità IPython costituisce un amb
     plt.show()
     ```
 
-    ![Invio di codice dall'editor alla finestra interattiva](media/ipython-repl-05.png)
+    ![Invio di codice dall'editor alla finestra interattiva](~/docs/python/media/ipython-repl-05.png)
 
 1. Per visualizzare i grafici all'esterno della finestra interattiva, eseguire il codice invece di usare il comando **Debug > Avvia senza eseguire debug**.
     
 1. In IPython sono disponibili numerose funzionalità utili, ad esempio l'escape alla shell di sistema, la sostituzione delle variabili, l'acquisizione di output e così via. Per altre informazioni, vedere la Guida di riferimento di IPython:
 
-    ![Escape alla shell di sistema](media/ipython-repl-06.png)
+    ![Escape alla shell di sistema](~/docs/python/media/ipython-repl-06.png)
 
 1. È anche possibile eseguire IPython in modalità "blocco appunti", per usare come area di disegno qualsiasi browser in qualsiasi sistema operativo. Il motore di back-end di IPython può essere locale, ovvero disponibile nel computer, oppure remoto. Azure include il supporto per eseguire [IPython in una macchina virtuale Windows o Linux](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-jupyter-notebook). Vedere anche [Azure Notebooks Preview](https://notebooks.azure.com) per accedere a blocchi appunti Jupyter gratuiti come servizio in Azure:
 
-    ![Modalità blocco appunti di IPython](media/ipython-repl-07.png)
+    ![Modalità blocco appunti di IPython](~/docs/python/media/ipython-repl-07.png)
 

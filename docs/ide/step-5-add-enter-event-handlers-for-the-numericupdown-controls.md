@@ -63,7 +63,7 @@ Nella quinta parte di questa esercitazione si aggiungeranno i gestori eventi Ent
   
 2.  Scegliere l'evento **Enter**, immettere `answer_Enter`, quindi premere INVIO.  
   
-     ![Finestra di dialogo Proprietà](../ide/media/express_answerenter.png "Express_AnswerEnter")  
+     ![Finestra di dialogo Proprietà](~/docs/ide/media/express_answerenter.png "Express_AnswerEnter")  
 Finestra di dialogo Proprietà  
   
      Si è appena aggiunto un gestore eventi Enter per il controllo NumericUpDown della somma e il gestore è stato denominato **answer_Enter**.  

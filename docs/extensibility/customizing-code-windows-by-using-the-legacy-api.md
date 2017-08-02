@@ -25,7 +25,7 @@ Una finestra del codice è un oggetto finestra di documento che supporta uno o p
   
  Una finestra del codice è un <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> oggetto con una visualizzazione di testo e le aree di controllo ospitati nell'oggetto. Quando si crea la finestra del codice durante la creazione di istanze di base dell'editor, il servizio di linguaggio è possibile collegare un <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> alla finestra del codice, come è illustrato nella figura seguente.  
   
- ![Grafica CodeWindow](../extensibility/media/vscodewindow.png "vscodewindow")  
+ ![Grafica CodeWindow](~/docs/extensibility/media/vscodewindow.gif "vscodewindow")  
 Finestra del codice  
   
  Il servizio di linguaggio implementa la gestione di finestre di codice ed è responsabile per la gestione delle aree di controllo, ad esempio una barra dei menu a discesa. Il finestra di codice chiama il <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.AddAdornments%2A> metodo durante l'inizializzazione di finestra di codice. Quando viene effettuata la chiamata, il servizio di linguaggio è possibile aggiungere una barra dei menu a discesa o una barra \(<xref:Microsoft.VisualStudio.TextManager.Interop.IVsButtonBarClient>\) alla finestra del codice.  

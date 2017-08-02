@@ -47,7 +47,7 @@ static void Main(string[] args)
   
  È possibile interrompere l’esecuzione per un tempo sufficiente a visualizzare la finestra Console impostando un punto di interruzione e quindi procedendo.  Per impostare un punto di interruzione, collocare il cursore nella riga `Console.WriteLine` e fare clic su **Debug \/ Nuovo punto di interruzione \/ Punto di interruzione della funzione** oppure fare semplicemente clic nel margine sinistro della stessa riga.  Il punto di interruzione apparirà come segue:  
   
- ![Imposta punto di interruzione](../debugger/media/getstartedbreakpoint.png "GetStartedBreakpoint")  
+ ![Imposta punto di interruzione](~/docs/debugger/media/getstartedbreakpoint.png "GetStartedBreakpoint")  
   
  Per ulteriori informazioni sui punti di interruzione, vedere [Uso di punti di interruzione](../debugger/using-breakpoints.md).  
   
@@ -55,7 +55,7 @@ static void Main(string[] args)
   
  Ora si esaminino i valori delle variabili.  Sotto la finestra del codice si trovano le finestra **Auto**, **Variabili locali** e **Espressioni di controllo**.  Tali finestre mostrano i valori correnti delle variabili al momento dell’esecuzione.  Le finestre **Auto** e **Variabili locali** visualizzano testInt con il valore pari a **10**.  
   
- ![Finestra Auto durante il debug](../debugger/media/getstartedwindows.png "GetStartedWindows")  
+ ![Finestra Auto durante il debug](~/docs/debugger/media/getstartedwindows.png "GetStartedWindows")  
   
  Per ulteriori informazioni sulle finestre **Auto** e **Variabili locali**, vedere [Finestre delle variabili](../Topic/Variable%20Windows.md).  
   
@@ -79,7 +79,7 @@ private static void Method1()
   
  Impostare un punto di interruzione nella chiamata `Method1();` nel metodo Main e avviare il debug.  Quando si interrompe l'esecuzione, fare clic su **Debug \/ Step Into** \(o **Step Into** sulla barra degli strumenti o **F11**\).  L’esecuzione di interrompe di nuovo alla prima parentesi graffa in Method1\(\):  
   
- ![Esecuzione di istruzioni nel codice](../debugger/media/getstartedstepinto.png "GetStartedStepInto")  
+ ![Esecuzione di istruzioni nel codice](~/docs/debugger/media/getstartedstepinto.png "GetStartedStepInto")  
   
  Interrompere il debug e avviarlo di nuovo, quindi, quando l'esecuzione si arresta al punto di interruzione, fare clic su **Debug\/Step Over**  \(o **Step Over** sulla barra degli strumenti o **F10**\).  L'esecuzione si interrompe nuovamente in `Console.WriteLine("end");`.  
   

@@ -53,7 +53,7 @@ Prima di scrivere codice per un componente esterno o servizio connesso, il proge
 
  Per aggiungere un riferimento, fare clic con il pulsante destro del mouse sul nodo Riferimenti di Esplora soluzioni e scegliere **Aggiungi riferimento**. Per altre informazioni, vedere [Procedura: Aggiungere o rimuovere riferimenti mediante Gestione riferimenti](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md).  
 
- ![Aggiungere un riferimento in Visual C&#43;&#43;](../ide/media/vs2015_cpp_add_reference.png "vs2015_cpp_add_reference")  
+ ![Aggiungere un riferimento in Visual C&#43;&#43;](~/docs/ide/media/vs2015_cpp_add_reference.png "vs2015_cpp_add_reference")  
 
  È possibile fare riferimento ai seguenti tipi di componenti e servizi:  
 

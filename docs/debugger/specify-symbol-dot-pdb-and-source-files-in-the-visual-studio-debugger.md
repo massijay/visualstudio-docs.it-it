@@ -65,7 +65,7 @@ Un file di database di programma \(con estensione pdb\), denominato anche file d
   
      ![Strumenti &#45; Opzioni &#45; Debug &#45; pagina Simboli](../debugger/media/dbg_tools_options_symbols.png "DBG\_Tools\_Options\_Symbols")  
   
-2.  Scegliere l'icona ![Strumenti&#47;Opzioni&#47;Debug&#47;icona della cartella Simboli](../debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") della cartella. Nella casella **Percorsi dei file di simboli \(pdb\)** verrà visualizzato un testo modificabile.  
+2.  Scegliere l'icona ![Strumenti&#47;Opzioni&#47;Debug&#47;icona della cartella Simboli](~/docs/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") della cartella. Nella casella **Percorsi dei file di simboli \(pdb\)** verrà visualizzato un testo modificabile.  
   
 3.  Digitare l'URL o il percorso della directory del server di simboli o il percorso del simbolo. La funzione di completamento delle istruzioni facilita l'individuazione del formato corretto.  
   
@@ -147,7 +147,7 @@ Un file di database di programma \(con estensione pdb\), denominato anche file d
   
 -   Per visualizzare sempre il disassembly quando i file di origine o di simboli non vengono trovati, scegliere il collegamento **Finestra di dialogo Opzioni** e selezionare sia **Attiva debug a livello di indirizzo** sia **Mostra disassembly se l'origine non è disponibile**.  
   
-     ![Opzioni&#47;Debug&#47;Generale, opzioni di disassembly](../debugger/media/dbg_options_general_disassembly_checkbox.png "DBG\_Options\_General\_disassembly\_checkbox")  
+     ![Opzioni&#47;Debug&#47;Generale, opzioni di disassembly](~/docs/debugger/media/dbg_options_general_disassembly_checkbox.png "DBG\_Options\_General\_disassembly\_checkbox")  
   
  **Modificare le opzioni dei simboli dal menu di scelta rapida**  
   
@@ -214,7 +214,7 @@ Un file di database di programma \(con estensione pdb\), denominato anche file d
   
 2.  Nel nodo **Proprietà comuni** scegliere **Esegui debug dei file di origine**.  
   
-3.  Fare clic sull’icona ![Strumenti&#47;Opzioni&#47;Debug&#47;icona della cartella Simboli](../debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") della cartella. Nell'elenco **Directory contenenti codice sorgente** viene visualizzato testo modificabile.  
+3.  Fare clic sull’icona ![Strumenti&#47;Opzioni&#47;Debug&#47;icona della cartella Simboli](~/docs/debugger/media/dbg_tools_options_foldersicon.png "DBG\_Tools\_Options\_FoldersIcon") della cartella. Nell'elenco **Directory contenenti codice sorgente** viene visualizzato testo modificabile.  
   
 4.  Aggiungere il percorso che si desidera cercare.  
   
@@ -238,7 +238,7 @@ Un file di database di programma \(con estensione pdb\), denominato anche file d
   
 4.  Selezionare la casella di controllo **Attiva il supporto del server di origine**.  
   
-     ![Opzioni di abilitazione del server di origine](../debugger/media/dbg_options_general_enablesrcsrvr_checkbox.png "DBG\_Options\_General\_EnableSrcSrvr\_checkbox")  
+     ![Opzioni di abilitazione del server di origine](~/docs/debugger/media/dbg_options_general_enablesrcsrvr_checkbox.png "DBG\_Options\_General\_EnableSrcSrvr\_checkbox")  
   
 5.  \(Facoltativo\) Scegliere le opzioni figlio desiderate.  
   

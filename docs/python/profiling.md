@@ -42,11 +42,11 @@ In Visual Studio è possibile eseguire la profilatura di un'applicazione Python 
 
 Per avviare la profilatura, si usa il comando di menu **Analizza > Avvia profilatura Python**, che consente di aprire una finestra di dialogo di configurazione:
 
-![Finestra di dialogo di configurazione della profilatura](media/profiling-start.png)
+![Finestra di dialogo di configurazione della profilatura](~/docs/python/media/profiling-start.png)
 
 Quando si fa clic su **OK**, viene eseguito il profiler e si apre un report di prestazioni che illustra in che modo viene impiegato il tempo nell'applicazione:
 
-![Report di prestazioni del profiler](media/profiling-results.png)
+![Report di prestazioni del profiler](~/docs/python/media/profiling-results.png)
 
 Per una panoramica, vedere l'argomento seguente.
 

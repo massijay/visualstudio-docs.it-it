@@ -21,7 +21,7 @@ caps.handback.revision: 16
 
 Incorporare semplificato viene abilitato in un editor quando il relativo oggetto visualizzazione del documento \(ovvero viene prodotto a un elemento figlio di\) [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]associati e l'interfaccia di <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> viene distribuita per mantenere i controlli finestra.  Semplificato incorporare gli editor non è possibile ospitare i controlli attivi.  Gli oggetti utilizzati per creare un editor con incorporare semplificato sono indicati di seguito.  
   
- ![Rappresentazione grafica dell'editor di incorporamento semplificato](../extensibility/media/vssimplifiedembeddingeditor.png "vsSimplifiedEmbeddingEditor")  
+ ![Rappresentazione grafica dell'editor di incorporamento semplificato](~/docs/extensibility/media/vssimplifiedembeddingeditor.gif "vsSimplifiedEmbeddingEditor")  
 editor con incorporare semplificato  
   
 > [!NOTE]

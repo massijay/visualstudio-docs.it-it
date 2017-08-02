@@ -39,7 +39,7 @@ ms.lasthandoff: 04/10/2017
 
 In Visual Studio è disponibile una finestra REPL (Read-Evaluate-Print Loop) per ognuno degli ambienti Python, che costituisce un miglioramento rispetto alla funzionalità REPL disponibile con `python.exe` dalla riga di comando. La finestra interattiva, cui è possibile accedere con i comandi di menu **Visualizza > Altre finestre > &lt;Ambiente&gt; interattivo**, consente di immettere codice Python arbitrario e di visualizzare risultati immediati per imparare a usare le API e sperimentarle e sviluppare in modo interattivo codice funzionante da includere nei progetti.
 
-![Finestra interattiva di Python](media/interactive-window.png)
+![Finestra interattiva di Python](~/docs/python/media/interactive-window.png)
 
 In Visual Studio sono disponibili numerose modalità REPL tra cui scegliere:
 
@@ -62,15 +62,15 @@ Per un'introduzione alla finestra interattiva di Python, vedere il video [Gettin
 
 Passare innanzitutto alla finestra Ambienti Python (**Visualizza > Altre finestre > Ambienti Python** oppure premere CTRL+K,CTRL+`) e selezionare il comando o il pulsante **Apri finestra interattiva** per un ambiente scelto.
 
-![Collegamento Finestra interattiva nella finestra Ambienti Python](media/interactive-window-opening.png)
+![Collegamento Finestra interattiva nella finestra Ambienti Python](~/docs/python/media/interactive-window-opening.png)
 
 A questo punto, esaminare i comandi relativi alla finestra **interattiva**, disponibili per ognuno degli ambienti in **Visualizza > Altre finestre** e visualizzati in genere nella parte inferiore del menu:
 
-![Voci di menu relative alla finestra interattiva in Visualizza > Altre finestre](media/interactive-window-menu.png)
+![Voci di menu relative alla finestra interattiva in Visualizza > Altre finestre](~/docs/python/media/interactive-window-menu.png)
 
 È quindi possibile aprire una finestra interattiva nel file di avvio del progetto oppure per un file autonomo selezionando il comando di menu **Debug > Esegui progetto in Python interattivo oppure Esegui file in Python interattivo** (MAIUSC+ALT+F5):
 
-![Menu Esegui progetto in Python interattivo](media/interactive-execute-project.png)
+![Menu Esegui progetto in Python interattivo](~/docs/python/media/interactive-execute-project.png)
 
 È infine possibile selezionare il codice nel file e usare il [comando per inviare codice alla finestra interattiva](#send-code-to-interactive-command) descritto più avanti.
 
@@ -88,7 +88,7 @@ Si noti che è disponibile anche un set di opzioni specifico per **Finestra debu
 
 Dopo aver aperto la finestra interattiva, è possibile iniziare a immettere codice riga per riga al prompt dei comandi di `>>>`. La finestra interattiva esegue ogni riga non appena viene immessa, tra cui l'importazione di moduli, la definizione di variabili e così via. È possibile osservare questo comportamento nelle prime due righe illustrate nell'immagine seguente:
 
-![Finestra interattiva di Python](media/interactive-window.png)
+![Finestra interattiva di Python](~/docs/python/media/interactive-window.png)
 
 L'unica eccezione è costituita dalle istruzioni che terminano con due punti, come nell'istruzione `for` illustrata in precedenza, perché la finestra interattiva riconosce che sono necessarie altre righe per poter eseguire correttamente il blocco di codice. In questo caso, il prompt della riga diventa `...`, per indicare che è necessario immettere altre righe per il blocco, come illustrato nella quarta e nella quinta riga della figura precedente. Quando si preme INVIO in una riga vuota, la finestra interattiva chiude il blocco e lo esegue nell'interprete.
 
@@ -116,20 +116,20 @@ La finestra interattiva costituisce la soluzione ideale per provare una nuova li
 
 Per impostazione predefinita, l'ambito della finestra interattiva di un progetto è impostato sul file di avvio del progetto, come se la finestra venisse eseguita dal prompt dei comandi. Per un file autonomo l'ambito corrisponde al file stesso. È però possibile cambiare in qualsiasi momento l'ambito durante la sessione REPL tramite il menu a discesa disponibile nella parte superiore della finestra interattiva:
 
-![Ambiti della finestra interattiva](media/interactive-scopes.png)
+![Ambiti della finestra interattiva](~/docs/python/media/interactive-scopes.png)
 
 Dopo aver importato un modulo, ad esempio digitando `import os`, nel menu a discesa verranno visualizzate le opzioni per passare a un qualsiasi ambito presente in tale modulo. Nella finestra interattiva verrà anche visualizzato un messaggio che indica il nuovo ambito, in modo che sia possibile tenere traccia di come si è arrivati a un determinato stato nel corso della sessione.
 
 Se si immette `dir()` in un ambito, vengono visualizzati gli identificatori validi presenti in tale ambito, inclusi nomi di funzione, classi e variabili. Se ad esempio si usa `$mod importlib` seguito da `dir()`, viene visualizzato quanto segue:
 
-![Finestra interattiva nell'ambito importlib](media/interactive-importlib-scope.png)
+![Finestra interattiva nell'ambito importlib](~/docs/python/media/interactive-importlib-scope.png)
 
 <a name="sending-code-to-interactive"</a>
 ## <a name="send-code-to-interactive-command"></a>Comando per inviare codice alla finestra interattiva
 
 Oltre a lavorare direttamente nella finestra interattiva, è possibile selezionare codice nell'editor, fare clic con il pulsante destro del mouse e scegliere **Invia a finestra interattiva**:
 
-![Comando di menu Invia a finestra interattiva](media/interactive-send-to.png)
+![Comando di menu Invia a finestra interattiva](~/docs/python/media/interactive-send-to.png)
 
 Questo comando è utile per lo sviluppo di codice iterativo o evolutivo, tra cui il test del codice durante lo sviluppo. Dopo aver inviato una parte di codice alla finestra interattiva e averne visualizzato l'output, è ad esempio possibile premere la freccia su per visualizzare di nuovo il codice, modificarlo e testarlo rapidamente premendo CTRL+INVIO. Se si preme INVIO alla fine dell'input, si esegue il codice, mentre se lo si preme durante la digitazione viene inserito un carattere di nuova riga. Dopo aver creato il codice desiderato, è possibile copiarlo nuovamente nel file di progetto.
 

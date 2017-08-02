@@ -52,18 +52,18 @@ Ecco come fare.
 
      Ad esempio, in un computer che esegue l'Aggiornamento dell'anniversario di Windows 10 selezionare **Start** e scorrere fino alla lettera **P** in cui viene visualizzato come **Programma di installazione di Visual Studio**.  
 
-     ![Programma di installazione di Visual Studio](media/vs2017-locate-the-visual-studio-installer.PNG "Individuare il programma di installazione di Microsoft Visual Studio")
+     ![Programma di installazione di Visual Studio](~/docs/install/media/vs2017-locate-the-visual-studio-installer.PNG "Individuare il programma di installazione di Microsoft Visual Studio")
 
      >[!NOTE]
      In alcuni computer il programma di installazione di Visual Studio potrebbe trovarsi sotto la lettera **"M"** come **Microsoft Visual Studio: programma di installazione**.
 
 2.  Fare clic o toccare per avviare il programma di installazione e quindi selezionare **Modifica**.  
 
-     ![Avviare o modificare Visual Studio](media/vs2017-modify.PNG "Modificare Visual Studio 2017")  
+     ![Avviare o modificare Visual Studio](~/docs/install/media/vs2017-modify.PNG "Modificare Visual Studio 2017")  
 
 3.  Nella schermata **Carichi di lavoro** selezionare o deselezionare i carichi di lavoro da installare o disinstallare.  
 
-    ![Finestra di dialogo di installazione di Visual Studio 2017](media/vs2017-modify-workloads.PNG "Scegliere un carico di lavoro in Visual Studio 2017")
+    ![Finestra di dialogo di installazione di Visual Studio 2017](~/docs/install/media/vs2017-modify-workloads.PNG "Scegliere un carico di lavoro in Visual Studio 2017")
 
 4. Fare clic o toccare **Modifica** di nuovo.  
 

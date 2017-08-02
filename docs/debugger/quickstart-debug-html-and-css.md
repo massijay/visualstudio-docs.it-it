@@ -30,7 +30,7 @@ caps.handback.revision: 101
 # Guida introduttiva: Eseguire il debug di HTML e CSS
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Si applica a Windows e Windows Phone](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Si applica a Windows e Windows Phone](~/docs/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  Per le app JavaScript, Visual Studio offre un'esperienza di debug completa che include funzionalità note agli sviluppatori di Visual Studio e Internet Explorer. Queste funzionalità sono supportate per [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], app di Windows Phone Store e app create con Strumenti di Visual Studio per Apache Cordova  
   
@@ -108,7 +108,7 @@ caps.handback.revision: 101
   
      L'illustrazione seguente mostra cosa accade se si esegue questa app nell'emulatore Windows Phone \(è simile nel simulatore\). Tuttavia, per ottenere questo stato dell'app occorre prima risolvere diversi bug.  
   
-     ![App FlipView con i risultati previsti](../debugger/media/js_dom_appfixed.png "JS\_DOM\_AppFixed")  
+     ![App FlipView con i risultati previsti](~/docs/debugger/media/js_dom_appfixed.png "JS\_DOM\_AppFixed")  
   
 7.  Scegliere **Simulatore** o **Emulatore 8.1 WVGA 4 pollici 512 MB** dall'elenco a discesa accanto al pulsante **Avvia debug** sulla barra degli strumenti **Debug**:  
   
@@ -193,7 +193,7 @@ caps.handback.revision: 101
   
 2.  Aprire il file default.html e modificare il codice sorgente cambiando l'altezza e la larghezza dell'elemento DIV `"fView"` in 100%.  
   
-3.  Scegliere il pulsante **Aggiorna applicazione Windows** sulla barra degli strumenti Debug oppure premere F4. Il pulsante ha il seguente aspetto: ![Pulsante Aggiorna app di Windows](../debugger/media/js_refresh.png "JS\_Refresh").  
+3.  Scegliere il pulsante **Aggiorna applicazione Windows** sulla barra degli strumenti Debug oppure premere F4. Il pulsante ha il seguente aspetto: ![Pulsante Aggiorna app di Windows](~/docs/debugger/media/js_refresh.png "JS\_Refresh").  
   
      Le pagine dell'app vengono ricaricate e il simulatore o l'emulatore Windows Phone torna in primo piano.  
   
@@ -216,7 +216,7 @@ caps.handback.revision: 101
   
  Prima di scegliere **Seleziona elemento**, è possibile specificare se evidenziare elementi nell'app in esecuzione attivando e disattivando il pulsante **Visualizza pagina Web in evidenza**. La figura seguente mostra questo pulsante. Le evidenziazioni vengono visualizzate per impostazione predefinita.  
   
- ![Visualizzare il pulsante delle evidenziazioni nella pagina Web](../debugger/media/js_dom_display_highlights_button.png "JS\_DOM\_Display\_Highlights\_Button")  
+ ![Visualizzare il pulsante delle evidenziazioni nella pagina Web](~/docs/debugger/media/js_dom_display_highlights_button.png "JS\_DOM\_Display\_Highlights\_Button")  
   
  Quando si sceglie di evidenziare elementi, gli elementi su cui si posiziona il puntatore del mouse nel Simulatore vengono evidenziati. I colori per gli elementi evidenziati corrispondono al modello di riquadro visualizzato nella scheda **Layout** di DOM Explorer.  
   

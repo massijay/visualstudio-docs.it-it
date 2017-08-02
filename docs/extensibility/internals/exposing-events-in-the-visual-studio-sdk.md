@@ -61,7 +61,7 @@ caps.handback.revision: 16
   
  Quando uno degli oggetti evento sono richiesti da un consumer di automazione, creare un oggetto principale che dispone di metodi per qualsiasi evento che supporta il pacchetto Visual Studio. L'ambiente chiama appropriato `get_` su questo oggetto. Ad esempio, se `DTE.Events.AutomationProjectsEvents` viene chiamato, il `get_AutomationProjectsEvents` metodo sull'oggetto radice viene richiamato.  
   
- ![Eventi di progetto Visual Studio](../../extensibility/internals/media/projectevents.png "ProjectEvents")  
+ ![Eventi di progetto Visual Studio](~/docs/extensibility/internals/media/projectevents.gif "ProjectEvents")  
 Modello di automazione per gli eventi  
   
  La classe `CProjectEventsContainer` rappresenta l'oggetto di origine per BscProjectsEvents, mentre `CProjectItemsEventsContainer` rappresenta l'oggetto di origine per BscProjectItemsEvents.  

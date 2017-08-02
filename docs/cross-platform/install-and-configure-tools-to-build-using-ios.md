@@ -177,7 +177,7 @@ ms.lasthandoff: 05/13/2017
   
 7.  Scegliere **Associa** per abilitare l'associazione.  
   
-     ![Configurazione della connessione vcremote per compilazioni iOS](../cross-platform/media/cppmdd_options_ios.PNG "CPPMDD_Options_iOS")  
+     ![Configurazione della connessione vcremote per compilazioni iOS](~/docs/cross-platform/media/cppmdd_options_ios.PNG "CPPMDD_Options_iOS")  
   
      L'associazione viene mantenuta finché non si modifica il nome host o la porta. Se si modifica il nome host o la porta nella finestra di dialogo **Opzioni** , per annullare la modifica, scegliere il pulsante **Ripristina** per ripristinare l'associazione precedente.  
   

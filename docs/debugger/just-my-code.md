@@ -49,7 +49,7 @@ Gli sviluppatori che utilizzano i linguaggi .NET Framework hanno familiarità co
 > [!NOTE]
 >  L'impostazione **Mostra codice esterno** viene salvata nel profiler dell'utente corrente  e si applica a tutti i progetti in tutti i linguaggi aperti dall'utente.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
   
 ##  <a name="BKMK__NET_Framework_Just_My_Code"></a> Just My Code in .NET Framework  
  [Codice utente e non utente](#BKMK_NET_User_and_non_user_code) **&#124;** [Comportamento dell'esecuzione di istruzioni](#BKMK_NET_Stepping_behavior) **&#124;** [Comportamento del punto di interruzione](#BKMK_NET_Breakpoint_behavior) **&#124;** [Comportamento delle eccezioni](#BKMK_NET_Exception_behavior)  
@@ -71,24 +71,24 @@ Gli sviluppatori che utilizzano i linguaggi .NET Framework hanno familiarità co
   
  Tutto il codice rimanente viene considerato codice utente.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in .NET Framework](#BKMK__NET_Framework_Just_My_Code)  
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in .NET Framework](#BKMK__NET_Framework_Just_My_Code)  
   
 ###  <a name="BKMK_NET_Stepping_behavior"></a> Comportamento dell'esecuzione di istruzioni  
  Quando si utilizza **Esegui istruzione** \(tasto di scelta rapida: F11\) per codice non utente, il debugger passa alla successiva istruzione utente nel codice.  Quando si utilizza **Esci da istruzione\/routine** \(tasto di scelta rapida: MAIUSC\+F11\), il debugger viene eseguito dalla riga successiva del codice utente.  Se non viene rilevato nessun codice utente l'esecuzione continua finché non viene chiusa l'applicazione, non viene trovato un punto di interruzione o non si verifica un'eccezione.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in .NET Framework](#BKMK__NET_Framework_Just_My_Code)  
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in .NET Framework](#BKMK__NET_Framework_Just_My_Code)  
   
 ###  <a name="BKMK_NET_Breakpoint_behavior"></a> Comportamento del punto di interruzione  
  Quando la funzionalità Just My Code è attivata, è possibile scegliere **Interrompi tutto** \(tasto di scelta rapida: CTRL\+ALT\+INTERR\) e arrestare l'esecuzione in una posizione in cui non è presente codice utente da visualizzare.  In questo caso viene visualizzata la finestra Nessuna origine.  Se a questo punto si sceglie un comando di esecuzione, il debugger passerà alla successiva riga del codice utente.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in .NET Framework](#BKMK__NET_Framework_Just_My_Code)  
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in .NET Framework](#BKMK__NET_Framework_Just_My_Code)  
   
 ###  <a name="BKMK_NET_Exception_behavior"></a> Comportamento delle eccezioni  
  Se si verifica un'eccezione non gestita nel codice non utente, il debugger si interrompe alla riga del codice utente in cui l'eccezione è stata generata.  
   
  Se per l'eccezione sono abilitate le eccezioni first\-chance, la riga di codice utente viene evidenziata in verde.  Nello stack di chiamate viene mostrato un frame annotato con etichetta **\[Codice esterno\]**.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in .NET Framework](#BKMK__NET_Framework_Just_My_Code)  
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in .NET Framework](#BKMK__NET_Framework_Just_My_Code)  
   
 ##  <a name="BKMK_C___Just_My_Code"></a> Just My Code in C\+\+  
  [Codice utente e non utente](#BKMK_CPP_User_and_non_user_code) **&#124;** [Comportamento dell'esecuzione di istruzioni](#BKMK_CPP_Stepping_behavior) **&#124;** [Comportamento delle eccezioni](#BKMK_CPP_Exception_behavior) **&#124;** [Personalizzare il comportamento dell'esecuzione](#BKMK_CPP_Customize_stepping_behavior) **&#124;** [Personalizzare il comportamento dello stack di chiamate](#BKMK_CPP_Customize_call_stack_behavior)  
@@ -112,19 +112,19 @@ Gli sviluppatori che utilizzano i linguaggi .NET Framework hanno familiarità co
   
  È possibile creare i propri file `.natstepfilter` e `.natjmc` per personalizzare il comportamento dell'esecuzione di istruzioni e della finestra dello stack di chiamate in `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers`.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in C++](#BKMK_C___Just_My_Code)  
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in C++](#BKMK_C___Just_My_Code)  
   
 ###  <a name="BKMK_CPP_Stepping_behavior"></a> Comportamento dell'esecuzione di istruzioni  
  Quando si utilizza **Esegui istruzione** \(tasto di scelta rapida: F11\) per codice non utente da codice utente, il debugger passa alla successiva istruzione utente nel codice.  Quando si utilizza **Esci da istruzione\/routine** \(tasto di scelta rapida: MAIUSC\+F11\), il debugger viene eseguito dalla riga successiva del codice utente.  Se non viene rilevato nessun codice utente l'esecuzione continua finché non viene chiusa l'applicazione, non viene trovato un punto di interruzione o non si verifica un'eccezione.  
   
  Se il debugger si interrompe nel codice non utente, ad esempio se un comando Interrompi tutto si arresta nel codice non utente, l'esecuzione continua nel codice non utente.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in C++](#BKMK_C___Just_My_Code)  
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in C++](#BKMK_C___Just_My_Code)  
   
 ###  <a name="BKMK_CPP_Exception_behavior"></a> Comportamento delle eccezioni  
  Quando il debugger raggiunge un'eccezione, verrà arrestato sull'eccezione indipendentemente che il codice sia utente o non utente.  Le opzioni **Non gestita dall'utente** nella finestra di dialogo **Eccezioni** vengono ignorate.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in C++](#BKMK_C___Just_My_Code)  
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in C++](#BKMK_C___Just_My_Code)  
   
 ###  <a name="BKMK_CPP_Customize_stepping_behavior"></a> Personalizzare il comportamento dell'esecuzione  
  È possibile specificare le funzioni da ignorare elencandole come codice non utente nei file `*.natstepfilter`.  
@@ -158,7 +158,7 @@ Gli sviluppatori che utilizzano i linguaggi .NET Framework hanno familiarità co
 |`Module`|Parametro facoltativo.  Espressione regolare formattata in base a ECMA\-262 che specifica il percorso completo del modulo che contiene la funzione.  La corrispondenza non fa distinzione tra maiuscole e minuscole.|  
 |`Action`|Necessario.  Uno dei valori seguenti \(viene effettuata la distinzione tra maiuscole e minuscole\):<br /><br /> -   `NoStepInto` : indica al debugger di ignorare la funzione corrispondente.<br />-   `StepInto` : indica al debugger di eseguire le funzioni corrispondenti, eseguendo l'override di qualsiasi altro elemento `NoStepInto` per le funzioni corrispondenti.|  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in C++](#BKMK_C___Just_My_Code)  
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in C++](#BKMK_C___Just_My_Code)  
   
 ###  <a name="BKMK_CPP_Customize_call_stack_behavior"></a> Personalizzare il comportamento dello stack di chiamate  
  È possibile specificare i moduli, i file di origine e le funzioni da trattare come codice non utente negli stack di chiamate specificandoli nei file `*.natjmc`.  
@@ -210,7 +210,7 @@ Gli sviluppatori che utilizzano i linguaggi .NET Framework hanno familiarità co
 |`Module`|Parametro facoltativo.  Nome o percorso completo del modulo che contiene la funzione.  È possibile utilizzare questo attributo per evitare ambiguità tra funzioni con lo stesso nome.|  
 |`ExceptionImplementation`|Se impostato su `true`, lo stack di chiamate mostra la funzione che ha generato l'eccezione anziché questa funzione.|  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in C++](#BKMK_C___Just_My_Code)  
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in C++](#BKMK_C___Just_My_Code)  
   
 ##  <a name="BKMK_JavaScript_Just_My_Code"></a> Just My Code in JavaScript  
  [Codice utente e non utente](#BKMK_JS_User_and_non_user_code) **&#124;** [Comportamento dell'esecuzione di istruzioni](#BKMK_JS_Stepping_behavior) **&#124;** [Comportamento del punto di interruzione](#BKMK_JS_Breakpoint_behavior) **&#124;** [Comportamento delle eccezioni](#BKMK_JS_Exception_behavior) **&#124;** [Personalizzare Just My Code](#BKMK_JS_Customize_Just_My_Code)  
@@ -242,7 +242,7 @@ Gli sviluppatori che utilizzano i linguaggi .NET Framework hanno familiarità co
   
  Tutto il resto del codice viene classificato come **MyCode**.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in JavaScript](#BKMK_JavaScript_Just_My_Code)  
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in JavaScript](#BKMK_JavaScript_Just_My_Code)  
   
 ###  <a name="BKMK_JS_Stepping_behavior"></a> Comportamento dell'esecuzione di istruzioni  
   
@@ -254,7 +254,7 @@ Gli sviluppatori che utilizzano i linguaggi .NET Framework hanno familiarità co
   
 -   **Esci da istruzione\/routine** \(tasto di scelta rapida: MAIUSC\+F11\) si arresta alla riga di codice utente successiva.  Se non viene rilevato nessun codice utente l'esecuzione continua finché non viene chiusa l'applicazione, non viene trovato un punto di interruzione o non si verifica un'eccezione.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in JavaScript](#BKMK_JavaScript_Just_My_Code)  
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in JavaScript](#BKMK_JavaScript_Just_My_Code)  
   
 ###  <a name="BKMK_JS_Breakpoint_behavior"></a> Comportamento del punto di interruzione  
   
@@ -266,7 +266,7 @@ Gli sviluppatori che utilizzano i linguaggi .NET Framework hanno familiarità co
   
     -   codice**UnrelatedCode**, il debugger non si arresta.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in JavaScript](#BKMK_JavaScript_Just_My_Code)  
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in JavaScript](#BKMK_JavaScript_Just_My_Code)  
   
 ###  <a name="BKMK_JS_Exception_behavior"></a> Comportamento delle eccezioni  
  Se un'eccezione non gestita viene generata in:  
@@ -281,7 +281,7 @@ Gli sviluppatori che utilizzano i linguaggi .NET Framework hanno familiarità co
   
 -   Se l'eccezione non è gestita, il debugger si interrompe.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in JavaScript](#BKMK_JavaScript_Just_My_Code)  
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in JavaScript](#BKMK_JavaScript_Just_My_Code)  
   
 ###  <a name="BKMK_JS_Customize_Just_My_Code"></a> Personalizzare Just My Code  
  Per classificare il codice utente e non utente per un singolo progetto di Visual Studio, aggiungere un file con estensione json denominato `mycode.json` nella cartella radice del progetto.  
@@ -352,4 +352,4 @@ Gli sviluppatori che utilizzano i linguaggi .NET Framework hanno familiarità co
   
  La stringa dell'URL o del file può contenere uno o più caratteri `*`, che corrispondono a zero o più caratteri.  `*` è l'equivalente dell'espressione regolare `.*`.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in JavaScript](#BKMK_JavaScript_Just_My_Code)
+ ![Torna all'inizio](~/docs/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents) **&#124;** [Just My Code in JavaScript](#BKMK_JavaScript_Just_My_Code)

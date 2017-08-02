@@ -44,22 +44,22 @@ Visual Studio offre il supporto IntelliSense completo per i progetti Django:
 
 - Variabili di contesto passate nel modello:
 
-    ![IntelliSense per le variabili di contesto](media/template-django-intellisense.png)
+    ![IntelliSense per le variabili di contesto](~/docs/python/media/template-django-intellisense.png)
 
 - Assegnazione di tag e filtro sia per variabili incorporate che per quelle definite dall'utente:
 
-    ![IntelliSense per tag e filtri](media/template-django-intellisense-filter.png)
+    ![IntelliSense per tag e filtri](~/docs/python/media/template-django-intellisense-filter.png)
 
 - Colorazione della sintassi per codice CSS e JavaScript incorporato:
 
-    ![IntelliSense per CSS](media/template-django-intellisense-css.png)
+    ![IntelliSense per CSS](~/docs/python/media/template-django-intellisense-css.png)
 
-    ![IntelliSense per JavaScript](media/template-django-intellisense-js.png)
+    ![IntelliSense per JavaScript](~/docs/python/media/template-django-intellisense-js.png)
 
 
 Visual Studio offre anche [supporto completo per il debug](debugging.md) di progetti Django: 
 
-![Punti di interruzione](media/template-django-debugging.png)
+![Punti di interruzione](~/docs/python/media/template-django-debugging.png)
 
 ## <a name="django-management-console"></a>Console di gestione Django
 
@@ -67,16 +67,16 @@ Visual Studio offre anche [supporto completo per il debug](debugging.md) di prog
 
 - **Apri shell Django**: apre una shell nel contesto dell'applicazione che consente di modificare i modelli.
 
-    ![Console](media/template-django-console-shell.png)
+    ![Console](~/docs/python/media/template-django-console-shell.png)
 
 - **DB sincronizzazione Django**: esegue `manage.py syncdb` in una finestra interattiva.
 
-    ![Console](media/template-django-console-sync-db.png)
+    ![Console](~/docs/python/media/template-django-console-sync-db.png)
 
 - **Raccogli file statici**: esegue `manage.py collectstatic --noinput` per copiare tutti i file statici nel percorso specificato da `STATIC_ROOT` nel file `settings.py`. Si noti che durante la [pubblicazione in Microsoft Azure](template-web.md#publishing-to-azure-app-service) l'operazione di pubblicazione include anche la raccolta automatica dei file statici.
 
-    ![Console](media/template-django-console-collect-static.png)
+    ![Console](~/docs/python/media/template-django-console-collect-static.png)
 
 - **Convalida**: esegue `manage.py validate`, che restituisce tutti gli errori di convalida presenti nei modelli installati specificati da `INSTALLED_APPS` nel file `settings.py`:
 
-    ![Console](media/template-django-console-validate.png)
+    ![Console](~/docs/python/media/template-django-console-validate.png)

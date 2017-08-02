@@ -28,7 +28,7 @@ caps.handback.revision: 17
   
  La casella **Trova\/Comando** memorizza gli ultimi 20 elementi immessi e li visualizza in una casella di riepilogo a discesa  È possibile scorrere l'elenco dei tasti di direzione.  
   
- ![Casella Trova&#47;Comando](../ide/media/findcommandbox.png "FindCommandBox")  
+ ![Casella Trova&#47;Comando](~/docs/ide/media/findcommandbox.png "FindCommandBox")  
 Casella Trova\/Comando  
   
 ## Ricerca del testo  

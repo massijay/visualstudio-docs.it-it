@@ -124,7 +124,7 @@ La finestra Fasi Pipeline grafica aiuta a comprendere come una singola chiamata 
   
  Per visualizzare i risultati della fase Vertex shader, scegliere l'anteprima corrispondente per visualizzare un wireframe rasterizzato a dimensioni intere della mesh dopo la trasformazione.  
   
- ![Anteprima dei risultati delle fasi del vertex shader](../debugger/media/gfx_diag_vertex_shader_preview.png "gfx\_diag\_vertex\_shader\_preview")  
+ ![Anteprima dei risultati delle fasi del vertex shader](~/docs/debugger/graphics/media/gfx_diag_vertex_shader_preview.png "gfx\_diag\_vertex\_shader\_preview")  
   
 ## Vedere anche  
  [Procedura dettagliata: oggetti mancanti a causa dello sfondo Vertex](../debugger/walkthrough-missing-objects-due-to-vertex-shading.md)   

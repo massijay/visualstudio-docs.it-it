@@ -34,7 +34,7 @@ Se si verifica un problema con Visual Studio, è opportuno riportarlo a Microsof
   1. Fare clic su **Accedi** sul lato sinistro dello strumento, come illustrato nello screenshot seguente.
   2. Seguire le istruzioni visualizzate per accedere.
 
-  ![Accedere per segnalare un problema](../ide/media/vs2017-report-a-problem-sign-in.png "Accedere per segnalare un problema")
+  ![Accedere per segnalare un problema](~/docs/ide/media/vs2017-report-a-problem-sign-in.png "Accedere per segnalare un problema")
 
 
 ## <a name="search-and-vote-for-similar-problems"></a>Cercare e contrassegnare problemi simili  
@@ -43,7 +43,7 @@ Se si verifica un problema con Visual Studio, è opportuno riportarlo a Microsof
 1.  Cercare il problema e controllare se è già stato segnalato da altri utenti.
 2.  Se è già stato segnalato, è necessario contrassegnarlo per inviare a Microsoft la notifica.  
 
-  ![VS15-FeedbackTool-SearchForSimilarReportedProblems](../ide/media/vs2017-report-a-problem-search-and-vote.png "Cercare e notificare altri problemi simili")
+  ![VS15-FeedbackTool-SearchForSimilarReportedProblems](~/docs/ide/media/vs2017-report-a-problem-search-and-vote.png "Cercare e notificare altri problemi simili")
 
 
 ## <a name="report-a-new-problem"></a>Segnalare un problema nuovo

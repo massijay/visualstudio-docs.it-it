@@ -57,7 +57,7 @@ Nella finestra di progettazione XAML la parola *forma* indica esattamente una fo
 ##  <a name="Shape"></a> Disegnare una forma  
  Le forme sono disponibili nel pannello **Asset** .  
   
- ![Categoria Forme nel pannello Asset](../designers/media/b4_shapes_assetspanel.png "b4_Shapes_AssetsPanel")  
+ ![Categoria Forme nel pannello Asset](~/docs/designers/media/b4_shapes_assetspanel.png "b4_Shapes_AssetsPanel")  
   
  Trascinare la forma da usare nella tavola da disegno. Usare quindi gli handle della forma per ridimensionarla, ruotarla, spostarla o inclinarla.  
   
@@ -68,7 +68,7 @@ Nella finestra di progettazione XAML la parola *forma* indica esattamente una fo
   
  È possibile disegnare un tracciato usando una riga, una penna o una matita. Questi strumenti sono disponibili nel pannello **Strumenti** .  
   
- ![](../designers/media/717956a8-b6a5-4e37-8af3-70bcfc78c82a.png "717956a8-b6a5-4e37-8af3-70bcfc78c82a") ![](../designers/media/8fbbbb21-be83-4cf6-903b-3a49f00c9860.png "8fbbbb21-be83-4cf6-903b-3a49f00c9860")  
+ ![](~/docs/designers/media/717956a8-b6a5-4e37-8af3-70bcfc78c82a.png "717956a8-b6a5-4e37-8af3-70bcfc78c82a") ![](~/docs/designers/media/8fbbbb21-be83-4cf6-903b-3a49f00c9860.png "8fbbbb21-be83-4cf6-903b-3a49f00c9860")  
   
 ### <a name="draw-a-straight-line"></a>Disegnare una linea retta  
  Usare lo strumento **Penna** ![](../designers/media/894f8612-e0ed-4e00-84cf-a9bc8f38fc54.png "894f8612-e0ed-4e00-84cf-a9bc8f38fc54")oppure lo strumento **Linea** ![](../designers/media/eb618397-5283-48be-8396-3449be7b6fbf.png "eb618397-5283-48be-8396-3449be7b6fbf").  
@@ -116,7 +116,7 @@ Nella finestra di progettazione XAML la parola *forma* indica esattamente una fo
 ##  <a name="Convert"></a> Convertire una forma in un tracciato  
  Per modificare una forma in modo analogo alla modifica di un tracciato, convertire la forma in tracciato.  
   
- **Breve video:** ![Configure Installed Features] (../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Convert a shape to a path](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147) (Uso di tracciati: convertire una forma in un tracciato).  
+ **Breve video:** ![Configure Installed Features] (~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Convert a shape to a path](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147) (Uso di tracciati: convertire una forma in un tracciato).  
   
 ##  <a name="Combine"></a> Combinare tracciati  
  È possibile combinare forme e tracciati in un unico tracciato.  
@@ -129,7 +129,7 @@ Nella finestra di progettazione XAML la parola *forma* indica esattamente una fo
 |![](../designers/media/b1_2.png "B1_2")|Unisci|![](../designers/media/b1_5.png "B1_5")|Escludi sovrapposizione|  
 |![](../designers/media/b1_3.png "B1_3")|Dividi|![](../designers/media/b1_6.png "B1_6")|Sottrai|  
   
- **Breve video:** ![Configure Installed Features] (../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Combine paths](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195) (Uso di tracciati: combinare tracciati).  
+ **Breve video:** ![Configure Installed Features] (~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Combine paths](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195) (Uso di tracciati: combinare tracciati).  
   
 ##  <a name="Compound"></a> Creare un tracciato composto  
  Quando si crea un tracciato composto, eventuali parti del tracciato che si intersecano vengono sottratte dal risultato e il tracciato risultante assume le proprietà visive del percorso situato più in basso.  
@@ -138,14 +138,14 @@ Nella finestra di progettazione XAML la parola *forma* indica esattamente una fo
   
  ![](../designers/media/2157a8aa-d9a7-4de4-8de5-b10d28f08a84.png "2157a8aa-d9a7-4de4-8de5-b10d28f08a84")  
   
- **Breve video:** ![Configure Installed Features] (../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Create a compound path](https://www.youtube.com/watch?v=Io5bC0-nH6Q) (Uso di tracciati: creare un tracciato composto).  
+ **Breve video:** ![Configure Installed Features] (~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Create a compound path](https://www.youtube.com/watch?v=Io5bC0-nH6Q) (Uso di tracciati: creare un tracciato composto).  
   
 ##  <a name="Clipping"></a> Creare un tracciato di ritaglio  
  Un tracciato di ritaglio è un tracciato o una forma applicato a un altro oggetto, in modo da nascondere le parti dell'oggetto mascherato esterne al tracciato di ritaglio.  
   
  ![](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png "22471e98-a841-4f39-a3ef-36090cf5a625")  
   
- **Breve video:** ![Configure Installed Features] (../designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Create a clipping path](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232) (Uso di tracciati: creare un tracciato di ritaglio).  
+ **Breve video:** ![Configure Installed Features] (~/docs/designers/media/bldadminconsoleinitialconfigicon.PNG "BldAdminConsoleInitialConfigIcon") [Working with paths: Create a clipping path](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232) (Uso di tracciati: creare un tracciato di ritaglio).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un'interfaccia utente usando Blend per Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

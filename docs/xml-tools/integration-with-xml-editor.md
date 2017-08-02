@@ -26,7 +26,7 @@ Progettazione XML Schema è integrato con l'editor XML.Se si modifica un file XS
   
  Nella schermata seguente è mostrato uno schema XML aperto in XML Schema Explorer.In XML Schema Explorer il set di schemi viene visualizzato con una struttura ad albero.Nell'editor XML viene visualizzato il testo del nodo attualmente attivo in XML Schema Explorer.  
   
- ![XSDDesignerWithXMLEditor](../xml-tools/media/xsddesignerwithxmleditor.gif "XSDDesignerWithXMLEditor")  
+ ![XSDDesignerWithXMLEditor](~/docs/xml-tools/media/xsddesignerwithxmleditor.gif "XSDDesignerWithXMLEditor")  
   
  Qualche volta è utile visualizzare il codice nell'editor XML e la finestra di progettazione grafica uno accanto all'altro.Per visualizzare entrambi i file contemporaneamente, fare clic con il pulsante destro del mouse in un punto qualsiasi dell'editor XML e selezionare **Progettazione visualizzazioni**.Nel menu Finestre di Visual Studio, selezionare **Nuovo gruppo di schede orizzontali \(o verticali\)**.  
   

@@ -307,7 +307,7 @@ Gli elementi dei diagrammi di dipendenza si trovano nel progetto di modello, ma 
   
  Lo sviluppatore esplora la mappa espandendo la classe ElaborazionePagamenti e selezionandone i membri per visualizzare le aree potenzialmente interessate:  
   
- ![Metodi interni a ElaborazionePagamenti e dipendenze](../modeling/media/depgraph_expandeddn.png "DepGraph_ExpandedDN")  
+ ![Metodi interni a ElaborazionePagamenti e dipendenze](~/docs/modeling/media/depgraph_expandeddn.png "DepGraph_ExpandedDN")  
   
  **Metodi interni alla classe ElaborazionePagamenti e le relative dipendenze**  
   
@@ -362,7 +362,7 @@ Gli elementi dei diagrammi di dipendenza si trovano nel progetto di modello, ma 
   
  Per aiutare Lucerne a descrivere e discutere le entità che partecipano al caso d'uso Elaborazione dei pagamenti, viene creato il diagramma classi seguente:  
   
- ![Entità Elabora pagamento nel diagramma classi](../modeling/media/uml_payentities.png "UML_PayEntities")  
+ ![Entità Elabora pagamento nel diagramma classi](~/docs/modeling/media/uml_payentities.png "UML_PayEntities")  
   
  **Entità Elabora pagamento in un diagramma classi**  
   

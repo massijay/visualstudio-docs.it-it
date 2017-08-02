@@ -65,7 +65,7 @@ caps.handback.revision: 22
   
 1.  Scegliere una cartella mappata nel progetto creato precedentemente.  
   
-2.  Nella finestra **Proprietà** selezionare il pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](../sharepoint/media/mwellipsis.png "Ellisse di ASP.NET Mobile Designer")\) dalla proprietà **Deployment location**.  
+2.  Nella finestra **Proprietà** selezionare il pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/docs/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) dalla proprietà **Deployment location**.  
   
 3.  Nella finestra di dialogo **Aggiungi cartella mappata di SharePoint** individuare la cartella a cui si desidera che punti la cartella mappata.  
   

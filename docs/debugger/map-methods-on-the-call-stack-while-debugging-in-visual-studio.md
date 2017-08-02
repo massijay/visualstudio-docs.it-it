@@ -75,7 +75,7 @@ Creare una mappa del codice per tracciare visivamente lo stack di chiamate duran
   
 2.  Dopo l'applicazione passa alla modalità di interruzione o si esegue una funzione, scegliere **Mappa codici**. (Keyboard: **Ctrl** + **Shift** + **`**)  
   
-     ![Scegliere la mappa di codice per avviare il mapping stack di chiamata](../debugger/media/debuggermap_choosecodemap.png "DebuggerMap_ChooseCodeMap")  
+     ![Scegliere la mappa di codice per avviare il mapping stack di chiamata](~/docs/debugger/media/debuggermap_choosecodemap.png "DebuggerMap_ChooseCodeMap")  
   
      Lo stack di chiamate corrente verrà visualizzato in arancione in una nuova mappa del codice:  
   
@@ -136,11 +136,11 @@ Creare una mappa del codice per tracciare visivamente lo stack di chiamate duran
   
      Per impostazione predefinita, nella mappa viene visualizzato solo il proprio codice. Per visualizzare il codice esterno, attivarlo nella **Stack di chiamate** finestra:  
   
-     ![Visualizzare il codice esterno tramite la finestra Stack di chiamate](../debugger/media/debuggermap_callstackmenu.png "DebuggerMap_CallStackMenu")  
+     ![Visualizzare il codice esterno tramite la finestra Stack di chiamate](~/docs/debugger/media/debuggermap_callstackmenu.png "DebuggerMap_CallStackMenu")  
   
      o disattivare **Abilita Just My Code** in Visual Studio le opzioni di debug:  
   
-     ![Mostra codice esterno nella finestra di dialogo Opzioni](../debugger/media/debuggermap_debugoptions.png "DebuggerMap_DebugOptions")  
+     ![Mostra codice esterno nella finestra di dialogo Opzioni](~/docs/debugger/media/debuggermap_debugoptions.png "DebuggerMap_DebugOptions")  
   
 -   **La modifica della mappa influisce sul codice?**  
   
@@ -168,7 +168,7 @@ Creare una mappa del codice per tracciare visivamente lo stack di chiamate duran
   
 -   **Come evitare l'aggiunta automatica di nuovi stack di chiamate nella mappa?**  
   
-     Scegliere ![automaticamente il mapping di pulsante - Mostra stack di chiamate nel codice](../debugger/media/debuggermap_automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon") sulla barra degli strumenti della mappa. Per aggiungere manualmente lo stack di chiamate corrente alla mappa, premere **Ctrl** + **MAIUSC** + **`**.  
+     Scegliere ![automaticamente il mapping di pulsante - Mostra stack di chiamate nel codice](~/docs/debugger/media/debuggermap_automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon") sulla barra degli strumenti della mappa. Per aggiungere manualmente lo stack di chiamate corrente alla mappa, premere **Ctrl** + **MAIUSC** + **`**.  
   
      La mappa continuerà a evidenziare gli stack di chiamate esistenti sulla mappa durante il debug.  
   

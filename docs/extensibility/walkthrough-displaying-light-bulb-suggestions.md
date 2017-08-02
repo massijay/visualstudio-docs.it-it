@@ -45,11 +45,11 @@ Le lampadine sono icone utilizzate nell'editor di Visual Studio che si espandono
   
  Ecco come appare una lampadina. In un progetto di Visual Basic o Visual c#, una sottolineatura ondulata rossa viene visualizzata in un nome di variabile quando non è valido. Quando si passa il mouse sull'identificatore non valido, viene visualizzata una lampadina vicino al cursore.  
   
- ![lampadina](../extensibility/media/lightbulb.png "lampadina")  
+ ![lampadina](~/docs/extensibility/media/lightbulb.png "lampadina")  
   
  Se si fa clic sulla freccia giù per la lampadina, viene visualizzato un set di azioni consigliate, insieme a un'anteprima dell'azione selezionata. Viene illustrato in questo caso, le modifiche che verranno apportate al codice se si esegue l'azione.  
   
- ![Anteprima di lampadina](../extensibility/media/lightbulbpreview.png "LightBulbPreview")  
+ ![Anteprima di lampadina](~/docs/extensibility/media/lightbulbpreview.png "LightBulbPreview")  
   
  È possibile utilizzare le lampadine per fornire propria le azioni consigliate. Ad esempio, è possibile fornire azioni per spostare l'apertura di parentesi graffe in una nuova riga o spostarli alla fine della riga precedente. La procedura riportata di seguito viene illustrato come creare una lampadina in cui viene visualizzata la parola corrente e ha suggerito due azioni: **convertire in lettere maiuscole** e **Converti in minuscolo**.  
   
@@ -371,12 +371,12 @@ Le lampadine sono icone utilizzate nell'editor di Visual Studio che si espandono
   
 3.  Creare un file di testo e digitare alcune parole. Verrà visualizzata una lampadina a sinistra del testo.  
   
-     ![test della lampadina](../extensibility/media/testlightbulb.png "TestLIghtBulb")  
+     ![test della lampadina](~/docs/extensibility/media/testlightbulb.png "TestLIghtBulb")  
   
 4.  Posizionare la lampadina. Verrà visualizzata una freccia rivolta verso il basso.  
   
 5.  Quando si sceglie la lampadina, due azioni suggerite devono essere visualizzate, insieme l'anteprima dell'azione selezionata.  
   
-     ![test della lampadina, espanso](../extensibility/media/testlightbulbexpanded.gif "TestLIghtBulbExpanded")  
+     ![test della lampadina, espanso](~/docs/extensibility/media/testlightbulbexpanded.gif "TestLIghtBulbExpanded")  
   
 6.  Se si fa clic sulla prima azione, tutto il testo nella parola corrente verrà convertito in maiuscole. Se si fa clic sulla seconda azione, tutto il testo nella parola corrente verrà convertito in minuscole.

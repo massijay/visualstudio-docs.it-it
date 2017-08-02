@@ -33,10 +33,10 @@ robots: noindex,nofollow
 # Procedura: visualizzare dati correlati in un&#39;applicazione Windows Form
 Per visualizzare i dati correlati è possibile trascinare gli elementi che condividono lo stesso nodo principale della tabella dalla [Origini dati \(finestra\)](../Topic/Data%20Sources%20Window.md) nel form in uso.  Se ad esempio si dispone di un'origine dati in cui sono presenti una tabella `Customers` e una tabella correlata `Orders`, è possibile visualizzare entrambe le tabelle come nodi di livello principale nella visualizzazione ad albero all'interno della finestra **Origini dati**.  Espandendo il nodo `Customers` vengono visualizzate le colonne e si nota che l'ultima colonna dell'elenco è un nodo espandibile che rappresenta la tabella `Orders`.  Il nodo indica gli ordini relativi a un cliente.  Ciò significa che se si desidera creare un form che consenta di selezionare un cliente e quindi visualizzare un elenco di ordini relativi a tale cliente, sarà necessario trascinare gli elementi da visualizzare da questa singola gerarchia.  
   
- ![Finestra Origini dati con visualizzazione delle relazioni](../data-tools/media/datasources2.gif "DataSources2")  
+ ![Finestra Origini dati con visualizzazione delle relazioni](~/docs/data-tools/media/datasources2.gif "DataSources2")  
 Creazione di controlli associati a dati per la visualizzazione di record correlati  
   
- ![Collegamento a video](../data-tools/media/playvideo.png "PlayVideo") Per una versione video di questo argomento, vedere [Procedure relative: Aggiornare le tabelle correlate](http://go.microsoft.com/fwlink/?LinkId=143527).  
+ ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "PlayVideo") Per una versione video di questo argomento, vedere [Procedure relative: Aggiornare le tabelle correlate](http://go.microsoft.com/fwlink/?LinkId=143527).  
   
 ### Per creare controlli per la visualizzazione di record correlati  
   

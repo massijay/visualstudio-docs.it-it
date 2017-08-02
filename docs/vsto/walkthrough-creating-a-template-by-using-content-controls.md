@@ -87,19 +87,19 @@ caps.handback.revision: 42
     > [!NOTE]  
     >  Se la scheda **Sviluppatore** non è visibile, è necessario prima di tutto visualizzarla.  Per altre informazioni, vedere [Procedura: visualizzare la scheda Sviluppo nella barra multifunzione](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).  
   
-6.  Nel gruppo **Controlli** scegliere il pulsante **Testo** ![PlainTextContentControl](../vsto/media/plaintextcontrol.png "PlainTextContentControl") per aggiungere <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> alla prima cella.  
+6.  Nel gruppo **Controlli** scegliere il pulsante **Testo** ![PlainTextContentControl](~/docs/vsto/media/plaintextcontrol.gif "PlainTextContentControl") per aggiungere <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> alla prima cella.  
   
 7.  Fare clic nella seconda cella della seconda colonna \(accanto a **Data assunzione**\).  
   
-8.  Nel gruppo **Controlli** scegliere il pulsante **Selezione data** ![DatePickerContentControl](../vsto/media/datepicker.png "DatePickerContentControl") per aggiungere <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> alla seconda cella.  
+8.  Nel gruppo **Controlli** scegliere il pulsante **Selezione data** ![DatePickerContentControl](~/docs/vsto/media/datepicker.gif "DatePickerContentControl") per aggiungere <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> alla seconda cella.  
   
 9. Fare clic sulla terza cella della seconda colonna \(accanto a **Titolo**\).  
   
-10. Nel gruppo **Controlli** scegliere il pulsante **Casella combinata** ![ComboBoxContentControl](../vsto/media/combobox.png "ComboBoxContentControl") per aggiungere <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> alla terza cella.  
+10. Nel gruppo **Controlli** scegliere il pulsante **Casella combinata** ![ComboBoxContentControl](~/docs/vsto/media/combobox.gif "ComboBoxContentControl") per aggiungere <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> alla terza cella.  
   
 11. Fare clic sull'ultima cella della seconda colonna \(accanto a **Immagine**\).  
   
-12. Nel gruppo **Controlli** scegliere il pulsante **Controllo contenuto immagine** ![PictureContentControl](../vsto/media/pictcontentcontrol.png "PictureContentControl") per aggiungere <xref:Microsoft.Office.Tools.Word.PictureContentControl> all'ultima cella.  
+12. Nel gruppo **Controlli** scegliere il pulsante **Controllo contenuto immagine** ![PictureContentControl](~/docs/vsto/media/pictcontentcontrol.gif "PictureContentControl") per aggiungere <xref:Microsoft.Office.Tools.Word.PictureContentControl> all'ultima cella.  
   
 ## Creazione della tabella dei suggerimenti dei clienti  
  Creare una tabella che contiene tre tipi differenti di controlli contenuto in cui un utente può immettere le informazioni relative ai suggerimenti dei clienti.  
@@ -124,15 +124,15 @@ caps.handback.revision: 42
   
 6.  Sulla barra multifunzione fare clic sulla scheda **Sviluppatore**.  
   
-7.  Nel gruppo **Controlli** scegliere il pulsante **Testo** ![PlainTextContentControl](../vsto/media/plaintextcontrol.png "PlainTextContentControl") per aggiungere <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> alla prima cella.  
+7.  Nel gruppo **Controlli** scegliere il pulsante **Testo** ![PlainTextContentControl](~/docs/vsto/media/plaintextcontrol.gif "PlainTextContentControl") per aggiungere <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> alla prima cella.  
   
 8.  Fare clic nella seconda cella della seconda colonna \(accanto a **Valutazione soddisfazione**\).  
   
-9. Nel gruppo **Controlli** scegliere il pulsante **Elenco a discesa** ![DropDownListContentControl](../vsto/media/dropdownlist.png "DropDownListContentControl") per aggiungere <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> alla seconda cella.  
+9. Nel gruppo **Controlli** scegliere il pulsante **Elenco a discesa** ![DropDownListContentControl](~/docs/vsto/media/dropdownlist.gif "DropDownListContentControl") per aggiungere <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> alla seconda cella.  
   
 10. Fare clic nell'ultima cella della seconda colonna \(accanto a **Commenti**\).  
   
-11. Nel gruppo **Controlli** scegliere il pulsante **Formato RTF** ![RichTextContentControl](../vsto/media/richtextcontrol.png "RichTextContentControl") per aggiungere <xref:Microsoft.Office.Tools.Word.RichTextContentControl> all'ultima cella.  
+11. Nel gruppo **Controlli** scegliere il pulsante **Formato RTF** ![RichTextContentControl](~/docs/vsto/media/richtextcontrol.gif "RichTextContentControl") per aggiungere <xref:Microsoft.Office.Tools.Word.RichTextContentControl> all'ultima cella.  
   
 ## Popolamento a livello di codice della casella combinata e dell'elenco a discesa  
  È possibile inizializzare i controlli contenuto in fase di progettazione usando la finestra **Proprietà** in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  È anche possibile inizializzarli in fase di esecuzione. In questo caso gli stati iniziali possono essere impostati dinamicamente.  Per questa procedura dettagliata, usare il codice per popolare le voci in <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> e <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> in fase di esecuzione in modo da visualizzare il funzionamento degli oggetti.  

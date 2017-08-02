@@ -59,7 +59,7 @@ Nella seconda parte di questa esercitazione vengono aggiunti al quiz problemi di
   
      Si noti che quando si inserisce il punto \(.\) dopo randomizer nel codice, viene aperta una finestra di IntelliSense che mostra tutti i metodi dell'oggetto `Random` che è possibile chiamare.  Ad esempio, in Intellisense è elencato il metodo `Next()`, come indicato di seguito.  
   
-     ![Metodo Next](../ide/media/express_randomwhite.png "Express\_RandomWhite")  
+     ![Metodo Next](~/docs/ide/media/express_randomwhite.png "Express\_RandomWhite")  
 Metodo Next  
   
      Quando si inserisce un punto dopo un oggetto, IntelliSense mostra un elenco dei membri dell'oggetto, ad esempio proprietà, metodi ed eventi.  

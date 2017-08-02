@@ -237,7 +237,7 @@ public void My_Test ()
 ##  <a name="BKMK_Running_tests_in_Test_Explorer"></a> Eseguire test in Esplora test  
  Quando si compila il progetto di test, i test vengono visualizzati in Esplora test. Se Esplora test non è visualizzato, scegliere **Test** dal menu di Visual Studio, quindi scegliere **Windows**e infine **Esplora test**.  
   
- ![Esplora unit test](../ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
+ ![Esplora unit test](~/docs/ide/media/ute_failedpassednotrunsummary.png "UTE_FailedPassedNotRunSummary")  
   
  Durante l'esecuzione, la scrittura e la nuova esecuzione di test, la visualizzazione predefinita di Esplora test mostra i risultati in gruppi di **Test non superati**, **Test superati**, **Test ignorati** e **Test non eseguiti**. È possibile scegliere un'intestazione di gruppo per aprire la visualizzazione che mostra tutti i test disponibili nel gruppo.  
   
@@ -259,7 +259,7 @@ public void My_Test ()
   
 |||  
 |-|-|  
-|![Esecuzione dopo la compilazione](../test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|Per eseguire gli unit test dopo ogni compilazione locale, scegliere **Test** dal menu standard e quindi scegliere **Esegui test dopo compilazione** sulla barra degli strumenti di Esplora test.|  
+|![Esecuzione dopo la compilazione](~/docs/test/media/ute_runafterbuild_btn.png "UTE_RunAfterBuild_btn")|Per eseguire gli unit test dopo ogni compilazione locale, scegliere **Test** dal menu standard e quindi scegliere **Esegui test dopo compilazione** sulla barra degli strumenti di Esplora test.|  
   
 ###  <a name="BKMK_Filtering_and_grouping_the_test_list"></a> Filtrare e raggruppare l'elenco dei test  
  Quando è disponibile un numero elevato di test, è possibile digitare nella casella di testo di Esplora test per filtrare l'elenco in base alla stringa specificata. È possibile limitare ulteriormente i risultati scegliendo uno dei filtri disponibili nell'elenco.  
@@ -268,7 +268,7 @@ public void My_Test ()
   
 |||  
 |-|-|  
-|![Pulsante di raggruppamento di Team Explorer](../test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|Per raggruppare i test in base alla categoria, scegliere il pulsante **Raggruppa per**.|  
+|![Pulsante di raggruppamento di Team Explorer](~/docs/test/media/ute_groupby_btn.png "UTE_GroupBy_btn")|Per raggruppare i test in base alla categoria, scegliere il pulsante **Raggruppa per**.|  
   
  Per altre informazioni, vedere [Eseguire unit test con Esplora test](../test/run-unit-tests-with-test-explorer.md).  
   
@@ -290,7 +290,7 @@ public void My_Test ()
   
  **R:** Usare IntelliSense per generare classi e metodi nel codice del progetto. Scrivere un'istruzione in un metodo di test che chiama la classe o il metodo da generare, quindi aprire il menu di IntelliSense sotto la chiamata. Se la chiamata è per un costruttore della nuova classe, scegliere **Genera nuovo tipo** dal menu, quindi eseguire la procedura guidata per inserire la classe nel progetto di codice. Se la chiamata è per un metodo, scegliere **Genera nuovo metodo** dal menu di IntelliSense.  
   
- ![Menu Intellisense Genera stub di metodo](../test/media/ute_generatemethodstubintellisense.png "UTE_GenerateMethodStubIntellisense")  
+ ![Menu Intellisense Genera stub di metodo](~/docs/test/media/ute_generatemethodstubintellisense.png "UTE_GenerateMethodStubIntellisense")  
   
  **D: È possibile creare unit test che accettano più set di dati come input per eseguire il test?**  
   
@@ -358,7 +358,7 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
   
  **R:** Sì, seguire questa procedura per [trovare e installare altri framework](../test/install-third-party-unit-test-frameworks.md). Dopo aver riavviato Visual Studio, riaprire la soluzione per creare unit test e quindi selezionare i framework installati:  
   
- ![Selezionare altri framework di unit test installati](../test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")  
+ ![Selezionare altri framework di unit test installati](~/docs/test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")  
   
  Gli stub di unit test verranno creati usando il framework selezionato.
 

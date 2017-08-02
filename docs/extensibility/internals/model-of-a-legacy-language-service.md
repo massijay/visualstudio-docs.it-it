@@ -32,7 +32,7 @@ Un servizio di linguaggio definisce gli elementi e le funzionalità per un lingu
   
  Nell'area di disegno concettuale seguente viene illustrato un modello di un servizio di linguaggio di base.  
   
- ![Rappresentazione grafica di Language Service Model](../../extensibility/internals/media/vslanguageservicemodel.png "vsLanguageServiceModel")  
+ ![Rappresentazione grafica di Language Service Model](~/docs/extensibility/media/vslanguageservicemodel.gif "vsLanguageServiceModel")  
 Modello di base del servizio di linguaggio  
   
  La finestra del documento contiene *il punto di vista del documento* dell'editor, in questo caso l'editor di [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .  La visualizzazione del documento e il buffer di testo sono proprietà dell'editor.  Funzionamento di questi oggetti con [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tramite una finestra del documento specializzata ha chiamato *una finestra del codice*.  La finestra del codice è contenuta in un oggetto di<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> creato e controllato dall'IDE.  

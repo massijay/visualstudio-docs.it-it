@@ -65,7 +65,7 @@ caps.handback.revision: 2
   
  **Testo supplementare in Visual Studio**  
   
- ![Supplemental text in Visual Studio](../../extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601\-c\_SupplementalText2")  
+ ![Supplemental text in Visual Studio](~/docs/extensibility/ux-guidelines/media/0601-c_supplementaltext2.png "0601\-c\_SupplementalText2")  
   
  **Testo supplementare in Visual Studio**  
   
@@ -108,7 +108,7 @@ caps.handback.revision: 2
   
 -   Quando si avvia le finestre di dialogo, mantenere gli standard per i puntini di sospensione: senza i puntini di sospensione per lo spostamento, quindi sui puntini di sospensione se l'attività richiede aggiuntivi dell'interfaccia utente.  
   
-     ![Help link in Visual Studio](../../extensibility/ux-guidelines/media/0601-e_helplink.png "0601\-e\_HelpLink")  
+     ![Help link in Visual Studio](~/docs/extensibility/ux-guidelines/media/0601-e_helplink.png "0601\-e\_HelpLink")  
   
      **Puntini di sospensione \(...\) nella Guida di una collegamento indica che l'attività sarà necessario aggiuntivi dell'interfaccia utente.**  
   
@@ -260,7 +260,7 @@ caps.handback.revision: 2
   
 |Good|Non valido|  
 |----------|----------------|  
-|"Il numero composto non è più nel servizio. Controllare il numero e Riprova o comporre 0 per l'operatore."|-   "Errore \(449\): numero non valido"<br />-   "L'errore di eccezione non gestita indica che l'operazione completata".<br /><br /> ![Bad error message in Visual Studio](../../extensibility/ux-guidelines/media/0602-a_errordialog.png "0602\-a\_ErrorDialog")|  
+|"Il numero composto non è più nel servizio. Controllare il numero e Riprova o comporre 0 per l'operatore."|-   "Errore \(449\): numero non valido"<br />-   "L'errore di eccezione non gestita indica che l'operazione completata".<br /><br /> ![Bad error message in Visual Studio](~/docs/extensibility/ux-guidelines/media/0602-a_errordialog.png "0602\-a\_ErrorDialog")|  
   
 ## L'accesso alla Guida  
   

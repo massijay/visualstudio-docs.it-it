@@ -42,13 +42,13 @@ Il supporto di Python in Visual Studio include il supporto per lo sviluppo di pr
 
 Ogni modello, accessibile tramite **File > Nuovo > Progetto**, avvia un server Web con una porta locale selezionata in modo causale, apre il browser predefinito durante il debug e consente la pubblicazione diretta in [Microsoft Azure](http://www.azure.com). Sono disponibili modelli per Bottle, Flask e Django ed è possibile usare il modello generico "Progetto Web" per altri framework, ad esempio Pyramid.
 
-![Nuovi modelli di progetto Web](media/template-web-new-project.png)
+![Nuovi modelli di progetto Web](~/docs/python/media/template-web-new-project.png)
 
 I modelli Bottle, Flask e Django includono un sito di base contenente alcune pagine e file statici. Questo codice è sufficiente per avviare ed eseguire il debug del server in locale (in cui è necessario ottenere alcune impostazioni dall'ambiente) e per la distribuzione in Microsoft Azure (in cui è necessario specificare un oggetto [app WSGI](http://www.python.org/dev/peps/pep-3333/)).
 
 Quando si crea un progetto da un modello specifico del framework, verrà visualizzata una finestra di dialogo che consente di installare i pacchetti necessari tramite pip. Per i progetti Web è inoltre consigliabile usare un [ambiente virtuale](python-environments.md#virtual-environments), in modo che durante la pubblicazione del sito Web vengano incluse le dipendenze corrette:
 
-![Finestra di dialogo in cui è possibile installare i pacchetti necessari per un modello di progetto](media/template-web-requirements-txt-wizard.png)
+![Finestra di dialogo in cui è possibile installare i pacchetti necessari per un modello di progetto](~/docs/python/media/template-web-requirements-txt-wizard.png)
 
 Durante la distribuzione nel servizio app di Microsoft Azure, è necessario selezionare una versione di Python come [estensione sito](https://aka.ms/PythonOnAppService) e installare manualmente i pacchetti. Dal momento poi che il servizio app di Azure **non** installa automaticamente i pacchetti da un file `requirements.txt` quando viene distribuito da Visual Studio, attenersi ai dettagli di configurazione illustrati in [aka.ms/PythonOnAppService](https://aka.ms/PythonOnAppService).
 
@@ -62,7 +62,7 @@ Per un'introduzione ai progetti Web di Python, vedere, vedere il video [Getting 
 
 Quando si avvia un progetto Web per il debug, Visual Studio avvia il server Web in locale e apre il browser predefinito usando l'indirizzo e la porta specificati. Per specificare altre opzioni, fare clic con il pulsante destro del mouse sul progetto, scegliere **Proprietà** e selezionare la scheda **Utilità di avvio Web**:
 
-  ![Proprietà dell'utilità di Web per il modello Web generico](media/template-web-launcher-properties.png)
+  ![Proprietà dell'utilità di Web per il modello Web generico](~/docs/python/media/template-web-launcher-properties.png)
 
 Nel gruppo **Debug** specificare le proprietà seguenti:
 
@@ -124,7 +124,7 @@ Se si vogliono condividere impostazioni personalizzate per un altro framework op
 
 È possibile pubblicare nel servizio app di Azure in due modi. È innanzitutto possibile usare la distribuzione dal controllo del codice sorgente in modo analogo a quanto avviene per altri linguaggi, come descritto nella [documentazione di Azure](http://azure.microsoft.com/en-us/documentation/articles/web-sites-publish-source-control/). Per pubblicare direttamente da Visual Studio, fare clic con il pulsante destro del mouse sul progetto e scegliere **Pubblica**:
 
-![Comando Pubblica nel menu di scelta rapida di un progetto](media/template-web-publish-command.png)
+![Comando Pubblica nel menu di scelta rapida di un progetto](~/docs/python/media/template-web-publish-command.png)
 
 Dopo aver selezionato il comando, verrà visualizzata una procedura guidata per la creazione di un sito Web o l'importazione delle impostazioni di pubblicazione, la visualizzazione dell'anteprima dei file modificati e la pubblicazione in un server remoto.
 
@@ -134,7 +134,7 @@ Per installare Python nel servizio app, è consigliabile usare le [estensioni si
 
 È possibile distribuire un'estensione sito tramite il [portale di Azure](https://portal.azure.com/). A tale scopo, nel pannello **Strumenti di sviluppo > Estensioni** per il servizio app selezionare **Aggiungi** e scorrere l'elenco per individuare quelle per Python:
 
-![Aggiungere un'estensione sito nel portale di Azure](media/template-web-site-extensions.png)
+![Aggiungere un'estensione sito nel portale di Azure](~/docs/python/media/template-web-site-extensions.png)
 
 Se si usano modelli di distribuzione JSON, è possibile specificare l'estensione sito come risorsa del sito:
 
@@ -173,7 +173,7 @@ c:\Python27\python.exe -m pip install -r D:\home\site\wwwroot\requirements.txt
 
 Quando viene distribuito nel servizio app di Azure, per l'esecuzione del sito si usa Microsoft IIS. Per consentire l'uso del sito con IIS, è necessario aggiungere almeno un file `web.config`. Sono disponibili modelli per alcune destinazioni di distribuzione comuni facilmente modificabili per adattarli ad altri utilizzi. Per accedervi, fare clic con il pulsante destro del mouse sul progetto e scegliere **Aggiungi > Nuovo elemento** (vedere la finestra di dialogo seguente). Per informazioni sulle impostazioni di configurazione disponibili, vedere [IIS Configuration Reference](https://www.iis.net/configreference) (Guida di riferimento per la configurazione di IIS).
 
-![Modelli di elemento di Azure](media/template-web-azure-items.png)
+![Modelli di elemento di Azure](~/docs/python/media/template-web-azure-items.png)
 
 Gli elementi disponibili includono:
 
@@ -186,9 +186,9 @@ Gli elementi disponibili includono:
 
 Se si aggiunge il modello `web.config` di debug al progetto e si intende usare il debug remoto di Python, è necessario pubblicare il sito nella configurazione "Debug". Questa impostazione è diversa rispetto alla configurazione attiva corrente della soluzione ed è sempre contraddistinta dal valore predefinito "Versione". Per modificarla, aprire la scheda **Impostazioni** e usare la casella combinata **Configurazione** nella pubblicazione guidata. Per altre informazioni sulla creazione e la distribuzione in app Web di Azure, vedere la [documentazione di Azure](https://azure.microsoft.com/develop/python/):
 
-![Modifica della configurazione di pubblicazione](media/template-web-publish-config.png)
+![Modifica della configurazione di pubblicazione](~/docs/python/media/template-web-publish-config.png)
 
 Il comando **Converti in progetto servizio cloud di Microsoft Azure** (immagine seguente) consente di aggiungere un progetto servizio cloud alla soluzione. Questo progetto include le impostazioni di distribuzione e la configurazione per i servizi e le macchine virtuali da usare. È consigliabile usare il comando **Pubblica** nel progetto cloud per eseguire la distribuzione nel servizio cloud. Con il comando **Pubblica** nel progetto Python la distribuzione viene ancora eseguita nei siti Web. Per altre informazioni, vedere [Progetti servizio cloud di Azure per Python](template-azure-cloud-service.md).
 
-![Comando Converti in progetto servizio cloud di Microsoft Azure](media/template-web-convert-menu.png)
+![Comando Converti in progetto servizio cloud di Microsoft Azure](~/docs/python/media/template-web-convert-menu.png)
 

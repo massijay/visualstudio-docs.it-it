@@ -124,7 +124,7 @@ Completando questa procedura dettagliata è possibile acquisire familiarità con
   
 -   Avviare il debugger.  
   
-     ![Avviare il comando di debug dal menu Debug](../ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
+     ![Avviare il comando di debug dal menu Debug](~/docs/ide/media/exploreide-startdebugging.png "ExploreIDE-StartDebugging")  
   
      Il debugger viene avviato e viene eseguito il codice. La finestra della console (una finestra separata simile a un prompt dei comandi) viene visualizzata per pochi secondi, ma si chiude rapidamente quando il debugger si arresta. Per visualizzare il testo, è necessario impostare un punto di interruzione per arrestare l'esecuzione del programma.  
   
@@ -157,7 +157,7 @@ Completando questa procedura dettagliata è possibile acquisire familiarità con
   
 2.  Modificare la configurazione di compilazione per GreetingsConsoleApp da **Debug** a **Rilascio**.  
   
-     ![Compilare una versione di rilascio dell'applicazione](../ide/media/c--ide_changingbuildtorelease.png "C++IDE_ChangingBuildtoRelease")  
+     ![Compilare una versione di rilascio dell'applicazione](~/docs/ide/media/c--ide_changingbuildtorelease.png "C++IDE_ChangingBuildtoRelease")  
   
 3.  Compilare la soluzione.  
   

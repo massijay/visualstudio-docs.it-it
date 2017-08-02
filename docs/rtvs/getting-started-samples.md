@@ -52,11 +52,11 @@ In questo esempio viene offerta un'introduzione approfondita a R tramite la seri
 
 - `1-Getting Started with R.R` illustra molte nozioni fondamentali di R compresi l'uso di pacchetti, il caricamento e l'analisi dei dati e il tracciamento.
 
-    ![Output dell'esempio 1-Getting Started with R.R](media/samples-getting-started-output.png)
+    ![Output dell'esempio 1-Getting Started with R.R](~/docs/rtvs/media/samples-getting-started-output.png)
 
 - `2-Introduction to ggplot2.R` introduce il pacchetto di grafica ggplot2 noto per i tracciati visivamente gradevoli e la sintassi semplice. In questo esempio vengono visualizzati dati sui terremoti alle Figi.
 
-    ![Output dell'esempio 2-Introduction to ggplot2.R](media/samples-ggplot-output.png)
+    ![Output dell'esempio 2-Introduction to ggplot2.R](~/docs/rtvs/media/samples-ggplot-output.png)
 
 
 ## <a name="microsoft-r-server-and-machine-learning"></a>Microsoft R Server e apprendimento automatico
@@ -67,7 +67,7 @@ Come con tutti gli esempi, il modo migliore per usarli è aprire il file, posizi
 
 - `Benchmarks` esegue diversi benchmark a elevato utilizzo di calcolo per visualizzare il miglioramento delle prestazioni che è possibile realizzare tramite l'uso di Microsoft R Open e delle librerie Intel Math Kernel Library (MKL) per calcoli algebrici rapidi, lineari e paralleli. Con dati simulati, confronta in particolare l'uso di due thread rispetto all'uso di uno solo per alcuni calcoli relativi alla matrice.   
 
-    ![Tracciato di esempio Benchmark](media/samples-mro-benchmark-plot.png)
+    ![Tracciato di esempio Benchmark](~/docs/rtvs/media/samples-mro-benchmark-plot.png)
 
 - `Bike_Rental_Estimation_with_MRS` crea un modello di previsione della domanda per noleggi di biciclette basato su un set di dati cronologico, usando Microsoft R Server. 
 
@@ -76,7 +76,7 @@ Come con tutti gli esempi, il modo migliore per usarli è aprire il file, posizi
     - `Import Data from URL to xdf.R` illustra come caricare in Microsoft R Server un file di dati identificato da URL come xdf. (Richiede MRS).
     - `Using ggplot2.R` è un'estensione dell'esempio `A First Look at R/2-Introduction to ggplot2.R`, con una panoramica più estesa della funzionalità di ggplot2, tra cui il tracciamento 3D interattivo.
 
-        ![Output dell'uso dell'esempio ggplot2.R](media/samples-3d-interactive.png)
+        ![Output dell'uso dell'esempio ggplot2.R](~/docs/rtvs/media/samples-3d-interactive.png)
 
 - `Datasets` include tre file `.csv` usati da altri esempi
 - `Flight_Delays_Prediction_with_R` e `Flight_Delays_Prediction_with_MRS` illustrano come prevedere i ritardi dei voli con R, l'apprendimento automatico e lo storico delle prestazioni nei tempi stabiliti, nonché i dati meteorologici. 
@@ -100,11 +100,11 @@ Come con tutti gli esempi, il modo migliore per usarli è aprire il file, posizi
 
 Il confronto seguente illustra come MRS e MRO con MKL abbiano prestazioni di calcolo decisamente migliori relativamente ad alcuni calcoli di matrice rispetto a R e MRO senza MKL. Per questo calcolo vengono usati dati simulati:
 
-![Confronto tra MRS e MRO con MKL e R e MRO senza MKL](media/samples-speed-comparison.png)
+![Confronto tra MRS e MRO con MKL e R e MRO senza MKL](~/docs/rtvs/media/samples-speed-comparison.png)
 
 Per un confronto tecnico di R con MRO e MRS, vedere [la discussione dettagliata di Lixun Zhang](http://htmlpreview.github.io/?https://github.com/lixzhang/R-MRO-MRS/blob/master/Introduction_to_MRO_and_MRS.html) sull'argomento.
 
 Nella figura seguente viene quindi confrontato il tempo trascorso in secondi usato per la creazione di modelli di regressione logistica per stimare se l'arrivo dei voli passeggeri programmato ritarderà di più di 15 minuti. Il tempo trascorso usato in CRAN R aumenta notevolmente all'aumento di un numero ridotto di righe, mentre MRS aumenta solo di circa due volte. Per informazioni dettagliate su questo benchmark, vedere l'esempio `Benchmarks/rxGlm_benchmark.R`.
 
-![Benchmark rxGlm](media/samples-rxGLM-benchmark.png)
+![Benchmark rxGlm](~/docs/rtvs/media/samples-rxGLM-benchmark.png)
 

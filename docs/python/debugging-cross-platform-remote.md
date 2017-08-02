@@ -119,7 +119,7 @@ In questa procedura verrà impostato una semplice punto di interruzione per arre
 
 1. Premere INVIO per compilare l'elenco dei processi ptvsd disponibili su quel computer:
 
-    ![Immissione della destinazione di connessione e indicazione dei processi](media/remote-debugging-qualifier.png)
+    ![Immissione della destinazione di connessione e indicazione dei processi](~/docs/python/media/remote-debugging-qualifier.png)
 
     Se si avvia un altro programma nel computer remoto dopo la compilazione di questo elenco, selezionare il pulsante **Aggiorna**.
 
@@ -127,7 +127,7 @@ In questa procedura verrà impostato una semplice punto di interruzione per arre
 
 1. Visual Studio passa quindi in modalità di debug mentre lo script continua l'esecuzione nel computer remoto, rendendo disponibili tutte le consuete funzionalità di [debug](debugging.md). Ad esempio, impostare un punto di interruzione sulla riga `if guess < number:`, quindi passare al computer remoto e immettere un'altra proposta. Al termine dell'operazione, Visual Studio si arresta nel computer locale in corrispondenza di tale punto di interruzione, indica le variabili locali e così via:
 
-    ![Punto di interruzione raggiunto](media/remote-debugging-breakpoint-hit.png)
+    ![Punto di interruzione raggiunto](~/docs/python/media/remote-debugging-breakpoint-hit.png)
 
 1. Quando si arresta il debug, Visual Studio si disconnette dal programma, che rimane in esecuzione nel computer remoto. Inoltre ptvsd rimane in ascolto per collegare i debugger, quindi è possibile eseguire di nuovo la connessione al processo in qualsiasi momento.
 
@@ -183,7 +183,7 @@ Per impostazione predefinita, la connessione al server di debug remoto di ptvsd 
 
 1. Ripetere il processo di associazione in Visual Studio come descritto in precedenza, usando ora `tcps://` come protocollo per **Destinazione della connessione** (o **Qualificatore**).
 
-    ![Scelta del trasporto di debug remoto con SSL](media/remote-debugging-qualifier-ssl.png)
+    ![Scelta del trasporto di debug remoto con SSL](~/docs/python/media/remote-debugging-qualifier-ssl.png)
 
 ### <a name="warnings"></a>Avvisi
 
@@ -191,11 +191,11 @@ Visual Studio chiede informazioni sui potenziali problemi di certificato durante
 
 1. Se appare l'avviso "il certificato remoto non è attendibile", significa che il certificato non è stato aggiunto correttamente alla CA radice attendibile. Verificare questi passaggi e riprovare.
 
-    ![Avviso su attendibilità del certificato SSL](media/remote-debugging-ssl-warning.png)
+    ![Avviso su attendibilità del certificato SSL](~/docs/python/media/remote-debugging-ssl-warning.png)
 
 1. Se appare l'avviso "il nome del certificato remoto non corrisponde al nome host", significa che non è stato usato il nome host o l'indirizzo IP corretto come **nome comune** durante la creazione del certificato.
 
-    ![Avviso sul nome host del certificato SSL](media/remote-debugging-ssl-warning2.png)
+    ![Avviso sul nome host del certificato SSL](~/docs/python/media/remote-debugging-ssl-warning2.png)
 
 > [!Warning]
 > Al momento Visual Studio 2017 si blocca se si ignorano questi avvisi. Assicurarsi di correggere tutti i problemi prima di tentare la connessione.

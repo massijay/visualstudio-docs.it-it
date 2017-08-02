@@ -28,7 +28,7 @@ caps.handback.revision: 39
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- ![Collegamento a video](../vsto/media/playvideo.png "Collegamento a video") Per una dimostrazione video correlata, vedere la procedura dettagliata relativo all'[utilizzo del mapping XML in Excel](http://go.microsoft.com/fwlink/?LinkID=130288).  
+ ![Collegamento a video](~/docs/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere la procedura dettagliata relativo all'[utilizzo del mapping XML in Excel](http://go.microsoft.com/fwlink/?LinkID=130288).  
   
 ## Associazione di dati al controllo  
  Un controllo <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> supporta l'associazione a un unico campo di dati \(associazione dati semplice\).  Il controllo <xref:Microsoft.Office.Tools.Excel.ListObject> è invece in grado di supportare l'associazione dati complessa e viene creato automaticamente quando un elemento di schema ripetitivo è mappato a una cella.  Per ulteriori informazioni, vedere [Controllo ListObject](../vsto/listobject-control.md).  

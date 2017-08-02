@@ -95,7 +95,7 @@ Questo documento descrive come usare l'editor di immagini di [!INCLUDE[vsprvs](.
   
  Di seguito è illustrata la barra degli strumenti della **modalità dell'editor di immagini**:  
   
- ![Barra degli strumenti della modalità dell'editor di immagini.](../designers/media/digit-tre-modal-toolbar.png "Digit-TRE-Modal-Toolbar")  
+ ![Barra degli strumenti della modalità dell'editor di immagini.](~/docs/designers/media/digit-tre-modal-toolbar.png "Digit-TRE-Modal-Toolbar")  
   
  La tabella seguente descrive gli elementi disponibili nella barra degli strumenti della **modalità dell'editor di immagini**, nell'ordine di visualizzazione da sinistra verso destra.  
   
@@ -119,7 +119,7 @@ Questo documento descrive come usare l'editor di immagini di [!INCLUDE[vsprvs](.
   
  Di seguito è illustrata la barra degli strumenti **Editor di immagini**.  
   
- ![Barra degli strumenti Editor di immagini](../designers/media/digit-tre-toolbar.png "Digit-TRE-Toolbar")  
+ ![Barra degli strumenti Editor di immagini](~/docs/designers/media/digit-tre-toolbar.png "Digit-TRE-Toolbar")  
   
  La tabella seguente descrive gli elementi disponibili nella barra degli strumenti **Editor di immagini**, nell'ordine di visualizzazione dall'alto verso il basso.  
   

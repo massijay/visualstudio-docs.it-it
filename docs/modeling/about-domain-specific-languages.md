@@ -38,7 +38,7 @@ A differenza di un linguaggio per tutti gli utilizzi ad esempio c\# o UML, un li
   
  Nella figura seguente viene illustrato un piccolo modello in un modello DSL diagrammatico:  
   
- ![Modello della struttura ad albero della famiglia Tudor](../modeling/media/tudor_familytreemodel.png "Tudor\_FamilyTreeModel")  
+ ![Modello della struttura ad albero della famiglia Tudor](~/docs/modeling/media/tudor_familytreemodel.png "Tudor\_FamilyTreeModel")  
   
 ## Le operazioni che è possibile eseguire con DSLs  
  Un'applicazione tipica di un modello DSL è necessario generare codice programma o altri elementi.  Quando si definisce il modello DSL, è possibile definire *modelli di testo* tale leggere un modello DSL e generare file di testo.  

@@ -50,11 +50,11 @@ Visual Studio offre diversi comandi per la trasformazione e la pulizia automatic
 1. Fare clic con il pulsante destro del mouse sull'identificatore che si desidera rinominare e scegliere **Rinomina** oppure posizionare il cursore in tale identificatore e scegliere i comandi **Modifica > Refactoring > Rinomina** o premere F2.
 1. Nella finestra di dialogo **Rinomina** visualizzata immettere il nuovo nome per l'identificatore e selezionare **OK**:
 
-  ![Richiesta del nuovo nome di identificatore per la ridenominazione](media/code-refactor-rename-1.png)
+  ![Richiesta del nuovo nome di identificatore per la ridenominazione](~/docs/python/media/code-refactor-rename-1.png)
 
 1. Nella finestra di dialogo successiva selezionare i file e le istanze nel codice a cui applicare la ridenominazione. Selezionare qualsiasi istanza singola per visualizzare in anteprima la modifica specifica:
 
-  ![Selezione delle posizioni in cui applicare le modifiche nella finestra di dialogo Rinomina](media/code-refactor-rename-2.png)
+  ![Selezione delle posizioni in cui applicare le modifiche nella finestra di dialogo Rinomina](~/docs/python/media/code-refactor-rename-2.png)
 
 1. Selezionare **Applica** per apportare le modifiche nei file di codice sorgente. Questa operazione non è annullabile.
 
@@ -64,21 +64,21 @@ Visual Studio offre diversi comandi per la trasformazione e la pulizia automatic
 1. Selezionare i comandi **Modifica > Refactoring > Estrai metodo** oppure digitare CTRL-R,M.
 1. Nella finestra di dialogo visualizzata immettere un nuovo nome di metodo, indicare la posizione in cui estrarlo e selezionare eventuali variabili di chiusura. Le variabili non selezionate per la chiusura vengono trasformate in argomenti del metodo:
 
-  ![Finestra di dialogo Estrai metodo](media/code-refactor-extract-method-1.png)
+  ![Finestra di dialogo Estrai metodo](~/docs/python/media/code-refactor-extract-method-1.png)
 
 1. Selezionare **OK** e il codice verrà modificato di conseguenza:
 
-  ![Effetto dell'estrazione di un metodo](media/code-refactor-extract-method-2.png)
+  ![Effetto dell'estrazione di un metodo](~/docs/python/media/code-refactor-extract-method-2.png)
 
 ## <a name="add-import"></a>Aggiungi importazione
 
 Quando si posiziona il cursore su un identificatore per cui mancano le informazioni sul tipo, Visual Studio specifica uno smart tag, ovvero l'icona a forma di lampadina a sinistra del codice, i cui comandi consentiranno di aggiungere l'istruzione `import` o `from ... import` necessaria:
 
-![Smart tag Aggiungi importazione](media/code-refactor-add-import-1.png)
+![Smart tag Aggiungi importazione](~/docs/python/media/code-refactor-add-import-1.png)
 
 I completamenti `import` vengono offerti per i pacchetti e i moduli di primo livello nel progetto corrente e nella libreria standard. I completamenti `from ... import` verranno offerti per i moduli secondari e i pacchetti secondari, nonché per i membri dei moduli, inclusi funzioni, classi o dati esportati. Selezionando una delle due opzioni, l'istruzione viene aggiunta all'inizio del file dopo le altre importazioni oppure in un'istruzione `from ... import` esistente se lo stesso modulo è già importato.
 
-![Risultato dell'aggiunta di un'importazione](media/code-refactor-add-import-2.png)
+![Risultato dell'aggiunta di un'importazione](~/docs/python/media/code-refactor-add-import-2.png)
 
 Visual Studio tenta di escludere i membri che non sono effettivamente definiti in un modulo, ad esempio i moduli importati in un altro, ma che non sono elementi figlio del modulo che effettua l'importazione. Ad esempio, molti moduli usano `import sys` invece di `from xyz import sys`, quindi il completamento dell'importazione di `sys` da altri moduli non riuscirà, anche se per i moduli manca un membro `__all__` che esclude `sys`.
 
@@ -93,10 +93,10 @@ Durante la scrittura del codice è facile ritrovarsi con istruzioni `import` per
 
 Fare clic con il pulsante destro del mouse in qualsiasi punto dell'editor e scegliere **Rimuovi importazioni**, quindi scegliere l'opzione per l'ambito da cui eseguire la rimozione, ovvero **Tutti gli ambiti** o **Ambito corrente**:
 
-![Menu Rimuovi importazioni](media/code-refactor-remove-imports-1.png)
+![Menu Rimuovi importazioni](~/docs/python/media/code-refactor-remove-imports-1.png)
 
 Visual Studio apporterà quindi le modifiche appropriate al codice:
 
-![Effetto della rimozione delle importazioni](media/code-refactor-remove-imports-2.png)
+![Effetto della rimozione delle importazioni](~/docs/python/media/code-refactor-remove-imports-2.png)
 
 Si noti che Visual Studio non tiene conto del flusso di controllo. L'uso di un nome prima di un'istruzione `import` viene interpretato come l'uso effettivo del nome. Visual Studio ignora anche tutte le importazioni `from __future__`, le importazioni che vengono eseguite all'interno di una definizione di classe, nonché da istruzioni `from ... import *`.

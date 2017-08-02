@@ -96,7 +96,7 @@ caps.handback.revision: 87
   
  Ecco un esempio di ciò che può fare un componente aggiuntivo VSTO. Questo componente aggiuntivo VSTO aggiunge alcuni controlli della barra multifunzione, un riquadro attività personalizzato e una finestra di dialogo a PowerPoint.  
   
- ![Soluzione del componente aggiuntivo PowerPoint](../vsto/media/powerpointaddin.png "Soluzione del componente aggiuntivo PowerPoint")  
+ ![Soluzione del componente aggiuntivo PowerPoint](~/docs/vsto/media/powerpointaddin.png "Soluzione del componente aggiuntivo PowerPoint")  
   
  **Altre informazioni**  
   

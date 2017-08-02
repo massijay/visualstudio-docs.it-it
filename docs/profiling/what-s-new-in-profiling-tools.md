@@ -44,11 +44,11 @@ Per altre informazioni, vedere le [note sulla versione per [!include[vs_dev15](.
 
 È stata aggiunta agli strumenti una scheda **Riepilogo**, che consente di concentrarsi sulle aree principali per l'analisi delle prestazioni. Questa scheda mostra il numero di eventi si sono verificati, consente di creare snapshot dell'heap e consente di abilitare rapidamente la raccolta dei dati di utilizzo della CPU. Questa visualizzazione mostra eventuali eventi di [Application Insights](https://azure.microsoft.com/en-us/documentation/articles/app-insights-visual-studio/) o di [Analisi interfaccia utente](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#UIAnalysis). Inoltre, per Visual Studio Enterprise, questa visualizzazione mostra anche gli eventi di IntelliTrace.
 
-![Strumenti di diagnostica Scheda Riepilogo](../profiling/media/DiagToolsSummaryTab-2.png "DiagToolsSummaryTab")
+![Strumenti di diagnostica Scheda Riepilogo](~/docs/profiling/media/DiagToolsSummaryTab-2.png "DiagToolsSummaryTab")
 
 Lo strumento Utilizzo CPU dispone di [nuove visualizzazioni](../profiling/Beginners-Guide-to-Performance-Profiling.md) che aiutano a identificare le funzioni che possono causare problemi di prestazioni. La nuova visualizzazione **Chiamante/chiamato** consente di analizzare i costi delle chiamate di funzione effettuate da e verso una funzione selezionata.
 
-![Strumenti di diagnostica Visualizzazione Chiamante Chiamato](../profiling/media/DiagToolsCallerCallee.png "DiagToolsCallerCallee")
+![Strumenti di diagnostica Visualizzazione Chiamante Chiamato](~/docs/profiling/media/DiagToolsCallerCallee.png "DiagToolsCallerCallee")
   
 ## <a name="see-also"></a>Vedere anche  
  [Profiling Tools](../profiling/profiling-tools.md) (Strumenti di profilatura)

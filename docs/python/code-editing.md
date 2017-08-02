@@ -60,7 +60,7 @@ IntelliSense offre [completamenti](#completions), [informazioni della Guida per 
 
 I completamenti vengono visualizzati come istruzioni, identificatori e altre parole che possono essere immessi in modo corretto nella posizione corrente nell'editor. Il contenuto dell'elenco dipende dal contesto e viene filtrato per omettere opzioni non corrette o fonte di distrazione. I completamenti vengono spesso attivati digitando istruzioni (ad esempio `import`) e operatori (incluso un punto) diversi, ma è possibile visualizzarli in qualsiasi momento digitando CTRL+J,BARRA SPAZIATRICE.
 
-![Completamento dei membri](media/code-editing-completions-simple.png)
+![Completamento dei membri](~/docs/python/media/code-editing-completions-simple.png)
 
 Quando viene aperto un elenco di completamento, è possibile cercare il completamento desiderato usando i tasti di direzione, il mouse oppure continuando a digitare. Digitando altre lettere l'elenco viene ulteriormente filtrato per mostrare i completamenti probabili. Il filtro è intelligente e consente di usare scelte rapide, ad esempio:
 
@@ -70,27 +70,27 @@ Quando viene aperto un elenco di completamento, è possibile cercare il completa
 
 Ecco alcuni esempi:
 
-![Completamento dei membri con filtro](media/code-editing-completion-filtering.png)
+![Completamento dei membri con filtro](~/docs/python/media/code-editing-completion-filtering.png)
 
 I completamenti dei membri vengono visualizzati automaticamente quando si digita un punto dopo una variabile o un valore, indicando i metodi e gli attributi dei tipi potenziali. Se una variabile può avere più di un tipo, l'elenco include tutte le possibilità per tutti i tipi, con informazioni aggiuntive per indicare quali tipi supportano ogni completamento. Nel caso un completamento sia supportato da tutti i tipi possibili, viene visualizzato senza annotazione.
 
-![Completamento dei membri per più tipi](media/code-editing-completion-types.png)
+![Completamento dei membri per più tipi](~/docs/python/media/code-editing-completion-types.png)
 
 Per impostazione predefinita, non vengono visualizzati i membri il cui nome inizia e termina con un doppio carattere di sottolineatura. In generale, non si deve accedere a questi membri direttamente, ma se necessario, è possibile digitare il doppio carattere di sottolineatura iniziale per aggiungere questi completamenti all'elenco:
 
-![Completamento dei membri privati](media/code-editing-completion-dunder.png)
+![Completamento dei membri privati](~/docs/python/media/code-editing-completion-dunder.png)
 
 Per le istruzioni `import` e `from ... import` viene visualizzato un elenco dei moduli che possono essere importati e, nel caso di `from ... import`, i membri che possono essere importati dal modulo specificato.
 
-![Completamento per le importazioni](media/code-editing-completion-import.png)
+![Completamento per le importazioni](~/docs/python/media/code-editing-completion-import.png)
 
 Per le istruzioni `raise` e `except` verranno visualizzati gli elenchi di classi che è probabile siano tipi di errore. Potrebbero non essere incluse tutte le eccezioni definite dall'utente, ma questi completamenti saranno utili per trovare rapidamente eccezioni predefinite appropriate:
 
-![Completamento per le eccezioni](media/code-editing-completion-exception.png)
+![Completamento per le eccezioni](~/docs/python/media/code-editing-completion-exception.png)
 
 È possibile digitare @ per iniziare un elemento Decorator e visualizzare gli elementi Decorator potenziali. Molti di questi elementi non saranno utilizzabili come elementi Decorator e sarà necessario consultare la documentazione della libreria per determinare quali usare:
 
-![Completamento per gli elementi Decorator](media/code-editing-completion-decorator.png)
+![Completamento per gli elementi Decorator](~/docs/python/media/code-editing-completion-decorator.png)
 
 > [!Tip]
 > È possibile configurare il comportamento dei completamenti tramite **Strumenti > Opzioni > Editor di testo > Python > Avanzate**. Tra le opzioni disponibili, **Filter list based on search string** (Filtra elenco in base alla stringa di ricerca) consente di applicare il filtro ai suggerimenti per il completamento durante la digitazione. Questa opzione è selezionata per impostazione predefinita. L'opzione **Member completion displays intersection of members** (Visualizza intersezione dei membri per i completamenti), inoltre, consente di visualizzare solo i completamenti supportati da tutti i tipi possibili (deselezionata per impostazione predefinita).
@@ -100,7 +100,7 @@ Per le istruzioni `raise` e `except` verranno visualizzati gli elenchi di classi
 
 Quando si scrive codice che chiama una funzione, le informazioni della Guida per le firme vengono visualizzate quando si digita la parentesi `(` di apertura e visualizzano le informazioni della documentazione e sui parametri eventualmente disponibili. Per visualizzare queste informazioni, è anche possibile usare CTRL+MAIUSC+BARRA SPAZIATRICE all'interno di una chiamata di funzione. Le informazioni visualizzate dipendono dalle stringhe di documentazione nel codice sorgente della funzione, ma includeranno gli eventuali valori predefiniti.
 
-![Informazioni della Guida per le firme](media/code-editing-signature-help.png)
+![Informazioni della Guida per le firme](~/docs/python/media/code-editing-signature-help.png)
 
 > [!Tip]
 > Per disabilitare le informazioni della Guida per le firme, passare a **Strumenti > Opzioni > Editor di testo > Python > Generale** e deselezionare **Completamento istruzioni > Informazioni sui parametri**.
@@ -109,17 +109,17 @@ Quando si scrive codice che chiama una funzione, le informazioni della Guida per
 
 Al passaggio del mouse su un identificatore viene visualizzata una descrizione comando delle informazioni rapide. In base all'identificatore, le informazioni rapide possono visualizzare i valori potenziali o i tipi, eventuale documentazione disponibile, i tipi restituiti e i percorsi delle definizioni:
 
-![Informazioni rapide](media/code-editing-quick-info.png)
+![Informazioni rapide](~/docs/python/media/code-editing-quick-info.png)
 
 ### <a name="code-coloring"></a>Colorazione del codice
 
 La funzionalità di colorazione del codice usa le informazioni dall'analisi del codice per colorare variabili, istruzioni e altre parti del codice. Ad esempio, le variabili che fanno riferimento a moduli o classi potrebbero essere visualizzate in un colore diverso rispetto alle funzioni o altri valori e i nomi dei parametri vengono visualizzati con un colore diverso rispetto alle variabili locali o globali. Si noti che le funzioni non sono visualizzate in grassetto per impostazione predefinita:
 
-![Colorazione del codice](media/code-editing-code-coloring.png)
+![Colorazione del codice](~/docs/python/media/code-editing-code-coloring.png)
 
 Per personalizzare i colori usati, passare a **Strumenti > Opzioni > Ambiente > Tipi di carattere e colori** e modificare le voci per Python nell'elenco **Elementi visualizzati**.
 
-![Opzioni Tipi di carattere e colori](media/code-editing-customize-colors.png)
+![Opzioni Tipi di carattere e colori](~/docs/python/media/code-editing-customize-colors.png)
 
 > [!Tip]
 > Per disabilitare la colorazione del codice, passare a **Strumenti > Opzioni > Editor di testo > Python > Avanzate** e deselezionare **Miscellaneous Options > Color names based on type** (Opzioni varie > Colora i nomi in base al tipo).
@@ -128,11 +128,11 @@ Per personalizzare i colori usati, passare a **Strumenti > Opzioni > Ambiente > 
 
 I frammenti di codice sono parti di codice che possono essere inserite nei file digitando una scelta rapida e premendo TAB oppure tramite i comandi **Modifica > IntelliSense > Inserisci frammento di codice** **Racchiudi tra**. Ad esempio, è possibile digitare `class` seguito da TAB per generare il resto della classe. È possibile digitare sull'elenco dei nomi e delle basi, spostarsi tra i campi evidenziati tramite TAB e quindi premere INVIO per iniziare a digitare il corpo.
 
-![Frammenti di codice](media/code-editing-code-snippets.png)
+![Frammenti di codice](~/docs/python/media/code-editing-code-snippets.png)
 
 È possibile visualizzare i frammenti di codice disponibili in Gestione frammenti di codice (**Strumenti > Gestione frammenti di codice**), selezionando **Python** come linguaggio:
 
-![Gestione frammenti di codice](media/code-editing-code-snippets-manager.png)
+![Gestione frammenti di codice](~/docs/python/media/code-editing-code-snippets-manager.png)
 
 Per creare frammenti personalizzati, vedere [Procedura dettagliata: creazione di un frammento di codice](https://docs.microsoft.com/en-us/visualstudio/ide/walkthrough-creating-a-code-snippet).
 Per personalizzare i frammenti di codice, è possibile [creare un frammento di codice](https://msdn.microsoft.com/en-us/library/ms165394.aspx) e poi importarlo. 
@@ -148,7 +148,7 @@ Il supporto di Python in Visual Studio offre diversi strumenti per spostarsi rap
 
 La barra di spostamento viene visualizzata nella parte superiore di ogni finestra dell'editor e include un elenco di definizioni su due livelli. L'elenco a discesa a sinistra contiene le definizioni di classi e funzioni di primo livello nel file corrente. L'elenco a discesa a destra visualizza un elenco di definizioni all'interno dell'ambito indicato a sinistra. Spostandosi nell'editor, questi elenchi vengono aggiornati per mostrare il contesto corrente ed è anche possibile selezionare una voce in questi elenchi per passarvi direttamente.
 
-![Barra di spostamento](media/code-editing-navigation-bar.png)
+![Barra di spostamento](~/docs/python/media/code-editing-navigation-bar.png)
 
 > [!Tip]
 > Per nascondere la barra di spostamento, passare a **Strumenti > Opzioni > Editor di testo > Python > Generale** e deselezionare **Impostazioni > Barra di spostamento**.
@@ -157,7 +157,7 @@ La barra di spostamento viene visualizzata nella parte superiore di ogni finestr
 
 Il comando **Vai a definizione** consente di passare velocemente dall'uso di un identificatore (ad esempio, un nome di funzione, una classe o una variabile) al codice sorgente in cui è definito. Per richiamare questo comando, è possibile fare clic con il pulsante destro del mouse su un identificatore e scegliere **Vai a definizione** o posizionare il punto di inserimento nell'identificatore e premere F12. Il comando viene applicato a tutto il codice e alle librerie esterne, a condizione che sia disponibile il codice sorgente. Se il codice sorgente della libreria non è disponibile, il comando **Vai a definizione** passerà all'istruzione `import` pertinente per un riferimento al modulo o visualizzerà un errore.
 
-![Vai a definizione](media/code-editing-go-to-definition.png)
+![Vai a definizione](~/docs/python/media/code-editing-go-to-definition.png)
 
 ### <a name="navigate-to"></a>Passa a
 
@@ -165,10 +165,10 @@ Il comando **Modifica > Passa a** (CTRL+virgola) consente di visualizzare una ca
 
 Per passare alla definizione dell'identificatore, fare doppio clic su qualsiasi nome oppure selezionarlo con i tasti di direzione e premere INVIO.
 
-![Passa a](media/code-editing-navigate-to.png)
+![Passa a](~/docs/python/media/code-editing-navigate-to.png)
 
 ### <a name="find-all-references"></a>Trova tutti i riferimenti
 
 **Trova tutti i riferimenti** è un modo utile per individuare le posizioni in cui un qualsiasi identificatore specificato viene sia definito che usato, incluse importazioni e assegnazioni. Per richiamare questo comando, è possibile fare clic con il pulsante destro del mouse su un identificatore e scegliere **Trova tutti i riferimenti** o posizionare il punto di inserimento nell'identificatore e premere MAIUSC+F12. È possibile fare doppio clic su un elemento nell'elenco per passare alla relativa posizione.
 
-![Risultati di Trova tutti i riferimenti](media/code-editing-find-all-references.png)
+![Risultati di Trova tutti i riferimenti](~/docs/python/media/code-editing-find-all-references.png)

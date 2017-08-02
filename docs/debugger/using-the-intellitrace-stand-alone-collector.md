@@ -146,7 +146,7 @@ L'**agente di raccolta autonomo IntelliTrace** consente di raccogliere i dati di
   
 1.  Nel server dell'app, verificare che PowerShell sia abilitato. Nella maggior parte delle versioni di Windows Server, è possibile aggiungere questa funzionalità nello strumento di amministrazione **Server Manager**.  
   
-     ![Aggiunta di PowerShell tramite Server Manager](../debugger/media/intellitrace_servermanager_addpowershell.png "INTELLITRACE\_ServerManager\_AddPowerShell")  
+     ![Aggiunta di PowerShell tramite Server Manager](~/docs/debugger/media/intellitrace_servermanager_addpowershell.png "INTELLITRACE\_ServerManager\_AddPowerShell")  
   
 2.  Installare i cmdlet PowerShell di IntelliTrace.  
   

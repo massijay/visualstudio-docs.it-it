@@ -43,7 +43,7 @@ R Tools per Visual Studio (RTVS) si integra con l'esperienza di debug completa d
 
 Avviare il debugger per un il file di avvio R in un progetto di R è un'operazione identica a quella per altri tipi di progetto: usare **Debug > Avvia debug**, F5, o il **Source startup file** (File di avvio di origine) sulla barra degli strumenti di debug illustrata di seguito. Per modificare il file di avvio, fare clic con il pulsante destro del mouse su un file in Esplora soluzioni e selezionare **Imposta come script R di avvio**.
 
-![Pulsante di avvio del debugger per R](media/debugger-start-button.png)
+![Pulsante di avvio del debugger per R](~/docs/rtvs/media/debugger-start-button.png)
 
 In tutti i casi, il debug "dà origine" al file nella finestra interattiva, ovvero lo carica e lo esegue da qui. Quando si avvia il debug, infatti, verrà visualizzato un output simile al seguente nella finestra interattiva:
 
@@ -85,5 +85,5 @@ Il browser ambiente supporta un numero di comandi speciali:
 | guida | show help: consente di visualizzare le chiamate disponibili nella finestra interattiva. |
 | &lt;expr&gt; | valuta l'espressione in *expr*. |
 
-![Browser ambiente nella finestra interattiva](media/debugger-environment-browser.png)
+![Browser ambiente nella finestra interattiva](~/docs/rtvs/media/debugger-environment-browser.png)
 

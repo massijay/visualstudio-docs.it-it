@@ -48,15 +48,15 @@ Gestione pacchetti contiene le tre schede descritte di seguito. Tutte le schede 
 
 - La scheda **Disponibile** consente di sfogliare i pacchetti da installare. Se un pacchetto è già installato, il pulsante **Installa** a destra diventa **Disinstalla**.
 
-    ![Scheda dei pacchetti disponibili in Gestione pacchetti di R Tools per Visual Studio](media/package-manager-available.png)
+    ![Scheda dei pacchetti disponibili in Gestione pacchetti di R Tools per Visual Studio](~/docs/rtvs/media/package-manager-available.png)
 
 - La scheda **Installato** visualizza tutti i pacchetti installati e caricati. Un punto verde accanto a un pacchetto indica che questo è caricato nella sessione di R. Per disinstallare il pacchetto è possibile usare l'icona X di colore rosso nell'elenco a sinistra o il pulsante **Disinstalla** a destra. La freccia di colore blu a destra di un pacchetto installato consente di aggiornare il pacchetto se è disponibile una versione più recente.
 
-    ![Scheda dei pacchetti installati in Gestione pacchetti di R Tools per Visual Studio](media/package-manager-installed.png)
+    ![Scheda dei pacchetti installati in Gestione pacchetti di R Tools per Visual Studio](~/docs/rtvs/media/package-manager-installed.png)
 
 - La scheda **Caricato** visualizza solo i pacchetti caricati nella sessione di R. Pertanto tutti i pacchetti visualizzati presentano un punto verde. In questa scheda è anche possibile disinstallare e aggiornare i pacchetti.
 
-    ![Scheda dei pacchetti caricati in Gestione pacchetti di R Tools per Visual Studio](media/package-manager-loaded.png)
+    ![Scheda dei pacchetti caricati in Gestione pacchetti di R Tools per Visual Studio](~/docs/rtvs/media/package-manager-loaded.png)
 
 ## <a name="package-locations"></a>Percorsi dei pacchetti
 
