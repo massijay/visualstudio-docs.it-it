@@ -56,11 +56,11 @@ manager: "ghogen"
 ##  <a name="BKMK_Overview"></a> Impostazione di un punto di interruzione di funzione nel codice sorgente  
  È possibile impostare un punto di interruzione di funzione nel codice sorgente facendo clic sul margine sinistro di un file di codice sorgente o posizionando il cursore su una riga di codice e premendo F9. Il punto di interruzione viene visualizzato come un punto rosso nel margine sinistro ed anche la riga di codice risulta colorata:  
   
- ![Imposta punto di interruzione](../debugger/media/basicbreakpoint.png "BasicBreakpoint")  
+ ![Imposta punto di interruzione](~/debugger/media/basicbreakpoint.png "BasicBreakpoint")  
   
  Quando si esegue questo codice nel debugger, l'esecuzione viene interrotta ogni volta che viene raggiunto il punto di interruzione, prima che venga eseguito il codice su tale riga. La riga di codice sorgente è di colore giallo:  
   
- ![Esecuzione punto di interruzione arrestata](../debugger/media/breakpointexecution.png "BreakpointExecution")  
+ ![Esecuzione punto di interruzione arrestata](~/debugger/media/breakpointexecution.png "BreakpointExecution")  
   
  A questo punto il valore di `testInt` è ancora 1.  
   
@@ -134,7 +134,7 @@ manager: "ghogen"
 ##  <a name="BKMK_Specify_advanced_properties_of_a_breakpoint_"></a> Gestione di punti di interruzione  
  È possibile usare la finestra **Punti di interruzione** \(**Debug\/Windows\/Punti di interruzione** o **CTRL\+ALT\+B**\) per visualizzare tutti i punti di interruzione impostati nella soluzione:  
   
- ![finestra Punti di interruzione](../debugger/media/breakpointswindow.png "BreakpointsWindow")  
+ ![finestra Punti di interruzione](~/debugger/media/breakpointswindow.png "BreakpointsWindow")  
   
  La finestra **Punti di interruzione** costituisce tuttavia una posizione centrale da cui gestire tutti i punti di interruzione, che può essere particolarmente utile per una soluzione di grandi dimensioni o per uno scenario di debug complesso in cui i punti di interruzione sono cruciali. Se è necessario salvare o condividere lo stato e la posizione di un set di punti di interruzione, è possibile esportare e importare i punti di interruzione unicamente dalla finestra **Punti di interruzione**.  
   

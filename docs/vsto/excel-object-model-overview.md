@@ -47,7 +47,7 @@ caps.handback.revision: 65
   
  In questo argomento viene illustrato brevemente il modello a oggetti di Excel.  Per le risorse con ulteriori informazioni sull'intero modello a oggetti di Excel, vedere [Utilizzo della documentazione del modello a oggetti di Excel](#ExcelOMDocumentation).  
   
- ![Collegamento a video](../vsto/media/playvideo.png "Collegamento a video") Per una dimostrazione video correlata, vedere [Ricerca per categorie: utilizzare i gestori eventi in un componente aggiuntivo Excel 2007](http://go.microsoft.com/fwlink/?LinkID=130291) e [Ricerca per categorie: utilizzare le forme per creare un grafico a bolle in Excel](http://go.microsoft.com/fwlink/?LinkID=130313).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere [Ricerca per categorie: utilizzare i gestori eventi in un componente aggiuntivo Excel 2007](http://go.microsoft.com/fwlink/?LinkID=130291) e [Ricerca per categorie: utilizzare le forme per creare un grafico a bolle in Excel](http://go.microsoft.com/fwlink/?LinkID=130313).  
   
 ## Accesso agli oggetti in un progetto di Excel  
  Quando si crea un nuovo progetto di componente aggiuntivo VSTO per Excel, Visual Studio crea automaticamente un file di codice ThisAddIn.vb o ThisAddIn.cs.  È possibile accedere all'oggetto applicazione tramite `Me.Application` o `this.Application`.  

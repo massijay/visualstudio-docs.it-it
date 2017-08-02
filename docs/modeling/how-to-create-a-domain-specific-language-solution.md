@@ -60,7 +60,7 @@ Un linguaggio specifico di dominio (DSL) creato utilizzando un specializzato [!I
         > [!NOTE]
         >  Preferibilmente, il nome digitato deve essere un Visual identificatore c# valido, poiché può essere utilizzato per generare il codice.  
   
-     ![Finestra di dialogo DSL crea](../modeling/media/create_dsldialog.png "Create_DSLDialog")  
+     ![Finestra di dialogo DSL crea](~/modeling/media/create_dsldialog.png "Create_DSLDialog")  
   
 2.  Scegliere un modello DSL.  
   

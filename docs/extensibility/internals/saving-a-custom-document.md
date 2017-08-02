@@ -23,7 +23,7 @@ caps.handback.revision: 12
 
 L'handle di ambiente **Save**, **Save As**e controlli di **Save All** .  Quando un utente fa clic su **Salvare**, **Salva con nome**, **o salvare tutti** il menu File o chiude la soluzione, con conseguente salva tutti, il seguente processo si verifica.  
   
- ![Salvataggio editor customer](../../extensibility/internals/media/private.gif "Private")  
+ ![Salvataggio editor customer](~/extensibility/internals/media/private.gif "Private")  
 Salvare, salva con nome e salvare qualsiasi gestione di comando per un editor personalizzato  
   
  Questo processo è in dettaglio i passaggi seguenti:  

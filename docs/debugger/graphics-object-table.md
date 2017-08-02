@@ -57,7 +57,7 @@ La Tabella oggetti grafici disponibile in Analisi grafica di Visual Studio conse
   
  Ecco il Visualizzatore trame che mostra il contenuto della fase della pipeline Unione output.  
   
- ![Anteprima della trama con unione dell'output](../debugger/media/gfx_diag_texture_preview.png "gfx\_diag\_texture\_preview")  
+ ![Anteprima della trama con unione dell'output](~/debugger/graphics/media/gfx_diag_texture_preview.png "gfx\_diag\_texture\_preview")  
   
 ### Elenco comandi D3D12  
  In Direct3D 12 un elenco di comandi è un oggetto che registra i comandi in un allocatore di comandi, in modo che sia possibile inviarli alla GPU come una singola richiesta.  Gli elenchi di comandi in genere eseguono una serie di comandi di impostazione dello stato, disegno, cancellazione e copia.  Sono particolarmente importanti perché rappresentano il metodo consigliato per il rendering in Direct3D 12 e possono essere riutilizzati tra i frame per migliorare le prestazioni.  I dettagli sull'elenco di comandi vengono visualizzati in una nuova finestra del documento, con informazioni relative a ogni fase della pipeline presentate in schede separate.  

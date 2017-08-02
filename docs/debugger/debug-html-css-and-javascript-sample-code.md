@@ -23,7 +23,7 @@ caps.handback.revision: 13
 # Debug del codice di esempio HTML, CSS e JavaScript
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Si applica a Windows e Windows Phone](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Si applica a Windows e Windows Phone](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  Il codice in questo argomento è il file di esempio relativo a [Guida introduttiva: Eseguire il debug di HTML e CSS](../debugger/quickstart-debug-html-and-css.md).  Gli errori presenti nella guida introduttiva, in base alla progettazione, vengono corretti in questa versione del codice.  
   

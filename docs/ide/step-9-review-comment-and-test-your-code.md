@@ -44,7 +44,7 @@ Successivamente si aggiunge un commento al codice.  Un commento è una nota che 
   
      Le istruzioni consentono ai programmi di eseguire azioni.  In Visual C\# un'istruzione termina sempre con un punto e virgola.  In Visual Basic la fine di una riga è la fine di un'istruzione. In Visual Basic non sono necessari punti e virgola. L'istruzione precedente indica al controllo `PictureBox` di caricare il file selezionato dall'utente con il componente **OpenFileDialog**.  
   
- ![Collegamento a video](../data-tools/media/playvideo.png "PlayVideo") Per una versione video di questo argomento, vedere [Esercitazione 1: creare un visualizzatore di immagini in Visual Basic \- Video 5](http://go.microsoft.com/fwlink/?LinkId=205216) oppure [Esercitazione 1: creare un visualizzatore di immagini in C\# \- Video 5](http://go.microsoft.com/fwlink/?LinkId=205206).  In questi video viene utilizzata una versione precedente di Visual Studio, pertanto vi sono piccole differenze in alcuni comandi di menu e altri elementi dell'interfaccia utente.  Tuttavia, i concetti e le procedure funzionano in modo analogo nella versione corrente di Visual Studio.  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "PlayVideo") Per una versione video di questo argomento, vedere [Esercitazione 1: creare un visualizzatore di immagini in Visual Basic \- Video 5](http://go.microsoft.com/fwlink/?LinkId=205216) oppure [Esercitazione 1: creare un visualizzatore di immagini in C\# \- Video 5](http://go.microsoft.com/fwlink/?LinkId=205206).  In questi video viene utilizzata una versione precedente di Visual Studio, pertanto vi sono piccole differenze in alcuni comandi di menu e altri elementi dell'interfaccia utente.  Tuttavia, i concetti e le procedure funzionano in modo analogo nella versione corrente di Visual Studio.  
   
 ### Per aggiungere commenti  
   
@@ -65,7 +65,7 @@ Successivamente si aggiunge un commento al codice.  Un commento è una nota che 
   
 2.  Prima di eseguire il programma, salvarlo facendo clic sul pulsante della barra degli strumenti **Salva tutto**, visualizzato di seguito.  
   
-     ![Pulsante della barra degli strumenti Salva tutto](../ide/media/express_iconsaveall.png "Express\_IconSaveAll")  
+     ![Pulsante della barra degli strumenti Salva tutto](~/ide/media/express_iconsaveall.png "Express\_IconSaveAll")  
 Pulsante Salva tutto  
   
      In alternativa, sulla barra dei menu scegliere **File**, **Salva tutto** per salvare il proprio programma.  Una procedura consigliata consiste nel salvare presto e spesso.  

@@ -66,7 +66,7 @@ Per aggiornare i riferimenti NuGet Microsoft.VSSDK.BuildTools:
 * Selezionare Microsoft.VSSDK.BuildTools (versione più recente).
 * Premere **aggiornamento**.
 
-![Strumenti di compilazione VSSDK](media/vssdk-build-tools.png)
+![Strumenti di compilazione VSSDK](~/extensibility/media/vssdk-build-tools.png)
 
 ## <a name="make-changes-to-the-vsix-extension-manifest"></a>Apportare le modifiche al manifesto dell'estensione VSIX
 
@@ -103,18 +103,18 @@ Invece di modificare direttamente il XML del manifesto, è possibile utilizzare 
 * Aprire il file source.extension.vsixmanifest [Progettazione].
 * Selezionare **prerequisiti** scheda e premere **New** pulsante.
 
-  ![Progettazione manifesto VSIX](media/vsix-manifest-designer.png)
+  ![Progettazione manifesto VSIX](~/extensibility/media/vsix-manifest-designer.png)
 
 * Il **aggiungere nuovi prerequisiti** aprirà la finestra.
 
-  ![aggiungere il prerequisito vsix](media/add-vsix-prerequisite.png)
+  ![aggiungere il prerequisito vsix](~/extensibility/media/add-vsix-prerequisite.png)
 
 * Fare clic sull'elenco a discesa per **nome** e selezionare il prerequisito desiderato.
 * Aggiornare la versione, se necessario.
 
   >Nota: Il campo versione sarà già popolato con la versione del componente attualmente installato, con un intervallo che si estende su fino a (ma non inclusi) la successiva versione principale del componente.
 
-  ![aggiungere il prerequisito di roslyn](media/add-roslyn-prerequisite.png)
+  ![aggiungere il prerequisito di roslyn](~/extensibility/media/add-roslyn-prerequisite.png)
 
 * Press **OK**.
 
@@ -133,7 +133,7 @@ Potrebbe essere simile:
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe
 ```
 
-![Avvia programma esterno](media/start-external-program.png)
+![Avvia programma esterno](~/extensibility/media/start-external-program.png)
 
 >**Nota:** l'azione di avviare il Debug è in genere archiviato nel. csproj file. Questo file è in genere inclusa nel file con estensione gitignore e, di conseguenza, non viene in genere salvato con altri file di progetto quando vengono salvate nel controllo del codice sorgente. Di conseguenza, se si è estratti la soluzione aggiornata dal controllo del codice sorgente è probabile che il progetto non sarà necessario alcun valori impostati per l'azione di avvio. I nuovi progetti VSIX creati con Visual Studio 2017 avrà un. csproj file creato con le impostazioni predefinite che punta alla directory di installazione di Visual Studio corrente. Tuttavia se si esegue la migrazione di un'estensione VSIX v2, è probabile che il. csproj file conterrà i riferimenti a directory di installazione della versione di Visual Studio precedente. Impostazione del valore di **Debug** > **azione di avvio** consentirà l'istanza sperimentale di Visual Studio corretto da avviare quando si tenta di eseguire il debug dell'estensione.
 
@@ -158,7 +158,7 @@ Tenta di installare l'estensione:
 
 * In Visual Studio 2017
 
-![Programma di installazione VSIX in Visual Studio 2017](media/vsixinstaller-vs-2017.png)
+![Programma di installazione VSIX in Visual Studio 2017](~/extensibility/media/vsixinstaller-vs-2017.png)
 
 * Facoltativo: Controllare le versioni precedenti di Visual Studio.
   * Prova di compatibilità con le versioni precedenti.
@@ -169,7 +169,7 @@ Tenta di installare l'estensione:
 
 Se Visual Studio è stato aperto di recente, è possibile visualizzare una finestra di dialogo simile alla seguente:
 
-![processi in esecuzione Visual Studio](media/vs-running-processes.png)
+![processi in esecuzione Visual Studio](~/extensibility/media/vs-running-processes.png)
 
 Attendere l'arresto dei processi o terminare manualmente le attività. È possibile trovare i processi dal nome elencato o con il PID elencati tra parentesi.
 
@@ -181,7 +181,7 @@ Attendere l'arresto dei processi o terminare manualmente le attività. È possib
 * Verificare che l'installazione identifica il componente mancante/s e li elenca come prerequisito nel VSIXInstaller.
 * Nota: L'elevazione dei privilegi è richiesto se tutti i prerequisiti devono essere installati con l'estensione.
 
-![Prerequisito mancante vsixinstaller](media/vsixinstaller-missing-prerequisite.png)
+![Prerequisito mancante vsixinstaller](~/extensibility/media/vsixinstaller-missing-prerequisite.png)
 
 ## <a name="deciding-on-components"></a>Scelta di componenti
 

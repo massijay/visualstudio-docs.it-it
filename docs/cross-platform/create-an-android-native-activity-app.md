@@ -93,7 +93,7 @@ Quando si installa l'opzione Visual C++ per Sviluppo app per dispositivi mobili 
   
      Ecco come viene visualizzata l'app predefinita in Visual Studio Emulator for Android.  
   
-     ![L'emulatore che sta eseguendo l'app](../cross-platform/media/cppmdd_emulator_running_app.PNG "CppMDD_Emulator_Running_App")  
+     ![L'emulatore che sta eseguendo l'app](~/cross-platform/media/cppmdd_emulator_running_app.PNG "CppMDD_Emulator_Running_App")  
   
      All'avvio dell'emulatore in Visual Studio, il processo di caricamento e distribuzione del codice richiede qualche istante. Una volta avviata l'app, è possibile impostare i punti di interruzione e usare il debugger per eseguire il codice un'istruzione alla volta, esaminare le variabili locali e controllare i valori.  
   

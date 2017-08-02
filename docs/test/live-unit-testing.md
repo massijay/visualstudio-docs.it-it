@@ -76,7 +76,7 @@ In alcuni casi, per consentire il funzionamento di Live Unit Testing, potrebbe e
 
 Per configurare Live Unit Testing, selezionare **Strumenti**, **Opzioni** dal menu di primo livello di Visual Studio e quindi scegliere **Live Unit Testing** nel riquadro di sinistra della finestra di dialogo **Opzioni**. La figura seguente illustra le opzioni di configurazione di Live Unit Testing disponibili nella finestra di dialogo.
 
-  ![Immagine](./media/lut-options.png)
+  ![Immagine](~/test/media/lut-options.png)
 
 Le opzioni configurabili includono:
 
@@ -105,21 +105,21 @@ Per abilitare Live Unit Testing, selezionare **Test**, **Live Unit Testing**, **
 
 Dopo l'abilitazione, Live Unit Testing aggiorna le singole righe di codice nell'editor di Visual Studio in modo da indicare se il codice scritto è coperto da unit test e se i test coperti vengono superati.  La figura seguente mostra le righe di codice con test superati e non superati, nonché le righe di codice non coperte dai test. Le righe contraddistinte da un segno di spunta "✓" verde sono coperte solo da test superati, quelle contraddistinte da una "🞩" rossa sono coperte da uno o più test non superati, mentre quelle contraddistinte da un simbolo "" blu non sono coperte da alcun test.
 
-  ![Immagine](./media/lut-codewindow.png)
+  ![Immagine](~/ide/media/lut-codewindow.png)
 
 La visualizzazione del code coverage di Live Unit Testing viene aggiornata immediatamente quando si modifica il codice nell'editor del codice. Durante l'elaborazione delle modifiche, la visualizzazione cambia per indicare che i dati non sono aggiornati e viene aggiunta l'immagine di un timer rotondo sotto i test superati, non superati e non coperti, come illustrato nella figura seguente.
 
-  ![Immagine](./media/lut-codeupdating.png)
+  ![Immagine](~/test/media/lut-codeupdating.png)
  
 ## <a name="getting-information-on-successful-or-failed-tests"></a>Recupero delle informazioni su test superati o non superati
 
 Per visualizzare il numero di test eseguiti su una certa riga, è possibile passare il puntatore sul simbolo di test superato o non superato nella finestra del codice. Se si fa clic sul simbolo, verrà visualizzato lo stato dei singoli test, come illustrato nella figura seguente.
  
-  ![Immagine](./media/lut-failedinfo.png) 
+  ![Immagine](~/test/media/lut-failedinfo.png) 
 
 Quando si passa il puntatore sul test non superato nella descrizione comando, questa si espande e visualizza informazioni aggiuntive sull'errore, come illustrato nell'immagine seguente. Fare clic sul test non superato nella descrizione comando per visualizzarla.
 
-  ![Immagine](./media/lut-failedmsg.png) 
+  ![Immagine](~/test/media/lut-failedmsg.png) 
 
 ## <a name="diagnosing-and-correcting-test-failures"></a>Diagnosi e correzione degli errori di test
 

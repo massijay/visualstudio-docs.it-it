@@ -200,7 +200,7 @@ caps.handback.revision: 53
   
     -   Commenti  
   
-14. Nell'elenco **Proprietà**, scegliere la proprietà **Ordinamento e raggruppamento** quindi scegliere il pulsante con i puntini di sospensione ![Icona con i puntini di sospensione](../sharepoint/media/ellipsisicon.png "Icona con i puntini di sospensione") per visualizzare la finestra di dialogo **Ordinamento e raggruppamento**.  
+14. Nell'elenco **Proprietà**, scegliere la proprietà **Ordinamento e raggruppamento** quindi scegliere il pulsante con i puntini di sospensione ![Icona con i puntini di sospensione](~/sharepoint/media/ellipsisicon.gif "Icona con i puntini di sospensione") per visualizzare la finestra di dialogo **Ordinamento e raggruppamento**.  
   
 15. Nell'elenco **Nome colonna**, scegliere **Nome paziente**, assicurarsi che la colonna **Ordinamento** sia impostata su **Crescente** quindi selezionare il pulsante **OK**.  
   

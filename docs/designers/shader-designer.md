@@ -79,7 +79,7 @@ Questo documento descrive come usare la finestra di progettazione shader di [!IN
   
  Di seguito è illustrata la barra degli strumenti **Modalità progettazione shader**.  
   
- ![Barra degli strumenti Modalità progettazione shader.](../designers/media/digit-dsd-modal-toolbar.png "Digit-DSD-Modal-Toolbar")  
+ ![Barra degli strumenti Modalità progettazione shader.](~/designers/media/digit-dsd-modal-toolbar.png "Digit-DSD-Modal-Toolbar")  
   
  Questa tabella descrive gli elementi disponibili nella barra degli strumenti **Modalità progettazione shader**, elencati nell'ordine di visualizzazione da sinistra verso destra.  
   

@@ -51,7 +51,7 @@ Dato che le impostazioni si trovano all'interno di un file nella codebase, seguo
 ## <a name="override-editorconfig-settings"></a>Eseguire l'override delle impostazioni di EditorConfig
 Quando si aggiunge un file con estensione editorconfig in una cartella della gerarchia di file, le impostazioni vengono applicate a tutti i file applicabili in tale livello e sotto di questo. Per eseguire l'override delle impostazioni di EditorConfig per un determinato progetto o una codebase specifica e usare valori diversi o di override rispetto al file con estensione editorconfig di livello superiore, è sufficiente aggiungere un file con estensione editorconfig al livello che si vuole modificare.
 
-![Gerarchia di EditorConfig](../ide/media/vside_editorconfig_hierarchy.png)
+![Gerarchia di EditorConfig](~/ide/media/vside_editorconfig_hierarchy.png)
 
 Le impostazioni del nuovo file con estensione editorconfig si applicheranno al livello in cui si trova e a tutti i file sottostanti.
 
@@ -70,19 +70,19 @@ Le impostazioni di EditorConfig sono supportate in tutti i linguaggi supportati 
 ## <a name="example"></a>Esempio
 Di seguito è riportato un esempio che mostra lo stato del rientro di un frammento di codice C# prima e dopo l'aggiunta di un file con estensione editorconfig al progetto. L'impostazione **Tabulazioni** nella finestra di dialogo **Opzioni** per l'editor di testo di Visual Studio è definita in modo che quando si preme il tasto TAB all'interno del codice vengono generati spazi.
 
-![Impostazione della tabulazione dell'editor di testo](../ide/media/vside_editorconfig_tabsetting.png)
+![Impostazione della tabulazione dell'editor di testo](~/ide/media/vside_editorconfig_tabsetting.png)
 
 Come previsto, premendo il tasto TAB sulla linea successiva la linea rientra per l'aggiunta di quattro spazi vuoti.
 
-![Il codice prima dell'uso di EditorConfig](../ide/media/vside_editorconfig_before.png)
+![Il codice prima dell'uso di EditorConfig](~/ide/media/vside_editorconfig_before.png)
 
 In un nuovo file denominato .editorconfig aggiunto al progetto viene inserito quanto segue. L'impostazione `[*.cs]` indica che questa modifica verrà applicata solo ai file con estensione cs all'interno del progetto.
 
-![File .editorconfig aggiunto al progetto](../ide/media/vside_editorconfig_addconfig.png)
+![File .editorconfig aggiunto al progetto](~/ide/media/vside_editorconfig_addconfig.png)
 
 A questo punto, quando si preme il tasto TAB, si ottengono caratteri di tabulazione anziché spazi.
 
-![TAB aggiunge caratteri di tabulazione](../ide/media/vside_editorconfig_tab.png)
+![TAB aggiunge caratteri di tabulazione](~/ide/media/vside_editorconfig_tab.png)
 
 > [!NOTE]
 >  L'aggiunta di un file con estensione editorconfig al progetto o alla codebase non sostituisce gli stili esistenti con quelli nuovi, che vengono applicati solo alle linee aggiunte successivamente. Se si rimuove un file con estensione editorconfig dal progetto o dalla codebase, per ripristinare le impostazioni globali come impostazioni dell'editor è necessario ricaricare i file di codice. Eventuali errori nel file con estensione editorconfig vengono segnalati nella finestra Errori in Visual Studio.

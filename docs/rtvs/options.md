@@ -45,7 +45,7 @@ ms.lasthandoff: 05/12/2017
  
 Le impostazioni sono accessibili tramite il menu **R Tools > Opzioni** o tramite **Strumenti > Opzioni** e quindi scorrendo fino a **R Tools**:
  
-  ![Finestra di dialogo Opzioni per R Tools](media/options-dialog.png)
+  ![Finestra di dialogo Opzioni per R Tools](~/rtvs/media/options-dialog.png)
 
 Le sezioni seguenti descrivono le diverse opzioni disponibili in questa pagina.
 
@@ -56,7 +56,7 @@ Le sezioni seguenti descrivono le diverse opzioni disponibili in questa pagina.
 
 È anche disponibile la voce di menu speciale **R Tools > Impostazioni di Data Science** che configura l'IDE di Visual Studio con un layout ottimizzato per le esigenze dei data scientist. In particolare, questa opzione consente di aprire le finestre [R interattivo](interactive-repl.md), [Esplora variabili](variable-explorer.md) e [Aree di lavoro](workspaces.md):
 
-![Layout delle finestre per data scientist in Visual Studio](media/installation-data-scientist-layout-result.png)
+![Layout delle finestre per data scientist in Visual Studio](~/rtvs/media/installation-data-scientist-layout-result.png)
 
 > [!Important]      
 > Per ripristinare le altre impostazioni di Visual Studio in un secondo momento, prima usare il comando **Strumenti > Importa/Esporta impostazioni** selezionando **Esporta le impostazioni di ambiente selezionate** e specificando un nome file. Per ripristinare tali impostazioni, usare lo stesso comando e selezionare **Importa le impostazioni di ambiente selezionate**. È possibile usare gli stessi comandi anche se si modifica il layout per i data scientist e si vuole tornarvi in un secondo momento, anziché usare direttamente il comando **Impostazioni di Data Science**.

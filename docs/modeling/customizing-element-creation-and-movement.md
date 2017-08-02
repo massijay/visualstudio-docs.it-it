@@ -48,7 +48,7 @@ Il ruolo di una direttiva di unione elementi
 ## <a name="defining-an-element-merge-directive"></a>Definizione di una direttiva di unione elementi  
  È possibile aggiungere direttive di unione degli elementi di classi di dominio, relazioni di dominio, forme, connettori e diagrammi. È possibile aggiungere o individuarli in Esplora DSL sotto la classe di dominio di destinazione. La classe ricevente è la classe di dominio dell'elemento che è già nel modello e in cui verrà unito l'elemento nuovo o copiato.  
   
- ![DSL &#45; EMD &#95; dettagli](../modeling/media/dsl-emd_details.png "DSL-EMD_Details")  
+ ![DSL &#45; EMD &#95; dettagli](~/modeling/media/dsl-emd_details.png "DSL-EMD_Details")  
   
  La **classe indicizzazione** è la classe di dominio di elementi che possono essere unite nei membri della classe ricevente. Le istanze delle sottoclassi della classe di indicizzazione verranno unite anche da questo EMD, a meno che non si imposta **si applica alle sottoclassi** su False.  
   

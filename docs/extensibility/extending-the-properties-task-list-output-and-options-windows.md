@@ -64,7 +64,7 @@ ms.lasthandoff: 02/22/2017
   
 3.  Trascinare un **TextBox**, **pulsante**e un **ListBox** all'area di disegno. Disporre gli elementi in modo che la casella di testo e il pulsante allo stesso livello, la casella di riepilogo riempia il resto della finestra sottostante, come illustrato nell'immagine riportata di seguito.  
   
-     ![Termine finestra degli strumenti](../extensibility/media/t5-toolwindow.png "degli strumenti T5")  
+     ![Termine finestra degli strumenti](~/extensibility/media/t5-toolwindow.png "degli strumenti T5")  
   
 4.  Nel riquadro di XAML, individuare il pulsante e impostarne la proprietà di contenuto su **Aggiungi**. Riconnettere il gestore di eventi del pulsante per il controllo Button aggiungendo un `Click="button1_Click"` attributo. Il blocco dell'area di disegno dovrebbe essere simile al seguente:  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 02/22/2017
   
      Quando un utente apre la pagina delle opzioni, dovrebbe essere simile nell'immagine seguente.  
   
-     ![Pagina di opzioni](../extensibility/media/t5optionspage.gif "T5OptionsPage")  
+     ![Pagina di opzioni](~/extensibility/media/t5optionspage.gif "T5OptionsPage")  
   
      Si noti la categoria **ToDo** e la sottocategoria **generale**.  
   
@@ -165,7 +165,7 @@ ms.lasthandoff: 02/22/2017
   
      Per rendere disponibili in dati di **proprietà** finestra è trasformare i dati in proprietà pubbliche che dispongono di due attributi speciali, `Description` e `Category`. `Description`è il testo visualizzato in fondo il **proprietà** finestra. `Category`Determina dove dovrebbe essere visualizzata quando la proprietà di **proprietà** finestra viene visualizzata nel **categoria** visualizzazione. Nell'immagine seguente, il **proprietà** finestra è in **categoria** visualizzazione, il **nome** proprietà nel **ToDo Fields** della categoria selezionata e la descrizione del **nome** proprietà viene visualizzata nella parte inferiore della finestra.  
   
-     ![Finestra proprietà](../extensibility/media/t5properties.png "T5Properties")  
+     ![Finestra proprietà](~/extensibility/media/t5properties.png "T5Properties")  
   
 2.  Aggiungere le seguenti istruzioni using il file TodoItem.cs.  
   

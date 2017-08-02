@@ -43,19 +43,19 @@ Visual Studio viene spesso aggiornato per estenderne le funzionalità e corregge
 ## <a name="update-by-using-the-notifications-hub"></a>Eseguire gli aggiornamenti tramite l'hub Notifiche
 1. Quando sono disponibili aggiornamenti, viene visualizzato un flag di notifica in Visual Studio.
 
-  ![Aggiornare Visual Studio 2017 tramite l'hub Notifiche](media/notification-flag.png "Flag di notifica in Visual Studio")
+  ![Aggiornare Visual Studio 2017 tramite l'hub Notifiche](~/install/media/notification-flag.png "Flag di notifica in Visual Studio")
 
   Toccare o fare clic sul flag di notifica per aprire l'hub **Notifiche**.
 
-  ![Aggiornare Visual Studio 2017 tramite l'hub Notifiche](media/notifications-hub.png "Hub Notifiche in Visual Studio")
+  ![Aggiornare Visual Studio 2017 tramite l'hub Notifiche](~/install/media/notifications-hub.png "Hub Notifiche in Visual Studio")
 
 2. Toccare o fare clic su **"Visual Studio Update" è disponibile** per aprire la finestra di dialogo **Estensioni e aggiornamenti**.
 
-  ![Aggiornare Visual Studio 2017 tramite l'hub Notifiche](media/notifications-hub-select.png "Hub Notifiche in Visual Studio")
+  ![Aggiornare Visual Studio 2017 tramite l'hub Notifiche](~/install/media/notifications-hub-select.png "Hub Notifiche in Visual Studio")
 
 3. Nella finestra di dialogo **Estensioni e aggiornamenti** toccare o fare clic sul pulsante **Aggiorna**.
 
-  ![Aggiornare Visual Studio 2017 tramite l'hub Notifiche](media/notifications-extensions-and-updates.png "Finestra di dialogo Estensioni e aggiornamenti in Visual Studio")
+  ![Aggiornare Visual Studio 2017 tramite l'hub Notifiche](~/install/media/notifications-extensions-and-updates.png "Finestra di dialogo Estensioni e aggiornamenti in Visual Studio")
 
 ## <a name="update-by-using-the-visual-studio-installer"></a>Eseguire gli aggiornamenti tramite il programma di installazione di Visual Studio
 1.    Aprire il programma di installazione. Prima di continuare, potrebbe essere necessario aggiornare il programma di installazione. In tal caso, verrà richiesto di effettuare questa operazione.
@@ -68,7 +68,7 @@ Visual Studio viene spesso aggiornato per estenderne le funzionalità e corregge
 
   Toccare o fare clic sul pulsante **Aggiorna** per installare gli aggiornamenti.
 
-     ![Aggiornare Visual Studio 2017 tramite il programma di installazione di Visual Studio](media/update-visual-studio.png "Aggiornare Visual Studio 2017 tramite il programma di installazione di Visual Studio")
+     ![Aggiornare Visual Studio 2017 tramite il programma di installazione di Visual Studio](~/install/media/update-visual-studio.png "Aggiornare Visual Studio 2017 tramite il programma di installazione di Visual Studio")
 
 ## <a name="get-support"></a>Supporto
 Non sempre tutto funziona correttamente. Se l'installazione di Visual Studio non riesce, vedere l'articolo [Risoluzione degli errori di installazione e aggiornamento di Visual Studio 2017](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures) della Knowledge Base che include suggerimenti utili per la risoluzione dei problemi.

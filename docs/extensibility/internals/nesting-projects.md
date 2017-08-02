@@ -31,7 +31,7 @@ Gli sviluppatori di applicazioni aziendali che utilizzano il pacchetto di Visual
  Nell'esempio c\# Example.Nested Project, è possibile trovare un esempio di progetti annidati.  
   
 ## Esempio di progetti annidati  
- ![Soluzione di progetti annidati](../../extensibility/internals/media/vsnestedprojects.gif "vsNestedProjects")  
+ ![Soluzione di progetti annidati](~/extensibility/internals/media/vsnestedprojects.gif "vsNestedProjects")  
 Esempio di progetti annidati  
   
 ## Vedere anche  

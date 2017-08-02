@@ -78,7 +78,7 @@ ms.lasthandoff: 02/22/2017
   
     -   Per aggiungere un menu, selezionare il pulsante **Aggiungi nuovo menu** e il pulsante **Modifica selezione** e quindi assegnare un nome al menu che si vuole aggiungere.  
   
-         ![Finestra di dialogo Personalizza che illustra come aggiungere un menu](../ide/media/addmenu.png "AddMenu")  
+         ![Finestra di dialogo Personalizza che illustra come aggiungere un menu](~/ide/media/addmenu.png "AddMenu")  
   
     -   Per rimuovere un menu, selezionarlo nell'elenco **Controlli** e fare clic sul pulsante **Elimina**.  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 02/22/2017
   
     -   Per aggiungere una barra degli strumenti, selezionare il pulsante **Nuovo**, specificare un nome per la barra degli strumenti da aggiungere e quindi fare clic sul pulsante **OK**.  
   
-         ![Finestra di dialogo Personalizza che illustra come aggiungere una barra degli strumenti](../ide/media/addtoolbar.png "AddToolbar")  
+         ![Finestra di dialogo Personalizza che illustra come aggiungere una barra degli strumenti](~/ide/media/addtoolbar.png "AddToolbar")  
   
     -   Per rimuovere una barra degli strumenti personalizzata, selezionarla nell'elenco **Barre degli strumenti**e fare clic sul pulsante **Elimina**.  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 02/22/2017
   
          Nella finestra di dialogo **Aggiungi comando** scegliere un elemento dall'elenco **Categorie**, scegliere un elemento dall'elenco **Comandi** e quindi fare clic sul pulsante **OK**.  
   
-         ![Finestra di dialogo Aggiungi comando in Visual Studio](../ide/media/addcommand.png "AddCommand")  
+         ![Finestra di dialogo Aggiungi comando in Visual Studio](~/ide/media/addcommand.png "AddCommand")  
   
     -   Per eliminare un comando, selezionarlo nell'elenco **Controlli** e fare clic sul pulsante **Elimina**.  
   

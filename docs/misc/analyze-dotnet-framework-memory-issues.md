@@ -44,7 +44,7 @@ L'analizzatore di memoria gestita di Visual Studio permette di rilevare perdite 
   
  Il Garbage Collector mantiene per ogni applicazione un albero dei riferimenti, che tiene traccia degli oggetti a cui l'applicazione fa riferimento.  L'*albero dei riferimenti* ha un insieme di radici, che include oggetti globali e statici, oltre a stack di thread associati e oggetti con istanze create in modo dinamico.  Un oggetto contiene una radice se è presente almeno un oggetto padre che include un riferimento all'oggetto.  Il Garbage Collector può recuperare la memoria di un oggetto solo quando nessun altro oggetto o variabile dell'applicazione include riferimenti a tale oggetto.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
   
 ##  <a name="BKMK_Identify_a_memory_issue_in_an_app"></a> Identificare un problema di memoria in un'app  
  Il sintomo più evidente di problemi di memoria è individuabile nelle prestazioni dell'app, in particolare in caso di peggioramento delle prestazioni nel tempo.  Anche il peggioramento delle prestazioni di altre app durante l'esecuzione dell'app specifica potrebbe indicare un problema di memoria.  Se si sospetta un problema di memoria, usare uno strumento quale Gestione attività o [Windows Performance Monitor](http://technet.microsoft.com/library/cc749249.aspx) per approfondire la verifica.  Una possibile origine della perdita di memoria potrebbe essere, ad esempio, un incremento inspiegabile nella dimensione totale della memoria:  
@@ -73,7 +73,7 @@ L'analizzatore di memoria gestita di Visual Studio permette di rilevare perdite 
   
  Per analizzare l'incremento nell'uso di memoria di un'app, raccogliere due file di dump da una singola istanza dell'app.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
   
 ##  <a name="BKMK_Analyze_memory_use"></a> Analizzare l'uso della memoria  
  [Filtrare l'elenco di oggetti](#BKMK_Filter_the_list_of_objects) **&#124;** [Analizzare i dati di memoria da un singolo snapshot](#BKMK_Analyze_memory_data_in_from_a_single_snapshot) **&#124;** [Confrontare due snapshot di memoria](#BKMK_Compare_two_memory_snapshots)  
@@ -88,7 +88,7 @@ L'analizzatore di memoria gestita di Visual Studio permette di rilevare perdite 
   
  L'analizzatore di memoria avvia una sessione di debug per analizzare il file e mostra i risultati nella pagina Visualizza heap:  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
   
 ###  <a name="BKMK_Filter_the_list_of_objects"></a> Filtrare l'elenco di oggetti  
  Per impostazione predefinita, l'analizzatore di memoria filtra l'elenco di oggetti in uno snapshot di memoria per mostrare solo i tipi e le istanze che corrispondono a codice utente e per mostrare solo i tipi la cui dimensione inclusiva totale supera una percentuale di soglia della dimensione totale dell'heap.  È possibile modificare queste opzioni nell'elenco **Impostazioni visualizzazione**:  
@@ -100,14 +100,14 @@ L'analizzatore di memoria gestita di Visual Studio permette di rilevare perdite 
   
  È anche possibile filtrare l'elenco di tipi immettendo una stringa nella casella **Cerca**.  L'elenco mostra solo i tipi i cui nomi includono la stringa.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
   
 ###  <a name="BKMK_Analyze_memory_data_in_from_a_single_snapshot"></a> Analizzare i dati di memoria da un singolo snapshot  
  Visual Studio avvia una nuova sessione di debug per analizzare il file, quindi mostra i dati della memoria in una finestra Visualizza heap.  
   
  ![Elenco Tipo di oggetto](../misc/media/dbg_mma_objecttypelist.png "DBG\_MMA\_ObjectTypeList")  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
   
 #### Tabella Tipo di oggetto  
  Nella tabella in alto sono elencati tutti i tipi di oggetti conservati in memoria.  
@@ -118,7 +118,7 @@ L'analizzatore di memoria gestita di Visual Studio permette di rilevare perdite 
   
 -   **Dimensione inclusiva \(byte\)** sono indicate le dimensioni degli oggetti a cui si fa riferimento.  
   
- Per visualizzare un elenco delle istanze del tipo, è possibile scegliere l'icona relativa alle istanze \(![Icona dell'istanza nella colonna Tipo di oggetto](../misc/media/dbg_mma_instancesicon.png "DBG\_MMA\_InstancesIcon")\) nella colonna **Tipo di oggetto**.  
+ Per visualizzare un elenco delle istanze del tipo, è possibile scegliere l'icona relativa alle istanze \(![Icona dell'istanza nella colonna Tipo di oggetto](~/profiling/media/dbg_mma_instancesicon.png "DBG\_MMA\_InstancesIcon")\) nella colonna **Tipo di oggetto**.  
   
 #### Tabella Istanza  
  ![Tabella Istanze](../misc/media/dbg_mma_instancestable.png "DBG\_MMA\_InstancesTable")  
@@ -181,7 +181,7 @@ L'analizzatore di memoria gestita di Visual Studio permette di rilevare perdite 
   
  Anche la colonna **Diff. conteggio riferimenti** è aggiunta alla tabella **Percorsi della radice**.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
   
 ## Vedere anche  
  [Post del blog su VS ALM TFS relativo all'uso di Visual Studio 2013 per la diagnosi rei problemi di memoria .NET in produzione](http://blogs.msdn.com/b/visualstudioalm/archive/2013/06/20/using-visual-studio-2013-to-diagnose-net-memory-issues-in-production.aspx)   

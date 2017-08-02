@@ -65,7 +65,7 @@ Usare **Elenco attività** per tenere traccia dei commenti di codice che usano t
   
 -   Nel menu **Visualizza** scegliere **Elenco attività** (tastiera: CTRL+\\,T).  
   
-     ![Finestra Elenco attività](../ide/media/vs2015_task_list.png "vs2015_task_list")  
+     ![Finestra Elenco attività](~/ide/media/vs2015_task_list.png "vs2015_task_list")  
   
 #### <a name="to-change-the-sort-order-of-the-list"></a>Per modificare l'ordinamento dell'elenco  
   
@@ -114,7 +114,7 @@ Usare **Elenco attività** per tenere traccia dei commenti di codice che usano t
   
      È così possibile visualizzare [Elenco attività, Ambiente, finestra di dialogo Opzioni](../ide/reference/task-list-environment-options-dialog-box.md).  
   
-     ![Elenco attività di Visual Studio](../ide/media/vs2015_task_list_options.png "vs2015_task_list_options")  
+     ![Elenco attività di Visual Studio](~/ide/media/vs2015_task_list_options.png "vs2015_task_list_options")  
   
 3.  Nella casella di testo **Nome** della categoria **Token** immettere il nome del token, ad esempio "BUG".  
   
@@ -134,7 +134,7 @@ Usare **Elenco attività** per tenere traccia dei commenti di codice che usano t
 ##  <a name="shortcuts"></a> Collegamenti  
  Un *collegamento* è un segnalibro nel codice che viene rilevato nell' **Elenco attività**. Ha un'icona diversa rispetto a un segnalibro normale. Fare doppio clic sul collegamento in **Elenco attività** per passare alla posizione corrispondente nel codice.  
   
- ![Icona di collegamento Elenco attività di Visual Studio](../ide/media/vs2015_task_list_bookmark.png "vs2015_task_list_bookmark")  
+ ![Icona di collegamento Elenco attività di Visual Studio](~/ide/media/vs2015_task_list_bookmark.png "vs2015_task_list_bookmark")  
   
 #### <a name="to-create-a-shortcut"></a>Per creare un collegamento  
   

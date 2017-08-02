@@ -34,7 +34,7 @@ Ogni configurazione può supportare un set di processi di compilazione che gener
   
  Gruppi possono anche avere un output chiave che consente di scelta rapida creazione di pacchetti in modo che punti a un nome significativo. Qualsiasi gruppo potrebbe essere vuoto in una determinata configurazione, pertanto non devono essere fatte supposizioni sulle dimensioni di un gruppo. La dimensione \(numero di output\) di ogni gruppo in qualsiasi configurazione può essere diversa dalla dimensione di un altro gruppo nella stessa configurazione. Può inoltre essere diversa da quelle dello stesso gruppo in un'altra configurazione.  
   
- ![Rappresentazione grafica dei gruppi di output](../../extensibility/internals/media/vsoutputgroups.png "vsOutputGroups")  
+ ![Rappresentazione grafica dei gruppi di output](~/extensibility/internals/media/vsoutputgroups.gif "vsOutputGroups")  
 Gruppi di output  
   
  L'utilizzo principale della <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg> interfaccia consiste nel fornire l'accesso per compilare, distribuire e il debug di oggetti di gestione e consentire la libertà di output gruppo di progetti. Per ulteriori informazioni sull'utilizzo di questa interfaccia, vedere [Oggetto di configurazione di progetto](../../extensibility/internals/project-configuration-object.md).  

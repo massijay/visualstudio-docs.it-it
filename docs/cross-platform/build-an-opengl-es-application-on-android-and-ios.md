@@ -109,7 +109,7 @@ Quando si installa l'opzione Visual C++ per Sviluppo app per dispositivi mobili 
   
      Visual Studio avvia l'emulatore, che richiede alcuni secondi per caricare e distribuire il codice. Ecco come verrà visualizzata l'app in Visual Studio Emulator for Android.  
   
-     ![App in esecuzione nell'emulatore per Android](../cross-platform/media/cppmdd_opengles_andemulator.png "CPPMDD_OpenGLES_AndEmulator")  
+     ![App in esecuzione nell'emulatore per Android](~/cross-platform/media/cppmdd_opengles_andemulator.png "CPPMDD_OpenGLES_AndEmulator")  
   
      Una volta avviata l'app, è possibile impostare i punti di interruzione e usare il debugger per eseguire il codice un'istruzione alla volta, esaminare le variabili locali e controllare i valori.  
   
@@ -150,7 +150,7 @@ Quando si installa l'opzione Visual C++ per Sviluppo app per dispositivi mobili 
   
      Una volta avviata l'app, è possibile impostare i punti di interruzione e usare il debugger di Visual Studio per esaminare le variabili locali, visualizzare lo stack di chiamate e controllare i valori.  
   
-     ![Debugger nel punto di interruzione nell'app iOS](../cross-platform/media/cppmdd_opengles_iosdebug.png "CPPMDD_OpenGLES_iOSDebug")  
+     ![Debugger nel punto di interruzione nell'app iOS](~/cross-platform/media/cppmdd_opengles_iosdebug.png "CPPMDD_OpenGLES_iOSDebug")  
   
 5.  Premere MAIUSC+F5 per arrestare il debug.  
   

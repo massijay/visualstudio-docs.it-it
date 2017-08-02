@@ -29,7 +29,7 @@ La funzionalità di estensibilità JavaScript IntelliSense consente di personali
   
  Il servizio di linguaggio JavaScript forniscono le funzionalità di IntelliSense per le raccolte di terze parti JavaScript che vengono aggiunti a un progetto.  Per la maggior parte delle librerie, il completamento delle istruzioni è fornito automaticamente dal servizio di linguaggio.  Nella figura seguente viene illustrato un esempio di completamento delle istruzioni:  
   
- ![Esempio di completamento istruzioni](../ide/media/js_intellisense_completion.png "js\_intellisense\_completion")  
+ ![Esempio di completamento istruzioni](~/ide/media/js_intellisense_completion.png "js\_intellisense\_completion")  
   
  Se la libreria include le descrizioni delle variabili, le funzioni e oggetti nei tag di commenti standard JavaScript \(\/\), automaticamente usufruendo di, per impostazione predefinita, le funzionalità di estensibilità di IntelliSense, che forniscono informazioni descrittive in una finestra popup che viene visualizzata a destra degli elementi in un elenco di completamento, o quando si digita la parentesi di apertura in una chiamata di funzione.  Commenti nella casella popup contengono la descrizione del membro.  Nell'esempio seguente viene illustrata la casella popup per un elenco di completamento.  
   
@@ -315,7 +315,7 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 5.  In appCode.js, digitare il seguente codice.  Mentre si digita, viene visualizzato commenti standard con estensione visualizzare quali informazioni rapide IntelliSense.  
   
-     ![Esempio che illustra l'uso di intellisense.annotate](../ide/media/js_intellisense_annotations.png "js\_intellisense\_annotations")  
+     ![Esempio che illustra l'uso di intellisense.annotate](~/ide/media/js_intellisense_annotations.png "js\_intellisense\_annotations")  
   
 ###  <a name="Logging"></a> Inviando messaggi nella Finestra di output  
  Nella procedura seguente viene illustrato come inviare messaggi alla finestra di output.  È possibile inviare messaggi per eseguire il debug delle estensioni di IntelliSense.  
@@ -488,7 +488,7 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 4.  In appCode.js, digitare il seguente codice.  Mentre tipo, si verrà visualizzata l'icona dello spazio dei nomi è stata modificata "{}", come viene utilizzato in c.  
   
-     ![Esempio che illustra l'uso della proprietà del glifo](../ide/media/js_intellisense_glyph_namespace.png "js\_intellisense\_glyph\_namespace")  
+     ![Esempio che illustra l'uso della proprietà del glifo](~/ide/media/js_intellisense_glyph_namespace.png "js\_intellisense\_glyph\_namespace")  
   
 5.  In appCode.js, digitare il seguente codice.  Mentre si digita, viene visualizzata una nuova icona di enumerazione per il membro Enum1 e una nuova icona della classe per il membro SomeClass1.  
   
@@ -530,7 +530,7 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 3.  In appCode.js, digitare il seguente codice.  L'elenco dell'identificatore viene invece di IntelliSense in quanto la funzione di cui è stato eseguito il wrapping non viene mai chiamata, ovvero la funzione di `throttled` non restituisce i risultati.  
   
-     ![Esempio di override dei risultati di intellisense](../ide/media/js_intellisense_override.png "js\_intellisense\_override")  
+     ![Esempio di override dei risultati di intellisense](~/ide/media/js_intellisense_override.png "js\_intellisense\_override")  
   
 4.  Aggiungere il codice seguente a exampleLib.intellisense.js.  Questa modifica il comportamento in fase di progettazione in modo da indicare IntelliSense per la funzione di cui è stato eseguito il wrapping, come previsto.  
   
@@ -543,7 +543,7 @@ intellisense.addEventListener('statementcompletion', function (event) {
   
 5.  In appCode.js, verificare i risultati digitando lo stesso codice digitato in precedenza.  Questa volta, IntelliSense fornisce informazioni desiderate.  
   
-     ![Esempio di override dei risultati di IntelliSense](../ide/media/js_intellisense_override_fixed.png "js\_intellisense\_override\_fixed")  
+     ![Esempio di override dei risultati di IntelliSense](~/ide/media/js_intellisense_override_fixed.png "js\_intellisense\_override\_fixed")  
   
 ## Vedere anche  
  [IntelliSense per JavaScript](../ide/javascript-intellisense.md)   

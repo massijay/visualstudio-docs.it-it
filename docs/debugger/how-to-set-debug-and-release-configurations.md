@@ -60,7 +60,7 @@ Progetti di Visual Studio installata versione separata e configurazioni per il p
   
 2.  Sulla barra degli strumenti selezionare **Debug** o **Release**nella caselle di riepilogo **Configurazione soluzione**  
   
-     ![configurazione di compilazione per la barra degli strumenti](../debugger/media/toolbarbuildconfiguration.png "ToolbarBuildConfiguration")  
+     ![configurazione di compilazione per la barra degli strumenti](~/debugger/media/toolbarbuildconfiguration.png "ToolbarBuildConfiguration")  
   
      Questa procedura guidata non è disponibile nelle edizioni Express.  È possibile utilizzare le voci di menu **Compila soluzione F6** e **Avvia debug F5** per scegliere la configurazione.  
   

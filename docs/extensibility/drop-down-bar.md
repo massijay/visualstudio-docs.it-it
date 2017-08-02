@@ -24,7 +24,7 @@ La barra a discesa viene fornita la parte superiore della finestra del codice e 
 ## Interfacce a discesa della barra  
  In [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)], ad esempio, la barra a discesa contiene gli elenchi per le funzioni membro degli elementi di [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] e gli elementi di [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] , come mostrato nell'immagine seguente.  
   
- ![Barre a discesa](../extensibility/media/vsdropdown_bar.gif "vsDropdown\_bar")  
+ ![Barre a discesa](~/extensibility/media/vsdropdown_bar.gif "vsDropdown\_bar")  
 barra a discesa  
   
  Quando si implementa una barra a discesa, esistono quattro interfacce di importanza primaria:  

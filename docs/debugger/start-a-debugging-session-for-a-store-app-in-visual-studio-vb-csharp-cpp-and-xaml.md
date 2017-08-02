@@ -44,7 +44,7 @@ manager: "ghogen"
 # Avviare una sessione di debug per un&#39;app dello Store in Visual Studio (VB, C#, C++ e XAML)
 [!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
 
-![Si applica a Windows e Windows Phone](../debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+![Si applica a Windows e Windows Phone](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
   
  In questo argomento viene descritto come avviare una sessione di debug per le app di Store scritte in XAML, Visual C\+\+, Visual C\# o Visual Basic. Il debug di un'app comporta sia la configurazione della la sessione di debug che la scelta della modalità di avvio dell'app.  
   
@@ -104,11 +104,11 @@ manager: "ghogen"
   
     -   Per le app Visual C\# e Visual Basic scegli **Debug**.  
   
-         ![Pagina delle proprietà di debug progetto C&#35; &#47; VB](../debugger/media/dbg_csvb_debugpropertypage.png "DBG\_CsVb\_DebugPropertyPage")  
+         ![Pagina delle proprietà di debug progetto C&#35; &#47; VB](~/debugger/media/dbg_csvb_debugpropertypage.png "DBG\_CsVb\_DebugPropertyPage")  
   
     -   Per le app Visual C\+\+ espandi il nodo **Proprietà di configurazione**, quindi scegli **Debug**.  
   
-         ![Pagina delle proprietà di debug dell'app di Windows Store](../debugger/media/dbg_cpp_debugpropertypage.png "DBG\_CPP\_DebugPropertyPage")  
+         ![Pagina delle proprietà di debug dell'app di Windows Store](~/debugger/media/dbg_cpp_debugpropertypage.png "DBG\_CPP\_DebugPropertyPage")  
   
 ###  <a name="BKMK_Choose_the_build_configuration_options"></a> Scegliere le opzioni di configurazione della compilazione  
   
@@ -117,7 +117,7 @@ manager: "ghogen"
 2.  Dall'elenco **Piattaforma** seleziona la piattaforma di destinazione per cui eseguire la compilazione. Nella maggior parte dei casi, **Qualsiasi CPU** \(**Tutte le piattaforme** in Visual C\+\+\) rappresenta la scelta ottimale.  
   
 ###  <a name="BKMK_Choose_the_deployment_target"></a> Scegliere la destinazione di distribuzione  
- ![Si applica solo a Windows](../debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Si applica solo a Windows](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Puoi distribuire ed eseguire il debug di un'app di Windows Store nel computer che esegue Visual Studio, nel simulatore di Visual Studio sul computer locale o in un dispositivo remoto.  
   
@@ -149,12 +149,12 @@ manager: "ghogen"
   
     -   Per le app C\+\+, fai clic sulla freccia in giù nella casella **Nome computer** e scegli **\<Trova...\>**.  
   
-     ![Finestra di dialogo per la selezione della connessione del debugger remoto](../debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
+     ![Finestra di dialogo per la selezione della connessione del debugger remoto](~/debugger/media/vsrun_selectremotedebuggerdlg.png "VSRUN\_SelectRemoteDebuggerDlg")  
   
     > [!NOTE]
     >  Nella finestra di dialogo **Seleziona connessione debugger remoto** sono visualizzati i computer sulla subnet locale e i computer collegati direttamente al computer che esegue Visual Studio tramite un cavo Ethernet. Per specificare un altro computer, immetti il nome nella casella **Nome computer**.  
   
- ![Si applica solo a Windows Phone](../debugger/media/phone_only_content.png "phone\_only\_content")  
+ ![Si applica solo a Windows Phone](~/debugger/media/phone_only_content.png "phone\_only\_content")  
   
  Puoi distribuire un'app di Windows Phone Store ed eseguirne il debug in un dispositivo o in uno degli emulatori del telefono di Visual Studio. Seleziona il dispositivo o l'emulatore nell'elenco **Dispositivo di destinazione**.  
   
@@ -177,7 +177,7 @@ manager: "ghogen"
 |**Misto \(gestito e nativo\)**|Esegue il debug sia del codice C\+\+ nativo e del codice gestito nell'app. Il codice JavaScript viene ignorato.|  
 |**Solo GPU**|Esegue il debug del codice C\+\+ nativo eseguito su un'unità di elaborazione grafica \(GPU\).|  
   
- ![Si applica solo a Windows Phone](../debugger/media/phone_only_content.png "phone\_only\_content")  
+ ![Si applica solo a Windows Phone](~/debugger/media/phone_only_content.png "phone\_only\_content")  
   
  Per le app di Windows Store Phone, puoi anche scegliere il debugger da usare per i processi in background in **Processo attività in background**.  
   
@@ -191,7 +191,7 @@ manager: "ghogen"
 -   Per le app Visual C\+\+ scegli **Sì** dall'elenco **Avvia applicazione** nella pagina delle proprietà **Debug**.  
   
 ###  <a name="BKMK__Optional__Disable_network_loopbacks"></a> \(Facoltativo\) Disabilitare i loopback di rete  
- ![Si applica solo a Windows](../debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Si applica solo a Windows](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Per motivi di sicurezza, a un'app di Windows Store installata in modalità standard non è consentito effettuare chiamate di rete al dispositivo in cui è installata. Per impostazione predefinita, la distribuzione di Visual Studio crea una esenzione da questa regola per l'app distribuita. Questa esenzione ti consente di verificare le procedure di comunicazione in un singolo computer. Prima di inviare l'app a Windows Store, dovrai testare l'app senza l'esenzione.  
   
@@ -205,7 +205,7 @@ manager: "ghogen"
  Per diagnosticare i problemi di installazione e configurazione iniziale dell'app in Visual C\# o Visual Basic, scegli **Disinstalla e reinstalla il pacchetto** nella pagina delle proprietà **Debug** per ricreare un'installazione originale all'avvio del debug. Questa opzione non è disponibile per i progetti Visual C\+\+.  
   
 ###  <a name="BKMK__Optional__Disable_authentication_requirement_to_start_the_remote_debugger"></a> \(Facoltativo\) Disabilitare il requisito di autenticazione per avviare il debugger remoto  
- ![Si applica solo a Windows](../debugger/media/windows_only_content.png "windows\_only\_content")  
+ ![Si applica solo a Windows](~/debugger/media/windows_only_content.png "windows\_only\_content")  
   
  Per impostazione predefinita, è necessario fornire le credenziali per eseguire il debugger remoto.  
   

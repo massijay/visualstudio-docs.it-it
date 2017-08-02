@@ -91,7 +91,7 @@ In questo documento viene descritto come utilizzare l'editor modello di [!INCLUD
   
  Di seguito è illustrata la barra degli strumenti **Editor modello**.  
   
- ![Barra degli strumenti Visualizzatore modelli](../designers/media/digit-mre-toolbar.png "Digit\-MRE\-Toolbar")  
+ ![Barra degli strumenti Visualizzatore modelli](~/designers/media/digit-mre-toolbar.png "Digit\-MRE\-Toolbar")  
   
  Nella tabella successiva vengono descritti gli elementi nella barra degli strumenti **Editor modello**, elencati in ordine di visualizzazione dall'alto verso il basso.  
   

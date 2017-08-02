@@ -199,7 +199,7 @@ Lo strumento libreria Visualizzatore immagini di Visual Studio è possibile cari
   
  Le informazioni visualizzate per ogni origine dell'immagine includono il tipo di sfondo per visualizzarlo, se è possibile applicare un tema o supporta contrasto elevato, le dimensioni è valido per o se è indipendente dalla dimensione e se l'immagine proviene da un assembly nativo.  
   
- ![Tema del visualizzatore della libreria di immagini](../../extensibility/internals/media/image-library-viewer-can-theme.png "Image Library Viewer Can Theme")  
+ ![Tema del visualizzatore della libreria di immagini](~/extensibility/internals/media/image-library-viewer-can-theme.png "Image Library Viewer Can Theme")  
   
  Quando si convalida un manifesto dell'immagine, è consigliabile distribuire il manifesto e l'immagine DLL nelle rispettive posizioni reali. Ciò consente di verificare che tutti i percorsi relativi funzionino correttamente e che la libreria di immagini è possibile individuare e caricare il manifesto e l'immagine DLL.  
   

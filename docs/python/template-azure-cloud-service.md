@@ -48,11 +48,11 @@ Questo argomento contiene informazioni dettagliate sul modello di progetto e su 
 1. Installare [Azure .NET SDK per Visual Studio](https://www.visualstudio.com/vs/azure-tools/), che è necessario per usare il modello Servizio cloud.
 1. In Visual Studio selezionare **File > Nuovo > Progetto**, cercare "Azure Python" e quindi selezionare **Servizio cloud di Azure** nell'elenco:
 
-    ![Modello Progetto servizio cloud di Azure per Python](media/template-azure-cloud-project.png)
+    ![Modello Progetto servizio cloud di Azure per Python](~/python/media/template-azure-cloud-project.png)
 
 1. Selezionare uno o più ruoli da includere. I progetti servizio cloud possono combinare ruoli scritti in linguaggi diversi, di conseguenza è possibile scrivere facilmente le singole parti dell'applicazione nel linguaggio più appropriato. Per aggiungere nuovi ruoli al progetto dopo aver completato questa finestra di dialogo, fare clic con il pulsante destro del mouse su **Ruoli** in Esplora soluzioni e selezionare uno degli elementi in **Aggiungi**.
 
-    ![Aggiunta di ruoli nel modello Progetto servizio cloud di Azure](media/template-azure-cloud-service-project-wizard.png)
+    ![Aggiunta di ruoli nel modello Progetto servizio cloud di Azure](~/python/media/template-azure-cloud-service-project-wizard.png)
 
 1. Via via che vengono creati i singoli progetti ruolo, potrebbe essere richiesta l'installazione di altri pacchetti Python, ad esempio Django, Bottle o Flask, se è stato selezionato un ruolo che usa uno di tali framework.
 
@@ -60,7 +60,7 @@ Questo argomento contiene informazioni dettagliate sul modello di progetto e su 
 
 1. La cartella `bin` di un progetto contiene anche uno o due script di PowerShell usati per la configurazione della macchina virtuale remota, tra cui quello di installazione di Python, eventuali file [requirements.txt](#dependencies) presenti nel progetto e quello per l'eventuale configurazione di IIS. È possibile modificare questi file a seconda della distribuzione, anche se le opzioni più comuni possono essere gestite in altri modi. Vedere [Configurazione della distribuzione del ruolo](#configuring-role-deployment) più avanti. È consigliabile non rimuovere questi file, perché se non sono disponibili verrà usato uno script di configurazione legacy.
 
-    ![File di supporto del ruolo di lavoro](media/template-azure-cloud-service-worker-role-support-files.png)
+    ![File di supporto del ruolo di lavoro](~/python/media/template-azure-cloud-service-worker-role-support-files.png)
 
     Per aggiungere questi script di configurazione a un nuovo progetto, fare clic con il pulsante destro del mouse sul progetto, scegliere **Aggiungi > Nuovo elemento** e selezionare **File di supporto del ruolo Web** o **File di supporto del ruolo di lavoro**.
    

@@ -34,7 +34,7 @@ caps.handback.revision: 11
   
  L'apertura di file in modo indipendente da un contenitore risulta utile per diverse ragioni.  Può, ad esempio, verificarsi il caso in cui, mentre si sviluppa una soluzione basata su un progetto, si desideri visualizzare un file che non è parte integrante dello sviluppo della soluzione.  Esempi tra i più comuni includono note o istruzioni di sviluppatori, schemi di database e parti di codice.  Inoltre, può essere necessario creare un file autonomo.  
   
- ![Progetti di soluzioni](../../ide/reference/media/projects_solutions_misc.gif "Projects\_Solutions\_Misc")  
+ ![Progetti di soluzioni](~/ide/reference/media/projects_solutions_misc.gif "Projects\_Solutions\_Misc")  
   
  Se le opzioni relative alla cartella sono attivate, in Esplora soluzioni può essere visualizzata una cartella File esterni per i file.  È possibile impostare le opzioni in [Documenti, Ambiente, finestra di dialogo Opzioni](../../ide/reference/documents-environment-options-dialog-box.md).  Una volta chiuso un file esterno, questo non verrà associato ad alcuna particolare soluzione o alcun particolare progetto, a meno che non sia stata attivata anche in questo caso la relativa opzione.  
   

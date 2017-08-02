@@ -48,35 +48,35 @@ Questa funzionalità esiste in Visual Studio 2017 e versioni successive.  Consen
 
 Per impostazione predefinita sarà visualizzata una piccola finestra in alto a destra dell'IDE.
 
-![Vai a tutti](media/gotoall.png)
+![Vai a tutti](~/ide/media/gotoall.png)
 
 Da qui è possibile procedere in vari modi:
 * Immettere il testo senza un prefisso per eseguire la ricerca usando [le icone di filtro](#filtered-searches) selezionate sotto la casella di testo.
 * Immettere un [prefisso](#filtered-searches) seguito dal testo da cercare.
 * Immettere un punto interrogativo (?) per ottenere informazioni aggiuntive.
-  ![Guida di Vai a tutti](media/gotoall_help.png)
+  ![Guida di Vai a tutti](~/ide/media/gotoall_help.png)
 
 ### <a name="filtered-searches"></a>Ricerche con filtri
 Per restringere la ricerca a un tipo specifico, è possibile usare un prefisso durante la digitazione o usare le icone sotto la finestra di ricerca, come illustrato di seguito.
 
 Prefisso | Icona | Metodo rapido | Descrizione
 :----: | ---- | -------- | ---
-#      | ![Icona Simbolo](media/gotoall_symbolicon.png) | CTRL+1, CTRL+S | Trova i simboli corrispondenti
-f      | ![Icona File](media/gotoall_fileicon.png)     | CTRL+1, CTRL+F | Trova i nomi file corrispondenti
-m      | ![Icona del membro](media/gotoall_membericon.png) | CTRL+1, CTRL+M | Trova i membri corrispondenti
-u      | ![Icona Tipo](media/gotoall_typeicon.png)     | CTRL+1, CTRL+T | Trova i tipi corrispondenti
-:      | ![Icona Riga](media/gotoall_lineicon.png)     | CTRL+G         | Passa al numero di riga immesso
+#      | ![Icona Simbolo](~/ide/media/gotoall_symbolicon.png) | CTRL+1, CTRL+S | Trova i simboli corrispondenti
+f      | ![Icona File](~/ide/media/gotoall_fileicon.png)     | CTRL+1, CTRL+F | Trova i nomi file corrispondenti
+m      | ![Icona del membro](~/ide/media/gotoall_membericon.png) | CTRL+1, CTRL+M | Trova i membri corrispondenti
+u      | ![Icona Tipo](~/ide/media/gotoall_typeicon.png)     | CTRL+1, CTRL+T | Trova i tipi corrispondenti
+:      | ![Icona Riga](~/ide/media/gotoall_lineicon.png)     | CTRL+G         | Passa al numero di riga immesso
 
 ### <a name="search-locations"></a>Percorsi di ricerca
 Per restringere la ricerca a percorsi specifici, usare le due icone documento.
 
 Icona | Descrizione
 ---- | ---
-![Documento corrente](media/gotoall_currentdocument.png) | Cerca solo il documento corrente
-![Documenti esterni](media/gotoall_external.png) | Cerca i documenti esterni oltre a quelli presenti nel progetto e/o nella soluzione
+![Documento corrente](~/ide/media/gotoall_currentdocument.png) | Cerca solo il documento corrente
+![Documenti esterni](~/ide/media/gotoall_external.png) | Cerca i documenti esterni oltre a quelli presenti nel progetto e/o nella soluzione
 
 ### <a name="settings"></a>Impostazioni
-Fare clic sull'icona a forma di ingranaggio ![Icona Ingranaggio](media/gotoall_gear.png) in basso a destra per modificare il comportamento di questa funzionalità.
+Fare clic sull'icona a forma di ingranaggio ![Icona Ingranaggio](~/ide/media/gotoall_gear.png) in basso a destra per modificare il comportamento di questa funzionalità.
 
 Impostazione | Descrizione
 ------- | ---

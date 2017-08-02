@@ -38,7 +38,7 @@ ms.lasthandoff: 02/22/2017
 # <a name="project-configuration-object"></a>Oggetto di configurazione di progetto
 L'oggetto di configurazione di progetto gestisce la visualizzazione delle informazioni di configurazione per l'interfaccia utente.  
   
- ![Configurazione di progetto Visual Studio](../../extensibility/internals/media/vsprojectcfg.gif "vsProjectCfg")  
+ ![Configurazione di progetto Visual Studio](~/extensibility/internals/media/vsprojectcfg.gif "vsProjectCfg")  
 Pagine delle proprietà di configurazione di progetto  
   
  Il Provider di configurazione di progetto gestisce le configurazioni di progetto. L'ambiente e altri pacchetti, per accedere e recuperare informazioni sulle configurazioni del progetto, di chiamare le interfacce associate all'oggetto Provider di configurazione di progetto.  

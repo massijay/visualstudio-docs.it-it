@@ -54,7 +54,7 @@ Questo documento illustra come usare l'editor di immagini per creare una trama d
   
  La procedura seguente illustra come creare una trama che rappresenta una destinazione di tipo "bullseye". Al termine, la trama dovrebbe essere simile all'immagine seguente. Per illustrare meglio la trasparenza nella trama, l'editor di immagini è stato configurato per l'utilizzo di un modello verde a scacchi.  
   
- ![Destinazione "Bullseye" con trasparenza visualizzata in verde](../designers/media/digit-bullseye-texture-in-editor.png "Digit-Bullseye-Texture-In-Editor")  
+ ![Destinazione "Bullseye" con trasparenza visualizzata in verde](~/designers/media/digit-bullseye-texture-in-editor.png "Digit-Bullseye-Texture-In-Editor")  
   
  Prima di iniziare, assicurarsi che sia visualizzata la finestra **Proprietà**. Usare la finestra **Proprietà** per impostare la dimensione dell'immagine, modificare le proprietà dello strumento e specificare i colori mentre si lavora.  
   
@@ -102,7 +102,7 @@ Questo documento illustra come usare l'editor di immagini per creare una trama d
   
  La trama di destinazione "bullseye" è completa. Di seguito è riportata l'immagine finale, illustrata con la trasparenza.  
   
- ![Trama di destinazione "bullseye" completa](../designers/media/gfx_image_demo_bullseye.png "gfx_image_demo_bullseye")  
+ ![Trama di destinazione "bullseye" completa](~/designers/media/gfx_image_demo_bullseye.png "gfx_image_demo_bullseye")  
   
  Come passaggio successivo è possibile generare i livelli MIP per la trama. Per informazioni, vedere [Procedura: Creare e modificare livelli MIP](../designers/how-to-create-and-modify-mip-levels.md).  
   

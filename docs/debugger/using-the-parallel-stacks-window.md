@@ -54,9 +54,9 @@ La finestra **Stack in parallelo** è utile quando si esegue il debug di applica
 |||  
 |-|-|  
 |Icona|Descrizione|  
-|![Freccia gialla in Stack in parallelo](../debugger/media/icon_parallelyellowarrow.png "Icon\_ParallelYellowArrow")|Indica che il contesto del metodo contiene lo stack frame attivo del thread corrente.|  
-|![Icona Thread in Stack in parallelo](../debugger/media/icon_parallelthreads.png "Icon\_ParallelThreads")|Indica che il contesto del metodo contiene lo stack frame attivo di un thread non corrente.|  
-|![Freccia verde in Stack in parallelo](../debugger/media/icon_parallelgreenarrow.gif "Icon\_ParallelGreenArrow")|Indica che il contesto del metodo contiene lo stack frame corrente.  Il nome del metodo appare in grassetto in tutti i nodi nei quali viene visualizzato.|  
+|![Freccia gialla in Stack in parallelo](~/debugger/media/icon_parallelyellowarrow.gif "Icon\_ParallelYellowArrow")|Indica che il contesto del metodo contiene lo stack frame attivo del thread corrente.|  
+|![Icona Thread in Stack in parallelo](~/debugger/media/icon_parallelthreads.gif "Icon\_ParallelThreads")|Indica che il contesto del metodo contiene lo stack frame attivo di un thread non corrente.|  
+|![Freccia verde in Stack in parallelo](~/debugger/media/icon_parallelgreenarrow.gif "Icon\_ParallelGreenArrow")|Indica che il contesto del metodo contiene lo stack frame corrente.  Il nome del metodo appare in grassetto in tutti i nodi nei quali viene visualizzato.|  
   
 ## Controlli della barra degli strumenti  
  Nell'illustrazione e nella tabella che seguono sono descritti i controlli disponibili nella barra degli strumenti della finestra Stack in parallelo.  
@@ -102,7 +102,7 @@ La finestra **Stack in parallelo** è utile quando si esegue il debug di applica
   
  Nell'illustrazione seguente vengono mostrate la visualizzazione Attività della finestra Stack in parallelo sulla destra e la corrispondente visualizzazione Thread sulla sinistra.  
   
- ![Visualizzazione attività nella finestra Stack in parallelo](../debugger/media/parallel_tasksview.png "Parallel\_TasksView")  
+ ![Visualizzazione attività nella finestra Stack in parallelo](~/debugger/media/parallel_tasksview.png "Parallel\_TasksView")  
   
  Per vedere l'intero stack di chiamate, tornare semplicemente alla visualizzazione Thread facendo clic con il pulsante destro del mouse su uno stack frame e scegliendo **Passa a thread**.  
   

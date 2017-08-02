@@ -45,7 +45,7 @@ In questo argomento vengono illustrati i concetti di base nella definizione e ut
   
  Quando è stato creato un linguaggio DSL, è possibile distribuire come parte di un pacchetto Visual Studio Integration Extension (VSIX). Utenti che utilizzano il linguaggio DSL in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]:  
   
- ![Diagramma dell'albero genealogico, casella degli strumenti e soluzioni](../modeling/media/familyt_instance.png "FamilyT_Instance")  
+ ![Diagramma dell'albero genealogico, casella degli strumenti e soluzioni](~/modeling/media/familyt_instance.png "FamilyT_Instance")  
   
  La notazione è solo una parte di un linguaggio DSL. Con la notazione, il pacchetto VSIX include strumenti che gli utenti possono applicare per consentire loro di modificare e generare materiale dai relativi modelli.  
   
@@ -77,7 +77,7 @@ In questo argomento vengono illustrati i concetti di base nella definizione e ut
   
 3.  Fare clic su **progettazione di linguaggio specifico di dominio**.  
   
-     ![Finestra di dialogo DSL crea](../modeling/media/create_dsldialog.png "Create_DSLDialog")  
+     ![Finestra di dialogo DSL crea](~/modeling/media/create_dsldialog.png "Create_DSLDialog")  
   
 4.  Nel **nome** digitare **FamilyTree**. Fare clic su **OK**.  
   
@@ -153,7 +153,7 @@ In questo argomento vengono illustrati i concetti di base nella definizione e ut
   
  Sperimentale [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sarà simile all'esempio seguente:  
   
- ![](../modeling/media/dsl_min.png "DSL_min")  
+ ![](~/modeling/media/dsl_min.png "DSL_min")  
   
 ### <a name="the-content-of-a-model"></a>Il contenuto di un modello  
  Il contenuto di un file che è un'istanza di un linguaggio DSL viene chiamato un *modello*. Il modello contiene *modello**elementi* e *collegamenti* tra gli elementi. Definizione DSL specifica i tipi di elementi del modello e i collegamenti possono esistere nel modello. Ad esempio, in un linguaggio DSL creato dal modello di linguaggio minimo, è un tipo di elemento del modello e un tipo di collegamento.  
@@ -213,7 +213,7 @@ In questo argomento vengono illustrati i concetti di base nella definizione e ut
   
 1.  Nel diagramma DslDefinition, rinominare **ExampleModel** a **FamilyTreeModel**, **ExampleElement** a **persona**, **destinazioni** a **padri**, e **origini** a **figli**. È possibile fare clic su ogni etichetta per modificarla.  
   
-     ![Diagramma della definizione DSL: modello di albero genealogico](../modeling/media/familyt_person.png "FamilyT_Person")  
+     ![Diagramma della definizione DSL: modello di albero genealogico](~/modeling/media/familyt_person.png "FamilyT_Person")  
   
 2.  Rinominare gli strumenti elemento e connettore.  
   
@@ -288,7 +288,7 @@ In questo argomento vengono illustrati i concetti di base nella definizione e ut
   
 6.  In un file con estensione TT, è possibile aggiungere il codice che ottiene le proprietà di ogni persona.  
   
- ![Diagramma dell'albero genealogico, casella degli strumenti e soluzioni](../modeling/media/familyt_instance.png "FamilyT_Instance")  
+ ![Diagramma dell'albero genealogico, casella degli strumenti e soluzioni](~/modeling/media/familyt_instance.png "FamilyT_Instance")  
   
 ### <a name="define-new-classes"></a>Definire nuove classi  
  È possibile aggiungere classi di dominio e le relazioni a un modello. Ad esempio, è possibile creare una nuova classe per rappresentare città e una nuova relazione per rappresentare che una persona vissuto in una città.  

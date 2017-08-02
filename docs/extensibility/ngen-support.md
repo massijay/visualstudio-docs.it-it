@@ -45,7 +45,7 @@ Di seguito è riportato un estratto da MSDN che spiega quali "ngen" viene:
 
 Per poter "ngen" un assembly, il progetto VSIX deve essere installato "per istanza per computer". Questo può essere abilitato selezionando la casella di controllo "all users" nella finestra di progettazione Extension. vsixmanifest:
 
-![controllare tutti gli utenti](media/check-all-users.png)
+![controllare tutti gli utenti](~/extensibility/media/check-all-users.png)
 
 ## <a name="how-to-enable-ngen"></a>Come abilitare Ngen
 
@@ -60,7 +60,7 @@ Esistono 4 proprietà che è possibile impostare:
 
 Di seguito viene illustrato il **proprietà** finestra in azione:
 
-![Ngen nelle proprietà](media/ngen-in-properties.png)
+![Ngen nelle proprietà](~/extensibility/media/ngen-in-properties.png)
 
 Metadati verrà aggiunto il riferimento al progetto all'interno di file con estensione csproj del progetto VSIX:
 

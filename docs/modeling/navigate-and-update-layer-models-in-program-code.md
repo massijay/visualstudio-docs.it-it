@@ -63,14 +63,14 @@ using (ILinkedUndoTransaction t =
 ## <a name="dependency-links"></a>Collegamenti di dipendenza  
  Un collegamento di dipendenza è rappresentato da un oggetto e può essere esplorato in entrambe le direzioni:  
   
- ![Oggetto ILayerDependencyLink che connette due ILayers. ] (../modeling/media/layerapi_dependency.png "LayerApi_Dependency")  
+ ![Oggetto ILayerDependencyLink che connette due ILayers. ] (~/modeling/media/layerapi_dependency.png "LayerApi_Dependency")  
   
  Per creare un collegamento di dipendenza, chiamare `source.CreateDependencyLink(target)`.  
   
 ## <a name="comments"></a>Commenti  
  I commenti possono essere contenuti in livelli o nel modello di livello e possono inoltre essere collegati a qualsiasi elemento livello:  
   
- ![È possibile associare commenti a qualsiasi elemento livello. ] (../modeling/media/layerapi_comments.png "LayerApi_Comments")  
+ ![È possibile associare commenti a qualsiasi elemento livello. ] (~/modeling/media/layerapi_comments.png "LayerApi_Comments")  
   
  Un commento può essere collegato a qualsiasi numero di elementi o a nessun elemento.  
   
@@ -134,7 +134,7 @@ public void ... (...)
     if (element != null) ... }}  
 ```  
   
- ![Ogni oggetto ILayerElement è presentato da un oggetto IShape. ] (../modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
+ ![Ogni oggetto ILayerElement è presentato da un oggetto IShape. ] (~/modeling/media/layerapi_shapes.png "LayerApi_Shapes")  
   
  <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape>e <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>consentono inoltre di visualizzare modelli UML.</xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram></xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> Per ulteriori informazioni, vedere [visualizzare un modello UML nei diagrammi](../modeling/display-a-uml-model-on-diagrams.md).  
   

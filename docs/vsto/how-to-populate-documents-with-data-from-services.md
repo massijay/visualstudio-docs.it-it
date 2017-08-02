@@ -30,7 +30,7 @@ caps.handback.revision: 39
   
  L'esempio seguente mostra come aggiungere controlli con associazione ai dati ai documenti in fase di progettazione. Per un esempio su come aggiungere i controlli con associazione ai dati nei componenti aggiuntivi VSTO in fase di esecuzione, vedere [Procedura dettagliata: Associazione ai dati di un servizio in un progetto di componente aggiuntivo VSTO](../vsto/walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project.md).  
   
- ![Collegamento a video](../vsto/media/playvideo.png "Collegamento a video") Per una dimostrazione video correlata, vedere il video che descrive la [procedura di interazione con i servizi Web da Microsoft Excel](http://go.microsoft.com/fwlink/?LinkID=130284).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere il video che descrive la [procedura di interazione con i servizi Web da Microsoft Excel](http://go.microsoft.com/fwlink/?LinkID=130284).  
   
 ### Per popolare un progetto a livello di documento con i dati da un servizio Web  
   

@@ -27,7 +27,7 @@ XML Schema Explorer consente di eseguire ricerche nel set di schemi nei seguenti
 ## Ricerca per parole chiave  
  Le ricerche per parole chiave vengono eseguite immettendo una sottostringa nella casella di testo **Cerca in set di schemi** della barra degli strumenti di XML Schema Explorer.  
   
- ![Ricerca di parole chiave in XML Schema Explorer](../xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")  
+ ![Ricerca di parole chiave in XML Schema Explorer](~/xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")  
   
  XML Schema Explorer esegue ricerche dei seguenti elementi nel set di schemi:  
   

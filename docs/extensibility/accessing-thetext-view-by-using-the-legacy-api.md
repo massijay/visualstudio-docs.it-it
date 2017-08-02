@@ -24,7 +24,7 @@ Una visualizzazione di testo è una presentazione del testo archiviato in un buf
 ## Oggetto della visualizzazione di testo  
  Ogni visualizzazione viene associata al relativo buffer di testo e la visualizzazione è una finestra ai dati nel buffer.  Nel diagramma seguente sono illustrate le interfacce principali dell'oggetto della visualizzazione di testo, rappresentato da <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>.  
   
- ![Oggetto TextView di Visual Studio](../extensibility/media/vstextview.png "vstextview")  
+ ![Oggetto TextView di Visual Studio](~/extensibility/media/vstextview.gif "vstextview")  
 Oggetto della visualizzazione di testo  
   
  La visualizzazione è una modalità di presentazione del testo nel buffer.  Include funzionalità quali il ritorno a capo automatico e descrizione, in modo che gli elementi visualizzati nella visualizzazione non costituisce un'esatta rappresentazione del testo nel buffer.  

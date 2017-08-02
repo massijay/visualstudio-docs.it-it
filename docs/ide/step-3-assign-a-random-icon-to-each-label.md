@@ -78,7 +78,7 @@ Non sarebbe particolarmente impegnativo visualizzare le icone sempre nelle stess
   
 5.  Chiudere il programma, quindi eseguirlo nuovamente. Icone diverse sono ora assegnate a ogni etichetta, come mostrato nell'immagine seguente.  
   
-     ![Gioco di abbinamenti con icone casuali](../ide/media/express_tut4step3.png "Express_Tut4Step3")  
+     ![Gioco di abbinamenti con icone casuali](~/ide/media/express_tut4step3.png "Express_Tut4Step3")  
 Gioco di abbinamenti con icone casuali  
   
      Le icone sono ora visibili, poiché non sono state nascoste. Per nasconderle, è possibile impostare la proprietà `Forecolor` di ciascuna etichetta sullo stesso colore della proprietà `BackColor`.  

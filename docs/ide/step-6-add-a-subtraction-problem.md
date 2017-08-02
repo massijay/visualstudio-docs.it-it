@@ -51,12 +51,12 @@ Nella sesta parte di questa esercitazione si aggiungerà un problema di sottrazi
   
      È possibile chiamare in più modi il metodo `Next()` della classe `Random`, denominato "randomizer" in questa esercitazione.  I metodi che è possibile chiamare in più modi sono denominati metodi di overload ed è possibile utilizzare IntelliSense per esplorarli.  Esaminare nuovamente la descrizione comando della finestra di IntelliSense per il metodo `Next()`.  
   
-     ![Descrizione comando della finestra di IntelliSense](../ide/media/express_overloads.png "Express\_Overloads")  
+     ![Descrizione comando della finestra di IntelliSense](~/ide/media/express_overloads.png "Express\_Overloads")  
 Descrizione comando della finestra di IntelliSense  
   
      La dicitura **\(\+ 2 overload\)** della descrizione comando indica che è possibile chiamare il metodo `Next()` in altri due modi.  Gli overload contengono numeri o tipi di argomenti diversi, pertanto funzionano in modo leggermente diverso l'uno dall'altro.  Ad esempio, un metodo potrebbe accettare un argomento Integer singolo, mentre uno degli overload potrebbe accettare un Integer e una stringa.  Scegliere l'overload corretto in base all'operazione da eseguire.  Quando si aggiunge codice al metodo `StartTheQuiz()`, nella finestra di Intellisense vengono visualizzate più informazioni non appena si immette `randomizer.Next(`.  Premere i tasti freccia SU e GIÙ per scorrere gli overload, come illustrato nell'immagine seguente.  
   
-     ![Overload per il metodo Next&#40;&#41; in IntelliSense](../ide/media/express_nextoverload.png "Express\_NextOverload")  
+     ![Overload per il metodo Next&#40;&#41; in IntelliSense](~/ide/media/express_nextoverload.png "Express\_NextOverload")  
 Overload per il metodo Next\(\) in IntelliSense  
   
      In questo caso, si desidera scegliere l'ultimo overload, perché consente di specificare i valori minimo e massimo.  

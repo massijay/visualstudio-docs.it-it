@@ -44,7 +44,7 @@ Cookiecutter richiede Python 3.3 o versione successiva (a 32 o 64 bit) o Anacond
 
 Una volta installato, selezionare **Visualizza > Cookicutter Explorer** per aprire la finestra:
 
-![Finestra principale di Cookiecutter](media/cookiecutter-overview.png)
+![Finestra principale di Cookiecutter](~/python/media/cookiecutter-overview.png)
 
 ## <a name="cookiecutter-workflow"></a>Flusso di lavoro di Cookiecutter
 
@@ -76,7 +76,7 @@ Se si seleziona un modello dai gruppi **Installed** (Installati) oppure si immet
 
 Dopo aver installato il modello in locale, Cookiecutter visualizza una pagina di opzioni in cui è possibile specificare la posizione in cui Cookiecutter deve generare i file, oltre ad altre opzioni:
 
-![Pagina delle opzioni di Cookiecutter](media/cookiecutter-template-options.png)
+![Pagina delle opzioni di Cookiecutter](~/python/media/cookiecutter-template-options.png)
 
 Ogni modello di Cookiecutter definisce un set proprio di opzioni e specifica un valore predefinito per ognuna (visualizzato come testo suggerito in ogni campo di immissione). Un valore predefinito può essere un frammento di codice, spesso quando è un valore dinamico che usa altre opzioni. 
 
@@ -90,13 +90,13 @@ Dopo aver impostato le opzioni, selezionare **Create** (Crea) per generare il co
 
 Dopo aver creato correttamente i file, Cookiecutter offre un'opzione per aprire i file in **Esplora soluzioni**:
 
-![Comando per aprire Esplora soluzioni da Cookiecutter](media/cookiecutter-files-created.png)
+![Comando per aprire Esplora soluzioni da Cookiecutter](~/python/media/cookiecutter-files-created.png)
 
 ## <a name="cookiecutter-options"></a>Opzioni di Cookiecutter
 
 Le opzioni di Cookiecutter sono disponibili tramite **Tools > Options > Cookiecutter** (Strumenti > Opzioni > Cookiecutter):
 
-![Opzioni di Cookiecutter](media/cookiecutter-tools-options.png)
+![Opzioni di Cookiecutter](~/python/media/cookiecutter-tools-options.png)
 
 | Opzione | Descrizione |
 | --- | --- |

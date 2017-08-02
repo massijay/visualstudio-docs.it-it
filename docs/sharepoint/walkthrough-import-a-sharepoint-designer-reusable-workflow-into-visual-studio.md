@@ -194,7 +194,7 @@ caps.handback.revision: 34
   
     1.  In **Esplora soluzioni** scegliere il nodo del progetto **SPD\_Workflow\_TestFT**.  
   
-    2.  Scegliere il pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](../sharepoint/media/mwellipsis.png "Ellisse di ASP.NET Mobile Designer")\) accanto alla proprietà dell'elenco, come ad esempio la proprietà **Elenco di destinazione**.  
+    2.  Scegliere il pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\) accanto alla proprietà dell'elenco, come ad esempio la proprietà **Elenco di destinazione**.  
   
     3.  Compilare i valori mancanti nella personalizzazione guidata SharePoint e quindi scegliere il pulsante **Fine**.  
   

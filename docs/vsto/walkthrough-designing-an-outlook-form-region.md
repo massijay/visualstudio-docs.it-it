@@ -48,7 +48,7 @@ caps.handback.revision: 40
   
 -   [!INCLUDE[Outlook_15_short](../vsto/includes/outlook-15-short-md.md)] o [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)].  
   
- ![Collegamento a video](../vsto/media/playvideo.png "Collegamento a video") Per una versione video di questo argomento, vedere [Procedura video: Creazione di un'area del modulo di Outlook](http://go.microsoft.com/fwlink/?LinkID=140824).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una versione video di questo argomento, vedere [Procedura video: Creazione di un'area del modulo di Outlook](http://go.microsoft.com/fwlink/?LinkID=140824).  
   
 ## Creazione di un nuovo progetto di componente aggiuntivo VSTO di Outlook  
  Creare prima un progetto di componente aggiuntivo VSTO di base.  

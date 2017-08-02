@@ -41,7 +41,7 @@ Aggiungere ora un controllo **Timer** al gioco delle coppie. Un timer resta in a
   
 1.  Nella casella degli strumenti in Progettazione Windows Form scegliere **Timer** (nella categoria **Componenti**) e quindi premere INVIO oppure fare doppio clic sul timer per aggiungere un controllo al form. L'icona del timer, denominata **Timer1**, verrà visualizzata nella parte inferiore del form, come illustrato nell'immagine seguente.  
   
-     ![Timer](../ide/media/express_timer.png "Express_Timer")  
+     ![Timer](~/ide/media/express_timer.png "Express_Timer")  
 Timer  
   
     > [!NOTE]

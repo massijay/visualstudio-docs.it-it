@@ -79,11 +79,11 @@ private void button_Click(object sender, RoutedEventArgs e)
   
  Quando la finestra viene visualizzata, fare clic sul pulsante **Aggiungi elemento** un paio di volte.  Viene visualizzato un output simile al seguente:  
   
- ![Finestra principale dell'app](../debugger/media/livevisualtree-app.png "LiveVIsualTree\-App")  
+ ![Finestra principale dell'app](~/debugger/media/livevisualtree-app.png "LiveVIsualTree\-App")  
   
  Aprire quindi la finestra **Albero elementi visivi attivi** \(**Debug\/Finestre\/Albero elementi visivi attivi** o cercarla sul lato sinistro dell'IDE\).  Rilasciare la finestra dalla posizione di ancoraggio in modo da poterla visualizzare affiancata alla finestra delle **proprietà attive**.  Nella finestra **Albero elementi visivi attivi** espandere il nodo **ContentPresenter**.  Tale nodo dovrebbe contenere i nodi per il pulsante e la casella di riepilogo.  Espandere la casella di riepilogo, listBox, \(e quindi **ScrollContentPresenter** e **ItemsPresenter**\) per individuare i relativi elementi.  La finestra dovrebbe essere simile alla seguente:  
   
- ![ListBoxItems nell'albero degli elementi visivi attivi](../debugger/media/livevisualtree-listboxitems.png "LiveVisualTree\-ListBoxItems")  
+ ![ListBoxItems nell'albero degli elementi visivi attivi](~/debugger/media/livevisualtree-listboxitems.png "LiveVisualTree\-ListBoxItems")  
   
  Tornare alla finestra dell'applicazione e aggiungere altri elementi.  Nella finestra **Albero elementi visivi attivi** dovrebbero venire visualizzati altri elementi casella di riepilogo.  
   
@@ -95,7 +95,7 @@ private void button_Click(object sender, RoutedEventArgs e)
   
  **Visualizza gli Adorner layout nell'applicazione in esecuzione**.  È possibile abilitare questa modalità quando si seleziona il pulsante immediatamente a destra del pulsante di abilitazione della selezione.  Quando l'opzione **Visualizza gli Adorner layout** è attivata, la finestra dell'applicazione mostra le linee orizzontali e verticali lungo i bordi dell'oggetto selezionato, per consentire di vederne l'allineamento, nonché rettangoli che mostrano i margini.  Ad esempio, attivare entrambe le opzioni **Abilita selezione** e **Visualizza gli Adorner layout** e selezionare il blocco di testo **Aggiungi elemento** nell'applicazione.  Dovrebbero venire visualizzati il nodo del blocco di testo in **Albero elementi visivi attivi** e le proprietà del blocco di testo nel **visualizzatore delle proprietà attive**, nonché le linee orizzontali e verticali lungo i bordi del blocco di testo.  
   
- ![LivePropertyViewer in DisplayLayout](../debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer\-DisplayLayout")  
+ ![LivePropertyViewer in DisplayLayout](~/debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer\-DisplayLayout")  
   
  **Anteprima selezione**.  È possibile abilitare questa modalità selezionando il terzo pulsante da sinistra sulla barra degli strumenti nella finestra Albero elementi visivi attivi.  Questa modalità mostra il codice XAML in cui è stato dichiarato l'elemento, se si ha accesso al codice sorgente dell'applicazione.  Selezionare le opzioni **Abilita selezione** e **Anteprima selezione** e quindi selezionare il pulsante nell'applicazione di test.  Il file MainWindow.xaml verrà aperto in Visual Studio e il cursore verrà posizionato sulla riga in cui è definito il pulsante.  
   

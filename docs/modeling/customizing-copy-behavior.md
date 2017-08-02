@@ -29,7 +29,7 @@ In un linguaggio specifico di dominio \(DSL, Domain\-Specific Language\) creato 
   
  Questa regola si applica ricorsivamente a elementi e collegamenti copiati.  
   
- ![Elementi copiati e incollati](../modeling/media/dslcopypastedefault.png "DslCopyPasteDefault")  
+ ![Elementi copiati e incollati](~/modeling/media/dslcopypastedefault.png "DslCopyPasteDefault")  
   
  Gli elementi e i collegamenti copiati vengono serializzati e archiviati in un oggetto <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> \(EGP\), che viene inserito negli Appunti.  
   
@@ -237,7 +237,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
 > [!TIP]
 >  Per altre informazioni sulla personalizzazione del modello usando il codice programma, vedere [Esplorazione e aggiornamento di un modello nel codice del programma](../modeling/navigating-and-updating-a-model-in-program-code.md).  
   
- ![Diagramma sequenza per l'operazione Copia](../modeling/media/dslcopyseqdiagram.png "dslCopySeqDiagram")  
+ ![Diagramma sequenza per l'operazione Copia](~/modeling/media/dslcopyseqdiagram.png "dslCopySeqDiagram")  
   
  ![Diagramma sequenza per l'operazione Incolla](../modeling/media/dslpasteseqdiagram.png "dslPasteSeqDiagram")  
   

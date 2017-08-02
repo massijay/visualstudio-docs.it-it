@@ -64,7 +64,7 @@ In Visual Studio, è possibile utilizzare un *diagramma dipendenze* per visualiz
  In questo argomento vengono descritti gli elementi che è possibile utilizzare in un diagramma di dipendenza. Per ulteriori informazioni su come creare e disegnare diagrammi di dipendenza, vedere [diagrammi di dipendenza: linee guida](../modeling/layer-diagrams-guidelines.md). Per ulteriori informazioni sui modelli di livello, visitare il [sito consigliate / modelli](http://go.microsoft.com/fwlink/?LinkId=145794).  
   
 ## <a name="reading-dependency-diagrams"></a>Lettura dei diagrammi di dipendenza  
- ![Elementi dei diagrammi di dipendenza](../modeling/media/uml_layerrefreading.png "UML_LayerRefReading")  
+ ![Elementi dei diagrammi di dipendenza](~/modeling/media/uml_layerrefreading.png "UML_LayerRefReading")  
   
  Nella tabella seguente vengono descritti gli elementi che è possibile utilizzare in un diagramma di dipendenza.  
   

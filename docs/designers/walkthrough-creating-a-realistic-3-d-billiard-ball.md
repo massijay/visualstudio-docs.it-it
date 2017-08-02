@@ -67,11 +67,11 @@ In questa procedura dettagliata viene illustrato come creare una palla da biliar
   
      La trama dovrebbe essere simile a quella seguente:  
   
-     ![Trama per la palla da biliardo](../designers/media/gfx_shader_demo_billiard_art_ball_texture.png "gfx_shader_demo_billiard_art_ball_texture")  
+     ![Trama per la palla da biliardo](~/designers/media/gfx_shader_demo_billiard_art_ball_texture.png "gfx_shader_demo_billiard_art_ball_texture")  
   
 4.  Facoltativamente, è possibile ridurre i requisiti di archiviazione della trama. È possibile eseguire questa operazione riducendo la larghezza della trama in modo che corrisponda all'altezza. In questo modo la trama viene compressa lungo la larghezza, ma dal momento che la trama è mappata alla sfera, verrà espansa quando verrà eseguito il rendering della palla da biliardo. Dopo il ridimensionamento, la trama dovrebbe essere simile alla seguente:  
   
-     ![Trama del biliardo compressa in un quadrato](../designers/media/gfx_shader_demo_billiard_art_ball_texture_square.png "gfx_shader_demo_billiard_art_ball_texture_square")  
+     ![Trama del biliardo compressa in un quadrato](~/designers/media/gfx_shader_demo_billiard_art_ball_texture_square.png "gfx_shader_demo_billiard_art_ball_texture_square")  
   
  È ora possibile creare uno shader che applica questa trama al modello.  
   
@@ -93,7 +93,7 @@ In questa procedura dettagliata viene illustrato come creare una palla da biliar
   
  La palla da biliardo dovrebbe ora risultare simile alla seguente:  
   
- ![Primo piano della palla da biliardo con trama](../designers/media/gfx_shader_demo_.png "gfx_shader_demo_")  
+ ![Primo piano della palla da biliardo con trama](~/designers/media/gfx_shader_demo_.png "gfx_shader_demo_")  
   
 ## <a name="creating-depth-with-the-lambert-lighting-model"></a>Creazione di profondità con il modello di illuminazione Lambert  
  Per ora, è stata creata una palla da biliardo facilmente riconoscibile. Tuttavia, appare piana e non interessante (più simile un'immagine di un fumetto di una palla da biliardo che a una replica convincente). L'aspetto piano deriva dallo shader semplicistico, che si comporta come se ogni pixel sulla superficie della palla da biliardo ricevesse la stessa quantità di luce.  
@@ -114,7 +114,7 @@ In questa procedura dettagliata viene illustrato come creare una palla da biliar
   
  Con l'illuminazione di Lambert applicata, la palla da biliardo dovrebbe risultare simile alla seguente:  
   
- ![Primo piano della palla da biliardo con trama e illuminata](../designers/media/gfx_shader_demo_billiard_ball_2.png "gfx_shader_demo_billiard_ball_2")  
+ ![Primo piano della palla da biliardo con trama e illuminata](~/designers/media/gfx_shader_demo_billiard_ball_2.png "gfx_shader_demo_billiard_ball_2")  
   
 ## <a name="enhancing-the-basic-appearance-with-specular-highlights"></a>Miglioramento dell'aspetto di base con le evidenziazioni speculari  
  Il modello di illuminazione di Lambert genera il senso di forma e dimensione che era assente nello shader a sola trama. Tuttavia, la palla da biliardo ha ancora un aspetto piatto.  
@@ -135,7 +135,7 @@ In questa procedura dettagliata viene illustrato come creare una palla da biliar
   
  Con l'illuminazione speculare applicata, la palla da biliardo dovrebbe risultare simile alla seguente:  
   
- ![Primo piano della palla da biliardo con illuminazione speculare](../designers/media/gfx_shader_demo_billiard_ball_3.png "gfx_shader_demo_billiard_ball_3")  
+ ![Primo piano della palla da biliardo con illuminazione speculare](~/designers/media/gfx_shader_demo_billiard_ball_3.png "gfx_shader_demo_billiard_ball_3")  
   
 ## <a name="creating-a-sense-of-space-by-reflecting-the-environment"></a>Creazione di un senso di spazio tramite il riflesso dell'ambiente  
  Con le evidenziazioni speculari applicate, l'aspetto della palla da biliardo sarà piuttosto convincente. Ha la forma giusta, il processo di disegno appropriato e la finitura corretta. Tuttavia, esiste anche un'altra tecnica che farà apparire la palla da biliardo più come parte del suo ambiente.  
@@ -158,13 +158,13 @@ In questa procedura dettagliata viene illustrato come creare una palla da biliar
   
 4.  Creare una seconda trama con la stessa dimensione della prima. La trama verrà ripetuta sui quattro lati della mappa cubo, che corrispondono alla superficie e ai lati di un tavolo da biliardo e all'area intorno al tavolo da biliardo. Assicurarsi di disegnare la superficie del tavolo da biliardo in questa trama utilizzando lo stesso colore della trama inferiore. La trama dovrebbe essere simile alla seguente:  
   
-     ![Trama per i lati della mappa cubo](../designers/media/gfx_shader_demo_billiard_art_env_texture_side.png "gfx_shader_demo_billiard_art_env_texture_side")  
+     ![Trama per i lati della mappa cubo](~/designers/media/gfx_shader_demo_billiard_art_env_texture_side.png "gfx_shader_demo_billiard_art_env_texture_side")  
   
      Tenere presente che una mappa di reflection non deve essere fotorealistica per essere efficace; ad esempio, la mappa cubo utilizzata per creare le immagini di questo articolo contiene esattamente quattro caselle invece di sei.  
   
 5.  Creare una terza trama con la stessa dimensione delle altre. Questa trama sarà la parte superiore della mappa cubo, che corrisponde all'area sopra il tavolo da biliardo. Per rendere questa parte della reflection più interessante, è possibile disegnare una luce sopraelevata per aumentare le evidenziazioni speculari aggiunte allo shader nella procedura precedente. La trama dovrebbe essere simile alla seguente:  
   
-     ![Trama per la parte superiore della mappa cubo](../designers/media/gfx_shader_demo_billiard_art_env_texture_top2.png "gfx_shader_demo_billiard_art_env_texture_top2")  
+     ![Trama per la parte superiore della mappa cubo](~/designers/media/gfx_shader_demo_billiard_art_env_texture_top2.png "gfx_shader_demo_billiard_art_env_texture_top2")  
   
  Dopo aver creato le singole trame per i lati della mappa cubo, è possibile utilizzare uno strumento per assemblarli in una mappa cubo che può essere memorizzata in una singola trama di .dds. È possibile utilizzare qualsiasi programma per creare la mappa cubo, a condizione che si possa salvare la mappa nel formato di trama .dds. In questa procedura dettagliata viene illustrato come creare una trama utilizzando lo strumento Trama di DirectX, incluso in DirectX SDK del giugno 2010.  
   
@@ -188,7 +188,7 @@ In questa procedura dettagliata viene illustrato come creare una palla da biliar
   
  Il layout della mappa cubo avrà un aspetto simile a quello seguente:  
   
- ![Layout della mappa cubo dell'ambiente](../designers/media/gfx_shader_demo_billiard_art_env_texture_top.png "gfx_shader_demo_billiard_art_env_texture_top")  
+ ![Layout della mappa cubo dell'ambiente](~/designers/media/gfx_shader_demo_billiard_art_env_texture_top.png "gfx_shader_demo_billiard_art_env_texture_top")  
   
  L'immagine nella parte superiore è la faccia del cubo Y (+Y) positiva, al centro, da sinistra a destra, ci sono le facce del cubo -X, +Z e -Z, mentre nella parte inferiore c'è la faccia del cubo -Y.  
   
@@ -212,7 +212,7 @@ In questa procedura dettagliata viene illustrato come creare una palla da biliar
   
  Con il mapping dell'ambiente applicato, la palla da biliardo risulterà simile alla seguente:  
   
- ![Primo piano della palla da biliardo con mappa dell'ambiente](../designers/media/gfx_shader_demo_billiard_ball_4.png "gfx_shader_demo_billiard_ball_4")  
+ ![Primo piano della palla da biliardo con mappa dell'ambiente](~/designers/media/gfx_shader_demo_billiard_ball_4.png "gfx_shader_demo_billiard_ball_4")  
   
  In questa immagine finale, osservare come gli effetti aggiunti convergono per creare una palla da biliardo molto convincente. La forma, la trama e l'illuminazione creano l'aspetto di base di un oggetto 3D e le evidenziazioni e i riflessi speculari abbelliscono la palla da biliardo e la rendono parte dell'ambiente che la circonda.  
   

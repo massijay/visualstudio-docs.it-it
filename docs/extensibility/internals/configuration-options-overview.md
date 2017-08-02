@@ -65,7 +65,7 @@ Proietta in [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] può su
   
  Nel diagramma seguente viene illustrato come vengono implementate le interfacce che supportano le configurazioni di soluzione e progetto:  
   
- ![Rappresentazione grafica delle interfacce di configurazione](../../extensibility/internals/media/vsconfiginterfaces.gif "vsConfigInterfaces")  
+ ![Rappresentazione grafica delle interfacce di configurazione](~/extensibility/internals/media/vsconfiginterfaces.gif "vsConfigInterfaces")  
 Interfacce di configurazione  
   
  Alcune note relative al diagramma precedente:  

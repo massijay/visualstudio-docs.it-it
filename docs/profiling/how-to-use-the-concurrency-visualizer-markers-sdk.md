@@ -72,7 +72,7 @@ Questo argomento illustra come usare l'SDK del visualizzatore di concorrenza per
   
 4.  Nella barra dei menu scegliere **Analizza**, **Visualizzatore di concorrenza**, **Avvio con progetto corrente** per eseguire l'app e visualizzare il visualizzatore di concorrenza. La figura seguente mostra i tre intervalli e i tre marcatori nel visualizzatore di concorrenza.  
   
-     ![Visualizzatore di concorrenza con tre marcatori e avvisi](../profiling/media/cvmarkersnative.png "CvMarkersNative")  
+     ![Visualizzatore di concorrenza con tre marcatori e avvisi](~/profiling/media/cvmarkersnative.png "CvMarkersNative")  
   
 5.  Aggiungere il codice per creare un'altra serie di marcatori personalizzati chiamando il costruttore per `marker_series` che accetta un nome di stringa per la serie di marcatori.  
   

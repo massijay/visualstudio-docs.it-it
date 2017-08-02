@@ -55,7 +55,7 @@ Marcatori che illustrano le categorie
 ## <a name="alerts"></a>Avvisi  
  Un avviso è un flag di colore rosso che rappresenta un evento dell'applicazione critico, come un'eccezione.  Ecco un esempio di avviso:  
   
- ![Marcatore di avviso del visualizzatore di concorrenza](../profiling/media/cvmarkeralert.png "CVMarkerAlert")  
+ ![Marcatore di avviso del visualizzatore di concorrenza](~/profiling/media/cvmarkeralert.png "CVMarkerAlert")  
 Marcatore di avviso  
   
 ## <a name="aggregation-flags"></a>Flag di aggregazione  
@@ -63,7 +63,7 @@ Marcatore di avviso
   
  I flag di aggregazione sono rappresentati con diverse dimensioni. La dimensione dipende dal livello di importanza del flag più importante nell'aggregazione. La figura seguente mostra i flag di aggregazione in ordine di importanza crescente.  
   
- ![Flag aggregati con quattro livelli di importanza](../profiling/media/cvmarkeraggregate.png "CVMarkerAggregate")  
+ ![Flag aggregati con quattro livelli di importanza](~/profiling/media/cvmarkeraggregate.png "CVMarkerAggregate")  
 Flag di aggregazione in base al livello di importanza  
   
 ## <a name="see-also"></a>Vedere anche  

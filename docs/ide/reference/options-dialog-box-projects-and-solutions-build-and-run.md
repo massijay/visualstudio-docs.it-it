@@ -1,80 +1,65 @@
 ---
-title: "Finestra di dialogo Opzioni, Progetti e soluzioni, Compila ed esegui | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Projects.Build_and_Run"
-  - "VS.ToolsOptionsPag.Projects.Build_and_Run"
-helpviewer_keywords: 
-  - "compilazioni [Visual Studio], impostazione"
-  - "esecuzione di azioni"
-  - "debugger, opzioni di esecuzione"
+title: Finestra di dialogo Opzioni, Progetti e soluzioni, Compila ed esegui | Microsoft Docs
+ms.custom: 
+ms.date: 7/14/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.ToolsOptionsPages.Projects.Build_and_Run
+- VS.ToolsOptionsPag.Projects.Build_and_Run
+helpviewer_keywords:
+- builds [Visual Studio], setting up
+- run actions
+- debugger, run options
 ms.assetid: c884976e-c0df-4c6d-8e3a-856ea2bd547c
 caps.latest.revision: 20
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Finestra di dialogo Opzioni, Progetti e soluzioni, Compila ed esegui
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
+ms.openlocfilehash: 8e5165b4b17195e5f9172dd25962c9486a7aeeeb
+ms.contentlocale: it-it
+ms.lasthandoff: 07/26/2017
 
-In questa finestra di dialogo, è possibile specificare il numero massimo di progetti Visual C\+\+ o Visual C\# che è possibile compilare allo stesso tempo, determinati comportamenti di compilazione predefiniti e alcune impostazioni del log di compilazione.  Per aprire la finestra di dialogo **Opzioni**, scegliere **Strumenti**, **Opzioni** nella barra dei menu.  Per accedere a questo set di opzioni, espandere **Progetti e soluzioni**, quindi scegliere **Compila ed esegui**.  
+---
+
+# <a name="options-dialog-box--projects-and-solutions-build-and-run"></a>Finestra di dialogo Opzioni, Progetti e soluzioni, Compila ed esegui
+
+In questa finestra di dialogo, è possibile specificare il numero massimo di progetti Visual C++ o Visual C# che è possibile compilare allo stesso tempo, determinati comportamenti di compilazione predefiniti e alcune impostazioni del log di compilazione. Per accedere a queste opzioni selezionare **Strumenti > Opzioni**, espandere **Progetti e soluzioni** e selezionare **Compila ed esegui**.
   
-## Elenco UIElement  
- **numero massimo di compilazioni di progetto parallele**  
- Specifica il numero massimo di progetti Visual C\+\+ e Visual C\# che è possibile compilare contemporaneamente.  Per ottimizzare il processo di compilazione, il numero massimo di compilazioni di progetti in parallelo viene impostato automaticamente sul numero di CPU del computer.  Il numero massimo è 32.  
-  
- **Compila progetti di avvio e dipendenze solo in fase di esecuzione**  
- Se si seleziona questa casella di controllo quando si preme il tasto F5, vengono compilati solo il progetto di avvio e le relative dipendenze; scegliere **Debug**, **Avvia** oppure **Compila**, **Compila** sulla barra dei menu.  Se si seleziona questa casella di controllo quando si preme il tasto F5, vengono compilati tutti i progetti, le dipendenze e i file di soluzione; scegliere **Debug**, **Avvia** oppure **Compila**, **Compila** sulla barra dei menu.  Per impostazione predefinita, questa opzione è deselezionata.  
-  
- **Durante l'esecuzione, quando i progetti non sono aggiornati**  
- > [!NOTE]
->  Questo elenco si applica solo ai progetti [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)].  
-  
- Per impostazione predefinita, viene visualizzato un messaggio se una configurazione del progetto non è aggiornata quando si preme il tasto F5 o si sceglie **Debug**, **Avvia** sulla barra dei menu.  È possibile specificare se generare comunque il progetto e se viene visualizzato il messaggio.  Usare questa opzione per specificare se viene visualizzato il messaggio e quale deve essere il comportamento di compilazione se non viene visualizzato il messaggio.  
-  
- **Compila sempre**  
- Non viene visualizzata la finestra di messaggio e il progetto viene compilato nonostante la configurazione non aggiornata.  Questa opzione viene impostata quando si seleziona la casella **Non visualizzare più questo messaggio** e quindi si sceglie il pulsante **Sì**.  
-  
- **Non compilare mai**  
- Non viene visualizzata la finestra di messaggio e il progetto non viene compilato.  Questa opzione viene impostata quando si seleziona la casella **Non visualizzare più questo messaggio** e quindi si sceglie il pulsante **No**.  
-  
- **Richiedi compilazione**  
- Mostra la finestra di messaggio ogni volta che una configurazione del progetto non è aggiornata.  
-  
- **Durante l'esecuzione, quando si verificano errori di compilazione o distribuzione**  
- Se si verificano errori di compilazione quando si avvia una compilazione dal menu **Compila**, viene visualizzato un messaggio.  È possibile specificare se continuare avviando l'applicazione e se il messaggio viene visualizzato ogni volta che si verificano errori di compilazione.  Usare questa opzione per specificare se viene visualizzato il messaggio e quale deve essere il comportamento se non viene visualizzato il messaggio.  
-  
-> [!NOTE]
->  Questa opzione si applica solo ai progetti [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)].  
-  
- **Richiedi avvio**  
- Mostra una finestra di messaggio ogni volta che si verificano errori di compilazione.  
-  
- **Non avviare**  
- Non viene visualizzata la finestra di messaggio e l'applicazione non viene avviata.  Questa opzione viene impostata quando si seleziona la casella di controllo **Non visualizzare più questo messaggio** nella finestra di messaggio e quindi si sceglie il pulsante **No**.  
-  
- **Avvia versione precedente**  
- Non viene visualizzata la finestra di messaggio e la versione dell'applicazione appena compilata non viene avviata.  Questa opzione viene impostata quando si seleziona la casella di controllo **Non visualizzare più questo messaggio** nella finestra di messaggio e quindi si sceglie il pulsante **Sì**.  
-  
- **Per nuove soluzioni utilizza il progetto selezionato come progetto di avvio**  
- Se questa casella di controllo è selezionata, le nuove soluzioni usano il progetto selezionato come progetto di avvio.  
-  
- **Livello di dettaglio output in compilazione progetto MSBuild**  
- Determina la quantità di informazioni che viene visualizzata nella finestra per la compilazione **Output**.  
-  
- **Livello di dettaglio file di log di compilazione progetto MSBuild**  
- > [!NOTE]
->  Questa opzione si applica solo ai progetti Visual C\+\+.  
-  
- Determina la quantità di informazioni che viene scritta nel file di log di compilazione che si trova in \\...  \\*NomeProgetto*\\Debug\\*NomeProgetto*.log.  
-  
-## Vedere anche  
- [Compilazione di applicazioni in Visual Studio](../../ide/compiling-and-building-in-visual-studio.md)
+**numero massimo di compilazioni di progetto parallele**  
+Specifica il numero massimo di progetti Visual C++ e Visual C# che è possibile compilare contemporaneamente. Per ottimizzare il processo di compilazione, il numero massimo di compilazioni di progetti in parallelo viene impostato automaticamente sul numero di CPU del computer. Il numero massimo è 32.  
+
+**Compila progetti di avvio e dipendenze solo in fase di esecuzione**  
+Compila solo il progetto di avvio e le relative dipendenze quando si usa il tasto F5, si seleziona il comando di menu **Debug > Avvia** o i comandi applicabili del menu **Genera**. Senza impostazioni, vengono compilati tutti i progetti e le relative dipendenze. 
+
+**Durante l'esecuzione, quando i progetti non sono aggiornati**  
+*Si applica solo ai progetti [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)].*
+
+Quando si esegue un progetto con F5 o il comando **Debug > Avvia** l'impostazione predefinita **Richiedi compilazione** visualizza un messaggio se una configurazione di progetto non è aggiornata. Selezionare **Compila sempre** per compilare il progetto ogni volta che viene eseguito. Selezionare **Non compilare mai** per eliminare tutte le compilazioni automatiche quando si esegue un progetto.
+
+**Durante l'esecuzione, quando si verificano errori di compilazione o distribuzione**  
+*Si applica solo ai progetti [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)].*
+
+Quando si esegue un progetto con F5 o il comando **Debug > Avvia** l'impostazione predefinita **Richiedi avvio** visualizza un messaggio se un progetto deve essere eseguito anche se la compilazione non è riuscita. Selezionare **Avvia versione precedente** per avviare automaticamente l'ultima compilazione valida. In questo modo è possibile che il codice in esecuzione non corrisponda al codice sorgente. Selezionare **Non avviare** per eliminare il messaggio.
+
+**Per nuove soluzioni utilizza il progetto selezionato come progetto di avvio**  
+Se questa opzione è impostata, le nuove soluzioni usano il progetto selezionato come progetto di avvio.  
+
+**Livello di dettaglio output in compilazione progetto MSBuild**  
+Determina la quantità di informazioni visualizzata nella finestra **Output** per la compilazione.  
+
+**Livello di dettaglio file di log di compilazione progetto MSBuild**  
+*Si applica solo ai progetti [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)].*
+
+Determina la quantità di informazioni scritta nel file di log di compilazione che si trova in \\...\\*ProjectName*\Debug\\*ProjectName*.log.  
+
+## <a name="see-also"></a>Vedere anche  
+-[Compilazione e creazione in Visual Studio](../../ide/compiling-and-building-in-visual-studio.md)
+- [Finestra di dialogo Opzioni, Progetti e soluzioni](projects-and-solutions-options-dialog-box.md)
+- [Finestra di dialogo Opzioni, Progetti e soluzioni, Progetti Web](options-dialog-box-projects-and-solutions-web-projects.md)

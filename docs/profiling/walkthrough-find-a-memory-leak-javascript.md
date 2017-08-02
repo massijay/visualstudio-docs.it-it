@@ -42,7 +42,7 @@ ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="walkthrough-find-a-memory-leak-javascript"></a>Procedura dettagliata: trovare una perdita di memoria (JavaScript)
-![Si applica a Windows e Windows Phone](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+![Si applica a Windows e Windows Phone](~/debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
  Questa procedura dettagliata ti assiste nel processo di identificazione e risoluzione di un semplice problema di memoria usando JavaScript Memory Analyzer. JavaScript Memory Analyzer è disponibile in Visual Studio per le app Windows Store compilate per Windows con JavaScript. In questo scenario creerai un'app che conserva erroneamente gli elementi DOM in memoria anziché eliminare gli elementi alla stessa velocità con cui vengono creati.  
   
@@ -227,7 +227,7 @@ ms.lasthandoff: 02/22/2017
   
 15. Apri l'oggetto HTMLDivElement nella parte superiore dell'albero di oggetti come illustrato di seguito.  
   
-     ![Visualizzazione delle differenze del conteggio oggetti nell'heap](../profiling/media/js_mem_app_typesdiff.png "JS_Mem_App_TypesDiff")  
+     ![Visualizzazione delle differenze del conteggio oggetti nell'heap](~/profiling/media/js_mem_app_typesdiff.png "JS_Mem_App_TypesDiff")  
   
      Questa visualizzazione mostra informazioni utili sulla perdita di memoria, ad esempio:  
   

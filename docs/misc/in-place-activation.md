@@ -32,7 +32,7 @@ Se la visualizzazione dell'editor ospita controlli ActiveX o altri controlli att
 ## Interfacce e oggetti usati  
  Gli oggetti usati per creare l'attivazione sul posto sono illustrati nella figura seguente.  
   
- ![Editor di attivazione sul posto](../misc/media/vsinplaceactivationeditor.png "vsInPlaceActivationEditor")  
+ ![Editor di attivazione sul posto](~/extensibility/media/vsinplaceactivationeditor.gif "vsInPlaceActivationEditor")  
 Editor di attivazione sul posto  
   
 > [!NOTE]

@@ -37,11 +37,11 @@ ms.lasthandoff: 07/11/2017
 # <a name="managing-project-and-solution-properties"></a>Gestione delle proprietà di progetti e soluzioni
 Le proprietà dei progetti governano molti aspetti della compilazione, del debug, del test e della distribuzione. Alcune proprietà sono comuni tra tutti i tipi di progetto e altre sono univoche di piattaforme o linguaggi specifici. Per accedere alle proprietà di progetto, fare clic con il pulsante destro del mouse sul nodo del progetto in Esplora soluzioni e scegliere Proprietà oppure digitare le proprietà nella casella di ricerca **Avvio veloce** nella barra dei menu.  
   
- ![Menu di scelta rapida Progetto](../ide/media/vs2015_proj_prop_menu.gif "vs2015_proj_prop_menu")  
+ ![Menu di scelta rapida Progetto](~/ide/media/vs2015_proj_prop_menu.gif "vs2015_proj_prop_menu")  
   
  I progetti .NET potrebbero anche avere un nodo di proprietà nell'albero del progetto.  
   
- ![Nodo Proprietà nell'albero Esplora soluzioni](../ide/media/vs2015_props_se.png "VS2015_Props_SE")  
+ ![Nodo Proprietà nell'albero Esplora soluzioni](~/ide/media/vs2015_props_se.png "VS2015_Props_SE")  
   
 > [!TIP]
 >  Le soluzioni, così come gli elementi del progetto, hanno alcune proprietà, che sono accessibili nella [Finestra Proprietà](../ide/reference/properties-window.md), non in **Progettazione progetti**.  
@@ -52,14 +52,14 @@ Le proprietà dei progetti governano molti aspetti della compilazione, del debug
 ### <a name="c-visual-basic-and-f-projects"></a>Progetti C#, Visual Basic e F#  
  Nei progetti C#, Visual Basic e F# le proprietà sono esposte in **Progettazione progetti**. La figura seguente mostra la pagina della proprietà di compilazione per un progetto WPF in C#:  
   
- ![Progettazione progetti di Visual Studio](../ide/media/vs2015_proppage_build.png "VS2015_PropPage_Build")  
+ ![Progettazione progetti di Visual Studio](~/ide/media/vs2015_proppage_build.png "VS2015_PropPage_Build")  
   
  Per informazioni su ognuna delle pagine delle proprietà in Progettazione progetti, vedere [Riferimenti alle proprietà di progetto](../ide/reference/project-properties-reference.md).  
   
 ### <a name="c-and-javascript-projects"></a>Progetti C++ e JavaScript  
  I progetti C++ e JavaScript hanno un'interfaccia utente differente per la gestione delle proprietà del progetto. Questa illustrazione mostra la pagina delle proprietà di un progetto C++ (le pagine JavaScript sono simili):  
   
- ![Proprietà di progetto Visual C&#43;&#43;](../ide/media/vs2015_projprops_cpp.png "VS2015_ProjProps_cpp")  
+ ![Proprietà di progetto Visual C&#43;&#43;](~/ide/media/vs2015_projprops_cpp.png "VS2015_ProjProps_cpp")  
   
  Per informazioni sulle proprietà di progetto C++, vedere [Utilizzo di proprietà di progetto](/cpp/ide/working-with-project-properties). Per altre informazioni sulle proprietà JavaScript, vedere [Pagine proprietà, JavaScript](../ide/reference/property-pages-javascript.md).  
   

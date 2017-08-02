@@ -55,7 +55,7 @@ File dump con o senza heap; creare un file dump; aprire un file dump; individuar
   
  I dump vengono utilizzati principalmente per il debug di problemi che si verificano nei computer a cui lo sviluppatore non ha accesso.  Ad esempio, è possibile utilizzare un file dump del computer di un cliente quando non è possibile riprodurre nel proprio computer il blocco o l'arresto anomalo avvenuto nel computer del cliente.  I dump vengono inoltre creati dai tester per salvare i dati relativi a un arresto anomalo o un blocco per eseguire altre verifiche nel computer di test.  Il debugger di Visual Studio può salvare i file dump per il codice gestito o nativo.  Il debugger può caricare i file dump creati da Visual Studio o da altri programmi che salvano i file in formato *minidump*.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
   
 ##  <a name="BKMK_Dump_files__with_or_without_heaps"></a> File dump, con o senza heap  
  È possibile creare file dump con o senza informazioni heap.  
@@ -64,7 +64,7 @@ File dump con o senza heap; creare un file dump; aprire un file dump; individuar
   
 -   I **file dump senza heap** sono molto più piccoli dei dump contenenti informazioni sull'heap.  Il debugger deve tuttavia caricare i file binari dell'app per trovare informazioni sui simboli.  I file binari devono corrispondere esattamente ai file binari utilizzati alla creazione del dump.  Solo i valori delle variabili dello stack vengono salvati nei file dump senza dati dell'heap.  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
   
 ##  <a name="BKMK_Requirements_and_limitations"></a> Requisiti e limitazioni  
   
@@ -82,7 +82,7 @@ File dump con o senza heap; creare un file dump; aprire un file dump; individuar
   
 -   Per eseguire il debug con [SOS.dll \(SOS Debugging Extension\)](../Topic/SOS.dll%20\(SOS%20Debugging%20Extension\).md) in Visual Studio, è necessario installare gli Strumenti di debug per Windows che fanno parte di Windows Driver Kit \(WDK\).  Vedere [Windows 8.1 Preview: scaricare kit, bit e strumenti](http://msdn.microsoft.com/library/windows/hardware/bg127147.aspx).  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
   
 ##  <a name="BKMK_Create_a_dump_file"></a> Creare un file dump  
  Per creare un file dump con Visual Studio:  
@@ -93,7 +93,7 @@ File dump con o senza heap; creare un file dump; aprire un file dump; individuar
   
  È inoltre possibile creare file dump con qualsiasi programma che supporta il formato di minidump di Windows.  Ad esempio, tramite l'utilità della riga di comando **Procdump** di [Windows Sysinternals](http://technet.microsoft.com/sysinternals/default) è possibile creare file dump di arresto anomalo del processo basati su trigger o su richiesta.  Per ulteriori informazioni sull'utilizzo di altri strumenti per la creazione di file dump, vedere [Requisiti e limitazioni](../debugger/using-dump-files.md#BKMK_Requirements_and_limitations).  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
   
 ##  <a name="BKMK_Open_a_dump_file"></a> Aprire un file dump  
   
@@ -136,7 +136,7 @@ File dump con o senza heap; creare un file dump; aprire un file dump; individuar
   
  Se Visual Studio non è in grado di trovare i file necessari per eseguire il debug di un modulo nel dump, viene visualizzata una pagina appropriata \(**Nessun file binario trovato**, **Nessun simbolo trovato** o **Nessuna origine trovata**\).  Queste pagine forniscono informazioni dettagliate sulla causa del problema e vengono forniti collegamenti ad azioni che consentono di identificare il percorso corretto dei file.  Vedere [Specifica di file di simboli \(con estensione pdb\) e di origine](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
   
- ![Torna all'inizio](../debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
+ ![Torna all'inizio](~/debugger/media/pcs_backtotop.png "PCS\_BackToTop") [Sommario](#BKMK_Contents)  
   
 ## Vedere anche  
  [Debug JIT](../debugger/just-in-time-debugging-in-visual-studio.md)   

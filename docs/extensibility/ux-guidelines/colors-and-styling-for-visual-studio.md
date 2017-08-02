@@ -301,7 +301,7 @@ Tonalità per ognuno dei nomi di token è consentiti in una superficie dell'edit
   
 Esempi dell'area di editor del tema blu:  
   
-![Editor con tema blu](../../extensibility/ux-guidelines/media/030303-c_editorblue.png "030303-c_EditorBlue")<br />Editor con tema blu
+![Editor con tema blu](~/extensibility/ux-guidelines/media/030303-c_editorblue.png "030303-c_EditorBlue")<br />Editor con tema blu
   
 ![Editor con tema a contrasto elevato #1](../../extensibility/ux-guidelines/media/030303-d_editorhc1.png "030303-d_EditorHC1")<br />Editor con tema a contrasto elevato #1
   
@@ -725,11 +725,11 @@ Il Visual Studio host trigger plug-in tema cambia quando un utente apporta modif
   
 **Tema colori:**  
   
-![Modifiche al tema di colore](../../extensibility/ux-guidelines/media/0305-a_colortheme.png "0305-a_ColorTheme")<br />Modifiche al tema a colori  
+![Modifiche al tema di colore](~/extensibility/ux-guidelines/media/0305-a_colortheme.png "0305-a_ColorTheme")<br />Modifiche al tema a colori  
   
 **Tema di ambiente:**  
   
-![Modifiche al tema di ambiente](../../extensibility/ux-guidelines/media/0305-b_environmenttheme.png "0305-b_EnvironmentTheme")<br />Modifiche al tema dell'ambiente  
+![Modifiche al tema di ambiente](~/extensibility/ux-guidelines/media/0305-b_environmenttheme.png "0305-b_EnvironmentTheme")<br />Modifiche al tema dell'ambiente  
   
 **Tema del sistema operativo** (solo quando si modifica in e da contrasto elevato):  
   

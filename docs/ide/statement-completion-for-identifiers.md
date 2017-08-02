@@ -56,7 +56,7 @@ JavaScript non consente di esplicito dei dati per le dichiarazioni di variabili.
   
  **Opzioni di completamento per un oggetto che non possono essere identificati**  
   
- ![JavaScript IntelliSense per identificatori](../ide/media/js_intellisense_identifiers.png "js\_intellisense\_identifiers")  
+ ![JavaScript IntelliSense per identificatori](~/ide/media/js_intellisense_identifiers.png "js\_intellisense\_identifiers")  
   
  È possibile ignorare l'elenco di completamento di un oggetto utilizzando i commenti di documentazione XML o funzioni di estensibilità JavaScript IntelliSense.  Utilizzo di queste funzionalità, è possibile fornire informazioni di tipo più informazioni descrittive e IntelliSense quando non in caso contrario è disponibile.  Per ulteriori informazioni, vedere [Estensione di IntelliSense in JavaScript](../ide/extending-javascript-intellisense.md) e [Procedura: creare i commenti della documentazione XLM in JavaScript](../ide/create-xml-documentation-comments-for-javascript-intellisense.md).  
   

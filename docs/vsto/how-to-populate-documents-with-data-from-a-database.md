@@ -31,7 +31,7 @@ caps.handback.revision: 47
   
  Nell'esempio seguente viene mostrato come aggiungere controlli con associazione a dati in progetti a livello di documento mediante una finestra di progettazione.  Per un esempio relativo all'aggiunta in fase di esecuzione di controlli con associazione a dati nei progetti di componenti aggiuntivi VSTO, vedere [Procedura dettagliata: data binding semplice in un progetto di componente aggiuntivo VSTO](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md).  
   
- ![Collegamento a video](../vsto/media/playvideo.png "Collegamento a video") Per una dimostrazione video correlata, vedere [Binding di dati a controlli contenuto di Word 2007 con Visual Studio Tools per Office System  \(3.0\)](http://go.microsoft.com/fwlink/?LinkId=136785).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere [Binding di dati a controlli contenuto di Word 2007 con Visual Studio Tools per Office System  \(3.0\)](http://go.microsoft.com/fwlink/?LinkId=136785).  
   
 ## Aggiunta di un controllo a un documento in fase di progettazione  
   

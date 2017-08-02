@@ -41,7 +41,7 @@ Il modello di automazione è costituito da un set di oggetti su cui è possibile
 ## <a name="objects-in-the-automation-model"></a>Oggetti del modello di automazione  
  Il modello di automazione è costituito da gruppi di oggetti che controllano i principali aspetti dell'ambiente comune correlati. Di seguito è riportato un diagramma che mostra il set completo di oggetti che compongono il modello di automazione.  
   
- ![Grafico di oggetti di automazione di Visual Studio](../../extensibility/internals/media/vsvisualstudioautomationobjectchart.gif "vsVisualStudioAutomationObjectChart")  
+ ![Grafico di oggetti di automazione di Visual Studio](~/extensibility/internals/media/vsvisualstudioautomationobjectchart.gif "vsVisualStudioAutomationObjectChart")  
 Oggetti di automazione di Visual Studio  
   
  Per ulteriori informazioni, vedere [estensione dell'ambiente Visual Studio](http://msdn.microsoft.com/Library/4173a963-7ac7-4966-9bb7-e28a9d9f6792).  

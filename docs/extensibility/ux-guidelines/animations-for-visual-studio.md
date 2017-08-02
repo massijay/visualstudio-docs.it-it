@@ -328,7 +328,7 @@ Come una transizione animata quando un elemento dell'interfaccia utente cambia d
 #### <a name="x-y-position-change"></a>Modifica di posizione X-Y  
 Con questo modello, un elemento dell'interfaccia utente cambia la posizione X o Y o entrambi.  
   
-![Animazione di modifica posizione X-Y](../../extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202-f_XYPositionChange")<br />Animazione di modifica posizione X-Y  
+![Animazione di modifica posizione X-Y](~/extensibility/ux-guidelines/media/1202-f_xypositionchange.png "1202-f_XYPositionChange")<br />Animazione di modifica posizione X-Y  
   
 ##### <a name="correct-usage"></a>Utilizzo corretto  
 Come una transizione animata quando un elemento dell'interfaccia utente cambia posizione da un contesto a un altro.  
@@ -351,7 +351,7 @@ Riordinamento di scheda
 #### <a name="rotate"></a>Ruota  
 Con questo modello, Ruota l'elemento dell'interfaccia utente.  
   
-![Animazione di rotazione di elemento dell'interfaccia utente](../../extensibility/ux-guidelines/media/1202-g_rotate.png "1202-g_Rotate")<br />Animazione di rotazione di elemento dell'interfaccia utente  
+![Animazione di rotazione di elemento dell'interfaccia utente](~/extensibility/ux-guidelines/media/1202-g_rotate.png "1202-g_Rotate")<br />Animazione di rotazione di elemento dell'interfaccia utente  
   
 ##### <a name="correct-usage"></a>Utilizzo corretto  
 Solo per l'indicatore di stato rotante indeterminato.  

@@ -29,7 +29,7 @@ caps.handback.revision: 10
 ## Aggiunta di una raccolta privata a estensioni e aggiornamenti in Visual Studio  
  Quando una raccolta privata è disponibile, è possibile aggiungerlo a **estensioni e aggiornamenti** in Visual Studio.  
   
- ![Finestra di dialogo Aggiungi di Gestione estensioni](../extensibility/media/em_adddialog.png "EM\_AddDialog")  
+ ![Finestra di dialogo Aggiungi di Gestione estensioni](~/extensibility/media/em_adddialog.png "EM\_AddDialog")  
   
 #### Per aggiungere una raccolta privata estensioni e aggiornamenti  
   
@@ -67,7 +67,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 ## L'installazione delle estensioni da una raccolta privata  
  È possibile cercare e installare le estensioni di Visual Studio da una raccolta privata in **estensioni e aggiornamenti**. La procedura seguente utilizza una raccolta privata denominata `My Gallery`.  
   
- ![Installazione della galleria privata di Gestione estensioni](../extensibility/media/em_.png "EM\_")  
+ ![Installazione della galleria privata di Gestione estensioni](~/extensibility/media/em_.png "EM\_")  
   
 #### Per cercare e installare le estensioni da una raccolta privata  
   
@@ -80,7 +80,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
 ## Aggiornamento delle estensioni da una raccolta privata  
  Come le nuove versioni delle estensioni di Visual Studio vengono registrate nella raccolta privata, è possibile aggiornare le estensioni installate. La procedura seguente utilizza una raccolta privata denominata `My Repository`.  
   
- ![Aggiornamento della galleria privata di Gestione estensioni](../extensibility/media/em_update.png "EM\_Update")  
+ ![Aggiornamento della galleria privata di Gestione estensioni](~/extensibility/media/em_update.png "EM\_Update")  
   
 #### Per aggiornare un'estensione installata da una raccolta privata  
   

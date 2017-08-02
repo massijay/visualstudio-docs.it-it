@@ -37,7 +37,7 @@ In questo documento viene illustrato come utilizzare Editor di modello per crear
   
  Al termine, il modello dovrebbe risultare simile al seguente:  
   
- ![Scena 3D che illustra un modello di terreno](../designers/media/digit-terrain-model.png "Digit\-Terrain\-Model")  
+ ![Scena 3D che illustra un modello di terreno](~/designers/media/digit-terrain-model.png "Digit\-Terrain\-Model")  
   
  Prima di iniziare, assicurarsi che la finestra **Proprietà** e la **casella degli strumenti** siano visualizzate.  
   
@@ -65,7 +65,7 @@ In questo documento viene illustrato come utilizzare Editor di modello per crear
   
  Il modello di campo è completo.  Di seguito viene nuovamente mostrato il modello finale, con applicata l'ombreggiatura di Phong:  
   
- ![Scena 3D che illustra un modello di terreno](../designers/media/digit-terrain-model.png "Digit\-Terrain\-Model")  
+ ![Scena 3D che illustra un modello di terreno](~/designers/media/digit-terrain-model.png "Digit\-Terrain\-Model")  
   
  È possibile utilizzare questo modello di campo per visualizzare l'effetto dello shader sfumato descritta in [Procedura: Creare uno shader con sfumatura basata sulla geometria](../designers/how-to-create-a-geometry-based-gradient-shader.md).  
   

@@ -139,7 +139,7 @@ caps.handback.revision: 51
   
 -   [Word, InfoPath e PowerPoint](#WordAndInfoPath)  
   
- ![Collegamento a video](../vsto/media/playvideo.png "Collegamento a video") Per una dimostrazione correlata, vedere il video su [come gestire i riquadri attività nei componenti aggiuntivi di VSTO di Word](http://go.microsoft.com/fwlink/?LinkId=136781).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione correlata, vedere il video su [come gestire i riquadri attività nei componenti aggiuntivi di VSTO di Word](http://go.microsoft.com/fwlink/?LinkId=136781).  
   
 ##  <a name="Outlook"></a> Outlook  
  Quando si crea un riquadro attività personalizzato per Outlook, tale riquadro viene associato a una finestra di esplorazione o a una finestra di controllo specifica.  Le finestre di esplorazione sono finestre che visualizzano il contenuto di una cartella, mentre le finestre di controllo visualizzano un elemento quale un messaggio di posta elettronica o un'attività.  

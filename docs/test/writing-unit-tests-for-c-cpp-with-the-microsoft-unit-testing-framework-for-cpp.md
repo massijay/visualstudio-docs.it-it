@@ -132,7 +132,7 @@ In Visual Studio, è possibile creare unit test per il codice non gestito scritt
   
 2.  Nel nuovo progetto, controllare **unittest1.cpp**  
   
-     ![Progetto di test con TEST&#95;CLASS e TEST&#95;METHOD](../test/media/utecpp2.png "UteCpp2")  
+     ![Progetto di test con TEST&#95;CLASS e TEST&#95;METHOD](~/test/media/utecpp2.png "UteCpp2")  
   
      Si noti che:  
   
@@ -165,7 +165,7 @@ In Visual Studio, è possibile creare unit test per il codice non gestito scritt
   
          Il test verrà visualizzato in **Test superati**.  
   
-         ![Esplora unit test con un test superato](../test/media/utecpp04.png "UteCpp04")  
+         ![Esplora unit test con un test superato](~/test/media/utecpp04.png "UteCpp04")  
   
 ###  <a name="createDllProject"></a> Creare un progetto DLL non gestito  
   
@@ -183,7 +183,7 @@ In Visual Studio, è possibile creare unit test per il codice non gestito scritt
   
 3.  Dichiarare una funzione esportata nel file .h principale:  
   
-     ![Nuovo progetto di codice DLL e file h con macro API](../test/media/utecpp07.png "UteCpp07")  
+     ![Nuovo progetto di codice DLL e file h con macro API](~/test/media/utecpp07.png "UteCpp07")  
   
      Il dichiaratore `__declspec(dllexport)` permette ai membri public e protected della classe di essere visibili al di fuori della DLL. Per altre informazioni, vedere [Using dllimport and dllexport in C++ Classes](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes).  
   
@@ -243,7 +243,7 @@ In Visual Studio, è possibile creare unit test per il codice non gestito scritt
   
 5.  In Esplora test scegliere **Esegui tutto**.  
   
-     ![Esplora unit test &#45; Test di base superato](../test/media/utecpp10.png "UteCpp10")  
+     ![Esplora unit test &#45; Test di base superato](~/test/media/utecpp10.png "UteCpp10")  
   
  È stato installato il test e i progetti di codice, e verificato che sia possibile eseguire test che eseguono funzioni nel progetto di codice. Ora è possibile iniziare a scrivere test e codici reali.  
   

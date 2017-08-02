@@ -39,7 +39,7 @@ Il [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **proprietà** �
   
  Il **proprietà** finestra, che può essere aperto premendo F4 sulla tastiera o la selezione di **finestra proprietà** sul **visualizzazione** menu, viene utilizzato per visualizzare e modificare le proprietà indipendenti dalla configurazione, in fase di progettazione e gli eventi degli oggetti selezionati. Proprietà dipendenti dalla configurazione, associata a soluzioni e progetti, vengono visualizzate in [pagine delle proprietà](../../extensibility/internals/property-pages.md). Per ulteriori informazioni, vedere [le proprietà del progetto: NIB](http://msdn.microsoft.com/en-us/fb126574-24ad-4c96-9b2b-6e1f3879ba50), [opzioni di configurazione Gestione](../../extensibility/internals/managing-configuration-options.md), e [NIB: elemento gestione nei progetti](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0).  
   
- ![Panoramica della finestra proprietà](../../extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow")  
+ ![Panoramica della finestra proprietà](~/extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow")  
 Finestra Proprietà  
   
  In questa sezione vengono fornite informazioni dettagliate che riguardano le singole aree di **proprietà** finestra e le interfacce che è necessario implementare e chiamare per popolare la finestra.  

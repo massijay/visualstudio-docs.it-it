@@ -90,7 +90,7 @@ ms.lasthandoff: 03/07/2017
   
  Ogni area numerata nella figura si riferisce a un passaggio della procedura.  
   
- ![Visualizzazione del rapporto di riepilogo per il campionamento](../profiling/media/summary_sampling.png "Summary_Sampling")  
+ ![Visualizzazione del rapporto di riepilogo per il campionamento](~/profiling/media/summary_sampling.png "Summary_Sampling")  
   
 #### <a name="to-analyze-sampling-data"></a>Analizzare i dati di campionamento  
   

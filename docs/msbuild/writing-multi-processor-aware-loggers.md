@@ -35,7 +35,7 @@ La possibilità di [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/v
 ### Modello di registrazione centrale  
  Nel modello di registrazione centrale, una sola istanza di MSBuild.exe agisce come "nodo centrale" e le istanze figlio del nodo centrale \("nodi secondari"\) si associano al nodo centrale per agevolare le attività di compilazione.  
   
- ![Modello di logger centrale](../msbuild/media/centralnode.png "CentralNode")  
+ ![Modello di logger centrale](~/msbuild/media/centralnode.png "CentralNode")  
   
  I logger di diversi tipi associati al nodo centrale sono noti come "logger centrali". È possibile associare solo un'istanza di ciascun tipo di logger al nodo centrale contemporaneamente.  
   
@@ -55,7 +55,7 @@ public interface INodeLogger: ILogger
 ### Modello di registrazione distribuito  
  Nel modello di registrazione centrale, il traffico in eccesso dei messaggi in ingresso può sovraccaricare il nodo centrale, ad esempio, in caso di compilazione di più progetti contemporaneamente.  Le risorse di sistema possono essere sottoposte a stress eccessivo e le prestazioni di compilazione ridursi.  Per alleviare questo problema [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] supporta un modello di registrazione distribuito.  
   
- ![Modello di registrazione distribuita](../msbuild/media/distnode.png "DistNode")  
+ ![Modello di registrazione distribuita](~/msbuild/media/distnode.png "DistNode")  
   
  Il modello di registrazione distribuito estende il modello di registrazione centrale consentendo di creare un logger di inoltro.  
   

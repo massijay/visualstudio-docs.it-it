@@ -34,7 +34,7 @@ caps.handback.revision: 58
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
- ![Collegamento a video](../vsto/media/playvideo.png "Collegamento a video") Per una dimostrazione correlata, vedere il video su [come usare Outlook per creare una relazione attività personalizzata](http://go.microsoft.com/fwlink/?LinkID=130315).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione correlata, vedere il video su [come usare Outlook per creare una relazione attività personalizzata](http://go.microsoft.com/fwlink/?LinkID=130315).  
   
 ## Accesso agli oggetti in un progetto di Outlook  
  Outlook offre numerosi oggetti con cui è possibile interagire. Per usare in modo efficace il modello a oggetti, è necessaria una familiarità con gli oggetti principali seguenti:  

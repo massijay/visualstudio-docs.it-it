@@ -70,11 +70,11 @@ ms.lasthandoff: 02/22/2017
 ##  <a name="a-nameexamplea-an-example-dsl-definition"></a><a name="example"></a>Un esempio di definizione DSL  
  Questa è la parte principale di Dsldefinition per gli esempi in questo argomento:  
   
- ![Diagramma della definizione DSL: modello di albero genealogico](../modeling/media/familyt_person.png "FamilyT_Person")  
+ ![Diagramma della definizione DSL: modello di albero genealogico](~/modeling/media/familyt_person.png "FamilyT_Person")  
   
  Questo modello è un'istanza di questo DSL:  
   
- ![Modello di albero genealogico Tudor](../modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")  
+ ![Modello di albero genealogico Tudor](~/modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")  
   
 ### <a name="references-and-namespaces"></a>I riferimenti e spazi dei nomi  
  Per eseguire il codice in questo argomento, è necessario fare riferimento:  
@@ -365,7 +365,7 @@ using (Transaction t = targetDiagram.Store.
  In un linguaggio DSL, l'elemento del modello di dominio, che rappresenta un concetto, ad esempio una persona o un brano, è separato dall'elemento forma che rappresenta le informazioni disponibili nel diagramma. Elemento del modello di dominio archivia le proprietà importanti e le relazioni dei concetti. L'elemento forma archivia le dimensioni, posizione e colore di visualizzazione dell'oggetto nel diagramma e il layout dei relativi componenti.  
   
 ### <a name="presentation-elements"></a>Elementi di presentazione  
- ![Diagramma di classi dei tipi di forma ed elemento base](../modeling/media/dslshapesandelements.png "DSLshapesAndElements")  
+ ![Diagramma di classi dei tipi di forma ed elemento base](~/modeling/media/dslshapesandelements.png "DSLshapesAndElements")  
   
  Nella definizione DSL, ogni elemento che specifica crea una classe derivata da una delle seguenti classi standard.  
   

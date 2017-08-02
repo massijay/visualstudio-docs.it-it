@@ -41,7 +41,7 @@ In base ai suggerimenti dei clienti, una delle aree di interesse per il rilascio
 
 Per consentire agli utenti di comprendere l'impatto, abbiamo aggiunto una nuova funzionalità in Visual Studio per inviare notifiche agli utenti di estensioni lenta. Quando Visual Studio rileva una nuova estensione che rallentamento carico soluzione o avvio, gli utenti visualizzeranno una notifica nell'IDE che punta alla nuova finestra di dialogo "Gestione delle prestazioni di Visual Studio". Questa finestra di dialogo è sempre accessibile dal menu della Guida in linea per sfogliare estensioni rilevate in precedenza.
 
-![la gestione delle prestazioni di Visual Studio](media/manage-performance.png)
+![la gestione delle prestazioni di Visual Studio](~/extensibility/media/manage-performance.png)
 
 In questo documento mira a consentire agli sviluppatori di estensioni descrivendo la modalità di calcolo impatto di estensione e come poter analizzare localmente per verificare se un'estensione può essere visualizzata come alcun impatto sull'estensione delle prestazioni.
 
@@ -143,7 +143,7 @@ private void DoMoreWork()
 
 Quando si imposta l'ambiente di Visual Studio con l'estensione installata, è possibile registrare una traccia di avvio aprendo PerfView e finestra di dialogo raccolta dal menu "Raccolta".
 
-![menu Raccogli perfview](media/perfview-collect-menu.png)
+![menu Raccogli perfview](~/extensibility/media/perfview-collect-menu.png)
 
 Le opzioni predefinite fornirà gli stack di chiamate per l'utilizzo della CPU, ma poiché siamo interessati anche la durata del blocco, è inoltre consigliabile abilitare stack "Thread Time". Una volta che le impostazioni sono pronte, è possibile fare clic su "Avvia raccolta" e avviare Visual Studio dopo aver avviata la registrazione.
 
@@ -155,7 +155,7 @@ Una volta completata la registrazione PerfView verrà automaticamente aprire la 
 
 Ai fini di questo esempio, ciò che interessa principalmente nella vista "Thread stack ora", è possibile trovare gruppo"Avanzate". Questa visualizzazione saranno inclusi il tempo totale trascorso in un thread da un metodo inclusi tempo CPU e tempo bloccato, ad esempio IO del disco o in attesa di handle.
 
- ![ora gli stack dei thread](media/perfview-thread-time-stacks.png)
+ ![ora gli stack dei thread](~/extensibility/media/perfview-thread-time-stacks.png)
 
  Durante l'apertura di visualizzazione "Thread stack ora", è necessario scegliere il processo "devenv" per avviare l'analisi.
 
@@ -170,11 +170,11 @@ Per l'esempio precedente alcuni interessano chiamata stack sarebbe:
 
 1. IO utilizzo classe System.IO: costo inclusivo dei frame potrebbe non essere molto costosa nella traccia, sono una potenziale causa un problema poiché la velocità dei / o file può variare da computer a computer.
 
-  ![frame dei / o di sistema](media/perfview-system-io-frames.png)
+  ![frame dei / o di sistema](~/extensibility/media/perfview-system-io-frames.png)
 
 2. Bloccare le chiamate in attesa di altre operazioni asincrone: In questo caso tempo inclusivo rappresenta l'ora in cui il thread principale è bloccato al completamento del lavoro asincrono.
 
-  ![frame di chiamata di blocco](media/perfview-blocking-call-frames.png)
+  ![frame di chiamata di blocco](~/extensibility/media/perfview-blocking-call-frames.png)
 
 Una delle altre visualizzazioni nella traccia che risulteranno utili per determinare l'impatto sarà "Immagine carico stack". È possibile applicare gli stessi filtri applicati alla visualizzazione "Thread stack ora" e scoprire tutti gli assembly caricati per il codice eseguito dal pacchetto caricato automaticamente.
 

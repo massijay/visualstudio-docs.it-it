@@ -73,10 +73,10 @@ Finestra di dialogo Nuovo progetto
   
 3.  Individuare il metodo `TestMethod1()` e rinominarlo in `DefaultAutomobileIsInitializedCorrectly()`. All'interno di questo metodo creare una nuova istanza di una classe denominata `Automobile`, come illustrato nelle figure seguenti. Verrà visualizzata una sottolineatura ondulata, che indica un errore in fase di compilazione e sotto il nome del tipo verrà visualizzato uno smart tag. La posizione esatta dello smart tag varia a seconda che si stia usando [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] o [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)].  
   
-     ![Sottolineatura smart tag in Visual Basic](../ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
+     ![Sottolineatura smart tag in Visual Basic](~/ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
 Visual Basic  
   
-     ![Sottolineatura smart tag in C&#35;](../ide/media/genclass_underline.png "GenClass_Underline")  
+     ![Sottolineatura smart tag in C&#35;](~/ide/media/genclass_underline.png "GenClass_Underline")  
 Visual C#  
   
 4.  Posizionare il puntatore del mouse sullo smart tag per visualizzare un messaggio di errore che indica che non è ancora stato definito un tipo denominato `Automobile` . Fare clic sullo smart tag o premere CTRL+. (CTRL+punto) per aprire il menu di scelta rapida per la generazione dall'utilizzo, come illustrato nelle figure seguenti.  
@@ -112,10 +112,10 @@ Finestra di dialogo Genera nuovo tipo
   
      La figura seguente mostra il menu di scelta rapida dello smart tag.  
   
-     ![Menu di scelta rapida Genera proprietà in Visual Basic](../ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
+     ![Menu di scelta rapida Genera proprietà in Visual Basic](~/ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
 Visual Basic  
   
-     ![Menu di scelta rapida Genera proprietà in C&#35;](../ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
+     ![Menu di scelta rapida Genera proprietà in C&#35;](~/ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
 Visual C#  
   
 ### <a name="to-locate-the-source-code"></a>Per individuare il codice sorgente  
@@ -161,7 +161,7 @@ Finestra Passa a
   
      La finestra **Risultati test** è illustrata nella figura seguente.  
   
-     ![Risultati dei test non riusciti](../ide/media/testsfailed.png "TestsFailed")  
+     ![Risultati dei test non riusciti](~/ide/media/testsfailed.png "TestsFailed")  
 Finestra Risultati test  
   
 2.  Nella finestra **Risultati test** fare doppio clic su ogni riga di risultati di test per passare alla posizione di ogni errore nel test.  

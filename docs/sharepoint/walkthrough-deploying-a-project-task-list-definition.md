@@ -166,7 +166,7 @@ caps.handback.revision: 33
   
 2.  Nella finestra di dialogo **Pubblica**, scegliere il pulsante di opzione **Pubblica su file system**.  
   
-     È possibile modificare il percorso di destinazione nella finestra di dialogo **Pubblica** scegliendo il pulsante con i puntini di sospensione ![Icona con i puntini di sospensione](../sharepoint/media/ellipsisicon.png "Icona con i puntini di sospensione") e passando ad un'altra posizione.  
+     È possibile modificare il percorso di destinazione nella finestra di dialogo **Pubblica** scegliendo il pulsante con i puntini di sospensione ![Icona con i puntini di sospensione](~/sharepoint/media/ellipsisicon.gif "Icona con i puntini di sospensione") e passando ad un'altra posizione.  
   
 3.  Selezionare il pulsante **Pubblica**.  
   

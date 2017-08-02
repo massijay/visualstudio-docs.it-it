@@ -22,7 +22,7 @@ caps.handback.revision: 9
 
 È possibile utilizzare l'Utilization Navigator nel Visualizzatore di concorrenza per selezionare un intervallo di tempo in una traccia.  Il Visualizzatore di concorrenza illustra l'utilizzo dei core della CPU da un processo di destinazione nel tempo.  Ciò rende più semplice analizzare i modelli di utilizzo della CPU e consente inoltre il confronto tra l'utilizzo dei dati e dei dati in altre visualizzazioni.  L'Utilization Navigator viene visualizzato nella parte superiore di ogni visualizzazione nel Visualizzatore di concorrenza.  Nella figura seguente viene illustrato l'Utilization Navigator.  
   
- ![Utilization Navigator con intervallo di tempo selezionato](../profiling/media/cvutilizationnavigator.png "CVUtilizationNavigator")  
+ ![Utilization Navigator con intervallo di tempo selezionato](~/profiling/media/cvutilizationnavigator.png "CVUtilizationNavigator")  
 Utilization Navigator e intervallo di tempo selezionato  
   
  Nell'illustrazione, l'intervallo selezionato viene indicato da un rettangolo rosso, noto come *cursore*.  

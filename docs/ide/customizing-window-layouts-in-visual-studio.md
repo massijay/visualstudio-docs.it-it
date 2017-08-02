@@ -105,22 +105,22 @@ In Visual Studio è possibile personalizzare la posizione, la dimensione e il co
 
  Nella figura seguente viene illustrata la guida a forma di rombo per le finestre dei documenti, che è possibile ancorare solo all'interno della cornice per la modifica:  
 
- ![Guida a forma di rombo delle finestre dei documenti](../ide/media/documentwindowguidediamonds.png "Documentwindowguidediamonds")  
+ ![Guida a forma di rombo delle finestre dei documenti](~/ide/media/documentwindowguidediamonds.png "Documentwindowguidediamonds")  
 
  Le finestre degli strumenti possono essere bloccate su un lato di una cornice nell'IDE o all'interno della cornice per la modifica. Per consentire all'utente di ancorare di nuovo la finestra facilmente, viene visualizzata una guida a forma di rombo quando si trascina una finestra degli strumenti in un'altra posizione.  
 
  Guida a forma di rombo per le finestre degli strumenti  
 
- ![Guide a forma di rombo delle finestre degli strumenti](../ide/media/vs10guidediamond.png "VS10GuideDiamond")  
+ ![Guide a forma di rombo delle finestre degli strumenti](~/ide/media/vs10guidediamond.png "VS10GuideDiamond")  
 
  Nella figura seguente viene illustrata la finestra Esplora soluzioni mentre viene ancorata in una nuova posizione, mostrata dall'area ombreggiata in blu:  
 
- ![Ancoraggio di Esplora soluzioni in una nuova posizione](../ide/media/vs2015_dock_diamond.png "VS2017_Dock_diamond")  
+ ![Ancoraggio di Esplora soluzioni in una nuova posizione](~/ide/media/vs2015_dock_diamond.png "VS2017_Dock_diamond")  
 
 ### <a name="close-and-auto-hide-tool-windows"></a>Chiudere e nascondere automaticamente le finestre degli strumenti  
  È possibile chiudere una finestra degli strumenti facendo clic sulla X nella parte superiore destra della barra del titolo. Per riaprire la finestra, utilizzare l'abbreviazione da tastiera o il comando di menu appropriato. Le finestre degli strumenti supportano una funzionalità denominata Nascondi automaticamente, che fa in modo che una finestra scompaia dallo schermo quando si utilizza un'altra finestra. Quando una finestra viene nascosta automaticamente, il relativo nome viene visualizzato su una scheda sul bordo dell'IDE. Per utilizzare nuovamente la finestra, posizionare il mouse sulla scheda affinché sia possibile visualizzare di nuovo la finestra.  
 
- ![Nascondi automaticamente](../ide/media/vs2015_auto_hide.png "vs2017_auto_hide")  
+ ![Nascondi automaticamente](~/ide/media/vs2015_auto_hide.png "vs2017_auto_hide")  
 
 > [!NOTE]
 >  Per specificare se l'opzione Nascondi automaticamente debba essere applicata alle finestre degli strumenti singolarmente o in gruppi ancorati, selezionare o deselezionare **Nascondi automaticamente ha effetto solo sulla finestra degli strumenti attiva** nella finestra di dialogo **Opzioni** . Per altre informazioni, vedere [General, Environment, Options Dialog Box](../ide/reference/general-environment-options-dialog-box.md).  
@@ -186,7 +186,7 @@ In Visual Studio è possibile personalizzare la posizione, la dimensione e il co
 
 1.  Per rimuovere, rinominare o riordinare il layout personalizzato, scegliere **Finestra > Gestisci layout finestra**. Se si sposta un layout, l'associazione principale viene adattata automaticamente alla nuova posizione nell'elenco. Le associazioni non possono essere modificate diversamente, di conseguenza è possibile archiviare un massimo di 10 layout alla volta.  
 
-     ![Gestisci layout finestra](../ide/media/managewindowlayouts.png "ManageWindowLayouts")  
+     ![Gestisci layout finestra](~/ide/media/managewindowlayouts.png "ManageWindowLayouts")  
 
      Per ricordare le abbreviazioni da tastiera associate ai vari layout, scegliere **Finestra > Applica layout finestra**.  
 

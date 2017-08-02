@@ -300,11 +300,11 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
 ### <a name="testing-the-environment-font"></a>Il tipo di carattere ambiente di test  
  Per assicurarsi che l'interfaccia utente utilizza il tipo di carattere ambiente e che rispetta le impostazioni della dimensione, aprire **strumenti > Opzioni > ambiente > tipi di carattere e colori** e selezionare "Tipo di carattere ambiente" i "Mostra impostazioni per:" dal menu a discesa.  
   
- ![Le impostazioni di tipi di carattere e colori negli strumenti di &gt; finestra di dialogo Opzioni](../../extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201-a_OptionsFonts")<br />Le impostazioni di tipi di carattere e colori negli strumenti di &gt; finestra di dialogo Opzioni
+ ![Le impostazioni di tipi di carattere e colori negli strumenti di &gt; finestra di dialogo Opzioni](~/extensibility/ux-guidelines/media/0201-a_optionsfonts.png "0201-a_OptionsFonts")<br />Le impostazioni di tipi di carattere e colori negli strumenti di &gt; finestra di dialogo Opzioni
   
  Impostare il tipo di carattere su un valore molto diverso da quello predefinito. Per rendere più evidente che non l'aggiornamento dell'interfaccia utente, scegliere un tipo di carattere con grazie (ad esempio "Times New Roman") e impostare le dimensioni molto grandi. Quindi testare l'interfaccia utente per assicurarsi che rispetta l'ambiente. Di seguito è riportato un esempio tramite la finestra di dialogo di licenza:  
   
- ![Esempio di testo dell'interfaccia utente che non rispetta il tipo di carattere ambiente](../../extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201-b_WrongFontDialog")<br />Esempio di testo dell'interfaccia utente che non rispetta il tipo di carattere ambiente
+ ![Esempio di testo dell'interfaccia utente che non rispetta il tipo di carattere ambiente](~/extensibility/ux-guidelines/media/0201-b_wrongfontdialog.png "0201-b_WrongFontDialog")<br />Esempio di testo dell'interfaccia utente che non rispetta il tipo di carattere ambiente
   
  In questo caso, "Informazioni utente" e "Informazioni" sono non rispettano il tipo di carattere. In alcuni casi potrebbe trattarsi di una scelta di progettazione esplicite, ma può trattarsi di un bug, se il tipo di carattere esplicita non è specificato come parte delle specifiche con linea rossa.  
   
@@ -443,7 +443,7 @@ protected static void SetFontStyles(Control topControl, Control parent, Font ref
   
 |||  
 |-|-|  
-|**Utilizzo:**<br /><br /> -Titoli sezione documento nonché dell'interfaccia utente<br />-Report<br /><br /> **Eseguire:** frase caso di utilizzo<br /><br /> **Non:**<br /><br /> -Grassetto, corsivo o grassetto, corsivo<br />-Utilizzare per il corpo del testo<br />-Usare i controlli standard di Visual Studio<br />-Utilizzare le finestre degli strumenti|**Viene visualizzato come:** 14 pt Segoe UI<br /><br /> **Esempio di Visual:**<br /><br /> ![Esempio di intestazione con tipo di carattere ambiente 155%](../../extensibility/ux-guidelines/media/0202-c_ef155.png "0202-c_EF155")|  
+|**Utilizzo:**<br /><br /> -Titoli sezione documento nonché dell'interfaccia utente<br />-Report<br /><br /> **Eseguire:** frase caso di utilizzo<br /><br /> **Non:**<br /><br /> -Grassetto, corsivo o grassetto, corsivo<br />-Utilizzare per il corpo del testo<br />-Usare i controlli standard di Visual Studio<br />-Utilizzare le finestre degli strumenti|**Viene visualizzato come:** 14 pt Segoe UI<br /><br /> **Esempio di Visual:**<br /><br /> ![Esempio di intestazione con tipo di carattere ambiente 155%](~/extensibility/ux-guidelines/media/0202-c_ef155.png "0202-c_EF155")|  
   
 #### <a name="133-environment-font"></a>Tipo di carattere ambiente 133%  
   

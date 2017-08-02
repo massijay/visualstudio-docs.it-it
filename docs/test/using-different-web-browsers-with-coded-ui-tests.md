@@ -117,17 +117,17 @@ I test codificati dell'interfaccia utente possono automatizzare il test delle ap
  *Altre informazioni*  
  **Note**  
   
--   ![Prerequisito](../test/media/prereq.png "Prereq") Il Web browser Apple Safari non è supportato.  
+-   ![Prerequisito](~/test/media/prereq.png "Prereq") Il Web browser Apple Safari non è supportato.  
   
--   ![Prerequisito](../test/media/prereq.png "Prereq") L'azione di avvio del Web browser deve far parte del test codificato dell'interfaccia utente.  
+-   ![Prerequisito](~/test/media/prereq.png "Prereq") L'azione di avvio del Web browser deve far parte del test codificato dell'interfaccia utente.  
   
      Se il Web browser è già aperto e si desidera eseguire i passaggi, la riproduzione avrà esito negativo a meno che non si usi Internet Explorer. Pertanto è consigliabile includere l'avvio del Web browser come parte dei test codificati dell'interfaccia utente.  
   
--   ![Prerequisito](../test/media/prereq.png "Prereq") L'automazione di azioni dell'interfaccia utente specifiche del browser quali l'ingrandimento, la riduzione al minimo e il ripristino non è supportata.  
+-   ![Prerequisito](~/test/media/prereq.png "Prereq") L'automazione di azioni dell'interfaccia utente specifiche del browser quali l'ingrandimento, la riduzione al minimo e il ripristino non è supportata.  
   
  **Suggerimenti**  
   
--   ![Suggerimento](../test/media/tip.png "Tip") È possibile configurare l'output in modo da includere le schermate nei log codificati dell'interfaccia utente. A tale scopo, è necessario impostare alcune impostazioni di configurazione nel file QTAgent32.exe.config. Per impostazione predefinita, questo file è installato nel percorso seguente:  
+-   ![Suggerimento](~/test/media/tip.png "Tip") È possibile configurare l'output in modo da includere le schermate nei log codificati dell'interfaccia utente. A tale scopo, è necessario impostare alcune impostazioni di configurazione nel file QTAgent32.exe.config. Per impostazione predefinita, questo file è installato nel percorso seguente:  
   
      **C:\Programmi (x86)\Microsoft Visual Studio 11.0\Common7\IDE**  
   

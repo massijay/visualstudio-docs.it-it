@@ -30,7 +30,7 @@ caps.handback.revision: 22
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
 ## Aggiunta di azioni personalizzate a un'area del modulo  
- Per aggiungere un'azione personalizzata a un'area del modulo, utilizzare la finestra di dialogo **Azioni personalizzate**.  È possibile aprire la finestra di dialogo **Azioni personalizzate** in **Esplora soluzioni** espandendo il nodo **Manifesto**, selezionando la proprietà **CustomActions** quindi facendo clic sul pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](../sharepoint/media/mwellipsis.png "Ellisse di ASP.NET Mobile Designer")\).  
+ Per aggiungere un'azione personalizzata a un'area del modulo, utilizzare la finestra di dialogo **Azioni personalizzate**.  È possibile aprire la finestra di dialogo **Azioni personalizzate** in **Esplora soluzioni** espandendo il nodo **Manifesto**, selezionando la proprietà **CustomActions** quindi facendo clic sul pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\).  
   
  È possibile utilizzare la finestra di dialogo **Azioni personalizzate** per specificare un *modulo di destinazione*.  Un modulo di destinazione rappresenta il modulo visualizzato quando l'utente esegue l'azione personalizzata.  
   

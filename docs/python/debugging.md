@@ -77,7 +77,7 @@ Il flusso di lavoro del debug di base include l'impostazione dei punti di interr
 
 Con i punti di interruzione l'esecuzione del codice viene arrestata in corrispondenza di un punto contrassegnato per consentire il controllo dello stato del programma. Per impostare i punti di interruzione, è possibile fare clic sul margine sinistro dell'editor del codice oppure fare clic con il pulsante destro del mouse su una riga di codice e scegliere **Punto di interruzione > Inserisci punto di interruzione di interruzione**. Accanto a ogni riga con un punto di interruzione verrà visualizzato un punto rosso.
 
-![Punti di interruzione in Visual Studio](media/debugging-breakpoints.png)
+![Punti di interruzione in Visual Studio](~/python/media/debugging-breakpoints.png)
 
 Per rimuovere il punto di interruzione, basta fare clic sul punto rosso oppure fare clic con il pulsante destro del mouse sulla riga di codice e scegliere **Punto di interruzione > Elimina punto di interruzione**. È anche possibile usare il comando **Punto di interruzione > Disabilita punto di interruzione** per disabilitare il punto di interruzione senza rimuoverlo.
 
@@ -88,7 +88,7 @@ Per rimuovere il punto di interruzione, basta fare clic sul punto rosso oppure f
 
 Quando si impostano le condizioni, è anche possibile impostare un'**azione** e creare un messaggio da registrare nella finestra di output, nonché scegliere se continuare automaticamente l'esecuzione. In questo modo viene creato un cosiddetto *punto di analisi* senza che sia necessario introdurre il codice di registrazione direttamente nell'applicazione:
 
-![Creazione di un punto di analisi con un punto di interruzione](media/debugging-tracepoint.png)
+![Creazione di un punto di analisi con un punto di interruzione](~/python/media/debugging-tracepoint.png)
 
 ### <a name="stepping-through-code"></a>Esecuzione di codice istruzione per istruzione
 
@@ -110,27 +110,27 @@ Quando il debugger non è in esecuzione, è possibile controllare e modificare i
 
 Per visualizzare un valore usando i suggerimenti dati, è sufficiente passare il puntatore del mouse su una qualsiasi variabile nell'editor. È possibile fare clic sul valore per modificarlo:
 
-![Suggerimenti dati nel debugger](media/debugging-quick-tips.png)
+![Suggerimenti dati nel debugger](~/python/media/debugging-quick-tips.png)
 
 La finestra Auto (**Debug > Finestre > Auto**) contiene variabili ed espressioni vicine all'istruzione corrente. È possibile fare doppio clic nella colonna del valore oppure selezionare e premere F2 per modificare il valore:
 
-![Finestra Auto nel debugger](media/debugging-autos-window.png)
+![Finestra Auto nel debugger](~/python/media/debugging-autos-window.png)
 
 La finestra Variabili locali (**Debug > Finestre > Variabili locali**) visualizza tutte le variabili presenti nell'ambito corrente che è possibile modificare nuovamente:
 
-![Finestra Variabili locali nel debugger](media/debugging-locals-window.png)
+![Finestra Variabili locali nel debugger](~/python/media/debugging-locals-window.png)
 
 Per altre informazioni sull'uso di Auto e Variabili locali, vedere [Inspecting Variables in the Autos and Locals Windows](../debugger/autos-and-locals-windows.md) (Controllo delle variabili nelle finestre Auto e Variabili locali).
 
 Le finestre Espressioni di controllo (**Debug > Finestre > Espressioni di controllo > Espressione di controllo 1-4**) consentono di immettere espressioni Python arbitrarie e di visualizzare i risultati. Le espressioni vengono valutate nuovamente per ogni passaggio:
 
-![Finestra Espressioni di controllo nel debugger](media/debugging-watch-window.png)
+![Finestra Espressioni di controllo nel debugger](~/python/media/debugging-watch-window.png)
 
 Per altre informazioni sull'uso di Espressioni di controllo, vedere [Setting a Watch on Variables using the Watch and QuickWatch Windows](../debugger/watch-and-quickwatch-windows.md) (Impostazione di un'espressione di controllo per le variabili con le finestre Espressione di controllo e Controllo immediato).
 
 Durante il controllo di un valore stringa (a questo scopo `str`, `unicode`, `bytes` e `bytearray` sono tutti considerati stringhe), a destra del valore è possibile notare l'icona di una lente di ingrandimento. Facendo clic su tale icona il valore stringa senza virgolette viene visualizzato in una finestra di dialogo popup, che supporta wrapping e scorrimento, utili in caso di stringhe lunghe. Facendo inoltre clic sulla freccia giù sull'icona sarà possibile scegliere tra le visualizzazioni testo normale, HTML, XML e JSON:
 
-![Visualizzatori di stringa](media/debugging-string-visualizers.png)
+![Visualizzatori di stringa](~/python/media/debugging-string-visualizers.png)
 
 Le visualizzazioni HTML, XML e JSON sono disponibili in finestre popup separate, che supportano visualizzazioni albero ed evidenziazione della sintassi.
 
@@ -138,13 +138,13 @@ Le visualizzazioni HTML, XML e JSON sono disponibili in finestre popup separate,
 
 Se si verifica un errore durante il debug del programma e non si dispone di un gestore di eccezioni per risolverlo, l'esecuzione del debugger si interrompe in corrispondenza del punto in cui si è verificata l'eccezione:
 
-![Popup dell'eccezione](media/debugging-exception-popup.png)
+![Popup dell'eccezione](~/python/media/debugging-exception-popup.png)
 
 A questo punto è possibile controllare lo stato del programma, incluso lo stack di chiamate. Se però si prova a eseguire il codice istruzione per istruzione, l'eccezione continuerà a essere generata fino a quando non viene gestita o il programma non viene chiuso.
 
 Il comando di menu **Debug > Finestre > Impostazioni eccezioni** consente di visualizzare una finestra in cui è possibile espandere **Eccezioni Python**:
 
-![Finestra Eccezioni](media/debugging-exception-settings.png)
+![Finestra Eccezioni](~/python/media/debugging-exception-settings.png)
 
 La casella di controllo relativa alle singole eccezioni consente di controllare se l'esecuzione del debugger deve essere *sempre* interrotta quando viene generata l'eccezione. È consigliabile selezionare questa casella se si vuole interrompere più spesso l'esecuzione per una particolare eccezione.
 
@@ -156,7 +156,7 @@ Per configurare un'eccezione che non compare nell'elenco, fare clic sul pulsante
 
 Per impostazione predefinita, il debugger avvia il programma con l'utilità di avvio standard di Python, senza argomenti della riga di comando e altri percorsi o condizioni speciali. Per modificarli, è possibile usare le proprietà di debug del progetto. Per accedere alle proprietà, fare clic con il pulsante destro del mouse sul progetto in Esplora soluzioni, scegliere **Proprietà** e quindi fare clic sulla scheda **Debug**.
 
-![Proprietà di debug del progetto](media/debugging-project-properties.png)
+![Proprietà di debug del progetto](~/python/media/debugging-project-properties.png)
 
 ### <a name="launch-mode-options"></a>Opzioni di Modalità di avvio
 
@@ -188,7 +188,7 @@ La finestra Controllo immediato (**Debug > Finestre > Controllo immediato**) vie
 
 La finestra Debug interattivo Python (**Debug > Finestre > Debug interattivo Python**) è più completa perché consente di accedere a tutte le funzionalità dell'esperienza [REPL interattivo](interactive-repl.md) durante il debug,inclusa la scrittura e l'esecuzione di codice. Si connette automaticamente a qualsiasi processo avviato nel debugger tramite l'utilità di avvio Python standard (inclusi i processi collegati tramite **Debug > Collega a processo*). Non è però disponibile quando si usa il debug C/C++ in modalità mista.
 
-![Finestra Debug interattivo Python](media/debugging-interactive.png)
+![Finestra Debug interattivo Python](~/python/media/debugging-interactive.png)
 
 La finestra Debug interattivo supporta speciali metacomandi ai [comandi REPL standard](interactive-repl.md#meta-commands):
 
@@ -215,4 +215,4 @@ Si noti che le finestre standard del debugger, ad esempio Processi, Thread e Sta
 
 Nella finestra Debug interattivo è disponibile uno specifico set di opzioni, cui è possibile accedere tramite **Strumenti > Opzioni > Strumenti Python > Finestra debug interattivo**. A differenza della finestra interattiva standard di Python, in cui è presente un'istanza separata per ogni ambiente Python, esiste una sola finestra Debug interattivo che usa sempre l'interprete Python per il processo sottoposto a debug.
 
-![Opzioni della finestra Debug interattivo](media/debugging-interactive-options.png)
+![Opzioni della finestra Debug interattivo](~/python/media/debugging-interactive-options.png)

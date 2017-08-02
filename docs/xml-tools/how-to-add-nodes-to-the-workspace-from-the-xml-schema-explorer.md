@@ -49,7 +49,7 @@ Nel presente argomento viene illustrato come aggiungere nodi all'[area di lavoro
   
 1.  Digitare "purchaseOrder" nella casella di testo di ricerca della barra degli strumenti di [XML Explorer](../xml-tools/xml-schema-explorer.md) e fare clic sul pulsante di ricerca.  
   
-     ![Ricerca di parole chiave in XML Schema Explorer](../xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")  
+     ![Ricerca di parole chiave in XML Schema Explorer](~/xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")  
   
      I risultati della ricerca sono evidenziati in XML Schema Explorer e contrassegnati con un segno di spunta sulla barra di scorrimento verticale.  
   

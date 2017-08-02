@@ -67,11 +67,11 @@ Per convenzione, Visual Studio identifica i test come metodi il cui nome inizia 
 
 1. Esplora test cercherà il progetto per i test e li visualizzerà come illustrato di seguito. Fare doppio clic su un test per aprirne il file di origine.
 
-    ![Esplora test con test_A predefinito](media/unit-test-A.png)
+    ![Esplora test con test_A predefinito](~/python/media/unit-test-A.png)
 
 1. Via via che si aggiungono altri test al progetto, è possibile organizzare la visualizzazione in Esplora test tramite il menu Raggruppa per della barra degli strumenti:
 
-    ![Menu Raggruppa per della barra degli strumenti in Esplora test](media/unit-test-group-menu.png)
+    ![Menu Raggruppa per della barra degli strumenti in Esplora test](~/python/media/unit-test-group-menu.png)
 
 1. È anche possibile immettere testo nel campo di ricerca per filtrare i test in base al nome.
 
@@ -89,13 +89,13 @@ I test vengono eseguiti in background ed Esplora test aggiorna lo stato di ogni 
 
 - I test superati sono contraddistinti da un segno di spunta verde, nonché dall'indicazione del tempo necessario per eseguirli:
 
-    ![test_A superato](media/unit-test-A-pass.png)
+    ![test_A superato](~/python/media/unit-test-A-pass.png)
 
 - I test non superati sono contraddistinti da una croce rossa e includono un collegamento **Output** che mostra l'output della console e l'output di `unittest` restituito dall'esecuzione dei test:
 
-    ![test_A non superato](media/unit-test-A-fail.png)
+    ![test_A non superato](~/python/media/unit-test-A-fail.png)
 
-    ![test_A non superato con motivo](media/unit-test-A-fail-reason.png)
+    ![test_A non superato con motivo](~/python/media/unit-test-A-fail-reason.png)
 
 ## <a name="debugging-tests"></a>Debug di test
 
@@ -103,7 +103,7 @@ Dal momento che gli unit test sono parti di codice, sono soggetti a bug esattame
 
 Per avviare il debug, impostare un punto di interruzione iniziale nel codice, fare clic con il pulsante destro del mouse sul test (o su una selezione) in Esplora test e quindi scegliere **Esegui debug test selezionati**. Visual Studio avvierà il debugger di Python come farebbe per il codice dell'applicazione.
 
-![Debug di un test](media/unit-test-debugging.png)
+![Debug di un test](~/python/media/unit-test-debugging.png)
 
 A seconda della versione di Visual Studio, è anche possibile usare i comandi **Analizza code coverage per i test selezionati** ed **Esegui profilatura test**. Vedere la [matrice delle funzionalità](python-in-visual-studio.md#features-matrix).
 

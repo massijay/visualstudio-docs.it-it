@@ -41,7 +41,7 @@ ms.lasthandoff: 05/12/2017
 
 Il tracciato è una parte fondamentale del flusso di lavoro di un data scientist. In R Tools per Visual Studio (RTVS), tutte le attività di tracciato coinvolgono una o più finestre dei tracciati, che sono progettate per migliorare la produttività con questa attività chiave.
 
-![Immagine banner tracciato](media/plotting-hero-image.png)
+![Immagine banner tracciato](~/rtvs/media/plotting-hero-image.png)
 
 Contenuto dell'argomento:
 
@@ -58,7 +58,7 @@ Il video seguente (2m 02s) offre una breve presentazione dei tracciati in RTVS:
 
 Una finestra dei tracciati contiene una serie di tracciati, in cui ognuno viene generato da un comando `plot`. Ad esempio, con `plot(1:100)` si crea una nuova finestra dei tracciati se non è già disponibile:
 
-![Tracciato lineare 1 a 100](media/plotting-1-to-100.png)
+![Tracciato lineare 1 a 100](~/rtvs/media/plotting-1-to-100.png)
 
 Tecnicamente, i comandi `plot` di R eseguono il rendering dell'output a un dispositivo di grafica R; una finestra dei tracciati esegue il rendering dei contenuti di un dispositivo di grafica R, motivo per cui a ogni finestra dei tracciati viene assegnato un numero di dispositivo.
 
@@ -76,16 +76,16 @@ La barra degli strumenti della finestra dei tracciati contiene i comandi applica
 
 | Pulsante | Comando | Descrizione | 
 | --- | --- | --- |
-| ![Pulsante Nuova finestra dei tracciati](media/plotting-toolbar-01-new-plot-window.png) | Nuova finestra dei tracciati | Crea una finestra dei tracciati separata con la propria cronologia. Vedere [Più finestre dei tracciati](#multiple-plot-windows). |
-| ![Pulsante di attivazione della finestra dei tracciati](media/plotting-toolbar-02-activate-plot-window.png) | Attiva finestra dei tracciati | Imposta la finestra dei tracciati corrente come finestra attiva, in modo che i comandi `plot` successivi vengano sottoposti a rendering per quella finestra. Vedere [Più finestre dei tracciati](#multiple-plot-windows). Vedere [Più finestre dei tracciati](#multiple-plot-windows). |
-| ![Pulsante della finestra cronologia dei tracciati](media/plotting-toolbar-03-plot-history.png) | Finestra cronologia dei tracciati | Apre una finestra con tutti i tracciati nella cronologia visualizzati come miniature. Vedere [Cronologia dei tracciati](#plot-history). |
-| ![Pulsanti della cronologia dei tracciati](media/plotting-toolbar-04-plot-history-arrows.png) | Tracciato precedente/successivo |  Passa al tracciato precedente o successivo nella cronologia. È anche possibile passare alla cronologia con CTRL+ ALT+F11 (Precedente) e CTRL+ALT F12 (Successivo). Vedere [Cronologia dei tracciati](#plot-history). |
-| ![Pulsante Salva come immagine](media/plotting-toolbar-05-save-as-image.png)| Salva come immagine | Richiede un nome di file e salva il tracciato corrente (il contenuto della finestra nelle dimensioni della finestra) in un file di immagine. I formati disponibili sono `.png`, `.jpg`, `.bmp` e `.tif`. |
-| ![Pulsante Salva come PDF](media/plotting-toolbar-06-save-as-pdf.png)| Salva come PDF | Salva il tracciato corrente in un file PDF, usando le dimensioni della finestra corrente. Il tracciato verrà nuovamente sottoposto a rendering in caso di ridimensionamento del PDF. |
-| ![Pulsante Copia come bitmap](media/plotting-toolbar-07-copy-as-bitmap.png)| Copia come bitmap | Copia il tracciato negli Appunti come bitmap raster, usando le dimensioni della finestra corrente. | 
-| ![Pulsante Copia come metafile](media/plotting-toolbar-08-copy-as-metafile.png)| Copia come metafile | Copia il tracciato negli Appunti come un [metafile di Windows](https://en.wikipedia.org/wiki/Windows_Metafile) (Wikipedia). | 
-| ![Pulsante Rimuovi tracciato](media/plotting-toolbar-09-remove-plot.png)| Rimuovi tracciato | Rimuove il tracciato corrente dalla cronologia. |
-| ![Pulsante Cancella tutti i tracciati](media/plotting-toolbar-10-clear-all-plots.png) | Cancella tutti i tracciati | Rimuove tutti i tracciati dalla cronologia (richiede una conferma). |
+| ![Pulsante Nuova finestra dei tracciati](~/rtvs/media/plotting-toolbar-01-new-plot-window.png) | Nuova finestra dei tracciati | Crea una finestra dei tracciati separata con la propria cronologia. Vedere [Più finestre dei tracciati](#multiple-plot-windows). |
+| ![Pulsante di attivazione della finestra dei tracciati](~/rtvs/media/plotting-toolbar-02-activate-plot-window.png) | Attiva finestra dei tracciati | Imposta la finestra dei tracciati corrente come finestra attiva, in modo che i comandi `plot` successivi vengano sottoposti a rendering per quella finestra. Vedere [Più finestre dei tracciati](#multiple-plot-windows). Vedere [Più finestre dei tracciati](#multiple-plot-windows). |
+| ![Pulsante della finestra cronologia dei tracciati](~/rtvs/media/plotting-toolbar-03-plot-history.png) | Finestra cronologia dei tracciati | Apre una finestra con tutti i tracciati nella cronologia visualizzati come miniature. Vedere [Cronologia dei tracciati](#plot-history). |
+| ![Pulsanti della cronologia dei tracciati](~/rtvs/media/plotting-toolbar-04-plot-history-arrows.png) | Tracciato precedente/successivo |  Passa al tracciato precedente o successivo nella cronologia. È anche possibile passare alla cronologia con CTRL+ ALT+F11 (Precedente) e CTRL+ALT F12 (Successivo). Vedere [Cronologia dei tracciati](#plot-history). |
+| ![Pulsante Salva come immagine](~/rtvs/media/plotting-toolbar-05-save-as-image.png)| Salva come immagine | Richiede un nome di file e salva il tracciato corrente (il contenuto della finestra nelle dimensioni della finestra) in un file di immagine. I formati disponibili sono `.png`, `.jpg`, `.bmp` e `.tif`. |
+| ![Pulsante Salva come PDF](~/rtvs/media/plotting-toolbar-06-save-as-pdf.png)| Salva come PDF | Salva il tracciato corrente in un file PDF, usando le dimensioni della finestra corrente. Il tracciato verrà nuovamente sottoposto a rendering in caso di ridimensionamento del PDF. |
+| ![Pulsante Copia come bitmap](~/rtvs/media/plotting-toolbar-07-copy-as-bitmap.png)| Copia come bitmap | Copia il tracciato negli Appunti come bitmap raster, usando le dimensioni della finestra corrente. | 
+| ![Pulsante Copia come metafile](~/rtvs/media/plotting-toolbar-08-copy-as-metafile.png)| Copia come metafile | Copia il tracciato negli Appunti come un [metafile di Windows](https://en.wikipedia.org/wiki/Windows_Metafile) (Wikipedia). | 
+| ![Pulsante Rimuovi tracciato](~/rtvs/media/plotting-toolbar-09-remove-plot.png)| Rimuovi tracciato | Rimuove il tracciato corrente dalla cronologia. |
+| ![Pulsante Cancella tutti i tracciati](~/rtvs/media/plotting-toolbar-10-clear-all-plots.png) | Cancella tutti i tracciati | Rimuove tutti i tracciati dalla cronologia (richiede una conferma). |
 
 ## <a name="multiple-plot-windows"></a>Più finestre dei tracciati
 
@@ -104,7 +104,7 @@ I comandi dei tracciati vengono mantenuti nella cronologia dei tracciati per ogn
 Per visualizzare l'intera raccolta di tracciati, aprire la finestra cronologia dei tracciati usando il pulsante della barra degli strumenti o **R Tools > Tracciati > Finestra cronologia dei tracciati**.
 In questo modo si ottiene un elenco di miniature per i tracciati che sono stati visualizzati in tale finestra, raggruppati in base alle diverse finestre dei tracciati (o dispositivi). Con i pulsanti dello zoom presenti sulla barra degli strumenti è possibile modificare la dimensione delle miniature.
 
-![Finestra cronologia dei tracciati](media/plotting-plot-history-window.png)
+![Finestra cronologia dei tracciati](~/rtvs/media/plotting-plot-history-window.png)
 
 Per aprire un tracciato nella finestra associata, fare doppio clic sul tracciato, selezionarlo e quindi selezionare il pulsante della barra degli strumenti **Mostra tracciato** o fare clic e scegliere **Mostra tracciato**. È anche possibile selezionare un singolo tracciato e copiarlo, tagliarlo o eliminarlo usando il menu di scelta rapida visualizzato facendo clic con il pulsante destro del mouse o il menu **Modifica**.
 

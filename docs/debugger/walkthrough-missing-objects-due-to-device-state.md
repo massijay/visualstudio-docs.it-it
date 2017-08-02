@@ -49,7 +49,7 @@ Questa procedura dettagliata descrive come usare Diagnostica grafica di [!INCLUD
   
 2.  In **Elenco frame** selezionare un frame che dimostra che il modello non è visualizzato. La destinazione di rendering viene aggiornata per riflettere la selezione del frame. In questo scenario la scheda del log di grafica ha un aspetto simile al seguente:  
   
-     ![Elenco frame e anteprima buffer nella scheda .vsglog](../debugger/media/vsg_walkthru1_experiment.png "vsg\_walkthru1\_experiment")  
+     ![Elenco frame e anteprima buffer nella scheda .vsglog](~/debugger/graphics/media/vsg_walkthru1_experiment.png "vsg\_walkthru1\_experiment")  
   
  Dopo aver selezionato un frame che dimostra il problema, è possibile usare l'**Elenco eventi di grafica** per diagnosticarlo. La finestra **Elenco eventi di grafica** contiene ogni chiamata API Direct3D effettuata per eseguire il rendering del frame attivo, ad esempio chiamate API per configurare lo stato del dispositivo, creare e aggiornare i buffer e disegnare gli oggetti visualizzati nel frame. Molti tipi di chiamate sono interessanti perché spesso \(ma non sempre\) si verifica una modifica corrispondente nella destinazione di rendering quando l'app funziona nel modo previsto, ad esempio le chiamate di disegno, invio, copia o eliminazione. Le chiamate di disegno sono particolarmente interessanti, perché ognuna rappresenta la geometria di cui l'app ha eseguito il rendering \(anche le chiamate di invio possono eseguire il rendering della geometria\).  
   
@@ -107,4 +107,4 @@ Questa procedura dettagliata descrive come usare Diagnostica grafica di [!INCLUD
   
  Dopo aver determinato che la causa del problema di rendering potrebbe essere una funzione di profondità non configurata correttamente, è possibile usare queste informazioni insieme alla conoscenza del codice per individuare la posizione in cui la funzione di profondità è stata impostata in modo non corretto, per poi risolvere il problema. Se non si ha familiarità con il codice, è possibile cercare il problema usando gli indizi raccolti durante il debug, ad esempio, in base alla **Descrizione stencil profondità** in questo scenario, si potrebbero cercare le parole "depth" o "GREATER" nel codice. Dopo aver corretto il codice, ricompilare ed eseguire l'app per verificare che il problema di rendering sia stato risolto:  
   
- ![App dopo la risoluzione del problema](../debugger/media/vsg_walkthru1_finalview.png "vsg\_walkthru1\_finalview")
+ ![App dopo la risoluzione del problema](~/debugger/graphics/media/vsg_walkthru1_finalview.png "vsg\_walkthru1\_finalview")

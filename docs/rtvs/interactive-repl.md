@@ -67,7 +67,7 @@ Tutti gli input e output precedenti di REPL sono di sola lettura e non possono e
 
 Infatti, quando si inizia a digitare un'istruzione e si preme INVIO, RTVS riconosce se l'istruzione deve essere continuata e passa alla modalità a più righe aggiungendo un prompt + a sinistra della riga e un rientro appropriato. RTVS completerà anche le parentesi tonde, le parentesi quadre e le parentesi graffe:
 
-![Immissione di istruzioni a più righe nella finestra interattiva](media/repl-multiline-entry.png)
+![Immissione di istruzioni a più righe nella finestra interattiva](~/rtvs/media/repl-multiline-entry.png)
 
 In questa modalità a più righe, il tasto INVIO esegue il blocco di codice solo se il cursore è posizionato alla fine del blocco, in caso contrario inserisce una nuova riga. Tuttavia, è possibile premere CTRL+INVIO in una posizione qualsiasi per eseguire immediatamente il blocco di codice.
 
@@ -75,23 +75,23 @@ In questa modalità a più righe, il tasto INVIO esegue il blocco di codice solo
 
 La finestra interattiva con relativa barra degli strumenti viene illustrata di seguito:
 
-![Finestra interattiva con la barra degli strumenti](media/repl-window.png)
+![Finestra interattiva con la barra degli strumenti](~/rtvs/media/repl-window.png)
 
 Di seguito vengono illustrati i comandi della barra degli strumenti, la maggior parte dei quali hanno combinazioni di tasti e sono anche disponibili nei menu **R Tools > Sessione** e **R Tools > Directory di lavoro** (oppure come indicato):
 
 | Pulsante | Comando | Combinazione di tasti | Descrizione | 
 | --- | --- | --- | --- |
-| ![Pulsante Reimposta](media/repl-toolbar-01-reset.png) | Reimposta | Ctrl+Maiusc+F10 | Reimposta la sessione della finestra interattiva, cancellando tutte le variabili e la cronologia. |
-| ![Pulsante Cancella](media/repl-toolbar-02-clear.png) | Cancella | CTRL+L | Cancella l'output visualizzato nella finestra interattiva. Non ha alcun effetto sulle variabili della sessione o sulla cronologia. |
-| ![Pulsanti Cronologia](media/repl-toolbar-03-history.png) | Comando Cronologia precedente<br/>Comando Cronologia successiva | Freccia SU, Freccia GIÙ<br/>ALT+ freccia SU , ALT-freccia GIÙ | Scorre la cronologia, con determinati comportamenti per i blocchi di codice su più righe. Vedere [Cronologia](#history). |
-| ![Pulsante Carica area di lavoro](media/repl-toolbar-04-load-workspace.png) | Carica area di lavoro | n/d | Carica un'area di lavoro precedentemente salvata (vedere [Aree di lavoro e sessioni](#workspaces-and-sessions). |
-| ![Pulsante Salva area di lavoro come](media/repl-toolbar-05-save-workspace-as.png)| Salva area di lavoro come | n/d | Salva lo stato corrente della sessione come area di lavoro (vedere [Aree di lavoro e sessioni](#workspaces-and-sessions). |
-| ![Pulsante Script R di origine](media/repl-toolbar-06-source-r-script.png) | Script R di origine | CTRL+MAIUSC+S | Chiama `source` con lo script R attualmente attivo nell'editor di Visual Studio, che esegue il codice.  Questo pulsante viene visualizzato solo se è aperto un file R nell'editor di Visual Studio. | 
-| ![Pulsante Script R di origine con eco](media/repl-toolbar-07-source-r-script-with-echo.png) | Script R di origine con eco | CTRL+MAIUSC+INVIO | È simile allo script R di origine, ma visualizza il contenuto dello script nella finestra interattiva. | 
-| ![Pulsante Interrompi R](media/repl-toolbar-08-interrupt-r.png)| Interrompi R | ESC | Arresta qualsiasi codice in esecuzione nella finestra interattiva, ad esempio il ciclo `while` nella figura precedente. |
-| ![Pulsante Collega debugger](media/repl-toolbar-09b-attach-debugger.png)| Collega debugger | n/d | Disponibile anche tramite il comando **Debug > Collega a R interattivo**. | 
-| ![Pulsante Imposta la directory di lavoro sul percorso del file di origine](media/repl-toolbar-10-set-working-directory-source.png)| Imposta la directory di lavoro sul percorso del file di origine | Ctrl+Maiusc+E | Imposta la directory di lavoro sul file di origine più recentemente caricato nella finestra interattiva tramite `source`. Vedere [Directory di lavoro](#working-directory). |
-| ![Pulsante Imposta la directory di lavoro sul percorso del progetto](media/repl-toolbar-11-set-working-directory-to-project.png) | Imposta la directory di lavoro sul percorso del progetto | CTRL+MAIUSC+P | Imposta la directory di lavoro sulla radice del progetto attualmente caricato in Visual Studio. Vedere [Directory di lavoro](#working-directory). |
+| ![Pulsante Reimposta](~/rtvs/media/repl-toolbar-01-reset.png) | Reimposta | Ctrl+Maiusc+F10 | Reimposta la sessione della finestra interattiva, cancellando tutte le variabili e la cronologia. |
+| ![Pulsante Cancella](~/rtvs/media/repl-toolbar-02-clear.png) | Cancella | CTRL+L | Cancella l'output visualizzato nella finestra interattiva. Non ha alcun effetto sulle variabili della sessione o sulla cronologia. |
+| ![Pulsanti Cronologia](~/rtvs/media/repl-toolbar-03-history.png) | Comando Cronologia precedente<br/>Comando Cronologia successiva | Freccia SU, Freccia GIÙ<br/>ALT+ freccia SU , ALT-freccia GIÙ | Scorre la cronologia, con determinati comportamenti per i blocchi di codice su più righe. Vedere [Cronologia](#history). |
+| ![Pulsante Carica area di lavoro](~/rtvs/media/repl-toolbar-04-load-workspace.png) | Carica area di lavoro | n/d | Carica un'area di lavoro precedentemente salvata (vedere [Aree di lavoro e sessioni](#workspaces-and-sessions). |
+| ![Pulsante Salva area di lavoro come](~/rtvs/media/repl-toolbar-05-save-workspace-as.png)| Salva area di lavoro come | n/d | Salva lo stato corrente della sessione come area di lavoro (vedere [Aree di lavoro e sessioni](#workspaces-and-sessions). |
+| ![Pulsante Script R di origine](~/rtvs/media/repl-toolbar-06-source-r-script.png) | Script R di origine | CTRL+MAIUSC+S | Chiama `source` con lo script R attualmente attivo nell'editor di Visual Studio, che esegue il codice.  Questo pulsante viene visualizzato solo se è aperto un file R nell'editor di Visual Studio. | 
+| ![Pulsante Script R di origine con eco](~/rtvs/media/repl-toolbar-07-source-r-script-with-echo.png) | Script R di origine con eco | CTRL+MAIUSC+INVIO | È simile allo script R di origine, ma visualizza il contenuto dello script nella finestra interattiva. | 
+| ![Pulsante Interrompi R](~/rtvs/media/repl-toolbar-08-interrupt-r.png)| Interrompi R | ESC | Arresta qualsiasi codice in esecuzione nella finestra interattiva, ad esempio il ciclo `while` nella figura precedente. |
+| ![Pulsante Collega debugger](~/rtvs/media/repl-toolbar-09b-attach-debugger.png)| Collega debugger | n/d | Disponibile anche tramite il comando **Debug > Collega a R interattivo**. | 
+| ![Pulsante Imposta la directory di lavoro sul percorso del file di origine](~/rtvs/media/repl-toolbar-10-set-working-directory-source.png)| Imposta la directory di lavoro sul percorso del file di origine | Ctrl+Maiusc+E | Imposta la directory di lavoro sul file di origine più recentemente caricato nella finestra interattiva tramite `source`. Vedere [Directory di lavoro](#working-directory). |
+| ![Pulsante Imposta la directory di lavoro sul percorso del progetto](~/rtvs/media/repl-toolbar-11-set-working-directory-to-project.png) | Imposta la directory di lavoro sul percorso del progetto | CTRL+MAIUSC+P | Imposta la directory di lavoro sulla radice del progetto attualmente caricato in Visual Studio. Vedere [Directory di lavoro](#working-directory). |
 | (Campo testo) | Seleziona directory di lavoro | n/d | Campo di input diretto per la directory di lavoro. Vedere [Directory di lavoro](#working-directory). |
 
 

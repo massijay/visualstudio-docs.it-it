@@ -34,7 +34,7 @@ caps.handback.revision: 25
   
 3.  Fare clic con il pulsante destro del mouse sulla finestra di progettazione della barra multifunzione, quindi scegliere **Proprietà**.  
   
-4.  Nella finestra **Proprietà** selezionare la proprietà **Tabs**, quindi fare clic sul pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](../sharepoint/media/mwellipsis.png "Ellisse di ASP.NET Mobile Designer")\).  
+4.  Nella finestra **Proprietà** selezionare la proprietà **Tabs**, quindi fare clic sul pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\).  
   
      Verrà visualizzato l'**Editor della raccolta Tab**.  
   

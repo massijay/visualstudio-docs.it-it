@@ -41,13 +41,13 @@ ms.lasthandoff: 04/10/2017
 
 È sufficiente fare clic con il pulsante destro del mouse su un progetto Python in Esplora soluzioni e scegliere **Python > Esegui PyLint**:
 
-![Comando PyLint nel menu di scelta rapida per i progetti Python](media/code-pylint-command.png)
+![Comando PyLint nel menu di scelta rapida per i progetti Python](~/python/media/code-pylint-command.png)
 
 Quando si usano i comandi viene richiesto di installare PyLint nell'ambiente attivo, se necessario.
 
 Gli avvisi e gli errori di PyLint vengono Visualizzati nella finestra Elenco errori:
 
-![Elenco errori di PyLint](media/code-pylint-error-list.png)
+![Elenco errori di PyLint](~/python/media/code-pylint-error-list.png)
 
 È possibile fare doppio clic su un errore per passare direttamente al codice sorgente che ha generato il problema.
 

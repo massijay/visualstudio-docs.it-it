@@ -27,7 +27,7 @@ caps.handback.revision: 53
 # Procedura: Leggere e scrivere nelle propriet&#224; dei documenti
   È possibile archiviare le proprietà del documento insieme a un documento. Le applicazioni di Office offrono svariate proprietà predefinite, ad esempio autore, titolo e oggetto. Questo argomento illustra come impostare le proprietà dei documenti in Microsoft Office Excel e Microsoft Office Word.  
   
- ![Collegamento a video](../vsto/media/playvideo.png "Collegamento a video") Per una dimostrazione video correlata, vedere [Procedura: Accedere e modificare le proprietà personalizzate dei documenti in Microsoft Word](http://go.microsoft.com/fwlink/?LinkId=136772).  
+ ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere [Procedura: Accedere e modificare le proprietà personalizzate dei documenti in Microsoft Word](http://go.microsoft.com/fwlink/?LinkId=136772).  
   
  [!INCLUDE[appliesto_docprops](../vsto/includes/appliesto-docprops-md.md)]  
   

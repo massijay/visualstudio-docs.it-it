@@ -25,7 +25,7 @@ caps.handback.revision: 12
 Il visualizzatore della concorrenza consente agli sviluppatori di esaminare il comportamento di un'applicazione multithreading.  Questo strumento include una raccolta di modelli comuni per applicazioni multithreading con comportamenti non validi.  La raccolta include modelli visivi tipici e riconoscibili esposti tramite lo strumento, insieme a una spiegazione del comportamento rappresentato da ogni modello, del risultato probabile del comportamento in questione e dell'approccio più comune per risolvere il problema.  
   
 ## Conflitti di blocco ed esecuzione serializzata  
- ![Conflitti di blocco con conseguente esecuzione serializzata](../profiling/media/lockcontention_serialized.png "LockContention\_Serialized")  
+ ![Conflitti di blocco con conseguente esecuzione serializzata](~/profiling/media/lockcontention_serialized.png "LockContention\_Serialized")  
   
  Le applicazioni parallelizzate continuano talvolta a essere eseguite in modo seriale nonostante contengano diversi thread e nel computer sia presente un numero sufficiente di core logici.  Il primo sintomo è rappresentato da una riduzione delle prestazioni multithreading, a volte perfino maggiore di un'implementazione seriale.  Nella visualizzazione Thread non viene rappresentata l'esecuzione di più thread in parallelo, ma è possibile vedere che in un determinato momento viene eseguito un solo thread.  In questa fase, facendo clic su un segmento di sincronizzazione in un thread è possibile visualizzare uno stack di chiamate per il thread bloccato \(stack di chiamate di blocco\) e il thread che ha rimosso la condizione di blocco \(stack di chiamate di sblocco\).  Inoltre, se lo stack di chiamate di sblocco si verifica nel processo che si sta analizzando, viene visualizzato un connettore pronto per thread.  A questo punto è possibile passare al codice dagli stack di chiamate di blocco e sblocco per un'ulteriore analisi della possibile causa della serializzazione.  
   
@@ -36,7 +36,7 @@ Il visualizzatore della concorrenza consente agli sviluppatori di esaminare il c
  ![Conflitti di blocco](../profiling/media/lockcontention_2.png "LockContention\_2")  
   
 ## Distribuzione non uniforme del carico di lavoro  
- ![Carico di lavoro non uniforme](../profiling/media/unevenworkload_1.png "UnevenWorkLoad\_1")  
+ ![Carico di lavoro non uniforme](~/profiling/media/unevenworkload_1.png "UnevenWorkLoad\_1")  
   
  Nei casi in cui il carico di lavoro è distribuito in modo irregolare tra diversi thread paralleli di un'applicazione, viene visualizzato un tipico modello a gradini indicante i momenti in cui ciascun thread viene completato, come illustrato nella figura precedente. Nel visualizzatore della concorrenza vengono spesso indicati momenti di inizio molto ravvicinati per ogni thread concorrente.  Tali thread terminano tuttavia in modo irregolare, non contemporaneamente.  Questo modello indica una distribuzione irregolare del carico di lavoro in un gruppo di thread paralleli che può causare una riduzione delle prestazioni.  L'approccio consigliato a questo problema consiste nel rivalutare l'algoritmo mediante il quale il carico di lavoro è stato suddiviso tra i thread paralleli.  
   
@@ -45,7 +45,7 @@ Il visualizzatore della concorrenza consente agli sviluppatori di esaminare il c
  ![Carico di lavoro non uniforme](../profiling/media/unevenworkload_2.png "UnevenWorkload\_2")  
   
 ## Oversubscription  
- ![Oversubscription](../profiling/media/oversubscription.png "Oversubscription")  
+ ![Oversubscription](~/profiling/media/oversubscription.png "Oversubscription")  
   
  L'oversubscription si verifica quando il numero di thread attivi in un processo è maggiore del numero di core logici disponibili nel sistema.  Nella figura precedente viene illustrato il risultato dell'oversubscription, indicato dall'alternanza di fasce di precedenza in tutti i thread attivi.  Inoltre, la legenda indica una notevole percentuale di tempo impiegata nella fase di precedenza \(84% in questo esempio\).  Ciò può indicare che il processo richiede al sistema di eseguire un numero di thread concorrenti superiore a quello dei core logici.  Questa condizione può tuttavia indicare che le risorse che dovrebbero essere disponibili per il processo vengono invece utilizzate da altri processi nel sistema.  
   

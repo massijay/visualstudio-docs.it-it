@@ -59,7 +59,7 @@ Per definire un linguaggio specifico di dominio (DSL), si crea una soluzione [!I
   
 1.  Creare una soluzione con il **linguaggio specifico di dominio** modello, che può trovarsi in **altri tipi di progetto/Extensibility** nel **nuovo progetto** la finestra di dialogo.  
   
-     ![Finestra di dialogo DSL crea](../modeling/media/create_dsldialog.png "Create_DSLDialog")  
+     ![Finestra di dialogo DSL crea](~/modeling/media/create_dsldialog.png "Create_DSLDialog")  
   
      Quando fa clic su **OK**, **procedura guidata di linguaggio specifico di dominio** apre e visualizza un elenco di soluzioni di modello DSL.  
   
@@ -110,7 +110,7 @@ Per definire un linguaggio specifico di dominio (DSL), si crea una soluzione [!I
   
  Se si esegue una soluzione che è stato creato dal **linguaggio minimo** modello, sperimentale [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sarà simile all'esempio seguente:  
   
- ![](../modeling/media/dsl_min.png "DSL_min")  
+ ![](~/modeling/media/dsl_min.png "DSL_min")  
   
  Sperimentare con gli strumenti. Creare elementi e connetterli.  
   
@@ -296,7 +296,7 @@ Per definire un linguaggio specifico di dominio (DSL), si crea una soluzione [!I
   
     4.  Verificare che accanto al nome di ogni elemento Decorator appaia un segno di spunta.  
   
-     ![Finestra Dettagli DSL e mapping forme](../modeling/media/dsldetailswindow.png "DslDetailsWindow")  
+     ![Finestra Dettagli DSL e mapping forme](~/modeling/media/dsldetailswindow.png "DslDetailsWindow")  
   
 7.  **Impostare un elemento della casella degli strumenti per la creazione di elementi della classe di dominio.**  
   
@@ -359,7 +359,7 @@ Per definire un linguaggio specifico di dominio (DSL), si crea una soluzione [!I
   
  **Impostare la proprietà della relazione, consente i duplicati** se tra la stessa coppia di elementi del modello può esistere più di un collegamento della stessa classe. Ad esempio, è possibile consentire a un insegnante di insegnare più di una materia allo stesso studente.  
   
- ![Forma mappe dei connettori](../modeling/media/music_connector.png "Music_Connector")  
+ ![Forma mappe dei connettori](~/modeling/media/music_connector.png "Music_Connector")  
   
  Per ulteriori informazioni, vedere [le proprietà delle relazioni di dominio](../modeling/properties-of-domain-relationships.md) e [le proprietà dei ruoli di dominio](../modeling/properties-of-domain-roles.md).  
   
@@ -426,7 +426,7 @@ Per definire un linguaggio specifico di dominio (DSL), si crea una soluzione [!I
   
  Il metodo più semplice per ottenere questo effetto in una definizione DSL è definire una classe di dominio per il contenitore e una classe di dominio per ogni elenco. La classe contenitore è mappata alla forma raggruppamento.  
   
- ![Mappa di forme](../modeling/media/music_mapcomp.png "Music_MapComp")  
+ ![Mappa di forme](~/modeling/media/music_mapcomp.png "Music_MapComp")  
   
  Per ulteriori informazioni, vedere [le proprietà di forme raggruppamento](../modeling/properties-of-compartment-shapes.md).  
   
@@ -516,7 +516,7 @@ Per definire un linguaggio specifico di dominio (DSL), si crea una soluzione [!I
   
 7.  Aprire la finestra di esplorazione linguaggio. Verificare che siano visibili i nodi dei contenitori con all'interno i nodi degli elementi elenco.  
   
- ![Finestra di esplorazione generata di DSL](../modeling/media/music_explorer.png "Music_Explorer")  
+ ![Finestra di esplorazione generata di DSL](~/modeling/media/music_explorer.png "Music_Explorer")  
   
  Dopo aver testato una forma raggruppamento, potrebbe essere necessario modificarne alcune delle proprietà e aggiungere alcune funzionalità avanzate. Per ulteriori informazioni, vedere [personalizzazione ed estensione di un linguaggio specifico di dominio](../modeling/customizing-and-extending-a-domain-specific-language.md).  
   

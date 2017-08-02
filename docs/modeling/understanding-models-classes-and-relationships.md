@@ -106,7 +106,7 @@ Un linguaggio specifico di dominio (DSL) è definito dal relativo file di defini
 ### <a name="the-explorer-displays-the-embedding-tree"></a>Esplora risorse consente di visualizzare la struttura ad albero di incorporamento  
  Definizione DSL crea inoltre un elenco di cartelle, gli utenti vedono insieme il diagramma del modello.  
   
- ![Finestra di esplorazione generata di DSL](../modeling/media/music_explorer.png "Music_Explorer")  
+ ![Finestra di esplorazione generata di DSL](~/modeling/media/music_explorer.png "Music_Explorer")  
   
  In Esplora Mostra tutti gli elementi nel modello, anche quelli per cui non è stata definita alcuna forma. Visualizza gli elementi e relazioni di incorporamento, ma non fare riferimento a relazioni.  
   
@@ -124,7 +124,7 @@ Un linguaggio specifico di dominio (DSL) è definito dal relativo file di defini
   
  Nell'immagine seguente, la linea tra le **Publisher** classe di dominio e il **PublisherCatalog** relazione di dominio è il ruolo di origine. La linea tra la relazione di dominio e il **Album** classe di dominio è il ruolo di destinazione.  
   
- ![Ruoli e proprietà. ] (../modeling/media/propertycode.png "PropertyCode")  
+ ![Ruoli e proprietà. ] (~/modeling/media/propertycode.png "PropertyCode")  
   
  I nomi associati a una relazione sono particolarmente importanti quando si scrive codice programma che attraversa il modello. Ad esempio, quando si compila la soluzione DSL, la classe generata server di pubblicazione ha una proprietà di catalogo da un insieme di album. La classe Album ha una proprietà server di pubblicazione che è una singola istanza della classe di server di pubblicazione.  
   

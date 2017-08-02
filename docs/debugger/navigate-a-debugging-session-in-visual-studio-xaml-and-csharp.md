@@ -67,7 +67,7 @@ Questa guida introduttiva illustra come spostarsi nelle sessioni di debug di Vis
   
  **Impostare un punto di interruzione.** Impostare un punto di interruzione in corrispondenza dell'istruzione `methodTrack = "Main Page";` nel costruttore MainPage. Scegliere la riga nella barra di navigazione ombreggiata dell'editor del codice sorgente \(tastiera: posizionare il cursore sulla riga e premere F9\).  
   
- ![Esegui istruzione](../debugger/media/dbg_basics_stepinto.png "DBG\_Basics\_StepInto")  
+ ![Esegui istruzione](~/debugger/media/dbg_basics_stepinto.png "DBG\_Basics\_StepInto")  
   
  L'icona del punto di interruzione viene visualizzata nella barra.  
   
@@ -75,13 +75,13 @@ Questa guida introduttiva illustra come spostarsi nelle sessioni di debug di Vis
   
  L'esecuzione dell'app inizia e viene sospesa immediatamente prima dell'istruzione in cui è stato impostato il punto di interruzione. L'icona della riga corrente nella barra di navigazione identifica la posizione e l'istruzione corrente risulta evidenziata.  
   
- ![Imposta punto di interruzione](../debugger/media/dbg_basics_setbreakpoint.png "DBG\_Basics\_SetBreakpoint")  
+ ![Imposta punto di interruzione](~/debugger/media/dbg_basics_setbreakpoint.png "DBG\_Basics\_SetBreakpoint")  
   
  A questo punto è possibile controllare l'esecuzione dell'app ed esaminare lo stato del programma mentre si esegue il codice un'istruzione alla volta.  
   
  **Eseguire un'istruzione nel metodo.** Scegliere **Esegui istruzione** dal menu **Debug** \(tastiera: F11\).  
   
- ![Riga corrente](../debugger/media/dbg_basics_currentline.png "DBG\_Basics\_CurrentLine")  
+ ![Riga corrente](~/debugger/media/dbg_basics_currentline.png "DBG\_Basics\_CurrentLine")  
   
  Si noti che il debugger passa alla riga successiva, che corrisponde a una chiamata al metodo Example1. Scegliere di nuovo Esegui istruzione. Il debugger passa al punto di ingresso del metodo Example1. Ciò indica che il metodo è stato caricato nello stack di chiamate e che è stata allocata la memoria per le variabili locali.  
   
@@ -95,13 +95,13 @@ Questa guida introduttiva illustra come spostarsi nelle sessioni di debug di Vis
   
  **Esaminare i valori delle variabili nei suggerimenti dati.** Quando si passa il puntatore del mouse su un nome di variabile, il nome, il valore e il tipo vengono visualizzati in un suggerimento dati.  
   
- ![Suggerimento dati debugger](../debugger/media/dbg_basics_datatip.png "DBG\_Basics\_DataTip")  
+ ![Suggerimento dati debugger](~/debugger/media/dbg_basics_datatip.png "DBG\_Basics\_DataTip")  
   
  Passare il mouse sulla variabile `a`. Notare il nome, il valore e il tipo di dati. Passare il mouse sulla variabile `methodTrack`. Anche in questo caso sono indicati il nome, il valore e il tipo di dati.  
   
  **Esaminare i valori delle variabili nella finestra Variabili locali.** Scegliere **Finestre** dal menu **Debug** e quindi **Variabili locali**. \(Tastiera: ALT\+4\).  
   
- ![Finestra Variabili locali](../debugger/media/dbg_basics_localswindow.png "DBG\_Basics\_LocalsWindow")  
+ ![Finestra Variabili locali](~/debugger/media/dbg_basics_localswindow.png "DBG\_Basics\_LocalsWindow")  
   
  La finestra Variabili locali è una visualizzazione albero dei parametri e delle variabili della funzione. Le proprietà di una variabile oggetto sono nodi figlio dell'oggetto stesso. La variabile `this` è un parametro nascosto in ogni metodo dell'oggetto che rappresenta l'oggetto stesso. In questo caso rappresenta la classe MainPage. Poiché `methodTrack` è un membro della classe MainPage, il valore e il tipo di dati corrispondenti vengono elencati in una riga al di sotto di `this`. Espandere il nodo `this` per visualizzare le informazioni `methodTrack`.  
   
@@ -120,14 +120,14 @@ Questa guida introduttiva illustra come spostarsi nelle sessioni di debug di Vis
   
  Sia l'esecuzione che l'uscita da un'istruzione\/routine di una funzione comporta l'esecuzione della funzione.  
   
- ![Esegui istruzione, esci da istruzione nei metodi](../debugger/media/dbg_basics_stepintooverout.png "DBG\_Basics\_StepIntoOverOut")  
+ ![Esegui istruzione, esci da istruzione nei metodi](~/debugger/media/dbg_basics_stepintooverout.png "DBG\_Basics\_StepIntoOverOut")  
   
 ### Esempio 2  
  In questo esempio si proverà a eseguire un'istruzione, eseguire un'istruzione\/routine e uscire da un'istruzione\/routine dei metodi.  
   
  **Chiamare il metodo Example2 nel costruttore MainPage.** Modificare il costruttore MainPage e sostituire la riga che segue `methodTrack = String.Empty;` con `Example2();`.  
   
- ![Chiama metodo Example2 da metodo Demo](../debugger/media/dbg_basics_callexample2.png "DBG\_Basics\_CallExample2")  
+ ![Chiama metodo Example2 da metodo Demo](~/debugger/media/dbg_basics_callexample2.png "DBG\_Basics\_CallExample2")  
   
  **Eseguire fino al punto di interruzione.** Avviare la sessione di debug scegliendo **Avvia debug** dal menu **Debug** \(tastiera: F5\). Il debugger sospende l'esecuzione in corrispondenza del punto di interruzione.  
   
@@ -135,7 +135,7 @@ Questa guida introduttiva illustra come spostarsi nelle sessioni di debug di Vis
   
  **Eseguire un'istruzione in Example2 e in Example2\_A.** Premere F11 per eseguire un'istruzione nel metodo Example2. Continuare a eseguire le istruzioni in Example2 fino a raggiungere la riga `int x = Example2_A();`. Eseguire quindi l'istruzione in questa riga per passare al punto di ingresso di Example2\_A. Continuare a eseguire ogni istruzione di Example2\_A fino a tornare a Example2.  
   
- ![Example2](../debugger/media/dbg_basics_example2.png "DBG\_Basics\_Example2")  
+ ![Example2](~/debugger/media/dbg_basics_example2.png "DBG\_Basics\_Example2")  
   
  **Eseguire un'istruzione\/routine di una funzione.** Si noti che la riga successiva in Example2, `int y = Example2_A();`, è fondamentalmente uguale alla riga precedente. È possibile eseguire tranquillamente l'istruzione\/routine in questa riga. Premere F10 per passare dalla ripresa di Example2 a questa seconda chiamata a Example2\_A. Premere F10 per eseguire l'istruzione\/routine di questo metodo. La stringa `methodTrack` indica che il metodo Example2\_A è stato eseguito due volte. Si noterà anche che il debugger passa immediatamente alla riga successiva. Non sospende l'esecuzione nel punto in cui riprende Example2.  
   
@@ -155,7 +155,7 @@ Questa guida introduttiva illustra come spostarsi nelle sessioni di debug di Vis
   
  **Chiamare il metodo Example3 nel costruttore MainPage.** Modificare il costruttore MainPage e sostituire la riga che segue `methodTrack = String.Empty;` con la riga `Example3();`.  
   
- ![Chiama metodo Example3 da metodo Demo](../debugger/media/dbg_basics_callexample3.png "DBG\_Basics\_CallExample3")  
+ ![Chiama metodo Example3 da metodo Demo](~/debugger/media/dbg_basics_callexample3.png "DBG\_Basics\_CallExample3")  
   
  **Eseguire fino al punto di interruzione.** Avviare la sessione di debug scegliendo **Avvia debug** dal menu **Debug** \(tastiera: F5\). Il debugger sospende l'esecuzione in corrispondenza del punto di interruzione nel metodo MainPage.  
   
@@ -167,7 +167,7 @@ Questa guida introduttiva illustra come spostarsi nelle sessioni di debug di Vis
   
  È possibile identificare un punto di interruzione condizionale dalla relativa icona con una croce bianca.  
   
- ![Punto di interruzione condizionale](../debugger/media/dbg_basics_conditionalbreakpoint.png "DBG\_Basics\_ConditionalBreakpoint")  
+ ![Punto di interruzione condizionale](~/debugger/media/dbg_basics_conditionalbreakpoint.png "DBG\_Basics\_ConditionalBreakpoint")  
   
  **Eseguire fino al punto di interruzione.** Scegliere Continua dal menu Debug \(tastiera: F5\). Nella finestra Variabili locali verificare che il valore corrente di `i` sia 500. Si noti che la variabile `s` viene rappresentata come riga singola ed è molto più lunga della finestra.  
   
@@ -191,7 +191,7 @@ Questa guida introduttiva illustra come spostarsi nelle sessioni di debug di Vis
   
  **Chiamare il metodo Example4 nel costruttore MainPage.** Modificare il costruttore MainPage\(\) e sostituire la riga che segue `methodTrack = String.Empty;` con la riga `Example4();`.  
   
- ![Chiama metodo Example4 da metodo Demo](../debugger/media/dbg_basics_callexample4.png "DBG\_Basics\_CallExample4")  
+ ![Chiama metodo Example4 da metodo Demo](~/debugger/media/dbg_basics_callexample4.png "DBG\_Basics\_CallExample4")  
   
  **Eseguire fino all'eccezione.** Avviare la sessione di debug scegliendo **Avvia debug** dal menu **Debug** \(tastiera: F5\). Premere di nuovo F5 per riprendere l'esecuzione. Il debugger sospende l'esecuzione in corrispondenza dell'eccezione nel metodo Example4 e visualizza una finestra di dialogo dell'eccezione.  
   

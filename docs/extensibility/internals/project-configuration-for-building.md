@@ -31,7 +31,7 @@ L'elenco delle configurazioni di soluzione per una determinata soluzione viene g
   
  Quando l'utente seleziona il **selezione multipla** elemento nell'elenco di riepilogo a discesa configurazione, l'ambiente consente di visualizzare una finestra di dialogo che fornisce l'elenco delle configurazioni disponibili.  
   
- ![Configurazioni multiple](../../extensibility/internals/media/vsmultiplecfgs.png "vsMultipleCfgs")  
+ ![Configurazioni multiple](~/extensibility/internals/media/vsmultiplecfgs.gif "vsMultipleCfgs")  
 Configurazioni multiple  
   
  In questa finestra di dialogo, l'utente può selezionare una o più configurazioni. Una volta selezionato, i valori delle proprietà visualizzati nella finestra di dialogo Pagine delle proprietà riflettono l'intersezione dei valori per le configurazioni selezionate.  
@@ -40,7 +40,7 @@ Configurazioni multiple
   
  Dipendenze progetto e l'ordine di compilazione sono indipendenti dalla configurazione della soluzione:, ovvero è possibile impostare solo della struttura di una dipendenza per tutti i progetti nella soluzione. Pulsante destro del mouse la soluzione o il progetto e quindi scegliere il **Dipendenze progetto** o **ordine compilazione progetto** opzione verrà visualizzata la la **Dipendenze progetto** la finestra di dialogo. Può anche essere aperta dal **progetto** menu.  
   
- ![Dipendenze progetto](../../extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies")  
+ ![Dipendenze progetto](~/extensibility/internals/media/vsprojdependencies.gif "vsProjDependencies")  
 Dipendenze progetto  
   
  Dipendenze progetto determinano l'ordine in cui i progetti vengano compilati. Utilizzare la scheda di ordine di compilazione nella finestra di dialogo per visualizzare l'ordine esatto in cui i progetti all'interno di una soluzione di compilazione e la scheda Dipendenze consente di modificare l'ordine di compilazione.  

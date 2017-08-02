@@ -257,7 +257,7 @@ ms.lasthandoff: 05/13/2017
   
      La figura seguente mostra l'applicazione con i pulsanti della finestra di navigazione.  
   
-     ![Schermata dell'esempio ExpenseIt](../designers/media/gettingstartedfigure1.png "GettingStartedFigure1")  
+     ![Schermata dell'esempio ExpenseIt](~/designers/media/gettingstartedfigure1.png "GettingStartedFigure1")  
   
 6.  Chiudere l'applicazione per tornare alla modalità di progettazione.  
   
@@ -313,7 +313,7 @@ ms.lasthandoff: 05/13/2017
   
 3.  Compilare ed eseguire l'applicazione. La figura seguente mostra l'aspetto in fase di esecuzione dei controlli creati da XAML in questa procedura.  
   
-     ![Schermata dell'esempio ExpenseIt](../designers/media/gettingstartedfigure2.png "GettingStartedFigure2")  
+     ![Schermata dell'esempio ExpenseIt](~/designers/media/gettingstartedfigure2.png "GettingStartedFigure2")  
   
 4.  Chiudere l'applicazione per tornare alla modalità di progettazione.  
   
@@ -480,7 +480,7 @@ ms.lasthandoff: 05/13/2017
   
 6.  Se a questo punto si compila e si esegue l'applicazione, dovrebbe risultare simile alla figura seguente:  
   
-     ![Schermata dell'esempio ExpenseIt](../designers/media/gettingstartedfigure3.png "GettingStartedFigure3")  
+     ![Schermata dell'esempio ExpenseIt](~/designers/media/gettingstartedfigure3.png "GettingStartedFigure3")  
   
 #### <a name="to-add-code-to-the-button"></a>Per aggiungere il codice al pulsante  
   

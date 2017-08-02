@@ -111,7 +111,7 @@ Il framework Natvis di Visual Studio consente di personalizzare il modo in cui V
   
  Gli elementi `DisplayString` e `ArrayItems` vengono usati nella visualizzazione predefinita e nella visualizzazione semplice, mentre gli elementi `[size]` e `[capacity]` sono esclusi dalla visualizzazione semplice. È possibile usare l'identificatore di formato **view** per specificare una visualizzazione alternativa. Nella finestra **Espressioni di controllo** specificare la visualizzazione semplice come **vec,view\(simple\)**:  
   
- ![Finestra Espressioni di controllo con visualizzazione semplice](../debugger/media/watch-simpleview.png "Watch\-SimpleView")  
+ ![Finestra Espressioni di controllo con visualizzazione semplice](~/debugger/media/watch-simpleview.png "Watch\-SimpleView")  
   
 ##  <a name="BKMK_Diagnosing_Natvis_errors"></a> Diagnostica degli errori di Natvis  
  È possibile usare la diagnostica di Natvis per risolvere i problemi di sintassi e gli errori di analisi. Quando il debugger rileva errori in una voce di visualizzazione, li ignora e visualizza il tipo nel formato non elaborato o seleziona un'altra visualizzazione appropriata. Per capire perché una determinata voce di visualizzazione viene ignorata e visualizzare quali sono gli errori sottostanti, è possibile attivare l'opzione della diagnostica di Natvis dal seguente percorso: **Strumenti\/Opzioni\/Debug\/Finestra di output\/Messaggi di diagnostica natvis \(solo C\+\+\)**. Gli errori vengono visualizzati nella finestra **Output**.  
@@ -293,7 +293,7 @@ Il framework Natvis di Visual Studio consente di personalizzare il modo in cui V
   
  Un elemento `std::vector` visualizza i singoli elementi quando viene espanso nella finestra delle variabili:  
   
- ![std::vector con uso dell'espansione ArrayItems](../debugger/media/dbg_natvis_expand_arrayitems_stdvector.png "DBG\_NATVIS\_Expand\_ArrayItems\_StdVector")  
+ ![std::vector con uso dell'espansione ArrayItems](~/debugger/media/dbg_natvis_expand_arrayitems_stdvector.png "DBG\_NATVIS\_Expand\_ArrayItems\_StdVector")  
   
  Come minimo, il nodo `ArrayItems` deve disporre di:  
   
@@ -316,7 +316,7 @@ Il framework Natvis di Visual Studio consente di personalizzare il modo in cui V
   
  L'aspetto di un oggetto `Concurrency::array` bidimensionale nel debugger è il seguente:  
   
- ![Matrice bidimensionale con espansione ArrayItems](../debugger/media/dbg_natvis_expand_arrayitems_2d.png "DBG\_NATVIS\_Expand\_ArrayItems\_2D")  
+ ![Matrice bidimensionale con espansione ArrayItems](~/debugger/media/dbg_natvis_expand_arrayitems_2d.png "DBG\_NATVIS\_Expand\_ArrayItems\_2D")  
   
 ####  <a name="BKMK_IndexListItems_expansion"></a> Espansione di IndexListItems  
  È possibile usare l'espansione `ArrayItems` solo se gli elementi della matrice vengono disposti in modo contiguo nella memoria. Il debugger ottiene l'elemento successivo semplicemente incrementando il relativo puntatore all'elemento corrente. Per supportare i casi in cui è necessario modificare l'indice nel nodo value, si possono usare i nodi `IndexListItems`. Di seguito è illustrata una visualizzazione in cui viene usato il nodo `IndexListItems`:  
@@ -366,7 +366,7 @@ Il framework Natvis di Visual Studio consente di personalizzare il modo in cui V
 ####  <a name="BKMK_ExpandedItem_expansion"></a> Espansione di ExpandedItem  
  L'elemento `ExpandedItem` può essere usato per generare una visualizzazione figlio aggregata visualizzando le proprietà delle classi base o dei membri dati come se fossero figli del tipo visualizzato. L'espressione specificata viene valutata e i nodi figlio del risultato vengono aggiunti all'elenco figlio del tipo visualizzato. Ad esempio, si supponga di disporre di un tipo di puntatore intelligente `auto_ptr<vector<int>>` che, in genere, viene visualizzato nel modo seguente:  
   
- ![Espansione predefinita auto&#95;ptr&#60;vector&#60;int&#62;&#62;](../debugger/media/dbg_natvis_expand_expandeditem_default.png "DBG\_NATVIS\_Expand\_ExpandedItem\_Default")  
+ ![Espansione predefinita auto&#95;ptr&#60;vector&#60;int&#62;&#62;](~/debugger/media/dbg_natvis_expand_expandeditem_default.png "DBG\_NATVIS\_Expand\_ExpandedItem\_Default")  
   
  Per visualizzare i valori del vettore, è necessario eseguire il drill\-down di due livelli nella finestra delle variabili e attraversare il membro \_Myptr. Aggiungendo un elemento `ExpandedItem`, è possibile eliminare la variabile `_Myptr` dalla gerarchia e visualizzare direttamente gli elementi del vettore:  
   
@@ -392,7 +392,7 @@ Il framework Natvis di Visual Studio consente di personalizzare il modo in cui V
   
 ```  
   
- ![Concurrency::Array con espansione dell'elemento Synthetic](../debugger/media/dbg_natvis_expand_synthetic.png "DBG\_NATVIS\_Expand\_Synthetic")  
+ ![Concurrency::Array con espansione dell'elemento Synthetic](~/debugger/media/dbg_natvis_expand_synthetic.png "DBG\_NATVIS\_Expand\_Synthetic")  
   
 ###  <a name="BKMK_HResult"></a> HResult  
  L'elemento `HResult` consente di personalizzare le informazioni visualizzate per un HRESULT nelle finestre del debugger. L'elemento `HRValue` deve contenere il valore a 32 bit di HRESULT da personalizzare. L'elemento `HRDescription` contiene le informazioni visualizzate nel debugger.  

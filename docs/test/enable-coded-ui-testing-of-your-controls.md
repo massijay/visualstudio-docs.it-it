@@ -46,7 +46,7 @@ Il controllo può essere testato più facilmente se si implementa il supporto pe
   
 4.  [Supportare le azioni sensibili allo scopo implementando un filtro azioni](../test/enable-coded-ui-testing-of-your-controls.md#intentawareactions)  
   
- ![CUIT&#95;Full](../test/media/cuit_full.png "CUIT_Full")  
+ ![CUIT&#95;Full](~/test/media/cuit_full.png "CUIT_Full")  
   
 ##  <a name="recordandplayback"></a>Supportare registrazione, riproduzione e convalida delle proprietà implementando l'accessibilità  
  Il generatore di test codificati dell'interfaccia utente acquisisce informazioni sui controlli intercettati durante la registrazione e quindi genera il codice per riprodurre quella sessione. Se il controllo non supporta l'accessibilità, il generatore di test codificati dell'interfaccia utente acquisisce le azioni (quali i clic del mouse) usando le coordinate dello schermo. Quando il test viene riprodotto, il codice generato emetterà i clic del mouse nelle stesse coordinate dello schermo. Se, quando il test viene riprodotto, il controllo viene visualizzato in un punto diverso dello schermo, l'azione nel controllo da parte del codice generato non riuscirà. Ciò può dare luogo a errori se il test viene riprodotto in diverse configurazioni dello schermo, in ambienti diversi o dopo l'applicazione di modifiche al layout dell'interfaccia utente.  
@@ -60,7 +60,7 @@ Il controllo può essere testato più facilmente se si implementa il supporto pe
 ### <a name="to-support-record-and-playback-property-validation-and-navigation-for-a-windows-forms-control"></a>Per supportare registrazione e riproduzione, convalida della proprietà e navigazione per un controllo Windows form  
  Implementare l'accessibilità per il controllo come descritto nella procedura seguente e descritto in dettaglio in <xref:System.Windows.Forms.AccessibleObject>.  
   
- ![CUIT&#95;Accessible](../test/media/cuit_accessible.png "CUIT_Accessible")  
+ ![CUIT&#95;Accessible](~/test/media/cuit_accessible.png "CUIT_Accessible")  
   
 1.  Implementare una classe che derivi da <xref:System.Windows.Forms.Control.ControlAccessibleObject> ed eseguire l'override della proprietà <xref:System.Windows.Forms.Control.AccessibilityObject%2A> per restituire un oggetto della classe.  
   
@@ -99,10 +99,10 @@ Il controllo può essere testato più facilmente se si implementa il supporto pe
 ##  <a name="customproprties"></a> Supportare la convalida delle proprietà personalizzate implementando un provider di proprietà  
  Dopo aver implementato il supporto di base per la registrazione, la riproduzione e la convalida delle proprietà, è possibile rendere disponibili le proprietà personalizzate del controllo ai test codificati dell'interfaccia utente mediante l'implementazione di un plug-in <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>. La procedura seguente, ad esempio, crea un provider di proprietà che consente ai test codificati dell'interfaccia utente di accedere alla proprietà di stato dei controlli figlio del controllo CurveLegend del grafico.  
   
- ![CUIT&#95;CustomProps](../test/media/cuit_customprops.png "CUIT_CustomProps")  
+ ![CUIT&#95;CustomProps](~/test/media/cuit_customprops.png "CUIT_CustomProps")  
   
 ### <a name="to-support-custom-property-validation"></a>Per supportare la convalida delle proprietà personalizzate  
- ![CUIT&#95;Props](../test/media/cuit_props.png "CUIT_Props")  
+ ![CUIT&#95;Props](~/test/media/cuit_props.png "CUIT_Props")  
   
 1.  Eseguire l'override della proprietà <xref:System.Windows.Forms.AccessibleObject.Description%2A> dell'oggetto accessibile CurveLegend per passare valori di proprietà avanzate nella stringa di descrizione, separati dalla descrizione principale (e tra loro se si stanno implementando più proprietà) mediante caratteri di punto e virgola (;).  
   
@@ -177,7 +177,7 @@ Il controllo può essere testato più facilmente se si implementa il supporto pe
   
 <CodeContentPlaceHolder>11</CodeContentPlaceHolder>  
 ### <a name="to-add-a-specialized-class-to-access-your-control"></a>Per aggiungere una classe specializzata per accedere al proprio controllo  
- ![CUIT&#95;CodeGen](../test/media/cuit_codegen.png "CUIT_CodeGen")  
+ ![CUIT&#95;CodeGen](~/test/media/cuit_codegen.png "CUIT_CodeGen")  
   
 1.  Implementare una classe che sia derivata da <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinControl> e aggiungere il tipo del controllo alla raccolta di proprietà di ricerca nel costruttore.  
   
@@ -195,7 +195,7 @@ Il controllo può essere testato più facilmente se si implementa il supporto pe
  Quando Visual Studio registra un test, acquisisce ogni evento di mouse e tastiera. Tuttavia, in alcuni casi, lo scopo dell'azione può perdersi nella serie di eventi di mouse e tastiera. Ad esempio, se il controllo supporta il completamento automatico, lo stesso set di eventi di mouse e tastiera può comportare un valore diverso quando il test viene riprodotto in un ambiente diverso. È possibile aggiungere un plug-in del filtro azioni che sostituisce la serie di eventi di mouse e tastiera con una sola azione. In questo modo, è possibile sostituire la sequenza di eventi di mouse e tastiera derivanti dalla selezione di un valore con una sola azione che imposta il valore. Questa operazione consente di proteggere i test codificati dell'interfaccia utente dalle differenze nel completamento automatico da un ambiente a un altro.  
   
 ### <a name="to-support-intent-aware-actions"></a>Per supportare le azioni sensibili allo scopo  
- ![CUIT&#95;Actions](../test/media/cuit_actions.png "CUIT_Actions")  
+ ![CUIT&#95;Actions](~/test/media/cuit_actions.png "CUIT_Actions")  
   
 1.  Implementare una classe di filtro azioni che sia derivata da <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter>, eseguendo l'override delle proprietà <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.ApplyTimeout%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Category%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Enabled%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.FilterType%2A>, <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Group%2A> e <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter.Name%2A>.  
   

@@ -39,7 +39,7 @@ Utilizzare la procedura riportata di seguito per creare uno dei tipi predefiniti
   
      Ad esempio, i controlli punto di interruzione\-specifici scegliere dal menu di scelta rapida sono **rimuovere il punto di interruzione** con **nuovo punto di interruzione**, come visualizzato nell'schermata.  
   
-     ![Menu di scelta rapida Marcatore](../extensibility/media/vsmarkercontextmenu.png "vsMarkercontextmenu")  
+     ![Menu di scelta rapida Marcatore](~/extensibility/media/vsmarkercontextmenu.gif "vsMarkercontextmenu")  
   
 2.  Passare a un testo che identifica il nome del comando personalizzato.  Ad esempio, **rimuovere il punto di interruzione** potrebbe essere un comando personalizzato se l'ambiente non è già una.  Viene passato anche indietro se il comando è supportato, disponibile e attivato e\/o un cambio di passare di accensione.  L'ambiente utilizza queste informazioni per visualizzare il comando personalizzato nel menu di scelta rapida in modo corretto.  
   

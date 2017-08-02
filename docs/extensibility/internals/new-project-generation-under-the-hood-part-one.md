@@ -37,7 +37,7 @@ Mai pensato di creare un nuovo tipo di progetto? Pensato che si verifica effetti
 ## La finestra di dialogo Nuovo progetto  
  Tutto ha inizio quando si seleziona un tipo di progetto per un nuovo progetto. Per iniziare, fare clic su **Nuovo progetto** sul **File** menu. Il **Nuovo progetto** viene visualizzata la finestra di dialogo, aspetto qualcosa di simile al seguente:  
   
- ![Finestra di dialogo Nuovo progetto](../../extensibility/internals/media/newproject.png "NewProject")  
+ ![Finestra di dialogo Nuovo progetto](~/extensibility/internals/media/newproject.gif "NewProject")  
   
  Diamo uno sguardo più da vicino. Il **i tipi di progetto** i vari tipi di progetto è possibile creare elenchi struttura ad albero. Quando si seleziona un tipo di progetto come **Windows Visual c\#**, verrà visualizzato un elenco di modelli di applicazione per iniziare.**Modelli visual Studio installati** vengono installati da Visual Studio e sono disponibili a tutti gli utenti del computer. È possibile aggiungere nuovi modelli creati o raccogliere per **modelli** e sono disponibili solo per l'utente.  
   
@@ -107,11 +107,11 @@ devenv /installvstemplates
   
  Per Visual Studio con c\# le impostazioni dello sviluppatore, il **i tipi di progetto** albero simile al seguente:  
   
- ![Tipi di progetto](../../extensibility/internals/media/projecttypes.png "ProjectTypes")  
+ ![Tipi di progetto](~/extensibility/internals/media/projecttypes.png "ProjectTypes")  
   
  Nella cartella ProjectTemplates corrispondente è simile al seguente:  
   
- ![Modelli di progetto](../../extensibility/internals/media/projecttemplates.png "ProjectTemplates")  
+ ![Modelli di progetto](~/extensibility/internals/media/projecttemplates.png "ProjectTemplates")  
   
  Quando il **Nuovo progetto** si apre la finestra di dialogo, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] attraversa la cartella ProjectTemplates e ricrea la struttura di **i tipi di progetto** struttura ad albero con alcune modifiche:  
   
@@ -209,7 +209,7 @@ devenv /installvstemplates
   
 1.  Aprire il **Nuovo progetto** finestra di dialogo casella ed espandere il **Visual c\#** nodo del progetto.  
   
- ![MyProjectNode](../../extensibility/internals/media/myprojectnode.png "MyProjectNode")  
+ ![MyProjectNode](~/extensibility/internals/media/myprojectnode.png "MyProjectNode")  
   
  **Nodo progetto personalizzato** viene visualizzato come nodo figlio di Visual c\# sotto il nodo di Windows.  
   

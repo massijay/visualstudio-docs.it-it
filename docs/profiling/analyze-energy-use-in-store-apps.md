@@ -59,14 +59,14 @@ Il profiler **Utilizzo di energia** consente di analizzare il consumo di energia
   
 -   *Energia* : misura la quantità totale di potenza, come capacità o potenziale, come nella capacità di potenza di una batteria, o come il totale complessivo della potenza consumata in un periodo di tempo. L'unità di energia è un wattora, la quantità di potenza di un watt applicato continuamente per un'ora. In **Riepilogo energia**le unità vengono visualizzate come milliwatt-ore **mW-h**.  
   
- ![Capacità energia, potenza usata, totale energia usata](../profiling/media/energyprof_capcitypowerused.png "ENERGYPROF_CapcityPowerUsed")  
+ ![Capacità energia, potenza usata, totale energia usata](~/profiling/media/energyprof_capcitypowerused.png "ENERGYPROF_CapcityPowerUsed")  
   
  Ad esempio, la batteria completamente carica di un tablet dispone di una certa quantità di energia immagazzinata. Mentre l'energia viene utilizzata per eseguire attività quali la comunicazione in rete, il calcolo dei valori o la visualizzazione di grafica, la potenza della batteria viene consumata con frequenze diverse. In qualsiasi momento, il totale della potenza utilizzata viene misurato anche in base all'energia.  
   
 ##  <a name="BKMK_Identify_scenarios_with_user_marks"></a> Identificare scenari con contrassegni utente  
  Puoi aggiungere *contrassegni utente* ai dati di profilatura per identificare aree nel righello della sequenza temporale.  
   
- ![Contrassegni utente nella sequenza temporale](../profiling/media/profilers_usermarktimeline.png "PROFILERS_UserMarkTimeline")  
+ ![Contrassegni utente nella sequenza temporale](~/profiling/media/profilers_usermarktimeline.png "PROFILERS_UserMarkTimeline")  
   
  Il contrassegno viene visualizzato come triangolo arancione nella sequenza temporale in corrispondenza del momento in cui il metodo viene eseguito. Il messaggio e l'ora vengono visualizzati come descrizione comando al passaggio del mouse sul contrassegno. Se due o più contrassegni utente sono vicini, i contrassegni vengono uniti e i dati della descrizione comando vengono combinati. Puoi eseguire lo zoom avanti nella sequenza temporale per separare i contrassegni.  
   
@@ -117,7 +117,7 @@ if (performance && performance.mark) {
   
 4.  Per interrompere la profilatura, passa di nuovo a Visual Studio (ALT+TAB) e nella pagina dell'hub di diagnostica scegli **Arresta raccolta** .  
   
-     ![Arrestare la raccolta di dati](../profiling/media/xamlprof_stopcollection.png "XAMLProf_StopCollection")  
+     ![Arrestare la raccolta di dati](~/profiling/media/xamlprof_stopcollection.png "XAMLProf_StopCollection")  
   
      Visual Studio consente di analizzare i dati raccolti e visualizzare i risultati.  
   
@@ -141,12 +141,12 @@ if (performance && performance.mark) {
   
 |||  
 |-|-|  
-|![Passaggio 1](../profiling/media/procguid_1.png "ProcGuid_1")|Il file di rapporto è denominato Report*YYYYMMDD-HHMM*.diagsession. Puoi modificare il nome del file se decidi di salvarlo.|  
-|![Passaggio 2](../profiling/media/procguid_2.png "ProcGuid_2")|La sequenza temporale mostra la durata della sessione di profilatura, gli eventi di attivazione del ciclo di vita dell'app e i contrassegni utente.|  
-|![Passaggio 3](../profiling/media/procguid_3.png "ProcGuid_3")|Puoi limitare il rapporto a una parte della sequenza temporale trascinando le barre blu per selezionare un'area della stessa.|  
-|![Passaggio 4](../profiling/media/procguid_4.png "ProcGuid_4")|**Utilizzo energia** è un grafico a più linee in cui viene visualizzata la modifica della potenza in uscita causata da una risorsa del dispositivo durante una sessione di profilatura. Il profiler Consumo di energia consente di tenere traccia della potenza utilizzata dalla CPU, dalle attività di rete e dallo schermo.|  
-|![Passaggio 5](../profiling/media/procguid_6.png "ProcGuid_6")|Nel grafico **Risorse (On/Off)**  vengono fornite informazioni sui costi energetici della rete. La barra **Rete** rappresenta il tempo di apertura della connessione di rete. La barra figlio **Trasferimento dati** rappresenta il momento in cui l'app stava ricevendo o inviando dati sulla rete.|  
-|![Passaggio 6](../profiling/media/procguid_6a.png "ProcGuid_6a")|In **Riepilogo utilizzo energia** viene visualizzata la quantità proporzionale di energia totale utilizzata dalla CPU, dalle attività di rete e dallo schermo nella sequenza temporale selezionata.|  
+|![Passaggio 1](~/profiling/media/procguid_1.png "ProcGuid_1")|Il file di rapporto è denominato Report*YYYYMMDD-HHMM*.diagsession. Puoi modificare il nome del file se decidi di salvarlo.|  
+|![Passaggio 2](~/profiling/media/procguid_2.png "ProcGuid_2")|La sequenza temporale mostra la durata della sessione di profilatura, gli eventi di attivazione del ciclo di vita dell'app e i contrassegni utente.|  
+|![Passaggio 3](~/profiling/media/procguid_3.png "ProcGuid_3")|Puoi limitare il rapporto a una parte della sequenza temporale trascinando le barre blu per selezionare un'area della stessa.|  
+|![Passaggio 4](~/profiling/media/procguid_4.png "ProcGuid_4")|**Utilizzo energia** è un grafico a più linee in cui viene visualizzata la modifica della potenza in uscita causata da una risorsa del dispositivo durante una sessione di profilatura. Il profiler Consumo di energia consente di tenere traccia della potenza utilizzata dalla CPU, dalle attività di rete e dallo schermo.|  
+|![Passaggio 5](~/profiling/media/procguid_6.png "ProcGuid_6")|Nel grafico **Risorse (On/Off)**  vengono fornite informazioni sui costi energetici della rete. La barra **Rete** rappresenta il tempo di apertura della connessione di rete. La barra figlio **Trasferimento dati** rappresenta il momento in cui l'app stava ricevendo o inviando dati sulla rete.|  
+|![Passaggio 6](~/profiling/media/procguid_6a.png "ProcGuid_6a")|In **Riepilogo utilizzo energia** viene visualizzata la quantità proporzionale di energia totale utilizzata dalla CPU, dalle attività di rete e dallo schermo nella sequenza temporale selezionata.|  
   
  **Per analizzare i dati relativi al profilo energetico**  
   

@@ -46,7 +46,7 @@ Si consiglia di creare unit test per garantire il corretto funzionamento del cod
 -   Possibilità di visualizzare in un'unica finestra tutte le informazioni necessarie.  
   
 ## <a name="using-test-explorer"></a>Utilizzo di Esplora test  
- ![Esplora unit test con il pulsante Esegui tutto](../test/media/unittestexplorer-beta-.png "UnitTestExplorer(beta)")  
+ ![Esplora unit test con il pulsante Esegui tutto](~/test/media/unittestexplorer-beta-.png "UnitTestExplorer(beta)")  
   
 #### <a name="to-run-unit-tests-by-using-test-explorer"></a>Per eseguire lo unit test utilizzando Esplora test  
   
