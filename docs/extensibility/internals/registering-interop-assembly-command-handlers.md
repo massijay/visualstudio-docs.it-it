@@ -29,9 +29,10 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
 ms.openlocfilehash: 774266bbcd64e87229f8f97626cdff1462b27fcb
+ms.contentlocale: it-it
 ms.lasthandoff: 04/05/2017
 
 ---
@@ -45,7 +46,7 @@ Un VSPackage è necessario registrare con [!INCLUDE[vsprvs](../../code-quality/i
  [Riferimento alla tabella formato comando](http://msdn.microsoft.com/en-us/09e9c6ef-9863-48de-9483-d45b7b7c798f) risorse si trovano in non gestite satellite DLL dell'interfaccia utente.  
   
 ## <a name="command-handler-registration-of-a-vspackage"></a>Registrazione del gestore del comando di un VSPackage  
- Un VSPackage che agisce come un gestore per l'interfaccia utente (UI)-i comandi di base richiede una voce del Registro di sistema denominata dopo il pacchetto VSPackage `GUID`. Questa voce del Registro di sistema specifica il percorso del file di risorse di VSPackage dell'interfaccia utente e la risorsa di menu all'interno del file. La voce del Registro di sistema stesso si trova in HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\*\<versione >*\Menus, in cui *\<versione >* è la versione di [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], ad esempio 9.0.  
+ Un VSPackage che agisce come un gestore per l'interfaccia utente (UI)-i comandi di base richiede una voce del Registro di sistema denominata dopo il pacchetto VSPackage `GUID`. Questa voce del Registro di sistema specifica il percorso del file di risorse di VSPackage dell'interfaccia utente e la risorsa di menu all'interno del file. La voce del Registro di sistema stesso si trova in HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\*\<versione >*\Menus, in cui  *\<versione >* è la versione di [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], ad esempio 9.0.  
   
 > [!NOTE]
 >  Il percorso radice dell'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<versione >* può essere sostituito con un'alternativa radice quando il [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] shell viene inizializzata. Per ulteriori informazioni sul percorso radice, vedere [l'installazione di pacchetti VSPackage con Windows Installer](../../extensibility/internals/installing-vspackages-with-windows-installer.md).  
