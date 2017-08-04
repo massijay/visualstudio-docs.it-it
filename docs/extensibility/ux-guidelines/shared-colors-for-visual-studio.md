@@ -55,7 +55,7 @@ Quando si utilizza una barra dei comandi di Visual Studio standard nella propria
 
 ### <a name="button-controls"></a>Controlli pulsante
 
-![Controllo pulsante con linea rossa](~/extensibility/ux-guidelines/media/0303-155_buttoncontrolredline.png "0303 155_ButtonControlRedline")
+![Controllo pulsante con linea rossa](../../extensibility/ux-guidelines/media/0303-155_buttoncontrolredline.png "0303 155_ButtonControlRedline")
 
 | Usare... | Non usare... |
 | --- | --- |
@@ -63,7 +63,7 @@ Quando si utilizza una barra dei comandi di Visual Studio standard nella propria
 
 **Pulsante: standard dello stato**
 
-![Pulsante standard](~/extensibility/ux-guidelines/media/03.03.Button.Standard.png "03.03.Button.Standard")<br />Pulsante standard
+![Pulsante standard](../../extensibility/ux-guidelines/media/03.03.Button.Standard.png "03.03.Button.Standard")<br />Pulsante standard
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -72,7 +72,7 @@ Quando si utilizza una barra dei comandi di Visual Studio standard nella propria
 
 **Button: stato predefinito**
 
-![Pulsante predefinito](~/extensibility/ux-guidelines/media/03.03.Button.Default.png "03.03.Button.Default")<br />Pulsante predefinito
+![Pulsante predefinito](../../extensibility/ux-guidelines/media/03.03.Button.Default.png "03.03.Button.Default")<br />Pulsante predefinito
 
 | Elemento | Nome token: Category.color | 
 | --- | --- | 
@@ -81,7 +81,7 @@ Quando si utilizza una barra dei comandi di Visual Studio standard nella propria
 
 **Button: stato disabilitato**  
 
-![Pulsante disabilitato](~/extensibility/ux-guidelines/media/03.03.Button.Disabled.png "03.03.Button.Disabled")<br />Pulsante disabilitato  
+![Pulsante disabilitato](../../extensibility/ux-guidelines/media/03.03.Button.Disabled.png "03.03.Button.Disabled")<br />Pulsante disabilitato  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -90,7 +90,7 @@ Quando si utilizza una barra dei comandi di Visual Studio standard nella propria
 
 **: Pulsante stato del mouse**  
 
-![Pulsante al passaggio del mouse](~/extensibility/ux-guidelines/media/03.03.Button.hover.png "03.03.Button.hover")<br />Pulsante al passaggio del mouse  
+![Pulsante al passaggio del mouse](../../extensibility/ux-guidelines/media/03.03.Button.hover.png "03.03.Button.hover")<br />Pulsante al passaggio del mouse  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -99,7 +99,7 @@ Quando si utilizza una barra dei comandi di Visual Studio standard nella propria
 
 **Button: stato premuto**  
 
-![Pulsante premuto](~/extensibility/ux-guidelines/media/03.03.Button.Pressed.png "03.03.Button.Pressed")<br />Pulsante premuto  
+![Pulsante premuto](../../extensibility/ux-guidelines/media/03.03.Button.Pressed.png "03.03.Button.Pressed")<br />Pulsante premuto  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -108,7 +108,7 @@ Quando si utilizza una barra dei comandi di Visual Studio standard nella propria
 
 **Pulsante: dello stato attivo**  
 
-![Pulsante con stato attivo](~/extensibility/ux-guidelines/media/03.03.Button.Focused.png "03.03.Button.Focused")<br />Pulsante con stato attivo  
+![Pulsante con stato attivo](../../extensibility/ux-guidelines/media/03.03.Button.Focused.png "03.03.Button.Focused")<br />Pulsante con stato attivo  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -116,7 +116,7 @@ Quando si utilizza una barra dei comandi di Visual Studio standard nella propria
 | Bordo del pulsante | `CommonControls.ButtonBorderFocused` |
 
 ### <a name="check-box-controls"></a>Controlli casella di controllo  
-![Casella di controllo (con linea rossa)](~/extensibility/ux-guidelines/media/0303-161_checkboxredline.png "0303-161_CheckboxRedline")<br />Casella di controllo (con linea rossa)  
+![Casella di controllo (con linea rossa)](../../extensibility/ux-guidelines/media/0303-161_checkboxredline.png "0303-161_CheckboxRedline")<br />Casella di controllo (con linea rossa)  
 
 | Usare... | Non usare... |
 | --- | --- |
@@ -187,7 +187,7 @@ Quando si utilizza una barra dei comandi di Visual Studio standard nella propria
 
 **Elenchi a discesa e combinata caselle: stato predefinito**  
 
-![Casella di riepilogo o combinata a discesa predefinito](~/extensibility/ux-guidelines/media/0303-168_dropdowncombobox.png "0303-168_DropDownComboBox")<br />Casella di riepilogo o combinata a discesa predefinito
+![Casella di riepilogo o combinata a discesa predefinito](../../extensibility/ux-guidelines/media/0303-168_dropdowncombobox.png "0303-168_DropDownComboBox")<br />Casella di riepilogo o combinata a discesa predefinito
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -200,7 +200,7 @@ Quando si utilizza una barra dei comandi di Visual Studio standard nella propria
 
 **Elenchi a discesa e combinata caselle: nello stato disabilitato**  
 
-![Casella di riepilogo o combinata a discesa disabilitata](~/extensibility/ux-guidelines/media/0303-169_dropdowncomboboxdisabled.png "0303-169_DropDownComboBoxDisabled")<br />Casella di riepilogo o combinata a discesa disabilitata
+![Casella di riepilogo o combinata a discesa disabilitata](../../extensibility/ux-guidelines/media/0303-169_dropdowncomboboxdisabled.png "0303-169_DropDownComboBoxDisabled")<br />Casella di riepilogo o combinata a discesa disabilitata
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -239,7 +239,7 @@ Quando si utilizza una barra dei comandi di Visual Studio standard nella propria
 
 **Elenchi a discesa e combinata le finestre di visualizzazione elemento elenco: stati**  
 
- ![Casella di riepilogo o combinata a discesa premuto visualizzazione elemento elenco](~/extensibility/ux-guidelines/media/0303-174_dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")<br />Casella di riepilogo o combinata a discesa premuto visualizzazione elemento elenco  
+ ![Casella di riepilogo o combinata a discesa premuto visualizzazione elemento elenco](../../extensibility/ux-guidelines/media/0303-174_dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")<br />Casella di riepilogo o combinata a discesa premuto visualizzazione elemento elenco  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -272,7 +272,7 @@ Quando si utilizza una barra dei comandi di Visual Studio standard nella propria
 ### <a name="tabular-data-grid-controls"></a>Controlli per dati tabulari (griglia)  
 I controlli per dati tabulari, noti anche come controlli griglia, sono controlli comuni per Visual Studio, che possono essere usati per presentare grandi quantità di dati in più colonne. I controlli per dati tabulari standard possono trovarsi in diverse posizioni all'interno di Visual Studio, ad esempio nella finestra degli strumenti Elenco errori, nei report IntelliTrace e nella visualizzazione degli heap della memoria. Usare sempre i controlli per dati tabulari standard forniti. In alcuni casi rari, si potrebbe non avere accesso ai controlli per dati tabulari standard. In questi casi, usare i nomi di token seguenti per garantire che l'interfaccia utente sia coerente con gli altri controlli per dati tabulari in Visual Studio.  
 
-![Controllo dati tabulari o griglia (con linea rossa)](~/extensibility/ux-guidelines/media/0303-197_tabulardatagridcontrolredline.png "0303-197_TabularDataGridControlRedline")<br />Controllo dati tabulari o griglia (con linea rossa)
+![Controllo dati tabulari o griglia (con linea rossa)](../../extensibility/ux-guidelines/media/0303-197_tabulardatagridcontrolredline.png "0303-197_TabularDataGridControlRedline")<br />Controllo dati tabulari o griglia (con linea rossa)
 
 | Usare... | Non usare... |
 | --- | --- |
@@ -340,7 +340,7 @@ Le intestazioni di colonna sono costituite da uno sfondo, un bordo, il testo del
 #### <a name="instructional-text"></a>Testo esplicativo
 Testo esplicativo fornisce una spiegazione principale principali delle operazioni da eseguire in una pagina della finestra di dialogo o documento.
 
-![Testo informativo predefinito](~/extensibility/ux-guidelines/media/0303_InstructionalText.png "0303_InstructionalText.png")<br />Testo informativo predefinito
+![Testo informativo predefinito](../../extensibility/ux-guidelines/media/0303_InstructionalText.png "0303_InstructionalText.png")<br />Testo informativo predefinito
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -349,7 +349,7 @@ Testo esplicativo fornisce una spiegazione principale principali delle operazion
 #### <a name="secondary-instructional-text"></a>Testo esplicativo secondario
 Nelle pagine di documento con un numero elevato di testo e controlli, del testo esplicativo utilizza un valore di colore diverso. Ciò consente di trasmettere le informazioni che sono la più importante e ridurre la densità di elementi dell'interfaccia utente. (Vedere anche la seguente sezione nel testo di suggerimento.)
 
-![Testo esplicativo secondario](~/extensibility/ux-guidelines/media/0303_SecondaryInstructionalText.png "0303_SecondaryInstructionalText.png")<br />Testo esplicativo secondario
+![Testo esplicativo secondario](../../extensibility/ux-guidelines/media/0303_SecondaryInstructionalText.png "0303_SecondaryInstructionalText.png")<br />Testo esplicativo secondario
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -360,7 +360,7 @@ Testo di suggerimento viene visualizzato in un controllo vuoto, di sotto di un c
 
 **Testo di suggerimento predefinito**
 
-![Testo di suggerimento predefinito](~/extensibility/ux-guidelines/media/0303_HintText.png "0303_HintText.png")<br />Testo di suggerimento predefinito
+![Testo di suggerimento predefinito](../../extensibility/ux-guidelines/media/0303_HintText.png "0303_HintText.png")<br />Testo di suggerimento predefinito
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -368,7 +368,7 @@ Testo di suggerimento viene visualizzato in un controllo vuoto, di sotto di un c
 
 **Testo di suggerimento obbligatorio**
 
-![Testo di suggerimento obbligatorio](~/extensibility/ux-guidelines/media/0303_RequiredHintText.png "0303_RequiredHintText.png")<br />Testo di suggerimento obbligatorio
+![Testo di suggerimento obbligatorio](../../extensibility/ux-guidelines/media/0303_RequiredHintText.png "0303_RequiredHintText.png")<br />Testo di suggerimento obbligatorio
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -379,7 +379,7 @@ Testo di suggerimento viene visualizzato in un controllo vuoto, di sotto di un c
 
 > Vedere [caselle di ricerca](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_SearchBoxes) per altri token di colore correlati al controllo di ricerca.
 
-![Testo di controllo casella di ricerca](~/extensibility/ux-guidelines/media/0303_SearchBoxControl.png "0303_SearchBoxControl.png")<br />Testo di controllo casella di ricerca
+![Testo di controllo casella di ricerca](../../extensibility/ux-guidelines/media/0303_SearchBoxControl.png "0303_SearchBoxControl.png")<br />Testo di controllo casella di ricerca
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -420,7 +420,7 @@ Il collegamento ipertestuale è un controllo che non dispone di una coppia di pr
 
 **Collegamento ipertestuale: stato disabilitato**
 
-![Collegamento ipertestuale disabilitato](~/extensibility/ux-guidelines/media/0303-137_hyperlinkdisabled.png "0303-137_HyperlinkDisabled")<br />Collegamento ipertestuale disabilitato  
+![Collegamento ipertestuale disabilitato](../../extensibility/ux-guidelines/media/0303-137_hyperlinkdisabled.png "0303-137_HyperlinkDisabled")<br />Collegamento ipertestuale disabilitato  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -429,7 +429,7 @@ Il collegamento ipertestuale è un controllo che non dispone di una coppia di pr
 ### <a name="infobars"></a>Barre informazioni  
 Le barre informazioni vengono usate per fornire altre informazioni su un contesto specifico e sono sempre visualizzate nella parte superiore della finestra di un documento o di una finestra degli strumenti.  
 
-![Barra informazioni (con linea rossa)](~/extensibility/ux-guidelines/media/0303-138_infobarredline.png "0303-138_InfobarRedline")<br />Barra informazioni (con linea rossa)
+![Barra informazioni (con linea rossa)](../../extensibility/ux-guidelines/media/0303-138_infobarredline.png "0303-138_InfobarRedline")<br />Barra informazioni (con linea rossa)
 
 | Usare... | Non usare... |
 | --- | --- |
@@ -437,7 +437,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Barra informazioni: stato predefinito**
 
-![Barra informazioni predefinito](~/extensibility/ux-guidelines/media/0303-139_infobar.png "0303-139_Infobar")<br />Barra informazioni predefinito
+![Barra informazioni predefinito](../../extensibility/ux-guidelines/media/0303-139_infobar.png "0303-139_Infobar")<br />Barra informazioni predefinito
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -447,7 +447,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Barra informazioni Close (&times;) pulsante: stato predefinito**
 
-![Barra informazioni chiudere predefinito (&times;) pulsante](~/extensibility/ux-guidelines/media/0303_InfobarCloseDefault.png "0303_InfobarCloseDefault.png")<br />Barra informazioni chiudere predefinito (&times;) pulsante
+![Barra informazioni chiudere predefinito (&times;) pulsante](../../extensibility/ux-guidelines/media/0303_InfobarCloseDefault.png "0303_InfobarCloseDefault.png")<br />Barra informazioni chiudere predefinito (&times;) pulsante
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -457,7 +457,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Barra informazioni Close (&times;) pulsante: passare il mouse di stato**
 
-![Barra informazioni Close (&times;) pulsante al passaggio del mouse](~/extensibility/ux-guidelines/media/0303_InfobarCloseHover.png "0303_InfobarCloseHover.png")<br />Barra informazioni Close (&times;) pulsante al passaggio del mouse
+![Barra informazioni Close (&times;) pulsante al passaggio del mouse](../../extensibility/ux-guidelines/media/0303_InfobarCloseHover.png "0303_InfobarCloseHover.png")<br />Barra informazioni Close (&times;) pulsante al passaggio del mouse
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -467,7 +467,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Barra informazioni Close (&times;) pulsante: stati**
 
-![Barra informazioni chiudere premuto (&times;) pulsante](~/extensibility/ux-guidelines/media/0303_InfobarClosePressed.png "0303_InfobarClosePressed.png")<br />Barra informazioni chiudere premuto (&times;) pulsante
+![Barra informazioni chiudere premuto (&times;) pulsante](../../extensibility/ux-guidelines/media/0303_InfobarClosePressed.png "0303_InfobarClosePressed.png")<br />Barra informazioni chiudere premuto (&times;) pulsante
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -477,7 +477,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Pulsante barra informazioni del collegamento ipertestuale: stato predefinito**
 
-![Pulsante di collegamento ipertestuale predefinito barra informazioni](~/extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />Pulsante di collegamento ipertestuale predefinito barra informazioni
+![Pulsante di collegamento ipertestuale predefinito barra informazioni](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />Pulsante di collegamento ipertestuale predefinito barra informazioni
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -485,7 +485,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Pulsante barra informazioni del collegamento ipertestuale: passare il mouse di stato**
 
-![Barra informazioni pulsante di collegamento ipertestuale al passaggio del mouse](~/extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonHover.png "0303_InfobarHyperlinkButtonHover.png")<br />Barra informazioni pulsante di collegamento ipertestuale al passaggio del mouse
+![Barra informazioni pulsante di collegamento ipertestuale al passaggio del mouse](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonHover.png "0303_InfobarHyperlinkButtonHover.png")<br />Barra informazioni pulsante di collegamento ipertestuale al passaggio del mouse
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -493,7 +493,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Pulsante barra informazioni del collegamento ipertestuale: stati**
 
-![Pulsante premuto barra informazioni](~/extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonPressed.png "0303_InfobarHyperlinkButtonPressed.png")<br />Pulsante premuto barra informazioni
+![Pulsante premuto barra informazioni](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonPressed.png "0303_InfobarHyperlinkButtonPressed.png")<br />Pulsante premuto barra informazioni
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -501,7 +501,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Collegamento ipertestuale inline barra informazioni (all'interno di una frase): stato predefinito**
 
-![Pulsante di collegamento ipertestuale predefinito inline barra informazioni](~/extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />Pulsante di collegamento ipertestuale predefinito inline barra informazioni
+![Pulsante di collegamento ipertestuale predefinito inline barra informazioni](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />Pulsante di collegamento ipertestuale predefinito inline barra informazioni
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -509,7 +509,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Collegamento ipertestuale inline barra informazioni (all'interno di una frase): passare il mouse di stato**
 
-![Pulsante di collegamento ipertestuale incorporato barra informazioni al passaggio del mouse](~/extensibility/ux-guidelines/media/0303_InfobarHyperlinkInlineHover.png "0303_InfobarHyperlinkInlineHover.png")<br />Pulsante di collegamento ipertestuale incorporato barra informazioni al passaggio del mouse
+![Pulsante di collegamento ipertestuale incorporato barra informazioni al passaggio del mouse](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkInlineHover.png "0303_InfobarHyperlinkInlineHover.png")<br />Pulsante di collegamento ipertestuale incorporato barra informazioni al passaggio del mouse
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -517,7 +517,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Collegamento ipertestuale inline barra informazioni (all'interno di una frase): stati**
 
-![Barra informazioni in linea un collegamento ipertestuale pulsante selezionato](~/extensibility/ux-guidelines/media/0303_InfobarHyperlinkInlinePressed.png "0303_InfobarHyperlinkInlinePressed.png")<br />Barra informazioni in linea un collegamento ipertestuale pulsante selezionato
+![Barra informazioni in linea un collegamento ipertestuale pulsante selezionato](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkInlinePressed.png "0303_InfobarHyperlinkInlinePressed.png")<br />Barra informazioni in linea un collegamento ipertestuale pulsante selezionato
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -525,7 +525,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Pulsante barra informazioni: stato predefinito**
 
-![Pulsante barra informazioni predefinito](~/extensibility/ux-guidelines/media/0303_InfobarButtonDefault.png "0303_InfobarButtonDefault.png")<br />Pulsante barra informazioni predefinito
+![Pulsante barra informazioni predefinito](../../extensibility/ux-guidelines/media/0303_InfobarButtonDefault.png "0303_InfobarButtonDefault.png")<br />Pulsante barra informazioni predefinito
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -535,7 +535,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Pulsante barra informazioni: passare il mouse di stato**
 
-![Pulsante al passaggio del mouse sulla barra informazioni](~/extensibility/ux-guidelines/media/0303_InfobarButtonHover.png "0303_InfobarButtonHover.png")<br />Pulsante al passaggio del mouse sulla barra informazioni
+![Pulsante al passaggio del mouse sulla barra informazioni](../../extensibility/ux-guidelines/media/0303_InfobarButtonHover.png "0303_InfobarButtonHover.png")<br />Pulsante al passaggio del mouse sulla barra informazioni
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -545,7 +545,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Pulsante barra informazioni: stati**
 
-![Pulsante premuto barra informazioni](~/extensibility/ux-guidelines/media/0303_InfobarButtonPressed.png "0303_InfobarButtonPressed.png")<br />Pulsante premuto barra informazioni
+![Pulsante premuto barra informazioni](../../extensibility/ux-guidelines/media/0303_InfobarButtonPressed.png "0303_InfobarButtonPressed.png")<br />Pulsante premuto barra informazioni
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -555,7 +555,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Pulsante barra informazioni: nello stato disabilitato**
 
-![Pulsante disabilitato barra informazioni](~/extensibility/ux-guidelines/media/0303_InfobarButtonDisabled.png "0303_InfobarButtonDisabled.png")<br />Pulsante disabilitato barra informazioni
+![Pulsante disabilitato barra informazioni](../../extensibility/ux-guidelines/media/0303_InfobarButtonDisabled.png "0303_InfobarButtonDisabled.png")<br />Pulsante disabilitato barra informazioni
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -565,7 +565,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 
 **Pulsante barra informazioni: con stato attivo dello stato**
 
-![Pulsante con stato attivo sulla barra informazioni](~/extensibility/ux-guidelines/media/0303_InfobarButtonFocus.png "0303_InfobarButtonFocus.png")<br />Pulsante con stato attivo sulla barra informazioni
+![Pulsante con stato attivo sulla barra informazioni](../../extensibility/ux-guidelines/media/0303_InfobarButtonFocus.png "0303_InfobarButtonFocus.png")<br />Pulsante con stato attivo sulla barra informazioni
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -576,7 +576,7 @@ Le barre informazioni vengono usate per fornire altre informazioni su un contest
 ### <a name="scroll-bars"></a>Barre di scorrimento  
 Barre di scorrimento vengono applicato uno stile dall'ambiente di Visual Studio e non sarà necessario applicare un tema. Tuttavia, è possibile che si desidera sfruttare i colori usati nelle barre di scorrimento in modo che l'interfaccia utente appaia sempre coerenza con questa parte dell'ambiente di Visual Studio.  
 
-![Barra di scorrimento (con linea rossa)](~/extensibility/ux-guidelines/media/0303-140_scrollbarredline.png "0303-140_ScrollbarRedline")<br />Barra di scorrimento (con linea rossa)
+![Barra di scorrimento (con linea rossa)](../../extensibility/ux-guidelines/media/0303-140_scrollbarredline.png "0303-140_ScrollbarRedline")<br />Barra di scorrimento (con linea rossa)
 
 | Usare... | Non usare... |
 | --- | --- |
@@ -611,7 +611,7 @@ Barre di scorrimento vengono applicato uno stile dall'ambiente di Visual Studio 
 
 **Freccia della barra di scorrimento: stato predefinito**  
 
-![Freccia della barra di scorrimento predefinito](~/extensibility/ux-guidelines/media/0303-142_scrollbararrow.png "0303-142_ScrollbarArrow")<br />Freccia della barra di scorrimento predefinito
+![Freccia della barra di scorrimento predefinito](../../extensibility/ux-guidelines/media/0303-142_scrollbararrow.png "0303-142_ScrollbarArrow")<br />Freccia della barra di scorrimento predefinito
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -680,7 +680,7 @@ Una casella di ricerca può avere diversi stati, alcuni dei quali si escludono a
 
 **Campo di input di ricerca con stato non attivo e inattivo**
 
-![Campo di input di ricerca con stato non attivo e inattivo](~/extensibility/ux-guidelines/media/0303-114-1_searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br />Campo di input di ricerca con stato non attivo e inattivo  
+![Campo di input di ricerca con stato non attivo e inattivo](../../extensibility/ux-guidelines/media/0303-114-1_searchinputfieldunfocusedinactive.png "0303-114-1_SearchInputFieldUnfocusedInactive")<br />Campo di input di ricerca con stato non attivo e inattivo  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -767,7 +767,7 @@ Una casella di ricerca può avere diversi stati, alcuni dei quali si escludono a
 
 **Pulsante di menu a discesa di ricerca con stato non attivo**
 
-![Pulsante di menu a discesa di ricerca con stato non attivo](~/extensibility/ux-guidelines/media/0303-116_searchdropdownbuttonunfocused.png "0303-116_SearchDropdownButtonUnfocused")<br />Pulsante di menu a discesa di ricerca con stato non attivo
+![Pulsante di menu a discesa di ricerca con stato non attivo](../../extensibility/ux-guidelines/media/0303-116_searchdropdownbuttonunfocused.png "0303-116_SearchDropdownButtonUnfocused")<br />Pulsante di menu a discesa di ricerca con stato non attivo
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -836,7 +836,7 @@ Il menu di riepilogo a discesa di casella di ricerca è in grado di essere legge
 
 ![Casella di controllo di ricerca](../../extensibility/ux-guidelines/media/0303-126_searchcheckbox.png "0303-126_SearchCheckbox")<br />Opzioni di ricerca predefinite (casella di controllo)  
 
-![Opzioni di ricerca](~/extensibility/ux-guidelines/media/0303-127_searchoptions.png "0303-127_SearchOptions")<br />Opzioni di ricerca predefinite (collegamento)  
+![Opzioni di ricerca](../../extensibility/ux-guidelines/media/0303-127_searchoptions.png "0303-127_SearchOptions")<br />Opzioni di ricerca predefinite (collegamento)  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -861,7 +861,7 @@ Il menu di riepilogo a discesa di casella di ricerca è in grado di essere legge
 
 **Le opzioni di ricerca: stati**  
 
-![Premuto opzioni di ricerca (casella di controllo)](~/extensibility/ux-guidelines/media/0303-131_searchsuggestedpressed.png "0303-131_SearchSuggestedPressed")<br />Premuto opzioni di ricerca (casella di controllo)   
+![Premuto opzioni di ricerca (casella di controllo)](../../extensibility/ux-guidelines/media/0303-131_searchsuggestedpressed.png "0303-131_SearchSuggestedPressed")<br />Premuto opzioni di ricerca (casella di controllo)   
 
 ![Opzioni di ricerca (collegamento) premuto](../../extensibility/ux-guidelines/media/0303-132_searchoptionspressed.png "0303-132_SearchOptionsPressed")<br />Opzioni di ricerca (collegamento) premuto  
 
@@ -895,7 +895,7 @@ Diverse finestre, tra cui Esplora soluzioni, Esplora Server e visualizzazione cl
 
 **Elemento della visualizzazione struttura ad albero: passare il mouse di stato**
 
-![Elemento della visualizzazione albero al passaggio del mouse](~/extensibility/ux-guidelines/media/0303-149_treeviewhover.png "0303-149_TreeViewHover")<br />Elemento della visualizzazione albero al passaggio del mouse
+![Elemento della visualizzazione albero al passaggio del mouse](../../extensibility/ux-guidelines/media/0303-149_treeviewhover.png "0303-149_TreeViewHover")<br />Elemento della visualizzazione albero al passaggio del mouse
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -939,7 +939,7 @@ Diverse finestre, tra cui Esplora soluzioni, Esplora Server e visualizzazione cl
 
 **Elemento della visualizzazione struttura ad albero: al passaggio del mouse, selezionato e lo stato attivo**
 
-![Elemento della visualizzazione albero con stato attivo e selezionato al passaggio del mouse](~/extensibility/ux-guidelines/media/0303-153_treeviewfocusedhover.png "0303-153_TreeViewFocusedHover")<br />Elemento della visualizzazione albero con stato attivo e selezionato al passaggio del mouse  
+![Elemento della visualizzazione albero con stato attivo e selezionato al passaggio del mouse](../../extensibility/ux-guidelines/media/0303-153_treeviewfocusedhover.png "0303-153_TreeViewFocusedHover")<br />Elemento della visualizzazione albero con stato attivo e selezionato al passaggio del mouse  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -950,7 +950,7 @@ Diverse finestre, tra cui Esplora soluzioni, Esplora Server e visualizzazione cl
 
 **Elemento della visualizzazione struttura ad albero: lo stato di passaggio del mouse, con stato non attivo e selezionato**
 
-![Elemento della visualizzazione albero con stato non attivo e selezionato al passaggio del mouse](~/extensibility/ux-guidelines/media/0303-154_treeviewunfocusedhover.png "0303-154_TreeViewUnfocusedHover")<br />Elemento della visualizzazione albero con stato non attivo e selezionato al passaggio del mouse  
+![Elemento della visualizzazione albero con stato non attivo e selezionato al passaggio del mouse](../../extensibility/ux-guidelines/media/0303-154_treeviewunfocusedhover.png "0303-154_TreeViewUnfocusedHover")<br />Elemento della visualizzazione albero con stato non attivo e selezionato al passaggio del mouse  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -988,7 +988,7 @@ Lo sfondo dell'ambiente è costituito da due livelli. Il livello inferiore è un
 ### <a name="command-shelf"></a>Scaffale dei comandi  
 Due set di nomi di token vengono usati per gli sfondi dello scaffale dei comandi, uno per il punto in cui si trova la barra dei menu e l'altro per il punto in cui si trova la barra dei comandi. Un singolo gruppo della barra dei comandi ha valori di colore di sfondo propri, che vengono descritti in modo più dettagliato nella sezione "Barra dei comandi". Il testo della barra dei menu e della barra dei comandi viene descritto nelle rispettive sezioni.  
 
-![Scaffale dei comandi di Visual Studio (con linea rossa)](~/extensibility/ux-guidelines/media/0303-188_commandshelfredline.png "0303-188_CommandShelfRedline")<br />Scaffale dei comandi di Visual Studio (con linea rossa)  
+![Scaffale dei comandi di Visual Studio (con linea rossa)](../../extensibility/ux-guidelines/media/0303-188_commandshelfredline.png "0303-188_CommandShelfRedline")<br />Scaffale dei comandi di Visual Studio (con linea rossa)  
 
 | Usare... | Non usare... |
 | --- | --- |
@@ -1128,7 +1128,7 @@ I titoli dei menu sono costituiti da uno sfondo, un bordo e il testo del titolo,
 #### <a name="menu-items"></a>Voci di menu
 Una singola voce di menu è costituita dal testo del menu e da un'icona facoltativa, una casella di controllo o un glifo del sottomenu. Il colore di sfondo e del testo cambiano al passaggio del mouse. Questo token di colore è una coppia sfondo/primo piano.  
 
-![Voci di menu con linea rossa](~/extensibility/ux-guidelines/media/0303-009_menuitemredline.png "0303 009_MenuItemRedline")  
+![Voci di menu con linea rossa](../../extensibility/ux-guidelines/media/0303-009_menuitemredline.png "0303 009_MenuItemRedline")  
 
 | Usare... | Non usare...  |
 |---|---|
@@ -1137,7 +1137,7 @@ Una singola voce di menu è costituita dal testo del menu e da un'icona facoltat
 
 **Voci di menu: stato predefinito**
 
-![Voci di menu predefinito](~/extensibility/ux-guidelines/media/0303-010_menudefault.png "0303-010_MenuDefault")<br />Voci di menu predefinito  
+![Voci di menu predefinito](../../extensibility/ux-guidelines/media/0303-010_menudefault.png "0303-010_MenuDefault")<br />Voci di menu predefinito  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -1153,7 +1153,7 @@ Una singola voce di menu è costituita dal testo del menu e da un'icona facoltat
 
 ![Menu scelto](../../extensibility/ux-guidelines/media/0303-011_menuchecked.png "0303-011_MenuChecked")<br />Voce di menu selezionata
 
-![Menu selezionato](~/extensibility/ux-guidelines/media/0303-012_menuselected.png "0303-012_MenuSelected")<br />Voce di menu selezionata    
+![Menu selezionato](../../extensibility/ux-guidelines/media/0303-012_menuselected.png "0303-012_MenuSelected")<br />Voce di menu selezionata    
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -1238,7 +1238,7 @@ Un gruppo della barra dei comandi è costituito da un set correlato di controlli
 
 **Icona del comando: stato predefinito**  
 
-![Icona del comando predefinita](~/extensibility/ux-guidelines/media/0303-023_commandicondefault.png "0303-023_CommandIconDefault")<br />Icona del comando predefinita
+![Icona del comando predefinita](../../extensibility/ux-guidelines/media/0303-023_commandicondefault.png "0303-023_CommandIconDefault")<br />Icona del comando predefinita
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -1310,7 +1310,7 @@ Un gruppo della barra dei comandi è costituito da un set correlato di controlli
 
 **Campo input casella combinata barra dei comandi: stato predefinito**
 
-![Campo input casella combinata barra dei comandi](~/extensibility/ux-guidelines/media/0303-030_comboboxinputfield.png "0303-030_ComboBoxInputField")<br />Campo input casella combinata barra dei comandi  
+![Campo input casella combinata barra dei comandi](../../extensibility/ux-guidelines/media/0303-030_comboboxinputfield.png "0303-030_ComboBoxInputField")<br />Campo input casella combinata barra dei comandi  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -1330,7 +1330,7 @@ Un gruppo della barra dei comandi è costituito da un set correlato di controlli
 
 **Elenco elenco a discesa sulla barra dei comandi: stato predefinito**
 
-![Elenco elenco a discesa sulla barra dei comandi](~/extensibility/ux-guidelines/media/0303-032_comboboxdropdownlist.png "0303-032_ComboBoxDropdownList")<br />Elenco elenco a discesa sulla barra dei comandi
+![Elenco elenco a discesa sulla barra dei comandi](../../extensibility/ux-guidelines/media/0303-032_comboboxdropdownlist.png "0303-032_ComboBoxDropdownList")<br />Elenco elenco a discesa sulla barra dei comandi
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -1484,7 +1484,7 @@ Un gruppo della barra dei comandi è costituito da un set correlato di controlli
 
 **Pulsante di comando della barra dei menu a discesa: passare il mouse di stato**  
 
-![Pulsante di comando della barra dei menu a discesa al passaggio del mouse](~/extensibility/ux-guidelines/media/0303-047_dropdownbuttonhover.png "0303-047_DropdownButtonHover")<br />Pulsante di comando della barra dei menu a discesa al passaggio del mouse  
+![Pulsante di comando della barra dei menu a discesa al passaggio del mouse](../../extensibility/ux-guidelines/media/0303-047_dropdownbuttonhover.png "0303-047_DropdownButtonHover")<br />Pulsante di comando della barra dei menu a discesa al passaggio del mouse  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -1667,7 +1667,7 @@ Le finestre dei documenti possono essere ancorate nell'IDE o mobili come finestr
 
 **Lo stato attivo, a virgola mobile cornice della finestra di documento: stato predefinito**
 
-![Impostazione predefinita con stato attivo, a virgola mobile cornice della finestra di documento](~/extensibility/ux-guidelines/media/0303-067_framefocused.png "0303-067_FrameFocused")<br />Impostazione predefinita con stato attivo, a virgola mobile cornice della finestra di documento
+![Impostazione predefinita con stato attivo, a virgola mobile cornice della finestra di documento](../../extensibility/ux-guidelines/media/0303-067_framefocused.png "0303-067_FrameFocused")<br />Impostazione predefinita con stato attivo, a virgola mobile cornice della finestra di documento
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -1735,7 +1735,7 @@ Per ogni documento aperto è presente una scheda nel canale delle schede dei doc
 
 -   Le schede in secondo piano sono tutte le schede dei documenti diverse da quella attualmente selezionata. Se selezionate, diventano la scheda selezionata e acquisiscono tutti i colori di sfondo, del bordo e del testo da questi nomi di token.  
 
-![Scheda documento aperto (con linea rossa)](~/extensibility/ux-guidelines/media/0303-073_opendocumenttabredline.png "0303-073_OpenDocumentTabRedline")<br />Scheda documento aperto (con linea rossa)
+![Scheda documento aperto (con linea rossa)](../../extensibility/ux-guidelines/media/0303-073_opendocumenttabredline.png "0303-073_OpenDocumentTabRedline")<br />Scheda documento aperto (con linea rossa)
 
 | Usare...  | Non usare... |
 | --- | --- |
@@ -1807,7 +1807,7 @@ Chiamato anche una scheda "provvisoria". La scheda anteprima è visualizzata sul
 
 **Scheda anteprima selezionata, con stato non attivo**  
 
-![Scheda anteprima selezionata, con stato non attivo](~/extensibility/ux-guidelines/media/0303-080_previewtabunfocused.png "0303-080_PreviewTabUnfocused")<br />Scheda anteprima selezionata, con stato non attivo
+![Scheda anteprima selezionata, con stato non attivo](../../extensibility/ux-guidelines/media/0303-080_previewtabunfocused.png "0303-080_PreviewTabUnfocused")<br />Scheda anteprima selezionata, con stato non attivo
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -1879,7 +1879,7 @@ Il pulsante di overflow dei documenti è presente se ci sono uno o più document
 ### <a name="tagging"></a>Assegnazione di tag  
 Visual Studio supporta l'assegnazione di tag, che permette a un utente di dichiarare parole chiave da cercare per scopi di verifica. Ad esempio, i project manager e gli sviluppatori possono usare Team Foundation Server (TFS) per assegnare tag a elementi di lavoro. La tabella seguente indica i nomi di colore per il tag stesso e il glifo dell'icona di chiusura visualizzato negli stati corrispondenti al passaggio del mouse e alla selezione.  
 
-![Assegnazione di tag in Visual Studio (con linea rossa)](~/extensibility/ux-guidelines/media/0303-176_taggingredline.png "0303-176_TaggingRedline")<br />Assegnazione di tag in Visual Studio (con linea rossa)  
+![Assegnazione di tag in Visual Studio (con linea rossa)](../../extensibility/ux-guidelines/media/0303-176_taggingredline.png "0303-176_TaggingRedline")<br />Assegnazione di tag in Visual Studio (con linea rossa)  
 
 | Usare... | Non usare... |
 | --- | --- |
@@ -1889,7 +1889,7 @@ Visual Studio supporta l'assegnazione di tag, che permette a un utente di dichia
 
 **Tag: stato predefinito**
 
-![Tag predefinito](~/extensibility/ux-guidelines/media/0303-177_tag.png "0303-177_Tag")<br />Tag predefinito
+![Tag predefinito](../../extensibility/ux-guidelines/media/0303-177_tag.png "0303-177_Tag")<br />Tag predefinito
 
 | Elemento | Nome token: Category.color |
 | --- | --- |  
@@ -1916,7 +1916,7 @@ Visual Studio supporta l'assegnazione di tag, che permette a un utente di dichia
 
 **Tag: stato selezionato**
 
-![Tag selezionato](~/extensibility/ux-guidelines/media/0303-180_tagselected.png "0303-180_TagSelected")<br />Tag selezionato  
+![Tag selezionato](../../extensibility/ux-guidelines/media/0303-180_tagselected.png "0303-180_TagSelected")<br />Tag selezionato  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -1946,7 +1946,7 @@ Visual Studio supporta l'assegnazione di tag, che permette a un utente di dichia
 
 **Close (&times;) tag glifo: stati**
 
-![Chiudi premuto (&times;) tag glifo](~/extensibility/ux-guidelines/media/0303-183_tagglyphpressed.png "0303-183_TagGlyphPressed")<br />Chiudi premuto (&times;) tag glifo
+![Chiudi premuto (&times;) tag glifo](../../extensibility/ux-guidelines/media/0303-183_tagglyphpressed.png "0303-183_TagGlyphPressed")<br />Chiudi premuto (&times;) tag glifo
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -2032,7 +2032,7 @@ Le finestre degli strumenti in Visual Studio vengono usate per molte attività d
 ### <a name="toolbox-like-windows"></a>Casella degli strumenti simili alle finestre
 Casella degli strumenti è uno delle finestre degli strumenti comuni utilizzate più di frequente in Visual Studio. Si tratta essenzialmente di un controllo struttura ad albero con un tema e stili speciali applicati.  
 
-![Finestra Casella degli strumenti simili (con linea rossa)](~/extensibility/ux-guidelines/media/0303-189_toolboxredline.png "0303-189_ToolboxRedline")<br />Finestra Casella degli strumenti simili (con linea rossa)
+![Finestra Casella degli strumenti simili (con linea rossa)](../../extensibility/ux-guidelines/media/0303-189_toolboxredline.png "0303-189_ToolboxRedline")<br />Finestra Casella degli strumenti simili (con linea rossa)
 
 | Usare... | Non usare... |
 | --- | --- |
@@ -2079,7 +2079,7 @@ Casella degli strumenti è uno delle finestre degli strumenti comuni utilizzate 
 
 ![Nodo padre della casella degli strumenti selezionata, con stato non attivo](../../extensibility/ux-guidelines/media/0303-195_toolboxparentnodeunfocused.png "0303-195_ToolboxParentNodeUnfocused")<br />Nodo padre della casella degli strumenti selezionata, con stato non attivo  
 
-![Nodo figlio della casella degli strumenti selezionata, con stato non attivo](~/extensibility/ux-guidelines/media/0303-196_toolboxchildnodeunfocused.png "0303-196_ToolboxChildNodeUnfocused")<br />Nodo figlio della casella degli strumenti selezionata, con stato non attivo  
+![Nodo figlio della casella degli strumenti selezionata, con stato non attivo](../../extensibility/ux-guidelines/media/0303-196_toolboxchildnodeunfocused.png "0303-196_ToolboxChildNodeUnfocused")<br />Nodo figlio della casella degli strumenti selezionata, con stato non attivo  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -2110,7 +2110,7 @@ Il bordo della barra del titolo non è un bordo vero e proprio, è una linea spe
 
 **Barra del titolo con stato non attivo**  
 
-![Barra del titolo con stato non attivo](~/extensibility/ux-guidelines/media/0303-094_titlebarunfocused.png "0303-094_TitleBarUnfocused")<br />Barra del titolo con stato non attivo
+![Barra del titolo con stato non attivo](../../extensibility/ux-guidelines/media/0303-094_titlebarunfocused.png "0303-094_TitleBarUnfocused")<br />Barra del titolo con stato non attivo
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -2120,7 +2120,7 @@ Il bordo della barra del titolo non è un bordo vero e proprio, è una linea spe
 | Quadratino di trascinamento | `Environment.TitleBarDragHandle` |
 
 #### <a name="tool-window-title-bar-buttons"></a>Pulsanti della barra del titolo finestra dello strumento  
-![Title bar pulsante (con linea rossa)](~/extensibility/ux-guidelines/media/0303-095_titlebarbuttonredline.png "0303-095_TitleBarButtonRedline")<br />Title bar pulsante (con linea rossa)  
+![Title bar pulsante (con linea rossa)](../../extensibility/ux-guidelines/media/0303-095_titlebarbuttonredline.png "0303-095_TitleBarButtonRedline")<br />Title bar pulsante (con linea rossa)  
 
 | Usare... | Non usare... |
 | --- | --- |
@@ -2139,7 +2139,7 @@ Il bordo della barra del titolo non è un bordo vero e proprio, è una linea spe
 
 **Pulsanti della barra del titolo con stato non attivo: stato predefinito**
 
-![Impostazione predefinita, i pulsanti della barra del titolo con stato non attivo](~/extensibility/ux-guidelines/media/0303-097_titlebarbuttonunfocused.png "0303-097_TitleBarButtonUnfocused")<br />Impostazione predefinita, i pulsanti della barra del titolo con stato non attivo    
+![Impostazione predefinita, i pulsanti della barra del titolo con stato non attivo](../../extensibility/ux-guidelines/media/0303-097_titlebarbuttonunfocused.png "0303-097_TitleBarButtonUnfocused")<br />Impostazione predefinita, i pulsanti della barra del titolo con stato non attivo    
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -2206,7 +2206,7 @@ Il bordo della barra del titolo non è un bordo vero e proprio, è una linea spe
 
 **Scheda della finestra degli strumenti con stato non attivo selezionata**  
 
-![Scheda della finestra degli strumenti con stato non attivo selezionata](~/extensibility/ux-guidelines/media/0303-104_toolwindowtabunfocused.png "0303-104_ToolWindowTabUnfocused")<br />Scheda della finestra degli strumenti con stato non attivo selezionata
+![Scheda della finestra degli strumenti con stato non attivo selezionata](../../extensibility/ux-guidelines/media/0303-104_toolwindowtabunfocused.png "0303-104_ToolWindowTabUnfocused")<br />Scheda della finestra degli strumenti con stato non attivo selezionata
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -2216,7 +2216,7 @@ Il bordo della barra del titolo non è un bordo vero e proprio, è una linea spe
 
 **Scheda della finestra degli strumenti in background: stato predefinito**
 
-![Scheda finestra degli strumenti di sfondo predefinito](~/extensibility/ux-guidelines/media/0303-105_toolwindowbackgroundtab.png "0303-105_ToolWindowBackgroundTab")<br />Scheda finestra degli strumenti di sfondo predefinito  
+![Scheda finestra degli strumenti di sfondo predefinito](../../extensibility/ux-guidelines/media/0303-105_toolwindowbackgroundtab.png "0303-105_ToolWindowBackgroundTab")<br />Scheda finestra degli strumenti di sfondo predefinito  
 
 | Elemento | Nome token: Category.color |
 | --- | --- |
@@ -2236,7 +2236,7 @@ Il bordo della barra del titolo non è un bordo vero e proprio, è una linea spe
 
 ### <a name="auto-hide-tabs"></a>Schede Nascondi automaticamente  
 
-![Schede Nascondi automaticamente (con linea rossa)](~/extensibility/ux-guidelines/media/0303-107_autohideredline.png "0303 107_AutoHideRedline")schede Nascondi automaticamente (con linea rossa)
+![Schede Nascondi automaticamente (con linea rossa)](../../extensibility/ux-guidelines/media/0303-107_autohideredline.png "0303 107_AutoHideRedline")schede Nascondi automaticamente (con linea rossa)
 
 | Usare... | Non usare... |
 | --- | --- |

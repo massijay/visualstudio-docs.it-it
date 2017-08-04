@@ -30,9 +30,10 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
 ms.openlocfilehash: 24bd28ad78f1cd3a21167215ed8348dc79edce6b
+ms.contentlocale: it-it
 ms.lasthandoff: 04/05/2017
 
 ---
@@ -48,7 +49,7 @@ Un pacchetto VSPackage può definire una o più categorie di impostazioni, che s
      Se un singolo VSPackage supporta diversi punti di impostazioni personalizzato, ogni punto di impostazioni personalizzato viene implementato da una classe separata e ciascuno viene registrato da un'istanza univoca di <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>classe.</xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> Di conseguenza, le impostazioni di un classe di implementazione possono supportare più di una categoria di impostazioni.  
   
 ## <a name="custom-settings-point-registry-entry-details"></a>Dettagli delle voci del Registro di sistema di punto di impostazioni personalizzate  
- Punti di impostazioni personalizzati vengono creati in una voce del Registro di sistema nel percorso seguente: HKLM\Software\Microsoft\VisualStudio\\*\<versione >*\UserSettings\\`<CSPName>`, dove `<CSPName>` è il nome del punto di impostazioni personalizzato supporta il pacchetto VSPackage e *\<versione >* è la versione di [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], ad esempio 8.0.  
+ Punti di impostazioni personalizzati vengono creati in una voce del Registro di sistema nel percorso seguente: HKLM\Software\Microsoft\VisualStudio\\*\<versione >*\UserSettings\\`<CSPName>`, dove `<CSPName>` è il nome del punto di impostazioni personalizzato supporta il pacchetto VSPackage e  *\<versione >* è la versione di [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], ad esempio 8.0.  
   
 > [!NOTE]
 >  Il percorso radice dell'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<versione >* può essere sostituito con un'alternativa radice quando il [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] viene inizializzato l'ambiente di sviluppo integrato (IDE). Per ulteriori informazioni, vedere [opzioni della riga di comando](../../extensibility/command-line-switches-visual-studio-sdk.md).  
