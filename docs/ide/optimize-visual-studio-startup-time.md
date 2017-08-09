@@ -18,10 +18,10 @@ manager: ghogen
 f1_keywords:
 - vs.performancecenter
 ms.translationtype: HT
-ms.sourcegitcommit: c3521e1de25854db012cb91bbe09d9463ecb42c7
-ms.openlocfilehash: af1ff0dbeeb30e6b3169c6a94dab8da50085bf20
+ms.sourcegitcommit: 3037d92e9de377ab4b306a5a0e164e29fa6659e7
+ms.openlocfilehash: 5448253ae93b82a2631e6c48495a31d2724ed0b7
 ms.contentlocale: it-it
-ms.lasthandoff: 07/21/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 

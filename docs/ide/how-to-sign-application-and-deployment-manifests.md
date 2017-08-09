@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Firmare manifesti dell&quot;applicazione e di distribuzione | Microsoft Docs'
+title: 'Procedura: Firmare manifesti dell''applicazione e di distribuzione | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5658ecf52637a38bc3c2a5ad9e85b2edebf7d445
-ms.openlocfilehash: b59b417eb16674ff8c6c5223d790ae174ba20e09
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a3c0f4d3bde8bb03d3766383eba01665e58458be
+ms.openlocfilehash: 18f1ea2f5ee76f4f8457b7254ff3dd3b7b3e4901
+ms.contentlocale: it-it
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="how-to-sign-application-and-deployment-manifests"></a>Procedura: firmare manifesti dell'applicazione e di distribuzione
@@ -49,7 +50,7 @@ Se si vuole pubblicare un'applicazione tramite la distribuzione ClickOnce, i man
   
  La firma dei manifesti ClickOnce è facoltativa per le applicazioni basate su file con estensione EXE. Per altre informazioni, vedere la sezione "Creazione di manifesti non firmati" di questo documento.  
   
- Per altre informazioni sulla creazione di file di chiave, vedere [Procedura: Creare una coppia di chiavi pubblica/privata](http://msdn.microsoft.com/Library/05026813-f3bd-4d7c-9e0b-fc588eb3d114).  
+ Per altre informazioni sulla creazione di file di chiave, vedere [Procedura: Creare una coppia di chiavi pubblica/privata](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair).  
   
 > [!NOTE]
 >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] supporta solo file di chiave Scambio informazioni personali con estensione PFX. È possibile tuttavia selezionare altri tipi di certificati dall'archivio certificati di Windows dell'utente corrente, facendo clic su **Seleziona da archivio** nella pagina **Firma** delle proprietà del progetto.  
@@ -124,7 +125,7 @@ Se si vuole pubblicare un'applicazione tramite la distribuzione ClickOnce, i man
 3.  Pubblicare l'applicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Assembly con nomi sicuri](http://msdn.microsoft.com/Library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)   
- [Procedura: Creare una coppia di chiavi pubblica/privata](http://msdn.microsoft.com/Library/05026813-f3bd-4d7c-9e0b-fc588eb3d114)   
+ [Assembly con nomi sicuri](/dotnet/framework/app-domains/strong-named-assemblies)   
+ [Procedura: Creare una coppia di chiavi pubblica/privata](/dotnet/framework/app-domains/how-to-create-a-public-private-key-pair)   
  [Pagina Firma, Creazione progetti](../ide/reference/signing-page-project-designer.md)   
  [Sicurezza e distribuzione di ClickOnce](../deployment/clickonce-security-and-deployment.md)
