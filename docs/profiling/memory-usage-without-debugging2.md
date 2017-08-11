@@ -1,5 +1,5 @@
 ---
-title: Analizzare l&quot;utilizzo della memoria senza il debugger di Visual Studio | Microsoft Docs
+title: Analizzare l'utilizzo della memoria senza il debugger di Visual Studio | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,10 +34,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: baf1e18c56587b071aaa25fd522e3aa1b27a0b30
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: caa4a551c437a6d0479ff1a6fdd5526c6837721a
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="memory-usage-without-the-debugger"></a>Utilizzo della memoria senza il debugger
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/13/2017
   
  Quando si avvia una sessione di diagnostica, l'app viene avviata e nella finestra **Strumenti di diagnostica** viene visualizzato un grafico della sequenza temporale dell'uso della memoria dell'app.  
   
- ![Pagina delle informazioni generali dello strumento Utilizzo memoria](~/profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")  
+ ![Pagina delle informazioni generali dello strumento Utilizzo memoria](../profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")  
   
  Il grafico della sequenza temporale mostra le fluttuazioni nella memoria dell'app durante la sua esecuzione. Eventuali picchi nel grafico in genere indicano che alcune stringhe di codice stanno raccogliendo o creando dati, per poi rimuoverli al termine del processo. Picchi significativi indicano aree che potrebbero essere ottimizzate. Più preoccupante sarebbe un aumento del consumo di memoria che non torna ai valori normali, perché può indicare un uso della memoria non efficiente o addirittura una perdita di memoria.  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 05/13/2017
 ##  <a name="BKMK_Memory_Usage_overview_page"></a> Pagina delle informazioni generali dello strumento Utilizzo memoria  
  Una volta completata la raccolta dei dati, lo strumento Utilizzo memoria arresta l'app e visualizza un report con informazioni generali.  
   
- ![Pagina delle informazioni generali dello strumento Utilizzo memoria](~/profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")  
+ ![Pagina delle informazioni generali dello strumento Utilizzo memoria](../profiling/media/memuse__reportoverview.png "MEMUSE__ReportOverview")  
   
 ###  <a name="BKMK_Memory_Usage_snapshot_views"></a> Visualizzazioni snapshot dello strumento Utilizzo memoria  
  Usa le viste degli snapshot per aprire report dettagli in nuove finestre di Visual Studio. Esistono due tipi di viste degli snapshot:  
@@ -98,10 +98,10 @@ ms.lasthandoff: 05/13/2017
   
 |||  
 |-|-|  
-|![Passaggio 1](~/profiling/media/procguid_1.png "ProcGuid_1")|Il testo del link indica il numero totale di byte in memoria quando è stato creato lo snapshot.<br /><br /> Scegli questo link per visualizzare un report dettagli dello snapshot, ordinato in base alla dimensione totale delle istanze di tipo.|  
-|![Passaggio 2](~/profiling/media/procguid_2.png "ProcGuid_2")|Il testo del link indica il numero totale di oggetti in memoria quando è stato creato lo snapshot.<br /><br /> Scegli questo link per visualizzare un report dettagli dello snapshot, ordinato in base al numero di istanze dei tipi.|  
-|![Passaggio 3](~/profiling/media/procguid_3.png "ProcGuid_3")|Il testo del link indica la differenza tra la dimensione totale degli oggetti in memoria al momento dello snapshot e la dimensione totale dello snapshot precedente.<br /><br /> Il testo del link è un numero positivo quando la dimensione della memoria dello snapshot è maggiore rispetto allo snapshot precedente e un numero negativo quando la dimensione è minore. Il testo del link **Alla linea di base** indica che lo snapshot è il primo della sessione di diagnostica, mentre il testo **Nessuna differenza** indica che la differenza è zero.<br /><br /> Scegli questo link per visualizzare un report delle differenze degli snapshot, ordinato in base alla differenza riguardo alla dimensione totale delle istanze dei tipi.|  
-|![Passaggio 4](~/profiling/media/procguid_4.png "ProcGuid_4")|Il testo del link mostra la differenza tra il numero totale di oggetti di memoria nello snapshot e il numero di oggetti nello snapshot precedente.<br /><br /> Scegli questo link per visualizzare un report delle differenze degli snapshot, ordinato in base alla differenza riguardo al numero totale di istanze dei tipi.|  
+|![Passaggio 1](../profiling/media/procguid_1.png "ProcGuid_1")|Il testo del link indica il numero totale di byte in memoria quando è stato creato lo snapshot.<br /><br /> Scegli questo link per visualizzare un report dettagli dello snapshot, ordinato in base alla dimensione totale delle istanze di tipo.|  
+|![Passaggio 2](../profiling/media/procguid_2.png "ProcGuid_2")|Il testo del link indica il numero totale di oggetti in memoria quando è stato creato lo snapshot.<br /><br /> Scegli questo link per visualizzare un report dettagli dello snapshot, ordinato in base al numero di istanze dei tipi.|  
+|![Passaggio 3](../profiling/media/procguid_3.png "ProcGuid_3")|Il testo del link indica la differenza tra la dimensione totale degli oggetti in memoria al momento dello snapshot e la dimensione totale dello snapshot precedente.<br /><br /> Il testo del link è un numero positivo quando la dimensione della memoria dello snapshot è maggiore rispetto allo snapshot precedente e un numero negativo quando la dimensione è minore. Il testo del link **Alla linea di base** indica che lo snapshot è il primo della sessione di diagnostica, mentre il testo **Nessuna differenza** indica che la differenza è zero.<br /><br /> Scegli questo link per visualizzare un report delle differenze degli snapshot, ordinato in base alla differenza riguardo alla dimensione totale delle istanze dei tipi.|  
+|![Passaggio 4](../profiling/media/procguid_4.png "ProcGuid_4")|Il testo del link mostra la differenza tra il numero totale di oggetti di memoria nello snapshot e il numero di oggetti nello snapshot precedente.<br /><br /> Scegli questo link per visualizzare un report delle differenze degli snapshot, ordinato in base alla differenza riguardo al numero totale di istanze dei tipi.|  
   
 ##  <a name="BKMK_Snapshot_reports"></a> Rapporti degli snapshot  
  ![Rapporto snapshot dello strumento Utilizzo memoria](../profiling/media/memuse_snapshotreport_all.png "MEMUSE_SnapshotReport_All")  
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/13/2017
 ##  <a name="BKMK_Snapshot_details_reports"></a> Rapporti dettagli degli snapshot  
  Usa un report dettagli di uno snapshot per concentrarti su un solo snapshot di una sessione di diagnostica. Per aprire un report dettagli, scegli uno dei link in una visualizzazione snapshot, come mostrato nell'immagine. Entrambi i collegamenti aprono lo stesso rapporto e l'unica differenza è il tipo di ordinamento iniziale dell'albero **Heap gestito** nel rapporto. In entrambi i casi, puoi modificare il tipo di ordinamento dopo l'apertura del report.  
   
- ![Link al rapporto degli snapshot in una visualizzazione snapshot](~/profiling/media/memuse_snapshotview_snapshotdetailslinks.png "MEMUSE_SnapshotView_SnapshotDetailsLinks")  
+ ![Link al rapporto degli snapshot in una visualizzazione snapshot](../profiling/media/memuse_snapshotview_snapshotdetailslinks.png "MEMUSE_SnapshotView_SnapshotDetailsLinks")  
   
 -   Il link **MB** ordina il rapporto in base alla colonna **Dimensione inclusiva (byte)**.  
   
@@ -189,7 +189,7 @@ ms.lasthandoff: 05/13/2017
 ###  <a name="BKMK_Managed_Heap_tree__Snapshot_diff_"></a> Albero Heap gestito (differenze di snapshot)  
  Nell'albero **Heap gestito** sono elencati i tipi di oggetti contenuti in memoria. Puoi espandere un nome di tipo per visualizzare le dieci istanze più grandi del tipo, ordinate in base alla dimensione. Quando si seleziona un tipo o un'istanza, vengono visualizzati gli alberi **Percorsi della radice** e **Oggetti a cui si fa riferimento** per l'elemento selezionato.  
   
- ![Albero Heap gestito per un tipo nel rapporto delle differenze](~/profiling/media/memuse_snapshotdiff_type_heap.png "MEMUSE_SnapshotDiff_Type_Heap")  
+ ![Albero Heap gestito per un tipo nel rapporto delle differenze](../profiling/media/memuse_snapshotdiff_type_heap.png "MEMUSE_SnapshotDiff_Type_Heap")  
   
  Si noti che le colonne **Conteggio**, **Dimensione (byte)** e **Dimensione inclusiva (byte)** sono state compresse nell'immagine.  
   
@@ -206,7 +206,7 @@ ms.lasthandoff: 05/13/2017
 ###  <a name="BKMK_Paths_to_Root_tree__Snapshot_diff_"></a> Albero Percorsi della radice (differenza di snapshot)  
  L'albero **Percorsi della radice** mostra la catena di oggetti che fanno riferimento al tipo o all'istanza. Garbage Collector di .NET Framework pulisce la memoria per un oggetto solo una volta rilasciati tutti i riferimenti.  
   
- ![Albero Percorsi della radice per le istanze in una visualizzazione differenze](~/profiling/media/memuse_snapshotdiff_pathstoroot_instance_all.png "MEMUSE_SnapshotDiff_PathsToRoot_Instance_All")  
+ ![Albero Percorsi della radice per le istanze in una visualizzazione differenze](../profiling/media/memuse_snapshotdiff_pathstoroot_instance_all.png "MEMUSE_SnapshotDiff_PathsToRoot_Instance_All")  
   
 ###  <a name="BKMK_Referenced_Objects_tree__Snapshot_diff_"></a> Albero Oggetti a cui si fa riferimento (differenza di snapshot)  
  L'albero **Oggetti a cui si fa riferimento** mostra gli oggetti a cui fa riferimento l'istanza o il tipo principale.  
@@ -220,7 +220,5 @@ ms.lasthandoff: 05/13/2017
 |**Dimensione inclusiva (byte)**|Dimensione degli oggetti nello snapshot principale, inclusa la dimensione degli oggetti contenuti negli oggetti.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Memoria JavaScript](../profiling/javascript-memory.md)
- [Strumenti di profilatura](../profiling/profiling-tools.md)
- [Procedure consigliate per app di Windows Store scritte in C++, C# e Visual Basic](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)   
+ [Memoria JavaScript](../profiling/javascript-memory.md) [Profilatura in Visual Studio](../profiling/index.md) [Panoramica sulle funzionalità di profilatura](../profiling/profiling-feature-tour.md) [Procedure consigliate per app di Windows Store scritte in C++, C# e Visual Basic](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)   
  [Diagnosing memory issues with the new Memory Usage Tool in Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=394706) (Diagnostica dei problemi di memoria con il nuovo strumento Utilizzo memoria in Visual Studio)

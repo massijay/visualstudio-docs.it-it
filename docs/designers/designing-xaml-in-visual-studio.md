@@ -1,7 +1,7 @@
 ---
 title: Progettazione di XAML in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 7/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -13,31 +13,23 @@ caps.latest.revision: 4
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: e832941dd00fa81bea1566f17504fe7e27c41a48
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 535cd67469897e84a749e3e1c58c2695ddddd006
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="designing-xaml-in-visual-studio"></a>Progettazione di XAML in Visual Studio
-Visual Studio e Blend per Visual Studio offrono strumenti visivi per la creazione di interfacce utente accattivanti e funzionalità multimediali avanzate per app per Windows desktop, Web, [Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/jj683071.aspx)e [Windows Store](http://msdn.microsoft.com/library/windows/apps/jj129478.aspx) basate su XAML. Entrambi condividono un set comune di finestre di progettazione e degli strumenti e un editor XAML, ma Blend per Visual Studio offre strumenti di progettazione aggiuntive per attività più avanzate quali animazioni e comportamenti.  
+
+Visual Studio e Blend per Visual Studio offrono entrambi strumenti visivi per la creazione con XAML di interfacce utente accattivanti e funzionalità multimediali avanzate per un'ampia varietà di tipi di app. Entrambi gli strumenti condividono un set comune di funzionalità, tra cui un editor XAML, ma Blend per Visual Studio offre strumenti di progettazione aggiuntive per attività più avanzate, quali animazioni e comportamenti.  
   
+Il processo di progettazione di un'app dipende dallo strumento scelto e dalla piattaforma di destinazione. In questo argomento vengono confrontati gli strumenti di progettazione di Visual Studio e di Blend per Visual Studio. Per altre procedure dettagliate per l'uso degli strumenti, vedere gli argomenti seguenti:
+
+- [Creazione di un'interfaccia utente tramite la finestra di progettazione XAML in Visual Studio](creating-a-ui-by-using-xaml-designer-in-visual-studio.md)
+- [Creazione di un'interfaccia utente usando Blend per Visual Studio](creating-a-ui-by-using-blend-for-visual-studio.md)
+- [Create Modern Desktop Applications with Windows Presentation Foundation](create-modern-desktop-applications-with-windows-presentation-foundation.md) (Creare moderne applicazioni desktop con Windows Presentation Foundation)
+
 ## <a name="choosing-the-right-tool"></a>Scegliere lo strumento giusto  
  La scelta degli strumenti di progettazione dipende in larga misura dal bagaglio di competenze. Se si è più orientati al codice, è possibile scrivere codice XAML in Visual Studio per eseguire attività di progettazione anche avanzata. Se si è più orientati alla progettazione, Blend per Visual Studio consente di eseguire attività avanzate senza scrivere codice.  
   
@@ -48,7 +40,7 @@ Visual Studio e Blend per Visual Studio offrono strumenti visivi per la creazion
   
 -   **Un'interfaccia utente coerente:** è possibile progettare le applicazioni all'interno del contesto familiare dell'interfaccia utente di Visual Studio, che semplifica il passaggio tra IDE in modo più produttivo e piacevole. Blend per Visual Studio usa il tema scuro di Visual Studio che consente di concentrarsi sul contenuto che si sta progettando migliorando il contrasto tra il contenuto e l'interfaccia utente. Vedere [Creating a UI by using XAML Designer](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md) (Creazione di un'interfaccia utente tramite la finestra di progettazione XAML).  
   
-     ![IDE per Blend per Visual Studio ](~/designers/media/blendide.png "BlendIDE")  
+     ![IDE per Blend per Visual Studio ](../designers/media/blendide.png "BlendIDE")  
   
 -   **IntelliSense XAML:** entrambi gli IDE supportano tutte le funzionalità comuni che sarebbero previste da IntelliSense incluso il completamento istruzioni, il supporto per operazioni come aggiunta di commenti e formattazione di codice e spostamento di risorse, editor di associazione e di codice.  
   
@@ -56,9 +48,9 @@ Visual Studio e Blend per Visual Studio offrono strumenti visivi per la creazion
   
 -   **Esperienza di ricaricamento file:** è possibile modificare i file XAML in Blend per Visual Studio o Visual Studio e ricaricare automaticamente i file modificati quando si passa dall’uno all’altro. Per ridurre al minimo le interruzioni di flusso di lavoro, è ora possibile impostare le preferenze di ricaricamento file nella finestra Ricarica file.  
   
-     ![Esperienza di ricaricamento file](~/designers/media/blendfilereload.png "BlendFileReload")  
+     ![Esperienza di ricaricamento file](../designers/media/blendfilereload.png "BlendFileReload")  
   
--   **Impostazioni e layout sincronizzati:** layout personalizzati consentono di salvare e applicare le personalizzazioni di layout delle finestre degli strumenti. Quando si effettua l’accesso con lo stesso account Microsoft, Visual Studio sincronizzerà queste personalizzazioni e le preferenze per Visual Studio e Blend per Visual Studio tra più computer. Vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+-   **Impostazioni e layout sincronizzati:** layout personalizzati consentono di salvare e applicare le personalizzazioni di layout delle finestre degli strumenti. Quando si effettua l’accesso con lo stesso account Microsoft, Visual Studio sincronizzerà queste personalizzazioni e le preferenze per Visual Studio e Blend per Visual Studio tra più computer. Vedere [Personalizzare l'IDE di Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
   
 -   **Un Esplora soluzioni comune:** Esplora soluzioni offre una visualizzazione organizzata dei progetti e dei relativi file, nonché l'accesso immediato ai comandi associati. Con Esplora soluzioni è più facile lavorare con progetti di grandi imprese. Vedere [Solutions and Projects](../ide/solutions-and-projects-in-visual-studio.md) (Soluzioni e progetti)  
   
