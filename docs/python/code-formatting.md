@@ -1,12 +1,13 @@
 ---
 title: Formattazione del codice Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 4/10/2017
+ms.date: 7/12/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d0f1631-360b-45d4-a0cb-01c3c10d25f2
@@ -14,25 +15,11 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: a14bc7e8c9194fff3a1bec2739c9e9c2480e905b
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 9d04c52a595014d06b38205913e3eb1cdd264019
 ms.contentlocale: it-it
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 
@@ -43,9 +30,9 @@ Visual Studio consente di riformattare rapidamente il codice in base a opzioni d
 - Per formattare una selezione, selezionare **Modifica > Avanzate > Formatta selezione** o premere CTRL+E,F.
 - Per formattare l'intero file, selezionare **Modifica > Avanzate > Formatta documento** o premere CTRL+E,D.
 
-Le opzioni vengono impostate mediante **Strumenti > Opzioni > Editor di testo > Python > Formattazione** e le relative schede secondarie e per impostazione predefinita vengono impostate in modo da corrispondere a un superset della [guida di stile PEP 8](http://www.python.org/dev/peps/pep-0008/). La scheda **Generale** determina quando viene applicata la formattazione. Le altre tre pagine secondarie sono definite nelle sezioni seguenti.
+Le opzioni vengono impostate mediante **Strumenti > Opzioni > Editor di testo > Python > Formattazione** e le relative schede annidate e per impostazione predefinita corrispondono a un superset della [guida di stile PEP 8](http://www.python.org/dev/peps/pep-0008/). La scheda **Generale** determina quando viene applicata la formattazione. Le impostazioni delle altre tre schede sono descritte in questo argomento.
 
-[Il supporto di Python in Visual Studio](installation.md) aggiunge anche l'utile comando [Riempi paragrafo di commento](#fill-comment-paragraph-command) al menu **Modifica > Avanzate** come descritto di seguito.
+Il [supporto di Python in Visual Studio](installation.md) aggiunge anche l'utile comando [Riempi paragrafo di commento](#fill-comment-paragraph-command) al menu **Modifica > Avanzate** come descritto di seguito.
 
 ## <a name="spacing"></a>Spacing (Spaziatura)
 
@@ -55,7 +42,7 @@ La scheda **Spacing** (Spaziatura) consente di controllare la posizione in cui i
 - Deselezionato: rimuove qualsiasi spaziatura.
 - Indeterminato: mantiene la formattazione originale.
 
-Le tabelle seguenti includono esempi per le varie opzioni.
+Le tabelle seguenti includono esempi per le varie opzioni:
 
 | Opzione Class Definitions (Definizioni di classe) | Selezionato con segno di spunta | Deselezionato |
 | --- | --- | --- | 
@@ -97,9 +84,9 @@ Le tabelle seguenti includono esempi per le varie opzioni.
 
 <br/>
 
-## <a name="statements"></a>Statements (Istruzioni)
+## <a name="statements"></a>Istruzioni
 
-La scheda **Statements** (Istruzioni) controlla la riscrittura automatica di varie istruzioni in altri formati Python.
+Le opzioni relative alle **istruzioni** consentono di controllare la riscrittura automatica di varie istruzioni in altri formati Python.
 
 | Opzione | Prima della formattazione | Dopo la formattazione |
 | --- | --- | --- |
@@ -110,7 +97,7 @@ La scheda **Statements** (Istruzioni) controlla la riscrittura automatica di var
 
 ## <a name="wrapping"></a>Wrapping (Ritorno a capo)
 
-La scheda **Ritorno a capo** consente di impostare il valore **Maximum comment width** (Larghezza massima commenti), che per impostazione predefinita è 80, in modo che se viene impostata l'opzione **Wrap comments that are too wide** (Esegui il ritorno a capo dei commenti troppo larghi), Visual Studio riformatti i commenti in modo che non superino la larghezza specificata.
+**Wrapping** consente di impostare la **larghezza massima dei commenti**, che per impostazione predefinita è 80. Se viene impostata l'opzione **Esegui il wrapping dei commenti troppo lunghi**, Visual Studio riformatta i commenti in modo che non superino la larghezza massima.
 
 ```python
 # Wrapped to 40 columns
@@ -127,7 +114,7 @@ La scheda **Ritorno a capo** consente di impostare il valore **Maximum comment w
 
 ## <a name="fill-comment-paragraph-command"></a>Comando Fill Comment Paragraph (Riempi paragrafo commenti)
 
-Il comando **Modifica > Avanzate > Fill Comment Paragraph (Riempi paragrafo commenti)** (CTRL+E,CTRL+P) ridefinisce il flusso e la formattazione del testo dei commenti, riunendo le righe brevi e suddividendo quelle lunghe.
+Il comando **Modifica > Avanzate > Riempi paragrafo di commento** (CTRL+E, P) ridefinisce il flusso e la formattazione del testo dei commenti, riunendo le righe brevi e suddividendo quelle lunghe.
 
 Ad esempio:
 

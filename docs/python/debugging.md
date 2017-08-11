@@ -1,12 +1,13 @@
 ---
 title: Debug di Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 5/8/2017
+ms.date: 7/13/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2192dc77-b5da-4332-b753-fa20f03f81e0
@@ -14,25 +15,11 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: e15edc1f2739cad0960619aa6cb4b089589eebd8
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 92fd0f30dfbb09f0eca8d2c9bc98d7904d81353c
 ms.contentlocale: it-it
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 
@@ -61,34 +48,34 @@ Vedere anche gli argomenti seguenti sul debug nei vari scenari:
 > [!Tip]
 > Python in Visual Studio supporta il debug senza un progetto. Aprire un file Python autonomo, fare clic con il pulsante destro del mouse nell'editor e scegliere **Avvia eseguendo il debug**. Visual Studio avvierà lo script con l'ambiente predefinito globale (vedere [Ambienti Python](python-environments.md)) e nessun argomento. Da questo momento però sono disponibili tutte le opzioni di debug.
 >
-> Per controllare l'ambiente e gli argomenti, è necessario creare un progetto per il codice. È possibile eseguire facilmente questa operazione usando il modello [Da codice Python esistente](python-projects.md#creating-a-project-from-existing-files).
+> Per controllare l'ambiente e gli argomenti, creare un progetto per il codice. Questa operazione viene eseguita facilmente con il modello di progetto [Da codice Python esistente](python-projects.md#creating-a-project-from-existing-files).
 
 <a name="debugging-with-a-project"</a>
 ## <a name="basic-debugging"></a>Debug di base
 
 Il flusso di lavoro del debug di base include l'impostazione dei punti di interruzione, l'esecuzione di codice istruzione per istruzione, il controllo dei valori e la gestione delle eccezioni, come descritto nelle sezioni seguenti. Per informazioni dettagliate sul debugger di Visual Studio, vedere [Debug in Visual Studio](../debugger/debugging-in-visual-studio.md).
 
-È possibile avviare una sessione di debug in diversi modi, ovvero scegliendo **Debug > Avvia debug**, facendo clic sul pulsante **Avvia** sulla barra degli strumenti oppure premendo F5. Verrà quindi eseguito il file di avvio del progetto (visualizzato in grassetto in Esplora soluzioni) con l'ambiente attivo del progetto ed eventuali argomenti della riga di comando o percorsi di ricerca specificati in Proprietà progetto (vedere [Opzioni di debug del progetto](#project-debugging-options)). Se per qualche motivo non è stato impostato un file di avvio, tuttavia, verrà visualizzata una finestra di output Python per un breve periodo di tempo. In tal caso, fare clic con il pulsante destro del mouse sul file appropriato e selezionare **Imposta come file di avvio**.
+È possibile avviare una sessione di debug in diversi modi, ovvero scegliendo **Debug > Avvia debug**, facendo clic sul pulsante **Avvia** sulla barra degli strumenti oppure premendo F5. Queste azioni eseguono il file di avvio del progetto (visualizzato in grassetto in Esplora soluzioni) con l'ambiente attivo del progetto ed eventuali argomenti della riga di comando o percorsi di ricerca specificati in Proprietà progetto (vedere [Opzioni di debug del progetto](#project-debugging-options)). Se per qualche motivo non è stato impostato un file di avvio, tuttavia, viene visualizzata una finestra di output Python per un breve periodo di tempo. In questo caso, fare clic con il pulsante destro del mouse sul file appropriato e selezionare **Imposta come file di avvio**.
 
 > [!Note]
 > Il debugger viene sempre avviato con l'ambiente Python attivo per il progetto. Per cambiare ambiente, attivarne uno diverso come descritto in [Ambienti Python](python-environments.md).
 
 ### <a name="breakpoints"></a>Punti di interruzione
 
-Con i punti di interruzione l'esecuzione del codice viene arrestata in corrispondenza di un punto contrassegnato per consentire il controllo dello stato del programma. Per impostare i punti di interruzione, è possibile fare clic sul margine sinistro dell'editor del codice oppure fare clic con il pulsante destro del mouse su una riga di codice e scegliere **Punto di interruzione > Inserisci punto di interruzione di interruzione**. Accanto a ogni riga con un punto di interruzione verrà visualizzato un punto rosso.
+Con i punti di interruzione l'esecuzione del codice viene arrestata in corrispondenza di un punto contrassegnato per consentire il controllo dello stato del programma. Per impostare punti di interruzione, fare clic sul margine sinistro dell'editor del codice oppure fare clic con il pulsante destro del mouse su una riga di codice e scegliere **Punto di interruzione > Inserisci punto di interruzione**. Accanto a ogni riga con un punto di interruzione verrà visualizzato un punto rosso.
 
-![Punti di interruzione in Visual Studio](~/python/media/debugging-breakpoints.png)
+![Punti di interruzione in Visual Studio](media/debugging-breakpoints.png)
 
 Per rimuovere il punto di interruzione, basta fare clic sul punto rosso oppure fare clic con il pulsante destro del mouse sulla riga di codice e scegliere **Punto di interruzione > Elimina punto di interruzione**. È anche possibile usare il comando **Punto di interruzione > Disabilita punto di interruzione** per disabilitare il punto di interruzione senza rimuoverlo.
 
 > [!Note]
-> Alcuni punti di interruzione in Python possono risultare insoliti per gli utenti abituati ad altri linguaggi. In Python l'intero file è codice eseguibile, di conseguenza Python esegue il file quando viene caricato per elaborare tutte le definizioni di classe o di funzione di primo livello. Se è stato impostato un punto di interruzione, è possibile che l'esecuzione del debugger si interrompa durante una dichiarazione di classe. Si tratta di un comportamento corretto, anche se insolito.
+> Alcuni punti di interruzione in Python possono risultare sorprendenti per gli sviluppatori che hanno lavorato con altri linguaggi di programmazione. In Python l'intero file è codice eseguibile, di conseguenza Python esegue il file quando viene caricato per elaborare tutte le definizioni di classe o di funzione di primo livello. Se è stato impostato un punto di interruzione, è possibile che l'esecuzione del debugger si interrompa durante una dichiarazione di classe. Questo comportamento è corretto, anche se è a volte sorprendente.
 
-È possibile personalizzare le condizioni per l'attivazione di un punto di interruzione, ad esempio per interrompere l'esecuzione solo quando una variabile ha raggiunto un determinato valore. Per impostare le condizioni, fare con il pulsante destro del mouse sul punto rosso del punto di interruzione, scegliere **Condizione** e quindi creare espressioni con il codice Python. Per informazioni dettagliate su questa funzionalità in Visual Studio, vedere [Breakpoint conditions](../debugger/using-breakpoints.md#breakpoint-conditions) (Condizioni per i punti di interruzione).
+È possibile personalizzare le condizioni per l'attivazione di un punto di interruzione, ad esempio per interrompere l'esecuzione solo quando una variabile viene impostata su un valore o su un intervallo di valori specifico. Per impostare le condizioni, fare con il pulsante destro del mouse sul punto rosso del punto di interruzione, scegliere **Condizione** e quindi creare espressioni con il codice Python. Per informazioni dettagliate su questa funzionalità in Visual Studio, vedere [Breakpoint conditions](../debugger/using-breakpoints.md#breakpoint-conditions) (Condizioni per i punti di interruzione).
 
-Quando si impostano le condizioni, è anche possibile impostare un'**azione** e creare un messaggio da registrare nella finestra di output, nonché scegliere se continuare automaticamente l'esecuzione. In questo modo viene creato un cosiddetto *punto di analisi* senza che sia necessario introdurre il codice di registrazione direttamente nell'applicazione:
+Quando si impostano le condizioni, è anche possibile impostare un'**azione** e creare un messaggio da registrare nella finestra di output, nonché scegliere se continuare automaticamente l'esecuzione. La registrazione di un messaggio crea un cosiddetto *punto di analisi* senza aggiungere codice di registrazione direttamente nell'applicazione:
 
-![Creazione di un punto di analisi con un punto di interruzione](~/python/media/debugging-tracepoint.png)
+![Creazione di un punto di analisi con un punto di interruzione](media/debugging-tracepoint.png)
 
 ### <a name="stepping-through-code"></a>Esecuzione di codice istruzione per istruzione
 
@@ -99,10 +86,10 @@ Quando l'esecuzione del codice viene arrestata in corrispondenza di un punto di 
 | Continua | F5 | Esegue il codice fino a quando non viene raggiunto il punto di interruzione successivo. |
 | Esegui istruzione | F11 | Esegue l'istruzione successiva e si arresta. Se l'istruzione successiva è una chiamata a una funzione, il debugger si arresta in corrispondenza della prima riga della funzione chiamata. |
 | Esegui istruzione/routine | F10 | Esegue l'istruzione successiva, effettuando anche una chiamata a una funzione (ed eseguendone tutto il relativo codice) ed applicando l'eventuale valore restituito. Questo comando consente di ignorare facilmente le funzioni di cui non è necessario eseguire il debug. |
-| Esci da istruzione/routine | MAIUSC+F11 | Esegue il codice fino alla fine della funzione corrente, quindi passa all'istruzione di chiamata. Si tratta di un'opzione utile quando non è necessario eseguire il debug della parte restante della funzione corrente. |
-| Esegui fino al cursore | Ctrl+F10 | Esegue il codice fino alla posizione del punto di inserimento nell'editor. In questo modo è possibile ignorare facilmente un segmento di codice di cui non è necessario eseguire il debug. |
-| Imposta istruzione successiva | Ctrl+Maiusc+F10 | Imposta il punto di esecuzione corrente nel codice in corrispondenza della posizione del punto di inserimento. In questo modo è possibile evitare l'esecuzione di un segmento di codice, ad esempio quando si sa già che contiene errori o produce effetti collaterali indesiderati. |
-| Mostra istruzione successiva | ALT+NUM * | Riporta all'istruzione che verrà eseguita successivamente. Si tratta di un'opzione molto utile per individuare il punto effettivo in cui il debugger è stato arrestato dopo aver esaminato il codice. |
+| Esci da istruzione/routine | MAIUSC+F11 | Esegue il codice fino alla fine della funzione corrente, quindi passa all'istruzione di chiamata.  Questo comando è utile quando non è necessario eseguire il debug della parte restante della funzione corrente. |
+| Esegui fino al cursore | Ctrl+F10 | Esegue il codice fino alla posizione del punto di inserimento nell'editor. Questo comando consente di ignorare facilmente un segmento di codice di cui non è necessario eseguire il debug. |
+| Imposta istruzione successiva | Ctrl+Maiusc+F10 | Imposta il punto di esecuzione corrente nel codice in corrispondenza della posizione del punto di inserimento. Questo comando consente di evitare l'esecuzione di un segmento di codice, ad esempio quando si sa già che contiene errori o produce effetti collaterali indesiderati. |
+| Mostra istruzione successiva | ALT+NUM * | Riporta alla successiva istruzione da eseguire. Questo comando è utile per individuare all'interno del codice il punto in cui il debugger è stato arrestato. |
 
 ### <a name="inspecting-and-modifying-values"></a>Controllo e modifica di valori
 
@@ -110,57 +97,55 @@ Quando il debugger non è in esecuzione, è possibile controllare e modificare i
 
 Per visualizzare un valore usando i suggerimenti dati, è sufficiente passare il puntatore del mouse su una qualsiasi variabile nell'editor. È possibile fare clic sul valore per modificarlo:
 
-![Suggerimenti dati nel debugger](~/python/media/debugging-quick-tips.png)
+![Suggerimenti dati nel debugger](media/debugging-quick-tips.png)
 
 La finestra Auto (**Debug > Finestre > Auto**) contiene variabili ed espressioni vicine all'istruzione corrente. È possibile fare doppio clic nella colonna del valore oppure selezionare e premere F2 per modificare il valore:
 
-![Finestra Auto nel debugger](~/python/media/debugging-autos-window.png)
+![Finestra Auto nel debugger](media/debugging-autos-window.png)
 
 La finestra Variabili locali (**Debug > Finestre > Variabili locali**) visualizza tutte le variabili presenti nell'ambito corrente che è possibile modificare nuovamente:
 
-![Finestra Variabili locali nel debugger](~/python/media/debugging-locals-window.png)
+![Finestra Variabili locali nel debugger](media/debugging-locals-window.png)
 
 Per altre informazioni sull'uso di Auto e Variabili locali, vedere [Inspecting Variables in the Autos and Locals Windows](../debugger/autos-and-locals-windows.md) (Controllo delle variabili nelle finestre Auto e Variabili locali).
 
 Le finestre Espressioni di controllo (**Debug > Finestre > Espressioni di controllo > Espressione di controllo 1-4**) consentono di immettere espressioni Python arbitrarie e di visualizzare i risultati. Le espressioni vengono valutate nuovamente per ogni passaggio:
 
-![Finestra Espressioni di controllo nel debugger](~/python/media/debugging-watch-window.png)
+![Finestra Espressioni di controllo nel debugger](media/debugging-watch-window.png)
 
 Per altre informazioni sull'uso di Espressioni di controllo, vedere [Setting a Watch on Variables using the Watch and QuickWatch Windows](../debugger/watch-and-quickwatch-windows.md) (Impostazione di un'espressione di controllo per le variabili con le finestre Espressione di controllo e Controllo immediato).
 
-Durante il controllo di un valore stringa (a questo scopo `str`, `unicode`, `bytes` e `bytearray` sono tutti considerati stringhe), a destra del valore è possibile notare l'icona di una lente di ingrandimento. Facendo clic su tale icona il valore stringa senza virgolette viene visualizzato in una finestra di dialogo popup, che supporta wrapping e scorrimento, utili in caso di stringhe lunghe. Facendo inoltre clic sulla freccia giù sull'icona sarà possibile scegliere tra le visualizzazioni testo normale, HTML, XML e JSON:
+Durante il controllo di un valore stringa (a questo scopo `str`, `unicode`, `bytes` e `bytearray` sono tutti considerati stringhe), a destra del valore compare l'icona di una lente di ingrandimento. Se si fa clic sull'icona, il valore stringa senza virgolette viene visualizzato in una finestra di dialogo popup con wrapping e scorrimento, funzioni utili in caso di stringhe lunghe. In più, se si fa clic sulla freccia giù sull'icona è possibile scegliere tra le visualizzazioni testo normale, HTML, XML e JSON:
 
-![Visualizzatori di stringa](~/python/media/debugging-string-visualizers.png)
+![Visualizzatori di stringa](media/debugging-string-visualizers.png)
 
 Le visualizzazioni HTML, XML e JSON sono disponibili in finestre popup separate, che supportano visualizzazioni albero ed evidenziazione della sintassi.
 
 ### <a name="exceptions"></a>Eccezioni
 
-Se si verifica un errore durante il debug del programma e non si dispone di un gestore di eccezioni per risolverlo, l'esecuzione del debugger si interrompe in corrispondenza del punto in cui si è verificata l'eccezione:
+Se si verifica un errore nel programma durante il debug e non si dispone di un gestore di eccezioni per risolverlo, l'esecuzione del debugger si interrompe in corrispondenza del punto in cui si è verificata l'eccezione:
 
-![Popup dell'eccezione](~/python/media/debugging-exception-popup.png)
+![Popup dell'eccezione](media/debugging-exception-popup.png)
 
-A questo punto è possibile controllare lo stato del programma, incluso lo stack di chiamate. Se però si prova a eseguire il codice istruzione per istruzione, l'eccezione continuerà a essere generata fino a quando non viene gestita o il programma non viene chiuso.
+A questo punto è possibile controllare lo stato del programma, incluso lo stack di chiamate. Se tuttavia si prova a eseguire il codice istruzione per istruzione, l'eccezione continua a essere generata fino a quando non viene gestita o il programma non viene chiuso.
 
 Il comando di menu **Debug > Finestre > Impostazioni eccezioni** consente di visualizzare una finestra in cui è possibile espandere **Eccezioni Python**:
 
-![Finestra Eccezioni](~/python/media/debugging-exception-settings.png)
+![Finestra Eccezioni](media/debugging-exception-settings.png)
 
-La casella di controllo relativa alle singole eccezioni consente di controllare se l'esecuzione del debugger deve essere *sempre* interrotta quando viene generata l'eccezione. È consigliabile selezionare questa casella se si vuole interrompere più spesso l'esecuzione per una particolare eccezione.
+La casella di controllo relativa alle singole eccezioni consente di controllare se l'esecuzione del debugger deve essere *sempre* interrotta quando viene generata l'eccezione. Selezionare questa casella se si vuole interrompere più spesso l'esecuzione per una particolare eccezione.
 
-Per impostazione predefinita, la maggior parte delle eccezioni causa un'interruzione quando nel codice sorgente non viene trovato alcun gestore di eccezioni. Per modificare questo comportamento, fare clic con il pulsante destro del mouse su una qualsiasi eccezione e selezionare oppure deselezionare "Continua se non gestita nel codice utente". È consigliabile deselezionare questa casella se si vuole interrompere meno spesso l'esecuzione per un'eccezione.
+Per impostazione predefinita, la maggior parte delle eccezioni causa un'interruzione quando nel codice sorgente non viene trovato alcun gestore di eccezioni. Per modificare questo comportamento, fare clic con il pulsante destro del mouse su una qualsiasi eccezione e selezionare oppure deselezionare **Continua se non gestita nel codice utente**. Deselezionare questa casella se si vuole interrompere meno spesso l'esecuzione per un'eccezione.
 
 Per configurare un'eccezione che non compare nell'elenco, fare clic sul pulsante **Aggiungi** per aggiungerla. Il nome deve corrispondere al nome completo dell'eccezione.
 
 ## <a name="project-debugging-options"></a>Opzioni di debug del progetto
 
-Per impostazione predefinita, il debugger avvia il programma con l'utilità di avvio standard di Python, senza argomenti della riga di comando e altri percorsi o condizioni speciali. Per modificarli, è possibile usare le proprietà di debug del progetto. Per accedere alle proprietà, fare clic con il pulsante destro del mouse sul progetto in Esplora soluzioni, scegliere **Proprietà** e quindi fare clic sulla scheda **Debug**.
+Per impostazione predefinita, il debugger avvia il programma con l'utilità di avvio standard di Python, senza argomenti della riga di comando e altri percorsi o condizioni speciali. È possibile modificare le opzioni di avvio tramite le proprietà di debug del progetto. Per accedere alle proprietà, fare clic con il pulsante destro del mouse sul progetto in Esplora soluzioni, scegliere **Proprietà** e quindi fare clic sulla scheda **Debug**.
 
-![Proprietà di debug del progetto](~/python/media/debugging-project-properties.png)
+![Proprietà di debug del progetto](media/debugging-project-properties.png)
 
 ### <a name="launch-mode-options"></a>Opzioni di Modalità di avvio
-
-Le opzioni di **Modalità di avvio** consentono di scegliere tra le opzioni seguenti, che abilitano scenari diversi:
 
 | Opzione | Descrizione |
 | --- | --- |
@@ -173,11 +158,11 @@ Le opzioni di **Modalità di avvio** consentono di scegliere tra le opzioni segu
 
 | Opzione | Descrizione |
 | --- | --- |
-| Percorsi di ricerca | Corrispondono a quanto visualizzato nel nodo Percorsi di ricerca del progetto in Esplora soluzioni. È possibile modificare qui questo valore, ma è più facile usare Esplora soluzioni, che consente di sfogliare le cartelle e converte automaticamente i percorsi nel formato relativo. |
-| Argomenti dello script | Vengono aggiunti al comando usato per avviare lo script e vengono visualizzati dopo il nome del file di script. Il primo elemento definito qui risulterà disponibile per lo script come `sys.argv[1]`, il secondo come `sys.argv[2]`e così via. |
-| Argomenti dell'interprete | Vengono aggiunti alla riga di comando dell'utilità di avvio prima del nome dello script. Qui gli argomenti comuni sono `-W ...` per controllare gli avvisi, `-O` per ottimizzare leggermente il programma e `-u` per usare I/O non memorizzato nel buffer. È probabile che gli utenti di IronPython usino questo campo per passare le opzioni di `-X`, ad esempio `-X:Frames` o `-X:MTA`. |
-| Percorso dell'interprete | Esegue l'override del percorso associato all'ambiente corrente. Può essere utile per avviare lo script con un interprete non standard. |
-| Variabili di ambiente | In questa casella di testo su più righe è possibile aggiungere voci in formato `NAME=VALUE`. Questa impostazione viene applicata per ultima, dopo tutte le variabili di ambiente globali esistenti e dopo aver impostato `PYTHONPATH` in base all'impostazione Percorsi di ricerca, di conseguenza può essere usata per eseguire l'override manuale di uno di questi elementi. |
+| Percorsi di ricerca | Questi valori corrispondono a quanto visualizzato nel nodo Percorsi di ricerca del progetto in Esplora soluzioni. È possibile modificare qui questo valore, ma è più facile usare Esplora soluzioni, che consente di sfogliare le cartelle e converte automaticamente i percorsi nel formato relativo. |
+| Argomenti dello script | Questi argomenti vengono aggiunti al comando usato per avviare lo script e vengono visualizzati dopo il nome del file di script. Il primo elemento definito qui risulta disponibile per lo script come `sys.argv[1]`, il secondo come `sys.argv[2]`e così via. |
+| Argomenti dell'interprete | Questi argomenti vengono aggiunti alla riga di comando dell'utilità di avvio prima del nome dello script. Qui gli argomenti comuni sono `-W ...` per controllare gli avvisi, `-O` per ottimizzare leggermente il programma e `-u` per usare I/O non memorizzato nel buffer. È probabile che gli utenti di IronPython usino questo campo per passare le opzioni di `-X`, ad esempio `-X:Frames` o `-X:MTA`. |
+| Percorso dell'interprete | Esegue l'override del percorso associato all'ambiente corrente.  Il valore può essere utile per avviare lo script con un interprete non standard. |
+| Variabili di ambiente | In questa casella di testo su più righe è possibile aggiungere voci in formato `NAME=VALUE`. Poiché questa impostazione viene applicata per ultima, dopo tutte le variabili di ambiente globali esistenti e dopo aver impostato `PYTHONPATH` in base all'impostazione Percorsi di ricerca, può essere usata per eseguire l'override manuale di una di queste altre variabili. |
 
 <a name="the-debug-interactive-window"</a>
 ## <a name="immediate-and-interactive-windows"></a>Finestra Interattiva e finestra Controllo immediato
@@ -186,9 +171,9 @@ Durante una sessione di debug è possibile usare due finestre interattive: la fi
 
 La finestra Controllo immediato (**Debug > Finestre > Controllo immediato**) viene usata per una rapida valutazione delle espressioni di Python e per il controllo o l'assegnazione di variabili all'interno del programma in esecuzione. Per informazioni dettagliate, vedere l'argomento generale [Finestra di controllo immediato](../ide/reference/immediate-window.md).
 
-La finestra Debug interattivo Python (**Debug > Finestre > Debug interattivo Python**) è più completa perché consente di accedere a tutte le funzionalità dell'esperienza [REPL interattivo](interactive-repl.md) durante il debug,inclusa la scrittura e l'esecuzione di codice. Si connette automaticamente a qualsiasi processo avviato nel debugger tramite l'utilità di avvio Python standard (inclusi i processi collegati tramite **Debug > Collega a processo*). Non è però disponibile quando si usa il debug C/C++ in modalità mista.
+La finestra Debug interattivo Python (**Debug > Finestre > Debug interattivo Python**) è più completa perché consente di accedere a tutte le funzionalità dell'esperienza [REPL interattivo](interactive-repl.md) durante il debug,inclusa la scrittura e l'esecuzione di codice. Si connette automaticamente a qualsiasi processo avviato nel debugger tramite l'utilità di avvio Python standard (inclusi i processi collegati tramite ***Debug > Associa a processo**). Non è però disponibile quando si usa il debug C/C++ in modalità mista.
 
-![Finestra Debug interattivo Python](~/python/media/debugging-interactive.png)
+![Finestra Debug interattivo Python](media/debugging-interactive.png)
 
 La finestra Debug interattivo supporta speciali metacomandi ai [comandi REPL standard](interactive-repl.md#meta-commands):
 
@@ -211,8 +196,8 @@ La finestra Debug interattivo supporta speciali metacomandi ai [comandi REPL sta
 | `$up`, `$u` | | Sposta il frame corrente di un livello verso l'alto nell'analisi dello stack. |
 | `$where`, `$w`, `$bt` | Visualizza l'elenco dei frame per il thread corrente. |
 
-Si noti che le finestre standard del debugger, ad esempio Processi, Thread e Stack di chiamate, non vengono sincronizzate con la finestra Debug interattivo. Se quindi si cambia il processo, il thread o il frame attivo nella finestra Debug interattivo, la modifica non influirà sulle altre finestre del debugger e, analogamente, se si cambia il processo, il thread o il frame attivo in altre finestre del debugger, la modifica non influirà sulla finestra Debug interattivo.
+Si noti che le finestre standard del debugger, ad esempio Processi, Thread e Stack di chiamate, non vengono sincronizzate con la finestra Debug interattivo. La modifica del processo, del thread o del frame attivo nella finestra Debug interattivo non influisce sulle altre finestre del debugger. Analogamente, la modifica del processo, del thread o del frame attivo nelle finestre del debugger non influisce sulla finestra Debug interattivo.
 
-Nella finestra Debug interattivo è disponibile uno specifico set di opzioni, cui è possibile accedere tramite **Strumenti > Opzioni > Strumenti Python > Finestra debug interattivo**. A differenza della finestra interattiva standard di Python, in cui è presente un'istanza separata per ogni ambiente Python, esiste una sola finestra Debug interattivo che usa sempre l'interprete Python per il processo sottoposto a debug.
+La finestra Debug interattivo ha un set di opzioni specifico, a cui è possibile accedere tramite **Strumenti > Opzioni > Strumenti Python > Finestra debug interattivo**. A differenza della finestra interattiva standard di Python, in cui è presente un'istanza separata per ogni ambiente Python, esiste una sola finestra Debug interattivo che usa sempre l'interprete Python per il processo sottoposto a debug. Vedere [Opzioni, Opzioni di debug](options.md#debugging-options).
 
-![Opzioni della finestra Debug interattivo](~/python/media/debugging-interactive-options.png)
+![Opzioni della finestra Debug interattivo](media/debugging-interactive-options.png)

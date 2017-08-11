@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Creare un&quot;applicazione desktop WPF connessa a un servizio mobile di Azure | Microsoft Docs'
+title: 'Procedura dettagliata: Creare un''applicazione desktop WPF connessa a un servizio mobile di Azure | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,26 +13,11 @@ caps.latest.revision: 7
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 7716a0e9249c67760ae7b31160dcae89b77b9ca7
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: b42e50dcfc4820b750c04085f1e881ee25f786f9
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service"></a>Procedura dettagliata: Creare un'applicazione desktop WPF connessa a un servizio mobile di Azure
@@ -41,7 +26,7 @@ ms.lasthandoff: 05/13/2017
 ##  <a name="Requirements"></a> Prerequisiti  
  Per completare la procedura dettagliata sarà necessario disporre di:  
   
--   Visual Studio 2015: qualsiasi versione che supporti lo sviluppo WPF.  
+-   Visual Studio 2017 o qualsiasi versione che supporti lo sviluppo WPF.  
   
 -   Un account Microsoft Azure attivo.  
   
@@ -115,7 +100,7 @@ ms.lasthandoff: 05/13/2017
   
      Questo codice XAML crea un layout riutilizzabile con i segnaposto per i campi numero, titolo e descrizione. In fase di esecuzione i segnaposti possono essere sostituiti con un testo come illustrato nella figura seguente.  
   
-     ![Controllo utente QuickStartTask](~/designers/media/wpfquickstart1.PNG "WPFQuickStart1")  
+     ![Controllo utente QuickStartTask](../designers/media/wpfquickstart1.PNG "WPFQuickStart1")  
   
 6.  In **Esplora soluzioni**espandere il nodo **QuickStartTask.xaml** e aprire il file **QuickStartTask.xaml.cs** o **QuickStartTask.xaml.vb** .  
   
@@ -302,7 +287,7 @@ ms.lasthandoff: 05/13/2017
   
      A questo punto, la progettazione dovrebbe essere simile alla figura seguente.  
   
-     ![MainWindow nella finestra di progettazione](~/designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
+     ![MainWindow nella finestra di progettazione](../designers/media/wpfquickstart2.PNG "WPFQuickStart2")  
   
     > [!NOTE]
     >  Seguendo le procedure successive è possibile che vengano visualizzati alcuni errori nell' **Elenco errori** se è aperto. Non c'è però da preoccuparsi perché tali errori non verranno più visualizzati al termine delle procedure rimanenti.  
@@ -572,7 +557,7 @@ ms.lasthandoff: 05/13/2017
   
      Verranno aggiunte due voci per l'elenco **Query and Update Data** , come illustrato nella figura seguente.  
   
-     ![Gli elementi ToDo vengono aggiunti all'elenco.](~/designers/media/wpfquickstart3.PNG "WPFQuickStart3")  
+     ![Gli elementi ToDo vengono aggiunti all'elenco.](../designers/media/wpfquickstart3.PNG "WPFQuickStart3")  
   
 4.  Selezionare la casella di controllo per la voce **Do something else** nell'elenco.  
   
@@ -581,8 +566,8 @@ ms.lasthandoff: 05/13/2017
 ## <a name="next-steps"></a>Passaggi successivi  
  È stato completato un esempio abbastanza generico di un'applicazione desktop WPF con un back-end di Azure. Naturalmente, è probabile che un'applicazione reale sia molto più complessa, ma si applicano gli stessi concetti di base. Vedere [WPF in .NET Framework](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx).  
   
- È possibile rendere più interessante l'interfaccia utente mediante l'aggiunta di colore, forme, elementi grafici e persino animazioni. Vedere [Progettazione di XAML in Visual Studio e Blend per Visual Studio](../designers/designing-xaml-in-visual-studio.md).  
-  
+ È possibile rendere più interessante l'interfaccia utente mediante l'aggiunta di colore, forme, elementi grafici e persino animazioni. Vedere [Creazione di un'interfaccia utente tramite la finestra di progettazione XAML in Visual Studio](creating-a-ui-by-using-xaml-designer-in-visual-studio.md) e [Creazione di un'interfaccia utente usando Blend per Visual Studio](creating-a-ui-by-using-blend-for-visual-studio.md). Per un confronto tra gli strumenti, vedere [Progettazione di XAML in Visual Studio e Blend per Visual Studio](../designers/designing-xaml-in-visual-studio.md).  
+
  È possibile connettersi ai database SQL esistenti o ad altre origini dei dati mediante i servizi mobili di Azure. Vedere la [documentazione dei servizi mobili](http://azure.microsoft.com/en-us/services/app-service/mobile/).  
   
 ## <a name="see-also"></a>Vedere anche  

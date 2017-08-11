@@ -1,12 +1,13 @@
 ---
 title: Misurazione delle prestazioni del codice Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 7/13/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2723d4d0-89c8-4279-bfc2-27c0834a997e
@@ -14,25 +15,11 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 8d52ad780eb8aa29132626644d581d3a5b6e66b4
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: f01c42f073859e2e609123eb67cc9df8e26cef75
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 
@@ -42,11 +29,11 @@ In Visual Studio è possibile eseguire la profilatura di un'applicazione Python 
 
 Per avviare la profilatura, si usa il comando di menu **Analizza > Avvia profilatura Python**, che consente di aprire una finestra di dialogo di configurazione:
 
-![Finestra di dialogo di configurazione della profilatura](~/python/media/profiling-start.png)
+![Finestra di dialogo di configurazione della profilatura](media/profiling-start.png)
 
 Quando si fa clic su **OK**, viene eseguito il profiler e si apre un report di prestazioni che illustra in che modo viene impiegato il tempo nell'applicazione:
 
-![Report di prestazioni del profiler](~/python/media/profiling-results.png)
+![Report di prestazioni del profiler](media/profiling-results.png)
 
 Per una panoramica, vedere l'argomento seguente.
 
@@ -56,8 +43,8 @@ Per una procedura dettagliata dimostrativa, vedere il video [Profiling with Pyth
 
 ## <a name="profiling-for-ironpython"></a>Profilatura per IronPython
 
-Dal momento che IronPython non è un interprete basato su CPython, la funzionalità di profilatura illustrata sopra non funzionerà.
+Dal momento che IronPython non è un interprete basato su CPython, la funzionalità di profilatura illustrata sopra non funziona.
 
-Usare invece il profiler di Visual Studio .NET avviando direttamente `ipy.exe` come applicazione di destinazione e usando gli argomenti appropriati per eseguire lo script di avvio. Includere `-X:Debug` nella riga di comando per forzare il debug e la profilatura per tutto il codice Python. In questo modo si otterrà un report di prestazioni che include il tempo impiegato sia nel runtime di IronPython che nel codice. Per identificare il codice, vengono usati nomi modificati.
+Usare invece il profiler di Visual Studio .NET avviando direttamente `ipy.exe` come applicazione di destinazione e usando gli argomenti appropriati per eseguire lo script di avvio. Includere `-X:Debug` nella riga di comando per forzare il debug e la profilatura per tutto il codice Python. Questo argomento genera un report di prestazioni che include il tempo impiegato sia nel runtime di IronPython che nel codice. Per identificare il codice, vengono usati nomi modificati.
 
 In alternativa, IronPython presenta alcune funzionalità di profilatura incorporate, per le quali però non esiste ancora alcun visualizzatore adeguato. Per informazioni sulle opzioni disponibili, vedere [An IronPython Profiler](http://blogs.msdn.com/b/curth/archive/2009/03/29/an-ironpython-profiler.aspx) (Profiler per IronPython) nei blog di MSDN.

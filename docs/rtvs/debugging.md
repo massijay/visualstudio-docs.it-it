@@ -1,12 +1,13 @@
 ---
 title: Debug con R Tools per Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 5/1/2017
+ms.date: 6/29/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-r
+ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cb5fe5f8-03bc-42bf-8346-c845036a9c6c
@@ -14,38 +15,25 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
-ms.openlocfilehash: 01bc916eb656cb8e24279498b7b0236fb8eb0e80
+ms.translationtype: HT
+ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
+ms.openlocfilehash: e4b8d7fb27407bf8ef4463524e9da66bac591ff4
 ms.contentlocale: it-it
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 
-
 # <a name="debugging-r-in-visual-studio"></a>Debug di R in Visual Studio
 
-R Tools per Visual Studio (RTVS) si integra con l'esperienza di debug completa di Visual Studio (vedere [Debug in Visual Studio](../debugger/debugging-in-visual-studio.md)), tra cui i punti di interruzione, il collegamento a processi in esecuzione, l'ispezione e il controllo di variabili, l'analisi dello stack di chiamate e così via. In questo argomento vengono quindi esaminati gli aspetti del debug che sono univoci per R e RTVS.
+Strumenti R per Visual Studio (RTVS) si integra con l'esperienza di debug completa di Visual Studio (vedere [Debugging in Visual Studio](../debugger/debugging-in-visual-studio.md) (Debug in Visual Studio). Questo supporto include punti di interruzione, collegamento a processi in esecuzione, esame e controllo delle variabili ed esame dello stack di chiamate. In questo argomento vengono quindi esaminati gli aspetti del debug che sono univoci per R e RTVS.
 
-Avviare il debugger per un il file di avvio R in un progetto di R è un'operazione identica a quella per altri tipi di progetto: usare **Debug > Avvia debug**, F5, o il **Source startup file** (File di avvio di origine) sulla barra degli strumenti di debug illustrata di seguito. Per modificare il file di avvio, fare clic con il pulsante destro del mouse su un file in Esplora soluzioni e selezionare **Imposta come script R di avvio**.
+Avviare il debugger per il file di avvio R in un progetto di R è un'operazione identica a quella per altri tipi di progetto: usare **Debug > Avvia debug**, F5 o il **file di avvio di origine** sulla barra degli strumenti di debug: 
 
-![Pulsante di avvio del debugger per R](~/rtvs/media/debugger-start-button.png)
+![Pulsante di avvio del debugger per R](media/debugger-start-button.png)
 
-In tutti i casi, il debug "dà origine" al file nella finestra interattiva, ovvero lo carica e lo esegue da qui. Quando si avvia il debug, infatti, verrà visualizzato un output simile al seguente nella finestra interattiva:
+Per modificare il file di avvio, fare clic con il pulsante destro del mouse su un file in Esplora soluzioni e selezionare **Imposta come script R di avvio**.
+
+In tutti i casi, il debug "dà origine" al file nella finestra interattiva, ovvero lo carica e lo esegue da qui, come illustrato dall'output della finestra interattiva:
 
 ```output
 > rtvs::debug_source("c:/proj/rproject1/rproject1/script.R")
@@ -53,11 +41,11 @@ Sourcing: c:\proj\rproject1\rproject1\script.R
 Sourcing: c:\proj\rproject1\rproject1\Settings.R
 ```
 
-Si noti che viene usata la funzione `rtvs::debug_source` per eseguire lo script di origine. Ciò è obbligatorio perché RTVS necessita di modificare il codice in preparazione al debug. Se si usa uno dei comandi RTVS, ad esempio facendo clic con il pulsante destro del mouse su un file in Esplora soluzioni ed eseguendo il comando **File di origine selezionati**, la chiamata verrà reindirizzata automaticamente a `rtvs::debug_source` se il debugger è allegato.
+Si noti che come origine dello script viene usata la funzione `rtvs::debug_source`. Questa funzione è obbligatoria, perché RTVS deve modificare il codice in preparazione al debug. Quando si usa un comando di sourcing RTVS e un debugger è collegato, Visual Studio usa automaticamente `rtvs::debug_source`.
 
-È anche possibile allegare manualmente il debugger dalla finestra interattiva direttamente usando il comando **R Tools > Sessione > Collega debugger**, il comando **Debug > Collega a R interattivo**, o il comando **Collega debugger** sulla barra degli strumenti della finestra interattiva. Dopo avere eseguito questa operazione, è necessario che l'utente recuperi i file di cui vuole eseguire il debug. Se si vuole chiamare i file manualmente, assicurarsi di usare `rtvs::debug_source` e non il normale comando `source` in R. Anche se è possibile che tale comando funzioni in _alcuni_ casi, non è possibile essere certi che funzioni in tutti i casi a meno che non si usi il comando `rtvs::debug_source`.
+È anche possibile allegare manualmente il debugger dalla finestra interattiva direttamente usando il comando **R Tools > Sessione > Collega debugger**, il comando **Debug > Collega a R interattivo**, o il comando **Collega debugger** sulla barra degli strumenti della finestra interattiva. Dopo avere eseguito questa operazione, è responsabilità dell'utente eseguire il sourcing dei file di cui vuole eseguire il debug. Se si vuole eseguire manualmente il sourcing dei file, assicurarsi di usare `rtvs::debug_source` e non il comando `source` normale in R.
 
-Questa connessione tra il debugger e la finestra interattiva semplifica alcune operazioni, come ad esempio la chiamata e il debugging di una funzione con valori di parametro diversi. Ad esempio, si supponga di avere una funzione simile alla seguente in un file che è stato caricato nella sessione:
+Questa connessione tra il debugger e la finestra interattiva semplifica alcune operazioni, come ad esempio la chiamata e il debugging di una funzione con valori di parametro diversi. Ad esempio, si supponga di avere la funzione seguente in un file originato, ovvero caricato nella sessione:
 
 ```R
 add <- function(x, y) {
@@ -65,7 +53,7 @@ add <- function(x, y) {
 }
 ```
 
-Impostare quindi un punto di interruzione nell'istruzione `return`. A questo punto, nella finestra interattiva se si immette `add(4,5)`, si noterà che il debugger si arresta nel punto di interruzione.
+Impostare quindi un punto di interruzione nell'istruzione `return`. A questo punto, se nella finestra interattiva si immette `add(4,5)`, il debugger si interrompe sul punto di interruzione.
 
 
 ## <a name="environment-browser-in-the-interactive-window"></a>Browser ambiente nella finestra interattiva
@@ -85,5 +73,5 @@ Il browser ambiente supporta un numero di comandi speciali:
 | guida | show help: consente di visualizzare le chiamate disponibili nella finestra interattiva. |
 | &lt;expr&gt; | valuta l'espressione in *expr*. |
 
-![Browser ambiente nella finestra interattiva](~/rtvs/media/debugger-environment-browser.png)
+![Browser ambiente nella finestra interattiva](media/debugger-environment-browser.png)
 
