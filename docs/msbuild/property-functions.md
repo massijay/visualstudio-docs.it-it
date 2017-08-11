@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 203e1e27cc892e96b103fc6cb22a73672a8e16af
-ms.openlocfilehash: f351952a256679ec2d6c9dc2daa5288ca7214ad0
-ms.lasthandoff: 03/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
+ms.openlocfilehash: c52ed7c7e6de33d10d2a653a1072766aa9fb8023
+ms.contentlocale: it-it
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="property-functions"></a>Funzioni delle proprietà
@@ -98,6 +99,10 @@ In.NET Framework versioni 4 e 4.5, le funzioni di proprietà possono essere usat
 -   System.IO.Path  
 
 -   System.Math  
+
+-   System.Runtime.InteropServices.OSPlatform
+
+-   System.Runtime.InteropServices.RuntimeInformation
 
 -   System.UInt16  
 
@@ -195,13 +200,22 @@ In.NET Framework versioni 4 e 4.5, le funzioni di proprietà possono essere usat
 |int BitwiseAnd(int first, int second)|Esegue un'operazione `AND` bit per bit tra il primo e il secondo valore (primo & secondo).|  
 |int BitwiseXor(int first, int second)|Esegue un'operazione `XOR` bit per bit tra il primo e il secondo valore (primo ^ secondo).|  
 |int BitwiseNot(int first)|Esegue un'operazione `NOT` bit per bit (~primo).|  
+|bool IsOsPlatform(string platformString)|Specifica se la piattaforma del sistema operativo corrente è `platformString`. `platformString` deve essere membro di `OSPlatform`.|
+|bool IsOSUnixLike|True se il sistema operativo corrente è un sistema Unix.|
+|string NormalizePath(params string[] path)|Ottiene il percorso completo in forma canonica corrispondente al percorso specificato e garantisce che contenga i separatori di directory corretti per il sistema operativo corrente.|
+|string NormalizeDirectory(params string[] path)|Ottiene il percorso completo in forma canonica della directory specificata e garantisce che contenga i separatori di directory corretti per il sistema operativo corrente e una barra rovesciata finale.|
+|string EnsureTrailingSlash(string path)|Se il percorso specificato non dispone di una barra rovesciata, la aggiunge al percorso. Se il percorso è una stringa vuota non lo modifica.|
+|string GetPathOfFileAbove(string file, string startingDirectory)|Cerca un file in base alla posizione di compilazione corrente del file o a `startingDirectory` se specificato.|
+|GetDirectoryNameOfFileAbove(string startingDirectory, string fileName)|Trova un file nella directory specificata o in un percorso nella struttura di directory a monte di tale directory.|
+|string MakeRelative(string basePath, string path)|Rende `path` relativo a `basePath`. `basePath` deve essere una directory assoluta. Se `path` non può essere reso relativo, viene restituito letteralmente. Simile a `Uri.MakeRelativeUri`.|
+|string ValueOrDefault(string conditionValue, string defaultValue)|Restituisce la stringa nel parametro 'defaultValue' solo se il parametro 'conditionValue' è vuoto. In caso contrario, restituisce il valore conditionValue.|
 
 ##  <a name="nested-property-functions"></a>Funzioni di proprietà annidate  
  È possibile combinare le funzioni di proprietà per formare funzioni più complesse, come mostrato nell'esempio seguente.  
 
  `$([MSBuild]::BitwiseAnd(32, $([System.IO.File]::GetAttributes(tempFile))))`  
 
- Questo esempio restituisce il valore di bit <xref:System.IO.FileAttributes>`Archive` (32 o 0) del file specificato dal percorso `tempFile`. Notare che i valori di dati enumerati non possono essere specificati per nome all'interno delle funzioni di proprietà. È necessario usare invece il valore numerico (32).  
+ Questo esempio restituisce il valore di bit <xref:System.IO.FileAttributes>`Archive` (32 o 0) del file fornito dal percorso `tempFile`. Notare che i valori di dati enumerati non possono essere specificati per nome all'interno delle funzioni di proprietà. È necessario usare invece il valore numerico (32).  
 
  Nelle funzioni di proprietà annidate è possibile specificare anche i metadati. Per altre informazioni, vedere [Batch](../msbuild/msbuild-batching.md).  
 
