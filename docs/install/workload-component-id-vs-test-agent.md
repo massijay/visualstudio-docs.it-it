@@ -1,11 +1,11 @@
 ---
-title: ID dei carichi di lavoro e dei componenti dell&quot;agente di test di Visual Studio 2017 | Microsoft Docs
+title: ID dei carichi di lavoro e dei componenti dell'agente di test di Visual Studio 2017 | Microsoft Docs
 description: Usare gli ID dei carichi di lavoro e dei componenti di Visual Studio per eseguire test automatizzati e test di carico da postazione remota
 keywords: 
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 05/10/2017
+ms.date: 08/09/2017
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -62,6 +62,7 @@ Per altre informazioni su come usare questi ID, vedere la pagina [Usare i parame
 ID componente | Nome | Versione | Tipo di dipendenza
 --- | --- | --- | ---
 Microsoft.VisualStudio.ComponentGroup.TestTools.TestAgent | Funzionalità principali dell'agente di test | 15.0.26208.0 | Obbligatorio
+
 ## <a name="unaffiliated-components"></a>Componenti non affiliati
 
 Questi sono i componenti non inclusi in alcun carico di lavoro, che possono però essere selezionati come un singolo componente.
@@ -69,6 +70,7 @@ Questi sono i componenti non inclusi in alcun carico di lavoro, che possono per�
 ID componente | Nome | Versione
 --- | --- | ---
 N/D | n/d | N/D
+
 
 ## <a name="see-also"></a>Vedere anche
 
