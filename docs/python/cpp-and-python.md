@@ -148,7 +148,7 @@ Per altre informazioni, vedere [Installazione del supporto di Python in Visual S
         return (1 + pow(e, (-2 * x))) / (2 * pow(e, -x));
     }
 
-    double tanh(x) {
+    double tanh(double x) {
         return sinh(x) / cosh(x);
     }
     ```
@@ -163,7 +163,7 @@ Per rendere disponibile la DLL C++ in un'estensione per Python, è necessario mo
 1. Nel file C++, includere `Python.h` nella parte superiore:
 
     ```cpp
-    include <Python.h>
+    #include <Python.h>
     ```
 
 1. Modificare il metodo `tanh` in modo che accetti e restituisca i tipi di Python:
