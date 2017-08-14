@@ -32,16 +32,16 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c559290c8e88c8b4e37feabc7014188fad15434d
-ms.openlocfilehash: 3fc2e9c086d6cdd71577fccd33652cfc14a3ee6e
+ms.translationtype: HT
+ms.sourcegitcommit: c3fea7195cd41a48654ea4356ef67627ddcc25dc
+ms.openlocfilehash: 2c288a22c46a21b998bcc5aecf3c0a20f46e06c0
 ms.contentlocale: it-it
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
 # <a name="visual-studio-2017-workload-and-component-ids"></a>ID dei carichi di lavoro e dei componenti di Visual Studio 2017
-Le pagine seguenti elencano gli ID dei carichi di lavoro e dei componenti necessari per installare Visual Studio tramite la riga di comando o per specificarli come dipendenza in un manifesto VSIX.
+Fare clic sui nomi delle edizioni riportati di seguito per visualizzare gli ID dei carichi di lavoro e dei componenti disponibili necessari per installare Visual Studio tramite la riga di comando o per specificarli come dipendenza in un manifesto VSIX.
 
 | **Edizione** | **ID** | **Descrizione** |
 | ----------- | ------ | --------------- |

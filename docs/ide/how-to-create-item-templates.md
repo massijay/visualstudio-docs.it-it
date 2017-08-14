@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
-ms.openlocfilehash: 3524c21503d0432d509c607ea157f3fe675b443d
+ms.translationtype: HT
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: 60732a1fbe7379b43d2856a62d5cd459165dd9a3
 ms.contentlocale: it-it
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="how-to-create-item-templates"></a>Procedura: creare modelli di elementi
@@ -58,7 +58,7 @@ I passaggi inclusi nella [prima procedura](../ide/how-to-create-item-templates.m
 
 3.  Modificare il file del codice per indicare dove verrà applicata la sostituzione dei parametri. Per altre informazioni, vedere [Procedura: Sostituire i parametri di un modello](../ide/how-to-substitute-parameters-in-a-template.md).  
 
-4.  Nel menu **File** scegliere**Esporta modello**.  
+4.  Nel menu **Progetto** scegliere**Esporta modello**.  
 
 5.  Scegliere **Modello di elemento**, selezionare il progetto che contiene l'elemento e quindi fare clic su **Avanti**.  
 
@@ -166,7 +166,7 @@ I passaggi inclusi nella [prima procedura](../ide/how-to-create-item-templates.m
 
 2.  Modificare l'elemento di progetto finché non è pronto per essere salvato come modello.  
 
-3.  Modificare il file del codice come appropriato per indicare dove deve avvenire la sostituzione dei parametri. Per altre informazioni sulla sostituzione dei parametri, vedere Procedura: sostituire i parametri di un modello.  
+3.  Modificare il file del codice come appropriato per indicare dove deve avvenire la sostituzione dei parametri. Per altre informazioni sulla sostituzione dei parametri, vedere [Procedura: Sostituire i parametri di un modello.](../ide/how-to-substitute-parameters-in-a-template.md)
 
 4.  Creare un file XML e salvarlo con estensione vstemplate nella stessa directory del nuovo modello di elemento.  
 

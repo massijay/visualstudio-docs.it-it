@@ -16,26 +16,11 @@ ms.assetid: 0e445255-b796-426d-ad93-a4d8e36da2c5
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: b430c85c7ef2979a9052685529cace6879432b96
+ms.translationtype: HT
+ms.sourcegitcommit: b01caada54c08bb7f9c9baabfe9ece486e087794
+ms.openlocfilehash: 190a5e183757a5f02eeeb4aca7fc1c2e7f1beb1c
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 
@@ -46,20 +31,20 @@ In questa pagina viene descritta la procedura di disinstallazione di Visual Stud
 
      Ad esempio, in un computer che esegue l'Aggiornamento dell'anniversario di Windows 10 selezionare **Start** e scorrere fino alla lettera **P** in cui viene visualizzato come **Programma di installazione di Visual Studio**.  
 
-     ![Programma di installazione di Visual Studio](~/install/media/vs2017-locate-the-visual-studio-installer.PNG "Individuare il programma di installazione di Microsoft Visual Studio")
+     ![Programma di installazione di Visual Studio](media/vs2017-locate-the-visual-studio-installer.PNG "Individuare il programma di installazione di Microsoft Visual Studio")
 
      >[!NOTE]
-     In alcuni computer il programma di installazione di Visual Studio potrebbe trovarsi sotto la lettera **"M"** come **Microsoft Visual Studio: programma di installazione**.
+     In alcuni computer il programma di installazione di Visual Studio potrebbe trovarsi sotto la lettera **"M"** come **Microsoft Visual Studio: programma di installazione**.<br/><br/> In alternativa, è possibile trovare il programma di installazione di Visual Studio nel percorso seguente: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
-2.  Fare clic per avviare il programma di installazione, fare clic sull'icona ![Icona Dettagli](~/install/media/vs2017uninstall-UninstallIcon.png "Seleziona l'icona Opzioni") e quindi fare clic su **Disinstalla**.  
+2.  Fare clic per avviare il programma di installazione, fare clic sull'icona ![Icona Dettagli](media/vs2017uninstall-UninstallIcon.png "Seleziona l'icona Opzioni") e quindi fare clic su **Disinstalla**.  
 
-     ![Modifica di Visual Studio 2017; Modificare, avviare, ripristinare o disinstallare](~/install/media/vs2017-uninstall.PNG "Ripristinare o disinstallare Visual Studio 2017")  
+     ![Modifica di Visual Studio 2017; Modificare, avviare, ripristinare o disinstallare](media/vs2017-uninstall.PNG "Ripristinare o disinstallare Visual Studio 2017")  
 
 3.  Fare clic su **OK** per confermare la scelta.
 
-     ![Modifica di Visual Studio 2017; Disinstallare il prodotto](~/install/media/vs2017-uninstall-confirm.PNG "Confermare la disinstallazione di Visual Studio 2017")  
+     ![Modifica di Visual Studio 2017; Disinstallare il prodotto](media/vs2017-uninstall-confirm.PNG "Confermare la disinstallazione di Visual Studio 2017")  
 
-Se in seguito si cambia idea e si vuole reinstallare Visual Studio 2017, è sufficiente avviare nuovamente il programma di installazione di Visual Studio e quindi selezionare **Installa** nella schermata di selezione.
+Se in seguito si cambia idea e si vuole reinstallare Visual Studio 2017, avviare nuovamente il programma di installazione di Visual Studio e quindi selezionare **Installa** nella schermata di selezione.
 
 ## <a name="see-also"></a>Vedere anche  
 * [Installare Visual Studio](install-visual-studio.md)

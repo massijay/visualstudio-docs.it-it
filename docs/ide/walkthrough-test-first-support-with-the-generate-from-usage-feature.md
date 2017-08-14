@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Supporto test preliminare con la funzionalità di generazione dall&quot;utilizzo | Microsoft Docs"
+title: "Procedura dettagliata: Supporto test preliminare con la funzionalità di generazione dall'utilizzo | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,11 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: b5c18e7d208879498c1923403ec1bd213adffb5a
+ms.translationtype: HT
+ms.sourcegitcommit: f0576ce6dd78fe1328bcea3ab9a27507ddc0f2c0
+ms.openlocfilehash: 4811dda912f20272733a4d878fc8c607eb2573fc
 ms.contentlocale: it-it
-ms.lasthandoff: 05/24/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 # <a name="walkthrough-test-first-support-with-the-generate-from-usage-feature"></a>Procedura dettagliata: supporto test preliminare con la funzionalità di generazione dall'utilizzo
@@ -60,7 +60,21 @@ Questo argomento illustra come usare la funzionalità di [generazione dall'utili
      ![Finestra di dialogo Nuovo progetto di test](../ide/media/newproject_test.png "NewProject_Test")  
 Finestra di dialogo Nuovo progetto  
   
-4.  Fare clic su **OK** per chiudere la finestra di dialogo **Nuovo progetto** . A questo punto, è possibile iniziare a scrivere test  
+4.  Fare clic su **OK** per chiudere la finestra di dialogo **Nuovo progetto** .
+
+5.  Nel progetto della classe in **Esplora soluzioni** fare clic con il pulsante destro del mouse sulla voce **Riferimenti** e scegliere **Aggiungi riferimento**.
+
+6.  Nella finestra di dialogo **Gestione riferimenti** selezionare **Progetti** e quindi scegliere un progetto di unit test.
+
+7.  Fare clic su **OK** per chiudere la finestra di dialogo **Gestione riferimenti**.
+
+8.  Nel file **Class1**, immediatamente dopo l'ultima istruzione **using** esistente, aggiungere un'istruzione **using** per il progetto di test:
+
+    * In Visual Basic aggiungere `Using UnitTestProject1`
+    
+    * In C# aggiungere `using UnitTestProject1;`
+    
+9.  Salvare la soluzione. A questo punto, è possibile iniziare a scrivere test.  
   
 ### <a name="to-generate-a-new-class-from-a-unit-test"></a>Per generare una nuova classe da uno unit test  
   
@@ -73,10 +87,10 @@ Finestra di dialogo Nuovo progetto
   
 3.  Individuare il metodo `TestMethod1()` e rinominarlo in `DefaultAutomobileIsInitializedCorrectly()`. All'interno di questo metodo creare una nuova istanza di una classe denominata `Automobile`, come illustrato nelle figure seguenti. Verrà visualizzata una sottolineatura ondulata, che indica un errore in fase di compilazione e sotto il nome del tipo verrà visualizzato uno smart tag. La posizione esatta dello smart tag varia a seconda che si stia usando [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] o [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)].  
   
-     ![Sottolineatura smart tag in Visual Basic](~/ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
+     ![Sottolineatura smart tag in Visual Basic](../ide/media/genclass_underlinevb.png "GenClass_UnderlineVB")  
 Visual Basic  
   
-     ![Sottolineatura smart tag in C&#35;](~/ide/media/genclass_underline.png "GenClass_Underline")  
+     ![Sottolineatura smart tag in C&#35;](../ide/media/genclass_underline.png "GenClass_Underline")  
 Visual C#  
   
 4.  Posizionare il puntatore del mouse sullo smart tag per visualizzare un messaggio di errore che indica che non è ancora stato definito un tipo denominato `Automobile` . Fare clic sullo smart tag o premere CTRL+. (CTRL+punto) per aprire il menu di scelta rapida per la generazione dall'utilizzo, come illustrato nelle figure seguenti.  
@@ -112,10 +126,10 @@ Finestra di dialogo Genera nuovo tipo
   
      La figura seguente mostra il menu di scelta rapida dello smart tag.  
   
-     ![Menu di scelta rapida Genera proprietà in Visual Basic](~/ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
+     ![Menu di scelta rapida Genera proprietà in Visual Basic](../ide/media/genpropertysmarttagvb.png "GenPropertySmartTagVB")  
 Visual Basic  
   
-     ![Menu di scelta rapida Genera proprietà in C&#35;](~/ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
+     ![Menu di scelta rapida Genera proprietà in C&#35;](../ide/media/genpropertysmarttagcs.png "GenPropertySmartTagCS")  
 Visual C#  
   
 ### <a name="to-locate-the-source-code"></a>Per individuare il codice sorgente  
@@ -161,7 +175,7 @@ Finestra Passa a
   
      La finestra **Risultati test** è illustrata nella figura seguente.  
   
-     ![Risultati dei test non riusciti](~/ide/media/testsfailed.png "TestsFailed")  
+     ![Risultati dei test non riusciti](../ide/media/testsfailed.png "TestsFailed")  
 Finestra Risultati test  
   
 2.  Nella finestra **Risultati test** fare doppio clic su ogni riga di risultati di test per passare alla posizione di ogni errore nel test.  
