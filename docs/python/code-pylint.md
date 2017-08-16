@@ -16,10 +16,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: cd841938f160420934941a5166184f79aca82be7
+ms.sourcegitcommit: 8a544bd1e1242bb6fabe00f7842ac33ed9d9d444
+ms.openlocfilehash: 4b22d434b99bdd2648408b9191c5f050589883ae
 ms.contentlocale: it-it
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 
@@ -40,7 +40,7 @@ Gli avvisi e gli errori di PyLint vengono Visualizzati nella finestra Elenco err
 È possibile fare doppio clic su un errore per passare direttamente al codice sorgente che ha generato il problema.
 
 > [!Tip]
-> Vedere le [informazioni di riferimento sulle funzionalità di PyLint](https://pylint.readthedocs.io/en/latest/reference_guide/features.html) per un elenco dettagliato di tutti i messaggi di output di PyLint.
+> Vedere le [informazioni di riferimento sulle funzionalità di PyLint](https://pylint.readthedocs.io/en/latest/technical_reference/features.html) per un elenco dettagliato di tutti i messaggi di output di PyLint.
 
 ## <a name="setting-pylint-command-line-options"></a>Impostazione delle opzioni della riga di comando di PyLint
 
@@ -59,3 +59,4 @@ Ad esempio, per eliminare gli avvisi "missing docstring" illustrati nella figura
 1. Aprire il file per la modifica, che contiene un'ampia gamma di opzioni disponibili per l'uso. Per disabilitare un avviso, individuare la sezione `[MESSAGES CONTROL]` e quindi l'impostazione `disable` in tale sezione. È presente una lunga stringa di messaggi specifici, a cui è possibile aggiungere qualsiasi avviso. In questo esempio, aggiungere `,missing-docstring` (inclusa la virgola di delimitazione).
 
 1. Salvare il file `.pylintrc` ed eseguire di nuovo PyLint per verificare che gli avvisi ora sono soppressi.
+
