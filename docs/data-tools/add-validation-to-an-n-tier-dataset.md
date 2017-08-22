@@ -1,43 +1,62 @@
 ---
-title: "Procedura: aggiungere la convalida a un dataset a pi&#249; livelli | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "applicazioni a più livelli, convalida"
-  - "convalida delle applicazioni dati a più livelli"
-  - "convalida [Visual Basic], applicazioni dati a più livelli"
+title: Add validation to an n-tier dataset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- aspx
+helpviewer_keywords:
+- n-tier applications, validating
+- validation [Visual Basic], n-tier data applications
+- validating n-tier data applications
 ms.assetid: 34ce4db6-09bb-4b46-b435-b2514aac52d3
 caps.latest.revision: 23
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: fd436b1564350bdbddb02308ab093b3176f5a342
+ms.contentlocale: it-it
+ms.lasthandoff: 08/22/2017
+
 ---
-# Procedura: aggiungere la convalida a un dataset a pi&#249; livelli
-L'aggiunta della convalida in un dataset separato in una soluzione a più livelli è fondamentalmente uguale all'aggiunta della convalida in un dataset costituito da un singolo file, ovvero un dataset in un solo progetto.  È consigliabile eseguire la convalida dei dati durante gli eventi <xref:System.Data.DataTable.ColumnChanging> e\/o <xref:System.Data.DataTable.RowChanging> di una tabella dati.  
+# <a name="add-validation-to-an-n-tier-dataset"></a>Add validation to an n-tier dataset
+Adding validation to a dataset that is separated into an n-tier solution is basically the same as adding validation to a single-file dataset (a dataset in a single project). The suggested location for performing validation on data is during the <xref:System.Data.DataTable.ColumnChanging> and/or <xref:System.Data.DataTable.RowChanging> events of a data table.  
   
- [Creazione e modifica di dataset tipizzati](../data-tools/creating-and-editing-typed-datasets.md) fornisce la funzionalità per creare le classi parziali alle quali è possibile aggiungere il codice utente per gli eventi di modifica colonne e righe delle tabelle dati del dataset.  Per ulteriori informazioni sull'aggiunta di codice in un dataset in una soluzione a più livelli, vedere [Procedura: aggiungere il codice nei dataset di applicazioni a più livelli](../data-tools/add-code-to-datasets-in-n-tier-applications.md) e [Procedura: aggiungere il codice nei TableAdapter di applicazioni a più livelli](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md).  Per ulteriori informazioni sulle classi parziali, vedere [How to: Split a Class into Partial Classes \(Class Designer\)](../ide/how-to-split-a-class-into-partial-classes-class-designer.md) o [Classi e metodi parziali](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods).  
-  
-> [!NOTE]
->  Quando si separano i dataset dai TableAdapter impostando la proprietà **Progetto DataSet**, le classi del dataset parziale presenti nel progetto non verranno spostate automaticamente.  Le classi parziali del dataset devono essere spostate manualmente nel progetto di dataset.  
+ The datasetprovides the functionality to create partial classes to which you can add user code to column- and row- changing events of the data tables in the dataset. For more information about adding code to a dataset in an n-tier solution, see [Add code to datasets in n-tier applications](../data-tools/add-code-to-datasets-in-n-tier-applications.md), and [Add code to TableAdapters in n-tier applications](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md). For more information about partial classes, see [How to: Split a Class into Partial Classes (Class Designer)](../ide/how-to-split-a-class-into-partial-classes-class-designer.md) or [Partial Classes and Methods](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods).  
   
 > [!NOTE]
->  Progettazione DataSet non crea automaticamente i gestori eventi in C\# per gli eventi <xref:System.Data.DataTable.ColumnChanging> e <xref:System.Data.DataTable.RowChanging>.  È necessario creare manualmente un gestore eventi e associarlo all'evento sottostante.  Le procedure descritte di seguito forniscono i passaggi per creare i gestori eventi necessari in Visual Basic e C\#.  
+>  When you separate datasets from TableAdapters (by setting the **DataSet Project** property), existing partial dataset classes in the project won't be moved automatically. Existing dataset partial classes must be moved manually to the dataset project.  
   
-## Convalida delle modifiche a singole colonne  
- Convalidare i valori nelle singole colonne gestendo l'evento <xref:System.Data.DataTable.ColumnChanging>.  L'evento <xref:System.Data.DataTable.ColumnChanging> viene generato quando si modifica il valore in una colonna.  Creare un gestore eventi per l'evento <xref:System.Data.DataTable.ColumnChanging> facendo doppio clic sulla colonna desiderata in [Creazione e modifica di dataset tipizzati](../data-tools/creating-and-editing-typed-datasets.md).  
+> [!NOTE]
+>  The Dataset Designer does not automatically create event handlers in C# for the <xref:System.Data.DataTable.ColumnChanging> and <xref:System.Data.DataTable.RowChanging> events. You have to manually create an event handler and hook up the event handler to the underlying event. The following procedures describe how to create the required event handlers in both Visual Basic and C#.  
   
- La prima volta che si fa doppio clic su una colonna, la finestra di progettazione genera un gestore eventi per l'evento <xref:System.Data.DataTable.ColumnChanging>.  Oltre all'evento <xref:System.Data.DataTable.ColumnChanging>, viene creata anche un'istruzione `If…Then` per verificare la colonna specifica.  Ad esempio, il codice seguente viene generato quando si fa doppio clic sulla colonna RequiredDate della tabella Orders di Northwind:  
+## <a name="validatechanges-to-individual-columns"></a>Validatechanges to individual columns  
+ Validate values in individual columns by handling the <xref:System.Data.DataTable.ColumnChanging> event. The <xref:System.Data.DataTable.ColumnChanging> event is raised when a value in a column is modified. Create an event handler for the <xref:System.Data.DataTable.ColumnChanging> event by double-clicking the desired column on the **Dataset Designer**.  
+  
+ The first time that you double-click a column, the designer generates an event handler for the <xref:System.Data.DataTable.ColumnChanging> event. An `If...Then` statement is also created that tests for the specific column. For example, the following code is generated when you double-click the RequiredDate column on the Northwind Orders table:  
   
 ```vb#  
 Private Sub OrdersDataTable_ColumnChanging(ByVal sender As System.Object, ByVal e As System.Data.DataColumnChangeEventArgs) Handles Me.ColumnChanging  
@@ -48,22 +67,22 @@ End Sub
 ```  
   
 > [!NOTE]
->  Nei progetti in C\#, Progettazione DataSet consente di creare solo classi parziali per il dataset e singole tabelle all'interno del dataset.  Progettazione DataSet non crea automaticamente i gestori eventi per gli eventi <xref:System.Data.DataTable.ColumnChanging> e <xref:System.Data.DataTable.RowChanging> in C\# come per i progetti in Visual Basic.  Nei progetti in C\#, è necessario costruire manualmente un metodo per gestire l'evento e associare il metodo all'evento sottostante.  La procedura descritta di seguito fornisce i passaggi per creare i gestori eventi necessari in Visual Basic e C\#.  
+>  In C# projects, the Dataset Designer only creates partial classes for the dataset and individual tables in the dataset. The Dataset Designer does not automatically create event handlers for the <xref:System.Data.DataTable.ColumnChanging> and <xref:System.Data.DataTable.RowChanging> events in C# like it does in Visual Basic. In C# projects, you have to manually construct a method to handle the event and hook up the method to the underlying event. The following procedure provides the steps to create the required event handlers in both Visual Basic and C#.  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-#### Per aggiungere la convalida durante le modifiche ai valori di una singola colonna  
+#### <a name="to-add-validation-during-changes-to-individual-column-values"></a>To add validation during changes to individual column values  
   
-1.  Aprire il dataset in [Creazione e modifica di dataset tipizzati](../data-tools/creating-and-editing-typed-datasets.md) facendo doppio clic sul file con estensione **xsd** in Esplora soluzioni.  Per ulteriori informazioni, vedere [Procedura: aprire un dataset in Progettazione DataSet](../Topic/How%20to:%20Open%20a%20Dataset%20in%20the%20Dataset%20Designer.md).  
+1.  Open the dataset in The dataset by double-clicking the **.xsd** file in **Solution Explorer**. For more information, see [Walkthrough: Creating a Dataset in the Dataset Designer](walkthrough-creating-a-dataset-with-the-dataset-designer.md).  
   
-2.  Fare doppio clic sulla colonna da convalidare.  Attraverso questa azione viene creato il gestore eventi <xref:System.Data.DataTable.ColumnChanging>.  
+2.  Double-click the column you want to validate. This action creates the <xref:System.Data.DataTable.ColumnChanging> event handler.  
   
     > [!NOTE]
-    >  Progettazione DataSet non crea automaticamente un gestore eventi per l'evento C\#.  Il codice necessario per la gestione dell'evento in C\# è incluso di seguito.  `SampleColumnChangingEvent` viene creato, quindi collegato all'evento <xref:System.Data.DataTable.ColumnChanging> nel metodo <xref:System.Data.DataTable.EndInit%2A>.  
+    >  The Dataset Designer does not automatically create an event handler for the C# event. The code that's necessary to handle the event in C# is included in the next section. `SampleColumnChangingEvent` is created and then hooked up to the <xref:System.Data.DataTable.ColumnChanging> event in the <xref:System.Data.DataTable.EndInit%2A> method.  
   
-3.  Aggiungere codice per verificare che `e.ProposedValue` contenga dati che soddisfano i requisiti dell'applicazione.  Se il valore proposto non è accettabile, impostare la colonna in modo da indicare che contiene un errore.  
+3.  Add code to verify that `e.ProposedValue` contains data that meets the requirements of your application. If the proposed value is unacceptable, set the column to indicate that it contains an error.  
   
-     L'esempio di codice seguente verifica che la colonna della Quantity contiene più di 0.  Se il valore di Quantity è minore o uguale a 0, la colonna viene impostata su un errore.  La clausola `Else` elimina l'errore se la quantità è maggiore di 0.  Il codice nel gestore eventi di modifica delle colonne deve essere analogo al seguente:  
+     The following code example validates that the **Quantity** column contains more than 0. If **Quantity** is less than or equal to 0, the column is set to an error. The `Else` clause clears the error if **Quantity** is more than 0. The code in the column-changing event handler should resemble the following:  
   
     ```vb#  
     If (e.Column.ColumnName = Me.QuantityColumn.ColumnName) Then  
@@ -104,25 +123,27 @@ End Sub
         }  
     ```  
   
-## Convalida delle modifiche a intere righe  
- Convalidare i valori in intere righe gestendo l'evento <xref:System.Data.DataTable.RowChanging>.  L'evento <xref:System.Data.DataTable.RowChanging> viene generato quando vengono applicati i valori in tutte le colonne.  È necessario eseguire la convalida nell'evento <xref:System.Data.DataTable.RowChanging> quando il valore di una colonna si basa sul valore di un'altra colonna.  Si considerino ad esempio OrderDate e RequiredDate nella tabella Orders di Northwind.  Quando vengono immessi gli ordini, la convalida verifica che un ordine non venga immesso con un valore RequiredDate uguale o precedente al valore OrderDate.  In questo esempio, devono essere confrontati i valori di entrambe le colonne RequiredDate e OrderDate, per cui non ha senso eseguire la convalida della modifica apportata in una singola colonna.  
+## <a name="validate-changes-to-whole-rows"></a>Validate changes to whole rows  
+ Validate values in whole rows by handling the <xref:System.Data.DataTable.RowChanging> event. The <xref:System.Data.DataTable.RowChanging> event is raised when the values in all columns are committed. It is necessary to validate in the <xref:System.Data.DataTable.RowChanging> event when the value in one column relies on the value in another column. For example, consider OrderDate and RequiredDate in the Orders table in Northwind.  
   
- Creare un gestore eventi per l'evento <xref:System.Data.DataTable.RowChanging> facendo doppio clic sul nome della tabella nella barra del titolo della tabella in [Creazione e modifica di dataset tipizzati](../data-tools/creating-and-editing-typed-datasets.md).  
+ When orders are being entered, validation makes sure that an order is not entered with a RequiredDate that is on or before the OrderDate. In this example, the values for both the RequiredDate and OrderDate columns need to be compared, so validating an individual column change does not make sense.  
   
-#### Per aggiungere la convalida durante le modifiche a intere righe  
+ Create an event handler for the <xref:System.Data.DataTable.RowChanging> event by double-clicking the table name in the title bar of the table on the **Dataset Designer**.  
   
-1.  Aprire il dataset in [Creazione e modifica di dataset tipizzati](../data-tools/creating-and-editing-typed-datasets.md) facendo doppio clic sul file con estensione **xsd** in Esplora soluzioni.  Per ulteriori informazioni, vedere [Procedura: aprire un dataset in Progettazione DataSet](../Topic/How%20to:%20Open%20a%20Dataset%20in%20the%20Dataset%20Designer.md).  
+#### <a name="to-add-validation-during-changes-to-whole-rows"></a>To add validation during changes to whole rows  
   
-2.  Fare doppio clic sulla barra del titolo della tabella dati nella finestra di progettazione.  
+1.  Open the dataset in The dataset by double-clicking the **.xsd** file in **Solution Explorer**. For more information, see [Walkthrough: Creating a Dataset in the Dataset Designer](walkthrough-creating-a-dataset-with-the-dataset-designer.md).  
   
-     Viene creata una classe parziale con un gestore eventi `RowChanging` e visualizzata nell'editor del codice.  
+2.  Double-click the title bar of the data table on the designer.  
+  
+     A partial class is created with a `RowChanging` event handler and opens in the Code Editor.  
   
     > [!NOTE]
-    >  Progettazione DataSet non crea automaticamente un gestore eventi per l'evento <xref:System.Data.DataTable.RowChanging> nei progetti C\#.  È necessario creare un metodo per gestire l'evento <xref:System.Data.DataTable.RowChanging> ed eseguire il codice per associare tale evento nel metodo di inizializzazione della tabella.  
+    >  The Dataset Designer does not automatically create an event handler for the <xref:System.Data.DataTable.RowChanging> event in C# projects. You have to create a method to handle the <xref:System.Data.DataTable.RowChanging> event and run code to hook up the event in the table's initialization method.  
   
-3.  Aggiungere il codice utente nella dichiarazione di classe parziale.  
+3.  Add user code inside the partial class declaration.  
   
-4.  Nel codice seguente viene illustrato dove aggiungere il codice utente per eseguire la convalida durante l'evento <xref:System.Data.DataTable.RowChanging> per Visual Basic:  
+4.  The following code shows where to add user code to validate during the <xref:System.Data.DataTable.RowChanging> event for Visual Basic:  
   
     ```vb#  
     Partial Class OrdersDataTable  
@@ -139,7 +160,7 @@ End Sub
     End Class  
     ```  
   
-5.  Nel codice seguente viene illustrato come creare il gestore eventi `RowChanging` e dove aggiungere il codice utente per eseguire la convalida durante l'evento <xref:System.Data.DataTable.RowChanging> per C\#:  
+5.  The following code shows how to create the `RowChanging` event handler and where to add user code to validate during the <xref:System.Data.DataTable.RowChanging> event for C#:  
   
     ```c#  
     partial class OrdersDataTable  
@@ -154,7 +175,7 @@ End Sub
   
         public void RowChangingEvent(object sender, OrdersRowChangeEvent e)  
         {  
-            // Perfom the validation logic.  
+            // Perform the validation logic.  
             if (e.Row.RequiredDate <= e.Row.OrderDate)  
             {  
                 // Set the row to an error when validation fails.  
@@ -169,7 +190,7 @@ End Sub
     }  
     ```  
   
-## Vedere anche  
- [Cenni preliminari sull'applicazione dati a più livelli](../data-tools/n-tier-data-applications-overview.md)   
- [Procedura dettagliata: creazione di un'applicazione dati a più livelli](../data-tools/walkthrough-creating-an-n-tier-data-application.md)   
- [Convalida dei dati nei dataset](../data-tools/validate-data-in-datasets.md)
+## <a name="see-also"></a>See Also  
+ [N-Tier Data Applications Overview](../data-tools/n-tier-data-applications-overview.md)   
+ [Walkthrough: Creating an N-Tier Data Application](../data-tools/walkthrough-creating-an-n-tier-data-application.md)   
+ [Validate data in datasets](../data-tools/validate-data-in-datasets.md)

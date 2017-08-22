@@ -1,55 +1,74 @@
 ---
-title: "Procedura: aggiungere il codice nei TableAdapter di applicazioni a pi&#249; livelli | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "applicazioni a più livelli, estensione di TableAdapter"
-  - "TableAdapters, applicazioni a più livelli"
+title: Add code to TableAdapters in n-tier applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- aspx
+helpviewer_keywords:
+- TableAdapters, n-tier applications
+- n-tier applications, extending TableAdapters
 ms.assetid: dafac00e-df9d-4d4a-95a6-e34b4d099425
 caps.latest.revision: 19
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 87a1ea1c7c56cece66e98ae05116bde4af642834
+ms.contentlocale: it-it
+ms.lasthandoff: 08/22/2017
+
 ---
-# Procedura: aggiungere il codice nei TableAdapter di applicazioni a pi&#249; livelli
-È possibile estendere la funzionalità di un `TableAdapter` creando un file di classe parziale per il `TableAdapter` e aggiungendovi il codice, anziché aggiungere il codice al file *NomeDataset*.DataSet.Designer.  Mediante le classi parziali è possibile suddividere il codice di una classe specifica tra più file fisici.   Per ulteriori informazioni, vedere [Partial](/dotnet/visual-basic/language-reference/modifiers/partial) o [parziale \(Tipo\)](/dotnet/csharp/language-reference/keywords/partial-type).  
+# <a name="add-code-to-tableadapters-in-n-tier-applications"></a>Add code to TableAdapters in n-tier applications
+You can extend the functionality of a `TableAdapter` by creating a partial class file for the `TableAdapter` and adding code to it (instead of adding code to the *DatasetName*.DataSet.Designer file). Partial classes enable code for a specific class to be divided among multiple physical files. For more information, see [Partial](/dotnet/visual-basic/language-reference/modifiers/partial) or [partial (Type)](/dotnet/csharp/language-reference/keywords/partial-type).  
   
- Il codice che definisce un `TableAdapter` viene generato ogni volta che vengono apportate modifiche al `TableAdapter` in [Creazione e modifica di dataset tipizzati](../data-tools/creating-and-editing-typed-datasets.md).  Questo codice viene generato anche quando si apportano modifiche durante l'esecuzione di una procedura guidata che modifica la configurazione del `TableAdapter`.  Per evitare l'eliminazione del codice durante la rigenerazione di un `TableAdapter`, è possibile aggiungere il codice al file di classe parziale del `TableAdapter`.  
+ The code that defines a `TableAdapter` is generated every time changes are made to the `TableAdapter` in the dataset. This code is also generated when changes are made during the running of any wizard that modifies the configuration of the `TableAdapter`. To prevent your code from being deleted during the regeneration of a `TableAdapter`, add code to the partial class file of the `TableAdapter`.  
   
- Per impostazione predefinita, dopo avere separato il codice del dataset e il codice del `TableAdapter`, il risultato sarà un file di classe discreto in ogni progetto.  Nel progetto originale sarà presente un file denominato *NomeDataset*.Designer.vb o *NomeDataset*.Designer.cs contenente il codice `TableAdapter`.  Nel progetto definito nella proprietà **Progetto DataSet** sarà presente un file denominato *NomeDataset*.DataSet.Designer.vb o *NomeDataset*.DataSet.Designer.cs contenente il codice del dataset.  
-  
-> [!NOTE]
->  Quando si separano i dataset e i `TableAdapter` impostando la proprietà **DataSet Project**, le classi del dataset parziale presenti nel progetto non verranno spostate automaticamente.  Le classi parziali del dataset devono essere spostate manualmente nel progetto di dataset.  
+ By default, after you separate the dataset and `TableAdapter` code, the result is a discrete class file in each project. The original project has a file named *DatasetName*.Designer.vb (or *DatasetName*.Designer.cs) that contains the `TableAdapter` code. The project that's designated in the **Dataset Project** property has a file named *DatasetName*.DataSet.Designer.vb (or *DatasetName*.DataSet.Designer.cs) that contains the dataset code.  
   
 > [!NOTE]
->  [Creazione e modifica di dataset tipizzati](../data-tools/creating-and-editing-typed-datasets.md) consente inoltre di generare i gestori eventi <xref:System.Data.DataTable.ColumnChanging> e <xref:System.Data.DataTable.RowChanging> quando viene aggiunto il codice di convalida.  Per ulteriori informazioni, vedere [Procedura: aggiungere la convalida a un dataset a più livelli](../data-tools/add-validation-to-an-n-tier-dataset.md).  
+>  When you separate datasets and `TableAdapter`s (by setting the **DataSet Project** property), existing partial dataset classes in the project will not be moved automatically. Existing dataset partial classes must be moved manually to the dataset project.  
+  
+> [!NOTE]
+>  The datasetprovides functionality for generating <xref:System.Data.DataTable.ColumnChanging> and <xref:System.Data.DataTable.RowChanging> event handlers when validation is needed. For more information, see [Add validation to an n-tier dataset](../data-tools/add-validation-to-an-n-tier-dataset.md).  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-### Per aggiungere il codice utente in un TableAdapter di applicazioni a più livelli  
+### <a name="to-add-user-code-to-a-tableadapter-in-an-n-tier-application"></a>To add user code to a TableAdapter in an n-tier application  
   
-1.  Individuare il progetto contenente il file xsd \([Creazione e modifica di dataset tipizzati](../data-tools/creating-and-editing-typed-datasets.md)\).  
+1.  Locate the project that contains the .xsd file.
   
-2.  Fare doppio clic sul file **xsd** per aprire [Creazione e modifica di dataset tipizzati](../data-tools/creating-and-editing-typed-datasets.md).  
+2.  Double click the **.xsd** file to open the **Dataset Designer**.  
   
-3.  Fare clic con il pulsante destro del mouse sul `TableAdapter` in cui si desidera aggiungere il codice e scegliere **Visualizza codice**.  
+3.  Right-click the `TableAdapter` that you want to add code to, and then select **View Code**.  
   
-     Viene creata una classe parziale e visualizzata nell'editor del codice.  
+     A partial class is created and opens in the Code Editor.  
   
-4.  Aggiungere il codice nella dichiarazione di classe parziale.  
+4.  Add code inside the partial class declaration.  
   
-5.  Nell'esempio seguente viene illustrato dove aggiungere il codice nel `CustomersTableAdapter` di `NorthwindDataSet`:  
+5.  The following example shows where to add code to the `CustomersTableAdapter` in the `NorthwindDataSet`:  
   
     ```vb#  
     Partial Public Class CustomersTableAdapter  
@@ -66,10 +85,10 @@ manager: "ghogen"
     }  
     ```  
   
-## Vedere anche  
- [Cenni preliminari sull'applicazione dati a più livelli](../data-tools/n-tier-data-applications-overview.md)   
- [Procedura: aggiungere il codice nei dataset di applicazioni a più livelli](../data-tools/add-code-to-datasets-in-n-tier-applications.md)   
- [TableAdapters](../Topic/TableAdapters.md)   
- [Panoramica di TableAdapterManager](../Topic/TableAdapterManager%20Overview.md)   
- [Cenni preliminari sull'aggiornamento gerarchico](../Topic/Hierarchical%20Update%20Overview.md)   
- [Creazione di applicazioni dati](../data-tools/creating-data-applications.md)
+## <a name="see-also"></a>See Also  
+ [N-Tier Data Applications Overview](../data-tools/n-tier-data-applications-overview.md)   
+ [Add code to datasets in n-tier applications](../data-tools/add-code-to-datasets-in-n-tier-applications.md)   
+ [Create and Configure TableAdapters](create-and-configure-tableadapters.md)   
+ [Create and Configure TableAdapters](create-and-configure-tableadapters.md)   
+ [Hierarchical Update Overview](hierarchical-update.md)   
+

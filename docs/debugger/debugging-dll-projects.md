@@ -1,152 +1,148 @@
 ---
-title: "Debug di progetti di DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "debug di DLL"
-  - "modelli, debug di DLL"
-  - "DLL, debug"
-  - "debug [Visual Studio], DLL"
+title: Debugging DLL projects | Microsoft Docs
+ms.custom: 
+ms.date: 05/23/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- debugging DLLs
+- templates, debugging DLLs
+- DLLs, debugging
+- debugging [Visual Studio], DLLs
 ms.assetid: 433cab30-d191-460b-96f7-90d2530ca243
 caps.latest.revision: 38
-caps.handback.revision: 38
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Debug di progetti di DLL
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: cee800302a1018b7d364f301bf5756e23d4c39e2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/22/2017
 
-Di seguito sono elencati i modelli per la creazione di DLL:  
+---
+# <a name="debugging-dll-projects-from-visual-studio"></a>Debugging DLL projects from Visual Studio
+The following Visual Studio templates create DLLs:  
   
--   \(C\+\+, C\# e Visual Basic\): Libreria di classi  
+-   (C++, C#, and Visual Basic) Class Library   
+
+-   (C++): Win32 Console DLL project
   
--   \(C\+\+, C\# e Visual Basic\): Libreria di controlli Windows Forms  
+     For more information, see [MFC Debugging Techniques](../debugger/mfc-debugging-techniques.md).
+
+-   (C++, C#, and Visual Basic): Windows Forms Control Library
   
-     Il debug di una libreria di controlli Windows è simile al debug di un progetto Libreria di classi. Nella maggior parte dei casi si effettua una chiamata al controllo Windows da un altro progetto. Quando si esegue il debug del progetto chiamante, è possibile eseguire l'istruzione del codice del controllo Windows, impostare i punti di interruzione ed eseguire altre operazioni di debug. Per altre informazioni, vedere [Controlli Windows Form](../Topic/Windows%20Forms%20Controls.md).  
+     Debugging a Windows Forms Control Library is similar to debugging a Class Library project. In most cases, you will call the Windows control from another project. When you debug the calling project, you can step into the code of your Windows control, set breakpoints, and perform other debugging operations. For more information, see [Windows Forms Controls](/dotnet/framework/winforms/controls/index).  
+
   
--   \(C\# e Visual Basic\): Libreria di controlli Web  
+##  <a name="vxtskdebuggingdllprojectsbuildingadebugversion"></a> Building a debug version  
+ No matter how you start debugging, make sure that you build the Debug version of the DLL first and make sure that the Debug version is in the location where the application expects to find it. This may seem obvious, but if you forget this step, the application might find a different version of the DLL and load it. The program will then continue to run, while you wonder why your breakpoint was never hit. When you are debugging, you can verify which DLLs your program has loaded by opening the debugger's **Modules** window. The **Modules** window lists each DLL or EXE loaded in the process you are debugging. For more information, see [How to: Use the Modules Window](../debugger/how-to-use-the-modules-window.md).  
+ For the debugger to attach to code written in C++, the code must emit `DebuggableAttribute`. You can add this to your code automatically by linking with the [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute) linker option.  
   
-     Per altre informazioni, vedere [Libreria di controlli Web \(Codice gestito\)](../debugger/web-control-library-managed-code.md).  
+##  <a name="vxtskdebuggingdllprojectsmixedmodedebugging"></a> Mixed-Mode debugging  
+ The calling application that calls your DLL can be written in managed code or native code. If your managed DLL is called by native code and you want to debug both, managed and native debuggers must both be enabled. You can select this in the **\<Project> Property Pages** dialog box or window. How you do this depends on whether you start debugging from the DLL project or the calling application project. For more information, see [How to: Debug in Mixed Mode](../debugger/how-to-debug-in-mixed-mode.md).  
   
--   \(C\+\+\): Controllo ActiveX MFC e controllo ActiveX MFC per Smart Device  
+##  <a name="vxtskdebuggingdllprojectschangingdefaultconfigurations"></a> Changing default configurations  
+ When you create a console application project with the project template, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automatically creates required settings for the Debug and Release configurations. If necessary, you can change those settings. For more information, see [Project Settings for a C++ Debug Configuration](../debugger/project-settings-for-a-cpp-debug-configuration.md), [Project Settings for  C# Debug Configurations](../debugger/project-settings-for-csharp-debug-configurations.md), [Project Settings for a Visual Basic Debug Configuration](../debugger/project-settings-for-a-visual-basic-debug-configuration.md), and [How to: Set Debug and Release Configurations](../debugger/how-to-set-debug-and-release-configurations.md).  
   
-     I controlli ActiveX sono controlli che possono essere scaricati attraverso Internet in un computer client, nonché visualizzati e attivati in pagine Web.  
+##  <a name="vxtskdebuggingdllprojectswaystodebugthedll"></a> Ways to debug the DLL  
+ Each of the projects in this section creates a DLL. You cannot run a DLL directly; it must be called by an application, usually an EXE. For more information, see [Creating and Managing Visual C++ Projects](/cpp/ide/creating-and-managing-visual-cpp-projects). The calling application might fit any one of the following criteria:  
   
-     Il debug dei controlli ActiveX è simile a quello di altri tipi di controlli poiché non possono essere eseguiti in modalità autonoma, ma devono essere incorporati in una pagina Web HTML. Per altre informazioni, vedere [Procedura: eseguire il debug di un controllo ActiveX](../debugger/how-to-debug-an-activex-control.md).  
+-   An application built in another project in the same [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution that contains the class library.  
   
--   \(C\+\+\): DLL MFC per Smart Device  
+-   An existing application already deployed on a test or production computer.  
   
-     Per altre informazioni, vedere [Tecniche di debug MFC](../debugger/mfc-debugging-techniques.md).  
+-   Located on the Web and accessed through a URL.  
   
- In questa sezione vengono inoltre trattati i seguenti argomenti:  
+-   A Web application that contains a Web page which embeds the DLL.  
   
--   [Procedura: eseguire il debug da un progetto di DLL](../debugger/how-to-debug-from-a-dll-project.md)  
+###  <a name="vxtskdebuggingdllprojectsthecallingapplication"></a> Debugging the calling application  
+To debug a DLL, start by debugging the calling application, typically either an EXE or a Web application. There are several ways to debug it.  
   
--   [Procedura: eseguire il debug in modalità mista](../debugger/how-to-debug-in-mixed-mode.md)  
+-   If you have a project for the calling application, you can open that project and start execution from the **Debug** menu. For more information, see [Getting started with the debugger](../debugger/getting-started-with-the-debugger.md).  
   
- In questo argomento sono contenute le seguenti sezioni relative alla preparazione al debug di librerie di classi:  
+-   If the calling application is an existing program already deployed on a test or production computer and is already running you can attach to it. Use this method if the DLL is a control hosted by Internet Explorer, or a control on a Web page. For more information, see [How to: Attach to a Running Process](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
   
--   [Compilazione di una versione di debug](#vxtskdebuggingdllprojectsbuildingadebugversion)  
+-   You can debug it from the DLL project. For more information, see [How to: Debug from a DLL Project](../debugger/how-to-debug-from-a-dll-project.md).  
   
--   [Debug in modalità mista](#vxtskdebuggingdllprojectsmixedmodedebugging)  
+-   You can debug it from the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [Immediate window](#vxtskdebuggingdllprojectstheimmediatewindow). In this case, the **Immediate** window plays the role of the application.  
   
--   [Modifica delle configurazioni predefinite](#vxtskdebuggingdllprojectschangingdefaultconfigurations)  
+Before you start debugging the calling application, you will usually want to set a breakpoint in the class library. For more information, see [Using Breakpoints](../debugger/using-breakpoints.md). When the breakpoint is hit, you can step through the code, observing the action at each line, until you isolate the problem. For more information, see [Navigate code in the debugger](../debugger/navigating-through-code-with-the-debugger.md).
   
--   [Modalità di debug della DLL](#vxtskdebuggingdllprojectswaystodebugthedll)  
+###  <a name="vxtskdebuggingdllprojectstheimmediatewindow"></a> The Immediate Window  
+ You can evaluate functions or methods in the DLL without having a calling application. You do design-time debugging and you use the **Immediate** window. To debug in this manner, do the follow these steps while the DLL project is open:  
   
--   [Applicazione chiamante](#vxtskdebuggingdllprojectsthecallingapplication)  
+1.  Open the Debugger **Immediate** window.  
   
--   [Controlli in una pagina Web](#vxtskdebuggingdllprojectscontrolsonawebpage)  
-  
--   [Finestra di controllo immediato](#vxtskdebuggingdllprojectstheimmediatewindow)  
-  
-##  <a name="vxtskdebuggingdllprojectsbuildingadebugversion"></a> Compilazione di una versione di debug  
- Indipendentemente dalla modalità di avvio del debug, accertarsi di compilare innanzitutto la versione di debug della DLL e che tale versione si trovi nella posizione prevista dall'applicazione. Anche se ciò potrebbe sembrare ovvio, è importante non omettere questo passaggio in quanto l'applicazione potrebbe rilevare una versione differente della DLL e caricarla. A questo punto, il programma continuerebbe l'esecuzione e non si riuscirebbe a comprendere il motivo per il quale il punto di interruzione non è stato raggiunto. Durante il debug, è possibile controllare le DLL caricate dal programma visualizzando la finestra **Moduli** del debugger. In questa finestra sono elencate le DLL o gli EXE caricati nel processo sottoposto a debug. Per altre informazioni, vedere [Procedura: utilizzare la finestra Moduli](../debugger/how-to-use-the-modules-window.md).  
-  
- Affinché il debugger possa connettersi a codice scritto in C\+\+, è necessario che venga generato l'elemento `DebuggableAttribute`. È possibile aggiungere automaticamente questo elemento al codice mediante il collegamento all'opzione del linker [\/ASSEMBLYDEBUG](/visual-cpp/build/reference/assemblydebug-add-debuggableattribute).  
-  
-##  <a name="vxtskdebuggingdllprojectsmixedmodedebugging"></a> Debug in modalità mista  
- L'applicazione che chiama la DLL può essere scritta in codice gestito o nativo. Se la DLL gestita viene chiamata da codice nativo e si desidera eseguire il debug di entrambi, attivare sia il debugger del codice gestito sia quello del codice nativo. È possibile effettuare questa selezione nella finestra o nella finestra di dialogo **Pagine delle proprietà** di **\<Progetto\>**. L'esecuzione di questa operazione varia a seconda che il debug venga avviato dal progetto della DLL o da quello dell'applicazione chiamante. Per altre informazioni, vedere [Procedura: eseguire il debug in modalità mista](../debugger/how-to-debug-in-mixed-mode.md).  
-  
-##  <a name="vxtskdebuggingdllprojectschangingdefaultconfigurations"></a> Modifica delle configurazioni predefinite  
- Quando si crea un progetto di applicazione console mediante il modello di progetto, in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] vengono definite automaticamente le impostazioni necessarie per le configurazioni di debug e di rilascio. Se necessario, è possibile modificare tali impostazioni. Per altre informazioni, vedere[Impostazioni di progetto per una configurazione di debug C\+\+](../debugger/project-settings-for-a-cpp-debug-configuration.md), [Impostazioni di progetto per le configurazioni di debug C\#](../debugger/project-settings-for-csharp-debug-configurations.md), [Impostazioni di progetto per una configurazione di debug Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)e [Procedura: impostare le configurazioni di debug e rilascio](../debugger/how-to-set-debug-and-release-configurations.md).  
-  
-##  <a name="vxtskdebuggingdllprojectswaystodebugthedll"></a> Modalità di debug della DLL  
- In ciascun progetto descritto in questa sezione viene creata una DLL. Le DLL non possono essere eseguite direttamente, ma devono essere chiamate da un'applicazione, in genere un file EXE. Per altre informazioni, vedere [Creazione e gestione di progetti Visual C\+\+](/visual-cpp/ide/creating-and-managing-visual-cpp-projects). L'applicazione chiamante può soddisfare uno dei criteri seguenti:  
-  
--   Essere un'applicazione incorporata in un altro progetto della stessa soluzione di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] contenente la libreria di classi.  
-  
--   Essere un'applicazione esistente già distribuita in un computer di test o di produzione.  
-  
--   Trovarsi sul Web ed essere accessibile tramite un URL.  
-  
--   Essere un'applicazione Web contenente una pagina Web che incorpora la DLL.  
-  
-###  <a name="vxtskdebuggingdllprojectsthecallingapplication"></a> Debug dell'applicazione chiamante  
- Per eseguire il debug di una DLL, iniziare con il debug dell'applicazione chiamante, che in genere è un file EXE o un'applicazione Web. Questo debug può essere eseguito in vari modi.  
-  
--   Se è disponibile un progetto per l'applicazione chiamante, è possibile aprirlo e avviare l'esecuzione dal menu **Debug**. Per altre informazioni, vedere [How to: Start Execution](http://msdn.microsoft.com/it-it/b0fe0ce5-900e-421f-a4c6-aa44ddae453c).  
-  
--   Se l'applicazione chiamante è un programma già distribuito in un computer di test o di produzione ed è già in esecuzione, è possibile stabilire una connessione. Utilizzare questa modalità se la DLL è un controllo ospitato in Internet Explorer oppure un controllo in una pagina Web. Per altre informazioni, vedere [How to: Attach to a Running Process](http://msdn.microsoft.com/it-it/636d0a52-4bfd-48d2-89ad-d7b9ca4dc4f4).  
-  
--   È possibile eseguire il debug dal progetto di DLL. Per altre informazioni, vedere [Procedura: eseguire il debug da un progetto di DLL](../debugger/how-to-debug-from-a-dll-project.md).  
-  
--   È possibile eseguire il debug dalla finestra **Controllo immediato** di[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. In tal caso, la finestra **Controllo immediato** svolgerà il ruolo dell'applicazione.  
-  
- Prima di iniziare il debug dell'applicazione chiamante, è possibile impostare un punto di interruzione nella libreria di classi. Per altre informazioni, vedere [Breakpoints and Tracepoints](http://msdn.microsoft.com/it-it/fe4eedc1-71aa-4928-962f-0912c334d583). Una volta raggiunto il punto di interruzione, è possibile eseguire il codice un'istruzione alla volta, osservandone l'esecuzione in ciascuna riga fino a isolare il problema. Per altre informazioni, vedere [Code Stepping Overview](http://msdn.microsoft.com/it-it/8791dac9-64d1-4bb9-b59e-8d59af1833f9).  
-  
-###  <a name="vxtskdebuggingdllprojectscontrolsonawebpage"></a> Controlli in una pagina Web  
- Per eseguire il debug di un controllo in una pagina Web, creare una pagina di [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] contenente tale controllo, se non esiste ancora. È quindi possibile impostare punti di interruzione sia nel codice della pagina Web che in quello del controllo e richiamare la pagina Web da [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
-  
- Prima di iniziare il debug dell'applicazione chiamante, è possibile impostare un punto di interruzione nella DLL. Una volta raggiunto il punto di interruzione, è possibile eseguire il codice un'istruzione alla volta, osservandone l'esecuzione in ciascuna riga fino a isolare il problema. Per altre informazioni, vedere [Breakpoints and Tracepoints](http://msdn.microsoft.com/it-it/fe4eedc1-71aa-4928-962f-0912c334d583).  
-  
-###  <a name="vxtskdebuggingdllprojectstheimmediatewindow"></a> Finestra di controllo immediato  
- È possibile valutare le funzioni o i metodi nella DLL senza disporre di un'applicazione chiamante, ma eseguendo il debug in fase di progettazione e utilizzando la finestra **Controllo immediato**. Per eseguire questo tipo di debug, effettuare le seguenti operazioni dopo avere aperto il progetto di DLL:  
-  
-1.  Visualizzare la finestra di controllo immediato del debugger.  
-  
-2.  Per testare un metodo denominato `Test` nella classe `Class1`, creare un'istanza di un oggetto di tipo `Class1` digitando il codice C\# seguente nella finestra Controllo immediato. Questo codice gestito funziona per Visual Basic e C\+\+ con opportune modifiche alla sintassi:  
+2.  To test a method named `Test` in class `Class1`, instantiate an object of type `Class1` by typing the following C# code in the Immediate window. This managed code works for Visual Basic and C++, with appropriate syntax changes:  
   
     ```  
     Class1 obj = new Class1();  
     ```  
   
-     In C\# tutti i nomi devono essere completi. Inoltre, i metodi o le variabili devono trovarsi nell'ambito e nel contesto correnti della sessione di debug.  
+     In C#, all names must be fully qualified. In addition, any methods or variables must be in the current scope and context of the debugging session.  
   
-3.  Se `Test` accetta un parametro `int`, valutare `Test` usando la finestra **Controllo immediato**:  
+3.  Assuming that `Test` takes one `int` parameter, evaluate `Test` using the **Immediate** window:  
   
     ```  
     ?obj.Test(10)  
     ```  
   
-     Il risultato verrà indicato nella finestra di controllo immediato.  
+     The result will be printed in the **Immediate** window.  
   
-4.  Se si desidera continuare a eseguire il debug di `Test`, inserire un punto di interruzione nel metodo e valutare di nuovo la funzione:  
+4.  You can continue to debug `Test` by placing a breakpoint inside it and then evaluating the function again:  
   
     ```  
     ?obj.Test(10);  
     ```  
   
-     Quando verrà raggiunto il punto di interruzione, sarà possibile eseguire `Test` un'istruzione alla volta. Al termine dell'esecuzione di `Test`, nel debugger verrà ripristinata la modalità di progettazione.  
+     The breakpoint will be hit and you will be able to step through `Test`. After execution has left `Test`, the Debugger will be back in Design mode.
+
+## <a name="vxtskdebuggingdllprojectsexternal"></a> Debug an external DLL from a C++ project
+
+If you are debugging a DLL external to your project, the debugging features available (such as stepping through code) will depend on the [debug configuration of the DLL](#vxtskdebuggingdllprojectsbuildingadebugversion) when it was built and whether the [.pdb file](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) and other required files for the DLL are available.
+
+Your project needs to be able to find the DLL and the .pdb file used for debugging. You can create a custom build task to copy these files to the **\<project folder>\Debug** output folder, or you can copy the files into the output folder manually.
+
+You can easily set locations of header files and *.lib files in the Property Pages (right-click the C++ project and choose **View Properties**, and then choose **All Configurations**) without the need to copy them into your output folder:
+
+- C/C++ folder (General category) - Specify the folder containing header files in the **Additional Include Directories** field.
+- Linker folder (General category) - Specify the folder containing the .lib file in the **Additional Libraries Directories** field. 
+- Linker folder (Input category) - Specify the full path and filename for the .lib file in the **Additional Dependencies** field.
+
+When the configuration is correct, you can debug by starting execution from the **Debug** menu.
+
+For more information on project settings, see [Property Pages (Visual C++)](/cpp/ide/property-pages-visual-cpp).
   
-## Vedere anche  
- [Debug del codice gestito](../debugger/debugging-managed-code.md)   
- [Tipi di progetto Visual C\+\+](../debugger/debugging-preparation-visual-cpp-project-types.md)   
- [Tipi di progetto C\#, F\# e Visual Basic](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
- [Impostazioni di progetto per una configurazione di debug C\+\+](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
- [Impostazioni di progetto per le configurazioni di debug C\#](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [Impostazioni di progetto per una configurazione di debug Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
- [Sicurezza del debugger](../debugger/debugger-security.md)
+## <a name="see-also"></a>See Also  
+ [Debugging Managed Code](../debugger/debugging-managed-code.md)   
+ [Visual C++ Project Types](../debugger/debugging-preparation-visual-cpp-project-types.md)   
+ [C#, F#, and Visual Basic Project Types](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
+ [Project Settings for a C++ Debug Configuration](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
+ [Project Settings for  C# Debug Configurations](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Project Settings for a Visual Basic Debug Configuration](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [Debugger Security](../debugger/debugger-security.md)

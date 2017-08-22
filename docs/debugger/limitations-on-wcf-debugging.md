@@ -1,51 +1,68 @@
 ---
-title: "Limitazioni del debug di WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "debug, WCF"
-  - "WCF, limitazioni del debug"
+title: Limitations on WCF Debugging | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- debugging, WCF
+- WCF, debugging limitations
 ms.assetid: 8e0333c4-1ddc-4abe-8f1c-d19bf6a2a07a
 caps.latest.revision: 30
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# Limitazioni del debug di WCF
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 02e261c06d065eec1c93159f39103d9281cef3b9
+ms.contentlocale: it-it
+ms.lasthandoff: 08/22/2017
 
-Sono disponibili tre modalità per avviare il debug di un servizio WCF:  
+---
+# <a name="limitations-on-wcf-debugging"></a>Limitations on WCF Debugging
+There are three ways that you can begin debugging a WCF service:  
   
--   Si esegue il debug di un processo client che chiama un servizio.  Il debugger esegue le istruzioni del servizio.  Il servizio non deve essere presente nella stessa soluzione dell'applicazione client.  
+-   You are debugging a client process that calls a service. The debugger steps into the service. The service does not have to be in the same solution as your client application.  
   
--   Si esegue il debug di un processo client che effettua una richiesta a un servizio.  Il servizio deve essere parte della soluzione.  
+-   You are debugging a client process that makes a request to a service. The service must be part of your solution.  
   
--   Si utilizza **Connetti a processo** per la connessione a un servizio attualmente in esecuzione.  Il debug inizia all'interno del servizio.  
+-   You use **Attach to Process** to attach to a service that is currently running. Debugging begins inside the service.  
   
- In questo argomento vengono descritte le limitazioni di questi scenari.  
+ This topic describes limitations on these scenarios.  
   
-## Limitazioni dell'esecuzione di istruzioni in un servizio  
- Per eseguire istruzioni in un servizio da un'applicazione client di cui si esegue il debug, è necessario soddisfare le seguenti condizioni:  
+## <a name="limitations-on-stepping-into-a-service"></a>Limitations on Stepping Into a Service  
+ To step into a service from a client applications that you are debugging, the following conditions must be met:  
   
--   Il client deve chiamare il servizio utilizzando un oggetto client sincrono.  
+-   The client must call the service by using a synchronous client object.  
   
--   L'operazione del contratto non può essere unidirezionale.  
+-   The contract operation cannot be one-way.  
   
--   Se il server è asincrono, non è possibile visualizzare lo stack di chiamate completo durante l'esecuzione del codice nel servizio.  
+-   If the server is asynchronous, you cannot view the full call stack while you are executing code inside the service.  
   
--   È necessario abilitare il debug con il codice riportato di seguito nel file app.config o web.config:  
+-   Debugging must be enabled with the following code in the app.config or Web.config file:  
   
     ```  
     <system.web>  
@@ -53,21 +70,21 @@ Sono disponibili tre modalità per avviare il debug di un servizio WCF:
     </system.web>  
     ```  
   
-     È necessario aggiungere questo codice solo una volta.  È possibile aggiungere il codice modificando il file con estensione config o attraverso la connessione al servizio utilizzando **Connetti a processo**.  Quando si utilizza **Connetti a processo** in un servizio, il codice di debug viene aggiunto automaticamente al file config.  Successivamente, è possibile eseguire il debug e le istruzioni nel servizio senza dover modificare il file config.  
+     This code only has to be added one time. You can add this code by editing the .config file or by attaching to the service by using **Attach to Process**. When you use **Attach to Process** on a service, the debug code is automatically added to the .config file. After that, you can debug and step into the service without having to edit the .config file.  
   
-## Limitazioni dell'uscita da un servizio  
- L'uscita da un servizio e il ritorno al client presenta le stesse limitazioni descritte per l'esecuzione delle istruzioni di un servizio.  Inoltre, il debugger deve essere connesso al client.  Se è in corso il debug di un client e l'esecuzione di istruzioni in un servizio, il debugger rimane connesso al servizio.  Ciò si applica sia che il client venga avviato utilizzando **Avvia debug** sia che ci si connetta al client utilizzando **Connetti a processo**.  Se il debug è stato avviato mediante la connessione al servizio, il debugger non è ancora connesso al client.  In tal caso, se occorre uscire dal servizio e tornare al client, è innanzitutto necessario utilizzare **Connetti a processo** per la connessione manuale al client.  
+## <a name="limitations-on-stepping-out-of-a-service"></a>Limitations on Stepping Out of a Service  
+ Stepping out of a service and back to the client has the same limitations described for stepping into a service. In addition, the debugger must be attached to the client. If you are debugging a client and step into a service, the debugger remains attached to the service. This is true whether you started the client by using **Start Debugging** or attached to the client by using **Attach to Process**. If you began debugging by attaching to the service, the debugger is not yet attached to the client. In that case, if you have to step out of the service and back to the client, you must first use **Attach to Process** to attach to the client manually.  
   
-## Limitazioni della connessione automatica a un servizio  
- La connessione automatica a un servizio presenta le limitazioni riportate di seguito:  
+## <a name="limitations-on-automatic-attach-to-a-service"></a>Limitations on Automatic Attach to a Service  
+ Automatically attaching to a service has the following limitations:  
   
--   Il servizio deve essere parte della soluzione [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] di cui si esegue il debug.  
+-   The service must be part of the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution you are debugging.  
   
--   Il servizio deve essere ospitato.  Può essere parte di un progetto di sito Web \(File system e HTTP\), un progetto di applicazione Web \(File system e HTTP\) o un progetto di libreria di servizi WCF.  I progetti di libreria di servizi WCF possono essere librerie di servizi o librerie di servizi di flusso di lavoro.  
+-   The service must be hosted. It may be part of a Web Site Project (File System and HTTP), Web Application Project (File System and HTTP), or WCF Service Library project. WCF Service Library projects can be either Service Libraries or Workflow Service Libraries.  
   
--   Il servizio deve essere richiamato da un client WCF.  
+-   The service must be invoked from a WCF client.  
   
--   È necessario abilitare il debug con il codice riportato di seguito nel file app.config o web.config:  
+-   Debugging must be enabled with the following code in the app.config or Web.config file:  
   
     ```  
     <system.web>  
@@ -75,12 +92,12 @@ Sono disponibili tre modalità per avviare il debug di un servizio WCF:
     <system.web>  
     ```  
   
-## Self\-hosting  
- Un *servizio indipendente* è un servizio WCF che non viene eseguito in IIS, nell'host dei servizi WCF o nel server di sviluppo [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)].  Per informazioni su come eseguire il debug di un servizio self\-hosted, vedere [Procedura: eseguire il debug di un servizio WCF indipendente](../debugger/how-to-debug-a-self-hosted-wcf-service.md).  
+## <a name="self-hosting"></a>Self-Hosting  
+ A *self-hosted service* is a WCF service that does not run inside IIS, the WCF Service Host, or the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Development Server. For information about how to debug a self-hosted service, see [How to: Debug a Self-Hosted WCF Service](../debugger/how-to-debug-a-self-hosted-wcf-service.md).  
   
-## Self\-hosting  
- Per abilitare il debug delle applicazioni di [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 o 3.5, è necessario installare [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 o 3.5 prima dell'installazione di [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)].  Se [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] viene installato prima di [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 o 3.5, quando si tenta di eseguire il debug di un'applicazione di [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 o 3.5 viene generato un errore.  Il messaggio di errore è "Impossibile eseguire automaticamente l'istruzione sul server". Per correggere questo problema, utilizzare il **Pannello di controllo** di Windows, scegliere **Programmi e funzionalità** per ripristinare l'installazione di [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)].  
+## <a name="self-hosting"></a>Self-Hosting  
+ To enable debugging of [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 or 3.5 applications, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 or 3.5 must be installed before [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] is installed. If [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] is installed before [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 or 3.5, an error occurs when you try to debug a [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 or 3.5 application. The error message is, "Unable to Automatically Step Into the Server." To fix this problem, use the Windows **Control Panel** > **Programs and Features** to repair your [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] installation.  
   
-## Vedere anche  
- [Debug dei servizi WCF](../debugger/debugging-wcf-services.md)   
- [Procedura: eseguire il debug di un servizio WCF indipendente](../debugger/how-to-debug-a-self-hosted-wcf-service.md)
+## <a name="see-also"></a>See Also  
+ [Debugging WCF Services](../debugger/debugging-wcf-services.md)   
+ [How to: Debug a Self-Hosted WCF Service](../debugger/how-to-debug-a-self-hosted-wcf-service.md)

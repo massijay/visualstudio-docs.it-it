@@ -1,53 +1,70 @@
 ---
-title: "Finestre del debugger | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "hero-article"
+title: Debugger Windows in Visual Studio | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 04/25/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4c6fe8f1-b015-4989-bb31-72ebac390026
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Finestre del debugger
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 35524e297af4ad2c0427d65da490cd46b2f4c197
+ms.contentlocale: it-it
+ms.lasthandoff: 08/22/2017
 
-È possibile aprire la maggior parte delle finestre del debugger durante il debug del programma. Per visualizzare un elenco delle finestre del debugger, impostare un punto di interruzione e avviare il debug. Quando si raggiunge il punto di interruzione e l'esecuzione si arresta, fare clic su **Debug \/ Finestre**.  
+---
+# <a name="learn-about-debugger-windows-in-visual-studio"></a>Learn about Debugger Windows in Visual Studio
+You can open most debugger windows while you are debugging your program. To see a list of debugger windows, set a breakpoint and start debugging. When you hit the breakpoint and execution stops, click **Debug > Windows**.  
   
 ||||  
 |-|-|-|  
-|**Finestra**|**Tasto di scelta rapida**|**Argomento da consultare**|  
-|Punti di interruzione|CTRL\+ALT\+B|[Uso di punti di interruzione](../debugger/using-breakpoints.md)|  
-|Impostazioni eccezioni|CTRL\+ALT\+E|[Gestione delle eccezioni con il Debugger](../debugger/managing-exceptions-with-the-debugger.md)|  
-|Output|CTRL\+ALT\+O|[Finestra di output](../ide/reference/output-window.md)|  
-|Thread GPU|\-|[Procedura: utilizzare la finestra Thread GPU](../debugger/how-to-use-the-gpu-threads-window.md)|  
-|Attività|CTRL\+MAIUSC\+D, K|[Utilizzo della finestra Attività](../debugger/using-the-tasks-window.md)|  
-|Stack in parallelo|CTRL\+MAIUSC\+D, S|[Utilizzo della finestra Stack in parallelo](../debugger/using-the-parallel-stacks-window.md)|  
-|Espressione di controllo in parallelo|CTRL\+MAIUSC\+D, \(1, 2, 3, 4\)|[Utilizzo della finestra Stack in parallelo](../debugger/using-the-parallel-stacks-window.md)|  
-|Espressioni di controllo|CTRL\+ALT\+W, \(1, 2, 3, 4\)|[Finestre Espressioni di controllo e Controllo immediato](../debugger/watch-and-quickwatch-windows.md)|  
-|Controllo immediato|MAIUSC\+F9|[Finestre Espressioni di controllo e Controllo immediato](../debugger/watch-and-quickwatch-windows.md)|  
-|Auto|CTRL\+ALT\+V, A|[Finestre delle variabili](../Topic/Variable%20Windows.md)|  
-|Variabili locali|CTRL\+ALT\+V, L|[Finestre delle variabili](../Topic/Variable%20Windows.md)|  
-|Controllo immediato|CTRL\+ALT\+I|[Finestra di controllo immediato](../ide/reference/immediate-window.md)|  
-|Debug interattivo di Python|MAIUSC\+ALT\+I|[Introduzione a PTVS: Python interattivo](../python/getting-started-with-ptvs-interactive-python.md)|  
-|Console JavaScript|CTRL\+ALT\+V, C|[Guida introduttiva: Eseguire il debug di JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md)|  
-|DOM Explorer|CTRL\+ALT\+V, D|[Eseguire il debug del layout usando DOM Explorer](../debugger/debug-layout-using-dom-explorer.md)|  
-|Albero elementi visivi attivi|\-|[Analizzare le proprietà XAML durante il debug](../debugger/inspect-xaml-properties-while-debugging.md)|  
-|Esplora proprietà attive|\-|[Analizzare le proprietà XAML durante il debug](../debugger/inspect-xaml-properties-while-debugging.md)|  
-|Stack di chiamate|CTRL\+ALT\+C|[Procedura: utilizzare la finestra Stack di chiamate](../debugger/how-to-use-the-call-stack-window.md)|  
-|Thread|CTRL\+ALT\+H|[Procedura: utilizzare la finestra Thread](../debugger/how-to-use-the-threads-window.md)|  
-|Moduli|CTRL\+ALT\+U|[Procedura: utilizzare la finestra Moduli](../debugger/how-to-use-the-modules-window.md)|  
-|Processi|CTRL\+ALT\+Z|[Debug di thread e processi](../debugger/debug-threads-and-processes.md)|  
-|Memoria|CTRL\+ALT\+M, \(1, 2, 3, 4\)|[Finestra Memoria](../debugger/memory-windows.md)|  
-|Disassembly|CTRL\+ALT\+D|[Procedura: utilizzare la finestra Disassembly](../debugger/how-to-use-the-disassembly-window.md)|  
-|Registri|CTRL\+ALT\+G|[Procedura: utilizzare la finestra Registri](../debugger/how-to-use-the-registers-window.md)|  
+|**Window**|**Hotkey**|**See Topic**|  
+|Breakpoints|CTRL+ALT+B|[Use Breakpoints](../debugger/using-breakpoints.md)|  
+|Exception Settings|CTRL+ALT+E|[Manage Exceptions with the Debugger](../debugger/managing-exceptions-with-the-debugger.md)|  
+|Output|CTRL+ALT+O|[Output Window](../ide/reference/output-window.md)|    
+|Watch|CTRL+ALT+W, (1, 2, 3, 4)|[Watch and QuickWatch Windows](../debugger/watch-and-quickwatch-windows.md)|  
+|QuickWatch|SHIFT+F9|[Watch and QuickWatch Windows](../debugger/watch-and-quickwatch-windows.md)|  
+|Autos|CTRL+ALT+V, A|[Autos and Locals Windows](../debugger/autos-and-locals-windows.md)|  
+|Locals|CTRL+ALT+V, L|[Autos and Locals Windows](../debugger/autos-and-locals-windows.md)|  
+|Call Stacks|CTRL+ALT+C|[How to: Use the Call Stack Window](../debugger/how-to-use-the-call-stack-window.md)|
+|Immediate|CTRL+ALT+I|[Immediate Window](../ide/reference/immediate-window.md)|     
+|Parallel Stacks|CTR:+SHIFT+D, S|[Using the Parallel Stacks Window](../debugger/using-the-parallel-stacks-window.md)|  
+|Parallel Watch|CTR:+SHIFT+D, (1, 2, 3, 4)|[Get started Debugging Multithreaded Applications](../debugger/get-started-debugging-multithreaded-apps.md)|
+|Threads|CTRL+ALT+H|[Debug using the Threads Window](../debugger/how-to-use-the-threads-window.md)|  
+|Modules|CTRL+ALT+U|[How to: Use the Modules Window](../debugger/how-to-use-the-modules-window.md)| 
+|GPU Threads|-|[How to: Use the GPU Threads Window](../debugger/how-to-use-the-gpu-threads-window.md)|  
+|Tasks|CTR:+SHIFT+D, K|[Using the Tasks Window](../debugger/using-the-tasks-window.md)| 
+|Python Debug Interactive|SHIFT+ALT+I|[Getting Started with PTVS: Interactive Python](../python/getting-started-with-ptvs-interactive-python.md)|  
+|JavaScript Console|CTRL+ALT+V, C|[QuickStart: Debug JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md)|  
+|DOM Explorer|CTRL+ALT+V, D|[Debug layout using DOM Explorer](../debugger/debug-layout-using-dom-explorer.md)|  
+|Live Visual Tree|-|[Inspect XAML properties while debugging](../debugger/inspect-xaml-properties-while-debugging.md)|  
+|Live Property Explorer|-|[Inspect XAML properties while debugging](../debugger/inspect-xaml-properties-while-debugging.md)|   
+|Processes|CTRL+ALT+Z|[Debug Threads and Processes](../debugger/debug-threads-and-processes.md)|  
+|Memory|CTRL+ALT+M, (1, 2, 3, 4)|[Memory Windows](../debugger/memory-windows.md)|  
+|Disassembly|CTRL+ALT+D|[How to: Use the Disassembly Window](../debugger/how-to-use-the-disassembly-window.md)|  
+|Registers|CTRL+ALT+G|[How to: Use the Registers Window](../debugger/how-to-use-the-registers-window.md)|  
   
-## Vedere anche  
- [Nozioni di base sul debugger](../debugger/debugger-basics.md)
+## <a name="see-also"></a>See Also  
+ [Debugger Basics](../debugger/debugger-basics.md)
