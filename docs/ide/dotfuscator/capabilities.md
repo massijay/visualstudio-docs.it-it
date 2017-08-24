@@ -45,10 +45,10 @@ ms.lasthandoff: 06/23/2017
 Questa pagina illustra le funzionalità di Dotfuscator Community Edition (Dotfuscator CE), con alcuni riferimenti alle opzioni avanzate disponibili tramite gli [aggiornamenti][upgrades].
 
 Dotfuscator è un sistema *post-compilazione* per le applicazioni .NET.
-Con Dotfuscator CE, gli utenti di Visual Studio possono [offuscare gli assembly][obfuscation] e inserire una [difesa attiva][checks] e [funzioni di rilevamento per l'analisi] [ analytics] nell'applicazione, senza che Dotfuscator debba accedere al codice sorgente originale.
+Con Dotfuscator CE, gli utenti di Visual Studio possono [offuscare gli assembly][obfuscation] e inserire una [difesa attiva][checks] e [funzioni di rilevamento per l'analisi][ analytics] nell'applicazione, senza che Dotfuscator debba accedere al codice sorgente originale.
 Dotfuscator protegge l'applicazione in diversi modi, creando una strategia per la protezione a più livelli.
 
-Dotfuscator CE supporta una vasta gamma di tipi assembly e applicazioni .NET, tra cui la [piattaforma UWP (Universal Windows Platform) ] [ uwp] e [Xamarin][xamarin].
+Dotfuscator CE supporta una vasta gamma di tipi assembly e applicazioni .NET, tra cui la [piattaforma UWP (Universal Windows Platform) ][uwp] e [Xamarin][xamarin].
 
 ## <a name="intellectual-property-protection"></a>Protezione della proprietà intellettuale
 
