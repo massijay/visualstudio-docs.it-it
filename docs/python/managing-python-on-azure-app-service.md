@@ -16,10 +16,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 5b509a46dd3dbee3a45ab2eac57242636beee17b
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: 56fccdd5e103cf29c8ea4a93ab80de7187275642
 ms.contentlocale: it-it
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 
@@ -176,7 +176,7 @@ Anziché usare la console Kudu tramite il portale di Azure, è possibile eseguir
 }
 ```
 
-Per informazioni sui comandi e l'autenticazione, vedere la [documentazione di Kudu](https://github.com/projectkudu/kudu/wiki/REST-API). È anche possibile visualizzare le credenziali usando [`az webapp deployment list-publishing-profiles command`](https://docs.microsoft.com/cli/azure/webapp/deployment#list-publishing-profiles) dall'interfaccia della riga di comando di Azure. Una libreria helper per l'inserimento dei comandi Kudu è disponibile anche su GitHub (https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42).
+Per informazioni sui comandi e l'autenticazione, vedere la [documentazione di Kudu](https://github.com/projectkudu/kudu/wiki/REST-API). È anche possibile visualizzare le credenziali usando [`az webapp deployment list-publishing-profiles command`](https://docs.microsoft.com/cli/azure/webapp/deployment#list-publishing-profiles) dall'interfaccia della riga di comando di Azure. È anche [disponibile in GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42) una libreria helper per la pubblicazione dei comandi Kudu.
 
 
 ### <a name="copying-libraries-into-app-source-code"></a>Copia delle librerie nel codice sorgente dell'app
@@ -188,3 +188,4 @@ Il problema è che queste librerie devono corrispondere esattamente alla version
 ### <a name="avoiding-virtual-environments"></a>Come evitare gli ambienti virtuali
 
 Anche se lavorare in un ambiente virtuale in locale può essere utile per comprendere pienamente le dipendenze richieste dal sito, l'uso degli ambienti virtuali nel servizio app non è consigliato. Limitarsi invece a installare le librerie nella cartella principale di Python e distribuirle con l'app in modo da evitare dipendenze in conflitto.
+

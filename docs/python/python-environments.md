@@ -1,7 +1,7 @@
 ---
 title: Ambienti Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 7/13/2017
+ms.date: 7/25/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: f73c0c7c40d1edd18cccb1ba69424c4e34472c33
+ms.sourcegitcommit: e48ebcafaca37505dbcc92bce682d0c6169004e1
+ms.openlocfilehash: fa8a7616fe88f024ab299e5d115b66f8656e7cb3
 ms.contentlocale: it-it
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 
@@ -52,7 +52,7 @@ Per un video introduttivo, vedere [Visual Studio Python Tutorial Deep Dive: Inte
 
 ## <a name="selecting-and-installing-python-interpreters"></a>Selezione e installazione di interpreti Python
 
-Ad eccezione di Visual Studio 2017, il supporto per Python non include un interprete Python ed è quindi necessario installare uno degli interpreti seguenti per eseguire il codice. In generale, Visual Studio rileva automaticamente i nuovi interpreti installati e configura un ambiente appositamente per essi. In caso contrario, vedere [Creazione di un ambiente per un interprete esistente](#creating-an-environment-for-an-existing-interpreter) più avanti.
+Ad eccezione di Visual Studio 2017, il supporto per Python non include un interprete Python ed è quindi necessario installare uno degli interpreti seguenti per eseguire il codice. In generale, Visual Studio rileva automaticamente i nuovi interpreti installati e configura un ambiente appositamente per ognuno di essi. Se non viene rilevato un ambiente installato, vedere [Creazione di un ambiente per un interprete esistente](#creating-an-environment-for-an-existing-interpreter).
 
 | Interprete | Descrizione | 
 | --- | --- | 
@@ -89,7 +89,7 @@ L'esempio precedente mostra che oltre a Python 3.4 (CPython a 32 bit) sono insta
 
 ### <a name="creating-an-environment-for-an-existing-interpreter"></a>Creazione di un ambiente per un interprete esistente
 
-Visual Studio individua in genere la presenza di un interprete Python installato controllando il Registro di sistema, ma potrebbe non individuarla se l'interprete è installato in modalità non standard. In questi casi è possibile impostare Visual Studio in modo che punti direttamente all'interprete come illustrato di seguito:
+In genere, Visual Studio individua un interprete Python installato controllando il Registro di sistema (come descritto in [PEP 514 - Python registration in the Windows registry](https://www.python.org/dev/peps/pep-0514/) (PEP 514 - Registrazione di Python nel Registro di sistema di Windows). Tuttavia, Visual Studio potrebbe non localizzare l'interprete se questo viene installato in modo non standard. In questi casi è possibile impostare Visual Studio in modo che punti direttamente all'interprete come illustrato di seguito:
 
 1. Selezionare **+ Personalizzato** nella finestra Ambienti Python per creare un nuovo ambiente e aprire la [scheda **Configura**](#configure-tab) descritta di seguito.
 
@@ -99,7 +99,15 @@ Visual Studio individua in genere la presenza di un interprete Python installato
 1. Immettere o selezionare il percorso dell'interprete nel campo **Percorso di prefisso**.
 1. Selezionare **Rilevamento automatico** per fare in modo che Visual Studio completi automaticamente i campi rimanenti oppure completarli manualmente.
 1. Selezionare **Applica** per salvare l'ambiente.
-1. Se è necessario rimuovere l'ambiente, selezionare il comando **Rimuovi** nella scheda **Configura**.
+1. Se è necessario rimuovere l'ambiente, selezionare il comando **Rimuovi** nella scheda **Configura**. Gli ambienti rilevati automaticamente non offrono questa opzione. Per altre informazioni, vedere la sezione successiva.
+
+### <a name="moving-an-existing-interpreter"></a>Spostamento di un interprete esistente
+
+Se si sposta un interprete esistente in una nuova posizione nel file system, Visual Studio non rileva automaticamente la modifica. Sono necessari passaggi manuali per aggiornare l'elenco nella finestra Ambiente:
+
+- Se è stato originariamente creato un ambiente per tale interprete, modificare tale ambiente per puntare alla nuova posizione.
+
+- Se in origine l'ambiente era stato rilevato automaticamente, significa che è stato installato nel computer con un programma di installazione specifico che ha creato le voci del registro esaminate da Visual Studio. In questo caso, ripristinare innanzitutto l'interprete Python nella posizione originale. Quindi disinstallarlo usando il programma di installazione, che cancellerà le voci del registro. Reinstallare quindi l'interprete nella posizione desiderata. Riavviare Visual Studio, che dovrebbe a questo punto rilevare automaticamente la nuova posizione. Questo processo assicura che eventuali altri effetti collaterali del programma di installazione vengano applicati correttamente.
 
 ### <a name="overview-tab"></a>Scheda Panoramica
 
