@@ -1,55 +1,72 @@
 ---
-title: "IDebugProgramPublisher2::PublishProgramNode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramPublisher2::PublishProgramNode"
-helpviewer_keywords: 
-  - "IDebugProgramPublisher2::PublishProgramNode"
+title: IDebugProgramPublisher2::PublishProgramNode | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgramPublisher2::PublishProgramNode
+helpviewer_keywords:
+- IDebugProgramPublisher2::PublishProgramNode
 ms.assetid: d4b72e04-f726-46cf-8e56-5203ff205b12
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugProgramPublisher2::PublishProgramNode
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 65e2718d9401a797f437708bf2bf8a6677cde800
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Rende disponibile un nodo di programma ai motori di \(DEs\) debug e di gestione di debug della sessione \(SDM\).  
+---
+# <a name="idebugprogrampublisher2publishprogramnode"></a>IDebugProgramPublisher2::PublishProgramNode
+Makes a program node available for use by debug engines (DEs) and the session debug manager (SDM).  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT PublishProgramNode(  
-   IDebugProgramNode2 *pProgramNode  
+HRESULT PublishProgramNode(  
+   IDebugProgramNode2 *pProgramNode  
 );  
 ```  
   
-```c#  
-int PublishProgramNode(  
-   IDebugProgramNode2 pProgramNode  
+```cs  
+int PublishProgramNode(  
+   IDebugProgramNode2 pProgramNode  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pProgramNode`  
- \[in\]  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) Un oggetto che rappresenta il nodo del programma per rendere disponibile.  
+ [in] An [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) object that represents the program node to make available.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- Questo metodo consente l'utilizzo dei programmi da eseguire una query per informazioni prima di selezionarli e di avvio per il debug.  
+## <a name="remarks"></a>Remarks  
+ This method allows programs to be queried for information before selecting and launching them for debugging.  
   
- per rimuovere un nodo di programma da disponibilità, chiamare [UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md) il metodo.  
+ To remove a program node from availability, call the [UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md) method.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   
  [UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md)

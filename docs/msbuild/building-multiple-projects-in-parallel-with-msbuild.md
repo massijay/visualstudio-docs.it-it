@@ -1,5 +1,5 @@
 ---
-title: "Compilazione di più progetti in parallelo con MSBuild | Microsoft Docs"
+title: Building Multiple Projects in Parallel with MSBuild | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,39 +31,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: aa5896619558a1534722fe4aa5bef3ec3b08dfe2
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
+ms.openlocfilehash: 6aa02abdbfe8ea55b6e3434dbc859b5fa5d6a5e3
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="building-multiple-projects-in-parallel-with-msbuild"></a>Compilazione di più progetti in parallelo con MSBuild
-È possibile utilizzare MSBuild per compilare più progetti più velocemente eseguendoli in parallelo. Per eseguire compilazioni in parallelo, è possibile utilizzare le impostazioni seguenti in un computer multicore o con più processori:  
+# <a name="building-multiple-projects-in-parallel-with-msbuild"></a>Building Multiple Projects in Parallel with MSBuild
+You can use MSBuild to build multiple projects faster by running them in parallel. To run builds in parallel, you use the following settings on a multi-core or multiple processor computer:  
   
--   L'opzione `/maxcpucount` a un prompt dei comandi.  
+-   The `/maxcpucount` switch at a command prompt.  
   
--   Il parametro di attività <xref:Microsoft.Build.Tasks.MSBuild.BuildInParallel%2A> in un'attività MSBuild.  
+-   The <xref:Microsoft.Build.Tasks.MSBuild.BuildInParallel%2A> task parameter on an MSBuild task.  
   
 > [!NOTE]
->  L'opzione **/verbosity** (**/v**) in una riga di comando può incidere sulle prestazioni di compilazione, che possono diminuire se il livello di dettaglio delle informazioni del log di compilazione è impostato su dettagliato o diagnostico, utilizzati per la risoluzione dei problemi. Per altre informazioni, vedere [Recupero di log di compilazione](../msbuild/obtaining-build-logs-with-msbuild.md) e [Riferimenti alla riga di comando](../msbuild/msbuild-command-line-reference.md).  
+>  The **/verbosity** (**/v**) switch in a command line can also affect build performance. Your build performance might decrease if the verbosity of your build log information is set to detailed or diagnostic, which are used for troubleshooting. For more information, see [Obtaining Build Logs](../msbuild/obtaining-build-logs-with-msbuild.md) and [Command-Line Reference](../msbuild/msbuild-command-line-reference.md).  
   
-## <a name="maxcpucount-switch"></a>Opzione /maxcpucount  
- Se si utilizza l'opzione `/maxcpucount`, o l'abbreviazione `/m`, tramite MSBuild è possibile creare il numero specificato di processi di MSBuild.exe eseguibili in parallelo. Questi processi sono noti anche come "processi di lavoro". Ogni processo di lavoro usa un componente principale o un processore separato, se disponibile, per compilare progetti mentre altri processori eventualmente disponibili ne compilano altri. Ad esempio, se si imposta questa opzione su un valore pari a "4", in MSBuild verranno creati quattro processi di lavoro per compilare il progetto.  
+## <a name="maxcpucount-switch"></a>/maxcpucount Switch  
+ If you use the `/maxcpucount` switch, or `/m` for short, MSBuild can create the specified number of MSBuild.exe processes that may be run in parallel. These processes are also known as "worker processes." Each worker process uses a separate core or processor, if any are available, to build a project at the same time as other available processors may be building other projects. For example, setting this switch to a value of "4" causes MSBuild to create four worker processes to build the project.  
   
- Se si include l'opzione `/maxcpucount` senza specificare un valore, in MSBuild verranno utilizzati fino al numero massimo di processori presenti nel computer.  
+ If you include the `/maxcpucount` switch without specifying a value, MSBuild will use up to the number of processors on the computer.  
   
- Per altre informazioni su questa opzione, introdotta in MSBuild 3.5, vedere [Riferimenti alla riga di comando](../msbuild/msbuild-command-line-reference.md).  
+ For more information about this switch, which was introduced in MSBuild 3.5, see [Command-Line Reference](../msbuild/msbuild-command-line-reference.md).  
   
- Nell'esempio seguente viene indicato a MSBuild di utilizzare tre processi di lavoro. Se si utilizza questa configurazione, tramite MSBuild sarà possibile compilare tre progetti contemporaneamente.  
+ The following example instructs MSBuild to use three worker processes. If you use this configuration, MSBuild can build three projects at the same time.  
   
 ```  
 msbuild.exe myproj.proj /maxcpucount:3  
 ```  
   
-## <a name="buildinparallel-task-parameter"></a>Parametro dell'attività BuildInParallel  
- `BuildInParallel` è un parametro booleano facoltativo di un'attività di [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Quando `BuildInParallel` è impostato su `true` (valore predefinito), vengono generati più processi di lavoro per compilare contemporaneamente il maggior numero possibile di progetti. Affinché questo approccio funzioni, è necessario che l'opzione `/maxcpucount` sia impostata su un valore maggiore di 1 e che il sistema sia almeno di tipo dual-core o che disponga di due o più processori.  
+## <a name="buildinparallel-task-parameter"></a>BuildInParallel Task Parameter  
+ `BuildInParallel` is an optional boolean parameter on a [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] task. When `BuildInParallel` is set to `true` (its default value is `false`), multiple worker processes are generated to build as many projects at the same time as possible. For this to work correctly, the `/maxcpucount` switch must be set to a value greater than 1, and the system must be at least dual-core or have two or more processors.  
   
- Di seguito è riportato un esempio, tratto da microsoft.common.targets, che descrive come impostare il parametro `BuildInParallel`.  
+ The following is an example, taken from microsoft.common.targets, about how to set the `BuildInParallel` parameter.  
   
 ```  
 <PropertyGroup>  
@@ -87,7 +88,8 @@ msbuild.exe myproj.proj /maxcpucount:3
 </MSBuild>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Uso di più processori per la compilazione di progetti](../msbuild/using-multiple-processors-to-build-projects.md)   
- [Scrittura di logger compatibili con più processori](../msbuild/writing-multi-processor-aware-loggers.md)   
- [Blog di ottimizzazione del parallelismo di compilazione di C++](http://go.microsoft.com/fwlink/?LinkId=251457)
+## <a name="see-also"></a>See Also  
+ [Using Multiple Processors to Build Projects](../msbuild/using-multiple-processors-to-build-projects.md)   
+ [Writing Multi-Processor-Aware Loggers](../msbuild/writing-multi-processor-aware-loggers.md)   
+ [Tuning C++ Build Parallelism blog](http://go.microsoft.com/fwlink/?LinkId=251457)
+

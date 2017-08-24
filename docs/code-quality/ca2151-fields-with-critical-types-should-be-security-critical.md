@@ -1,34 +1,51 @@
 ---
-title: "CA2151: I campi con tipi critici devono essere SecurityCritical | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'CA2151: Fields with critical types should be security critical | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 09db9d25-7d58-4725-a252-4a07baadf046
 caps.latest.revision: 4
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 4
----
-# CA2151: I campi con tipi critici devono essere SecurityCritical
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b80c378d146629c553bd3f228b58c501f04d79fe
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
+---
+# <a name="ca2151-fields-with-critical-types-should-be-security-critical"></a>CA2151: Fields with critical types should be security critical
 |||  
 |-|-|  
 |TypeName||  
 |CheckId|CA2151|  
-|Categoria|Microsoft.Security|  
-|Breaking Change|Interruzione|  
+|Category|Microsoft.Security|  
+|Breaking Change|Breaking|  
   
-## Causa  
- Un campo trasparente per la sicurezza o un campo critico sicuro è dichiarato.  Il tipo è specificato come critico per la sicurezza.  Di seguito è riportato un esempio.  
+## <a name="cause"></a>Cause  
+ A security transparent field or a safe critical field is declared. Its type is specified as security critical. For example:  
   
-```c#  
+```cs  
 [assembly: AllowPartiallyTrustedCallers]  
   
    [SecurityCritical]  
@@ -41,15 +58,15 @@ caps.handback.revision: 4
   
 ```  
   
- In questo esempio, `m_field` è un campo trasparente per la sicurezza di un tipo che è critico per la sicurezza.  
+ In this example, `m_field` is a security transparent field of a type that is security critical.  
   
-## Descrizione della regola  
- Per utilizzare i tipi critici per la sicurezza, il codice che fa riferimento al tipo deve essere critico per la sicurezza critico per la sicurezza e richiamabile da codice trasparente.  Questo vale anche se il riferimento è indiretto.  Ad esempio, quando si fa riferimento a un campo trasparente che dispone di un tipo critico, il codice deve essere critico per la sicurezza o critico per la sicurezza e richiamabile da codice trasparente.  Pertanto, un campo trasparente per la sicurezza o critico per la sicurezza e richiamabile da codice trasparente è fuorviante perché il codice trasparente non potrà comunque accedere al campo.  
+## <a name="rule-description"></a>Rule Description  
+ To use security critical types, the code that references the type must be either security critical or security safe critical. This is true even if the reference is indirect. For example, when you reference a transparent field that has a critical type, your code must be either security critical or security safe. Therefore, having a security transparent or security safe critical field is misleading because transparent code will still be unable to access the field.  
   
-## Come correggere le violazioni  
- Per correggere la violazione di questa regola, contrassegnare il campo con l'attributo <xref:System.Security.SecurityCriticalAttribute> oppure rendere il tipo a cui il campo fa riferimento trasparente per la sicurezza o critico per la sicurezza e richiamabile da codice trasparente.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, mark the field with the <xref:System.Security.SecurityCriticalAttribute> attribute, or make the type that is referenced by the field eith security transparent or safe critical.  
   
-```c#  
+```cs  
 // Fix 1: Make the referencing field security critical  
 [assembly: AllowPartiallyTrustedCallers]  
   
@@ -75,10 +92,10 @@ caps.handback.revision: 4
   
 ```  
   
-## Esclusione di avvisi  
- Non escludere un avviso da questa regola.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-### Codice  
+### <a name="code"></a>Code  
  [!code-cs[FxCop.Security.CA2145.TransparentMethodsShouldNotUseSuppressUnmanagedCodeSecurity#1](../code-quality/codesnippet/CSharp/ca2151-fields-with-critical-types-should-be-security-critical_1.cs)]  
   
-### Commenti
+### <a name="comments"></a>Comments

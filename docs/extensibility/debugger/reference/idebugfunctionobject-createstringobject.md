@@ -1,56 +1,73 @@
 ---
-title: "IDebugFunctionObject::CreateStringObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugFunctionObject::CreateStringObject"
-helpviewer_keywords: 
-  - "Metodo IDebugFunctionObject::CreateStringObject"
+title: IDebugFunctionObject::CreateStringObject | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugFunctionObject::CreateStringObject
+helpviewer_keywords:
+- IDebugFunctionObject::CreateStringObject method
 ms.assetid: fd6070ab-07d4-4ea1-8d71-b16592d6f1a7
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugFunctionObject::CreateStringObject
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 187ede6aa896abe58f006bd02a33f8201af9d9fa
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-crea un oggetto stringa.  
+---
+# <a name="idebugfunctionobjectcreatestringobject"></a>IDebugFunctionObject::CreateStringObject
+Creates a string object.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT CreateStringObject(   
-   LPCOLESTR      pcstrString,  
-   IDebugObject** ppObject  
+HRESULT CreateStringObject(   
+   LPCOLESTR      pcstrString,  
+   IDebugObject** ppObject  
 );  
 ```  
   
-```c#  
+```cs  
 int CreateStringObject(  
-   string      pcstrString,   
-   out IDebugObject ppOjbect  
+   string      pcstrString,   
+   out IDebugObject ppOjbect  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pcstrString`  
- \[in\]  il valore stringa per l'oggetto stringa.  
+ [in] The string value for the string object.  
   
  `ppObject`  
- \[out\]  Restituisce [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) un oggetto che rappresenta l'oggetto stringa appena creato.  
+ [out] Returns an [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object that represents the newly created string object.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce S\_OK, in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## Note  
- Chiamare questo metodo per creare un oggetto che rappresenta una stringa che è un parametro alla funzione che è rappresentata [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) dall'interfaccia.  
+## <a name="remarks"></a>Remarks  
+ Call this method to create an object that represents a string that is a parameter to the function which is represented by the [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) interface.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

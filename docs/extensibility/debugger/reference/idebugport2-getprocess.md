@@ -1,5 +1,5 @@
 ---
-title: IDebugPort2::GetProcess | Documenti di Microsoft
+title: IDebugPort2::GetProcess | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9ac8ce25feb21f2deaae733da6ff8bfc58ae79b0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b702153cc88fe31cd42a0fbb0ad151ea173160b1
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugport2getprocess"></a>IDebugPort2::GetProcess
-Ottiene il processo specificato in esecuzione su una porta.  
+Gets the specified process running on a port.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetProcess(   
@@ -48,24 +49,24 @@ HRESULT GetProcess(
 );  
 ```  
   
-```c#  
+```cs  
 int GetProcess(   
    AD_PROCESS_ID      ProcessId,  
    out IDebugProcess2 ppProcess  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `ProcessId`  
- [in] Un [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struttura che specifica l'identificatore di processo.  
+ [in] An [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) structure that specifies the process identifier.  
   
  `ppProcess`  
- [out] Restituisce un [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) oggetto che rappresenta il processo.  
+ [out] Returns an [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) object representing the process.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

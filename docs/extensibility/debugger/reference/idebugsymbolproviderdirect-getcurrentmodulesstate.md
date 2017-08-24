@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProviderDirect::GetCurrentModulesState | Documenti di Microsoft
+title: IDebugSymbolProviderDirect::GetCurrentModulesState | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,16 +29,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 1d9b8bbfb9982bcb54a3ef90e89442b111fc9d58
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 32949b1398a105cd42eee185d5e8795e632d1c8a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesstate"></a>IDebugSymbolProviderDirect::GetCurrentModulesState
-Recupera informazioni sul gruppo di simboli di cui il provider di simboli è un membro.  
+Retrieves information about the symbol group of which the symbol provider is a member.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetCurrentModulesState(  
@@ -47,25 +48,25 @@ HRESULT GetCurrentModulesState(
 );  
 ```  
   
-```c#  
+```cs  
 int GetCurrentModulesState(  
     out uint pState,  
     out uint count  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `pState`  
- [out] Lo stato del gruppo di provider di simboli.  
+ [out] The state of the symbol provider group.  
   
  `count`  
- [out] Numero di moduli del gruppo.  
+ [out] Number of modules in the group.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Note  
- Lo stato viene modificato ogni volta che un modulo viene aggiunto o rimosso dal gruppo di simboli. Pertanto, questo metodo può essere utilizzato per rilevare se è stato modificato un gruppo di simboli.  
+## <a name="remarks"></a>Remarks  
+ The state is changed whenever a module is added to, or removed from, the symbol group. Therefore, this method can be used to detect if a symbol group has been modified.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

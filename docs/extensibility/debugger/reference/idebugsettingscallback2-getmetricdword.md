@@ -1,61 +1,78 @@
 ---
-title: "IDebugSettingsCallback2::GetMetricDword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugSettingsCallback2::GetMetricDword"
+title: IDebugSettingsCallback2::GetMetricDword | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugSettingsCallback2::GetMetricDword
 ms.assetid: 831a5a1a-c4af-4520-9fdf-3a731aeff85c
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugSettingsCallback2::GetMetricDword
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e9e13d5994dbd423ffdff3e62e2cfedfe1a08490
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Recupera il valore di una metrica in base al nome.  
+---
+# <a name="idebugsettingscallback2getmetricdword"></a>IDebugSettingsCallback2::GetMetricDword
+Retrieves the value of a metric given its name.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetMetricDword(  
-   LPCWSTR pszType,  
-   REFGUID guidSection,  
-   LPCWSTR pszMetric,  
-   DWORD*  pdwValue  
+   LPCWSTR pszType,  
+   REFGUID guidSection,  
+   LPCWSTR pszMetric,  
+   DWORD*  pdwValue  
 );  
 ```  
   
-```c#  
+```cs  
 private int GetMetricDword(  
-   string   pszType,  
-   ref Guid guidSection,  
-   string   pszMetric,  
-   out uint pdwValue  
+   string   pszType,  
+   ref Guid guidSection,  
+   string   pszMetric,  
+   out uint pdwValue  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pszType`  
- \[in\]  Tipo di metrica.  
+ [in] Type of the metric.  
   
  `guidSection`  
- \[in\]  Identificatore univoco della sezione.  
+ [in] Unique identifier of the section.  
   
  `pszMetric`  
- \[in\]  Nome della metrica.  
+ [in] Name of the metric.  
   
  `pdwValue`  
- \[out\]  Restituisce il valore della metrica.  
+ [out] Returns the value of the metric.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

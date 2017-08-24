@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramDestroyEvent2::GetExitCode | Documenti di Microsoft
+title: IDebugProgramDestroyEvent2::GetExitCode | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: bbcb75ec829e38f9b768741d42d00a2ec6f85b66
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: c06c2b4b04463e7176732d1f0ba3a5ba83a0c715
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugprogramdestroyevent2getexitcode"></a>IDebugProgramDestroyEvent2::GetExitCode
-Ottiene il codice di uscita del programma.  
+Gets the program's exit code.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetExitCode(   
@@ -47,18 +48,18 @@ HRESULT GetExitCode(
 );  
 ```  
   
-```c#  
+```cs  
 int GetExitCode(   
    out uint pdwExit  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `pdwExit`  
- [out] Restituisce il codice di uscita del programma.  
+ [out] Returns the program's exit code.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugProgramDestroyEvent2](../../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)

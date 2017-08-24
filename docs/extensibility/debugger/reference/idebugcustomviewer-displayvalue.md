@@ -1,70 +1,87 @@
 ---
-title: "IDebugCustomViewer::DisplayValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomViewer::DisplayValue"
-helpviewer_keywords: 
-  - "IDebugCustomViewer::DisplayValue"
+title: IDebugCustomViewer::DisplayValue | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCustomViewer::DisplayValue
+helpviewer_keywords:
+- IDebugCustomViewer::DisplayValue
 ms.assetid: 7a538248-5ced-450e-97cd-13fabe35fb1c
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugCustomViewer::DisplayValue
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b3dd1c9297cbef09f376c764b33c4b0a92ebb562
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Questo metodo viene chiamato per visualizzare il valore specificato.  
+---
+# <a name="idebugcustomviewerdisplayvalue"></a>IDebugCustomViewer::DisplayValue
+This method is called to display the specified value.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT DisplayValue(  
-   HWND             hwnd,  
-   DWORD            dwID,  
-   IUnknown *       pHostServices,  
-   IDebugProperty3* pDebugProperty);  
+   HWND             hwnd,  
+   DWORD            dwID,  
+   IUnknown *       pHostServices,  
+   IDebugProperty3* pDebugProperty);  
 );  
 ```  
   
-```c#  
+```cs  
 int DisplayValue(  
-   IntPtr          hwnd,   
-   uint            dwID,   
-   object          pHostServices,   
-   IDebugProperty3 pDebugProperty  
+   IntPtr          hwnd,   
+   uint            dwID,   
+   object          pHostServices,   
+   IDebugProperty3 pDebugProperty  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `hwnd`  
- \[in\]  finestra padre  
+ [in] Parent window  
   
  `dwID`  
- \[in\]  ID per i visualizzatori personalizzati che supportano più di un tipo.  
+ [in] ID for custom viewers that support more than one type.  
   
  `pHostServices`  
- \[in\] Riservato.  Sempre impostato su null.  
+ [in] Reserved. Always set to null.  
   
  `pDebugProperty`  
- \[in\]  Collegare che può essere utilizzato per recuperare il valore da visualizzare.  
+ [in] Interface that can be used to retrieve the value to be displayed.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario restituisce il codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise returns error code.  
   
-## Note  
- La visualizzazione è “modale„ in quanto questo metodo viene creata la finestra necessaria, viene visualizzato il valore, attenderà l'input e chiudere la finestra, tutti prima di restituire il chiamante.  Ciò significa che il metodo deve gestire tutti gli aspetti della visualizzazione del valore della proprietà, dalla creazione di una finestra di output, di attendere l'input dell'utente, l'eliminazione permanente la finestra.  
+## <a name="remarks"></a>Remarks  
+ The display is "modal" in that this method will create the necessary window, display the value, wait for input, and close the window, all before returning to the caller. This means the method must handle all aspects of displaying the property's value, from creating a window for output, to waiting for user input, to destroying the window.  
   
- Per supportare modificare il valore dell'oggetto specificato [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) , è possibile utilizzare [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) il metodo \- se il valore può essere espresso come stringa.  In caso contrario, è necessario creare un interfaccia\-esclusiva analizzatore di espressioni che implementa questo `DisplayValue` metodo\-sullo stesso oggetto che implementa l'interfaccia di `IDebugProperty3` .  Questa interfaccia fornisce i metodi per modificare i dati di una dimensione o della complessità arbitraria.  
+ To support changing the value on the given [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) object, you can use the [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) method —if the value can be expressed as a string. Otherwise, it is necessary to create a custom interface—exclusive to the expression evaluator implementing this `DisplayValue` method—on the same object that implements the `IDebugProperty3` interface. This custom interface would supply methods for changing the data of an arbitrary size or complexity.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugCustomViewer](../../../extensibility/debugger/reference/idebugcustomviewer.md)   
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md)

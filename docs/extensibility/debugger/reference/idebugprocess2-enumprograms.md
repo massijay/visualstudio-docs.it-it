@@ -1,49 +1,66 @@
 ---
-title: "IDebugProcess2::EnumPrograms | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcess2::EnumPrograms"
-helpviewer_keywords: 
-  - "IDebugProcess2::EnumPrograms"
+title: IDebugProcess2::EnumPrograms | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProcess2::EnumPrograms
+helpviewer_keywords:
+- IDebugProcess2::EnumPrograms
 ms.assetid: f5b7295d-487d-464f-a4c6-d54175b07705
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugProcess2::EnumPrograms
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 2a15189438337ed67fade07d58efcd39778fbdc3
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Recupera un elenco di tutti i programmi contenuti da questo processo.  
+---
+# <a name="idebugprocess2enumprograms"></a>IDebugProcess2::EnumPrograms
+Retrieves a list of all the programs contained by this process.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT EnumPrograms(   
-   IEnumDebugPrograms2** ppEnum  
+HRESULT EnumPrograms(   
+   IEnumDebugPrograms2** ppEnum  
 );  
 ```  
   
-```c#  
-int EnumPrograms(   
-   out IEnumDebugPrograms2 ppEnum  
+```cs  
+int EnumPrograms(   
+   out IEnumDebugPrograms2 ppEnum  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `ppEnum`  
- \[out\]  Restituisce [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) un oggetto che contiene un elenco di tutti i programmi nel processo.  
+ [out] Returns an [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) object that contains a list of all the programs in the process.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)

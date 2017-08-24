@@ -1,5 +1,5 @@
 ---
-title: La scrittura nell&quot;archivio di impostazioni utente | Documenti di Microsoft
+title: Writing to the User Settings Store | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,51 +26,52 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 35ca397d57906a6316543325a08b118613fc2035
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f019716be5a5d4615a8bb02d898d16a00ef2ab89
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="writing-to-the-user-settings-store"></a>La scrittura nell'archivio di impostazioni utente
-Le impostazioni utente sono scrivibile impostazioni simili a quelle nel **Strumenti / opzioni** finestra di dialogo, finestre delle proprietà e altre finestre di dialogo. Estensioni di Visual Studio possono utilizzarli per archiviare piccole quantità di dati. Questa procedura dettagliata viene illustrato come aggiungere il blocco note di Visual Studio come uno strumento esterno per la lettura e scrittura all'archivio di impostazioni dell'utente.  
+# <a name="writing-to-the-user-settings-store"></a>Writing to the User Settings Store
+User settings are writeable settings like the ones in the **Tools / Options** dialog, properties windows, and certain other dialog boxes. Visual Studio extensions may use these to store small amounts of data. This walkthrough shows how to add Notepad to Visual Studio as an external tool by reading from and writing to the user settings store.  
   
-### <a name="backing-up-your-user-settings"></a>Backup delle impostazioni utente  
+### <a name="backing-up-your-user-settings"></a>Backing up Your User Settings  
   
-1.  È necessario essere in grado di reimpostare le impostazioni di strumenti esterni in modo che è possibile eseguire il debug e ripetere la procedura. A tale scopo, è necessario salvare le impostazioni originali in modo che sia possibile ripristinarle in base alle esigenze.  
+1.  You must be able to reset the External Tools settings so that you can debug and repeat the procedure. To do this, you must save the original settings so that you can restore them as required.  
   
-2.  Aprire Regedit.exe.  
+2.  Open Regedit.exe.  
   
-3.  Passare a strumenti HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External\\.  
+3.  Navigate to HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External Tools\\.  
   
     > [!NOTE]
-    >  Assicurarsi che si sta analizzando la chiave contenente \14.0Exp\ e non \14.0\\. Quando si esegue l'istanza sperimentale di Visual Studio, le impostazioni utente sono nell'hive del Registro di sistema "14.0Exp".  
+    >  Make sure that you are looking at the key that contains \14.0Exp\ and not \14.0\\. When you run the experimental instance of Visual Studio, your user settings are in the registry hive "14.0Exp".  
   
-4.  Pulsante destro del mouse sulla sottochiave \External Tools\ e quindi fare clic su **esportare**. Assicurarsi che **selezione** è selezionata.  
+4.  Right-click the \External Tools\ subkey, and then click **Export**. Make sure that **Selected branch** is selected.  
   
-5.  Salvare il file esterno Tools.reg risulta.  
+5.  Save the resulting External Tools.reg file.  
   
-6.  Successivamente, quando si desidera ripristinare le impostazioni di strumenti esterni, selezionare la chiave del Registro di sistema HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External strumenti e fare clic su **eliminare** menu di scelta rapida.  
+6.  Later, when you want to reset the External Tools settings, select the HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External Tools\ registry key and click **Delete** on the context menu.  
   
-7.  Quando il **conferma eliminazione chiave** viene visualizzata la finestra di dialogo, fare clic su **Sì**.  
+7.  When the **Confirm Key Delete** dialog box appears, click **Yes**.  
   
-8.  Il file esterno Tools.reg salvato in precedenza, fare clic su **Apri con**, quindi fare clic su **Editor del Registro di sistema**.  
+8.  Right-click the External Tools.reg file that you saved earlier, click **Open with**, and then click **Registry Editor**.  
   
-## <a name="writing-to-the-user-settings-store"></a>La scrittura nell'archivio di impostazioni utente  
+## <a name="writing-to-the-user-settings-store"></a>Writing to the User Settings Store  
   
-1.  Creare un progetto VSIX denominato UserSettingsStoreExtension e quindi aggiungere un comando personalizzato denominato UserSettingsStoreCommand. Per ulteriori informazioni su come creare un comando personalizzato, vedere [creazione di un'estensione con un comando di Menu](../extensibility/creating-an-extension-with-a-menu-command.md)  
+1.  Create a VSIX project named UserSettingsStoreExtension and then add a custom command named UserSettingsStoreCommand. For more information about how to create a custom command, see [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md)  
   
-2.  In UserSettingsStoreCommand.cs, aggiungere le seguenti istruzioni using:  
+2.  In UserSettingsStoreCommand.cs, add the following using statements:  
   
-    ```c#  
+    ```cs  
     using System.Collections.Generic;  
     using Microsoft.VisualStudio.Settings;  
     using Microsoft.VisualStudio.Shell.Settings;  
     ```  
   
-3.  In MenuItemCallback, eliminare il corpo del metodo e ottiene l'utente archiviano le impostazioni, come indicato di seguito:  
+3.  In MenuItemCallback, delete the body of the method and get the user settings store, as follows:  
   
-    ```c#  
+    ```cs  
     private void MenuItemCallback(object sender, EventArgs e)  
     {  
         SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider);  
@@ -78,9 +79,9 @@ Le impostazioni utente sono scrivibile impostazioni simili a quelle nel **Strume
     }  
     ```  
   
-4.  Ora Scopri se il blocco note è già impostato come uno strumento esterno. È necessario scorrere tutti gli strumenti esterni per determinare se l'impostazione ToolCmd è "Notepad", come indicato di seguito:  
+4.  Now find out whether Notepad is already set as an external tool. You need to iterate through all the external tools to determine whether the ToolCmd setting is "Notepad", as follows:  
   
-    ```c#  
+    ```cs  
     private void MenuItemCallback(object sender, EventArgs e)  
     {  
         SettingsManager settingsManager = new ShellSettingsManager(ServiceProvider);  
@@ -102,7 +103,7 @@ Le impostazioni utente sono scrivibile impostazioni simili a quelle nel **Strume
   
     ```  
   
-5.  Se il blocco note non è stato impostato come uno strumento esterno, impostarlo come segue:  
+5.  If Notepad hasn't been set as an external tool, set it as follows:  
   
     ```vb  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -138,10 +139,10 @@ Le impostazioni utente sono scrivibile impostazioni simili a quelle nel **Strume
     }  
     ```  
   
-6.  Test del codice. Tenere presente che aggiunge il blocco note come uno strumento esterno, pertanto è necessario ripristinare il Registro di sistema prima dell'esecuzione di una seconda volta.  
+6.  Test the code. Remember that it adds Notepad as an External Tool, so you must roll back the registry before running it a second time.  
   
-7.  Compilare il codice e avviare il debug.  
+7.  Build the code and start debugging.  
   
-8.  Nel **strumenti** menu, fare clic su **UserSettingsStoreCommand richiamare**. Verrà aggiunto il blocco note per la **strumenti** menu.  
+8.  On the **Tools** menu, click **Invoke UserSettingsStoreCommand**. This will add Notepad to the **Tools** menu.  
   
-9. Ora verrà visualizzato il blocco note dal menu Strumenti / opzioni di menu e fare clic su **il blocco note** dovrebbe richiamare un'istanza del blocco note.
+9. Now you should see Notepad on the Tools / Options menu, and clicking **Notepad** should bring up an instance of Notepad.

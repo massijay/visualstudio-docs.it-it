@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsNullReference | Documenti di Microsoft
+title: IDebugObject::IsNullReference | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 8dc2376af276a99dd63bbc4d4ffd89825acc1762
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e43841d4cc991d2fee0631674aac705ddf386b1f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugobjectisnullreference"></a>IDebugObject::IsNullReference
-Verifica se questo oggetto è un riferimento null.  
+Tests whether this object is a null reference.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT IsNullReference(   
@@ -47,21 +48,21 @@ HRESULT IsNullReference(
 );  
 ```  
   
-```c#  
+```cs  
 int IsNullReference(  
    out int pfIsNull  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `pfIsNull`  
- [out] Restituisce diverso da zero (`TRUE`) se l'oggetto è un riferimento null; in caso contrario, restituisce zero (`FALSE`).  
+ [out] Returns non-zero (`TRUE`) if this object is a null reference; otherwise, returns zero (`FALSE`).  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce S_OK; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Note  
- Un riferimento null significa che un oggetto vuoto o un oggetto che non è stato assegnato a.  
+## <a name="remarks"></a>Remarks  
+ A null reference means an empty object or an object that has not been assigned to.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

@@ -1,60 +1,77 @@
 ---
-title: "IDebugGenericParamField::GetConstraints | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugGenericParamField::GetConstraints"
-  - "GetConstraints"
+title: IDebugGenericParamField::GetConstraints | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugGenericParamField::GetConstraints
+- GetConstraints
 ms.assetid: 86a78b5a-ee0f-4999-a0ba-919d3dc7d969
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugGenericParamField::GetConstraints
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b6f6c828328cefd57589ce84bdd9c8b5fe75eb4a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Recupera i vincoli associati a questo parametro generico.  
+---
+# <a name="idebuggenericparamfieldgetconstraints"></a>IDebugGenericParamField::GetConstraints
+Retrieves the constraints that are associated with this generic parameter.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetConstraints(  
-   ULONG32       cConstraints,  
-   IDebugField** ppConstraints,  
-   ULONG32*      pcConstraints  
+   ULONG32       cConstraints,  
+   IDebugField** ppConstraints,  
+   ULONG32*      pcConstraints  
 );  
 ```  
   
-```c#  
+```cs  
 int GetConstraints(  
-   uint              cConstraints,  
-   out IDebugField[] ppConstraints,  
-   ref uint          pcConstraints  
+   uint              cConstraints,  
+   out IDebugField[] ppConstraints,  
+   ref uint          pcConstraints  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `cConstraints`  
- \[in\]  Numero dei vincoli.  
+ [in] Number of constraints.  
   
  `ppConstraints`  
- \[out\]  Restituisce una matrice contenente vincoli associati a questo campo.  
+ [out] Returns an array that contains the constraints associated with this field.  
   
  `pcConstraints`  
- \[in, out\]  Numero di vincoli nella matrice di `ppConstraints` .  
+ [in, out] Number of constraints in the `ppConstraints` array.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto **di CDebugGenericParamFieldType** che espone [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) l'interfaccia.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugGenericParamFieldType** object that exposes the [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) interface.  
   
 ```cpp#  
 HRESULT CDebugGenericParamFieldType::GetConstraints(  
@@ -149,5 +166,5 @@ Error:
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)

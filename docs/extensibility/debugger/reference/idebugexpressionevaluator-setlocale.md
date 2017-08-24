@@ -1,51 +1,68 @@
 ---
-title: "IDebugExpressionEvaluator::SetLocale | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugExpressionEvaluator::SetLocale"
-helpviewer_keywords: 
-  - "Metodo IDebugExpressionEvaluator::SetLocale"
+title: IDebugExpressionEvaluator::SetLocale | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugExpressionEvaluator::SetLocale
+helpviewer_keywords:
+- IDebugExpressionEvaluator::SetLocale method
 ms.assetid: d3d2027d-74e2-4ae6-bcc7-59d12f873b7c
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugExpressionEvaluator::SetLocale
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 5ff05b8bd13d5420db663c6e8581804ed4430ddc
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Questo metodo imposta il linguaggio da utilizzare per creare i risultati stampabili.  
+---
+# <a name="idebugexpressionevaluatorsetlocale"></a>IDebugExpressionEvaluator::SetLocale
+This method sets the language to use to create printable results.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT SetLocale(   
-   WORD wLangID  
+HRESULT SetLocale(   
+   WORD wLangID  
 );  
 ```  
   
-```c#  
+```cs  
 int SetLocale(  
-   ushort wLangID  
+   ushort wLangID  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `wLangID`  
- \[in\]  L'identificatore del linguaggio.  
+ [in] The language identifier.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- Questo metodo può essere chiamato più volte durante l'analizzatore di \(EE\) espressioni è caricato, pertanto EE deve essere in grado di passare i linguaggi immediatamente.  L'EE utilizza queste impostazioni locali per restituire i messaggi di errore e stringhe nel linguaggio appropriato.  
+## <a name="remarks"></a>Remarks  
+ This method may be called many times while the expression evaluator (EE) is loaded, so the EE must be able to switch languages on the fly. The EE uses this locale to return error messages and strings in the appropriate language.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

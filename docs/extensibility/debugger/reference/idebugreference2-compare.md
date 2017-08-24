@@ -1,54 +1,71 @@
 ---
-title: "IDebugReference2::Compare | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugReference2::Compare"
-helpviewer_keywords: 
-  - "IDebugReference2::Compare"
+title: IDebugReference2::Compare | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugReference2::Compare
+helpviewer_keywords:
+- IDebugReference2::Compare
 ms.assetid: 3361c495-2673-4b7c-82e3-dee74e1fa58d
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugReference2::Compare
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f4de78b3e6886643a51c417683921e175ececeb7
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Confronta un riferimento a un altro.  Riservato per un utilizzo futuro.  
+---
+# <a name="idebugreference2compare"></a>IDebugReference2::Compare
+Compares one reference to another. Reserved for future use.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT Compare (   
-   REFERENCE_COMPARE dwCompare,  
-   IDebugReference2* pReference  
+HRESULT Compare (   
+   REFERENCE_COMPARE dwCompare,  
+   IDebugReference2* pReference  
 );  
 ```  
   
-```c#  
-int Compare (   
-   enum_REFERENCE_COMPARE dwCompare,  
-   IDebugReference2       pReference  
+```cs  
+int Compare (   
+   enum_REFERENCE_COMPARE dwCompare,  
+   IDebugReference2       pReference  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `dwCompare`  
- \[in\]  Un valore [REFERENCE\_COMPARE](../../../extensibility/debugger/reference/reference-compare.md) dell'enumerazione che specifica l'operazione di confronto, ad esempio, uguale, minore di, o maggiore di.  
+ [in] A value from the [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md) enumeration that specifies the comparison operation, for example, equal to, less than, or greater than.  
   
  `pReference`  
- \[in\]  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) Un oggetto che rappresenta il riferimento da confrontare su.  
+ [in] An [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) object representing the reference to be compared to.  
   
-## Valore restituito  
- Restituisce sempre `E_NOTIMPL`.  
+## <a name="return-value"></a>Return Value  
+ Always returns `E_NOTIMPL`.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   
- [REFERENCE\_COMPARE](../../../extensibility/debugger/reference/reference-compare.md)
+ [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md)

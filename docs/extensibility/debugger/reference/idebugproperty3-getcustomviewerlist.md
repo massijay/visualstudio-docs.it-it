@@ -1,71 +1,88 @@
 ---
-title: "IDebugProperty3::GetCustomViewerList | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProperty3::GetCustomViewerList"
-helpviewer_keywords: 
-  - "IDebugProperty3::GetCustomViewerList"
+title: IDebugProperty3::GetCustomViewerList | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProperty3::GetCustomViewerList
+helpviewer_keywords:
+- IDebugProperty3::GetCustomViewerList
 ms.assetid: 74490fd8-6f44-4618-beea-dab64961bb8a
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugProperty3::GetCustomViewerList
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 3939aeea8c6d732c9091fac46522395186ebc08b
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Ottiene un elenco di visualizzatori personalizzati associato a questa proprietà.  
+---
+# <a name="idebugproperty3getcustomviewerlist"></a>IDebugProperty3::GetCustomViewerList
+Gets a list of custom viewers associated with this property.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetCustomViewerList(  
-   ULONG                celtSkip,  
-   ULONG                celtRequested,  
-   DEBUG_CUSTOM_VIEWER* rgViewers,  
-   ULONG*               pceltFetched  
+HRESULT GetCustomViewerList(  
+   ULONG                celtSkip,  
+   ULONG                celtRequested,  
+   DEBUG_CUSTOM_VIEWER* rgViewers,  
+   ULONG*               pceltFetched  
 );  
 ```  
   
-```c#  
-int GetCustomViewerList(  
-   uint                  celtSkip,  
-   uint                  celtRequested,  
-   DEBUG_CUSTOM_VIEWER[] rgViewers,  
-   out uint              pceltFetched  
+```cs  
+int GetCustomViewerList(  
+   uint                  celtSkip,  
+   uint                  celtRequested,  
+   DEBUG_CUSTOM_VIEWER[] rgViewers,  
+   out uint              pceltFetched  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `celtSkip`  
- \[in\]  Il numero dei visualizzatori da ignorare.  
+ [in] The number of viewers to skip over.  
   
  `celtRequested`  
- \[in\]  Il numero dei visualizzatori da recuperare \(anche specifica la dimensione della matrice di `rgViewers` \).  
+ [in] The number of viewers to retrieve (also specifies the size of the `rgViewers` array).  
   
  `rgViewers`  
- \[in, out\]  Matrice [DEBUG\_CUSTOM\_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) di strutture da riempire.  
+ [in, out] Array of [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) structures to be filled in.  
   
  `pceltFetched`  
- \[out\]  Il numero effettivo dei visualizzatori restituiti.  
+ [out] The actual number of viewers returned.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- Per supportare i visualizzatori di tipi, questo metodo inoltra la chiamata [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) al metodo.  Se l'analizzatore di espressioni supporta anche i visualizzatori personalizzati per questo tipo della proprietà, questo metodo può collegare i visualizzatori personalizzati adatti all'elenco.  
+## <a name="remarks"></a>Remarks  
+ To support type visualizers, this method forwards the call to the [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) method. If the expression evaluator also supports custom viewers for this property's type, this method can append the appropriate custom viewers to the list.  
   
- Vedere [Tipo visualizzatore e Visualizzatore personalizzato](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md) per informazioni dettagliate sulle differenze tra i visualizzatori di tipi e i visualizzatori personalizzati.  
+ See [Type Visualizer and Custom Viewer](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md) for details on the differences between type visualizers and custom viewers.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto **di CProperty** che espone [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) l'interfaccia.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CProperty** object that exposes the [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) interface.  
   
 ```cpp#  
 STDMETHODIMP CProperty::GetCustomViewerList(ULONG celtSkip, ULONG celtRequested, DEBUG_CUSTOM_VIEWER* prgViewers, ULONG* pceltFetched)  
@@ -86,8 +103,8 @@ STDMETHODIMP CProperty::GetCustomViewerList(ULONG celtSkip, ULONG celtRequested,
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
- [DEBUG\_CUSTOM\_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md)   
+ [DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md)   
  [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md)   
- [Tipo visualizzatore e Visualizzatore personalizzato](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)
+ [Type Visualizer and Custom Viewer](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)

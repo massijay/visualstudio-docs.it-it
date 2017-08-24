@@ -1,73 +1,90 @@
 ---
-title: "IDebugStackFrame3::InterceptCurrentException | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugStackFrame3::InterceptCurrentException"
-helpviewer_keywords: 
-  - "IDebugStackFrame3::InterceptCurrentException"
+title: IDebugStackFrame3::InterceptCurrentException | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugStackFrame3::InterceptCurrentException
+helpviewer_keywords:
+- IDebugStackFrame3::InterceptCurrentException
 ms.assetid: 116c7324-7645-4c15-b484-7a5cdd065ef5
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugStackFrame3::InterceptCurrentException
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b1b556058cbdf4e59e091e1b75248de5fde9eb51
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Chiamato dal debugger nello stack frame corrente quando si desidera rilevare l'eccezione corrente.  
+---
+# <a name="idebugstackframe3interceptcurrentexception"></a>IDebugStackFrame3::InterceptCurrentException
+Called by the debugger on the current stack frame when it wants to intercept the current exception.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT InterceptCurrentException(  
-   INTERCEPT_EXCEPTION_ACTION dwFlags,  
-   UINT64*                    pqwCookie  
+   INTERCEPT_EXCEPTION_ACTION dwFlags,  
+   UINT64*                    pqwCookie  
 );  
 ```  
   
-```c#  
+```cs  
 int InterceptCurrentException(  
-   uint dwFlags,   
-   out  ulong pqwCookie  
+   uint dwFlags,   
+   out  ulong pqwCookie  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `dwFlags`  
- \[in\]  Specifica le azioni da eseguire.  Attualmente, solo [INTERCEPT\_EXCEPTION\_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md) il valore `IEA_INTERCEPT` è supportato e deve essere specificato.  
+ [in] Specifies different actions. Currently, only the [INTERCEPT_EXCEPTION_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md) value `IEA_INTERCEPT` is supported and must be specified.  
   
  `pqwCookie`  
- \[out\]  Valore univoco che identifica un'eccezione specifica.  
+ [out] Unique value identifying a particular exception.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce S\_OK, in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
- Di seguito sono la maggior parte dei risultati di errore comune.  
+ The following are the most common error returns.  
   
-|delle modifiche a..."|Descrizione|  
-|---------------------------|-----------------|  
-|`E_EXCEPTION_CANNOT_BE_INTERCEPTED`|L'eccezione corrente non può essere rilevata.|  
-|`E_EXCEPTION_CANNOT_UNWIND_ABOVE_CALLBACK`|Il frame corrente di esecuzione non è stato trovato un gestore di nuovo.|  
-|`E_INTERCEPT_CURRENT_EXCEPTION_NOT_SUPPORTED`|Questo metodo non è supportato per il frame.|  
+|Error|Description|  
+|-----------|-----------------|  
+|`E_EXCEPTION_CANNOT_BE_INTERCEPTED`|The current exception cannot be intercepted.|  
+|`E_EXCEPTION_CANNOT_UNWIND_ABOVE_CALLBACK`|The current execution frame hasn't been searched for a handler yet.|  
+|`E_INTERCEPT_CURRENT_EXCEPTION_NOT_SUPPORTED`|This method is not supported for this frame.|  
   
-## Note  
- Quando viene generata un'eccezione, il controllo di notevoli miglioramenti del debugger dal runtime ai punti chiave durante il processo di gestione delle eccezioni.  Durante questi punti principali, il debugger può richiedere lo stack frame corrente se il frame desidera rilevare l'eccezione.  In questo modo, viene generata un'eccezione intercettata è essenzialmente un gestore di eccezioni immediatamente per uno stack frame, anche se lo stack frame non dispone di un gestore di eccezioni, ad esempio un blocco try\/catch nel codice programma\).  
+## <a name="remarks"></a>Remarks  
+ When an exception is thrown, the debugger gains control from the run time at key points during the exception handling process. During these key moments, the debugger can ask the current stack frame if the frame wants to intercept the exception. In this way, an intercepted exception is essentially an on-the-fly exception handler for a stack frame, even if that stack frame doesn't have an exception handler (for example, a try/catch block in the program code).  
   
- Quando il debugger desidera sapere se l'eccezione viene rilevata, chiama questo metodo per l'oggetto corrente dello stack frame.  Questo metodo è responsabile della gestione dei dettagli dell'eccezione.  Se [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md) l'interfaccia non viene distribuita o il metodo di `InterceptStackException` restituisce qualsiasi errore, il debugger continua a elaborare l'eccezione generale.  
+ When the debugger wants to know if the exception should be intercepted, it calls this method on the current stack frame object. This method is responsible for handling all details of the exception. If the [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md) interface is not implemented or the `InterceptStackException` method returns any error, then the debugger continues processing the exception normally.  
   
 > [!NOTE]
->  Le eccezioni possono essere rilevate solo nel codice gestito, ovvero, quando il programma sottoposto a debug è in esecuzione nel runtime di .NET.  Naturalmente, gli implementatori di terze parti di linguaggio possono implementare `InterceptStackException` nei propri motori di debug se quindi scegliere.  
+>  Exceptions can be intercepted only in managed code, that is, when the program being debugged is running under the .NET run time. Of course, third-party language implementers can implement `InterceptStackException` in their own debug engines if they so choose.  
   
- Dopo aver l'intercettazione viene completata, [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) viene segnalato.  
+ After the interception is complete, an [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) is signaled.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)   
- [INTERCEPT\_EXCEPTION\_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md)   
+ [INTERCEPT_EXCEPTION_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md)   
  [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md)

@@ -1,5 +1,5 @@
 ---
-title: Richiamo della trasformazione del testo in un'estensione di Visual Studio | Documenti Microsoft
+title: Invoking Text Transformation in a VS Extension | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,18 +26,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: MT
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 24e19e5752534fb8391fa3e11f250c4a7ed8a737
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: cb2c19f3c03de4626bfcbc57475c8318c927d112
 ms.contentlocale: it-it
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="invoking-text-transformation-in-a-vs-extension"></a>Richiamo della trasformazione del testo in un'estensione VS
-Se si scrive un'estensione di Visual Studio, ad esempio un comando di menu o [linguaggio specifico di dominio](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md), è possibile utilizzare il servizio del modello di testo per trasformare i modelli di testo. Ottenere il servizio <xref:Microsoft.VisualStudio.TextTemplating.VSHost.STextTemplating> ed eseguirne il cast su <xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating>.  
+# <a name="invoking-text-transformation-in-a-vs-extension"></a>Invoking Text Transformation in a VS Extension
+If you are writing a Visual Studio extension such as a menu command or [domain-specific language](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md), you can use the text templating service to transform text templates. Get the <xref:Microsoft.VisualStudio.TextTemplating.VSHost.STextTemplating> service and cast it to <xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating>.  
   
-## <a name="getting-the-text-templating-service"></a>Come ottenere il servizio del modello di testo  
+## <a name="getting-the-text-templating-service"></a>Getting the text templating service  
   
-```c#  
+```cs  
 using Microsoft.VisualStudio.TextTemplating;  
 using Microsoft.VisualStudio.TextTemplating.VSHost;  
 ...  
@@ -52,14 +52,14 @@ string result = t4.ProcessTemplate(filePath, System.IO.File.ReadAllText(filePath
   
 ```  
   
-## <a name="passing-parameters-to-the-template"></a>Passaggio dei parametri al modello  
- È possibile passare i parametri nel modello. Nel modello è possibile ottenere i valori dei parametri tramite la direttiva `<#@parameter#>`.  
+## <a name="passing-parameters-to-the-template"></a>Passing parameters to the template  
+ You can pass parameters into the template. Inside the template, you can get the parameter values by using the `<#@parameter#>` directive.  
   
- Per il tipo di un parametro, è necessario utilizzare un tipo serializzabile o di cui può essere eseguito il marshalling. In altri termini, è necessario dichiarare il tipo con <xref:System.SerializableAttribute> oppure deve essere derivata da <xref:System.MarshalByRefObject>. Questa restrizione è necessaria perché il modello di testo viene eseguito in un AppDomain separato. Tutti i tipi incorporati, ad esempio **System. String** e **System. Int32** sono serializzabili.  
+ For the type of a parameter, you must use a type that is serializable or that can be marshaled. That is, the type must be declared with <xref:System.SerializableAttribute>, or it must be derived from <xref:System.MarshalByRefObject>. This restriction is necessary because the text template is executed in a separate AppDomain. All built-in types such as **System.String** and **System.Int32** are serializable.  
   
- Per passare i valori dei parametri, il codice chiamante può inserire i valori nel dizionario `Session` o in <xref:System.Runtime.Remoting.Messaging.CallContext>.  
+ To pass parameter values, the calling code can place values either in the `Session` dictionary, or in the <xref:System.Runtime.Remoting.Messaging.CallContext>.  
   
- Nell'esempio seguente per trasformare un modello di testo breve vengono utilizzati entrambi i metodi:  
+ The following example uses both methods to transform a short test template:  
   
 ```  
 using Microsoft.VisualStudio.TextTemplating;  
@@ -93,12 +93,12 @@ string result = t4.ProcessTemplate("",
   
 ```  
   
-## <a name="error-reporting-and-the-output-directive"></a>Segnalazione errori e direttiva Output  
- Qualsiasi errore che si verifica durante l'elaborazione verrà visualizzato nella finestra di errore di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. È inoltre possibile ricevere una notifica degli errori specificando un callback che implementa <xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplatingCallback>.  
+## <a name="error-reporting-and-the-output-directive"></a>Error Reporting and the Output Directive  
+ Any errors that arise during processing will be displayed in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] error window. In addition, you can be notified of errors by specifying a callback that implements <xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplatingCallback>.  
   
- Se si desidera scrivere la stringa di risultato in un file, è utile conoscere quale estensione di file e codifica sono state specificate nella direttiva `<#@output#>` del modello. Anche queste informazioni verranno passate al callback. Per ulteriori informazioni, vedere [direttiva Output T4](../modeling/t4-output-directive.md).  
+ If you want to write the result string to a file, you might want to know what file extension and encoding have been specified in the `<#@output#>` directive in the template. This information will also be passed to your callback. For more information, see [T4 Output Directive](../modeling/t4-output-directive.md).  
   
-```c#  
+```cs  
 void ProcessMyTemplate(string MyTemplateFile)  
 {  
   string templateContent = File.ReadAllText(MyTemplateFile);  
@@ -139,7 +139,7 @@ class T4Callback : ITextTemplatingCallback
   
 ```  
   
- Il codice può essere testato con un file modello simile a quello seguente:  
+ The code can be tested with a template file similar to the following:  
   
 ```  
 <#@output extension=".htm" encoding="ASCII"#>  
@@ -148,18 +148,18 @@ class T4Callback : ITextTemplatingCallback
 Sample text.  
 ```  
   
- L'avviso del compilatore verrà visualizzato nella finestra di errore di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] e genererà inoltre una chiamata a `ErrorCallback`.  
+ The compiler warning will appear in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] error window, and it will also generate a call to `ErrorCallback`.  
   
-## <a name="reference-parameters"></a>Parametri di riferimento  
- È possibile passare i valori da un modello di testo tramite una classe di parametri derivata da <xref:System.MarshalByRefObject>.  
+## <a name="reference-parameters"></a>Reference parameters  
+ You can pass values out of a text template by using a parameter class that is derived from <xref:System.MarshalByRefObject>.  
   
-## <a name="related-topics"></a>Argomenti correlati  
- Per generare testo da un modello di testo pre-elaborato:  
- Chiamare il metodo `TransformText()` della classe generata. Per ulteriori informazioni, vedere [la generazione di testo in fase di esecuzione con modelli di testo T4](../modeling/run-time-text-generation-with-t4-text-templates.md).  
+## <a name="related-topics"></a>Related Topics  
+ To generate text from a preprocessed text template:  
+ Call the `TransformText()` method of the generated class. For more information, see [Run-Time Text Generation with T4 Text Templates](../modeling/run-time-text-generation-with-t4-text-templates.md).  
   
- Per generare testo all'esterno di un'estensione di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]:  
- Definire un host personalizzato. Per ulteriori informazioni, vedere [l'elaborazione di modelli di testo tramite un Host personalizzato](../modeling/processing-text-templates-by-using-a-custom-host.md).  
+ To generate text outside a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] extension:  
+ Define a custom host. For more information, see [Processing Text Templates by using a Custom Host](../modeling/processing-text-templates-by-using-a-custom-host.md).  
   
- Per generare codice sorgente che può essere compilato ed eseguito in un secondo momento:  
- Chiamare il metodo `t4.PreprocessTemplate()` di <xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating>.
+ To generate source code that can later be compiled and executed:  
+ Call the `t4.PreprocessTemplate()` method of <xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating>.
 

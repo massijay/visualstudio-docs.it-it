@@ -1,58 +1,75 @@
 ---
-title: "IEEVisualizerService::GetPropertyProxy | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEEVisualizerService::GetPropertyProxy"
-helpviewer_keywords: 
-  - "Metodo IEEVisualizerService::GetPropertyProxy"
+title: IEEVisualizerService::GetPropertyProxy | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEEVisualizerService::GetPropertyProxy
+helpviewer_keywords:
+- IEEVisualizerService::GetPropertyProxy method
 ms.assetid: 748750f4-76e7-4580-9da2-afba07681b37
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IEEVisualizerService::GetPropertyProxy
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: bd2977128483038775bbe46060d04fb33abb1bdc
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Questo metodo restituisce un proxy per un oggetto della proprietà.  
+---
+# <a name="ieevisualizerservicegetpropertyproxy"></a>IEEVisualizerService::GetPropertyProxy
+This method returns a proxy for a property object.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetPropertyProxy(  
-   DWORD                  dwID,  
-   IPropertyProxyEESide** proxy  
+HRESULT GetPropertyProxy(  
+   DWORD                  dwID,  
+   IPropertyProxyEESide** proxy  
 );  
 ```  
   
-```c#  
-int GetPropertyProxy(  
-   uint                     dwID,  
-   out IPropertyProxyEESide proxy  
+```cs  
+int GetPropertyProxy(  
+   uint                     dwID,  
+   out IPropertyProxyEESide proxy  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `dwID`  
- \[in\]  ID del proxy della proprietà da recuperare.  
+ [in] ID of property proxy to retrieve.  
   
  `proxy`  
- \[out\]  proxy desiderato implementato [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) in un'interfaccia.  
+ [out] Desired proxy implemented in an [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) interface.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) passa la richiesta a questo metodo come parte del supporto per i visualizzatori di tipi.  
+## <a name="remarks"></a>Remarks  
+ [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md) passes the request to this method as part of its support for type visualizers.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)   
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   
  [GetPropertyProxy](../../../extensibility/debugger/reference/ipropertyproxyprovider-getpropertyproxy.md)

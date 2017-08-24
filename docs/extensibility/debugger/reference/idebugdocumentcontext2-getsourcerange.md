@@ -1,60 +1,77 @@
 ---
-title: "IDebugDocumentContext2::GetSourceRange | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentContext2::GetSourceRange"
-helpviewer_keywords: 
-  - "IDebugDocumentContext2::GetSourceRange"
+title: IDebugDocumentContext2::GetSourceRange | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugDocumentContext2::GetSourceRange
+helpviewer_keywords:
+- IDebugDocumentContext2::GetSourceRange
 ms.assetid: 5903c75e-5390-4d13-9314-1ee276255313
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugDocumentContext2::GetSourceRange
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: ae59dab54351e01e20afdc401bb8a374bf3069f1
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Ottiene l'intervallo del codice sorgente del contesto del documento.  
+---
+# <a name="idebugdocumentcontext2getsourcerange"></a>IDebugDocumentContext2::GetSourceRange
+Gets the source code range of this document context.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetSourceRange(   
-   TEXT_POSITION* pBegPosition,  
-   TEXT_POSITION* pEndPosition  
+HRESULT GetSourceRange(   
+   TEXT_POSITION* pBegPosition,  
+   TEXT_POSITION* pEndPosition  
 );  
 ```  
   
-```c#  
-int GetSourceRange(   
-   TEXT_POSITION[] pBegPosition,  
-   TEXT_POSITION[] pEndPosition  
+```cs  
+int GetSourceRange(   
+   TEXT_POSITION[] pBegPosition,  
+   TEXT_POSITION[] pEndPosition  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pBegPosition`  
- \[in, out\]  [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md) Una struttura che verrà riempita con posizione iniziale.  Impostare questo argomento con un valore null se tali informazioni non sono necessarie.  
+ [in, out] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) structure that is filled in with the starting position. Set this argument to a null value if this information is not needed.  
   
  `pEndPosition`  
- \[in, out\]  [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md) Una struttura che verrà riempita con posizione finale.  Impostare questo argomento con un valore null se tali informazioni non sono necessarie.  
+ [in, out] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) structure that is filled in with the ending position. Set this argument to a null value if this information is not needed.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- Un intervallo di origine è l'intero intervallo di codice sorgente, dall'istruzione corrente di nuovo immediatamente successivo all'istruzione precedente che codice fornito.  L'intervallo di origine in genere utilizzato per combinare le istruzioni originali, inclusi i commenti, con il codice della finestra disassembly.  
+## <a name="remarks"></a>Remarks  
+ A source range is the entire range of source code, from the current statement back to just after the previous statement that contributed code. The source range is typically used for mixing source statements, including comments, with code in the disassembly window.  
   
- Per ottenere l'intervallo solo per le istruzioni del codice contenute nel contesto del documento, chiamare [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md) il metodo.  
+ To get the range for just the code statements contained within this document context, call the [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md) method.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)   
  [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)   
- [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md)
+ [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

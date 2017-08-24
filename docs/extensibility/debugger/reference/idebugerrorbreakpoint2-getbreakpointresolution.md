@@ -1,49 +1,66 @@
 ---
-title: "IDebugErrorBreakpoint2::GetBreakpointResolution | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugErrorBreakpoint2::GetBreakpointResolution"
-helpviewer_keywords: 
-  - "IDebugErrorBreakpoint2::GetBreakpointResolution"
+title: IDebugErrorBreakpoint2::GetBreakpointResolution | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugErrorBreakpoint2::GetBreakpointResolution
+helpviewer_keywords:
+- IDebugErrorBreakpoint2::GetBreakpointResolution
 ms.assetid: 1c2324ed-2a11-4e63-8f3a-f420c7a4018b
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugErrorBreakpoint2::GetBreakpointResolution
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 2e297efd8111b970523e284506ce60bf9b0c8628
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Ottiene la risoluzione degli errori del punto di interruzione che descrive l'errore.  
+---
+# <a name="idebugerrorbreakpoint2getbreakpointresolution"></a>IDebugErrorBreakpoint2::GetBreakpointResolution
+Gets the breakpoint error resolution that describes the error.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetBreakpointResolution(   
-   IDebugErrorBreakpointResolution2** ppErrorResolution  
+HRESULT GetBreakpointResolution(   
+   IDebugErrorBreakpointResolution2** ppErrorResolution  
 );  
 ```  
   
-```c#  
-int GetBreakpointResolution(   
-   out IDebugErrorBreakpointResolution2 ppErrorResolution  
+```cs  
+int GetBreakpointResolution(   
+   out IDebugErrorBreakpointResolution2 ppErrorResolution  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `ppErrorResolution`  
- \[out\]  restituisce [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) un oggetto che descrive l'errore.  
+ [out] Returns an [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) object that describes the error.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)   
  [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md)

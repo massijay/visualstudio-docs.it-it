@@ -1,61 +1,78 @@
 ---
-title: "IDebugSettingsCallback2::GetMetricGuid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugSettingsCallback2::GetMetricGuid"
+title: IDebugSettingsCallback2::GetMetricGuid | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugSettingsCallback2::GetMetricGuid
 ms.assetid: 91092763-3362-4857-adf0-231bc1254206
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugSettingsCallback2::GetMetricGuid
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: e41173b13100c2e0e9ccf4c91f56b4fd94889958
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Recupera l'identificatore univoco di metrica in base al nome.  
+---
+# <a name="idebugsettingscallback2getmetricguid"></a>IDebugSettingsCallback2::GetMetricGuid
+Retrieves the unique identifier of a metric given its name.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetMetricGuid(  
-   LPCWSTR pszType,  
-   REFGUID guidSection,  
-   LPCWSTR pszMetric,  
-   GUID*   pguidValue  
+   LPCWSTR pszType,  
+   REFGUID guidSection,  
+   LPCWSTR pszMetric,  
+   GUID*   pguidValue  
 );  
 ```  
   
-```c#  
+```cs  
 private int GetMetricGuid(  
-   string   pszType,  
-   ref Guid guidSection,  
-   string   pszMetric,  
-   out Guid pguidValue  
+   string   pszType,  
+   ref Guid guidSection,  
+   string   pszMetric,  
+   out Guid pguidValue  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pszType`  
- \[in\]  Tipo di metrica.  
+ [in] Type of the metric.  
   
  `guidSection`  
- \[in\]  Identificatore univoco della sezione.  
+ [in] Unique identifier of the section.  
   
  `pszMetric`  
- \[in\]  Nome della metrica.  
+ [in] Name of the metric.  
   
  `pguidValue`  
- \[out\]  Restituisce l'identificatore univoco della metrica.  
+ [out] Returns the unique identifier of the metric.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

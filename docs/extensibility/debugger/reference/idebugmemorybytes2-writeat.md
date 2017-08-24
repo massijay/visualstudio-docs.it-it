@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryBytes2::WriteAt | Documenti di Microsoft
+title: IDebugMemoryBytes2::WriteAt | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,16 +31,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 69258e01dbef8e2666da19d248b73e52399992d0
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 4b6066de1c205e7df469c2c4f016e533ae9fd01a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
-Scrive il numero specificato di byte di memoria, a partire dall'indirizzo specificato.  
+Writes the specified number of bytes of memory, starting at the specified address.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT WriteAt(   
@@ -50,7 +51,7 @@ HRESULT WriteAt(
 );  
 ```  
   
-```c#  
+```cs  
 int WriteAt(  
    IDebugMemoryContext2 pStartContext,  
    uint                 dwCount,  
@@ -58,22 +59,22 @@ int WriteAt(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `pStartContext`  
- [in] Il [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) oggetto che specifica dove iniziare la scrittura di byte.  
+ [in] The [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object that specifies where to start writing bytes.  
   
  `dwCount`  
- [in] Il numero di byte da scrivere.  
+ [in] The number of bytes to write.  
   
  `rgbMemory`  
- [in] Byte da scrivere. Questa matrice si presuppone che sia almeno `dwCount` byte.  
+ [in] The bytes to write. This array is assumed to be at least `dwCount` bytes in size.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce `S_FALSE` se non tutti i byte può essere scritta o restituisce un codice di errore (in genere `E_FAIL`).  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns `S_FALSE` if not all bytes could be written or returns an error code (typically `E_FAIL`).  
   
-## <a name="remarks"></a>Note  
- Se l'indirizzo iniziale non è presente all'interno della finestra memoria rappresentata da questo [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) dell'oggetto, si verifica alcuna scrittura e un codice di errore `E_FAIL` viene restituito, anche se la quantità di scrivere si sovrappone lo spazio di memoria.  
+## <a name="remarks"></a>Remarks  
+ If the starting address is not within the memory window represented by this [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) object, no writing occurs and an error code of `E_FAIL` is returned — even if the amount to write overlaps into the memory space.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

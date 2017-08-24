@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::SetHitCount | Documenti di Microsoft
+title: IDebugBoundBreakpoint2::SetHitCount | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,16 +31,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 6547a6ef77827154b1457b419d9933071f13a0b1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 8dc4e687079e368d0771f6b159caa660cd348b2c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugboundbreakpoint2sethitcount"></a>IDebugBoundBreakpoint2::SetHitCount
-Imposta il numero di passaggi per il punto di interruzione associato.  
+Sets the hit count for the bound breakpoint.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT SetHitCount(   
@@ -48,24 +49,24 @@ HRESULT SetHitCount(
 );  
 ```  
   
-```c#  
+```cs  
 int SetHitCount(   
    uint dwHitCount  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `dwHitCount`  
- [in] Per impostare il numero di passaggi.  
+ [in] The hit count to set.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore. Restituisce `E_BP_DELETED` se lo stato dell'oggetto punto di interruzione associato è impostato su `BPS_DELETED` (in parte il [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumerazione).  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_BP_DELETED` if the state of the bound breakpoint object is set to `BPS_DELETED` (part of the [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeration).  
   
-## <a name="remarks"></a>Note  
- Il numero di passaggi è il numero di volte in cui che il punto di interruzione generato durante l'esecuzione della sessione corrente.  
+## <a name="remarks"></a>Remarks  
+ The hit count is the number of times this breakpoint has fired during the current run of the session.  
   
- In genere, questo metodo viene chiamato dal motore di debug per aggiornare il numero di passaggi corrente su questo punto di interruzione.  
+ This method is typically called by the debug engine to update the current hit count on this breakpoint.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   
  [BP_STATE](../../../extensibility/debugger/reference/bp-state.md)

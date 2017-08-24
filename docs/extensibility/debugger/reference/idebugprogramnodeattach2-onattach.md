@@ -1,52 +1,69 @@
 ---
-title: "IDebugProgramNodeAttach2::OnAttach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramNodeAttach2::OnAttach"
-helpviewer_keywords: 
-  - "IDebugProgramNodeAttach2::OnAttach"
+title: IDebugProgramNodeAttach2::OnAttach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgramNodeAttach2::OnAttach
+helpviewer_keywords:
+- IDebugProgramNodeAttach2::OnAttach
 ms.assetid: 5fe52761-a508-4ab5-abdb-334fb6590334
 caps.latest.revision: 3
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# IDebugProgramNodeAttach2::OnAttach
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f6d113cdcd8e2eb958332e61a4da13e60505af00
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Si connette al programma associato o ripianificare il processo di connessione [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) al metodo.  
+---
+# <a name="idebugprogramnodeattach2onattach"></a>IDebugProgramNodeAttach2::OnAttach
+Attaches to the associated program or defers the attach process to the [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) method.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT OnAttach(  
-   [in] REFGUID guidProgramId  
+   [in] REFGUID guidProgramId  
 );  
 ```  
   
-```c#  
+```cs  
 int OnAttach(  
-   ref Guid guidProgramId  
+   ref Guid guidProgramId  
 };  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `guidProgramId`  
- \[in\]  `GUID` da assegnare al programma associato.  
+ [in] `GUID` to assign to the associated program.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`.  Restituisce `S_FALSE` se [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) viene chiamato il metodo.  In caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`. Returns `S_FALSE` if the [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) method should not be called. Otherwise, returns an error code.  
   
-## Note  
- Questo metodo viene chiamato durante il processo di connessione, prima che [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) venga chiamato il metodo.  Il metodo di `OnAttach` possibile eseguire il processo stesso della connessione \(in questo caso, questo metodo restituisce `S_FALSE`\) o rinviare il processo di connessione al metodo di `IDebugEngine2::Attach` \(il metodo di `OnAttach` restituisce `S_OK`\).  In qualsiasi evento, il metodo di `OnAttach` possibile impostare `GUID` del programma sottoposto a debug a `GUID`specificato.  
+## <a name="remarks"></a>Remarks  
+ This method is called during the attach process, before the [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) method is called. The `OnAttach` method can perform the attach process itself (in which case, this method returns `S_FALSE`) or defer the attach process to the `IDebugEngine2::Attach` method (the `OnAttach` method returns `S_OK`). In either event, the `OnAttach` method can set the `GUID` of the program being debugged to the given `GUID`.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md)   
  [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)

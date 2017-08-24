@@ -1,5 +1,5 @@
 ---
-title: FIELD_KIND | Documenti Microsoft
+title: FIELD_KIND | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,17 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: f92dc8a17024e9189255156e1e23dabb1ab5ba62
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 404334708e3f3b36b779724b90a35b72111a16a7
 ms.contentlocale: it-it
-ms.lasthandoff: 04/05/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="fieldkind"></a>FIELD_KIND
-Specifica il tipo di campo contenuto un [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) oggetto.  
+Specifies the kind of field contained in an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_FIELD_KIND {   
@@ -91,7 +91,7 @@ enum enum_FIELD_KIND {
 typedef DWORD FIELD_KIND;  
 ```  
   
-```c#  
+```cs  
 public enum enum_FIELD_KIND {  
    FIELD_KIND_NONE       = 0x00000000,  
   
@@ -139,120 +139,120 @@ public enum enum_FIELD_KIND {
 };  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
  FIELD_KIND_TYPE  
- Indica che il campo è solo un tipo.  
+ Indicates that the field is a type only.  
   
  FIELD_KIND_SYMBOL  
- Indica che il campo è un simbolo con tipo, nome e altre informazioni.  
+ Indicates that the field is a symbol, with type, name, and other information.  
   
  FIELD_TYPE_PRIMITIVE  
- Indica che il campo è un tipo di dati primitivi.  
+ Indicates that the field is a primitive data type.  
   
  FIELD_TYPE_STRUCT  
- Indica che il campo è una struttura.  
+ Indicates that the field is a structure.  
   
  FIELD_TYPE_CLASS  
- Indica che il campo è una classe.  
+ Indicates that the field is a class.  
   
  FIELD_TYPE_INTERFACE  
- Indica che il campo è un'interfaccia.  
+ Indicates that the field is an interface.  
   
  FIELD_TYPE_UNION  
- Indica che il campo è un'unione.  
+ Indicates that the field is a union.  
   
  FIELD_TYPE_ARRAY  
- Indica che il campo è una matrice.  
+ Indicates that the field is an array.  
   
  FIELD_TYPE_METHOD  
- Indica che il campo è un metodo.  
+ Indicates that the field is a method.  
   
  FIELD_TYPE_BLOCK  
- Indica che il campo è un blocco.  
+ Indicates that the field is a block.  
   
  FIELD_TYPE_POINTER  
- Indica che il campo è un puntatore.  
+ Indicates that the field is a pointer.  
   
  FIELD_TYPE_ENUM  
- Indica che il campo è un tipo di dati enumerato.  
+ Indicates that the field is an enumerated data type.  
   
  FIELD_TYPE_LABEL  
- Indica che il campo è un'etichetta.  
+ Indicates that the field is a label.  
   
  FIELD_TYPE_TYPEDEF  
- Indica che il campo è un typedef.  
+ Indicates that the field is a typedef.  
   
  FIELD_TYPE_BITFIELD  
- Indica che il campo è un campo di bit.  
+ Indicates that the field is a bitfield.  
   
  FIELD_TYPE_NAMESPACE  
- Indica che il campo è uno spazio dei nomi.  
+ Indicates that the field is a namespace.  
   
  FIELD_TYPE_MODULE  
- Indica che il campo è un modulo.  
+ Indicates that the field is a module.  
   
  FIELD_TYPE_DYNAMIC  
- Indica che il campo è dinamico.  
+ Indicates that the field is dynamic.  
   
  FIELD_TYPE_PROP  
- Indica che il campo è una proprietà.  
+ Indicates that the field is a property.  
   
  FIELD_TYPE_INNERCLASS  
- Indica che il campo è una classe interna.  
+ Indicates that the field is an inner class.  
   
  FIELD_TYPE_REFERENCE  
- Indica che il campo è un riferimento.  
+ Indicates that the field is a reference.  
   
  FIELD_TYPE_EXTENDED  
- Riservato per utilizzi futuri.  
+ Reserved for future use.  
   
  FIELD_SYM_MEMBER  
- Indica che il campo è un membro.  
+ Indicates that the field is a member.  
   
  FIELD_SYM_LOCAL  
- Indica che il campo è locale.  
+ Indicates that the field is local.  
   
  FIELD_SYM_PARAMETER  
- Indica che il campo è un parametro.  
+ Indicates that the field is a parameter.  
   
  FIELD_SYM_THIS  
- Indica che il campo è il puntatore "this".  
+ Indicates that the field is the "this" pointer.  
   
  FIELD_SYM_GLOBAL  
- Indica che il campo è globale.  
+ Indicates that the field is global.  
   
  FIELD_SYM_PROP_GETTER  
- Indica che il campo recupera le proprietà.  
+ Indicates that the field retrieves properties.  
   
  FIELD_SYM_PROP_SETTER  
- Indica che il campo imposta le proprietà.  
+ Indicates that the field sets properties.  
   
  FIELD_SYM_EXTENDED  
- Riservato per utilizzi futuri.  
+ Reserved for future use.  
   
  FIELD_KIND_MASK  
- Indica una maschera per i tipi di campo.  
+ Indicates a mask for field kinds.  
   
  FIELD_TYPE_MASK  
- Indica una maschera per i tipi di campo.  
+ Indicates a mask for field types.  
   
  FIELD_SYM_MASK  
- Indica una maschera per informazioni sui simboli.  
+ Indicates a mask for symbol information.  
   
-## <a name="remarks"></a>Note  
- Restituito da una chiamata per il [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) metodo.  
+## <a name="remarks"></a>Remarks  
+ Returned from a call to the [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) method.  
   
- A seconda del tipo di campo, [QueryInterface](/cpp/atl/queryinterface) può essere chiamato sul [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interfaccia per una forma più specifica di interfaccia. Ad esempio, se [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) restituisce `FIELD_TYPE_METHOD`, è quindi possibile chiamare `QueryInterface` con lettera`DebugField` per ottenere il [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) interfaccia.  
+ Depending on the kind of field, [QueryInterface](/cpp/atl/queryinterface) can be called on the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) interface for a more specific form of interface. For example, if [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) returns `FIELD_TYPE_METHOD`, you can then call `QueryInterface` on I`DebugField` to obtain the [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) interface.  
   
-## <a name="requirements"></a>Requisiti  
- Intestazione: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)   
  [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

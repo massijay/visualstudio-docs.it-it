@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::CanSetObjectForVisualizer | Documenti di Microsoft
+title: IEEVisualizerDataProvider::CanSetObjectForVisualizer | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b9b1009880abd9bce361606ee9d68e8a986aab54
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 7ab8898fd8e16baf7b9c4f565aad3f7f9cb36fc7
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="ieevisualizerdataprovidercansetobjectforvisualizer"></a>IEEVisualizerDataProvider::CanSetObjectForVisualizer
-Questo metodo determina se il visualizzatore può avere l'oggetto dati rappresenta aggiornato.  
+This method determines whether the visualizer can have the data object it represents updated.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT CanSetObjectForVisualizer(  
@@ -47,21 +48,21 @@ HRESULT CanSetObjectForVisualizer(
 );  
 ```  
   
-```c#  
+```cs  
 int CanSetObjectForVisualizer(  
    out int b  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `b`  
- [out] Diverso da zero (`TRUE`) se è possibile aggiornare l'oggetto del visualizzatore, zero (`FALSE`) se non è possibile.  
+ [out] Nonzero (`TRUE`) if the object on the visualizer can be updated, zero (`FALSE`) if it cannot.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Note  
- Un oggetto potrebbe non essere modificabile se è associato alla memoria di sola lettura, ad esempio.  
+## <a name="remarks"></a>Remarks  
+ An object might not be changeable if it is bound to read-only memory, for example.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

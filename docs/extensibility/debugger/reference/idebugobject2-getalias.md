@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::GetAlias | Documenti di Microsoft
+title: IDebugObject2::GetAlias | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7658dcff9f51f6f34d43b98869c038c926c59be2
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 5119711d8479004f706c15b009d8780d55d4c857
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugobject2getalias"></a>IDebugObject2::GetAlias
-Ottiene l'alias associato all'oggetto, se presente.  
+Gets the alias associated with this object, if any.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetAlias(  
@@ -47,22 +48,22 @@ HRESULT GetAlias(
 );  
 ```  
   
-```c#  
+```cs  
 int GetAlias(  
    out IDebugAlias ppAlias  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `ppAlias`  
- [out] Restituisce un [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) oggetto che rappresenta l'alias per questo oggetto; in caso contrario, restituisce un valore null.  
+ [out] Returns an [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) object representing the alias for this object; otherwise, returns a null value.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce S_OK; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Note  
- Viene creato con una chiamata a un alias per un oggetto di [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) metodo.  
+## <a name="remarks"></a>Remarks  
+ An alias for an object is created with a call to the [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) method.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)   
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

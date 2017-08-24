@@ -1,130 +1,156 @@
 ---
-title: "Scanner e Parser servizio di linguaggio legacy | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parser, servizi di linguaggio [framework pacchetto gestito]"
-  - "servizi di linguaggio [framework gestito pacchetto], parser"
+title: Legacy Language Service Parser and Scanner | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parsers, language services [managed package framework]
+- language services [managed package framework], Parsers
 ms.assetid: 1ac3de27-a23b-438d-9593-389e45839cfa
 caps.latest.revision: 20
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Scanner e Parser servizio di linguaggio legacy
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6cc27f39be42f9504fd2d1617ec7cd7be6333b48
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Il parser è il cuore del servizio di linguaggio. Le classi di linguaggio gestito pacchetto Framework \(MPF\) richiedono un parser del linguaggio per selezionare informazioni sul codice di visualizzazione. Un parser suddivide il testo in token lessicali e quindi identifica i token dal tipo e funzionalità.  
+---
+# <a name="legacy-language-service-parser-and-scanner"></a>Legacy Language Service Parser and Scanner
+The parser is the heart of the language service. The Managed Package Framework (MPF) language classes require a language parser to select information about the code being displayed. A parser separates the text into lexical tokens and then identifies those tokens by type and functionality.  
   
-## Discussione  
- Di seguito è un metodo c\#.  
+## <a name="discussion"></a>Discussion  
+ The following is a C# method.  
   
-```c#  
-namespace MyNamespace { class MyClass { public void MyFunction(int arg1) { int var1 = arg1; } } }  
+```cs  
+namespace MyNamespace  
+{  
+    class MyClass  
+    {  
+        public void MyFunction(int arg1)  
+        {  
+            int var1 = arg1;  
+        }  
+    }  
+}  
 ```  
   
- In questo esempio, i token sono le parole e i segni di punteggiatura. Di seguito sono riportati i tipi di token.  
+ In this example, the tokens are the words and punctuation marks. The kinds of tokens are as follows.  
   
-|Nome del token|Tipo di token|  
-|--------------------|-------------------|  
-|spazio dei nomi, void pubblico, classe, int|keyword|  
-|\=|operator|  
-|{ } \( \) ;|delimitatore|  
+|Token Name|Token Type|  
+|----------------|----------------|  
+|namespace, class, public, void, int|keyword|  
+|=|operator|  
+|{ } ( ) ;|delimiter|  
 |MyNamespace, MyClass, MyFunction, arg1, var1|identifier|  
 |MyNamespace|namespace|  
-|MyClass|classe|  
-|MyFunction|metodo|  
-|arg1|parametro|  
-|var1|variabile locale|  
+|MyClass|class|  
+|MyFunction|method|  
+|arg1|parameter|  
+|var1|local variable|  
   
- Il ruolo del parser consiste nell'identificare i token. Alcuni token può avere più di un tipo. Dopo che il parser ha identificato i token, il servizio di linguaggio possa utilizzare le informazioni per fornire funzionalità utili, ad esempio l'evidenziazione della sintassi, corrispondenza parentesi e le operazioni di IntelliSense.  
+ The role of the parser is to identify the tokens. Some tokens can have more than one type. After the parser has identified the tokens, the language service can use the information to provide helpful features, such as syntax highlighting, brace matching, and the IntelliSense operations.  
   
-## Tipi di analizzatori  
- Un parser di servizio di linguaggio non corrisponde un parser in uso come parte di un compilatore. Tuttavia, questo tipo di parser deve utilizzare uno scanner sia un parser, esattamente come un parser del compilatore.  
+## <a name="types-of-parsers"></a>Types of Parsers  
+ A language service parser is not the same as a parser used as part of a compiler. However, this kind of parser needs to use both a scanner and a parser, in the same way as a compiler parser.  
   
--   Uno scanner viene utilizzato per identificare i tipi di token. Queste informazioni vengono utilizzate per l'evidenziazione della sintassi e per identificare rapidamente i tipi di token che possono attivare altre operazioni, ad esempio, corrispondenza parentesi graffe. Questo programma è rappresentato dal <xref:Microsoft.VisualStudio.Package.IScanner> interfaccia.  
+-   A scanner is used to identify types of tokens. This information is used for syntax highlighting and for quickly identifying token types that can trigger other operations, for example, brace matching. This scanner is represented by the <xref:Microsoft.VisualStudio.Package.IScanner> interface.  
   
--   Un parser viene utilizzato per descrivere le funzioni e l'ambito dei token. Queste informazioni vengono utilizzate nelle operazioni di IntelliSense per identificare gli elementi di linguaggio, ad esempio metodi, variabili, parametri e le dichiarazioni e per fornire elenchi di membri e le firme di metodo in base al contesto. Il parser viene utilizzato anche per individuare corrispondente coppie di elemento di linguaggio, ad esempio le parentesi graffe e parentesi. Il parser avviene tramite il <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodo la <xref:Microsoft.VisualStudio.Package.LanguageService> classe.  
+-   A parser is used to describe the functions and scope of the tokens. This information is used in IntelliSense operations to identify language elements, such as methods, variables, parameters, and declarations, and to provide lists of members and method signatures based on context. This parser is also used to locate matching language element pairs, such as braces and parentheses. This parser is accessed through the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method in the <xref:Microsoft.VisualStudio.Package.LanguageService> class.  
   
- Come implementare un scanner e parser per il servizio di linguaggio è responsabilità dell'utente. Sono disponibili varie risorse che descrivono il funzionano di parser e come scrivere un parser personalizzato. Inoltre, sono disponibili diversi prodotti gratuiti e a pagamento che semplificano la creazione di un parser.  
+ How you implement a scanner and parser for your language service is up to you. Several resources are available that describe how parsers work and how to write your own parser. Also, several free and commercial products are available that help in creating a parser.  
   
-### Il ParseSource Parser  
- A differenza di un parser che viene utilizzato come parte di un compilatore \(in cui i token vengono convertiti in una forma di codice eseguibile\), un parser di servizio di linguaggio può essere chiamato per motivi diversi e in molti contesti diversi. Modalità di implementazione di questo approccio nel <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodo la <xref:Microsoft.VisualStudio.Package.LanguageService> classe è responsabilità dell'utente. È importante tenere presente che il <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodo potrebbe essere chiamato su un thread in background.  
+### <a name="the-parsesource-parser"></a>The ParseSource Parser  
+ Unlike a parser that is used as part of a compiler (where the tokens are converted to some form of executable code), a language service parser can be called for many different reasons and in many different contexts. How you implement this approach in the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method in the <xref:Microsoft.VisualStudio.Package.LanguageService> class is up to you. It is important to keep in mind that the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method might be called on a background thread.  
   
 > [!CAUTION]
->  Il <xref:Microsoft.VisualStudio.Package.ParseRequest> struttura contiene un riferimento di <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> oggetto. Questo <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> oggetto non può essere utilizzato nel thread in background. Infatti, è Impossibile utilizzare molte delle classi base MPF nel thread in background. Questi includono il <xref:Microsoft.VisualStudio.Package.Source>, <xref:Microsoft.VisualStudio.Package.ViewFilter>, <xref:Microsoft.VisualStudio.Package.CodeWindowManager> classi e qualsiasi altra classe che direttamente o indirettamente comunica con la visualizzazione.  
+>  The <xref:Microsoft.VisualStudio.Package.ParseRequest> structure contains a reference to the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> object. This <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> object cannot be used in the background thread. In fact, many of the base MPF classes cannot be used in the background thread. These include the <xref:Microsoft.VisualStudio.Package.Source>, <xref:Microsoft.VisualStudio.Package.ViewFilter>, <xref:Microsoft.VisualStudio.Package.CodeWindowManager> classes, and any other class that directly or indirectly communicates with the view.  
   
- Il parser analizza in genere l'ora del file la prima origine intera viene chiamato o quando l'analisi motivo valore <xref:Microsoft.VisualStudio.Package.ParseReason> viene assegnato. Le chiamate successive al <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodo gestire una piccola parte del codice analizzato e può essere eseguito molto più rapidamente utilizzando i risultati dell'operazione di analisi completo precedente. Il <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodo comunica i risultati dell'operazione di analisi attraverso il <xref:Microsoft.VisualStudio.Package.AuthoringSink> e <xref:Microsoft.VisualStudio.Package.AuthoringScope> oggetti. Il <xref:Microsoft.VisualStudio.Package.AuthoringSink> oggetto viene utilizzato per raccogliere informazioni per un motivo specifico di analisi, ad esempio, informazioni su intervalli di firme del metodo che hanno elenchi di parametri o graffe. Il <xref:Microsoft.VisualStudio.Package.AuthoringScope> fornisce le raccolte delle dichiarazioni e le firme del metodo e il supporto per passare a avanzate opzione Modifica \(**Vai a definizione**, **Vai a dichiarazione**, **Vai a riferimento**\).  
+ This parser typically parses the whole source file the first time it is called or when the parse reason value of <xref:Microsoft.VisualStudio.Package.ParseReason> is given. Subsequent calls to the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method handle a small part of the parsed code and can be executed much more quickly by using the results of the previous full parse operation. The <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method communicates the results of the parsing operation through the <xref:Microsoft.VisualStudio.Package.AuthoringSink> and <xref:Microsoft.VisualStudio.Package.AuthoringScope> objects. The <xref:Microsoft.VisualStudio.Package.AuthoringSink> object is used to collect information for a specific parsing reason, for example, information about the spans of matching braces or method signatures that have parameter lists. The <xref:Microsoft.VisualStudio.Package.AuthoringScope> provides collections of declarations and method signatures and also support for the Go To advanced edit option (**Go to Definition**, **Go to Declaration**, **Go to Reference**).  
   
-### Lo Scanner IScanner  
- È inoltre necessario implementare uno scanner che implementa <xref:Microsoft.VisualStudio.Package.IScanner>. Tuttavia, poiché questo scanner opera su una base di riga per riga tramite la <xref:Microsoft.VisualStudio.Package.Colorizer> classe, è in genere più semplice da implementare. All'inizio di ogni riga, di MPF offre la <xref:Microsoft.VisualStudio.Package.Colorizer> classe un valore da utilizzare come una variabile di stato che viene passata allo scanner. Alla fine di ogni riga, lo scanner restituisce la variabile di stato aggiornato. Il MPF memorizza nella cache queste informazioni sullo stato per ogni riga in modo che lo scanner è possibile avviare l'analisi di tutte le righe senza dover ricominciare dall'inizio del file di origine. Questa analisi veloce di una singola riga consente l'editor fornire un feedback rapido all'utente.  
+### <a name="the-iscanner-scanner"></a>The IScanner Scanner  
+ You must also implement a scanner that implements <xref:Microsoft.VisualStudio.Package.IScanner>. However, because this scanner operates on a line-by-line basis through the <xref:Microsoft.VisualStudio.Package.Colorizer> class, it is typically easier to implement. At the beginning of each line, the MPF gives the <xref:Microsoft.VisualStudio.Package.Colorizer> class a value to use as a state variable that is passed to the scanner. At the end of each line, the scanner returns the updated state variable. The MPF caches this state information for each line so that the scanner can start parsing from any line without having to start at the beginning of the source file. This fast scanning of a single line allows the editor to provide fast feedback to the user.  
   
-## L'analisi per la corrispondenza parentesi graffe  
- Questo esempio viene illustrato il flusso di controllo per la corrispondenza di una parentesi graffa di chiusura specificato dall'utente. In questo processo, lo scanner che viene utilizzato per la colorazione viene utilizzato anche per determinare il tipo di token e se il token può attivare un'operazione di corrispondenza parentesi. Se il trigger viene trovato, il <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> viene chiamato per trovare la parentesi graffa corrispondente. Infine, le due parentesi graffe vengono evidenziate.  
+## <a name="parsing-for-matching-braces"></a>Parsing for Matching Braces  
+ This example shows the flow of control for matching a closing brace that the user has typed. In this process, the scanner that is used for colorization is also used to determine the type of token and whether the token can trigger a match-brace operation. If the trigger is found, the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method is called to find the matching brace. Finally, the two braces are highlighted.  
   
- Anche se le parentesi graffe vengono utilizzate i nomi dei trigger e analizzare i motivi, questo processo non è limitato a parentesi graffe effettive. Qualsiasi coppia di caratteri specificato da un corrispondente della coppia è supportata. Esempi \(e\), \< e \>, e \[e\].  
+ Even though braces are used in the names of triggers and parse reasons, this process is not limited to actual braces. Any pair of characters that that is specified to be a matching pair is supported. Examples include ( and ), \< and >, and [ and ].  
   
- Si supponga che il servizio di linguaggio supporta parentesi graffe corrispondenti.  
+ Assume that the language service supports matching braces.  
   
-1.  L'utente digita una parentesi graffa di chiusura \(}\).  
+1.  The user types a closing curly brace (}).  
   
-2.  La parentesi graffa viene inserita in corrispondenza del cursore nel file di origine e il cursore viene spostato in uno.  
+2.  The curly brace is inserted at the cursor in the source file and the cursor is advanced by one.  
   
-3.  Il <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> metodo la <xref:Microsoft.VisualStudio.Package.Source> classe viene chiamata con la parentesi graffa di chiusura tipizzato.  
+3.  The <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> method in the <xref:Microsoft.VisualStudio.Package.Source> class is called with the typed closing brace.  
   
-4.  Il <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> chiamate al metodo di <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> metodo la <xref:Microsoft.VisualStudio.Package.Source> classe per ottenere il token nella posizione della prima posizione corrente del cursore. Questo token corrisponde alla parentesi graffa di chiusura tipizzato\).  
+4.  The <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> method calls the <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> method in the <xref:Microsoft.VisualStudio.Package.Source> class to obtain the token at the position just before the current cursor position. This token corresponds to the typed closing brace).  
   
-    1.  Il <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> chiamate al metodo di <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> metodo il <xref:Microsoft.VisualStudio.Package.Colorizer> per ottenere tutti i token nella riga corrente.  
+    1.  The <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> method calls the <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> method on the <xref:Microsoft.VisualStudio.Package.Colorizer> object to obtain all tokens on the current line.  
   
-    2.  Il <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> chiamate al metodo di <xref:Microsoft.VisualStudio.Package.IScanner.SetSource%2A> metodo il <xref:Microsoft.VisualStudio.Package.IScanner> oggetto con il testo della riga corrente.  
+    2.  The <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> method calls the <xref:Microsoft.VisualStudio.Package.IScanner.SetSource%2A> method on the <xref:Microsoft.VisualStudio.Package.IScanner> object with the text of the current line.  
   
-    3.  Il <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> metodo chiama ripetutamente il <xref:Microsoft.VisualStudio.Package.IScanner.ScanTokenAndProvideInfoAboutIt%2A> metodo il <xref:Microsoft.VisualStudio.Package.IScanner> oggetto per raccogliere tutti i token dalla riga corrente.  
+    3.  The <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> method repeatedly calls the <xref:Microsoft.VisualStudio.Package.IScanner.ScanTokenAndProvideInfoAboutIt%2A> method on the <xref:Microsoft.VisualStudio.Package.IScanner> object to gather all tokens from the current line.  
   
-    4.  Il <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> metodo chiama un metodo privato nella <xref:Microsoft.VisualStudio.Package.Source> classe per ottenere il token che contiene la posizione desiderata e passa l'elenco dei token ottenuto dal <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> metodo.  
+    4.  The <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> method calls a private method in the <xref:Microsoft.VisualStudio.Package.Source> class to obtain the token that contains the desired position, and passes in the list of tokens obtained from the <xref:Microsoft.VisualStudio.Package.Colorizer.GetLineInfo%2A> method.  
   
-5.  Di <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> metodo cerca un flag trigger token <xref:Microsoft.VisualStudio.Package.TokenTriggers> sul token restituito dal <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> \(metodo\), vale a dire il token che rappresenta la parentesi graffa chiusa\).  
+5.  The <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> method looks for a token trigger flag of <xref:Microsoft.VisualStudio.Package.TokenTriggers> on the token that is returned from the <xref:Microsoft.VisualStudio.Package.Source.GetTokenInfo%2A> method; that is, the token that represents the closing brace).  
   
-6.  Se il trigger di flag di <xref:Microsoft.VisualStudio.Package.TokenTriggers> viene trovato, il <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> metodo la <xref:Microsoft.VisualStudio.Package.Source> classe viene chiamata.  
+6.  If the trigger flag of <xref:Microsoft.VisualStudio.Package.TokenTriggers> is found, the <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> method in the <xref:Microsoft.VisualStudio.Package.Source> class is called.  
   
-7.  Il <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> metodo avvia un'operazione di analisi con il valore di motivo di analisi di <xref:Microsoft.VisualStudio.Package.ParseReason>. Questa operazione viene chiamato alla fine di <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodo la <xref:Microsoft.VisualStudio.Package.LanguageService> classe. Se l'analisi asincrono è abilitato, questa chiamata per il <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> si verifica in un thread in background.  
+7.  The <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> method starts a parsing operation with the parse reason value of <xref:Microsoft.VisualStudio.Package.ParseReason>. This operation ultimately calls the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method on the <xref:Microsoft.VisualStudio.Package.LanguageService> class. If asynchronous parsing is enabled, this call to the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method occurs on a background thread.  
   
-8.  Quando viene completata l'operazione di analisi, un gestore di completamento interno \(noto anche come un metodo di callback\) denominato `HandleMatchBracesResponse` viene chiamato nella <xref:Microsoft.VisualStudio.Package.Source> classe. Questa chiamata viene eseguita automaticamente dalla <xref:Microsoft.VisualStudio.Package.LanguageService> classe base, non dal parser.  
+8.  When the parsing operation is finished, an internal completion handler (also known as a callback method) named `HandleMatchBracesResponse` is called in the <xref:Microsoft.VisualStudio.Package.Source> class. This call is made automatically by the <xref:Microsoft.VisualStudio.Package.LanguageService> base class, not by the parser.  
   
-9. Il `HandleMatchBracesResponse` metodo ottiene un elenco di intervalli dal <xref:Microsoft.VisualStudio.Package.AuthoringSink> oggetto archiviato nel <xref:Microsoft.VisualStudio.Package.ParseRequest> oggetto. \(Una sezione span è un <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan> struttura che specifica un intervallo di righe e di caratteri nel file di origine.\) Questo elenco di intervalli contiene in genere due intervalli, uno per l'apertura e parentesi graffe di chiusura.  
+9. The `HandleMatchBracesResponse` method obtains a list of spans from the <xref:Microsoft.VisualStudio.Package.AuthoringSink> object that is stored in the <xref:Microsoft.VisualStudio.Package.ParseRequest> object. (A span is a <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan> structure that specifies a range of lines and characters in the source file.) This list of spans typically contains two spans, one each for the opening and closing braces.  
   
-10. Il `HandleBracesResponse` chiamate al metodo di <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.HighlightMatchingBrace%2A> metodo il <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> oggetto archiviato nel <xref:Microsoft.VisualStudio.Package.ParseRequest> oggetto. Per questo motivo, gli intervalli specificati.  
+10. The `HandleBracesResponse` method calls the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.HighlightMatchingBrace%2A> method on the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> object that is stored in the <xref:Microsoft.VisualStudio.Package.ParseRequest> object. This highlights the given spans.  
   
-11. Se il <xref:Microsoft.VisualStudio.Package.LanguagePreferences> proprietà <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A> è abilitato, il `HandleBracesResponse` metodo ottiene il testo che è incluso in intervallo corrispondente e visualizza i primi 80 caratteri di tale intervallo nella barra di stato. Questa situazione è ideale se il <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodo include l'elemento di linguaggio che accompagna la coppia corrispondente. Per altre informazioni, vedere la proprietà <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A>.  
+11. If the <xref:Microsoft.VisualStudio.Package.LanguagePreferences> property <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A> is enabled, the `HandleBracesResponse` method obtains the text that is encompassed by the matching span and displays the first 80 characters of that span in the status bar. This works best if the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method includes the language element that accompanies the matching pair. For more information, see the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A> property.  
   
-12. Operazione eseguita.  
+12. Done.  
   
-### Riepilogo  
- L'operazione di corrispondenza parentesi graffe viene in genere limitata a semplici coppie di elementi del linguaggio. Gli elementi più complessi, come la corrispondenza Triple \("`if(…)`","`{`"e"`}`", o "`else`","`{`"e"`}`"\), può essere evidenziata come parte di un'operazione di completamento delle parole. Ad esempio, la parola "else" termine, la corrispondenza "`if`" istruzione può essere evidenziata. Se vi sono una serie di `if`\/`else if` istruzioni, tutti gli elementi potrebbero essere evidenziate utilizzando lo stesso meccanismo come corrispondenza parentesi graffe. La <xref:Microsoft.VisualStudio.Package.Source> classe di base supporta già questa operazione, come indicato di seguito: lo scanner deve restituire il valore del token trigger <xref:Microsoft.VisualStudio.Package.TokenTriggers> combinato con il valore trigger <xref:Microsoft.VisualStudio.Package.TokenTriggers> per il token che precede la posizione del cursore.  
+### <a name="summary"></a>Summary  
+ The matching braces operation is typically limited to simple pairs of language elements. More complex elements, such as matching triples ("`if(...)`", "`{`" and "`}`", or "`else`", "`{`" and "`}`"), can be highlighted as part of a word-completion operation. For example, when the "else" word is finished, the matching "`if`" statement can be highlighted. If there were a series of `if`/`else if` statements, all of them could be highlighted by using the same mechanism as matching braces. The <xref:Microsoft.VisualStudio.Package.Source> base class already supports this, as follows: The scanner must return the token trigger value <xref:Microsoft.VisualStudio.Package.TokenTriggers> combined with the trigger value <xref:Microsoft.VisualStudio.Package.TokenTriggers> for the token that is before the cursor position.  
   
- Per altre informazioni, vedere [Corrispondenza di parentesi in un servizio di linguaggio Legacy](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md).  
+ For more information, see [Brace Matching in a Legacy Language Service](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md).  
   
-## L'analisi per la colorazione  
- Colorare il codice sorgente è semplice, semplicemente identificare il tipo di informazioni di colore token e restituire informazioni sul tipo. La <xref:Microsoft.VisualStudio.Package.Colorizer> classe funge da intermediario tra l'editor e il programma antivirus per fornire informazioni di colore di ogni token. La <xref:Microsoft.VisualStudio.Package.Colorizer> classe Usa il <xref:Microsoft.VisualStudio.Package.IScanner> oggetto per colorare una riga e raccogliere informazioni sullo stato di tutte le righe nel file di origine. Nelle classi di servizio di linguaggio MPF, la <xref:Microsoft.VisualStudio.Package.Colorizer> classe non deve essere sottoposto a override perché comunica con il programma antivirus solo tramite il <xref:Microsoft.VisualStudio.Package.IScanner> interfaccia. Si fornisce l'oggetto che implementa il <xref:Microsoft.VisualStudio.Package.IScanner> interfaccia eseguendo l'override di <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> metodo il <xref:Microsoft.VisualStudio.Package.LanguageService> \(classe\).  
+## <a name="parsing-for-colorization"></a>Parsing for Colorization  
+ Colorizing source code is straightforward, just identify the type of token and return color information about that type. The <xref:Microsoft.VisualStudio.Package.Colorizer> class acts as the intermediary between the editor and the scanner to provide color information about every token. The <xref:Microsoft.VisualStudio.Package.Colorizer> class uses the <xref:Microsoft.VisualStudio.Package.IScanner> object to help in colorizing a line and also to gather state information for all lines in the source file. In the MPF language service classes, the <xref:Microsoft.VisualStudio.Package.Colorizer> class does not have to be overridden because it communicates with the scanner only through the <xref:Microsoft.VisualStudio.Package.IScanner> interface. You supply the object that implements the <xref:Microsoft.VisualStudio.Package.IScanner> interface by overriding the <xref:Microsoft.VisualStudio.Package.LanguageService.GetScanner%2A> method on the <xref:Microsoft.VisualStudio.Package.LanguageService> class.  
   
- Il <xref:Microsoft.VisualStudio.Package.IScanner> scanner viene data una riga del codice sorgente tramite la <xref:Microsoft.VisualStudio.Package.IScanner.SetSource%2A> metodo. Le chiamate al <xref:Microsoft.VisualStudio.Package.IScanner.ScanTokenAndProvideInfoAboutIt%2A> metodo vengono ripetuti per ottenere il token nella riga successivo fino all'esaurimento della riga di token. Per la colorazione, di MPF gestisce tutto il codice sorgente come una sequenza di righe. Pertanto, lo scanner deve essere in grado di far fronte a presto le righe di origine. Inoltre, qualsiasi riga può essere passata allo scanner in qualsiasi momento e l'unica garanzia è che lo scanner riceve la variabile di stato dalla riga prima della riga per eseguire la scansione.  
+ The <xref:Microsoft.VisualStudio.Package.IScanner> scanner is given a line of source code through the <xref:Microsoft.VisualStudio.Package.IScanner.SetSource%2A> method. Calls to the <xref:Microsoft.VisualStudio.Package.IScanner.ScanTokenAndProvideInfoAboutIt%2A> method are repeated to obtain the next token in the line until the line is exhausted of tokens. For colorization, the MPF treats all source code as a sequence of lines. Therefore, the scanner must be able to cope with source coming at it as lines. In addition, any line can be passed to the scanner at any time, and the only guarantee is that the scanner receives the state variable from the line before the line about to be scanned.  
   
- La <xref:Microsoft.VisualStudio.Package.Colorizer> classe viene utilizzata anche per identificare i trigger di token. Questi trigger indicano il MPF che il token può essere avviata un'operazione più complessa, ad esempio il completamento delle parole o corrispondenza parentesi graffe. Poiché l'identificazione di tali trigger deve essere rapido e deve verificarsi in qualsiasi posizione, lo scanner è ideale per questa attività.  
+ The <xref:Microsoft.VisualStudio.Package.Colorizer> class is also used to identify token triggers. These triggers tell the MPF that a particular token can initiate a more complex operation, such as word completion or matching braces. Because identifying such triggers must be fast and must occur at any location, the scanner is best suited for this task.  
   
- Per altre informazioni, vedere [Colorazione della sintassi in un servizio di linguaggio Legacy](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md).  
+ For more information, see [Syntax Colorizing in a Legacy Language Service](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md).  
   
-## L'analisi della funzionalità e ambito  
- L'analisi della funzionalità e ambito richiede uno sforzo maggiore semplicemente l'identificazione dei tipi di token che vengono rilevati. Il parser deve identificare non solo il tipo di token, ma anche la funzionalità per il quale il token viene utilizzato. Ad esempio, un identificatore è un nome, ma nella propria lingua, un identificatore potrebbe essere il nome di una classe, spazio dei nomi, metodo o variabile, a seconda del contesto. Il tipo generale del token può essere un identificatore, ma l'identificatore può contenere anche altri significati, a seconda di cosa si tratta e in cui è definito. Questa identificazione richiede il parser per hanno una conoscenza approfondita sul linguaggio che viene eseguita l'analisi. Questa opzione è quando la <xref:Microsoft.VisualStudio.Package.AuthoringSink> classe entra in gioco. La <xref:Microsoft.VisualStudio.Package.AuthoringSink> classe raccoglie informazioni su identificatori, metodi, coppie lingua \(ad esempio le parentesi graffe e parentesi\) e linguaggio Triple \(simile a coppie di lingue, ad eccezione del fatto che siano presenti tre parti, ad esempio, "`foreach()`" "`{`"e"`}`"\). Inoltre, è possibile eseguire l'override di <xref:Microsoft.VisualStudio.Package.AuthoringSink> classe per supportare l'identificazione del codice, che viene utilizzato in fase di convalida iniziali dei punti di interruzione in modo che il debugger non deve essere caricata, e **Auto** finestra di debug, che mostra automaticamente i parametri e variabili locali quando un programma viene eseguito il debug e richiede il parser per identificare le variabili locali appropriate e i parametri oltre a quelli che il debugger visualizza.  
+## <a name="parsing-for-functionality-and-scope"></a>Parsing for Functionality and Scope  
+ Parsing for functionality and scope requires more effort than just identifying the types of tokens that are encountered. The parser has to identify not only the type of token, but also the functionality for which the token is used. For example, an identifier is just a name, but in your language, an identifier could be the name of a class, namespace, method, or variable, depending on the context. The general type of the token may be an identifier, but the identifier may also have other meanings, depending on what it is and where it is defined. This identification requires the parser to have more extensive knowledge about the language that is being parsed. This is where the <xref:Microsoft.VisualStudio.Package.AuthoringSink> class comes in. The <xref:Microsoft.VisualStudio.Package.AuthoringSink> class collects information about identifiers, methods, matching language pairs (such as braces and parentheses), and language triples (similar to language pairs except that there are three parts, for example, "`foreach()`" "`{`" and "`}`"). In addition, you can override the <xref:Microsoft.VisualStudio.Package.AuthoringSink> class to support code identification, which is used in early validation of breakpoints so that the debugger does not have to be loaded, and the **Autos** debugging window, which shows local variables and parameters automatically when a program is being debugged and requires the parser to identify appropriate local variables and parameters in addition to those that the debugger presents.  
   
- Il <xref:Microsoft.VisualStudio.Package.AuthoringSink> oggetto viene passato al parser come parte del <xref:Microsoft.VisualStudio.Package.ParseRequest> oggetto e un nuovo <xref:Microsoft.VisualStudio.Package.AuthoringSink> oggetto viene creato ogni volta che un nuovo <xref:Microsoft.VisualStudio.Package.ParseRequest> viene creato l'oggetto. Inoltre, il <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodo deve restituire un <xref:Microsoft.VisualStudio.Package.AuthoringScope> oggetto, che viene utilizzata per gestire varie operazioni di IntelliSense. Il <xref:Microsoft.VisualStudio.Package.AuthoringScope> oggetto mantiene un elenco di dichiarazioni e l'elenco di metodi, ovvero di cui viene popolata, a seconda del motivo per l'analisi. La <xref:Microsoft.VisualStudio.Package.AuthoringScope> classe deve essere implementata.  
+ The <xref:Microsoft.VisualStudio.Package.AuthoringSink> object is passed to the parser as part of the <xref:Microsoft.VisualStudio.Package.ParseRequest> object, and a new <xref:Microsoft.VisualStudio.Package.AuthoringSink> object is created every time that a new <xref:Microsoft.VisualStudio.Package.ParseRequest> object is created. In addition, the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method must return an <xref:Microsoft.VisualStudio.Package.AuthoringScope> object, which is used to handle various IntelliSense operations. The <xref:Microsoft.VisualStudio.Package.AuthoringScope> object maintains a list for declarations and a list for methods, either of which is populated, depending on the reason for parsing. The <xref:Microsoft.VisualStudio.Package.AuthoringScope> class must be implemented.  
   
-## Vedere anche  
- [Implementazione di un servizio di linguaggio Legacy](../../extensibility/internals/implementing-a-legacy-language-service1.md)   
- [Cenni preliminari sul servizio di linguaggio legacy](../../extensibility/internals/legacy-language-service-overview.md)   
- [Colorazione della sintassi in un servizio di linguaggio Legacy](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)   
- [Corrispondenza di parentesi in un servizio di linguaggio Legacy](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md)
+## <a name="see-also"></a>See Also  
+ [Implementing a Legacy Language Service](../../extensibility/internals/implementing-a-legacy-language-service1.md)   
+ [Legacy Language Service Overview](../../extensibility/internals/legacy-language-service-overview.md)   
+ [Syntax Colorizing in a Legacy Language Service](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)   
+ [Brace Matching in a Legacy Language Service](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md)

@@ -1,61 +1,78 @@
 ---
-title: "GUID_ARRAY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Struttura GUID_ARRAY"
+title: GUID_ARRAY | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GUID_ARRAY structure
 ms.assetid: 9e12500c-2c1c-49b1-a0ba-e08366c97eb8
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# GUID_ARRAY
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 85f72389bed0d6c69714cac4f0b0666924bc88c2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Viene descritta una matrice di identificatori univoci per i motori di debug.  
+---
+# <a name="guidarray"></a>GUID_ARRAY
+Describes an array of unique identifiers for available debug engines.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct tagGUID_ARRAY  
 {  
-   DWORD dwCount;  
-   GUID *Members;  
+   DWORD dwCount;  
+   GUID *Members;  
 } GUID_ARRAY;  
 ```  
   
-```c#  
+```cs  
 public struct GUID_ARRAY  
 {  
-   public uint dwCount;  
-   public Guid Members;  
+   public uint dwCount;  
+   public Guid Members;  
 }  
 ```  
   
-## termini  
+## <a name="terms"></a>Terms  
  dwCount  
- Numero di identificatori univoci nella matrice.  
+ Number of unique identifiers in the array.  
   
- Membri  
- Allineare contenente identificatori univoci.  
+ Members  
+ Array that contains unique identifiers.  
   
-## Note  
- Questa struttura viene restituito dal [GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md) metodo.  
+## <a name="remarks"></a>Remarks  
+ This structure is returned by the [GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md) method.  
   
-## Requisiti  
- intestazione: Msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: Msdbg.h  
   
- Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## Vedere anche  
- [Strutture e unioni](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md)

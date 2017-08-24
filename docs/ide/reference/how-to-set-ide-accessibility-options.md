@@ -1,7 +1,7 @@
 ---
-title: "Procedura: Impostare le opzioni di accessibilità IDE | Microsoft Docs"
+title: 'How to: Set IDE Accessibility Options | Microsoft Docs'
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 08/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -11,121 +11,110 @@ ms.topic: article
 helpviewer_keywords:
 - accessibility [Visual Studio]
 ms.assetid: ddc96c4c-0600-46c1-8267-7dce4c44ad24
-caps.latest.revision: 21
 author: kempb
-ms.author: kempb
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: e55dee12df295fe794cad089a84897e36a90a1c8
+ms.translationtype: HT
+ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
+ms.openlocfilehash: 0bf8db1f5cd1d163edffc7f3673d5b74c40ef8ec
 ms.contentlocale: it-it
-ms.lasthandoff: 05/24/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="how-to-set-ide-accessibility-options"></a>Procedura: impostare le opzioni di accessibilità IDE
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] contiene funzionalità che rendono più agevole la lettura e la scrittura per gli utenti con problemi di vista e difficoltà di movimento. Queste funzionalità includono, tra le altre, la modifica delle dimensioni e del colore del testo negli editor, la modifica delle dimensioni di testo e pulsanti sulle barre degli strumenti e il completamento automatico per metodi e parametri.  
-  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] supporta anche i layout di tastiera Dvorak, che consentono di accedere più facilmente ai caratteri usati con maggiore frequenza. È anche possibile personalizzare le combinazioni di tasti predefinite di [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Per altre informazioni, vedere [Identificazione e personalizzazione dei tasti di scelta rapida](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).  
-  
+# <a name="how-to-set-ide-accessibility-options"></a>How to: Set IDE Accessibility Options
+> [!TIP]
+> To learn more about recent accessibility updates, see the [Accessibility improvements in Visual Studio 2017 version 15.3](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/accessibility-improvements-in-visual-studio-2017-version-15-3/) blog post.
+
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] contains features that make it easier for people who have low vision to read and for people who have limited dexterity to write. These features include changing the size and color of text in editors, changing the size of text and buttons on toolbars, and auto-completion for methods and parameters, to name a few.  
+
+ In addition, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] supports Dvorak keyboard layouts, which make the most frequently typed characters more accessible. You can also customize the default shortcut keys available with [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. For more information, see [Identifying and Customizing Keyboard Shortcuts](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).  
+
 > [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
-  
-## <a name="editors-dialogs-and-tool-windows"></a>Editor, finestre di dialogo e finestre degli strumenti  
- Per impostazione predefinita, le finestre di dialogo e le finestre degli strumenti in [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] usano le stesse dimensioni di carattere e gli stessi colori del sistema operativo. Le impostazioni relative ai colori per il frame dell'IDE, le finestre di dialogo, le barre degli strumenti e le finestre degli strumenti si basano su una combinazione di colori: chiara o scura. È possibile cambiare il tema colori corrente in [Generale, Ambiente, finestra di dialogo Opzioni](../../ide/reference/general-environment-options-dialog-box.md).  
-  
- È anche possibile visualizzare finestre popup nella visualizzazione Codice dell'editor. Queste finestre possono indicare i membri disponibili per l'oggetto corrente e i parametri necessari per completare una funzione o un'istruzione e possono essere utili se l'utente ha difficoltà di digitazione, ma interferiscono con lo stato attivo nell'editor del codice, creando problemi per alcuni utenti. Per disattivare queste finestre è possibile aprire la finestra di dialogo Opzioni e deselezionando**Elenco membri automatico** e **Informazioni parametri** nella pagina **Editor di testo**, **Tutti i linguaggi**, **Generale** nella finestra di dialogo **Opzioni**. Per altre informazioni, vedere [Procedura: Impostare le opzioni generali dell'editor](http://msdn.microsoft.com/en-us/704e4a7b-2162-4bed-8a47-f4f6ffec98c2).  
-  
- È possibile ridisporre le finestre nell'ambiente di sviluppo integrato (IDE, Integrated Development Environment) in base alle proprie esigenze. È possibile ancorare, rendere mobile, nascondere o nascondere automaticamente ogni finestra degli strumenti.  
-  
- Per altre informazioni su come modificare il layout delle finestre, vedere [Personalizzazione del layout delle finestre](../../ide/customizing-window-layouts-in-visual-studio.md).  
-  
-### <a name="changing-the-size-of-text"></a>Modifica delle dimensioni del testo  
- È possibile modificare le impostazioni per le finestre degli strumenti basate su testo, ad esempio le finestre **Comando**, **Immediato** e **Output**, nel riquadro **Tipi di carattere e colori** delle opzioni **Ambiente** nella finestra di dialogo **Strumenti**. Se l'opzione **[Tutte le finestre degli strumenti di testo]** è selezionata nell'elenco a discesa **Mostra impostazioni per**, l'impostazione predefinita è indicata come **Predefinita** negli elenchi a discesa **Primo piano elemento** e **Sfondo elemento**. È anche possibile modificare le impostazioni di visualizzazione del testo nell'editor.  
-  
-##### <a name="to-change-the-size-of-text-in-text-based-tool-windows-and-editors"></a>Per modificare le dimensioni del testo nelle finestre degli strumenti basate su testo e negli editor  
-  
-1.  Scegliere **Opzioni** dal menu **Strumenti**.  
-  
-2.  Scegliere **Tipi di carattere e colori** nella cartella **Ambiente**.  
-  
-3.  Selezionare un'opzione nel menu a discesa **Mostra impostazioni per**.  
-  
-     Per modificare le dimensioni dei caratteri del testo in un editor, scegliere **Editor di testo**.  
-  
-     Per modificare le dimensioni dei caratteri del testo nelle finestre degli strumenti basate su testo, scegliere **[Tutte le finestre degli strumenti di testo]**.  
-  
-     Per modificare le dimensioni dei caratteri del testo delle descrizioni comandi in un editor, scegliere **Descrizione comando editor**.  
-  
-     Per modificare le dimensioni dei caratteri del testo degli elementi popup di completamento istruzioni, scegliere **Completamento istruzioni**.  
-  
-4.  In **Elementi visualizzati** selezionare **Testo normale**.  
-  
-5.  In **Carattere** selezionare un nuovo tipo di carattere.  
-  
-6.  In **Dimensioni** selezionare nuove dimensioni del carattere.  
-  
+>  The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition. To change your settings, choose **Import and Export Settings** on the **Tools** menu. For more information, see [Personalize the Visual Studio IDE](../../ide/personalizing-the-visual-studio-ide.md).  
+
+## <a name="editors-dialogs-and-tool-windows"></a>Editors, Dialogs, and Tool Windows  
+ By default, dialog boxes and tool windows in [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] use the same font size and colors as the operating system. The color settings for the frame of the IDE, dialog boxes, toolbars, and tool windows are based a color scheme: light or dark. You can change the current color theme in the [General, Environment, Options Dialog Box](../../ide/reference/general-environment-options-dialog-box.md).  
+
+ You can also display pop-up windows in the Code view of the editor. These windows can prompt you with available members on the current object and the parameters to complete a function or statement. These windows can be helpful if you have difficulty typing. However, they interfere with focus in the code editor, which can be problematic for some users. You can turn off these windows by opening the Options dialog box and clearing **Auto list members** and **Parameter information** in the **Text Editor**, **All Languages**, **General** page in the **Options** dialog box. For more information, see [How to: Set General Editor Options](http://msdn.microsoft.com/en-us/704e4a7b-2162-4bed-8a47-f4f6ffec98c2).  
+
+ You can rearrange the windows in the integrated development environment (IDE) to best suit the way you work. You can dock, float, hide, or automatically hide each tool window.  
+
+ For more information about how to change window layouts, see [Customizing window layouts](../../ide/customizing-window-layouts-in-visual-studio.md).  
+
+### <a name="changing-the-size-of-text"></a>Changing the Size of Text  
+ You can change the settings for text-based tool windows, such as the **Command** window, **Immediate** window, and **Output** window, in the **Fonts and Colors** pane of the **Environment** options in the **Tools** dialog box. When **[All Text Tool Windows]** is selected in the **Show settings for** drop-down list, the default setting is listed as **Default** in the **Item foreground** and **Item background** drop-down lists. You can also change the settings for how text is displayed in the editor.  
+
+##### <a name="to-change-the-size-of-text-in-text-based-tool-windows-and-editors"></a>To change the size of text in text-based tool windows and editors  
+
+1.  From the **Tools** menu, choose **Options**.  
+
+2.  Choose **Fonts and Colors** on the **Environment** folder.  
+
+3.  Select an option on the **Show settings for** drop-down menu.  
+
+     To change the font size for text in an editor, choose **Text Editor**.  
+
+     To change the font size for text in text-based tool windows, choose **[All Text Tool Windows]**.  
+
+     To change the font size for ToolTip text in an editor, choose **Editor Tooltip**.  
+
+     To change the font size for text in statement completion pop-ups, choose **Statement Completion**.  
+
+4.  From **Display items**, select **Plain Text**.  
+
+5.  In **Font**, select a new font type.  
+
+6.  In **Size**, select a new font size.  
+
     > [!NOTE]
-    >  Per reimpostare le dimensioni del testo per le finestre degli strumenti basate su testo e per gli editor, scegliere **Usa impostazioni predefinite**.  
-  
-7.  Scegliere **OK**.  
-  
-### <a name="changing-the-colors-used-in-the-ide"></a>Modifica dei colori usati nell'IDE  
- È anche possibile modificare i colori predefiniti per il testo, gli indicatori di margine, lo spazio e gli elementi di codice nell'editor.  
-  
+    >  To reset the text size for text-based tool windows and editors, choose **Use Defaults**.  
+
+7.  Choose **OK**.  
+
+### <a name="changing-the-colors-used-in-the-ide"></a>Changing the Colors used in the IDE  
+ You can also choose to change the default colors for text, margin indicators, white space, and code elements in the editor.  
+
 > [!NOTE]
->  Per usare colori a contrasto elevato per tutte le finestre delle applicazioni del sistema operativo, premere **ALT di sinistra +** **MAIUSC di sinistra + STAMP**. Se [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] è aperto, chiuderlo e riaprirlo [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] per implementare correttamente i colori a contrasto elevato.  
-  
-##### <a name="to-change-the-color-of-items-in-the-editor"></a>Per modificare il colore degli elementi nell'editor  
-  
-1.  Scegliere **Opzioni** dal menu **Strumenti**.  
-  
-2.  Scegliere **Tipi di carattere e colori** nella cartella **Ambiente**.  
-  
-3.  In **Mostra impostazioni per** scegliere **Editor di testo**.  
-  
-4.  In **Elementi visualizzati** selezionare un elemento di cui si vuole modificare la visualizzazione, ad esempio **Testo normale**, **Margine indicatore**, **Spazio vuoto visibile**, **Nome attributo HTML** o **Attributo XML**.  
-  
-5.  Selezionare le impostazioni di visualizzazione delle opzioni seguenti: **Primo piano elemento**, **Sfondo elemento** e **Grassetto**.  
-  
-6.  Scegliere **OK**.  
-  
-## <a name="toolbars"></a>Barre degli strumenti  
- Per migliorare l'usabilità e l'accessibilità delle barre degli strumenti, è possibile aggiungere testo ai pulsanti di queste ultime.  
-  
-#### <a name="to-assign-text-to-toolbar-buttons"></a>Per assegnare testo ai pulsanti delle barre degli strumenti  
-  
-1.  Scegliere **Personalizza** dal menu **Strumenti**.  
-  
-2.  Nella finestra di dialogo **Personalizza** fare clic sulla scheda **Comandi**.  
-  
-3.  Selezionare **Barra degli strumenti** e quindi scegliere il nome della barra degli strumenti che contiene il pulsante per il quale si vuole visualizzare testo.  
-  
-4.  Selezionare il comando che si vuole modificare nell'elenco.  
-  
-5.  Scegliere **Modifica selezione**.  
-  
-6.  Scegliere **Icona e testo**.  
-  
-#### <a name="to-modify-the-buttons-displayed-text"></a>Per modificare il testo visualizzato di un pulsante  
-  
-1.  Selezionare di nuovo **Modifica selezione**.  
-  
-2.  Accanto a In **nome** specificare una nuova didascalia per il pulsante selezionato.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Funzionalità di accessibilità di Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md)   
- [Risorse per la progettazione di applicazioni accessibili](../../ide/reference/resources-for-designing-accessible-applications.md)
+>  To use high contrast colors for all application windows on your operating system, press Left **ALT+**Left **SHIFT+PRINT SCREEN**. If [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] is open, close and reopen [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] to fully implement high contrast colors.  
+
+##### <a name="to-change-the-color-of-items-in-the-editor"></a>To change the color of items in the editor  
+
+1.  From the **Tools** menu, choose **Options**.  
+
+2.  Choose **Fonts and Colors** from the **Environment** folder.  
+
+3.  In **Show settings for**, choose **Text Editor**.  
+
+4.  From **Display items**, select an item whose display you need to change, such as **Plain Text**, **Indicator Margin**, **Visible White Space**, **HTML Attribute Name**, or **XML Attribute**.  
+
+5.  Select display settings from the following options: **Item foreground**, **Item background**, and **Bold**.  
+
+6.  Choose **OK**.  
+
+## <a name="toolbars"></a>Toolbars  
+ To improve toolbar usability and accessibility, you can add text to toolbar buttons.  
+
+#### <a name="to-assign-text-to-toolbar-buttons"></a>To assign text to toolbar buttons  
+
+1.  From the **Tools** menu, choose **Customize**.  
+
+2.  In the **Customize** dialog box, select the **Commands** tab.  
+
+3.  Select **Toolbar** and then choose the toolbar name that contains the button you intend to display text for.  
+
+4.  In the list, select the command you intend to change.  
+
+5.  Choose **Modify Selection**.  
+
+6.  Choose **Image and Text**.  
+
+#### <a name="to-modify-the-buttons-displayed-text"></a>To modify the button's displayed text  
+
+1.  Re-select **Modify Selection**.  
+
+2.  Adjacent to In **Name**, insert provide a new caption for the selected button.  
+
+## <a name="see-also"></a>See Also  
+ [Accessibility Features of Visual Studio](../../ide/reference/accessibility-features-of-visual-studio.md)   
+ [Resources for Designing Accessible Applications](../../ide/reference/resources-for-designing-accessible-applications.md)
+

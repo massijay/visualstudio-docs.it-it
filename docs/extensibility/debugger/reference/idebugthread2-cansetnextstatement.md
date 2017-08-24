@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::CanSetNextStatement | Documenti di Microsoft
+title: IDebugThread2::CanSetNextStatement | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0b7ff8319bd1c8fddf53c3a58eed604bc8e4cc0f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 93641816a2186d2ac3560a1475082a65a788a812
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugthread2cansetnextstatement"></a>IDebugThread2::CanSetNextStatement
-Determina se il puntatore all'istruzione corrente può essere impostato su determinato stack frame.  
+Determines whether the current instruction pointer can be set to the given stack frame.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT CanSetNextStatement (   
@@ -48,27 +49,27 @@ HRESULT CanSetNextStatement (
 );  
 ```  
   
-```c#  
+```cs  
 int CanSetNextStatement (   
    IDebugStackFrame2  pStackFrame,  
    IDebugCodeContext2 pCodeContext  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `pStackFrame`  
- Riservato per utilizzi futuri; impostare un valore null. Se si tratta di un valore null, utilizzare lo stack frame corrente.  
+ Reserved for future use; set to a null value. If this is a null value, use the current stack frame.  
   
  `pCodeContext`  
- [in] Un [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) oggetto che descrive la posizione del codice da eseguire e il relativo contesto.  
+ [in] An [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) object that describes the code location about to be executed and its context.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Note  
- Se questo metodo restituisce `S_OK`, quindi chiamare il [SetNextStatement](../../../extensibility/debugger/reference/idebugthread2-setnextstatement.md) metodo effettivamente impostare l'istruzione successiva.  
+## <a name="remarks"></a>Remarks  
+ If this method returns `S_OK`, then call the [SetNextStatement](../../../extensibility/debugger/reference/idebugthread2-setnextstatement.md) method to actually set the next statement.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)   

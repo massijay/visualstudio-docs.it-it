@@ -1,62 +1,79 @@
 ---
-title: "IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GetTypeFromTypeDef"
-  - "IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef"
+title: IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GetTypeFromTypeDef
+- IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef
 ms.assetid: 7f6cd3d3-f4da-4893-be91-8dd104be8010
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f26fb8adaa2745321dbd648823a3fceea40b408d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Recupera un tipo fornito il relativo token.  
+---
+# <a name="idebugdynamicfieldcomplusgettypefromtypedef"></a>IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef
+Retrieves a type given its token.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetTypeFromTypeDef(  
-   ULONG32       ulAppDomainID,  
-   GUID          guidModule,  
-   _mdToken      tokClass,  
-   IDebugField** ppType  
+   ULONG32       ulAppDomainID,  
+   GUID          guidModule,  
+   _mdToken      tokClass,  
+   IDebugField** ppType  
 );  
 ```  
   
-```c#  
+```cs  
 int GetTypeFromTypeDef(  
-   uint            ulAppDomainID,  
-   Guid            guidModule,  
-   int             tokClass,  
-   out IDebugField ppType  
+   uint            ulAppDomainID,  
+   Guid            guidModule,  
+   int             tokClass,  
+   out IDebugField ppType  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `ulAppDomainID`  
- \[in\]  Identificatore del dominio applicazione.  
+ [in] Identifier of the application domain.  
   
  `guidModule`  
- \[in\]  Identificatore univoco del modulo.  
+ [in] Unique identifier of the module.  
   
  `tokClass`  
- \[in\]  token che rappresenta il tipo.  
+ [in] Token that represents the type.  
   
  `ppType`  
- \[out\]  Restituisce [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) un oggetto contenente il tipo.  
+ [out] Returns an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object that contains the type.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugDynamicFieldCOMPlus](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus.md)

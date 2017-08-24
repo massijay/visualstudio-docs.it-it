@@ -1,59 +1,76 @@
 ---
-title: "IDebugModuleLoadEvent2::GetModule | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugModuleLoadEvent2::GetModule"
-helpviewer_keywords: 
-  - "IDebugModuleLoadEvent2::GetModule"
+title: IDebugModuleLoadEvent2::GetModule | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugModuleLoadEvent2::GetModule
+helpviewer_keywords:
+- IDebugModuleLoadEvent2::GetModule
 ms.assetid: c86482bb-9ce5-4e63-bbe0-969b50169424
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugModuleLoadEvent2::GetModule
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 9789c4526a57eb8ea619718dd28d350d49b6ea0f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Ottiene il modulo in fase di caricamento o scaricati.  
+---
+# <a name="idebugmoduleloadevent2getmodule"></a>IDebugModuleLoadEvent2::GetModule
+Gets the module that is being loaded or unloaded.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetModule(   
-   IDebugModule2** pModule,  
-   BSTR*           pbstrDebugMessage,  
-   BOOL*           pbLoad  
+HRESULT GetModule(   
+   IDebugModule2** pModule,  
+   BSTR*           pbstrDebugMessage,  
+   BOOL*           pbLoad  
 );  
 ```  
   
-```c#  
-int GetModule(   
-   out IDebugModule2 pModule,  
-   ref string        pbstrDebugMessage,  
-   ref int           pbLoad  
+```cs  
+int GetModule(   
+   out IDebugModule2 pModule,  
+   ref string        pbstrDebugMessage,  
+   ref int           pbLoad  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pModule`  
- \[out\]  Restituisce [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) un oggetto che rappresenta il modulo in fase di caricamento o scaricati.  
+ [out] Returns an [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) object that represents the module which is loading or unloading.  
   
  `pbstrDebugMessage`  
- \[in, out\]  restituisce un messaggio facoltativo che descrive questo evento.  Se questo parametro è un valore null, non viene visualizzato alcun messaggio è obbligatorio.  
+ [in, out] Returns an optional message describing this event. If this parameter is a null value, no message is requested.  
   
  `pbLoad`  
- \[in, out\]  Diverso da zero \(`TRUE`\) se il modulo viene caricato e zero \(`FALSE`\) se il modulo è terminato.  Se questo parametro è un valore null, il alcuno stato è obbligatorio.  
+ [in, out] Nonzero (`TRUE`) if the module is loading and zero (`FALSE`) if the module is unloading. If this parameter is a null value, no status is requested.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugModuleLoadEvent2](../../../extensibility/debugger/reference/idebugmoduleloadevent2.md)   
  [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)

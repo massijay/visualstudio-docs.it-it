@@ -1,49 +1,66 @@
 ---
-title: "IDebugStackFrame2::GetThread | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugStackFrame2::GetThread"
-helpviewer_keywords: 
-  - "IDebugStackFrame2::GetThread"
+title: IDebugStackFrame2::GetThread | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugStackFrame2::GetThread
+helpviewer_keywords:
+- IDebugStackFrame2::GetThread
 ms.assetid: cbeef85b-3dd7-4f97-adc2-c4d197d979fc
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugStackFrame2::GetThread
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 52ea06852e79a3e44cb9cad39aab2334fec2631c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Ottiene il thread associato a uno stack frame.  
+---
+# <a name="idebugstackframe2getthread"></a>IDebugStackFrame2::GetThread
+Gets the thread associated with a stack frame.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetThread (   
-   IDebugThread2** ppThread  
+HRESULT GetThread (   
+   IDebugThread2** ppThread  
 );  
 ```  
   
-```c#  
-int GetThread (   
-   out IDebugThread2 ppThread  
+```cs  
+int GetThread (   
+   out IDebugThread2 ppThread  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `ppThread`  
- \[out\]  restituisce [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) un oggetto che rappresenta il thread.  
+ [out] Returns an [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object that represents the thread.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

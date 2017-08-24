@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3::LoadSymbols | Documenti di Microsoft
+title: IDebugModule3::LoadSymbols | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: cfbbee570edb99e0158f2c37007e7435bece115f
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 33e209c6eacac92737a6e5f2ae299601b08e99ef
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugmodule3loadsymbols"></a>IDebugModule3::LoadSymbols
-Carica i simboli per il modulo corrente.  
+Loads the symbols for the current module.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT LoadSymbols(  
@@ -47,18 +48,18 @@ HRESULT LoadSymbols(
 );  
 ```  
   
-```c#  
+```cs  
 int LoadSymbols();  
 ```  
   
-## <a name="return-value"></a>Valore restituito  
- Se il metodo ha esito positivo, restituisce `S_OK`. In caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns `S_OK`. If it fails, it returns an error code.  
   
-## <a name="remarks"></a>Note  
- Questo metodo carica i simboli dal percorso di ricerca corrente (che può essere modificato chiamando il [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md) (metodo)).  
+## <a name="remarks"></a>Remarks  
+ This method loads the symbols from the current search path (which can be altered by calling the [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md) method).  
   
- Questo metodo è preferibile il [ReloadSymbols_Deprecated](../../../extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated.md) metodo.  
+ This method is preferred over the [ReloadSymbols_Deprecated](../../../extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated.md) method.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)   
  [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)

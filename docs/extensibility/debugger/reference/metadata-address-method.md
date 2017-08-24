@@ -1,69 +1,86 @@
 ---
-title: "METADATA_ADDRESS_METHOD | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "METADATA_ADDRESS_METHOD"
-helpviewer_keywords: 
-  - "Struttura METADATA_ADDRESS_METHOD"
+title: METADATA_ADDRESS_METHOD | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- METADATA_ADDRESS_METHOD
+helpviewer_keywords:
+- METADATA_ADDRESS_METHOD structure
 ms.assetid: fc0e5370-1b4f-4867-837f-0d63c4b9dd09
 caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# METADATA_ADDRESS_METHOD
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 088b632b4d8b88af14d2458e49b8130961289403
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Questa struttura rappresenta l'indirizzo di un metodo di una classe.  
+---
+# <a name="metadataaddressmethod"></a>METADATA_ADDRESS_METHOD
+This structure represents the address of a method of a class.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _tagMETADATA_ADDRESS_METHOD {  
-   _mdToken tokMethod;  
-   DWORD    dwOffset;  
-   DWORD    dwVersion;  
+   _mdToken tokMethod;  
+   DWORD    dwOffset;  
+   DWORD    dwVersion;  
 } METADATA_ADDRESS_METHOD;  
 ```  
   
-```c#  
+```cs  
 public struct METADATA_ADDRESS_METHOD {  
-   public int  tokMethod;  
-   public uint dwOffset;  
-   public uint dwVersion;  
+   public int  tokMethod;  
+   public uint dwOffset;  
+   public uint dwVersion;  
 }  
 ```  
   
-## termini  
+## <a name="terms"></a>Terms  
  tokMethod  
- ID del metodo.  
+ The ID of the method.  
   
- \[C\+\+\] `_mdToken` è `typedef` per un 32 bit `int`.  
+ [C++] `_mdToken` is a `typedef` for a 32-bit `int`.  
   
  dwOffset  
- L'offset dall'inizio della classe a questo metodo \(possibile rappresentare offset nella tabella vtable\).  
+ The offset from the class start to this method (can represent the offset into the vtable).  
   
  dwVersion  
- La versione del metodo \(questo valore è univoco al provider di simboli\).  
+ The version of the method (this value is unique to the symbol provider).  
   
-## Note  
- Questa struttura fa parte dell'[DEBUG\_ADDRESS\_UNION](../../../extensibility/debugger/reference/debug-address-union.md) unione nella struttura quando il campo di `dwKind` della struttura di `DEBUG_ADDRESS_UNION` è impostato su `ADDRESS_KIND_METHOD` \(un valore [ADDRESS\_KIND](../../../extensibility/debugger/reference/address-kind.md) dell'enumerazione\).  
+## <a name="remarks"></a>Remarks  
+ This structure is part of the union in the [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) structure when the `dwKind` field of the `DEBUG_ADDRESS_UNION` structure is set to `ADDRESS_KIND_METHOD` (a value from the [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) enumeration).  
   
-## Requisiti  
- intestazione: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
- Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## Vedere anche  
- [Strutture e unioni](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [DEBUG\_ADDRESS\_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
- [ADDRESS\_KIND](../../../extensibility/debugger/reference/address-kind.md)
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+ [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
+ [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

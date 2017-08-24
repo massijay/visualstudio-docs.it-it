@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetSize | Documenti di Microsoft
+title: IDebugProperty2::GetSize | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 24aeecb4b0fb1b8781ad0cd81b5a562f1b78fc4d
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 6aeff6a9c4199dcf5f1bd6c304c09a6cd992f24c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugproperty2getsize"></a>IDebugProperty2::GetSize
-Ottiene le dimensioni, in byte, del valore della proprietà.  
+Gets the size, in bytes, of the property value.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetSize (   
@@ -47,18 +48,18 @@ HRESULT GetSize (
 );  
 ```  
   
-```c#  
+```cs  
 int GetSize (   
    out uint pdwSize  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `pdwSize`  
- [out] Restituisce la dimensione, in byte, del valore della proprietà.  
+ [out] Returns the size, in bytes, of the property value.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario restituisce il codice di errore. Restituisce `S_GETSIZE_NO_SIZE` se la proprietà non ha dimensioni.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise returns error code. Returns `S_GETSIZE_NO_SIZE` if the property has no size.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

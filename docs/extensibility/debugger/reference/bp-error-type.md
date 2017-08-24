@@ -1,5 +1,5 @@
 ---
-title: BP_ERROR_TYPE | Documenti di Microsoft
+title: BP_ERROR_TYPE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 07248d28d34373176f9897472c39c0756012da59
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 1afc6abcccaf8226b83858121eac4e98136abdb5
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="bperrortype"></a>BP_ERROR_TYPE
-Specifica il tipo di errore di un punto di interruzione.  
+Specifies the error type of a breakpoint.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BP_ERROR_TYPE {   
@@ -58,7 +59,7 @@ enum enum_BP_ERROR_TYPE {
 typedef DWORD BP_ERROR_TYPE;  
 ```  
   
-```c#  
+```cs  
 public enum enum_BP_ERROR_TYPE {   
    BPET_NONE            = 0x00000000,  
    BPET_TYPE_WARNING    = 0x00000001,  
@@ -74,53 +75,53 @@ public enum enum_BP_ERROR_TYPE {
 };  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
  BPET_NONE  
- È specificato alcun errore di punto di interruzione.  
+ Specifies no breakpoint error.  
   
  BPET_TYPE_WARNING  
- Specifica un punto di interruzione di tipo avviso di errore.  
+ Specifies a warning-style breakpoint error.  
   
  BPET_TYPE_ERROR  
- Specifica un errore del punto di interruzione lo stile di errore.  
+ Specifies an error-style breakpoint error.  
   
  BPET_SEV_HIGH  
- Specifica un punto di interruzione di alta gravità errore.  
+ Specifies a high-severity breakpoint error.  
   
  BPET_SEV_GENERAL  
- Specifica un punto di interruzione di medio livello di gravità errore.  
+ Specifies a medium-severity breakpoint error.  
   
  BPET_SEV_LOW  
- Specifica un punto di interruzione di basso livello di gravità errore.  
+ Specifies a low-severity breakpoint error.  
   
  BPET_TYPE_MASK  
- Specifica un errore del punto di interruzione maschera stile.  
+ Specifies a mask-style breakpoint error.  
   
  BPET_SEV_MASK  
- Specifica un punto di interruzione tipo di maschera gravità errore.  
+ Specifies a severity-mask-style breakpoint error.  
   
  BPET_GENERAL_WARNING  
- Specifica un punto di interruzione stile generale-avviso di errore.  
+ Specifies a general-warning-style breakpoint error.  
   
  BPET_GENERAL_ERROR  
- Specifica un punto di interruzione lo stile di errore generale di errore.  
+ Specifies a general-error-style breakpoint error.  
   
  BPET_ALL  
- Specifica tutti i tipi di errore di punto di interruzione.  
+ Specifies all breakpoint error types.  
   
-## <a name="remarks"></a>Note  
- Questi valori possono essere combinati con un bit per bit `OR` e viene utilizzato per il `dwType` membro del [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struttura. Passato come parametro per il [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) metodo.  
+## <a name="remarks"></a>Remarks  
+ These values may be combined with a bitwise `OR` and used for the `dwType` member of the [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) structure. Passed as a parameter to the [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md) method.  
   
- Un tipo di errore di interruzione è composta da un tipo e un livello di gravità. Ciò significa che un tipo di errore di interruzione non è solo un tipo (ad esempio, `BPET_TYPE_ERROR`,) o un livello di gravità (ad esempio, `BPET_SEV_GENERAL`) da solo. `BPET_GENERAL_WARNING`e `BPET_GENERAL_ERROR` fornire valori predefiniti dei punti di interruzione di avviso ed errore generale.  
+ A breakpoint error type is composed of a type and a severity. This means that a breakpoint error type is never just a type (for example, `BPET_TYPE_ERROR`,) or a severity (for example, `BPET_SEV_GENERAL`) by itself. `BPET_GENERAL_WARNING` and `BPET_GENERAL_ERROR` provide predefined values for general warning and error breakpoints.  
   
-## <a name="requirements"></a>Requisiti  
- Intestazione: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)   
  [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)

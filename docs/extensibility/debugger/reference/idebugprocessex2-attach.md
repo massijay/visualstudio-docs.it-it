@@ -1,51 +1,68 @@
 ---
-title: "IDebugProcessEx2::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcessEx2::Attach"
-helpviewer_keywords: 
-  - "Metodo IDebugProcessEx2::Attach"
+title: IDebugProcessEx2::Attach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProcessEx2::Attach
+helpviewer_keywords:
+- IDebugProcessEx2::Attach method
 ms.assetid: f3334ed7-39bf-4d02-a338-36f567b9b287
 caps.latest.revision: 15
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# IDebugProcessEx2::Attach
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: a7c7d197509a7c7343112d151d65fe480e81c89c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Questo metodo segnala al processo di una sessione ora esegue il debug del processo.  
+---
+# <a name="idebugprocessex2attach"></a>IDebugProcessEx2::Attach
+This method informs the process that a session is now debugging the process.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT Attach(   
-   IDebugSession2* pSession  
+HRESULT Attach(   
+   IDebugSession2* pSession  
 );  
 ```  
   
-```c#  
+```cs  
 int Attach(  
-   IDebugSession2 pSession  
+   IDebugSession2 pSession  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pSession`  
- \[in\]  Un valore che identifica in modo univoco la sessione che si connette al processo.  
+ [in] A value that uniquely identifies the session attaching to this process.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- Interfaccia passata in `pSession` deve essere considerata solo come cookie, un valore che identifica in modo univoco l'amministratore di debug della sessione che si connette al processo; nessuno dei metodi in un'interfaccia fornita sono funzionanti.  
+## <a name="remarks"></a>Remarks  
+ The interface passed in `pSession` is to be treated only as a cookie, a value that uniquely identifies the session debug manager attaching to this process; none of the methods on the supplied interface are functional.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugProcessEx2](../../../extensibility/debugger/reference/idebugprocessex2.md)

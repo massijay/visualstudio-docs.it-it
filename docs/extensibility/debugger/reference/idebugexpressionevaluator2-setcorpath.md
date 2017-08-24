@@ -1,50 +1,67 @@
 ---
-title: "IDebugExpressionEvaluator2::SetCorPath | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SetCorPath"
-  - "IDebugExpressionEvaluator2::SetCorPath"
+title: IDebugExpressionEvaluator2::SetCorPath | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SetCorPath
+- IDebugExpressionEvaluator2::SetCorPath
 ms.assetid: 27b614ff-7325-4f9b-8da4-61ee020c9410
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugExpressionEvaluator2::SetCorPath
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b8d6d564541ee741250ad920c6c823223285bb9b
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Imposta il percorso del Common Language \(CLR\) Runtime caricato nel debugger.  
+---
+# <a name="idebugexpressionevaluator2setcorpath"></a>IDebugExpressionEvaluator2::SetCorPath
+Sets the path to the common language runtime (CLR) loaded in the debugger.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT SetCorPath(  
-   LPCOLESTR pcstrCorPath  
+   LPCOLESTR pcstrCorPath  
 );  
 ```  
   
-```c#  
+```cs  
 int SetCorPath(  
-   string pcstrCorPath  
+   string pcstrCorPath  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pcstrCorPath`  
- \[in\]  Percorso a CLR caricato nel debugger.  
+ [in] Path to the CLR loaded in the debugger.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto **di ExpressionEvaluatorPackage** che espone [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) l'interfaccia.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **ExpressionEvaluatorPackage** object that exposes the [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) interface.  
   
 ```cpp#  
 STDMETHODIMP ExpressionEvaluatorPackage::SetCorPath(LPCOLESTR pcstrCorPath)  
@@ -124,5 +141,5 @@ STDMETHODIMP ExpressionEvaluatorPackage::SetCorPath(LPCOLESTR pcstrCorPath)
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

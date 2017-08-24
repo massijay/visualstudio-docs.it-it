@@ -1,58 +1,75 @@
 ---
-title: "IDebugCustomAttribute::GetAttributeBytes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomAttribute::GetAttributeBytes"
-helpviewer_keywords: 
-  - "IDebugCustomAttribute::GetAttributeBytes"
+title: IDebugCustomAttribute::GetAttributeBytes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCustomAttribute::GetAttributeBytes
+helpviewer_keywords:
+- IDebugCustomAttribute::GetAttributeBytes
 ms.assetid: cf34583b-6530-4dcc-89f8-eb27e4e8d594
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugCustomAttribute::GetAttributeBytes
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 9826b929d602403af6b569d7dcafb7a4116b3a02
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Ottiene informazioni su come BLOB di byte.  
+---
+# <a name="idebugcustomattributegetattributebytes"></a>IDebugCustomAttribute::GetAttributeBytes
+Gets the attribute information as a blob of bytes.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetAttributeBytes(   
-   BYTE*  ppBlob,  
-   DWORD* pdwLen  
+HRESULT GetAttributeBytes(   
+   BYTE*  ppBlob,  
+   DWORD* pdwLen  
 );  
 ```  
   
-```c#  
+```cs  
 int GetAttributeBytes(  
-   ref byte[] ppBlob,   
-   ref uint   pdwLen  
+   ref byte[] ppBlob,   
+   ref uint   pdwLen  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `ppBlob`  
- \[in, out\]  Una matrice che viene soddisfatta di byte di attributo.  
+ [in, out] An array that is filled in with the attribute bytes.  
   
  `pdwLen`  
- \[in, out\]  Specifica il numero massimo di byte da restituire nella matrice di `ppBlob` e restituisce il numero di byte in realtà scritti nella matrice.  
+ [in, out] Specifies the maximum number of bytes to return in the `ppBlob` array and returns the number of bytes actually written to the array.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce S\_OK, in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## Note  
- Impostare il parametro di `ppBlob` a un valore null per restituire il numero di byte di attributi disponibili.  Quindi allocare una matrice e passare la matrice in per il parametro di `ppBlob` .  
+## <a name="remarks"></a>Remarks  
+ Set the `ppBlob` parameter to a null value to return the number of attributes bytes available. Then allocate an array and pass that array in for the `ppBlob` parameter.  
   
- I byte di attributo rappresentano i dati non elaborati l'attributo personalizzato.  
+ The attribute bytes represent the raw data of the custom attribute.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

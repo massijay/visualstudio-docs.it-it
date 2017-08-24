@@ -1,47 +1,64 @@
 ---
-title: "IEnumDebugFields::Reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEnumDebugFields::Reset"
-helpviewer_keywords: 
-  - "Metodo IEnumDebugFields::Reset"
+title: IEnumDebugFields::Reset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEnumDebugFields::Reset
+helpviewer_keywords:
+- IEnumDebugFields::Reset method
 ms.assetid: 38ff61e4-0120-42e8-971a-16be6050b425
 caps.latest.revision: 6
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# IEnumDebugFields::Reset
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 5b418a699ee2ad5449541482f6c3e1d346f8f191
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Questo metodo consente di reimpostare l'enumerazione al primo elemento.  
+---
+# <a name="ienumdebugfieldsreset"></a>IEnumDebugFields::Reset
+This method resets the enumeration to the first element.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Reset(void);  
 ```  
   
-```c#  
+```cs  
 int Reset();  
 ```  
   
-#### Parametri  
- Nessuno  
+#### <a name="parameters"></a>Parameters  
+ None  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- Dopo che questo metodo viene chiamato, la successiva [Successivo](../../../extensibility/debugger/reference/ienumdebugfields-next.md) chiamata a restituisce il primo elemento dell'enumerazione.  
+## <a name="remarks"></a>Remarks  
+ After this method is called, the next call to [Next](../../../extensibility/debugger/reference/ienumdebugfields-next.md) returns the first element of the enumeration.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   
- [Successivo](../../../extensibility/debugger/reference/ienumdebugfields-next.md)
+ [Next](../../../extensibility/debugger/reference/ienumdebugfields-next.md)

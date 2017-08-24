@@ -1,51 +1,68 @@
 ---
-title: "IDebugDocumentPosition2::GetFileName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentPosition2::GetFileName"
-helpviewer_keywords: 
-  - "IDebugDocumentPosition2::GetFileName"
+title: IDebugDocumentPosition2::GetFileName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugDocumentPosition2::GetFileName
+helpviewer_keywords:
+- IDebugDocumentPosition2::GetFileName
 ms.assetid: d713635e-088f-465b-b26d-00ac971c9e86
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugDocumentPosition2::GetFileName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 273ef2b9f394c4c216e4fa7483c0c63c035aa46f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Ottiene il nome del file di origine contenente il percorso del documento.  
+---
+# <a name="idebugdocumentposition2getfilename"></a>IDebugDocumentPosition2::GetFileName
+Gets the file name of the source file that contains the document position.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetFileName(   
-   BSTR* pbstrFileName  
+HRESULT GetFileName(   
+   BSTR* pbstrFileName  
 );  
 ```  
   
-```c#  
-int GetFileName(   
-   out string pbstrFileName  
+```cs  
+int GetFileName(   
+   out string pbstrFileName  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pbstrFileName`  
- \[out\]  Restituisce il nome del file di origine.  
+ [out] Returns the file name of the source file.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- Un file di origine non può sempre assegnato un nome file \(il file di origine non può trovarsi sul disco, ad esempio.  
+## <a name="remarks"></a>Remarks  
+ A source file may not always have a file name (the source file may not exist on disk, for example).  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)

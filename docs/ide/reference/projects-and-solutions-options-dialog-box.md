@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Progetti e soluzioni, Opzioni | Microsoft Docs
+title: Projects and Solutions, Options Dialog Box | Microsoft Docs
 ms.custom: 
 ms.date: 7/14/2017
 ms.reviewer: 
@@ -20,71 +20,71 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: dc7a0c10390de67b56a83d2824224bed24125db0
-ms.openlocfilehash: 9e34dc6bd0a876be15dccaff519d67a566022008
+ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
+ms.openlocfilehash: 2778964a6d5e4f478422727b02e15a058868e644
 ms.contentlocale: it-it
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="projects-and-solutions-options-dialog-box"></a>Progetti e soluzioni, Opzioni (finestra di dialogo)
+# <a name="projects-and-solutions-options-dialog-box"></a>Projects and Solutions, Options Dialog Box
 
-Consente di impostare il comportamento di [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] in relazione a progetti e soluzioni. Per accedere a queste opzioni selezionare **Strumenti > Opzioni**, espandere **Progetti e soluzioni** e fare clic su **Generale**.
+Sets [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] behavior related to projects and solutions. To access these options, select **Tools > Options** expand **Projects and Solutions**, and click **General**.
 
-I percorsi predefiniti per le cartelle di progetti e modelli vengono impostati nella scheda **Percorsi** della stessa finestra di dialogo.
+The default paths for project and template folders are set through the **Locations** tab in the same dialog box.
   
 > [!NOTE]
->  Le opzioni disponibili nelle finestre di dialogo e i nomi e i percorsi dei comandi di menu visualizzati potrebbero non corrispondere a quelli descritti nella Guida a seconda dell'edizione o delle impostazioni attive. Questo argomento della Guida è stato creato tenendo presente le **Impostazioni generali per lo sviluppo**. Per visualizzare o modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti**. Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
+>  The options available in dialog boxes, and the names and locations of menu commands you see, might differ from what is described in Help depending on your active settings or edition. This Help page was written with the **General Development settings** in mind. To view or change your settings, choose **Import and Export Settings** on the **Tools** menu. For more information, see [Personalize the Visual Studio IDE](../../ide/personalizing-the-visual-studio-ide.md).  
   
-## <a name="general-tab-options"></a>Opzioni della scheda Generale  
+## <a name="general-tab-options"></a>General tab options  
  
-**Caricamento leggero soluzioni**: riduce la quantità di tempo e memoria necessari per caricare le soluzioni di grandi dimensioni nell'IDE. Nelle soluzioni di grandi dimensioni, che contengono molti progetti C#, Visual Basic o C++, è probabile che l'abilitazione del caricamento leggero delle soluzioni produca sostanziali vantaggi in termini di prestazioni.
+**Lightweight Solution Load** Reduces the amount of time and memory required to load large solutions in the IDE. Large solutions containing many C#, Visual Basic, or C++ projects are likely to see a substantial performance benefit using lightweight solution load.
 
-- **Consenti a Visual Studio di scegliere l'opzione migliore per la soluzione**: consente a Visual Studio di determinare automaticamente se applicare il caricamento leggero in base alle caratteristiche della soluzione.
-- **Abilitato**: applica sempre il caricamento leggero durante il caricamento delle soluzioni.
-- **Disattivato**: non applica mai il caricamento leggero delle soluzioni.
+- **Let Visual Studio choose what's best for my solution**: Lets Visual Studio automatically determine whether to apply Lightweight solution load based on the characteristics of the solution.
+- **Enabled**: Always applies Lightweight solution load when loading solutions.
+- **Disabled**: Never applies Lightweight solution load.
 
-Per altre informazioni, vedere [Ottimizzare il tempo di avvio di Visual Studio](../optimize-visual-studio-startup-time.md#speed-up-solution-load)
+For more information, see [Optimize Visual Studio Startup Time](../optimize-visual-studio-startup-time.md#speed_up_solution_load)
 
-**Mostra sempre Elenco errori se la compilazione finisce con errori**  
-Apre la finestra **Elenco errori** al completamento della compilazione, ma solo se la compilazione di un progetto non è riuscita. Vengono visualizzati gli errori che si sono verificati durante il processo di compilazione. Quando questa opzione è deselezionata, gli errori si verificano ugualmente, ma la finestra non verrà aperta una volta completata la compilazione. Questa opzione è attivata per impostazione predefinita.  
+**Always show Error List if build finishes with errors**  
+Opens the **Error List** window on build completion, only if a project failed to build. Errors that occur during the build process are displayed. When this option is cleared, the errors still occur but the window does not open when the build is complete. This option is enabled by default.  
 
-**Tieni traccia degli elementi attivi in Esplora soluzioni**  
-Se selezionata, **Esplora soluzioni** viene aperto automaticamente e l'elemento attivo viene selezionato. L'elemento selezionato cambia quando si lavora con diversi file in un progetto o soluzione oppure componenti diversi in una finestra di progettazione. Quando questa opzione è deselezionata, la selezione in **Esplora soluzioni** non viene modificata automaticamente. Questa opzione è attivata per impostazione predefinita.  
+**Track Active Item in Solution Explorer**  
+When selected, **Solution Explorer** automatically opens and the active item is selected. The selected item changes as you work with different files in a project or solution, or different components in a designer. When this option is cleared, the selection in **Solution Explorer** does not change automatically. This option is enabled by default.  
 
-**Mostra configurazioni della build avanzate**  
-Se selezionata, le opzioni di configurazione di compilazione vengono visualizzate nella finestra di dialogo **Pagine delle proprietà** del progetto e nella finestra di dialogo **Pagine delle proprietà** della soluzione. Se deselezionata, le opzioni di configurazione di compilazione non vengono visualizzate nella finestra di dialogo **Pagine delle proprietà** del progetto e nella finestra di dialogo **Pagine delle proprietà** della soluzione per i progetti [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] e [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] che contengono una sola configurazione oppure le due configurazioni debug e rilascio. Se un progetto ha una configurazione definita dall'utente, verranno visualizzate le opzioni di configurazione di compilazione.  
+**Show advanced build configurations**  
+When selected, the build configuration options appear on the **Project Property Pages** dialog box and the **Solution Property Pages** dialog box. When cleared, the build configuration options do not appear on the **Project Property Pages** dialog box and the **Solution Property Pages** dialog box for [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] and [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] projects that contain one configuration or the two configurations debug and release. If a project has a user-defined configuration, the build configuration options are shown.  
 
-Se è deselezionata, i comandi del menu **Compila**, ad esempio **Compila soluzione**, **Ricompila soluzione** e **Pulisci soluzione**, vengono eseguiti nella configurazione Rilascio e i comandi dal menu **Debug**, ad esempio **Avvia il debug** e **Avvia senza eseguire debug**, vengono eseguiti nella configurazione Debug.  
+When unselected, the commands on the **Build** menu, such as **Build Solution**, **Rebuild Solution**, and **Clean Solution**, are performed on the Release configuration and the commands on the **Debug** menu, such as **Start Debugging** and **Start Without Debugging**, are performed on the Debug configuration.  
 
-**Mostra sempre soluzione**  
-Se selezionata, la soluzione e tutti i comandi che agiscono sulle soluzioni vengono sempre visualizzati nell'IDE. Se deselezionata, tutti i progetti vengono creati come progetti autonomi e la soluzione non viene visualizzata in Esplora soluzioni o i comandi che agiscono sulle soluzioni non vengono visualizzati nell'IDE se la soluzione contiene un solo progetto.  
+**Always show solution**  
+When selected, the solution and all commands that act on solutions are always shown in the IDE. When cleared, all projects are created as stand-alone projects and you do not see the solution in Solution Explorer or commands that act on solutions in the IDE if the solution contains only one project.  
 
-**Salva nuovi progetti alla creazione**  
-Se selezionata, è possibile specificare un percorso per il progetto nella finestra di dialogo **Nuovo progetto**. Se deselezionata, tutti i nuovi progetti vengono creati come progetti temporanei. Quando si lavora con i progetti temporanei, è possibile creare ed effettuare prove con un progetto senza dover specificare un percorso sul disco.  
+**Save new projects when created**  
+When selected, you can specify a location for your project in the **New Project** dialog box. When cleared, all new projects are created as temporary projects. When you are working with temporary projects, you can create and experiment with a project without having to specify a disk location.  
 
-**Avvisa utente quando il percorso del progetto non è attendibile**  
-Se si prova a creare un nuovo progetto o ad aprire un progetto esistente in una posizione non completamente attendibile (ad esempio, in un percorso UNC o un percorso HTTP), verrà visualizzato un messaggio. Usare questa opzione per specificare se il messaggio viene visualizzato ogni volta che si prova a creare o ad aprire un progetto in una posizione non completamente attendibile.  
+**Warn user when the project location is not trusted**  
+If you attempt to create a new project or open an existing project in a location that is not fully trusted (for example, on a UNC path or an HTTP path), a message is displayed. Use this option to specify whether the message is displayed each time that you attempt to create or open a project in a location that is not fully trusted.  
 
-**Mostra finestra di output a inizio compilazione**  
-Consente di visualizzare automaticamente la finestra di Output nell'IDE all'inizio delle compilazioni della soluzione. Per altre informazioni, vedere [Procedura: Controllare la finestra di output](http://msdn.microsoft.com/Library/91aebd15-8854-4a7a-9f7d-57376fb4e858).
+**Show Output window when build starts**  
+Automatically displays the Output Window in the IDE at the outset of solution builds. For more information, see [How to: Control the Output Window](http://msdn.microsoft.com/Library/91aebd15-8854-4a7a-9f7d-57376fb4e858).
 
-**Richiedi ridenominazione simbolica quando vengono rinominati i file**  
-Se selezionata, viene visualizzata una finestra di messaggio che richiede se [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] deve rinominare anche tutti i riferimenti nel progetto all'elemento di codice.  
+**Prompt for symbolic renaming when renaming files**  
+When selected, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] displays a message box asking whether or not it should also rename all references in the project to the code element.  
 
-**Chiedi conferma prima di spostare i file in un'altra posizione**  
-Se selezionata, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] visualizza una finestra di messaggio di conferma prima che i percorsi dei file vengano modificati dalle azioni di Esplora soluzioni. 
+**Prompt before moving files to a new location**  
+When selected, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] displays a confirmation message box before the locations of files are changed by actions in Solution Explorer. 
 
-## <a name="locations-tab-options"></a>Opzioni della scheda Percorsi
+## <a name="locations-tab-options"></a>Locations tab options
 
-**Percorso progetti**  
-Specifica il percorso predefinito in cui [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] crea nuove cartelle di progetti e soluzioni. Anche diverse finestre di dialogo usano il percorso impostato in questa opzione come punto di partenza della cartella. Ad esempio, la finestra di dialogo Apri progetto usa questo percorso per il collegamento Progetti.  
+**Projects location**  
+Specifies the default location where [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] creates new projects and solution folders. Several dialog boxes also use the location set in this option for folder starting points. For example, the Open Project dialog box uses this location for the My Projects shortcut.  
 
-**Percorso dei modelli di progetto utente**  
-Specifica il percorso predefinito usato dalla finestra di dialogo **Nuovo progetto** per creare l'elenco **Modelli personali**. Per altre informazioni, vedere [Procedura: Individuare e organizzare modelli](../../ide/how-to-locate-and-organize-project-and-item-templates.md).  
+**User project templates location**  
+Specifies the default location that the **New Project** dialog box uses to create the list of **My Templates**. For more information, see [How to: Locate and Organize Templates](../../ide/how-to-locate-and-organize-project-and-item-templates.md).  
 
-**Percorso dei modelli di elemento utente**  
-Specifica il percorso predefinito usato dalla finestra di dialogo **Aggiungi nuovo elemento** per creare l'elenco **Modelli personali**. Per altre informazioni, vedere [Procedura: Individuare e organizzare modelli](../../ide/how-to-locate-and-organize-project-and-item-templates.md). 
+**User item templates location**  
+Specifies the default location that the **Add New Item** dialog box uses to create the list of **My Templates**. For more information, see [How to: Locate and Organize Templates](../../ide/how-to-locate-and-organize-project-and-item-templates.md). 
 
-## <a name="see-also"></a>Vedere anche  
-- [Finestra di dialogo Opzioni, Progetti e soluzioni, Compila ed esegui](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)
-- - [Finestra di dialogo Opzioni, Progetti e soluzioni, Progetti Web](../../ide/reference/options-dialog-box-projects-and-solutions-web-projects.md)
+## <a name="see-also"></a>See Also  
+- [Options Dialog Box,  Projects and Solutions, Build and Run](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)
+- - [Options Dialog Box,  Projects and Solutions, Web Projects](../../ide/reference/options-dialog-box-projects-and-solutions-web-projects.md)

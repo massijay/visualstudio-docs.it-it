@@ -1,122 +1,139 @@
 ---
-title: "MODULE_INFO_FIELDS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MODULE_INFO_FIELDS"
-helpviewer_keywords: 
-  - "Enumerazione MODULE_INFO_FIELDS"
+title: MODULE_INFO_FIELDS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MODULE_INFO_FIELDS
+helpviewer_keywords:
+- MODULE_INFO_FIELDS enumeration
 ms.assetid: 8bed85f4-235f-4192-b58f-5fad7a4d7a78
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MODULE_INFO_FIELDS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 10412354e5cdad73b43d432026ce02add56bcab5
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Specifica i flag per le informazioni del modulo di debug.  
+---
+# <a name="moduleinfofields"></a>MODULE_INFO_FIELDS
+Specifies the flags for the debug module information.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-enum enum_MODULE_INFO_FIELDS {   
-   MIF_NONE              = 0x0000,  
-   MIF_NAME              = 0x0001,  
-   MIF_URL               = 0x0002,  
-   MIF_VERSION           = 0x0004,  
-   MIF_DEBUGMESSAGE      = 0x0008,  
-   MIF_LOADADDRESS       = 0x0010,  
-   MIF_PREFFEREDADDRESS  = 0x0020,  
-   MIF_SIZE              = 0x0040,  
-   MIF_LOADORDER         = 0x0080,  
-   MIF_TIMESTAMP         = 0x0100,  
-   MIF_URLSYMBOLLOCATION = 0x0200,  
-   MIF_FLAGS             = 0x0400,  
-   MIF_ALLFIELDS         = 0x07ff  
+enum enum_MODULE_INFO_FIELDS {   
+   MIF_NONE              = 0x0000,  
+   MIF_NAME              = 0x0001,  
+   MIF_URL               = 0x0002,  
+   MIF_VERSION           = 0x0004,  
+   MIF_DEBUGMESSAGE      = 0x0008,  
+   MIF_LOADADDRESS       = 0x0010,  
+   MIF_PREFFEREDADDRESS  = 0x0020,  
+   MIF_SIZE              = 0x0040,  
+   MIF_LOADORDER         = 0x0080,  
+   MIF_TIMESTAMP         = 0x0100,  
+   MIF_URLSYMBOLLOCATION = 0x0200,  
+   MIF_FLAGS             = 0x0400,  
+   MIF_ALLFIELDS         = 0x07ff  
 };  
 typedef DWORD MODULE_INFO_FIELDS;  
 ```  
   
-```c#  
-public enum enum_MODULE_INFO_FIELDS {   
-   MIF_NONE              = 0x0000,  
-   MIF_NAME              = 0x0001,  
-   MIF_URL               = 0x0002,  
-   MIF_VERSION           = 0x0004,  
-   MIF_DEBUGMESSAGE      = 0x0008,  
-   MIF_LOADADDRESS       = 0x0010,  
-   MIF_PREFFEREDADDRESS  = 0x0020,  
-   MIF_SIZE              = 0x0040,  
-   MIF_LOADORDER         = 0x0080,  
-   MIF_TIMESTAMP         = 0x0100,  
-   MIF_URLSYMBOLLOCATION = 0x0200,  
-   MIF_FLAGS             = 0x0400,  
-   MIF_ALLFIELDS         = 0x07ff  
+```cs  
+public enum enum_MODULE_INFO_FIELDS {   
+   MIF_NONE              = 0x0000,  
+   MIF_NAME              = 0x0001,  
+   MIF_URL               = 0x0002,  
+   MIF_VERSION           = 0x0004,  
+   MIF_DEBUGMESSAGE      = 0x0008,  
+   MIF_LOADADDRESS       = 0x0010,  
+   MIF_PREFFEREDADDRESS  = 0x0020,  
+   MIF_SIZE              = 0x0040,  
+   MIF_LOADORDER         = 0x0080,  
+   MIF_TIMESTAMP         = 0x0100,  
+   MIF_URLSYMBOLLOCATION = 0x0200,  
+   MIF_FLAGS             = 0x0400,  
+   MIF_ALLFIELDS         = 0x07ff  
 };  
 ```  
   
-## Membri  
- MIF\_NONE  
- Inizializzare\/utilizzare nessuno dei campi della struttura.  
+## <a name="members"></a>Members  
+ MIF_NONE  
+ Initialize/use none of the fields in the structure.  
   
- MIF\_NAME  
- Inizializzare\/utilizzare il campo di `m_bstrName` [MODULE\_INFO](../../../extensibility/debugger/reference/module-info.md) nella struttura.  
+ MIF_NAME  
+ Initialize/use the `m_bstrName` field in the [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) structure.  
   
- MIF\_URL  
- Inizializzare\/utilizzare il campo di `m_bstrUrl` nella struttura di `MODULE_INFO` .  
+ MIF_URL  
+ Initialize/use the `m_bstrUrl` field in the `MODULE_INFO` structure.  
   
- MIF\_VERSION  
- Inizializzare\/utilizzare il campo di `m_bstrVersion` nella struttura di `MODULE_INFO` .  
+ MIF_VERSION  
+ Initialize/use the `m_bstrVersion` field in the `MODULE_INFO` structure.  
   
- MIF\_DEBUGMESSAGE  
- Inizializzare\/utilizzare il campo di `m_bstrDebugMessage` nella struttura di `MODULE_INFO` .  
+ MIF_DEBUGMESSAGE  
+ Initialize/use the `m_bstrDebugMessage` field in the `MODULE_INFO` structure.  
   
- MIF\_LOADADDRESS  
- Inizializzare\/utilizzare il campo di `m_addrLoadAddress` nella struttura di `MODULE_INFO` .  
+ MIF_LOADADDRESS  
+ Initialize/use the `m_addrLoadAddress` field in the `MODULE_INFO` structure.  
   
- MIF\_PREFFEREDADDRESS  
- Inizializzare\/utilizzare il campo di `m_addrPreferredLoadAddress` nella struttura di `MODULE_INFO` .  
+ MIF_PREFFEREDADDRESS  
+ Initialize/use the `m_addrPreferredLoadAddress` field in the `MODULE_INFO` structure.  
   
- MIF\_SIZE  
- Inizializzare\/utilizzare il campo di `m_dwSize` nella struttura di `MODULE_INFO` .  
+ MIF_SIZE  
+ Initialize/use the `m_dwSize` field in the `MODULE_INFO` structure.  
   
- MIF\_LOADORDER  
- Inizializzare\/utilizzare il campo di `m_dwLoadOrder` nella struttura di `MODULE_INFO` .  
+ MIF_LOADORDER  
+ Initialize/use the `m_dwLoadOrder` field in the `MODULE_INFO` structure.  
   
- MIF\_TIMESTAMP  
- Inizializzare\/utilizzare il campo di `m_TimeStamp` nella struttura di `MODULE_INFO` .  
+ MIF_TIMESTAMP  
+ Initialize/use the `m_TimeStamp` field in the `MODULE_INFO` structure.  
   
- MIF\_URLSYMBOLLOCATION  
- Inizializzare\/utilizzare il campo di `m_bstrUrlSymbolLocation` nella struttura di `MODULE_INFO` .  
+ MIF_URLSYMBOLLOCATION  
+ Initialize/use the `m_bstrUrlSymbolLocation` field in the `MODULE_INFO` structure.  
   
- MIF\_FLAGS  
- Inizializzare\/utilizzare il campo di `m_dwModuleFlags` nella struttura di `MODULE_INFO` .  
+ MIF_FLAGS  
+ Initialize/use the `m_dwModuleFlags` field in the `MODULE_INFO` structure.  
   
- MIF\_ALLFIELDS  
- Inizializzare\/utilizzare tutti i campi nella struttura di `MODULE_INFO` .  
+ MIF_ALLFIELDS  
+ Initialize/use all of the fields in the `MODULE_INFO` structure.  
   
-## Note  
- Questi valori vengono passati come argomento al [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) metodo per indicare i campi [MODULE\_INFO](../../../extensibility/debugger/reference/module-info.md) della struttura devono essere inizializzati.  
+## <a name="remarks"></a>Remarks  
+ These values are passed as an argument to the [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) method to indicate which fields of the [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) structure are to be initialized.  
   
- Questi valori vengono utilizzati nella struttura di `MODULE_INFO` per indicare quali campi vengono utilizzati e validi.  
+ These values are also used in the `MODULE_INFO` structure to indicate which fields are used and valid.  
   
- Questi flag possono essere combinate con `OR`bit per bit.  
+ These flags may be combined with a bitwise `OR`.  
   
-## Requisiti  
- intestazione: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## Vedere anche  
- [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [MODULE\_INFO](../../../extensibility/debugger/reference/module-info.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)

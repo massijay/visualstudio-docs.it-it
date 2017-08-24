@@ -1,58 +1,75 @@
 ---
-title: "IDebugStackFrame2::GetPhysicalStackRange | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugStackFrame2::GetPhysicalStackRange"
-helpviewer_keywords: 
-  - "IDebugStackFrame2::GetPhysicalStackRange"
+title: IDebugStackFrame2::GetPhysicalStackRange | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugStackFrame2::GetPhysicalStackRange
+helpviewer_keywords:
+- IDebugStackFrame2::GetPhysicalStackRange
 ms.assetid: 2f6992e2-ac1c-433f-83b7-a7f83a4ce63d
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugStackFrame2::GetPhysicalStackRange
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 2f407f061b824a5cfd135e8c856531f1360beade
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Ottiene una rappresentazione computer\-dipendente l'intervallo di indirizzi virtuali associata a uno stack frame.  
+---
+# <a name="idebugstackframe2getphysicalstackrange"></a>IDebugStackFrame2::GetPhysicalStackRange
+Gets a machine-dependent representation of the range of physical addresses associated with a stack frame.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetPhysicalStackRange (   
-   UINT64* paddrMin,  
-   UINT64* paddrMax  
+HRESULT GetPhysicalStackRange (   
+   UINT64* paddrMin,  
+   UINT64* paddrMax  
 );  
 ```  
   
-```c#  
-int GetPhysicalStackRange (   
-   out ulong paddrMin,  
-   out ulong paddrMax  
+```cs  
+int GetPhysicalStackRange (   
+   out ulong paddrMin,  
+   out ulong paddrMax  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `paddrMin`  
- \[out\]  Restituisce l'indirizzo fisico più basso associato a questo stack frame.  
+ [out] Returns the lowest physical address associated with this stack frame.  
   
  `paddrMax`  
- \[out\]  Restituisce l'indirizzo fisico più elevato associato a questo stack frame.  
+ [out] Returns the highest physical address associated with this stack frame.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- Le informazioni restituite con questo metodo vengono utilizzate dall'amministratore di debug della sessione \(SDM\) per ordinare gli stack frame.  
+## <a name="remarks"></a>Remarks  
+ The information returned by this method is used by the session debug manager (SDM) to sort stack frames.  
   
- Si presuppone che lo stack di chiamate aumentano verso il basso, ovvero, che i nuovi stack frame vengono aggiunti agli indirizzi di memoria sempre più inferiori.  L'architettura di runtime deve fornire gli intervalli fisici dello stack che corrispondono a questa ipotesi.  
+ It is assumed that the call stack grows down, that is, that new stack frames are added at increasingly lower memory addresses. A run-time architecture must provide physical stack ranges that match this assumption.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

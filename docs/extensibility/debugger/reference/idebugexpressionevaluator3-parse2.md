@@ -1,87 +1,104 @@
 ---
-title: "IDebugExpressionEvaluator3::Parse2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugExpressionEvaluator3::Parse2"
+title: IDebugExpressionEvaluator3::Parse2 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugExpressionEvaluator3::Parse2
 ms.assetid: 78099628-d600-4f76-b7c8-ee07c864af1e
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugExpressionEvaluator3::Parse2
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: b48245e97ba9e426af0430c8ae939997e62811a6
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Converte una stringa dell'espressione in un'espressione analizzata al provider del simbolo e l'indirizzo del frame di valutazione.  
+---
+# <a name="idebugexpressionevaluator3parse2"></a>IDebugExpressionEvaluator3::Parse2
+Converts an expression string to a parsed expression given the symbol provider and the address of the evaluating frame.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Parse2 (  
-   LPCOLESTR                upstrExpression,  
-   PARSEFLAGS               dwFlags,  
-   UINT                     nRadix,  
-   IDebugSymbolProvider*    pSymbolProvider,  
-   IDebugAddress*           pAddress,  
-   BSTR*                    pbstrError,  
-   UINT*                    pichError,  
-   IDebugParsedExpression** ppParsedExpression  
+   LPCOLESTR                upstrExpression,  
+   PARSEFLAGS               dwFlags,  
+   UINT                     nRadix,  
+   IDebugSymbolProvider*    pSymbolProvider,  
+   IDebugAddress*           pAddress,  
+   BSTR*                    pbstrError,  
+   UINT*                    pichError,  
+   IDebugParsedExpression** ppParsedExpression  
 );  
 ```  
   
-```c#  
+```cs  
 HRESULT Parse2 (  
-   string                     upstrExpression,  
-   enum_PARSEFLAGS            dwFlags,  
-   uint                       nRadix,  
-   IDebugSymbolProvider       pSymbolProvider,  
-   IDebugAddress              pAddress,  
-   out string                 pbstrError,  
-   out uint                   pichError,  
-   out IDebugParsedExpression ppParsedExpression  
+   string                     upstrExpression,  
+   enum_PARSEFLAGS            dwFlags,  
+   uint                       nRadix,  
+   IDebugSymbolProvider       pSymbolProvider,  
+   IDebugAddress              pAddress,  
+   out string                 pbstrError,  
+   out uint                   pichError,  
+   out IDebugParsedExpression ppParsedExpression  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `upstrExpression`  
- \[in\]  La stringa di un'espressione da analizzare.  
+ [in] The expression string to be parsed.  
   
  `dwFlags`  
- \[in\]  Una raccolta [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) di costanti che determinano quali l'espressione deve essere analizzata.  
+ [in] A collection of [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) constants that determine how the expression is to be parsed.  
   
  `nRadix`  
- \[in\]  Base da utilizzare per interpretare le informazioni numerica.  
+ [in] Radix to be used to interpret any numerical information.  
   
  `pSymbolProvider`  
- \[in\]  Interfaccia provider del simbolo.  
+ [in] Interface of the symbol provider.  
   
  `pAddress`  
- \[in\]  L'indirizzo del frame di valutazione.  
+ [in] Address of the evaluating frame.  
   
  `pbstrError`  
- \[out\]  restituisce l'errore come testo leggibile.  
+ [out] Returns the error as human-readable text.  
   
  `pichError`  
- \[out\]  Restituisce la posizione del carattere dell'inizio dell'errore nella stringa dell'espressione.  
+ [out] Returns the character position of the start of the error in the expression string.  
   
  `ppParsedExpression`  
- \[out\]  restituisce l'espressione analizzata [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) in un oggetto.  
+ [out] Returns the parsed expression in an [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) object.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- Questo metodo produce un'espressione analizzata, non un valore effettivo.  Un'espressione analizzata è pronta per essere valutato, ovvero, viene convertito in un valore.  
+## <a name="remarks"></a>Remarks  
+ This method produces a parsed expression, not an actual value. A parsed expression is ready to be evaluated, that is, converted to a value.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto **di ad** che espone [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md) l'interfaccia.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CEE** object that exposes the [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md) interface.  
   
 ```cpp#  
 HRESULT CEE::Parse2 ( LPCOLESTR in_szExprText,  
@@ -135,5 +152,5 @@ HRESULT CEE::Parse2 ( LPCOLESTR in_szExprText,
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md)

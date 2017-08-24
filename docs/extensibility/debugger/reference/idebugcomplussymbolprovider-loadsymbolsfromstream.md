@@ -1,70 +1,87 @@
 ---
-title: "IDebugComPlusSymbolProvider::LoadSymbolsFromStream | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugComPlusSymbolProvider::LoadSymbolsFromStream"
-  - "LoadSymbolsFromStream"
+title: IDebugComPlusSymbolProvider::LoadSymbolsFromStream | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugComPlusSymbolProvider::LoadSymbolsFromStream
+- LoadSymbolsFromStream
 ms.assetid: 1de272f0-24f4-4548-8b70-a205cddd4727
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugComPlusSymbolProvider::LoadSymbolsFromStream
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 9cf43675636a43528a4cc40b0df403fcffb7eb23
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Carica simboli di debug forniti il flusso di dati.  
+---
+# <a name="idebugcomplussymbolproviderloadsymbolsfromstream"></a>IDebugComPlusSymbolProvider::LoadSymbolsFromStream
+Loads debug symbols given the data stream.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT LoadSymbolsFromStream(  
-   ULONG32   ulAppDomainID,  
-   GUID      guidModule,  
-   ULONGLONG baseAddress,  
-   IUnknown* pUnkMetadataImport,  
-   IStream*  pStream  
+   ULONG32   ulAppDomainID,  
+   GUID      guidModule,  
+   ULONGLONG baseAddress,  
+   IUnknown* pUnkMetadataImport,  
+   IStream*  pStream  
 );  
 ```  
   
-```c#  
+```cs  
 int LoadSymbolsFromStream(  
-   uint    ulAppDomainID,  
-   Guid    guidModule,  
-   ulong   baseAddress,  
-   object  pUnkMetadataImport,  
-   IStream pStream  
+   uint    ulAppDomainID,  
+   Guid    guidModule,  
+   ulong   baseAddress,  
+   object  pUnkMetadataImport,  
+   IStream pStream  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `ulAppDomainID`  
- \[in\]  Identificatore del dominio applicazione.  
+ [in] Identifier of the application domain.  
   
  `guidModule`  
- \[in\]  Identificatore univoco del modulo.  
+ [in] Unique identifier of the module.  
   
  `baseAddress`  
- \[in\]  indirizzo di memoria di base.  
+ [in] Base memory address.  
   
  `pUnkMetadataImport`  
- \[in\]  Oggetto che contiene i metadati del simbolo.  
+ [in] Object that contains the symbol metadata.  
   
  `pStream`  
- \[in\]  flusso di dati che contiene i simboli.  
+ [in] Data stream that contains the symbols.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto **di CDebugSymbolProvider** che espone [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) l'interfaccia.  Chiama il metodo [LoadSymbolsFromStreamWithCorModule](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2-loadsymbolsfromstreamwithcormodule.md) .  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface. The method calls the [LoadSymbolsFromStreamWithCorModule](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2-loadsymbolsfromstreamwithcormodule.md) method.  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::LoadSymbolsFromStream(  
@@ -79,5 +96,5 @@ HRESULT CDebugSymbolProvider::LoadSymbolsFromStream(
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

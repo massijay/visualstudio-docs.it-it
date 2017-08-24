@@ -1,26 +1,43 @@
 ---
-title: "Gestione specializzato distribuzione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "distribuzione di applicazioni [Visual Studio SDK]"
-  - "distribuzione specializzata"
+title: Handling Specialized Deployment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deploying applications [Visual Studio SDK]
+- specialized deployment
 ms.assetid: de068b6a-e806-45f0-9dec-2458fbb486f7
 caps.latest.revision: 32
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# Gestione specializzato distribuzione
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 8f554391c50968b2ee9f852d9bfc8dd433672d3b
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web, ad esempio, supporta una distribuzione per rifiutare esplicitamente l'aggiornamento di progetto un server Web.  Inoltre, un progetto Smart Device supporta una distribuzione per copiare un'applicazione generata al dispositivo di destinazione.  I sottotipi di progetto possono fornire il comportamento specifico di distribuzione implementando l'interfaccia di <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> .  Questa interfaccia definisce un set completo delle operazioni di distribuzione:  
+---
+# <a name="handling-specialized-deployment"></a>Handling Specialized Deployment
+A deployment is an optional operation for projects. A Web project, for example, supports a deployment to let a project update a Web server. Likewise, a **Smart Device** project supports a deployment to copy a built application to the target device. Project subtypes can supply specialized deployment behavior by implementing the <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> interface. This interface defines a complete set of the deployment operations:  
   
 -   <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A>  
   
@@ -38,17 +55,17 @@ una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web,
   
 -   <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.UnadviseDeployStatusCallback%2A>  
   
- Effettiva passaggi di distribuzione deve essere eseguita nel thread separato per rendere [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ancora più reattiva interazione utente.  I metodi forniti da <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> vengono chiamati in modo asincrono da [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] e eseguiti in background, in modo che l'ambiente eseguire una query sullo stato di un'operazione di distribuzione in qualsiasi momento o interrompere l'operazione, se necessario.  Le operazioni di distribuzione dell'interfaccia di <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> vengono chiamate dall'ambiente quando l'utente seleziona il comando di distribuzione.  
+ The actual deployment operation should be performed in the separate thread to make [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] even more responsive to the user interaction. The methods provided by <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> are called asynchronously by [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] and operate in the background, allowing the environment to query the status of a deployment operation at any time or to stop the operation, if necessary. The <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> interface deployment operations are called by the environment when the user selects the deploy command.  
   
- Per notificare all'ambiente che un'operazione di distribuzione ha avviato o interrotto, il sottotipo di progetto deve chiamare <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnStartDeploy%2A> e i metodi di <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnEndDeploy%2A> .  
+ To notify the environment that a deployment operation has begun or ended, the project subtype needs to call the <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnStartDeploy%2A> and the <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnEndDeploy%2A> methods.  
   
-## Gestire distribuzione avanzata  
+## <a name="handling-specialized-deployment"></a>Handling Specialized Deployment  
   
-#### Per la gestione di una distribuzione avanzata da un sottotipo progetto  
+#### <a name="to-handle-a-specialized-deployment-by-a-subtype-project"></a>To handle a specialized deployment by a subtype project  
   
--   Implementare il metodo di <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A> per registrare l'ambiente per ricevere le notifiche degli eventi dello stato di distribuzione.  
+-   Implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A> method to register the environment to receive notifications of deployment status events.  
   
-    ```vb#  
+    ```vb  
     Private adviseSink As Microsoft.VisualStudio.Shell.EventSinkCollection = New Microsoft.VisualStudio.Shell.EventSinkCollection()  
     Public Function AdviseDeployStatusCallback(ByVal pIVsDeployStatusCallback As IVsDeployStatusCallback, _  
                                                ByRef pdwCookie As UInteger) As Integer  
@@ -63,7 +80,7 @@ una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web,
     End Function  
     ```  
   
-    ```c#  
+    ```cs  
     private Microsoft.VisualStudio.Shell.EventSinkCollection adviseSink = new Microsoft.VisualStudio.Shell.EventSinkCollection();  
     public int AdviseDeployStatusCallback(IVsDeployStatusCallback pIVsDeployStatusCallback,   
                                           out uint pdwCookie)  
@@ -77,16 +94,16 @@ una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web,
   
     ```  
   
--   Implementare il metodo di <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.UnadviseDeployStatusCallback%2A> per annullare la registrazione dell'ambiente per ricevere le notifiche degli eventi dello stato di distribuzione.  
+-   Implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.UnadviseDeployStatusCallback%2A> method to cancel the environment's registration to receive notifications of deployment status events.  
   
-    ```vb#  
+    ```vb  
     Public Function UnadviseDeployStatusCallback(ByVal dwCookie As UInteger) As Integer  
         adviseSink.RemoveAt(dwCookie)  
         Return VSConstants.S_OK  
     End Function  
     ```  
   
-    ```c#  
+    ```cs  
     public int UnadviseDeployStatusCallback(uint dwCookie)  
     {  
         adviseSink.RemoveAt(dwCookie);  
@@ -95,16 +112,16 @@ una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web,
   
     ```  
   
--   Implementare il metodo di <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Commit%2A> per eseguire l'operazione di commit specifica all'applicazione.  Questo metodo viene utilizzato principalmente per la distribuzione del database.  
+-   Implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Commit%2A> method to perform the commit operation specific to your application.  This method is used mainly for database deployment.  
   
-    ```vb#  
+    ```vb  
     Public Function Commit(ByVal dwReserved As UInteger) As Integer  
         'Implement commit operation here.  
         Return VSConstants.S_OK  
     End Function  
     ```  
   
-    ```c#  
+    ```cs  
     public int Commit(uint dwReserved)  
     {  
          //Implement commit operation here.  
@@ -113,16 +130,16 @@ una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web,
   
     ```  
   
--   Implementare il metodo di <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Rollback%2A> per eseguire un'operazione di rollback.  Quando questo metodo viene chiamato, il progetto di distribuzione è necessario eseguire le operazioni appropriate alle modifiche di rollback e ripristinare lo stato del progetto.  Questo metodo viene utilizzato principalmente per la distribuzione del database.  
+-   Implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Rollback%2A> method to perform a rollback operation. When this method is called, the deployment project must do whatever is appropriate to rollback changes and restore the state of the project. This method is used mainly for database deployment.  
   
-    ```vb#  
+    ```vb  
     Public Function Commit(ByVal dwReserved As UInteger) As Integer  
         'Implement commit operation here.  
         Return VSConstants.S_OK  
     End Function  
     ```  
   
-    ```c#  
+    ```cs  
     public int Rollback(uint dwReserved)  
     {  
         //Implement Rollback operation here.  
@@ -131,9 +148,9 @@ una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web,
   
     ```  
   
--   Implementare il metodo di <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStartDeploy%2A> per determinare se è presente un progetto può iniziare un'operazione di distribuzione.  
+-   Implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStartDeploy%2A> method to determine whether or not a project is able to start a deployment operation.  
   
-    ```vb#  
+    ```vb  
     Public Function QueryStartDeploy(ByVal dwOptions As UInteger, ByVal pfSupported As Integer(), ByVal pfReady As Integer()) As Integer  
         If Not pfSupported Is Nothing AndAlso pfSupported.Length > 0 Then  
             pfSupported(0) = 1  
@@ -148,7 +165,7 @@ una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web,
     End Function  
     ```  
   
-    ```c#  
+    ```cs  
     public int QueryStartDeploy(uint dwOptions, int[] pfSupported, int[] pfReady)  
     {  
         if (pfSupported != null && pfSupported.Length >0)  
@@ -164,9 +181,9 @@ una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web,
   
     ```  
   
--   Implementare il metodo di <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStatusDeploy%2A> per verificare la presenza di un'operazione di distribuzione è stata completata.  
+-   Implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.QueryStatusDeploy%2A> method to determine whether or not a deployment operation has completed successfully.  
   
-    ```vb#  
+    ```vb  
     Public Function QueryStatusDeploy(ByRef pfDeployDone As Integer) As Integer  
         pfDeployDone = 1  
         If Not deploymentThread Is Nothing AndAlso deploymentThread.IsAlive Then  
@@ -176,7 +193,7 @@ una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web,
     End Function  
     ```  
   
-    ```c#  
+    ```cs  
     public int QueryStatusDeploy(out int pfDeployDone)  
     {  
         pfDeployDone = 1;  
@@ -187,9 +204,9 @@ una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web,
   
     ```  
   
--   Implementare il metodo di <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StartDeploy%2A> per avviare un'operazione di distribuzione in un thread separato.  Inserire il codice specifico per la distribuzione dell'applicazione nel metodo di `Deploy` .  
+-   Implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StartDeploy%2A> method to begin a deployment operation in a separate thread. Place the code specific to your application's deployment inside the `Deploy` method.  
   
-    ```vb#  
+    ```vb  
     Public Function StartDeploy(ByVal pIVsOutputWindowPane As IVsOutputWindowPane, ByVal dwOptions As UInteger) As Integer  
         If pIVsOutputWindowPane Is Nothing Then  
             Throw New ArgumentNullException("pIVsOutputWindowPane")  
@@ -217,7 +234,7 @@ una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web,
     End Function  
     ```  
   
-    ```c#  
+    ```cs  
     public int StartDeploy(IVsOutputWindowPane pIVsOutputWindowPane, uint dwOptions)  
     {  
         if (pIVsOutputWindowPane == null)  
@@ -244,9 +261,9 @@ una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web,
   
     ```  
   
--   implementare il metodo di <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StopDeploy%2A> per interrompere un'operazione di distribuzione.  Questo metodo viene chiamato quando un utente preme il pulsante di **Annulla** durante il processo di distribuzione.  
+-   Implement the <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StopDeploy%2A> method to stop a deployment operation. This method is called when a user presses the **Cancel** button during the deployment process.  
   
-    ```vb#  
+    ```vb  
     Public Function StopDeploy(ByVal fSync As Integer) As Integer  
         If Not deploymentThread Is Nothing AndAlso deploymentThread.IsAlive Then  
             Return VSConstants.S_OK  
@@ -266,7 +283,7 @@ una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web,
     End Function  
     ```  
   
-    ```c#  
+    ```cs  
     public int StopDeploy(int fSync)  
     {  
         if (deploymentThread != null && deploymentThread.IsAlive)  
@@ -290,7 +307,7 @@ una distribuzione è un'operazione facoltativa per i progetti.  Un progetto Web,
     ```  
   
 > [!NOTE]
->  Tutti gli esempi di codice forniti in questo argomento fanno parte di un esempio più esaustivo [Esempi di VSSDK](../../misc/vssdk-samples.md).  
+>  All code examples provided in this topic are parts of a larger example in [VSSDK Samples](http://aka.ms/vs2015sdksamples).  
   
-## Vedere anche  
- [Progetto \(sottotipi\)](../../extensibility/internals/project-subtypes.md)
+## <a name="see-also"></a>See Also  
+ [Project Subtypes](../../extensibility/internals/project-subtypes.md)

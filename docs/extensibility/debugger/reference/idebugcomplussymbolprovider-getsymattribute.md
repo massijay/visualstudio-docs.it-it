@@ -1,80 +1,97 @@
 ---
-title: "IDebugComPlusSymbolProvider::GetSymAttribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugComPlusSymbolProvider::GetSymAttribute"
-  - "GetSymAttribute"
+title: IDebugComPlusSymbolProvider::GetSymAttribute | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugComPlusSymbolProvider::GetSymAttribute
+- GetSymAttribute
 ms.assetid: 6cbaac92-a60b-4165-a7f5-c34407770f3c
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugComPlusSymbolProvider::GetSymAttribute
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 41204b6c6872e120c50756b245477b20e67259ad
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-recupera i simboli di debug con l'attributo padre specificato per il modulo specificato.  
+---
+# <a name="idebugcomplussymbolprovidergetsymattribute"></a>IDebugComPlusSymbolProvider::GetSymAttribute
+Retrieves the debug symbols with the given parent attribute for the specified module.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetSymAttribute (  
-   ULONG32  ulAppDomainID,  
-   GUID     guidModule,  
-   _mdToken tokParent,  
-   LPOLESTR pstrName,  
-   ULONG32  cBuffer,  
-   ULONG32* pcBuffer,  
-   BYTE*    buffer  
+   ULONG32  ulAppDomainID,  
+   GUID     guidModule,  
+   _mdToken tokParent,  
+   LPOLESTR pstrName,  
+   ULONG32  cBuffer,  
+   ULONG32* pcBuffer,  
+   BYTE*    buffer  
 );  
 ```  
   
-```c#  
+```cs  
 int GetSymAttribute (  
-   uint      ulAppDomainID,  
-   Guid      guidModule,  
-   int       tokParent,  
-   string    pstrName,  
-   uint      cBuffer,  
-   out uint  pcBuffer,  
-   out int[] buffer  
+   uint      ulAppDomainID,  
+   Guid      guidModule,  
+   int       tokParent,  
+   string    pstrName,  
+   uint      cBuffer,  
+   out uint  pcBuffer,  
+   out int[] buffer  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `ulAppDomainID`  
- \[in\]  Identificatore del dominio applicazione.  
+ [in] Identifier of the application domain.  
   
  `guidModule`  
- \[in\]  Identificatore univoco del modulo.  
+ [in] Unique identifier of the module.  
   
  `tokParent`  
- \[in\]  token per l'attributo padre.  
+ [in] Token for the parent attribute.  
   
  `pstrName`  
- \[in\]  Nome del modulo.  
+ [in] Name of the module.  
   
  `cBuffer`  
- \[in\]  Numero di byte necessari per `buffer`di output.  
+ [in] Number of bytes required for the output `buffer`.  
   
  `pcBuffer`  
- \[out\]  lunghezza di `buffer`di output.  
+ [out] Length of the output `buffer`.  
   
  `buffer`  
- \[out\]  Allineare contenente i simboli.  
+ [out] Array that contains the symbols.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto **di CDebugSymbolProvider** che espone [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) l'interfaccia.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::GetSymAttribute(  
@@ -104,5 +121,5 @@ Error:
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

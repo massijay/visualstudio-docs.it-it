@@ -1,48 +1,65 @@
 ---
-title: "CA1013: Eseguire l&#39;overload dell&#39;operatore &quot;uguale a&quot; all&#39;overload degli operatori di addizione e sottrazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OverrideOperatorEqualsOnOverridingAddAndSubtract"
-  - "OverrideOperatorEqualsOnOverloadingAddAndSubtract"
-  - "CA1013"
-  - "OverloadOperatorEqualsOnOverloadingAddAndSubtract"
-helpviewer_keywords: 
-  - "OverrideOperatorEqualsOnOverloadingAddAndSubtract"
-  - "OverrideOperatorEqualsOnOverridingAddAndSubtract"
-  - "CA1013"
-  - "OverloadOperatorEqualsOnOverloadingAddAndSubtract"
+title: 'CA1013: Overload operator equals on overloading add and subtract | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- OverrideOperatorEqualsOnOverridingAddAndSubtract
+- OverrideOperatorEqualsOnOverloadingAddAndSubtract
+- CA1013
+- OverloadOperatorEqualsOnOverloadingAddAndSubtract
+helpviewer_keywords:
+- OverrideOperatorEqualsOnOverloadingAddAndSubtract
+- OverrideOperatorEqualsOnOverridingAddAndSubtract
+- CA1013
+- OverloadOperatorEqualsOnOverloadingAddAndSubtract
 ms.assetid: 5bd28d68-c179-49ff-af47-5250b8b18a10
 caps.latest.revision: 22
-caps.handback.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1013: Eseguire l&#39;overload dell&#39;operatore &quot;uguale a&quot; all&#39;overload degli operatori di addizione e sottrazione
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 874094ddc980957ef0246a390d419815ff40e78c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
+---
+# <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: Overload operator equals on overloading add and subtract
 |||  
 |-|-|  
 |TypeName|OverloadOperatorEqualsOnOverloadingAddAndSubtract|  
 |CheckId|CA1013|  
-|Categoria|Microsoft.Design|  
-|Breaking Change|Non sostanziale|  
+|Category|Microsoft.Design|  
+|Breaking Change|Non-breaking|  
   
-## Causa  
- Un membro pubblico o protetto implementa gli operatori di addizione o sottrazione senza implementare l'operatore di uguaglianza.  
+## <a name="cause"></a>Cause  
+ A public or protected type implements the addition or subtraction operators without implementing the equality operator.  
   
-## Descrizione della regola  
- Se le istanze di un tipo possono essere combinate utilizzando operazioni quali l'addizione e la sottrazione è quasi sempre necessario definire l'uguaglianza in modo che restituisca `true` per due istanze aventi gli stessi valori costitutivi.  
+## <a name="rule-description"></a>Rule Description  
+ When instances of a type can be combined by using operations such as addition and subtraction, you should almost always define equality to return `true` for any two instances that have the same constituent values.  
   
- Non è possibile utilizzare l'operatore di uguaglianza predefinito in un'implementazione di overload dell'operatore di uguaglianza.  Questa operazione causerebbe un overflow dello stack.  Per implementare l'operatore di uguaglianza, utilizzare il metodo Object.Equals nell'implementazione.  Vedere l'esempio che segue.  
+ You cannot use the default equality operator in an overloaded implementation of the equality operator. Doing so will cause a stack overflow. To implement the equality operator, use the Object.Equals method in your implementation. See the following example.  
   
 ```vb  
 If (Object.ReferenceEquals(left, Nothing)) Then  
@@ -52,34 +69,34 @@ Else
 End If  
 ```  
   
-```c#  
+```cs  
 if (Object.ReferenceEquals(left, null))   
     return Object.ReferenceEquals(right, null);  
 return left.Equals(right);  
 ```  
   
-## Come correggere le violazioni  
- Per correggere una violazione di questa regola, implementare l'operatore di uguaglianza affinché sia matematicamente coerente con gli operatori di addizione e sottrazione.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, implement the equality operator so that it is mathematically consistent with the addition and subtraction operators.  
   
-## Esclusione di avvisi  
- L'esclusione di un avviso da questa regola è sicura quando l'implementazione predefinita dell'operatore di uguaglianza fornisce il comportamento corretto per il tipo.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule when the default implementation of the equality operator provides the correct behavior for the type.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene definito un tipo \(`BadAddableType`\) che viola questa regola.  Questo tipo deve implementare l'operatore di uguaglianza per fare sì che in caso due istanze presentino gli stessi valori di campo restituiscano `true` per l'uguaglianza.  Il tipo `GoodAddableType` presenta l'implementazione corretta.  Si noti che questo tipo implementa anche l'operatore di disuguaglianza ed esegue l'override di <xref:System.Object.Equals%2A> per soddisfare le altre regole.  Un'implementazione completa prevede anche l'implementazione di <xref:System.Object.GetHashCode%2A>.  
+## <a name="example"></a>Example  
+ The following example defines a type (`BadAddableType`) that violates this rule. This type should implement the equality operator to make any two instances that have the same field values test `true` for equality. The type `GoodAddableType` shows the corrected implementation. Note that this type also implements the inequality operator and overrides <xref:System.Object.Equals%2A> to satisfy other rules. A complete implementation would also implement <xref:System.Object.GetHashCode%2A>.  
   
  [!code-cs[FxCop.Design.AddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_1.cs)]  
   
-## Esempio  
- Nell'esempio riportato di seguito viene testata l'uguaglianza utilizzando istanze dei tipi definiti in precedenza in questo argomento per illustrare il comportamento predefinito e il comportamento corretto dell'operatore di uguaglianza.  
+## <a name="example"></a>Example  
+ The following example tests for equality by using instances of the types that were previously defined in this topic to illustrate the default and correct behavior for the equality operator.  
   
  [!code-cs[FxCop.Design.TestAddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_2.cs)]  
   
- Questo esempio produce l'output che segue.  
+ This example produces the following output.  
   
-  **Bad type:  {2,2} {2,2} are equal?  No**  
-**Good type: {3,3} {3,3} are equal?  Yes**  
-**Good type: {3,3} {3,3} are \=\= ?   Yes**  
-**Bad type:  {2,2} {9,9} are equal?  No**  
-**Good type: {3,3} {9,9} are \=\= ?   No**    
-## Vedere anche  
- [Operatori di uguaglianza](../Topic/Equality%20Operators.md)
+ **Bad type:  {2,2} {2,2} are equal? No**  
+**Good type: {3,3} {3,3} are equal? Yes**  
+**Good type: {3,3} {3,3} are == ?   Yes**  
+**Bad type:  {2,2} {9,9} are equal? No**  
+**Good type: {3,3} {9,9} are == ?   No**   
+## <a name="see-also"></a>See Also  
+ [Equality Operators](/dotnet/standard/design-guidelines/equality-operators)

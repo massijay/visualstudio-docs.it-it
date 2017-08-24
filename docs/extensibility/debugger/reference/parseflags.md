@@ -1,5 +1,5 @@
 ---
-title: PARSEFLAGS | Documenti di Microsoft
+title: PARSEFLAGS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 04cf02cc21fd6ae7324267805e89b1454566b9b6
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 29c065b446e5df3b10fb9a549854a737f50fe71a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="parseflags"></a>PARSEFLAGS
-Specifica la modalità di analisi dell'espressione.  
+Specifies how to parse an expression.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_PARSEFLAGS {   
@@ -50,7 +51,7 @@ enum enum_PARSEFLAGS {
 typedef DWORD PARSEFLAGS;  
 ```  
   
-```c#  
+```cs  
 public enum enum_PARSEFLAGS {   
    PARSE_EXPRESSION            = 0x0001,  
    PARSE_FUNCTION_AS_ADDRESS   = 0x0002,  
@@ -58,27 +59,27 @@ public enum enum_PARSEFLAGS {
 };  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
  PARSE_EXPRESSION  
- Indica che l'espressione non è un'istruzione.  
+ Indicates that the expression is not a statement.  
   
  PARSE_FUNCTION_AS_ADDRESS  
- Indica che l'espressione deve essere analizzato (e valutate in un secondo momento) come un indirizzo.  
+ Indicates that the expression is to be parsed (and later evaluated) as an address.  
   
  PARSE_DESIGN_TIME_EXPR_EVAL  
- Indica che l'espressione viene analizzato in fase di progettazione (ovvero, quando una finestra di progettazione è aperta).  
+ Indicates that the expression is being parsed during design time (that is, when a designer is open).  
   
-## <a name="remarks"></a>Note  
- Passato come parametro per il [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) e [analizzare](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) metodi.  
+## <a name="remarks"></a>Remarks  
+ Passed as a parameter to the [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) and [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) methods.  
   
-## <a name="requirements"></a>Requisiti  
- Intestazione: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)   
- [Analisi](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)
+ [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)

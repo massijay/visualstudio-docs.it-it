@@ -1,56 +1,73 @@
 ---
-title: "IDebugObject::GetValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject::GetValue"
-helpviewer_keywords: 
-  - "Metodo IDebugObject::GetValue"
+title: IDebugObject::GetValue | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugObject::GetValue
+helpviewer_keywords:
+- IDebugObject::GetValue method
 ms.assetid: eec6051e-8ecb-49fa-bdd4-dd786f211692
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugObject::GetValue
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 62f05a24d81c4abb7e4ef8bbf25ccf3d58ea710d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Ottiene il valore dell'oggetto come serie consecutiva di byte.  
+---
+# <a name="idebugobjectgetvalue"></a>IDebugObject::GetValue
+Gets the value of the object as a consecutive series of bytes.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetValue(   
-   BYTE* pValue,  
-   UINT  nSize  
+HRESULT GetValue(   
+   BYTE* pValue,  
+   UINT  nSize  
 );  
 ```  
   
-```c#  
+```cs  
 int GetValue(  
-   ref byte[] pValue,   
-   uint nSize  
+   ref byte[] pValue,   
+   uint nSize  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pValue`  
- \[in, out\]  Una matrice che viene riempita con serie consecutiva di byte che rappresenta il valore dell'oggetto.  
+ [in, out] An array that is filled in with a consecutive series of bytes representing the value of the object.  
   
  `nSize`  
- \[in\]  Numero massimo di byte da recuperare.  
+ [in] The maximum number of bytes to fetch.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce S\_OK, in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## Note  
- Ottenere il numero totale di byte di valore che possono essere recuperati chiamando [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md) il metodo.  
+## <a name="remarks"></a>Remarks  
+ Get the total number of value bytes that can be fetched by calling the [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md) method.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

@@ -1,51 +1,68 @@
 ---
-title: "IDebugProgramNode2::GetHostPid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramNode2::GetHostPid"
-helpviewer_keywords: 
-  - "IDebugProgramNode2::GetHostPid"
+title: IDebugProgramNode2::GetHostPid | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgramNode2::GetHostPid
+helpviewer_keywords:
+- IDebugProgramNode2::GetHostPid
 ms.assetid: e65b4b15-46d8-4ca7-9456-2b4c078f7cf9
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugProgramNode2::GetHostPid
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: f7b59b5ff5addc30741eec4440b3159de903aea3
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-Ottiene l'identificatore di processo di sistema per l'hosting del programma.  
+---
+# <a name="idebugprogramnode2gethostpid"></a>IDebugProgramNode2::GetHostPid
+Gets the system process identifier for the process hosting the program.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
-HRESULT GetHostPid (   
-   AD_PROCESS_ID * pdwHostPid  
+HRESULT GetHostPid (   
+   AD_PROCESS_ID * pdwHostPid  
 );  
 ```  
   
-```c#  
-int GetHostPid (   
-   out AD_PROCESS_ID pdwHostPid  
+```cs  
+int GetHostPid (   
+   out AD_PROCESS_ID pdwHostPid  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pdwHostPid`  
- \[out\]  Restituisce l'identificatore del processo di sistema per il processo di hosting.  
+ [out] Returns the system process identifier for the hosting process.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto semplice di `CProgram` che implementa [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) l'interfaccia.  
+## <a name="example"></a>Example  
+ The following example shows how to implement this method for a simple `CProgram` object that implements the [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) interface.  
   
 ```cpp#  
 HRESULT CProgram::GetHostPid(DWORD* pdwHostPid) {    
@@ -62,5 +79,5 @@ HRESULT CProgram::GetHostPid(DWORD* pdwHostPid) {
 }    
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)

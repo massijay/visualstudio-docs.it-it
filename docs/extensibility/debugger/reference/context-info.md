@@ -1,5 +1,5 @@
 ---
-title: CONTEXT_INFO | Documenti di Microsoft
+title: CONTEXT_INFO | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 9d2ecfdd70c2c299704b89de1cacec321f0ecdc1
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 0ee47995c831528631e0fa88befd0731486fd727
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="contextinfo"></a>CONTEXT_INFO
-Questa struttura descrive un contesto di memoria o di codice.  
+This structure describes a memory context or code context.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _tagCONTEXT_INFO {   
@@ -53,7 +54,7 @@ typedef struct _tagCONTEXT_INFO {
 } CONTEXT_INFO;  
 ```  
   
-```c#  
+```cs  
 public struct CONTEXT_INFO {  
    public uint          dwFields;  
    public string        bstrModuleUrl;  
@@ -65,42 +66,42 @@ public struct CONTEXT_INFO {
 };  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
  dwFields  
- Una combinazione di flag da egli [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) enumerazione che specifica quali campi vengono compilati**.**  
+ A combination of flags from he [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) enumeration that specifies which fields are filled out**.**  
   
  bstrModuleUrl  
- Il nome del modulo in cui si trova il contesto.  
+ The name of the module where the context is located.  
   
  bstrFunction  
- Il nome della funzione in cui si trova il contesto.  
+ The function name where the context is located.  
   
  posFunctionOffset  
- Oggetto [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struttura che identifica l'offset di riga e colonna della funzione associata al contesto di codice.  
+ A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) structure that identifies the line and column offset of the function associated with the code context.  
   
  bstrAddress  
- L'indirizzo nel codice in cui si trova il contesto specificato.  
+ The address in code where the given context is located.  
   
  bstrAddressOffset  
- L'offset dell'indirizzo nel codice in cui si trova il contesto specificato.  
+ The offset of the address in code where the given context is located.  
   
  bstrAddressAbsolute  
- L'indirizzo assoluto in memoria in cui si trova il contesto specificato.  
+ The absolute address in memory where the given context is located.  
   
-## <a name="remarks"></a>Note  
- Questa struttura viene restituita da una chiamata al [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) metodo.  
+## <a name="remarks"></a>Remarks  
+ This structure is returned from a call to the [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) method.  
   
- Un utilizzo tipico per questa struttura è supportare un **memoria** finestra di debug.  
+ A typical use for this structure is in support of a **Memory** debug window.  
   
-## <a name="requirements"></a>Requisiti  
- Intestazione: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Vedere anche  
- [Strutture e unioni](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)   
  [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)   
  [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

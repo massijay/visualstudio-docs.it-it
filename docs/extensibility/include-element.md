@@ -1,62 +1,79 @@
 ---
-title: "Elemento di inclusione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Include"
-helpviewer_keywords: 
-  - "Includere l'elemento (VSCT XML schema)"
-  - "Elementi dello schema XML VSCT, inclusione"
+title: Include Element | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Include
+helpviewer_keywords:
+- Include element (VSCT XML schema)
+- VSCT XML schema elements, Include
 ms.assetid: c923dfe6-084a-4105-aec1-f0a3f8399c54
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Elemento di inclusione
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 92af4aa2802558fba71fe3b088ea76fee3d58f0d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
-L'elemento Include specifica un file che può essere individuato fornito il percorso per l'inserimento nel file corrente.  Tutti i simboli e i tipi definiti diventerà parte del risultato compilato.  
+---
+# <a name="include-element"></a>Include Element
+The Include element specifies a file that can be located on the supplied include path for insertion into the current file.  All symbols and types defined will become part of the compiled result.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```c#  
+```cs  
 <Include href="stdidcmd.h" />  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a>Attributes and Elements  
+ The following sections describe attributes, child elements, and parent elements.  
   
-### Attributi  
+### <a name="attributes"></a>Attributes  
   
-|Attributo|Descrizione|  
+|Attribute|Description|  
 |---------------|-----------------|  
-|href|Obbligatorio. Il percorso al file di intestazione:<br /><br /> href\="stdidcmd.h"|  
-|Condizione|Facoltativo. Vedere [Attributi condizionali](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|href|Required. The path to the header file:<br /><br /> href="stdidcmd.h"|  
+|Condition|Optional. See [Conditional Attributes](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Child Elements  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|Nessuno.|Nessuno.|  
+|Element|Description|  
+|-------------|-----------------|  
+|None.|None.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Parent Elements  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[Elemento CommandTable](../extensibility/commandtable-element.md)|Definisce tutti gli elementi che rappresentano i comandi, ovvero voci di menu, menu, barre degli strumenti e caselle combinate, che fornisce un VSPackage all'IDE.|  
+|Element|Description|  
+|-------------|-----------------|  
+|[CommandTable Element](../extensibility/commandtable-element.md)|Defines all of the elements that represent commands — that is, menu items, menus, toolbars, and combo boxes — that a VSPackage provides to the IDE.|  
   
-## Esempio  
+## <a name="example"></a>Example  
   
 ```  
 <Include href="PackagePlacements.vsct"/>  
 ```  
   
-## Vedere anche  
- [Tabella di comandi di Visual Studio \(. File Vsct\)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>See Also  
+ [Visual Studio Command Table (.Vsct) Files](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

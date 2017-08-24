@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::GetDocument | Documenti di Microsoft
+title: IDebugDocumentContext2::GetDocument | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3420b2b6dc50228a5546abf76e21adecb23cb5b6
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: bf4e2eb4bd8f878c82ed83cf684f7b9b0f270abb
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugdocumentcontext2getdocument"></a>IDebugDocumentContext2::GetDocument
-Ottiene il documento che contiene il contesto di questo documento.  
+Gets the document that contains this document context.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT GetDocument(   
@@ -47,22 +48,22 @@ HRESULT GetDocument(
 );  
 ```  
   
-```c#  
+```cs  
 int GetDocument(   
    out IDebugDocument2 ppDocument  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `ppDocument`  
- [out] Restituisce un [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) oggetto che rappresenta il documento che contiene il contesto di questo documento.  
+ [out] Returns an [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) object that represents the document that contains this document context.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Note  
- Questo metodo è per i motori di debug che forniscono i documenti direttamente all'IDE. In caso contrario, questo metodo deve restituire `E_NOTIMPL`.  
+## <a name="remarks"></a>Remarks  
+ This method is for those debug engines that supply documents directly to the IDE. Otherwise, this method should return `E_NOTIMPL`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)   
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

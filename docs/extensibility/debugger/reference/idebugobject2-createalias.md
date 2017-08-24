@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::CreateAlias | Documenti di Microsoft
+title: IDebugObject2::CreateAlias | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: f001d55d1cfef8f900e783abba639f11aa7b41e5
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: ff8ecec19f8cab04ac2190f9a4a995766f1750bf
+ms.openlocfilehash: 2ebd7c5b7b7e9c1825bcc8676baebf654f747e2f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="idebugobject2createalias"></a>IDebugObject2::CreateAlias
-Restituisce un alias esistente o crea un alias per questo oggetto o un ID univoco.  
+Creates a unique ID or alias for this object or returns an existing alias.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT CreateAlias(  
@@ -47,22 +48,22 @@ HRESULT CreateAlias(
 );  
 ```  
   
-```c#  
+```cs  
 int CreateAlias(  
    out IDebugAlias ppAlias  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `ppAlias`  
- [out] L'alias di nuovo (o esistente).  
+ [out] The new (or existing) alias.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce S_OK; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Note  
- Un alias è un'etichetta che rappresenta un oggetto specifico, mentre l'oggetto si trova in memoria.  
+## <a name="remarks"></a>Remarks  
+ An alias is a label that represents a particular object while the object is in memory.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)   
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)
