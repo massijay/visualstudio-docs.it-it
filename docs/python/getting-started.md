@@ -15,10 +15,10 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 6dbf4f2bfabbfe5dc780eb4e973c6fae7ca6b1d9
+ms.sourcegitcommit: d0a5b44962b0cfbe549453b1760a38237de7e6ab
+ms.openlocfilehash: 420af3d78a514a7e6b6ded186c204ad8301c4c85
 ms.contentlocale: it-it
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 
