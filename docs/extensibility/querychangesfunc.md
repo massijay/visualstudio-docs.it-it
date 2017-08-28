@@ -1,86 +1,122 @@
 ---
-title: "QUERYCHANGESFUNC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "QUERYCHANGESFUNC"
-helpviewer_keywords: 
-  - "Funzione di callback QUERYCHANGESFUNC"
-  - "Struttura QUERYCHANGESDATA"
+title: QUERYCHANGESFUNC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- QUERYCHANGESFUNC
+helpviewer_keywords:
+- QUERYCHANGESFUNC callback function
+- QUERYCHANGESDATA structure
 ms.assetid: 9d383e2c-eee1-4996-973a-0652d4c5951c
 caps.latest.revision: 16
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# QUERYCHANGESFUNC
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 7b53174955e07f2ecfc58a32b7cd888443640511
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Si tratta di una funzione di callback utilizzata dal [SccQueryChanges](../extensibility/sccquerychanges-function.md) operazione per enumerare una raccolta di nomi di file e determinare lo stato di ogni file.  
+---
+# <a name="querychangesfunc"></a>QUERYCHANGESFUNC
+This is a callback function used by the [SccQueryChanges](../extensibility/sccquerychanges-function.md) operation to enumerate a collection of file names and determine each file's status.  
   
- Il `SccQueryChanges` ha un elenco di file e un puntatore a funzione di `QUERYCHANGESFUNC` callback. Il plug\-in del controllo del codice sorgente enumera l'elenco specificato e fornisce lo stato \(tramite questo callback\) per ogni file nell'elenco.  
+ The `SccQueryChanges` function is given a list of files and a pointer to the `QUERYCHANGESFUNC` callback. The source control plug-in enumerates over the given list and provides status (via this callback) for each file in the list.  
   
-## Signature  
+## <a name="signature"></a>Signature  
   
-```cpp#  
-typedef BOOL (*QUERYCHANGESFUNC)( LPVOID pvCallerData, QUERYCHANGESDATA * pChangesData );  
+```cpp  
+typedef BOOL (*QUERYCHANGESFUNC)(  
+   LPVOID pvCallerData,  
+   QUERYCHANGESDATA * pChangesData  
+);  
 ```  
   
-## Parametri  
+## <a name="parameters"></a>Parameters  
  pvCallerData  
- \[in\] Il `pvCallerData` parametro passato dal chiamante \(IDE\) di [SccQueryChanges](../extensibility/sccquerychanges-function.md). Il plug\-in del controllo del codice sorgente necessario non fare supposizioni sul contenuto di questo valore.  
+ [in] The `pvCallerData` parameter passed by the caller (the IDE) to [SccQueryChanges](../extensibility/sccquerychanges-function.md). The source control plug-in should make no assumptions about the contents of this value.  
   
  pChangesData  
- \[in\] Puntatore a un [Struttura QUERYCHANGESDATA](#LinkQUERYCHANGESDATA) struttura che descrive le modifiche in un file.  
+ [in] Pointer to a [QUERYCHANGESDATA Structure](#LinkQUERYCHANGESDATA) structure describing the changes to a file.  
   
-## Valore restituito  
- Nell'IDE viene restituito un codice di errore appropriato:  
+## <a name="return-value"></a>Return Value  
+ The IDE returns an appropriate error code:  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|SCC\_OK|Continuare l'elaborazione.|  
-|SCC\_I\_OPERATIONCANCELED|Arrestare l'elaborazione.|  
-|SCC\_E\_xxx|Qualsiasi errore SCC appropriato deve arrestare l'elaborazione.|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|Continue processing.|  
+|SCC_I_OPERATIONCANCELED|Stop processing.|  
+|SCC_E_xxx|Any appropriate SCC error should stop processing.|  
   
-##  <a name="LinkQUERYCHANGESDATA"></a> Struttura QUERYCHANGESDATA  
- La struttura passata per ogni file è simile al seguente:  
+##  <a name="LinkQUERYCHANGESDATA"></a> QUERYCHANGESDATA Structure  
+ The structure passed in for each file looks like the following:  
   
-```cpp#  
-struct QUERYCHANGESDATA_A { DWORD  dwSize; LPCSTR lpFileName; DWORD  dwChangeType; LPCSTR lpLatestName; }; typedef struct QUERYCHANGESDATA_A QUERYCHANGESDATA; struct QUERYCHANGESDATA_W { DWORD   dwSize; LPCWSTR lpFileName; DWORD   dwChangeType; LPCWSTR lpLatestName; };  
+```cpp  
+struct QUERYCHANGESDATA_A  
+{  
+    DWORD  dwSize;  
+    LPCSTR lpFileName;  
+    DWORD  dwChangeType;  
+    LPCSTR lpLatestName;  
+};  
+  
+typedef struct QUERYCHANGESDATA_A QUERYCHANGESDATA;  
+  
+struct QUERYCHANGESDATA_W  
+{  
+    DWORD   dwSize;  
+    LPCWSTR lpFileName;  
+    DWORD   dwChangeType;  
+    LPCWSTR lpLatestName;  
+};  
 ```  
   
  dwSize  
- Dimensione della struttura \(in byte\).  
+ Size of this structure (in bytes).  
   
  lpFileName  
- Nome del file originale per questo elemento.  
+ The original file name for this item.  
   
  dwChangeType  
- Codice che indica lo stato del file:  
+ Code indicating status of the file:  
   
-|Codice|Descrizione|  
-|------------|-----------------|  
-|`SCC_CHANGE_UNKNOWN`|Impossibile stabilire cosa è cambiato.|  
-|`SCC_CHANGE_UNCHANGED`|Nessuna modifica nome per il file.|  
-|`SCC_CHANGE_DIFFERENT`|File con un'identità diversa, ma lo stesso nome esiste nel database.|  
-|`SCC_CHANGE_NONEXISTENT`|File non esiste nel database o in locale.|  
-|`SCC_CHANGE_DATABASE_DELETED`|File eliminato dal database.|  
-|`SCC_CHANGE_LOCAL_DELETED`|File eliminati localmente, ma il file esiste ancora nel database. Se questo non può essere determinato, restituire `SCC_CHANGE_DATABASE_ADDED`.|  
-|`SCC_CHANGE_DATABASE_ADDED`|File aggiunti al database ma non esiste in locale.|  
-|`SCC_CHANGE_LOCAL_ADDED`|File non esiste nel database e un nuovo file locale.|  
-|`SCC_CHANGE_RENAMED_TO`|File rinominati o spostati nel database come `lpLatestName`.|  
-|`SCC_CHANGE_RENAMED_FROM`|File rinominati o spostati nel database da `lpLatestName`; Se questo è troppo costoso da rilevare, restituiscono un contrassegno diverso, ad esempio `SCC_CHANGE_DATABASE_ADDED`.|  
+|Code|Description|  
+|----------|-----------------|  
+|`SCC_CHANGE_UNKNOWN`|Cannot tell what has changed.|  
+|`SCC_CHANGE_UNCHANGED`|No name changes for this file.|  
+|`SCC_CHANGE_DIFFERENT`|File with a different identity, but the same name exists in the database.|  
+|`SCC_CHANGE_NONEXISTENT`|File does not exist either in the database or locally.|  
+|`SCC_CHANGE_DATABASE_DELETED`|File deleted in the database.|  
+|`SCC_CHANGE_LOCAL_DELETED`|File deleted locally but the file still exists in the database. If this cannot be determined, return `SCC_CHANGE_DATABASE_ADDED`.|  
+|`SCC_CHANGE_DATABASE_ADDED`|File added to the database but does not exist locally.|  
+|`SCC_CHANGE_LOCAL_ADDED`|File does not exist in database and is a new local file.|  
+|`SCC_CHANGE_RENAMED_TO`|File renamed or moved in the database as `lpLatestName`.|  
+|`SCC_CHANGE_RENAMED_FROM`|File renamed or moved in the database from `lpLatestName`; if this is too expensive to track, return a different flag, such as `SCC_CHANGE_DATABASE_ADDED`.|  
   
  lpLatestName  
- Il nome di file corrente per questo elemento.  
+ The current file name for this item.  
   
-## Vedere anche  
- [Funzioni di callback implementate dall'IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
+## <a name="see-also"></a>See Also  
+ [Callback Functions Implemented by the IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [SccQueryChanges](../extensibility/sccquerychanges-function.md)   
- [Codici di errore](../extensibility/error-codes.md)
+ [Error Codes](../extensibility/error-codes.md)

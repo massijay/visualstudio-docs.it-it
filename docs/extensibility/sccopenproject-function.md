@@ -1,116 +1,133 @@
 ---
-title: "Funzione SccOpenProject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccOpenProject"
-helpviewer_keywords: 
-  - "Funzione SccOpenProject"
+title: SccOpenProject Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccOpenProject
+helpviewer_keywords:
+- SccOpenProject function
 ms.assetid: d609510b-660a-46d7-b93d-2406df20434d
 caps.latest.revision: 16
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# Funzione SccOpenProject
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: b3db4576b2c8a2f925ac19e1024d271843f6895d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Questa funzione apre un progetto di controllo di origine esistente o ne crea uno nuovo.  
+---
+# <a name="sccopenproject-function"></a>SccOpenProject Function
+This function opens an existing source control project or creates a new one.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccOpenProject (  
-   LPVOID        pvContext,  
-   HWND          hWnd,  
-   LPSTR         lpUser,  
-   LPCSTR        lpProjName,  
-   LPCSTR        lpLocalProjPath,  
-   LPSTR         lpAuxProjPath,  
-   LPCSTR        lpComment,  
-   LPTEXTOUTPROC lpTextOutProc,  
-   LONG          dwFlags  
+   LPVOID        pvContext,  
+   HWND          hWnd,  
+   LPSTR         lpUser,  
+   LPCSTR        lpProjName,  
+   LPCSTR        lpLocalProjPath,  
+   LPSTR         lpAuxProjPath,  
+   LPCSTR        lpComment,  
+   LPTEXTOUTPROC lpTextOutProc,  
+   LONG          dwFlags  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- \[in\] La struttura di contesto plug\-in del controllo di origine.  
+ [in] The source control plug-in context structure.  
   
  hWnd  
- \[in\] Handle di finestra IDE che il plug\-in del controllo del codice sorgente è possibile utilizzare come padre per finestre di dialogo che fornisce.  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  lpUser  
- \[in, out\] Il nome dell'utente \(che non devono superare SCC\_USER\_SIZE, compreso il terminatore NULL\).  
+ [in, out] The name of the user (not to exceed SCC_USER_SIZE, including the NULL terminator).  
   
  lpProjName  
- \[in\] Stringa che identifica il nome del progetto.  
+ [in] The string identifying the name of the project.  
   
  lpLocalProjPath  
- \[in\] Il percorso alla cartella di lavoro per il progetto.  
+ [in] The path to the working folder for the project.  
   
  lpAuxProjPath  
- \[in, out\] Stringa facoltativa ausiliaria che identifica il progetto \(non devono superare SCC\_AUXPATH\_SIZE, compreso il terminatore NULL\).  
+ [in, out]An optional auxiliary string identifying the project (not to exceed SCC_AUXPATH_SIZE, including the NULL terminator).  
   
  lpComment  
- \[in\] Impostare come commento a un nuovo progetto da creare.  
+ [in] Comment to a new project that is being created.  
   
  lpTextOutProc  
- \[in\] Una funzione di callback facoltativo per visualizzare il testo di output di plug\-in del controllo del codice sorgente.  
+ [in] An optional callback function to display text output from the source control plug-in.  
   
  dwFlags  
- \[in\] Segnala se un nuovo progetto deve essere creato se il progetto è sconosciuto all'origine del controllo plug\-in. Valore può essere una combinazione di `SCC_OP_CREATEIFNEW` e `SCC_OP_SILENTOPEN.`  
+ [in] Signals whether a new project needs to be created if the project is unknown to the source control plug-in. Value can be a combination of `SCC_OP_CREATEIFNEW` and `SCC_OP_SILENTOPEN.`  
   
-## Valore restituito  
- Implementazione di plug\-in controllo dell'origine di questa funzione deve restituire uno dei valori seguenti:  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|SCC\_OK|Esito positivo in aprendo il progetto.|  
-|SCC\_E\_INITIALIZEFAILED|Impossibile inizializzare il progetto.|  
-|SCC\_E\_INVALIDUSER|L'utente non è grado di accedere al sistema di controllo di origine.|  
-|SCC\_E\_COULDNOTCREATEPROJECT|Il progetto non esisteva prima della chiamata.  il `SCC_OPT_CREATEIFNEW` è stato impostato, ma il progetto non è stato creato.|  
-|SCC\_E\_PROJSYNTAXERR|Sintassi non valida del progetto.|  
-|SCC\_E\_UNKNOWNPROJECT|Il progetto è sconosciuto per il controllo del codice sorgente plug\-in e `SCC_OPT_CREATEIFNEW` flag non è stato impostato.|  
-|SCC\_E\_INVALIDFILEPATH|Percorso del file non valido o inutilizzabile.|  
-|SCC\_E\_NOTAUTHORIZED|L'utente non è possibile eseguire questa operazione.|  
-|SCC\_E\_ACCESSFAILURE|Si è verificato un problema di accesso di sistema di controllo di origine, probabilmente a causa di problemi di contesa o di rete. È consigliabile un nuovo tentativo.|  
-|SCC\_E\_NONSPECFICERROR|Un errore non specificato. il controllo del codice sorgente non è stato inizializzato.|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|Success in opening the project.|  
+|SCC_E_INITIALIZEFAILED|Project could not be initialized.|  
+|SCC_E_INVALIDUSER|The user could not log in to the source control system.|  
+|SCC_E_COULDNOTCREATEPROJECT|The project did not exist prior to the call;  the `SCC_OPT_CREATEIFNEW` flag was set, but the project could not be created.|  
+|SCC_E_PROJSYNTAXERR|Invalid project syntax.|  
+|SCC_E_UNKNOWNPROJECT|The project is unknown to the source control plug-in, and the `SCC_OPT_CREATEIFNEW` flag was not set.|  
+|SCC_E_INVALIDFILEPATH|Invalid or unusable file path.|  
+|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_NONSPECFICERROR|A nonspecific failure; the source control system was not initialized.|  
   
-## Note  
- L'IDE può passare un nome utente \(`lpUser`\), o può semplicemente passare un puntatore a una stringa vuota. Se è presente un nome utente, il plug\-in del controllo del codice sorgente necessario utilizzarlo come valore predefinito. Tuttavia, se è stato passato alcun nome o l'account di accesso non riuscito con il nome specificato, il plug\-in deve richiedere all'utente di accesso e restituirà il nome valido in `lpUser` quando riceve un account di accesso valido`.` perché il plug\-in possono modificare la stringa del nome utente, l'IDE verrà sempre allocare un buffer di dimensione \(`SCC_USER_LEN`\+ 1 o SCC\_USER\_SIZE, che include lo spazio per il carattere di terminazione null\).  
-  
-> [!NOTE]
->  La prima azione IDE potrebbe essere necessario eseguire può essere una chiamata al `SccOpenProject` funzione o [SccGetProjPath](../extensibility/sccgetprojpath-function.md). Per questo motivo, entrambe riportano identica `lpUser` parametro.  
-  
- `lpAuxProjPath` e`lpProjName` vengono letti dal file di soluzione, o vengono restituiti da una chiamata al `SccGetProjPath` \(funzione\). Questi parametri contengono le stringhe che associa il controllo del codice sorgente del plug\-in al progetto e sono significativi solo per il plug\-in. Se non tali stringhe nel file di soluzione e l'utente non è stato richiesto di passare \(che restituirà una stringa tramite il `SccGetProjPath` funzione\), l'IDE passa stringhe vuote per entrambi `lpAuxProjPath` e `lpProjName`, e non prevede questi valori da aggiornare tramite il plug\-in quando questa funzione restituisce.  
-  
- `lpTextOutProc` è un puntatore a una funzione di callback fornito dall'IDE per il controllo del codice sorgente del plug\-in per la visualizzazione dell'output di risultato del comando. Questa funzione di callback è descritto dettagliatamente in [LPTEXTOUTPROC](../extensibility/lptextoutproc.md).  
+## <a name="remarks"></a>Remarks  
+ The IDE may pass in a user name (`lpUser`), or it may simply pass in a pointer to an empty string. If there is a user name, the source control plug-in should use it as a default. However, if no name was passed, or if the login failed with the given name, the plug-in should prompt the user to log in and will return the valid name in `lpUser` when it receives a valid login`.` Because the plug-in may change the user name string, the IDE will always allocate a buffer of size (`SCC_USER_LEN`+1 or SCC_USER_SIZE, which includes space for the null terminator).  
   
 > [!NOTE]
->  Se il plug\-in del controllo del codice sorgente intende sfruttare i vantaggi di questo, è necessario impostare il `SCC_CAP_TEXTOUT` flag nel [SccInitialize](../extensibility/sccinitialize-function.md). Se questo flag non è stata impostata o se l'IDE non supporta questa funzionalità, `lpTextOutProc` sarà `NULL`.  
+>  The first action the IDE may be required to perform may be a call to the `SccOpenProject` function or the [SccGetProjPath](../extensibility/sccgetprojpath-function.md). For this reason, both of them have an identical `lpUser` parameter.  
   
- Il `dwFlags` parametro controlla il risultato nel caso in cui il progetto viene aperto non esiste. È costituito da due flag di bit, `SCC_OP_CREATEIFNEW` e `SCC_OP_SILENTOPEN`. Se esiste il progetto è già aperto, la funzione semplicemente il progetto verrà aperto e restituisce `SCC_OK`. Se il progetto non esiste e se il `SCC_OP_CREATEIFNEW` flag è attivato, il plug\-in del controllo del codice sorgente può creare il progetto nel sistema di controllo di origine, aprirlo e restituire `SCC_OK`. Se il progetto non esiste e se il `SCC_OP_CREATEIFNEW` flag è disattivata, il plug\-in deve quindi verificare la presenza di `SCC_OP_SILENTOPEN` flag. Se questo flag non è abilitata, il plug\-in potrebbe richiedere all'utente un nome di progetto. Se tale flag è attivato, il plug\-in deve semplicemente indicare `SCC_E_UNKNOWNPROJECT`.  
+ `lpAuxProjPath` and`lpProjName` are read from the solution file, or they are returned from a call to the `SccGetProjPath` function. These parameters contain the strings that the source control plug-in associates with the project and are meaningful only to the plug-in. If no such strings are in the solution file and the user has not been prompted to browse (which would return a string through the `SccGetProjPath` function), the IDE passes empty strings for both `lpAuxProjPath` and `lpProjName`, and expects these values to be updated by the plug-in when this function returns.  
   
-## Ordine di chiamata  
- Durante il normale funzionamento degli eventi, il [SccInitialize](../extensibility/sccinitialize-function.md) potrebbe essere chiamato per primo per avviare una sessione di controllo di origine. Una sessione può essere costituita da una chiamata a `SccOpenProject`, seguito da altre chiamate di funzioni API plug\-in controllo di origine e terminerà con una chiamata al [SccCloseProject](../extensibility/scccloseproject-function.md). Tali sessioni possono essere ripetuti più volte prima di [SccUninitialize](../extensibility/sccuninitialize-function.md) viene chiamato.  
-  
- Se il controllo origine set di plug\-in di `SCC_CAP_REENTRANT` bit `SccInitialize`, quindi la sequenza di una sessione precedente può essere ripetuta più volte in parallelo. Diversi `pvContext` strutture di tenere traccia delle sessioni diverse, in cui ogni `pvContext` è associata a un progetto aperto in un momento. In base il`pvContext` parametro, il plug\-in grado di determinare il progetto in cui viene fatto riferimento in qualsiasi particolare chiamata. Se la funzionalità di bit `SCC_CAP_REENTRANT` non è impostata, nonreentrant plug\-in del controllo codice sorgente sono limitate per la capacità di lavorare con più progetti.  
+ `lpTextOutProc` is a pointer to a callback function provided by the IDE to the source control plug-in for the purpose of displaying command result output. This callback function is described in detail in [LPTEXTOUTPROC](../extensibility/lptextoutproc.md).  
   
 > [!NOTE]
->  Il `SCC_CAP_REENTRANT` bit è stato introdotto nella versione 1.1 dell'API dei plug\-in controllo di origine. Non è impostata oppure viene ignorato nella versione 1.0 e vengono considerate come nonreentrant tutti versione 1.0 origine plug\-in del controllo.  
+>  If the source control plug-in intends to take advantage of this, it must have set the `SCC_CAP_TEXTOUT` flag in the [SccInitialize](../extensibility/sccinitialize-function.md). If that flag was not set, or if the IDE does not support this feature, `lpTextOutProc` will be `NULL`.  
   
-## Vedere anche  
- [Funzioni API plug\-in del controllo sorgente](../extensibility/source-control-plug-in-api-functions.md)   
+ The `dwFlags` parameter controls the outcome in the event that the project being opened does not currently exist. It consists of two bitflags, `SCC_OP_CREATEIFNEW` and `SCC_OP_SILENTOPEN`. If the project being opened already exists, the function simply opens the project and returns `SCC_OK`. If the project does not exist and if the `SCC_OP_CREATEIFNEW` flag is on, the source control plug-in can create the project in the source control system, open it, and return `SCC_OK`. If the project does not exist, and if the `SCC_OP_CREATEIFNEW` flag is off, the plug-in should then check for the `SCC_OP_SILENTOPEN` flag. If that flag is not on, the plug-in may prompt the user for a project name. If that flag is on, the plug-in should simply return `SCC_E_UNKNOWNPROJECT`.  
+  
+## <a name="calling-order"></a>Calling Order  
+ In the normal course of events, the [SccInitialize](../extensibility/sccinitialize-function.md) would be called first to open a source control session. A session may consist of a call to `SccOpenProject`, followed by other Source Control Plug-in API function calls, and will terminate with a call to the [SccCloseProject](../extensibility/scccloseproject-function.md). Such sessions may be repeated several times before the [SccUninitialize](../extensibility/sccuninitialize-function.md) is called.  
+  
+ If the source control plug-in sets the `SCC_CAP_REENTRANT` bit in `SccInitialize`, then the above session sequence may be repeated many times in parallel. Different `pvContext` structures track the different sessions, in which each `pvContext` is associated with one open project at a time. Based on the`pvContext` parameter, the plug-in can determine which project is referenced in any particular call. If the capability bit `SCC_CAP_REENTRANT` is not set, nonreentrant source control plug-ins are limited in their ability to work with multiple projects.  
+  
+> [!NOTE]
+>  The `SCC_CAP_REENTRANT` bit was introduced in version 1.1 of the Source Control Plug-in API. It is not set or is ignored in version 1.0, and all version 1.0 source control plug-ins are assumed to be nonreentrant.  
+  
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
  [SccCloseProject](../extensibility/scccloseproject-function.md)   
  [SccGetProjPath](../extensibility/sccgetprojpath-function.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)   
  [SccUninitialize](../extensibility/sccuninitialize-function.md)   
- [Limitazioni sulle lunghezze di stringa](../extensibility/restrictions-on-string-lengths.md)   
+ [Restrictions on String Lengths](../extensibility/restrictions-on-string-lengths.md)   
  [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)

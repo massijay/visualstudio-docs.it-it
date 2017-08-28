@@ -1,87 +1,104 @@
 ---
-title: "Funzione SccDiff | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccDiff"
-helpviewer_keywords: 
-  - "Funzione SccDiff"
+title: SccDiff Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccDiff
+helpviewer_keywords:
+- SccDiff function
 ms.assetid: d49bc8c5-f631-4153-9d3c-feb3564da305
 caps.latest.revision: 16
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# Funzione SccDiff
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: de66dd1f5bb36ac60c145d481f4d46722dc1ca59
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Questa funzione consente di visualizzare \(o facoltativamente appena Cerca\) le differenze tra il file corrente \(nel disco locale\) e la relativa ultima versione archiviata nell'origine del sistema di controllo.  
+---
+# <a name="sccdiff-function"></a>SccDiff Function
+This function displays (or optionally just checks for) the differences between the current file (on the local disk) and its last checked-in version in the source control system.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccDiff(  
-   LPVOID    pvContext,  
-   HWND      hWnd,  
-   LPCSTR    lpFileName,  
-   LONG      fOptions,  
-   LPCMDOPTS pvOptions  
+   LPVOID    pvContext,  
+   HWND      hWnd,  
+   LPCSTR    lpFileName,  
+   LONG      fOptions,  
+   LPCMDOPTS pvOptions  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- \[in\] La struttura di contesto plug\-in del controllo di origine.  
+ [in] The source control plug-in context structure.  
   
  hWnd  
- \[in\] Handle di finestra IDE che il plug\-in del controllo del codice sorgente è possibile utilizzare come padre per finestre di dialogo che fornisce.  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  lpFileName  
- \[in\] Nome del file per il quale viene richiesta la differenza.  
+ [in] File name for which the difference is requested.  
   
- Opzioni  
- \[in\] Flag di comando. Per informazioni dettagliate, vedere la sezione Osservazioni.  
+ fOptions  
+ [in] Command flags. See Remarks for details.  
   
  pvOptions  
- \[in\] Opzioni specifiche plug\-in controllo sorgente.  
+ [in] Source control plug-in-specific options.  
   
-## Valore restituito  
- Implementazione di plug\-in controllo dell'origine di questa funzione deve restituire uno dei valori seguenti:  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|SCC\_OK|La versione di copia e il server di lavoro sono identici.|  
-|SCC\_I\_FILESDIFFERS|La copia di lavoro è diverso dalla versione di controllo del codice sorgente.|  
-|SCC\_I\_RELOADFILE|Un progetto o il file deve essere ricaricata.|  
-|SCC\_E\_FILENOTCONTROLLED|Il file non è incluso nel controllo del codice sorgente.|  
-|SCC\_E\_NOTAUTHORIZED|L'utente non è possibile eseguire questa operazione.|  
-|SCC\_E\_ACCESSFAILURE|Si è verificato un problema di accesso di sistema di controllo di origine, probabilmente a causa di problemi di contesa o di rete. È consigliabile un nuovo tentativo.|  
-|SCC\_E\_NONSPECIFICERROR|Errore non specificato. differenza tra i file non è stato ottenuto.|  
-|SCC\_E\_FILENOTEXIST|Non è stato trovato il file locale.|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|The working copy and server version are identical.|  
+|SCC_I_FILESDIFFERS|The working copy differs from the version under source control.|  
+|SCC_I_RELOADFILE|A file or project needs to be reloaded.|  
+|SCC_E_FILENOTCONTROLLED|The file is not under source control.|  
+|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure; file difference was not obtained.|  
+|SCC_E_FILENOTEXIST|The local file was not found.|  
   
-## Note  
- Questa funzione ha due scopi diversi. Per impostazione predefinita, viene visualizzato un elenco di modifiche in un file. Il plug\-in del controllo del codice sorgente verrà visualizzata la relativa finestra, in qualsiasi formato sceglie, per visualizzare le differenze tra file dell'utente su disco e la versione più recente del file di controllo del codice sorgente.  
+## <a name="remarks"></a>Remarks  
+ This function serves two different purposes. By default, it displays a list of changes to a file. The source control plug-in opens its own window, in whatever format it chooses, to display the differences between the user's file on disk and the latest version of the file under source control.  
   
- In alternativa, l'IDE semplicemente necessario determinare se un file è stato modificato. L'IDE, ad esempio, potrebbe essere necessario determinare se è possibile estrarre un file senza informare l'utente. In tal caso, l'IDE passa il `SCC_DIFF_CONTENTS` flag. Il plug\-in del controllo del codice sorgente deve controllare il file su disco, byte per byte, in base al file sorgente e restituire un valore che indica se i due file sono diversi, senza alcuna visualizzazione all'utente.  
+ Alternatively, the IDE may simply need to determine whether a file has changed. For example, the IDE may need to determine whether it is safe to check out a file without informing the user. In that case, the IDE passes in the `SCC_DIFF_CONTENTS` flag. The source control plug-in must check the file on disk, byte by byte, against the source-controlled file and return a value indicating whether the two files are different without displaying anything to the user.  
   
- Ottimizzare le prestazioni, il plug\-in del controllo del codice sorgente può utilizzare un'alternativa in base a un checksum o di un timestamp anziché il confronto byte per byte indicato `SCC_DIFF_CONTENTS`: queste forme di confronto sono ovviamente più veloce ma meno affidabile. Non tutti i sistemi di controllo di origine supportino questi metodi di confronto alternativo e il plug\-in potrebbe essere necessario eseguire il fallback a un confronto di contenuto. Tutti plug\-in controllo codice sorgente, è necessario come minimo, supporta un confronto di contenuto.  
+ As a performance optimization, the source control plug-in may use an alternative based on a checksum or a timestamp instead of the byte-by-byte comparison called for by `SCC_DIFF_CONTENTS`: these forms of comparison are obviously faster but less reliable. Not all source control systems may support these alternative comparison methods, and the plug-in may have to fall back to a contents comparison. All source control plug-ins must, at a minimum, support a contents comparison.  
   
 > [!NOTE]
->  I flag di differenza rapida si escludono a vicenda. È possibile non passare alcun flag, ma non è valido passare contemporaneamente più di uno.`SCC_DIFF_QUICK_DIFF`, che è una maschera che combina tutti i flag, può essere utilizzato per verificare, ma non deve mai essere passato come parametro.  
+>  The quick difference flags are mutually exclusive. It is valid to pass no flags, but it is not valid to simultaneously pass more than one. `SCC_DIFF_QUICK_DIFF`, which is a mask that combines all flags, can be used to test, but it should never be passed as a parameter.  
   
-|`fOption`|Significato|  
-|---------------|-----------------|  
-|SCC\_DIFF\_IGNORECASE|Confronto tra maiuscole e minuscole \(può essere usato per differenza rapido o visual\).|  
-|SCC\_DIFF\_IGNORESPACE|Ignora gli spazi vuoti \(può essere usato per differenza rapido o visual\).|  
-|SCC\_DIFF\_QD\_CONTENTS|Confronta automaticamente il file, byte per byte.|  
-|SCC\_DIFF\_QD\_CHECKSUM|Confronta automaticamente il file tramite un checksum quando è supportata. Se non è supportato, esegue il fallback a un confronto del contenuto.|  
-|SCC\_DIFF\_QD\_TIME|Confronta automaticamente il file tramite il relativo timestamp quando è supportata. Se non è supportato, esegue il fallback a un confronto del contenuto.|  
+|`fOption`|Meaning|  
+|---------------|-------------|  
+|SCC_DIFF_IGNORECASE|Case-insensitive comparison (may be used for either quick or visual difference).|  
+|SCC_DIFF_IGNORESPACE|Ignores white space (may be used for either quick or visual difference).|  
+|SCC_DIFF_QD_CONTENTS|Silently compares the file, byte by byte.|  
+|SCC_DIFF_QD_CHECKSUM|Silently compares the file via a checksum when supported. If not supported, falls back to a comparison of contents.|  
+|SCC_DIFF_QD_TIME|Silently compares the file via its timestamp when supported. If not supported, falls back to a comparison of contents.|  
   
-## Vedere anche  
- [Funzioni API plug\-in del controllo sorgente](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)

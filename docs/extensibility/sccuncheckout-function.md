@@ -1,76 +1,93 @@
 ---
-title: "Funzione SccUncheckout | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccUncheckout"
-helpviewer_keywords: 
-  - "Funzione SccUncheckout"
+title: SccUncheckout Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccUncheckout
+helpviewer_keywords:
+- SccUncheckout function
 ms.assetid: 6d498b70-29c7-44b7-ae1c-7e99e488bb09
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Funzione SccUncheckout
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5db90c033a03605369c19bf358b0642f9f80163b
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Questa funzione consente di annullare un'operazione di estrazione precedente, ripristinando in questo modo il contenuto del file selezionato o di file allo stato precedente l'estrazione. Tutte le modifiche apportate al file dopo l'estrazione andranno perse.  
+---
+# <a name="sccuncheckout-function"></a>SccUncheckout Function
+This function undoes a previous checkout operation, thereby restoring the contents of the selected file or files to the state prior to the checkout. All changes made to the file since the checkout are lost.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccUncheckout (  
-   LPVOID    pvContext,  
-   HWND      hWnd,  
-   LONG      nFiles,  
-   LPCSTR*   lpFileNames,  
-   LONG      fOptions,  
-   LPCMDOPTS pvOptions  
+   LPVOID    pvContext,  
+   HWND      hWnd,  
+   LONG      nFiles,  
+   LPCSTR*   lpFileNames,  
+   LONG      fOptions,  
+   LPCMDOPTS pvOptions  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  pvContext  
- \[in\] La struttura di contesto plug\-in del controllo di origine.  
+ [in] The source control plug-in context structure.  
   
  hWnd  
- \[in\] Handle di finestra IDE che il plug\-in del controllo del codice sorgente è possibile utilizzare come padre per finestre di dialogo che fornisce.  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  nFiles  
- \[in\] Numero di file specificato per il `lpFileNames` matrice.  
+ [in] Number of files specified in the `lpFileNames` array.  
   
  lpFileNames  
- \[in\] Matrice di nomi di percorso completo del file per il quale annullare l'estrazione.  
+ [in] Array of fully qualified local path names of files for which to undo a checkout.  
   
- Opzioni  
- \[in\] Flag di comando \(non utilizzato\).  
+ fOptions  
+ [in] Command flags (not used).  
   
  pvOptions  
- \[in\] Opzioni specifiche plug\-in controllo sorgente.  
+ [in] Source control plug-in-specific options.  
   
-## Valore restituito  
- Implementazione di plug\-in controllo dell'origine di questa funzione deve restituire uno dei valori seguenti:  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|SCC\_OK|Annullamento estrazione riuscito.|  
-|SCC\_E\_FILENOTCONTROLLED|Il file selezionato non è incluso nel controllo del codice sorgente.|  
-|SCC\_E\_ACCESSFAILURE|Si è verificato un problema di accesso di sistema di controllo di origine, probabilmente a causa di problemi di contesa o di rete. È consigliabile un nuovo tentativo.|  
-|SCC\_E\_NONSPECIFICERROR|Errore non specificato. Annulla estrazione non riuscita.|  
-|SCC\_E\_NOTCHECKEDOUT|L'utente non dispone di file viene estratto.|  
-|SCC\_E\_NOTAUTHORIZED|L'utente non è possibile eseguire questa operazione.|  
-|SCC\_E\_PROJNOTOPEN|Non è stato aperto il progetto dal controllo del codice sorgente.|  
-|SCC\_I\_OPERATIONCANCELED|L'operazione è stata annullata prima del completamento.|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|Undo checkout was successful.|  
+|SCC_E_FILENOTCONTROLLED|The selected file is not under source code control.|  
+|SCC_E_ACCESSFAILURE|There was a problem accessing the source control system, probably due to network or contention issues. A retry is recommended.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure. Undo checkout did not succeed.|  
+|SCC_E_NOTCHECKEDOUT|The user does not have the file checked out.|  
+|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
+|SCC_E_PROJNOTOPEN|The project has not been opened from source control.|  
+|SCC_I_OPERATIONCANCELED|The operation was cancelled before completion.|  
   
-## Note  
- Dopo questa operazione, il `SCC_STATUS_CHECKEDOUT` e `SCC_STATUS_MODIFIED` flag verranno cancellati per i file in cui è stato eseguito l'annullamento dell'estrazione.  
+## <a name="remarks"></a>Remarks  
+ After this operation, the `SCC_STATUS_CHECKEDOUT` and `SCC_STATUS_MODIFIED` flags will both be cleared for the files on which the undo checkout was performed.  
   
-## Vedere anche  
- [Funzioni API plug\-in del controllo sorgente](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)
