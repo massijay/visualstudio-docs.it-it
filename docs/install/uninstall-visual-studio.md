@@ -17,10 +17,10 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: b01caada54c08bb7f9c9baabfe9ece486e087794
-ms.openlocfilehash: 190a5e183757a5f02eeeb4aca7fc1c2e7f1beb1c
+ms.sourcegitcommit: 1e85a41fea58723b8f7f2119d0d0c951574c4f9c
+ms.openlocfilehash: f0fb1e91107017fd25e44f524550b0eef1732865
 ms.contentlocale: it-it
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 
@@ -45,6 +45,14 @@ In questa pagina viene descritta la procedura di disinstallazione di Visual Stud
      ![Modifica di Visual Studio 2017; Disinstallare il prodotto](media/vs2017-uninstall-confirm.PNG "Confermare la disinstallazione di Visual Studio 2017")  
 
 Se in seguito si cambia idea e si vuole reinstallare Visual Studio 2017, avviare nuovamente il programma di installazione di Visual Studio e quindi selezionare **Installa** nella schermata di selezione.
+
+## <a name="uninstall-visual-studio-installer"></a>Disinstallazione del Programma di installazione di Visual Studio
+Per rimuovere completamente dal computer di Visual Studio 2017 e il Programma di installazione di Visual Studio, eseguire la disinstallazione da App e funzionalità.
+1. Aprire App e funzionalità. Ad esempio, in Windows 10, selezionare **Avvio**e nella barra di ricerca, digitare **App e funzionalità**.  
+2. Trovare **Microsoft Visual Studio 2017**.  
+3. Fare clic su **Disinstalla**.  
+
+In questo modo sono rimosse tutte le installazioni di Visual Studio 2017 sul computer in uso, nonché il Programma di installazione di Visual Studio.
 
 ## <a name="see-also"></a>Vedere anche  
 * [Installare Visual Studio](install-visual-studio.md)

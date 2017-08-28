@@ -2,7 +2,7 @@
 title: Installazione di Visual Studio protetto da un firewall o un server proxy | Microsoft Docs
 description: 
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 08/01/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 ms.translationtype: HT
-ms.sourcegitcommit: ddbbda1069749e2ce685507d55a070f1dec27c17
-ms.openlocfilehash: 48fd143f917d6e13c18f6913bea625b2e8cf5ce8
+ms.sourcegitcommit: f23906933add1f4706d8786b2950fb3b5d2e6781
+ms.openlocfilehash: 0803ea25bd8f45d79d618ff481094fb5786b1acb
 ms.contentlocale: it-it
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="install-visual-studio-behind-a-firewall-or-proxy-server"></a>Installazione di Visual Studio protetto da un firewall o un server proxy
@@ -43,8 +43,13 @@ Se è possibile nell'ambiente in uso, è consigliabile aggiungere i domini segue
 | dl.xamarin.com | Percorso di download dei pacchetti di installazione |
 | visualstudiogallery.msdn.microsoft.com | Percorso di download delle estensioni di Visual Studio |
 | www.visualstudio.com | Percorso della documentazione |
+| docs.microsoft.com | Percorso della documentazione |
 | msdn.microsoft.com | Percorso della documentazione |
 | www.microsoft.com | Percorso della documentazione |
+| *.windows.net | Percorso di accesso |
+| *.microsoftonline.com | Percorso di accesso |
+| *.live.com | Percorso di accesso |
+
 
 ## <a name="non-microsoft-domains"></a>Domini non Microsoft
 | Dominio | Installa questi carichi di lavoro |
