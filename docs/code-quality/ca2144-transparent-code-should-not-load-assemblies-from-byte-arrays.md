@@ -1,25 +1,42 @@
 ---
-title: "CA2144: Il codice Transparent non deve caricare assembly da matrici di byte | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2144"
+title: 'CA2144: Transparent code should not load assemblies from byte arrays | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2144
 ms.assetid: 777b1310-6e16-4413-b4ee-5f3136304f82
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 12
----
-# CA2144: Il codice Transparent non deve caricare assembly da matrici di byte
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 62c5737e64be26614b5aa45a0ad5f4c17416fcaf
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2144-transparent-code-should-not-load-assemblies-from-byte-arrays"></a>CA2144: Transparent code should not load assemblies from byte arrays
 |||  
 |-|-|  
 |TypeName|TransparentMethodsShouldNotLoadAssembliesFromByteArrays|  
@@ -27,8 +44,8 @@ caps.handback.revision: 12
 |Category|Microsoft.Security|  
 |Breaking Change|Breaking|  
   
-## Causa  
- Un metodo Trasparent carica un assembly da una matrice di byte utilizzando uno dei metodi seguenti:  
+## <a name="cause"></a>Cause  
+ A transparent method loads an assembly from a byte array using one of the following methods:  
   
 -   <xref:System.Reflection.Assembly.Load%2A>  
   
@@ -36,16 +53,16 @@ caps.handback.revision: 12
   
 -   <xref:System.Reflection.Assembly.Load%2A>  
   
-## Descrizione della regola  
- La revisione di sicurezza per il codice trasparente non è accurata come la revisione di sicurezza per il codice critico, perché il primo non può eseguire azioni sensibili per la sicurezza.  Assembly caricati da una matrice di byte potrebbero non essere notati nel codice trasparente e quella matrice di byte potrebbe contenere codice critico o ancora più importante codice critico per la sicurezza, che deve essere controllato.  Pertanto, il codice trasparente non deve caricare assembly da una matrice di byte.  
+## <a name="rule-description"></a>Rule Description  
+ The security review for transparent code is not as thorough as the security review for critical code, because transparent code cannot perform security sensitive actions. Assemblies loaded from a byte array might not be noticed in transparent code, and that byte array might contain critical, or more importantly safe-critical code, that does need to be audited. Therefore, transparent code should not load assemblies from a byte array.  
   
-## Come correggere le violazioni  
- Per correggere una violazione di questa regola, contrassegnare il metodo che carica l'assembly con l'attributo <xref:System.Security.SecurityCriticalAttribute> o <xref:System.Security.SecuritySafeCriticalAttribute>.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, mark the method that is loading the assembly with the <xref:System.Security.SecurityCriticalAttribute> or the <xref:System.Security.SecuritySafeCriticalAttribute> attribute.  
   
-## Esclusione di avvisi  
- Non escludere un avviso da questa regola.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## Esempio  
- La regola funziona nel seguente perché un metodo trasparente carica un assembly da una matrice di byte.  
+## <a name="example"></a>Example  
+ The rule fires on the following code because a transparent method loads an assembly from a byte array.  
   
- [!code-cs[FxCop.Security.CA2144.TransparentMethodsShouldNotLoadAssembliesFromByteArrays#1](../code-quality/codesnippet/CSharp/ca2144-transparent-code-should-not-load-assemblies-from-byte-arrays_1.cs)]
+ [!code-csharp[FxCop.Security.CA2144.TransparentMethodsShouldNotLoadAssembliesFromByteArrays#1](../code-quality/codesnippet/CSharp/ca2144-transparent-code-should-not-load-assemblies-from-byte-arrays_1.cs)]

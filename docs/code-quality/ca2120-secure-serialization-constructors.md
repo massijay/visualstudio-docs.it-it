@@ -1,29 +1,46 @@
 ---
-title: "CA2120: Proteggere i costruttori di serializzazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2120"
-  - "SecureSerializationConstructors"
-helpviewer_keywords: 
-  - "CA2120"
-  - "SecureSerializationConstructors"
+title: 'CA2120: Secure serialization constructors | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2120
+- SecureSerializationConstructors
+helpviewer_keywords:
+- SecureSerializationConstructors
+- CA2120
 ms.assetid: e9989da1-55a0-43f8-9aa9-da86afae3b41
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 16
----
-# CA2120: Proteggere i costruttori di serializzazione
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 8183854c3fce2d3f838435696786355b0e94f5c8
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2120-secure-serialization-constructors"></a>CA2120: Secure serialization constructors
 |||  
 |-|-|  
 |TypeName|SecureSerializationConstructors|  
@@ -31,29 +48,29 @@ caps.handback.revision: 16
 |Category|Microsoft.Security|  
 |Breaking Change|Breaking|  
   
-## Causa  
- Il tipo implementa l'interfaccia <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>, non è un delegato né un'interfaccia ed è dichiarato in un assembly che consente i chiamanti parzialmente attendibili.  Il tipo dispone di un costruttore che accetta un oggetto <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> e un oggetto <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> \(la firma del costruttore di serializzazione\).  Questo costruttore non è protetto da un controllo di sicurezza, ma uno o più costruttori regolari nel tipo sono protetti.  
+## <a name="cause"></a>Cause  
+ The type implements the <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> interface, is not a delegate or interface, and is declared in an assembly that allows partially trusted callers. The type has a constructor that takes a <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> object and a <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> object (the signature of the serialization constructor). This constructor is not secured by a security check, but one or more of the regular constructors in the type is secured.  
   
-## Descrizione della regola  
- Questa regola si applica ai tipi che supportano la serializzazione personalizzata.  Un tipo supporta la serializzazione personalizzata se implementa l'interfaccia <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>.  Il costruttore di serializzazione è richiesto e viene utilizzato per deserializzare o ricreare oggetti serializzati mediante il metodo <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName>.  Poiché il costruttore di serializzazione alloca e inizializza oggetti, i controlli di sicurezza presenti sui costruttori regolari devono anche essere presenti sul costruttore di serializzazione.  Se si viola questa regola, i chiamanti che non possono creare in altro modo un'istanza possono utilizzare a tal fine il costruttore di serializzazione.  
+## <a name="rule-description"></a>Rule Description  
+ This rule is relevant for types that support custom serialization. A type supports custom serialization if it implements the <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> interface. The serialization constructor is required and is used to de-serialize, or re-create objects that have been serialized using the <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> method. Because the serialization constructor allocates and initializes objects, security checks that are present on regular constructors must also be present on the serialization constructor. If you violate this rule, callers that could not otherwise create an instance could use the serialization constructor to do this.  
   
-## Come correggere le violazioni  
- Per correggere una violazione di questa regola, proteggere il costruttore di serializzazione con richieste di sicurezza identiche a quelle che proteggono gli altri costruttori.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, protect the serialization constructor with security demands that are identical to those protecting other constructors.  
   
-## Esclusione di avvisi  
- Non escludere una violazione da questa regola.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a violation of the rule.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato un tipo che viola la regola.  
+## <a name="example"></a>Example  
+ The following example shows a type that violates the rule.  
   
- [!code-cs[FxCop.Security.SerialCtors#1](../code-quality/codesnippet/CSharp/ca2120-secure-serialization-constructors_1.cs)]  
+ [!code-csharp[FxCop.Security.SerialCtors#1](../code-quality/codesnippet/CSharp/ca2120-secure-serialization-constructors_1.cs)]  
   
-## Regole correlate  
- [CA2229: Implementare costruttori di serializzazione](../code-quality/ca2229-implement-serialization-constructors.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA2229: Implement serialization constructors](../code-quality/ca2229-implement-serialization-constructors.md)  
   
- [CA2237: Contrassegnare i tipi ISerializable con SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)  
+ [CA2237: Mark ISerializable types with SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>   
  <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>   
  <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>

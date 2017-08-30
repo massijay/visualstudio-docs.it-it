@@ -1,50 +1,66 @@
 ---
-title: "CA2222: Non diminuire la visibilit&#224; di membri ereditati | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DoNotDecreaseInheritedMemberVisibility"
-  - "CA2222"
-helpviewer_keywords: 
-  - "CA2222"
-  - "DoNotDecreaseInheritedMemberVisibility"
+title: 'CA2222: Do not decrease inherited member visibility | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DoNotDecreaseInheritedMemberVisibility
+- CA2222
+helpviewer_keywords:
+- DoNotDecreaseInheritedMemberVisibility
+- CA2222
 ms.assetid: 066c8675-381f-43cc-956c-d757cc494028
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 14
----
-# CA2222: Non diminuire la visibilit&#224; di membri ereditati
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: d4ab56a1963c0b6129aff83088b08104ccbe5437
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2222-do-not-decrease-inherited-member-visibility"></a>CA2222: Do not decrease inherited member visibility
 |||  
 |-|-|  
 |TypeName|DoNotDecreaseInheritedMemberVisibility|  
 |CheckId|CA2222|  
 |Category|Microsoft.Usage|  
-|Breaking Change|Non sostanziale|  
+|Breaking Change|Non Breaking|  
   
-## Causa  
- Un metodo privato in un tipo non sealed presenta una firma identica a un metodo pubblico dichiarato in un tipo di base.  Il metodo privato non è finale.  
+## <a name="cause"></a>Cause  
+ A private method in an unsealed type has a signature that is identical to a public method declared in a base type. The private method is not final.  
   
-## Descrizione della regola  
- Non modificare il modificatore di accesso per i membri ereditati.  La modifica in privato di un membro ereditato non impedisce ai chiamanti di accedere all'implementazione della classe base del metodo.  Se il membro è reso privato e il tipo è non sealed, i tipi che ereditano possono chiamare l'ultima implementazione pubblica del metodo nella gerarchia di ereditarietà.  Se è necessario modificare il modificatore di accesso, il metodo deve essere contrassegnato come finale oppure il relativo tipo deve essere sealed per impedire che il metodo venga sottoposto a ovverride.  
+## <a name="rule-description"></a>Rule Description  
+ You should not change the access modifier for inherited members. Changing an inherited member to private does not prevent callers from accessing the base class implementation of the method. If the member is made private and the type is unsealed, inheriting types can call the last public implementation of the method in the inheritance hierarchy. If you must change the access modifier, either the method should be marked final or its type should be sealed to prevent the method from being overridden.  
   
-## Come correggere le violazioni  
- Per correggere una violazione di questa regola, impostare l'accesso su non privato.  In alternativa, è possibile rendere il metodo finale, purché il linguaggio di programmazione supporti tale operazione.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, change the access to be non-private. Alternatively, if your programming language supports it, you can make the method final.  
   
-## Esclusione di avvisi  
- Non escludere un avviso da questa regola.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato un tipo che viola questa regola.  
+## <a name="example"></a>Example  
+ The following example shows a type that violates this rule.  
   
- [!code-vb[FxCop.Usage.InheritedPublic#1](../code-quality/codesnippet/VisualBasic/ca2222-do-not-decrease-inherited-member-visibility_1.vb)]
- [!code-cs[FxCop.Usage.InheritedPublic#1](../code-quality/codesnippet/CSharp/ca2222-do-not-decrease-inherited-member-visibility_1.cs)]
+ [!code-vb[FxCop.Usage.InheritedPublic#1](../code-quality/codesnippet/VisualBasic/ca2222-do-not-decrease-inherited-member-visibility_1.vb)] [!code-csharp[FxCop.Usage.InheritedPublic#1](../code-quality/codesnippet/CSharp/ca2222-do-not-decrease-inherited-member-visibility_1.cs)]

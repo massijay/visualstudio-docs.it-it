@@ -1,70 +1,74 @@
 ---
-title: "How to: Create a SharePoint Project Item Extension"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "project items [SharePoint development in Visual Studio], extending"
-  - "SharePoint project items, extending"
-  - "SharePoint development in Visual Studio, extending project items"
+title: 'How to: Create a SharePoint Project Item Extension | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- project items [SharePoint development in Visual Studio], extending
+- SharePoint project items, extending
+- SharePoint development in Visual Studio, extending project items
 ms.assetid: 163738b9-e25a-49c9-8f33-4b57a2da6b07
 caps.latest.revision: 31
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 30
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 6133e634c1aa91a27e6f5a72a4f3abefceb86a81
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# How to: Create a SharePoint Project Item Extension
-  Creare un'estensione di elemento del progetto quando si desidera aggiungere la funzionalità a un elemento del progetto SharePoint già installato in Visual Studio.  Per ulteriori informazioni, vedere [Extending SharePoint Project Items](../sharepoint/extending-sharepoint-project-items.md).  
+# <a name="how-to-create-a-sharepoint-project-item-extension"></a>How to: Create a SharePoint Project Item Extension
+  Create a project item extension when you want to add functionality to a SharePoint project item that is already installed in Visual Studio. For more information, see [Extending SharePoint Project Items](../sharepoint/extending-sharepoint-project-items.md).  
   
-### Per creare un'estensione di elemento del progetto  
+### <a name="to-create-a-project-item-extension"></a>To create a project item extension  
   
-1.  Creare un progetto Libreria di classi.  
+1.  Create a class library project.  
   
-2.  Aggiungere riferimenti agli assembly riportati di seguito:  
+2.  Add references to the following assemblies:  
   
     -   Microsoft.VisualStudio.SharePoint  
   
     -   System.ComponentModel.Composition  
   
-3.  Creare una classe che consente di implementare l'interfaccia <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension>.  
+3.  Create a class that implements the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> interface.  
   
-4.  Aggiungere gli attributi seguenti alla classe:  
+4.  Add the following attributes to the class:  
   
-    -   <xref:System.ComponentModel.Composition.ExportAttribute>.  Questo attributo consente a Visual Studio di individuare e caricare l'implementazione dell'oggetto <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension>.  Passare il tipo <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> al costruttore di attributo.  
+    -   <xref:System.ComponentModel.Composition.ExportAttribute>. This attribute enables Visual Studio to discover and load your <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> implementation. Pass the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> type to the attribute constructor.  
   
-    -   <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>.  In un'estensione di elemento del progetto, questo attributo consente di identificare l'elemento del progetto che si desidera estendere.  Passare l'ID dell'elemento di progetto al costruttore dell'attributo.  Per un elenco degli ID degli elementi di progetto inclusi in Visual Studio, vedere [Extending SharePoint Project Items](../sharepoint/extending-sharepoint-project-items.md).  
+    -   <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>. In a project item extension, this attribute identifies the project item you want to extend. Pass the ID of the project item to the attribute constructor. For a list of the IDs of the project items that are included with Visual Studio, see [Extending SharePoint Project Items](../sharepoint/extending-sharepoint-project-items.md).  
   
-5.  Nell'implementazione del metodo <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension.Initialize%2A> utilizzare i membri del parametro *projectItemType* per definire il comportamento dell'estensione.  Questo parametro è un oggetto <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType> che fornisce accesso agli eventi definiti nelle interfacce <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> e <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents>.  Per accedere a una specifica istanza del tipo di elemento di progetto da estendere, gestire eventi <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents>, quali <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemAdded> e <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemInitialized>.  
+5.  In your implementation of the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension.Initialize%2A> method, use members of the *projectItemType* parameter to define the behavior of your extension. This parameter is an <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType> object that provides access to the events defined in the <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> and <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents> interfaces. To access a specific instance of the project item type you are extending, handle <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> events such as <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemAdded> and <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemInitialized>.  
   
-## Esempio  
- Nell'esempio di codice seguente viene illustrato come creare una semplice estensione per l'elemento del progetto Ricevitore di eventi.  Ogni volta che l'utente aggiunge un elemento del progetto Ricevitore di eventi in un progetto SharePoint, questa estensione scrive un messaggio nella finestra **Output** e nella finestra **Elenco errori**.  
+## <a name="example"></a>Example  
+ The following code example demonstrates how to create a simple extension for the Event Receiver project item. Each time the user adds an Event Receiver project item to a SharePoint project, this extension writes a message to the **Output** window and **Error List** window.  
   
- [!code-csharp[SPExtensibility.ProjectSystemExtension.General#1](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectsystemextension.general/cs/extension/projectitemextension.cs#1)]
- [!code-vb[SPExtensibility.ProjectSystemExtension.General#1](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectsystemextension.general/vb/extension/projectitemextension.vb#1)]  
+ [!code-csharp[SPExtensibility.ProjectSystemExtension.General#1](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/projectitemextension.cs#1)] [!code-vb[SPExtensibility.ProjectSystemExtension.General#1](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/projectitemextension.vb#1)]  
   
- In questo esempio viene utilizzato il servizio del progetto SharePoint per scrivere il messaggio nella finestra **Output** e nella finestra **Elenco errori**.  Per ulteriori informazioni, vedere [Using the SharePoint Project Service](../sharepoint/using-the-sharepoint-project-service.md).  
+ This example uses the SharePoint project service to write the message to the **Output** window and **Error List** window. For more information, see [Using the SharePoint Project Service](../sharepoint/using-the-sharepoint-project-service.md).  
   
-## Compilazione del codice  
- In questo esempio sono richiesti riferimenti agli assembly seguenti:  
+## <a name="compiling-the-code"></a>Compiling the Code  
+ This example requires references to the following assemblies:  
   
 -   Microsoft.VisualStudio.SharePoint  
   
 -   System.ComponentModel.Composition  
   
-## Distribuzione dell'estensione  
- Per distribuire l'estensione, creare un pacchetto [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Extension \(VSIX\) per l'assembly e qualsiasi altro file che si desidera distribuire con l'estensione.  Per ulteriori informazioni, vedere [Deploying Extensions for the SharePoint Tools in Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).  
+## <a name="deploying-the-extension"></a>Deploying the Extension  
+ To deploy the extension, create a [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] extension (VSIX) package for the assembly and any other files that you want to distribute with the extension. For more information, see [Deploying Extensions for the SharePoint Tools in Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [Extending SharePoint Project Items](../sharepoint/extending-sharepoint-project-items.md)   
  [Walkthrough: Extending a SharePoint Project Item Type](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)  
   

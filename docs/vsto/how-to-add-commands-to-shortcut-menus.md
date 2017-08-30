@@ -1,74 +1,93 @@
 ---
-title: "Procedura: Aggiungere comandi a menu di scelta rapida"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "menu di Office, creazione"
-  - "sviluppo per Office in Visual Studio, menu di scelta rapida"
+title: 'How to: Add Commands to Shortcut Menus | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office menus, creating
+- Office development in Visual Studio, context menus
 ms.assetid: 9a848817-db11-4294-8f6f-9181ab87aadd
 caps.latest.revision: 22
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 21
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 0dd95e7cb207542a2f0131192b2ef0f43eee73d8
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Procedura: Aggiungere comandi a menu di scelta rapida
-  Questo argomento illustra come aggiungere comandi a un menu di scelta rapida in un'applicazione di Office con un componente aggiuntivo VSTO.  
+# <a name="how-to-add-commands-to-shortcut-menus"></a>How to: Add Commands to Shortcut Menus
+  This topic demonstrates how to add commands to a shortcut menu in an Office application by using an VSTO Add-in.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-### Per aggiungere comandi al menu di scelta rapida in Office  
+### <a name="to-add-commands-to-shortcut-menus-in-office"></a>To add commands to shortcut menus in Office  
   
-1.  Aggiungere un elemento **Barra multifunzione \(XML\)** in un progetto di componente aggiuntivo VSTO o a livello di documento. Per altre informazioni, vedere [Procedura: iniziare a personalizzare la barra multifunzione](../vsto/how-to-get-started-customizing-the-ribbon.md). In  
+1.  Add a **Ribbon XML** item to a document-level or VSTO Add-in project. For more information, see [How to: Get Started Customizing the Ribbon](../vsto/how-to-get-started-customizing-the-ribbon.md). In  
   
-2.  **Esplora soluzioni** selezionare **ThisAddin.cs** o **ThisAddin.vb**.  
+2.  **Solution Explorer**, select **ThisAddin.cs** or **ThisAddin.vb**.  
   
-3.  Nella barra dei menu scegliere **Visualizza**, **Codice**.  
+3.  On the menu bar, choose **View**, **Code**.  
   
-     Il file di classe **ThisAddin** viene aperto nell'editor di codice.  
+     The **ThisAddin** class file opens in the Code Editor.  
   
-4.  Aggiungere il codice seguente alla classe **ThisAddIn**. Questo codice esegue l'override del metodo CreateRibbonExtensibilityObject e restituisce la classe XML della barra multifunzione all'applicazione di Office.  
+4.  Add the following code to the **ThisAddin** class. This code overrides the CreateRibbonExtensibilityObject method and returns the Ribbon XML class to the Office application.  
   
-     [!code-csharp[Trin_WordAddIn_Menus#1](../snippets/csharp/VS_Snippets_OfficeSP/trin_wordaddin_menus/cs/thisaddin.cs#1)]
-     [!code-vb[Trin_WordAddIn_Menus#1](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_wordaddin_menus/vb/thisaddin.vb#1)]  
+     [!code-csharp[Trin_WordAddIn_Menus#1](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#1)]  [!code-vb[Trin_WordAddIn_Menus#1](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#1)]  
   
-5.  In **Esplora soluzioni** selezionare il file XML della barra multifunzione. Per impostazione predefinita, il file XML della barra multifunzione è denominato Ribbon1.xml.  
+5.  In **Solution Explorer**, select the Ribbon XML file. By default, the Ribbon XML file is named Ribbon1.xml.  
   
-6.  Nella barra dei menu scegliere **Visualizza**, **Codice**.  
+6.  On the menu bar, choose **View**, **Code**.  
   
-     Il file XML della barra multifunzione viene aperto nell'editor di codice.  
+     The Ribbon xml file opens in the Code Editor.  
   
-7.  Nell'editor di codice aggiungere codice XML che descriva il menu di scelta rapida e il controllo da aggiungere al menu di scelta rapida.  
+7.  In the Code Editor, add XML that describes the shortcut menu and the control that you want to add to the shortcut menu.  
   
-     Nell'esempio seguente viene aggiunto un pulsante, un controllo e un controllo della raccolta al menu di scelta rapida per un documento di Word. L'ID del controllo di questo menu di scelta rapida è ContextMenuText. Per un elenco completo degli ID dei controlli del menu di scelta rapida di Office 2010, vedere [File della Guida di Office 2010: Identificatori del controllo dell'interfaccia utente Office Fluent](http://go.microsoft.com/fwlink/?LinkID=181052).  
+     The following example adds a button, a menu, and a gallery control to the shortcut menu for a word document. The control ID of this shortcut menu is ContextMenuText. For a complete list of Office 2010 shortcut control ID's, see [Office 2010 Help Files: Office Fluent User Interface Control Identifiers](http://go.microsoft.com/fwlink/?LinkID=181052).  
   
     ```  
-    <?xml version="1.0" encoding="UTF-8"?> <customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui"> <contextMenus> <contextMenu idMso="ContextMenuText"> <button id="MyButton" label="My Button" insertBeforeMso="HyperlinkInsert" onAction="GetButtonID" /> <menu id="MySubMenu" label="My Submenu" > <button id="MyButton2" label="Button on submenu" /> </menu> <gallery id="galleryOne" label="My Gallery"> <item id="item1" imageMso="HappyFace" /> <item id="item2" imageMso="HappyFace" /> <item id="item3" imageMso="HappyFace" /> <item id="item4" imageMso="HappyFace" /> </gallery> </contextMenu> </contextMenus> </customUI>  
+    <?xml version="1.0" encoding="UTF-8"?>  
+    <customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">  
+      <contextMenus>  
+        <contextMenu idMso="ContextMenuText">  
+          <button id="MyButton" label="My Button" insertBeforeMso="HyperlinkInsert" onAction="GetButtonID" />  
+          <menu id="MySubMenu" label="My Submenu" >  
+            <button id="MyButton2" label="Button on submenu" />  
+          </menu>  
+          <gallery id="galleryOne" label="My Gallery">  
+            <item id="item1" imageMso="HappyFace" />  
+            <item id="item2" imageMso="HappyFace" />  
+            <item id="item3" imageMso="HappyFace" />  
+            <item id="item4" imageMso="HappyFace" />  
+          </gallery>  
+        </contextMenu>  
+      </contextMenus>  
+    </customUI>  
     ```  
   
-8.  In **Esplora soluzioni** scegliere **MyRibbon.cs** o **MyRibbon.vb**.  
+8.  In **Solution Explorer**, choose **MyRibbon.cs** or **MyRibbon.vb**.  
   
-9. Aggiungere un metodo di callback alla classe `Ribbon1` per ogni controllo da gestire.  
+9. Add the a callback method to the `Ribbon1` class for each control that you want to handle.  
   
-     Il metodo di callback seguente consente di gestire il pulsante **My Button**. Questo codice aggiunge una stringa al documento attivo in corrispondenza della posizione corrente del cursore.  
+     The following callback method handles the **My Button** button. This code adds a string to the active document at the current location of the curser.  
   
-     [!code-csharp[Trin_WordAddIn_Menus#2](../snippets/csharp/VS_Snippets_OfficeSP/trin_wordaddin_menus/cs/ribbon1.cs#2)]
-     [!code-vb[Trin_WordAddIn_Menus#2](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_wordaddin_menus/vb/ribbon1.vb#2)]  
+     [!code-vb[Trin_WordAddIn_Menus#2](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/ribbon1.vb#2)]   [!code-csharp[Trin_WordAddIn_Menus#2](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/ribbon1.cs#2)]  
   
-## Vedere anche  
- [Personalizzazione dell'interfaccia utente di Office](../vsto/office-ui-customization.md)   
- [Procedura dettagliata: creazione di menu di scelta rapida per segnalibri](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)   
- [Parametri facoltativi nelle soluzioni Office](../vsto/optional-parameters-in-office-solutions.md)   
- [Personalizzazione di menu di scelta rapida in Office 2010](http://go.microsoft.com/fwlink/?LinkId=182186)  
+## <a name="see-also"></a>See Also  
+ [Office UI Customization](../vsto/office-ui-customization.md)   
+ [Walkthrough: Creating Shortcut Menus for Bookmarks](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)   
+ [Customizing Context Menus in Office 2010](http://go.microsoft.com/fwlink/?LinkId=182186)  
   
   

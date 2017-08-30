@@ -1,52 +1,56 @@
 ---
-title: "Procedura: aprire cartelle di lavoro a livello di codice"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Excel [sviluppo per Office in Visual Studio], apertura di cartelle di lavoro"
-  - "cartelle di lavoro, apertura"
+title: 'How to: Programmatically Open Workbooks | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- workbooks, opening
+- Excel [Office development in Visual Studio], opening workbooks
 ms.assetid: 06c0ac87-a2c6-4cc1-87be-39be0cb81c71
 caps.latest.revision: 36
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 36
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: be53929363f0e984ca006e657de4940b9d075ed2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Procedura: aprire cartelle di lavoro a livello di codice
-  La raccolta <xref:Microsoft.Office.Interop.Excel.Workbooks> in Microsoft Office Excel consente di lavorare con tutte le cartelle di lavoro aperte e di aprire cartelle di lavoro.  
+# <a name="how-to-programmatically-open-workbooks"></a>How to: Programmatically Open Workbooks
+  The <xref:Microsoft.Office.Interop.Excel.Workbooks> collection in Microsoft Office Excel makes it possible to work with all open workbooks and to open workbooks.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-### Per aprire una cartella di lavoro esistente  
+### <a name="to-open-an-existing-workbook"></a>To open an existing workbook  
   
-1.  Utilizzare il metodo <xref:Microsoft.Office.Interop.Excel.Workbooks.Open%2A> della raccolta <xref:Microsoft.Office.Interop.Excel.Workbooks> passando il percorso della cartella di lavoro.  
+1.  Use the <xref:Microsoft.Office.Interop.Excel.Workbooks.Open%2A> method of the <xref:Microsoft.Office.Interop.Excel.Workbooks> collection, passing in the path to the workbook.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#2)]
-     [!code-vb[Trin_VstcoreExcelAutomation#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#2)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#2](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#2)]  [!code-vb[Trin_VstcoreExcelAutomation#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#2)]  
   
-## Compilazione del codice  
- Di seguito sono indicati i requisiti di questo esempio di codice:  
+## <a name="compiling-the-code"></a>Compiling the Code  
+ This code example requires the following:  
   
--   Una cartella di lavoro denominata `YourWorkbook.xls` deve essere presente in una directory denominata `Test` nell'unità C.  
+-   A workbook named `YourWorkbook.xls` must exist in a directory named `Test` on drive C.  
   
-## Vedere anche  
- [Uso delle cartelle di lavoro](../vsto/working-with-workbooks.md)   
- [Procedura: aprire file di testo come cartelle di lavoro a livello di codice](../vsto/how-to-programmatically-open-text-files-as-workbooks.md)   
- [Procedura: creare nuove cartelle di lavoro a livello di codice](../vsto/how-to-programmatically-create-new-workbooks.md)   
- [Procedura: salvare cartelle di lavoro a livello di codice](../vsto/how-to-programmatically-save-workbooks.md)   
- [Procedura: Chiudere cartelle di lavoro a livello di codice](../vsto/how-to-programmatically-close-workbooks.md)   
- [Limitazioni a livello di codice degli elementi e dei controlli host](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [Parametri facoltativi nelle soluzioni Office](../vsto/optional-parameters-in-office-solutions.md)   
- [Panoramica degli elementi e dei controlli host](../vsto/host-items-and-host-controls-overview.md)  
+## <a name="see-also"></a>See Also  
+ [Working with Workbooks](../vsto/working-with-workbooks.md)   
+ [How to: Programmatically Open Text Files as Workbooks](../vsto/how-to-programmatically-open-text-files-as-workbooks.md)   
+ [How to: Programmatically Create New Workbooks](../vsto/how-to-programmatically-create-new-workbooks.md)   
+ [How to: Programmatically Save Workbooks](../vsto/how-to-programmatically-save-workbooks.md)   
+ [How to: Programmatically Close Workbooks](../vsto/how-to-programmatically-close-workbooks.md)   
+ [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)   
+ [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)  
   
   

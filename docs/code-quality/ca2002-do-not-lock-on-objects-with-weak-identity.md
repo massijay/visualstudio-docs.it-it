@@ -1,41 +1,59 @@
 ---
-title: "CA2002: Non bloccare oggetti con identit&#224; debole | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DoNotLockOnObjectsWithWeakIdentity"
-  - "CA2002"
-helpviewer_keywords: 
-  - "CA2002"
-  - "DoNotLockOnObjectsWithWeakIdentity"
+title: 'CA2002: Do not lock on objects with weak identity | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DoNotLockOnObjectsWithWeakIdentity
+- CA2002
+helpviewer_keywords:
+- CA2002
+- DoNotLockOnObjectsWithWeakIdentity
 ms.assetid: 16100b39-c6fc-452b-8fca-8b459a26c286
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 16
----
-# CA2002: Non bloccare oggetti con identit&#224; debole
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 15e189741636255f83086e1877abad80fb3da57b
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2002-do-not-lock-on-objects-with-weak-identity"></a>CA2002: Do not lock on objects with weak identity
 |||  
 |-|-|  
 |TypeName|DoNotLockOnObjectsWithWeakIdentity|  
 |CheckId|CA2002|  
 |Category|Microsoft.Reliability|  
-|Breaking Change|Non sostanziale|  
+|Breaking Change|Non-breaking|  
   
-## Causa  
- Un thread tenta di acquisire un blocco su un oggetto con identità debole.  
+## <a name="cause"></a>Cause  
+ A thread attempts to acquire a lock on an object that has a weak identity.  
   
-## Descrizione della regola  
- Un oggetto presenta un'identità debole quando è possibile accedere ad esso direttamente attraverso i confini dei domini applicazione.  Un thread che tenta di acquisire un blocco su un oggetto con identità debole può essere bloccato da un secondo thread in un altro dominio applicazione con un blocco sullo stesso oggetto.  I tipi riportati di seguito presentano identità debole e sono contrassegnati dalla regola:  
+## <a name="rule-description"></a>Rule Description  
+ An object is said to have a weak identity when it can be directly accessed across application domain boundaries. A thread that tries to acquire a lock on an object that has a weak identity can be blocked by a second thread in a different application domain that has a lock on the same object. The following types have a weak identity and are flagged by the rule:  
   
 -   <xref:System.MarshalByRefObject>  
   
@@ -53,23 +71,22 @@ caps.handback.revision: 16
   
 -   <xref:System.Threading.Thread>  
   
-## Come correggere le violazioni  
- Per correggere una violazione di questa regola, utilizzare un oggetto di un tipo non contenuto nell'elenco riportato nella sezione Descrizione.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, use an object from a type that is not in the list in the Description section.  
   
-## Esclusione di avvisi  
- Non escludere un avviso da questa regola.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## Regole correlate  
- [CA2213: I campi Disposable devono essere eliminati](../code-quality/ca2213-disposable-fields-should-be-disposed.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA2213: Disposable fields should be disposed](../code-quality/ca2213-disposable-fields-should-be-disposed.md)  
   
-## Esempio  
- Nell'esempio riportato di seguito vengono illustrati alcuni blocchi di oggetti che violano la regola.  
+## <a name="example"></a>Example  
+ The following example shows some object locks that violate the rule.  
   
- [!code-vb[FxCop.Reliability.LockWeakObjects#1](../code-quality/codesnippet/VisualBasic/ca2002-do-not-lock-on-objects-with-weak-identity_1.vb)]
- [!code-cs[FxCop.Reliability.LockWeakObjects#1](../code-quality/codesnippet/CSharp/ca2002-do-not-lock-on-objects-with-weak-identity_1.cs)]  
+ [!code-vb[FxCop.Reliability.LockWeakObjects#1](../code-quality/codesnippet/VisualBasic/ca2002-do-not-lock-on-objects-with-weak-identity_1.vb)] [!code-csharp[FxCop.Reliability.LockWeakObjects#1](../code-quality/codesnippet/CSharp/ca2002-do-not-lock-on-objects-with-weak-identity_1.cs)]  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  <xref:System.Threading.Monitor>   
  <xref:System.AppDomain>   
- [Istruzione lock](/dotnet/csharp/language-reference/keywords/lock-statement)   
+ [lock Statement](/dotnet/csharp/language-reference/keywords/lock-statement)   
  [SyncLock Statement](/dotnet/visual-basic/language-reference/statements/synclock-statement)

@@ -1,66 +1,82 @@
 ---
-title: "How to: Check for Application Updates Programmatically Using the ClickOnce Deployment API | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "ClickOnce deployment, updates"
-  - "application updates"
+title: 'How to: Check for Application Updates Programmatically Using the ClickOnce Deployment API | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- ClickOnce deployment, updates
+- application updates
 ms.assetid: 1a886310-67c8-44e5-a382-c2f0454f887d
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# How to: Check for Application Updates Programmatically Using the ClickOnce Deployment API
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 84ac0f4f6fee7867272e752b59b1e3130aa25348
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
-In ClickOnce è possibile procedere in due modi per aggiornare un'applicazione già distribuita.  Il primo modo consiste nel configurare la distribuzione ClickOnce affinché venga controllata automaticamente la disponibilità degli aggiornamenti a determinati intervalli.  Il secondo modo invece consiste nello scrivere codice in cui viene utilizzata la classe <xref:System.Deployment.Application.ApplicationDeployment> affinché venga controllata la disponibilità degli aggiornamenti in base a un evento, ad esempio una richiesta dell'utente.  
+---
+# <a name="how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api"></a>How to: Check for Application Updates Programmatically Using the ClickOnce Deployment API
+ClickOnce provides two ways to update an application once it is deployed. In the first method, you can configure the ClickOnce deployment to check automatically for updates at certain intervals. In the second method, you can write code that uses the <xref:System.Deployment.Application.ApplicationDeployment> class to check for updates based on an event, such as a user request.  
   
- Nelle procedure descritte di seguito viene illustrato il codice per l'esecuzione di un aggiornamento a livello di codice e viene descritto inoltre come configurare la distribuzione ClickOnce in modo da attivare i controlli della disponibilità degli aggiornamenti a livello di codice.  
+ The following procedures show some code for performing a programmatic update and also describe how to configure your ClickOnce deployment to enable programmatic update checks.  
   
- Per aggiornare un'applicazione ClickOnce a livello di codice, è necessario specificare un percorso per gli aggiornamenti,  denominato talvolta provider di distribuzione.  Per ulteriori informazioni sull'impostazione di questa proprietà, vedere [Choosing a ClickOnce Update Strategy](../deployment/choosing-a-clickonce-update-strategy.md).  
+ In order to update a ClickOnce application programmatically, you must specify a location for updates. This is sometimes referred to as a deployment provider. For more information on setting this property, see [Choosing a ClickOnce Update Strategy](../deployment/choosing-a-clickonce-update-strategy.md).  
   
 > [!NOTE]
->  La tecnica descritta di seguito può essere utilizzata inoltre per distribuire l'applicazione da una posizione e aggiornarla da un'altra.  Per ulteriori informazioni, vedere [How to: Specify an Alternate Location for Deployment Updates](../deployment/how-to-specify-an-alternate-location-for-deployment-updates.md).  
+>  You can also use the technique described below to deploy your application from one location but update it from another. For more information, see [How to: Specify an Alternate Location for Deployment Updates](../deployment/how-to-specify-an-alternate-location-for-deployment-updates.md).  
   
-### Per controllare gli aggiornamenti a livello di codice  
+### <a name="to-check-for-updates-programmatically"></a>To check for updates programmatically  
   
-1.  Creare una nuova applicazione Windows Form utilizzando gli strumenti da riga di comando o visivi preferiti.  
+1.  Create a new Windows Forms application using your preferred command-line or visual tools.  
   
-2.  Creare pulsanti, voci di menu o altri elementi dell'interfaccia utente che si desidera che vengano utilizzati dagli utenti per controllare la disponibilità degli aggiornamenti.  Dal gestore eventi dell'elemento creato chiamare il metodo seguente per controllare la disponibilità e installare gli aggiornamenti.  
+2.  Create whatever button, menu item, or other user interface item you want your users to select to check for updates. From that item's event handler, call the following method to check for and install updates.  
   
-     [!CODE [ClickOnceAPI#6](../CodeSnippet/VS_Snippets_Winforms/ClickOnceAPI#6)]  
+     [!code-csharp[ClickOnceAPI#6](../deployment/codesnippet/CSharp/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api_1.cs)]  [!code-cpp[ClickOnceAPI#6](../deployment/codesnippet/CPP/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api_1.cpp)]  [!code-vb[ClickOnceAPI#6](../deployment/codesnippet/VisualBasic/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api_1.vb)]  
   
-3.  Compilare l'applicazione.  
+3.  Compile your application.  
   
-### Utilizzo di Mage.exe per la distribuzione di un'applicazione per il controllo della disponibilità degli aggiornamenti a livello di codice  
+### <a name="using-mageexe-to-deploy-an-application-that-checks-for-updates-programmatically"></a>Using Mage.exe to deploy an application that checks for updates programmatically  
   
--   Seguire le istruzioni per la distribuzione dell'applicazione con Mage.exe descritte in [Walkthrough: Manually Deploying a ClickOnce Application](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).  Quando si chiama Mage.exe per generare il manifesto di distribuzione, utilizzare l'opzione della riga di comando `providerUrl` e specificare l'URL in cui deve essere controllata la disponibilità degli aggiornamenti.  Se ad esempio gli aggiornamenti dell'applicazione sono contenuti in [http:\/\/www.microsoft.com\/it\/it\/default.aspx](http://www.microsoft.com/it/it/default.aspx), la chiamata per generare il manifesto di distribuzione sarà simile alla seguente:  
+-   Follow the instructions for deploying your application using Mage.exe as explained in [Walkthrough: Manually Deploying a ClickOnce Application](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). When calling Mage.exe to generate the deployment manifest, make sure to use the command-line switch `providerUrl`, and to specify the URL where ClickOnce should check for updates. If your application will update from [http://www.adatum.com/MyApp](http://www.adatum.com/MyApp), for example, your call to generate the deployment manifest might look like this:  
   
     ```  
     mage -New Deployment -ToFile WindowsFormsApp1.application -Name "My App 1.0" -Version 1.0.0.0 -AppManifest 1.0.0.0\MyApp.manifest -providerUrl http://www.adatum.com/MyApp/MyApp.application  
     ```  
   
-### Utilizzo di MageUI.exe per la distribuzione di un'applicazione per il controllo della disponibilità degli aggiornamenti a livello di codice  
+### <a name="using-mageuiexe-to-deploy-an-application-that-checks-for-updates-programmatically"></a>Using MageUI.exe to deploy an application that checks for updates programmatically  
   
--   Seguire le istruzioni per la distribuzione dell'applicazione con Mage.exe descritte in [Walkthrough: Manually Deploying a ClickOnce Application](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).  Nella scheda **Opzioni di distribuzione** impostare il campo **Posizione di partenza** sul manifesto dell'applicazione che deve essere controllato per ricercare eventuali aggiornamenti.  Nella scheda **Opzioni aggiornamento** deselezionare la casella di controllo **Controlla aggiornamenti dell'applicazione**.  
+-   Follow the instructions for deploying your application using Mage.exe as explained in [Walkthrough: Manually Deploying a ClickOnce Application](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). On the **Deployment Options** tab, set the **Start Location** field to the application manifest ClickOnce should check for updates. On the **Update Options** tab, clear the **This application should check for updates** check box.  
   
-## Sicurezza di .NET Framework  
- L'applicazione deve disporre di autorizzazioni di attendibilità totale per utilizzare l'aggiornamento a livello di codice.  
+## <a name="net-framework-security"></a>.NET Framework Security  
+ Your application must have full-trust permissions to use programmatic updating.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [How to: Specify an Alternate Location for Deployment Updates](../deployment/how-to-specify-an-alternate-location-for-deployment-updates.md)   
  [Choosing a ClickOnce Update Strategy](../deployment/choosing-a-clickonce-update-strategy.md)   
  [Publishing ClickOnce Applications](../deployment/publishing-clickonce-applications.md)
