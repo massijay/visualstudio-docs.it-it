@@ -1,71 +1,78 @@
 ---
-title: "Procedura: creare tabelle di ricerca nelle applicazioni Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "tabelle di ricerca"
-  - "tabelle di ricerca, creazione"
+title: Create lookup tables in Windows Forms applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- lookup tables
+- lookup tables, creating
 ms.assetid: 0edd5385-c381-4b17-9096-74e2778db9d5
 caps.latest.revision: 13
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: c25e04add01ba2b940120a669e769b5c9495e590
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Procedura: creare tabelle di ricerca nelle applicazioni Windows Form
-È possibile creare tabelle di ricerca trascinando il nodo principale di una tabella padre \(da [Origini dati \(finestra\)](../Topic/Data%20Sources%20Window.md)\) in un controllo del form già associato alla colonna nella tabella figlio correlata.  
+# <a name="create-lookup-tables-in-windows-forms-applications"></a>Create lookup tables in Windows Forms applications
+The term *lookup table* describes controls that are bound to two related data tables. These lookup controls display data from the first table based on a value selected in the second table.  
   
- Il termine *tabella di ricerca* indica i controlli associati a due tabelle dati correlate.  Questi controlli di ricerca consentono di visualizzare i dati a della prima tabella in base a un valore selezionato nella seconda tabella.  
+ You can create lookup tables by dragging the main node of a parent table (from the [Data Sources Window](add-new-data-sources.md)) onto a control on your form that is already bound to the column in the related child table.  
   
- Si consideri, ad esempio, una tabella `Orders` in un database Sales.  Ciascun record contenuto nella tabella `Orders` include un `CustomerID` che indica il cliente che ha effettuato l'ordine.  Si tratta di una chiave esterna che punta a un record cliente nella tabella `Customers`.  In questo scenario, è necessario espandere la tabella `Orders` nella finestra **Origini dati**, impostare il nodo principale su **Dettagli**, impostare la colonna `CustomerID` in modo che utilizzi un controllo <xref:System.Windows.Forms.ComboBox> \(oppure qualsiasi altro controllo che supporti l'associazione di ricerche\) e trascinare il nodo `Orders` nel form.  Successivamente, trascinare il nodo `Customers` nel controllo associato alla colonna correlata, in questo caso il controllo <xref:System.Windows.Forms.ComboBox> associato alla colonna `CustomerID`.  
+ For example, consider a table of `Orders` in a sales database. Each record in the `Orders` table includes a `CustomerID`, indicating which customer placed the order. The `CustomerID` is a foreign key pointing to a customer record in the `Customers` table. In this scenario, you expand the `Orders` table in the **Data Sources** window and set the main node to **Details**. Then set the `CustomerID` column to use a <xref:System.Windows.Forms.ComboBox> (or any other control that supports lookup binding), and drag the `Orders` node onto your form. Finally, drag the `Customers` node onto the control that is bound to the related column — in this case, the <xref:System.Windows.Forms.ComboBox> bound to the `CustomerID` column.  
   
-### Per eseguire l'associazione dati di un controllo di ricerca  
+## <a name="to-databind-a-lookup-control"></a>To databind a lookup control  
   
-1.  Aprire la finestra **Origini dati**.  
-  
-    > [!NOTE]
-    >  Le tabelle di ricerca richiedono l'esistenza di due tabelle o di due oggetti correlati nella finestra **Origini dati**.  Per ulteriori informazioni, vedere [Procedura: visualizzare dati correlati in un'applicazione Windows Form](../data-tools/how-to-display-related-data-in-a-windows-forms-application.md).  
-  
-2.  Espandere i nodi nella finestra **Origini dati** fino a visualizzare la tabella padre e tutte le relative colonne e la tabella correlata e tutte le relative colonne.  
+1.  Open the **Data Sources** window.  
   
     > [!NOTE]
-    >  Il nodo della tabella figlio è il nodo che viene visualizzato come nodo figlio espandibile nella tabella padre.  
+    >  Lookup tables require that two related tables or objects are available in the **Data Sources** window. For more information, see [Relationships in Datasets](relationships-in-datasets.md).  
   
-3.  Modificare il tipo di trascinamento della tabella figlio in **Dettagli** selezionando **Dettagli** dall'elenco di controllo del nodo della tabella figlio.  Per ulteriori informazioni, vedere [Impostare il controllo da creare durante il trascinamento dalla finestra Origini dati](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).  
+2.  Expand the nodes in the **Data Sources** window until you can see the parent table and all of its columns, and the related child table and all of its columns.  
   
-4.  Individuare il nodo che correla le due tabelle \(il nodo `CustomerID` riportato nell'esempio precedente\) e modificarne il tipo di trascinamento in un controllo <xref:System.Windows.Forms.ComboBox> selezionando **ComboBox** dall'elenco dei controlli.  
+    > [!NOTE]
+    >  The child table node is the node that appears as an expandable child node in the parent table.  
   
-5.  Trascinare il nodo della tabella figlio principale dalla finestra **Origini dati** al form.  
+3.  Change the drop type of the child table to **Details** by selecting **Details** from the control list on the child table's node. For more information, see [Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).  
   
-     Nel form vengono visualizzati i controlli associati a dati \(con etichette descrittive\) e un controllo Toolstrip \(<xref:System.Windows.Forms.BindingNavigator>\).  Nella barra dei componenti sono visualizzati gli oggetti [DataSet](../data-tools/dataset-tools-in-visual-studio.md), [TableAdapter](../data-tools/tableadapter-overview.md), <xref:System.Windows.Forms.BindingSource> e <xref:System.Windows.Forms.BindingNavigator>.  
+4.  Locate the node that relates the two tables (the `CustomerID` node in the previous example).Change its drop type to a <xref:System.Windows.Forms.ComboBox> by selecting **ComboBox** from the control list.  
   
-6.  A questo punto, trascinare il nodo della tabella padre principale dalla finestra **Origini dati** direttamente al controllo di ricerca \(<xref:System.Windows.Forms.ComboBox>\).  
+5.  Drag the main child table node from the **Data Sources** window onto your form.  
   
-     In tal modo vengono infine stabilite le associazioni di ricerca.  Fare riferimento alla tabella riportata di seguito per le proprietà specifiche impostate sul controllo.  
+     Databound controls (with descriptive labels) and a tool strip (<xref:System.Windows.Forms.BindingNavigator>) appear on the form. A [DataSet](../data-tools/dataset-tools-in-visual-studio.md), [TableAdapter](../data-tools/create-and-configure-tableadapters.md), <xref:System.Windows.Forms.BindingSource>, and <xref:System.Windows.Forms.BindingNavigator> appear in the component tray.  
   
-    |Proprietà|Descrizione dell'impostazione|  
-    |---------------|-----------------------------------|  
-    |**DataSource**|In Visual Studio questa proprietà viene impostata sull'oggetto <xref:System.Windows.Forms.BindingSource> creato per la tabella trascinata nel controllo \(piuttosto che sull'oggetto <xref:System.Windows.Forms.BindingSource> creato al momento della creazione del controllo\).<br /><br /> Per effettuare eventuali modifiche, impostare tale proprietà sul <xref:System.Windows.Forms.BindingSource> della tabella che contiene la colonna da visualizzare.|  
-    |**DisplayMember**|In Visual Studio la proprietà viene impostata sulla prima colonna successiva alla chiave primaria in cui è presente un tipo di dati String per la tabella trascinata nel controllo.<br /><br /> Per effettuare eventuali modifiche, impostare tale proprietà sul nome della colonna da visualizzare.|  
-    |**ValueMember**|In Visual Studio la proprietà viene impostata sulla prima colonna che fa parte della chiave primaria o sulla prima colonna della tabella se non è definita alcuna chiave.<br /><br /> Per effettuare eventuali modifiche, impostare tale proprietà sulla chiave primaria nella tabella in cui è presente la colonna da visualizzare.|  
-    |**SelectedValue**|In Visual Studio la proprietà viene impostata sulla colonna originale trascinata dalla finestra **Origini dati**.<br /><br /> Per effettuare eventuali modifiche, impostare tale proprietà sulla colonna chiave esterna nella tabella correlata.|  
+6.  Now drag the main parent table node from the **Data Sources** window directly onto the lookup control (the <xref:System.Windows.Forms.ComboBox>).  
   
-## Vedere anche  
- [Procedura dettagliata: creazione di una tabella di ricerca in un'applicazione Windows Form](../Topic/Walkthrough:%20Creating%20a%20Lookup%20Table%20in%20a%20Windows%20Forms%20Application.md)   
- [Procedura dettagliata: creazione di un controllo utente Windows Form che supporta l'associazione dati di ricerca](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md)   
- [Procedura: creare una tabella di ricerca per un controllo ComboBox, ListBox o CheckedListBox Windows Form](../Topic/How%20to:%20Create%20a%20Lookup%20Table%20for%20a%20Windows%20Forms%20ComboBox,%20ListBox,%20or%20CheckedListBox%20Control.md)   
- [Procedura: creare una tabella di ricerca con il componente BindingSource di Windows Form](../Topic/How%20to:%20Create%20a%20Lookup%20Table%20with%20the%20Windows%20Forms%20BindingSource%20Component.md)   
- [Procedure dettagliate relative ai dati](../Topic/Data%20Walkthroughs.md)   
- [Associazione di controlli Windows Form ai dati in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Cenni preliminari sulle origini dati](../data-tools/add-new-data-sources.md)   
- [Cenni preliminari sugli oggetti TableAdapter](../data-tools/tableadapter-overview.md)
+     The lookup bindings are now established. Refer to the table below for the specific properties that were set on the control.  
+  
+    |Property|Explanation of setting|  
+    |--------------|----------------------------|  
+    |**DataSource**|Visual Studio sets this property to the <xref:System.Windows.Forms.BindingSource> created for the table you drag onto the control (as opposed to the <xref:System.Windows.Forms.BindingSource> created when the control was created).<br /><br /> If you need to make an adjustment, then set this to the <xref:System.Windows.Forms.BindingSource> of the table with the column you want to display.|  
+    |**DisplayMember**|Visual Studio sets this property to the first column after the primary key that has a string data type for the table you drag onto the control.<br /><br /> If you need to make an adjustment, then set this to the column name you want to display.|  
+    |**ValueMember**|Visual Studio sets this property to the first column participating in the primary key, or the first column in the table if no key is defined.<br /><br /> If you need to make an adjustment, then set this to the primary key in the table with the column you want to display.|  
+    |**SelectedValue**|Visual Studio sets this property to the original column dropped from the **Data Sources** window.<br /><br /> If you need to make an adjustment, then set this to the foreign-key column in the related table.|  
+  
+## <a name="see-also"></a>See Also  
+ [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
