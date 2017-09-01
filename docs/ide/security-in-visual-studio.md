@@ -37,22 +37,19 @@ ms.contentlocale: it-it
 ms.lasthandoff: 05/30/2017
 
 ---
-# Sicurezza in Visual Studio
-<a id="security-in-visual-studio" class="xliff"></a>
+# <a name="security-in-visual-studio"></a>Sicurezza in Visual Studio
 È opportuno includere considerazioni sulla sicurezza in tutti gli aspetti dello sviluppo di applicazioni, dalla progettazione alla distribuzione. Iniziare eseguendo Visual Studio nel modo più sicuro possibile. Vedere [Autorizzazioni utente](../ide/user-permissions-and-visual-studio.md).  
   
  Per sviluppare applicazioni efficacemente sicure, è necessario acquisire familiarità con i concetti e le funzionalità relative alla sicurezza delle piattaforme per le quali si sviluppano le applicazioni. È inoltre necessario comprendere le tecniche di sicurezza del codice.  
   
-## Informazioni sulla sicurezza
-<a id="understanding-security" class="xliff"></a>  
+## <a name="understanding-security"></a>Informazioni sulla sicurezza  
  [Sicurezza](/dotnet/standard/security/index)  
  Vengono descritte la sicurezza dall'accesso di codice, la sicurezza basata sui ruoli e i criteri e gli strumenti di sicurezza di .NET Framework.  
   
  [Defend Your Code with Top Ten Security Tips Every Developer Must Know](http://go.microsoft.com/fwlink/?LinkId=72877) (Dieci suggerimenti principali per la protezione del codice che ogni sviluppatore dovrebbe conoscere)  
  Vengono descritte le problematiche da tenere in considerazione per non compromettere i dati o il sistema.  
   
-## Creazione di codice per la sicurezza
-<a id="coding-for-security" class="xliff"></a>  
+## <a name="coding-for-security"></a>Creazione di codice per la sicurezza  
  La maggior parte degli errori di codifica che determinano vulnerabilità nella sicurezza si verificano perché gli sviluppatori compiono valutazioni errate rispetto all'input degli utenti o non hanno una comprensione globale della piattaforma per la quale sviluppano le applicazioni.  
   
  [Linee guida per la generazione di codice sicuro](/dotnet/standard/security/secure-coding-guidelines)  
@@ -61,8 +58,7 @@ ms.lasthandoff: 05/30/2017
  [Procedure di sicurezza consigliate](/cpp/top/security-best-practices-for-cpp)  
  Vengono presi in esame i sovraccarichi del buffer e viene fornita una sintesi completa della funzionalità di controllo della sicurezza di Microsoft Visual C++ resa disponibile dal flag /GS della fase di compilazione.
 
-## Compilazione di codice per la sicurezza
-<a id="building-for-security" class="xliff"></a>  
+## <a name="building-for-security"></a>Compilazione di codice per la sicurezza  
  La sicurezza è anche un aspetto importante del processo di compilazione.  Alcuni passaggi aggiuntivi possono migliorare la sicurezza di un'app distribuita e impedire il reverse engineering non autorizzato, lo spoofing o attacchi di altro tipo.
 
  [Dotfuscator Community Edition (CE)](dotfuscator/index.md)  

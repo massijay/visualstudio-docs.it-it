@@ -40,8 +40,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 05/24/2017
 
 ---
-# Procedura: modificare i tipi di carattere e i colori utilizzati nell'editor
-<a id="how-to-change-fonts-and-colors-in-the-editor" class="xliff"></a>
+# <a name="how-to-change-fonts-and-colors-in-the-editor"></a>Procedura: modificare i tipi di carattere e i colori utilizzati nell'editor
 È possibile modificare il tipo di carattere predefinito, le dimensioni del carattere e i colori di sfondo e primo piano dei diversi **elementi di visualizzazione** del testo nell'Editor del codice. Quando si modificano le impostazioni del carattere tenere presente le informazioni seguenti:  
   
 -   Le impostazioni **Tipo di carattere** e **Dimensioni** sono globali per tutti gli elementi di testo in tutti gli editor di [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
@@ -53,8 +52,7 @@ ms.lasthandoff: 05/24/2017
 > [!NOTE]
 >  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella **Guida** a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
-### Per modificare il tipo di carattere predefinito, le dimensioni e i colori
-<a id="to-change-the-default-font-face-size-and-colors" class="xliff"></a>  
+### <a name="to-change-the-default-font-face-size-and-colors"></a>Per modificare il tipo di carattere predefinito, le dimensioni e i colori  
   
 1.  Selezionare **Opzioni** dal menu **Strumenti** e nella cartella **Ambiente** selezionare **Tipi di carattere e colori**.  
   
@@ -71,8 +69,7 @@ ms.lasthandoff: 05/24/2017
   
 5.  Fare clic su **OK**.  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Customizing the Editor](../../ide/customizing-the-editor.md)  (Personalizzazione dell'editor)  
  [Text Editor Options Dialog Box](../../ide/reference/text-editor-options-dialog-box.md)  (Finestra di dialogo Opzioni editor di testo)  
  [Scrittura di codice](../../ide/writing-code-in-the-code-and-text-editor.md)   

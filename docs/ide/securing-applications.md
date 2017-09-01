@@ -37,12 +37,10 @@ ms.contentlocale: it-it
 ms.lasthandoff: 05/30/2017
 
 ---
-# Protezione delle applicazioni
-<a id="securing-applications" class="xliff"></a>
+# <a name="securing-applications"></a>Protezione delle applicazioni
 Sebbene la maggior parte delle applicazioni presentino problematiche di sicurezza comuni, ogni dominio applicazione ha le proprie problematiche di sicurezza.  
   
-## Considerazioni generali sulla sicurezza
-<a id="general-security-considerations" class="xliff"></a>  
+## <a name="general-security-considerations"></a>Considerazioni generali sulla sicurezza  
  Ogni lingua presenta le proprie problematiche e considerazioni sulla sicurezza.  
   
  [Procedure di sicurezza consigliate](/cpp/top/security-best-practices-for-cpp)  
@@ -51,8 +49,7 @@ Sebbene la maggior parte delle applicazioni presentino problematiche di sicurezz
  [Sicurezza e programmazione (C# e Visual Basic)](http://msdn.microsoft.com/en-us/227e2863-cf09-4c28-9611-bcd82be5e994)  
  Vengono fornite informazioni sui tre principali problemi di sicurezza per gli sviluppatori Visual Basic e C#: privilegi, applicazioni Web e installazione di Visual Studio.  
   
-## Sicurezza delle applicazioni mobili
-<a id="securing-mobile-applications" class="xliff"></a>  
+## <a name="securing-mobile-applications"></a>Sicurezza delle applicazioni mobili  
  Man mano che aumenta la popolarità dei dispositivi mobili, la sicurezza delle informazioni e dei dati in questi dispositivi diventa più importante.  
   
  [Considerazioni sulla protezione per i dispositivi](http://msdn.microsoft.com/en-us/45fab484-8718-452e-8210-04fda3c6cb87)  
@@ -64,8 +61,7 @@ Sebbene la maggior parte delle applicazioni presentino problematiche di sicurezz
  [Progettazione di pagine Web Form protette per dispositivi mobili](http://msdn.microsoft.com/en-us/b69727c1-f81f-4221-a116-8f92f769365f)  
  Descrive la pianificazione, l’implementazione e il supporto per la sicurezza di reti wireless e dispositivi mobili.  
   
-## Sicurezza di applicazioni Web
-<a id="securing-web-applications" class="xliff"></a>  
+## <a name="securing-web-applications"></a>Sicurezza di applicazioni Web  
  Una pagina Web scritta male può compromettere l'integrità e la sicurezza di un intero server e potenzialmente di un'intera rete. Pertanto, è necessario esaminare le considerazioni sulla sicurezza nella pianificazione dell'applicazione Web.  
   
  [Architettura della protezione ASP.NET](http://msdn.microsoft.com/Library/c34d6f4f-f64d-4697-bd32-02dd2ddf726f)  
@@ -80,13 +76,11 @@ Sebbene la maggior parte delle applicazioni presentino problematiche di sicurezz
  [Procedura: Usare le funzionalità di sicurezza a livello di trasporto](http://msdn.microsoft.com/en-us/16210e41-5492-4cc8-9002-7366b1fc7297)  
  Viene descritto come usare la sicurezza del trasporto per l'autenticazione quando ci si connette a un servizio WCF.  
   
-## Sicurezza di applicazioni desktop
-<a id="securing-desktop-applications" class="xliff"></a>  
+## <a name="securing-desktop-applications"></a>Sicurezza di applicazioni desktop  
  Progettazione della sicurezza per le applicazioni desktop è un passaggio essenziale nello sviluppo di applicazioni.  
   
  [Sicurezza di Windows Form](/dotnet/framework/winforms/windows-forms-security)  
  Viene fornita una panoramica dell'implementazione della sicurezza di Windows Form.  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza](../ide/security-in-visual-studio.md)

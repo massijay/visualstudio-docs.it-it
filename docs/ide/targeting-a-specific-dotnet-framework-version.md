@@ -39,22 +39,19 @@ ms.contentlocale: it-it
 ms.lasthandoff: 05/30/2017
 
 ---
-# Sviluppo per una versione specifica di .NET Framework
-<a id="targeting-a-specific-net-framework-version" class="xliff"></a>
+# <a name="targeting-a-specific-net-framework-version"></a>Sviluppo per una versione specifica di .NET Framework
 In Visual Studio è possibile specificare la versione o il profilo di .NET Framework per cui si vuole sviluppare il progetto. Per un'applicazione da eseguire in un altro computer, la versione di .NET Framework per cui viene sviluppata l'applicazione deve essere compatibile con quella installata nel computer.  
   
  Questa sezione contiene argomenti che descrivono come sviluppare progetti per versioni specifiche di [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
   
-## Contenuto della sezione
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Panoramica del multitargeting di Visual Studio](../ide/visual-studio-multi-targeting-overview.md)  
  Offre una panoramica delle funzionalità di multitargeting disponibili in Visual Studio.  
   
  [Procedura: Destinare una versione di .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md)  
  Contiene informazioni dettagliate su come specificare una determinata versione di [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] per il progetto Visual Basic, Visual C# o Visual F#.  
   
-## Sezioni correlate
-<a id="related-sections" class="xliff"></a>  
+## <a name="related-sections"></a>Sezioni correlate  
  [Scelta della versione di .NET Framework per i siti Web](http://msdn.microsoft.com/Library/8b8145a9-62f6-4fc4-8a83-47b0487cbe76)  
  Descrive come usare questa versione di Visual Studio per sviluppare applicazioni Web da eseguire in versioni precedenti di .NET Framework.  
   

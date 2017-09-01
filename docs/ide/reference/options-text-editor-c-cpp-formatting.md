@@ -41,8 +41,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 05/24/2017
 
 ---
-# Opzioni, Editor di testo, C/C++, Formattazione
-<a id="options-text-editor-cc-formatting" class="xliff"></a>
+# <a name="options-text-editor-cc-formatting"></a>Opzioni, Editor di testo, C/C++, Formattazione
 Consente di modificare il comportamento predefinito dell'editor di codice in fase di programmazione in C o C++.  
   
  Per accedere a questa pagina, nel riquadro sinistro della finestra di dialogo **Opzioni** espandere **Editor di testo** e **C/C++**, quindi fare clic su **Formattazione**.  
@@ -50,13 +49,11 @@ Consente di modificare il comportamento predefinito dell'editor di codice in fas
 > [!NOTE]
 >  I nomi o i percorsi visualizzati per alcuni elementi dell'interfaccia utente di Visual Studio nelle istruzioni seguenti potrebbero essere diversi nel computer in uso. La versione di Visual Studio in uso e le impostazioni configurate determinano questi elementi. Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
   
-## Opzioni C/C++
-<a id="cc-options" class="xliff"></a>  
+## <a name="cc-options"></a>Opzioni C/C++  
  **Attiva descrizione comandi per informazioni rapide automatiche**  
  Consente di abilitare o disabilitare la funzionalità Informazioni rapide di IntelliSense.  
   
-## Codice inattivo
-<a id="inactive-code" class="xliff"></a>  
+## <a name="inactive-code"></a>Codice inattivo  
  **Mostra blocchi inattivi**  
  Per il codice reso inattivo da dichiarazioni `#ifdef` viene utilizzato un colore diverso in modo da agevolarne l'identificazione.  
   
@@ -66,24 +63,21 @@ Consente di modificare il comportamento predefinito dell'editor di codice in fas
  **Percentuale di opacità del codice inattivo**  
  È possibile personalizzare il grado di opacità per blocchi di codice inattivo.  
   
-## Rientro
-<a id="indentation" class="xliff"></a>  
+## <a name="indentation"></a>Rientro  
  **Rientra parentesi graffe**  
  È possibile configurare la modalità di allineamento delle parentesi graffe quando si preme INVIO dopo aver avviato un blocco di codice, ad esempio una funzione o un ciclo `for`. Le parentesi graffe possono essere allineate al primo carattere del blocco di codice oppure rientrate.  
   
  **Rientra alla pressione del tasto TAB**  
  È possibile configurare le operazioni eseguite nella riga di codice corrente quando si preme TAB. La riga viene rientrata oppure viene inserito un carattere di tabulazione.  
   
-## Varie
-<a id="miscellaneous" class="xliff"></a>  
+## <a name="miscellaneous"></a>Varie  
  **Enumera attività di commento**  
  L'editor può analizzare le parole preimpostate nei commenti all'interno dei file di origine aperti. Crea una voce nella finestra **Elenco attività** per qualsiasi parola chiave trovata.  
   
  **Evidenzia token corrispondenti**  
  Se il cursore si trova accanto a una parentesi graffa, l'editor può evidenziare la parentesi graffa corrispondente in modo che sia possibile visualizzare più agevolmente il codice contenuto.  
   
-## Struttura
-<a id="outlining" class="xliff"></a>  
+## <a name="outlining"></a>Struttura  
  **Attiva modalità struttura all'apertura del file**  
  Aprendo un file nell'editor di testo, è possibile abilitare la funzionalità di struttura. Per altre informazioni, vedere [Struttura](../../ide/outlining.md). Se questa opzione è selezionata, la funzionalità di struttura verrà abilitata all'apertura di un file.  
   
@@ -99,7 +93,6 @@ Consente di modificare il comportamento predefinito dell'editor di codice in fas
   
 -   [Istruzione while (C++)](/cpp/cpp/while-statement-cpp)  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Generale, Ambiente, finestra di dialogo Opzioni](../../ide/reference/general-environment-options-dialog-box.md)   
  [Utilizzo di IntelliSense](../../ide/using-intellisense.md)

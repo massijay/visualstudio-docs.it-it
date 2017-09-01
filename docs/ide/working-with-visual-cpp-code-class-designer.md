@@ -44,8 +44,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 06/23/2017
 
 ---
-# Utilizzo del codice Visual C++ (Progettazione classi)
-<a id="working-with-visual-c-code-class-designer" class="xliff"></a>
+# <a name="working-with-visual-c-code-class-designer"></a>Utilizzo del codice Visual C++ (Progettazione classi)
 Progettazione classi usa un'area di progettazione visiva denominata *diagramma classi* per rappresentare visivamente gli elementi di codice nel progetto. Si possono usare i diagrammi classi per progettare e visualizzare le classi e gli altri tipi in un progetto.  
 
  Progettazione classi supporta gli elementi di codice C++ seguenti:  
@@ -67,21 +66,17 @@ Progettazione classi usa un'area di progettazione visiva denominata *diagramma c
 > [!NOTE]
 >  Non corrisponde al diagramma classi UML, che è possibile creare in un progetto di modellazione. Per altre informazioni, vedere [UML Class Diagrams: Reference](../modeling/uml-class-diagrams-reference.md) (Diagrammi classi UML: riferimenti)  
 
-## Risoluzione dei problemi relativi al tipo e alla visualizzazione
-<a id="troubleshooting-type-resolution-and-display-issues" class="xliff"></a>  
+## <a name="troubleshooting-type-resolution-and-display-issues"></a>Risoluzione dei problemi relativi al tipo e alla visualizzazione  
 
-### Percorso dei file di origine
-<a id="location-of-source-files" class="xliff"></a>  
+### <a name="location-of-source-files"></a>Percorso dei file di origine  
  Progettazione classi non tiene traccia del percorso dei file di origine. Di conseguenza, se si modifica la struttura del progetto o si spostano file di origine nel progetto, Progettazione classi può perdere traccia del tipo (soprattutto il tipo di origine di un typedef, classi base o tipi di associazione). Si potrebbe ricevere un errore, ad esempio **Progettazione classi: impossibile visualizzare il tipo**. In tal caso, trascinare di nuovo il codice sorgente modificato o riposizionato nel diagramma classi per visualizzarlo nuovamente.  
 
-### Problemi di aggiornamento e di prestazioni
-<a id="update-and-performance-issues" class="xliff"></a>  
+### <a name="update-and-performance-issues"></a>Problemi di aggiornamento e di prestazioni  
  Per i progetti Visual C++, potrebbero essere necessari dai 30 ai 60 secondi perché una modifica nel file di origine venga visualizzata nel diagramma classi. A causa di questo ritardo, Progettazione classi potrebbe anche generare l'errore **Nessun tipo trovato nella selezione**. Se viene visualizzato un messaggio di errore di questo tipo, scegliere **Annulla** nel messaggio di errore e attendere che l'elemento di codice venga visualizzato in Visualizzazione classi. A questo punto, Progettazione classi dovrebbe essere in grado di visualizzare il tipo.  
 
  Se il diagramma classi non viene aggiornato con le modifiche apportate nel codice, può essere necessario chiuderlo e riaprirlo.  
 
-### Problemi di risoluzione del tipo
-<a id="type-resolution-issues" class="xliff"></a>  
+### <a name="type-resolution-issues"></a>Problemi di risoluzione del tipo  
  Progettazione classi potrebbe non essere in grado di risolvere i tipi per i motivi seguenti:  
   
 -   Il tipo si trova in un progetto o in un assembly a cui non viene fatto riferimento dal progetto che contiene il diagramma classi. Per correggere questo errore, aggiungere un riferimento al progetto o all'assembly che contiene il tipo. Per altre informazioni, vedere [Gestione dei riferimenti in un progetto](managing-references-in-a-project.md).  
@@ -104,8 +99,7 @@ Progettazione classi usa un'area di progettazione visiva denominata *diagramma c
   
 -   Verificare che il tipo si trovi nell'ambito corretto in modo che Progettazione classi possa trovarlo. Assicurarsi che nel codice non manchi un'istruzione `using`, `imports` o `#include`. Assicurarsi inoltre che il tipo (o un tipo correlato) non sia stato spostato dallo spazio dei nomi in cui si trovava in origine.  
 
-### Risoluzione di altri messaggi di errore
-<a id="troubleshooting-other-error-messages" class="xliff"></a>  
+### <a name="troubleshooting-other-error-messages"></a>Risoluzione di altri messaggi di errore  
  È possibile ottenere assistenza per la risoluzione dei problemi relativi a errori e avvisi nei forum pubblici MSDN (Microsoft Developer Network). Vedere il [forum dedicato a Progettazione classi di Visual Studio](http://go.microsoft.com/fwlink/?linkid=160754).  
 
 ##  <a name="limitations"></a> Limitazioni per gli elementi di codice C++  
@@ -130,8 +124,7 @@ Progettazione classi usa un'area di progettazione visiva denominata *diagramma c
 
 -   Progettazione classi non può visualizzare tipi void o che derivano da un tipo void.  
 
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Designing and Viewing Classes and Types](../ide/designing-and-viewing-classes-and-types.md)  (Progettazione e visualizzazione di classi e tipi)  
  [Working with Classes and Other Types (Class Designer)](../ide/working-with-classes-and-other-types-class-designer.md)  (Uso di classi e altri tipi (Progettazione classi))  
  [Working with Class Diagrams (Class Designer)](../ide/working-with-class-diagrams-class-designer.md)  (Uso di diagrammi classi (Progettazione classi))  

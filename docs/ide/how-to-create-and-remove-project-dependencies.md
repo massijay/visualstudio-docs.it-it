@@ -43,12 +43,10 @@ ms.contentlocale: it-it
 ms.lasthandoff: 06/23/2017
 
 ---
-# Procedura: creare e rimuovere dipendenze di progetto
-<a id="how-to-create-and-remove-project-dependencies" class="xliff"></a>
+# <a name="how-to-create-and-remove-project-dependencies"></a>Procedura: creare e rimuovere dipendenze di progetto
 Quando si compila una soluzione che contiene più progetti, può essere necessario prima compilare alcuni progetti, per generare il codice usato da altri progetti. Quando un progetto usa codice eseguibile generato da un altro progetto, il progetto che genera il codice viene definito come dipendenza del progetto che usa il codice. Tali relazioni di dipendenza possono essere definite nella finestra di dialogo **Dipendenze progetto**.  
 
-### Per assegnare le dipendenze ai progetti
-<a id="to-assign-dependencies-to-projects" class="xliff"></a>  
+### <a name="to-assign-dependencies-to-projects"></a>Per assegnare le dipendenze ai progetti  
 
 1.  Selezionare un progetto in Esplora soluzioni.  
 
@@ -65,8 +63,7 @@ Quando si compila una soluzione che contiene più progetti, può essere necessar
 
  La soluzione deve contenere più di un progetto per poter creare dipendenze di progetto.  
 
-### Per rimuovere dipendenze dai progetti
-<a id="to-remove-dependencies-from-projects" class="xliff"></a>  
+### <a name="to-remove-dependencies-from-projects"></a>Per rimuovere dipendenze dai progetti  
 
 1.  Selezionare un progetto in Esplora soluzioni.  
 
@@ -81,8 +78,7 @@ Quando si compila una soluzione che contiene più progetti, può essere necessar
 
 4.  Nel campo **Dipendente da** deselezionare le caselle di controllo accanto agli altri progetti che non sono più dipendenze del progetto specificato.  
 
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Compilazione e pulizia di progetti e soluzioni in Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)   
  [Compiling and Building](../ide/compiling-and-building-in-visual-studio.md)  (Compilazione e creazione)  
  [Understanding Build Configurations](../ide/understanding-build-configurations.md)  (Informazioni sulle configurazioni delle compilazioni)  

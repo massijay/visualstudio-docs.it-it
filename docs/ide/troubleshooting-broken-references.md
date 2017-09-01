@@ -40,8 +40,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 05/30/2017
 
 ---
-# Risolvere i problemi relativi ai riferimenti interrotti
-<a id="troubleshoot-broken-references" class="xliff"></a>
+# <a name="troubleshoot-broken-references"></a>Risolvere i problemi relativi ai riferimenti interrotti
 Se l'applicazione tenta di usare un riferimento interrotto, viene generato un errore di eccezione. L'impossibilità di trovare il componente a cui si è fatto riferimento è la causa principale dell'errore, ma esistono diverse situazioni in cui un riferimento può essere considerato interrotto. Di seguito è riportato l'elenco delle cause di interruzione di un riferimento.  
 
 -   Il percorso del riferimento del progetto non è corretto o è incompleto.  
@@ -59,8 +58,7 @@ Se l'applicazione tenta di usare un riferimento interrotto, viene generato un er
 > [!NOTE]
 >  Nel file di progetto si fa riferimento ai file contenuti negli assembly tramite percorsi assoluti. Di conseguenza, per utenti che lavorano in un ambiente con più sviluppatori è possibile che risulti mancante un assembly a cui viene fatto riferimento tramite un percorso nell'ambiente locale. Per evitare questo tipo di errori, è consigliabile, in tali casi, aggiungere riferimenti da progetto a progetto. Per altre informazioni, vedere [Programmazione con gli assembly](/dotnet/framework/app-domains/programming-with-assemblies).
 
-## Percorso di riferimento non corretto
-<a id="reference-path-is-incorrect" class="xliff"></a>  
+## <a name="reference-path-is-incorrect"></a>Percorso di riferimento non corretto  
  Se i progetti sono condivisi e si trovano in computer diversi, è possibile che alcuni riferimenti non vengano individuati quando un componente viene posizionato in una directory diversa in ogni computer. I riferimenti vengono memorizzati con il nome del file del componente, ad esempio Componente. Quando si aggiunge un riferimento a un progetto, il percorso della cartella del file del componente, ad esempio C:\Componenti\,\\, viene aggiunto alla proprietà **ReferencePath** del progetto.  
 
  Quando si apre il progetto, i file dei componenti a cui viene fatto riferimento vengono cercati nelle directory del percorso dei riferimenti. Se il progetto viene aperto in un computer in cui il componente è memorizzato in una directory diversa, ad esempio D:\Componenti\\\, non sarà possibile trovare il riferimento e nell'Elenco attività verrà visualizzato un errore.  
@@ -70,8 +68,7 @@ Se l'applicazione tenta di usare un riferimento interrotto, viene generato un er
 > [!TIP]
 >  Nei riferimenti da progetto a progetto problemi di questo tipo non si verificano. Per questo motivo è consigliabile usare riferimenti da progetto a progetto, se possibile, anziché riferimenti a file.  
 
-#### Per correggere un riferimento interrotto modificando il percorso del riferimento
-<a id="to-fix-a-broken-project-reference-by-correcting-the-reference-path" class="xliff"></a>  
+#### <a name="to-fix-a-broken-project-reference-by-correcting-the-reference-path"></a>Per correggere un riferimento interrotto modificando il percorso del riferimento  
 
 1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Proprietà**.  
 
@@ -83,37 +80,30 @@ Se l'applicazione tenta di usare un riferimento interrotto, viene generato un er
 
      Se si usa Visual C#, selezionare la pagina **Percorsi riferimento**. Nel campo **Cartella** digitare il percorso della cartella che contiene l'elemento a cui si vuole fare riferimento nel campo e quindi fare clic sul pulsante **Aggiungi cartella**.  
 
-## File di riferimento eliminato
-<a id="referenced-file-has-been-deleted" class="xliff"></a>  
+## <a name="referenced-file-has-been-deleted"></a>File di riferimento eliminato  
  È possibile che il file a cui viene fatto riferimento sia stato eliminato e non sia più presente nell'unità.  
 
-#### Per correggere un riferimento interrotto a causa di un file che non esiste più nell'unità
-<a id="to-fix-a-broken-project-reference-for-a-file-that-no-longer-exists-on-your-drive" class="xliff"></a>  
+#### <a name="to-fix-a-broken-project-reference-for-a-file-that-no-longer-exists-on-your-drive"></a>Per correggere un riferimento interrotto a causa di un file che non esiste più nell'unità  
 
 -   Eliminare il riferimento.  
 
 -   Se il riferimento si trova in un'altra posizione all'interno del computer, leggerlo da quella posizione.  
 
-## File di riferimento rinominato
-<a id="referenced-file-has-been-renamed" class="xliff"></a>  
+## <a name="referenced-file-has-been-renamed"></a>File di riferimento rinominato  
  È possibile che il file a cui viene fatto riferimento sia stato rinominato.  
 
-#### Per correggere un riferimento interrotto a causa della ridenominazione di un file
-<a id="to-fix-a-broken-reference-for-a-file-that-has-been-renamed" class="xliff"></a>  
+#### <a name="to-fix-a-broken-reference-for-a-file-that-has-been-renamed"></a>Per correggere un riferimento interrotto a causa della ridenominazione di un file  
 
 -   Eliminare il riferimento e quindi aggiungere un riferimento al nuovo nome.  
 
 -   Se il riferimento si trova in un'altra posizione all'interno del computer, è necessario leggerlo da quella posizione.
 
-## Errore durante la connessione o l'autenticazione di rete
-<a id="network-connection-or-authentication-has-failed" class="xliff"></a>  
+## <a name="network-connection-or-authentication-has-failed"></a>Errore durante la connessione o l'autenticazione di rete  
  I file possono risultare inaccessibili per molte cause, ad esempio una connessione di rete non funzionante o un'operazione di autenticazione non riuscita. Ogni causa può avere una soluzione univoca; è possibile ad esempio che sia necessario contattare il proprio amministratore locale per accedere alle risorse necessarie. Tuttavia, l'eliminazione del riferimento e la correzione del codice in cui viene usato è un'opzione sempre valida.
 
-## Componente COM non installato
-<a id="com-component-is-not-installed-on-computer" class="xliff"></a>  
+## <a name="com-component-is-not-installed-on-computer"></a>Componente COM non installato  
  Se un utente ha aggiunto un riferimento a un componente COM e un altro utente tenta di eseguire il codice in un computer nel quale tale componente non è installato, verrà generato un errore relativo all'interruzione del riferimento, che sarà possibile correggere installando il componente nel computer del secondo utente. Per altre informazioni sull'uso di riferimenti a componenti COM nei progetti, vedere [Interoperabilità COM nelle applicazioni .NET Framework](/dotnet/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications).  
 
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Pagina Riferimenti, Creazione progetti (Visual Basic)](../ide/reference/references-page-project-designer-visual-basic.md)   
 
