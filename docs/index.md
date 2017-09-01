@@ -1,13 +1,13 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Documentazione di Visual Studio
-description: Informazioni su come usare Visual Studio 2017 per lo sviluppo di applicazioni, servizi e strumenti nel linguaggio preferito per le piattaforme e i dispositivi desiderati.
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 601cfd86b10f6194d817fc02e6ea0087608fd0ff
-ms.openlocfilehash: ec537370a7bc42a6d93ac377b9cd280733da6799
+title: Visual Studio Documentation
+description: Learn how to use Visual Studio 2017 to develop applications, services, and tools in the language of your choice, for your platforms and devices.
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: bcd55d1b7e1037a4442ce47fe6b96bf865dfbdfc
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 <div id="main" class="v2">
@@ -24,8 +24,8 @@ ms.lasthandoff: 05/10/2017
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Installazione e configurazione</h3>
-                                    <p>Informazioni sull'installazione e la configurazione di Visual Studio.</p>
+                                    <h3>Setup &amp; Installation</h3>
+                                    <p>Learn how to install and set up Visual Studio.</p>
                                 </div>
                             </div>
                         </div>
@@ -43,8 +43,8 @@ ms.lasthandoff: 05/10/2017
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Introduzione a Visual Studio</h3>
-                                    <p>Sviluppare qualsiasi app per qualsiasi piattaforma.</p>
+                                    <h3>Get Started with Visual Studio</h3>
+                                    <p>Develop any app for any platform.</p>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@ ms.lasthandoff: 05/10/2017
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Novità di Visual Studio 2017</h3>
+                                    <h3>What's New in Visual Studio 2017</h3>
                                 </div>
                             </div>
                         </div>
@@ -72,17 +72,17 @@ ms.lasthandoff: 05/10/2017
         </ul>
     </div>
     <div class="container">
-        <h1>Documentazione di Visual Studio</h1>
+        <h1>Visual Studio Documentation</h1>
         <ul class="pivots">
             <li>
-                <a href="#workloads">Carichi di lavoro</a>
+                <a href="#workloads">Workloads</a>
                 <ul id="workloads">
                     <li>
                         <a href="#windows">Windows</a>
                         <ul id="windows" class="cardsC">
                             <li>
                                 <div class="container intro">
-                                    <p>Sviluppare app e giochi con Visual Studio per raggiungere tutti i dispositivi con Windows.</p>
+                                    <p>Develop apps and games using Visual Studio to reach every device running Windows.</p>
                                 </div>
                             </li>
                             <li>
@@ -96,8 +96,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo della piattaforma UWP (Universal Windows Platform)</h3>
-                                                    <p>Sviluppare applicazioni per Windows 10 con la piattaforma UWP e C#, VB o C++.</p>
+                                                    <h3>Universal Windows Platform development</h3>
+                                                    <p>Develop applications for Windows 10 with the Windows Universal Platform and C#, VB, or C++.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -115,8 +115,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo per desktop .NET</h3>
-                                                    <p>Creare applicazioni WPF, Windows Form e console con .NET Framework.</p>
+                                                    <h3>.NET Desktop development</h3>
+                                                    <p>Build WPF, Windows Forms, and console applications using the .NET Framework.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -134,8 +134,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo per Windows con C++</h3>
-                                                    <p>Creare applicazioni di Windows classiche usando tutta la potenza di MFC, ATL e del set di strumenti Microsoft C++.</p>
+                                                    <h3>Windows development with C++</h3>
+                                                    <p>Build classic Windows-based applications using the power of MFC, ATL, and the Microsoft C++ toolset.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -145,11 +145,11 @@ ms.lasthandoff: 05/10/2017
                         </ul>
                     </li>
                     <li>
-                        <a href="#web">Web e cloud</a>
+                        <a href="#web">Web &amp; Cloud</a>
                         <ul id="web" class="cardsC">
                             <li>
                                 <div class="container intro">
-                                    <p>Sviluppare app Web moderne con Visual Studio e potenti strumenti aperti.
+                                    <p>Develop modern web apps using Visual Studio and powerful open tools.
                                     </p>
                                 </div>
                             </li>
@@ -164,8 +164,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo Web</h3>
-                                                    <p>Creare app Web con ASP.NET e tecnologie basate su standard come HTML, JavaScript e CSS.</p>
+                                                    <h3>Web development</h3>
+                                                    <p>Build web apps with ASP.NET and standards-based technologies like HTML, JavaScript, and CSS.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -183,8 +183,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo e gestione in Azure</h3>
-                                                    <p>Creare, testare, distribuire e gestire facilmente app e servizi scalabili nel cloud Microsoft.</p>
+                                                    <h3>Azure development and management</h3>
+                                                    <p>Easily build, test, deploy, and manage scalable apps and services on the Microsoft cloud.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -203,7 +203,7 @@ ms.lasthandoff: 05/10/2017
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Python</h3>
-                                                    <p>Sviluppo interattivo per le app Python, con framework noti come Django e Flask.</p>
+                                                    <p>Interactive development for Python apps, using familiar frameworks including Django and Flask.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -222,7 +222,7 @@ ms.lasthandoff: 05/10/2017
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Node.js</h3>
-                                                    <p>Creare applicazioni di rete scalabili tramite Node.js, un runtime JavaScript asincrono e basato su eventi.</p>
+                                                    <p>Build scalable network applications using Node.js, an asnchronous, event-driven JavaScript runtime.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -240,8 +240,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Archiviazione ed elaborazione dei dati</h3>
-                                                    <p>Una suite completa di strumenti per gli sviluppatori di database per creare soluzioni per SQL Server, Hadoop e Azure ML.</p>
+                                                    <h3>Data storage and processing</h3>
+                                                    <p>A full suite of tools for database developers to create solutions for SQL Server, Hadoop, and Azure ML.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -259,8 +259,8 @@ ms.lasthandoff: 05/10/2017
                                         </div>
                                         </div>
                                           <div class="cardText">
-                                            <h3>Applicazioni analitiche e di analisi scientifica dei dati</h3>
-                                            <p>Linguaggi e strumenti per la creazione di applicazioni di analisi scientifica dei dati, tra cui Python, R e F#.</p>
+                                            <h3>Data science and analytical applications</h3>
+                                            <p>Languages and tooling for creating data science applications, including Python, R, and F#.</p>
                                         </div>
                                       </div>
                                     </div>
@@ -278,8 +278,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo per Office/SharePoint</h3>
-                                                    <p>Creare componenti aggiuntivi e soluzioni per Office e SharePoint con C#, Visual Basic e JavaScript.</p>
+                                                    <h3>Office/SharePoint development</h3>
+                                                    <p>Create Office and SharePoint add-ins and solutions using C#, Visual Basic, and JavaScript.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -289,11 +289,11 @@ ms.lasthandoff: 05/10/2017
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Dispositivi mobili e giochi</a>
+                        <a href="#mobile">Mobile &amp; Gaming</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <div class="container intro">
-                                    <p>Creare app per dispositivi mobili native o ibride per Android, iOS e Windows.</p>
+                                    <p>Create native or hybrid mobile apps that target Android, iOS, and Windows.</p>
                                 </div>
                             </li>
                             <li>
@@ -307,8 +307,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo di app per dispositivi mobili con .NET</h3>
-                                                    <p>Creare applicazioni multipiattaforma per iOS, Android o Windows con Xamarin.</p>
+                                                    <h3>Mobile development with .NET</h3>
+                                                    <p>Build cross-platform applications for iOS, Android, or Windows using Xamarin.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -326,8 +326,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo di giochi con Unity</h3>
-                                                    <p>Creare giochi 2D e 3D con Unity, un potente ambiente di sviluppo multipiattaforma.</p>
+                                                    <h3>Game development with Unity</h3>
+                                                    <p>Create 2D and 3D games with unity, a powerful cross-platform development environment.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -345,8 +345,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo di app per dispositivi mobili con JavaScript</h3>
-                                                    <p>Creare applicazioni multipiattaforma per iOS, Android o Windows con il framework Apache Cordova.</p>
+                                                    <h3>Mobile development with JavaScript</h3>
+                                                    <p>Build cross-platform applications for iOS, Android, or Windows using the Apache Cordova framework.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -364,8 +364,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo di app per dispositivi mobili con C++</h3>
-                                                    <p>Creare applicazioni multipiattaforma per iOS, Android o Windows con C++.</p>
+                                                    <h3>Mobile development with C++</h3>
+                                                    <p>Build cross-platform applications for iOS, Android, or Windows using C++.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -383,8 +383,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo di giochi con C++</h3>
-                                                    <p>Usare tutta la potenza di C++ per creare giochi professionali con tecnologia DirectX, Unreal o Cocos2D.</p>
+                                                    <h3>Game development with C++</h3>
+                                                    <p>Use the full power of C++ to build professional games powered by DirectX, Unreal, or Cocos2D.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -394,7 +394,7 @@ ms.lasthandoff: 05/10/2017
                         </ul>
                     </li>
                     <li>
-                        <a href="#other">Altri set di strumenti</a>
+                        <a href="#other">Other Toolsets</a>
                         <ul id="other" class="cardsC">
                             <li>
                                 <a href="https://go.microsoft.com/fwlink/?linkid=834750">
@@ -407,8 +407,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo di estensioni di Visual Studio</h3>
-                                                    <p>Creare componenti aggiuntivi per estendere Visual Studio, come comandi, analizzatori del codice e finestre degli strumenti.</p>
+                                                    <h3>Visual Studio extension development</h3>
+                                                    <p>Create add-ons that extend Visual Studio, such as commands, code analyzers, and tool windows.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -426,8 +426,27 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo di applicazioni Linux con C++</h3>
-                                                    <p>Creare ed eseguire il debug di applicazioni in ambiente Linux.</p>
+                                                    <h3>Linux development with C++</h3>
+                                                    <p>Create and debug applications running in a Linux environment.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=856606">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1 cardScaleImage">
+                                                        <img data-scaleimage="./images/vs_web-1.svg" src="./images/vs_web-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>.NET Core cross-platform development</h3>
+                                                    <p>Build cross-platform applications using .NET Core, ASP.NET Core, HTML, JavaScript, and container development tools.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -439,13 +458,13 @@ ms.lasthandoff: 05/10/2017
                 </ul>
             </li>
             <li>
-                <a href="#features">Funzionalità</a>
+                <a href="#features">Features</a>
                 <ul id="features">
                     <li>
                         <a href="#features1"> </a>
                         <ul id="features1" class="cardsC">
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/visualstudio/ide/index-writing-code">
+                                <a href="https://go.microsoft.com/fwlink/?linkid=856608">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -455,8 +474,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Sviluppo</h3>
-                                                    <p>Scrivere e gestire il codice usando l'editor di codice.</p>
+                                                    <h3>Develop</h3>
+                                                    <p>Write and manage your code using the code editor.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -474,8 +493,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Compilazione</h3>
-                                                    <p>Creare e compilare il codice sorgente.</p>
+                                                    <h3>Build</h3>
+                                                    <p>Compile and build your source code.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -494,7 +513,7 @@ ms.lasthandoff: 05/10/2017
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Debug</h3>
-                                                    <p>Esaminare e risolvere i problemi del codice.</p>
+                                                    <p>Investigate and fix problems with your code.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -513,7 +532,7 @@ ms.lasthandoff: 05/10/2017
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Test</h3>
-                                                    <p>Organizzare i processi di test.</p>
+                                                    <p>Organize your testing processes.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -531,8 +550,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Distribuzione</h3>
-                                                    <p>Condividere le app tramite Distribuzione Web, InstallShield, Integrazione continua e altre funzionalità.</p>
+                                                    <h3>Deploy</h3>
+                                                    <p>Share your apps using Web Deploy, InstallShield, and Continuous Integration, and more.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -550,8 +569,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Collaborazione</h3>
-                                                    <p>Condividere il codice usando tecnologie di controllo della versione, ad esempio Git e TFVC.</p>
+                                                    <h3>Collaborate</h3>
+                                                    <p>Share code using version control technologies such as Git and TFVC.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -569,8 +588,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Miglioramento delle prestazioni</h3>
-                                                    <p>Identificare i colli di bottiglia e ottimizzare le prestazioni del codice con gli strumenti di diagnostica.
+                                                    <h3>Improve Performance</h3>
+                                                    <p>Identify bottlenecks and optimize code performance by using diagnostic tools.
                                                     </p>
                                                 </div>
                                             </div>
@@ -589,8 +608,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Estendi</h3>
-                                                    <p>Aggiungere funzionalità personalizzate all'IDE di Visual Studio per migliorare l'esperienza di sviluppo.</p>
+                                                    <h3>Extend</h3>
+                                                    <p>Add your own functionality to the Visual Studio IDE to improve your development experience.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -598,7 +617,7 @@ ms.lasthandoff: 05/10/2017
                                 </a>
                             </li>
                             <li>
-                                <a href="/visualstudio/data-tools/accessing-data-in-visual-studio">
+                                <a href="https://go.microsoft.com/fwlink/?linkid=856607">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -608,8 +627,8 @@ ms.lasthandoff: 05/10/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Dati</h3>
-                                                    <p>Creare app per i dati connesse a qualsiasi database o servizio e ovunque, sia in locale che nel cloud. </p>
+                                                    <h3>Data</h3>
+                                                    <p>Create data apps that connect to any database or service, and anywhere&#8212;local or cloud. </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -621,7 +640,7 @@ ms.lasthandoff: 05/10/2017
                 </ul>
             </li>
             <li>
-                <a href="#languages">Linguaggi</a>
+                <a href="#languages">Languages</a>
                 <ul id="languages">
                     <li>
                         <a href="#languages1"> </a>
@@ -638,7 +657,7 @@ ms.lasthandoff: 05/10/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833062">
                                                     <h3>C#</h3>
-                                                    <p>Un moderno linguaggio di programmazione orientato a oggetti con funzionalità di programmazione per la creazione di applicazioni sulla piattaforma .NET.</p>
+                                                    <p>A modern object-oriented programming language with functional programming capabilities for building any application on the .NET platform.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -657,7 +676,7 @@ ms.lasthandoff: 05/10/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833060">
                                                     <h3>Visual Basic</h3>
-                                                    <p>Un linguaggio di programmazione orientato a oggetti, moderno e facile da imparare per la piattaforma .NET, focalizzato sulla creazione semplificata di applicazioni Windows.</p>
+                                                    <p>A modern, easy to learn, object-oriented programming language for the .NET platform, focused on easily creating Windows applications.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -676,7 +695,7 @@ ms.lasthandoff: 05/10/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833063">
                                                     <h3>Visual C++</h3>
-                                                    <p>Un linguaggio di programmazione potente e flessibile e un ambiente di sviluppo per la creazione di applicazioni per Windows, Linux, iOS e Android.</p>
+                                                    <p>A powerful and flexible programming language and development environment for creating applications for Windows, Linux, iOS, and Android.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -695,7 +714,7 @@ ms.lasthandoff: 05/10/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833067">
                                                     <h3>F#</h3>
-                                                    <p>Un linguaggio di programmazione moderno con funzionalità orientate a oggetti per la piattaforma .NET, progettato per rendere più semplice la programmazione funzionale per qualsiasi attività.</p>
+                                                    <p>A modern functional programming language with object-oriented capabilities for the .NET platform, focused on making Functional Programming easier for any task.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -714,7 +733,7 @@ ms.lasthandoff: 05/10/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833064">
                                                     <h3>JavaScript</h3>
-                                                    <p>Un linguaggio di scripting leggero e multipiattaforma, spesso usato per rendere le pagine Web più interattive.</p>
+                                                    <p>A lightweight, cross-platform, scripting language often used to help make web pages more interactive.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -733,7 +752,7 @@ ms.lasthandoff: 05/10/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833066">
                                                     <h3>TypeScript</h3>
-                                                    <p>Un superset di JavaScript che viene compilato in JavaScript semplice e consente di creare codice più scalabile.</p>
+                                                    <p>A superset of JavaScript that compiles to plain JavaScript and enables you to create more scalable code.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -752,7 +771,7 @@ ms.lasthandoff: 05/10/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833068">
                                                     <h3>Python</h3>
-                                                    <p>Un linguaggio di programmazione di alto livello, dinamico e orientato a oggetti, spesso usato per lo sviluppo rapido di applicazioni.</p>
+                                                    <p>A dynamic object-oriented, high-level programming language often used for rapid application development.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -771,7 +790,7 @@ ms.lasthandoff: 05/10/2017
                                             <div class="cardText">
                                                 <a href="https://go.microsoft.com/fwlink/?linkid=833070">
                                                     <h3>R</h3>
-                                                    <p>Un linguaggio di programmazione estendibile, generalmente usato per l'elaborazione statistica e la grafica.</p>
+                                                    <p>An extensible programming language typically used for statistical computing and graphics.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -785,7 +804,7 @@ ms.lasthandoff: 05/10/2017
         </ul>
     </div>
     <div class="container centered pageFooter">
-        <h2>Resta sempre in contatto con noi</h2>
+        <h2>Keep in touch with us</h2>
         <ul class="links">
            <li>
                 <a href="https://go.microsoft.com/fwlink/?linkid=833100"> Blog </a>
@@ -797,7 +816,7 @@ ms.lasthandoff: 05/10/2017
                 <a href="https://go.microsoft.com/fwlink/?linkid=833103"> Stack Overflow </a>
             </li>
             <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833104"> Comunicazione di problemi </a>
+                <a href="https://go.microsoft.com/fwlink/?linkid=833104"> Issue Reporting </a>
             </li>
             <li>
                 <a href="https://go.microsoft.com/fwlink/?linkid=833105"> User Voice </a>

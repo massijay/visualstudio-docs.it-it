@@ -82,12 +82,10 @@ ms.contentlocale: it-it
 ms.lasthandoff: 05/24/2017
 
 ---
-# Gestire strumenti esterni
-<a id="manage-external-tools" class="xliff"></a>
+# <a name="manage-external-tools"></a>Gestire strumenti esterni
 È possibile chiamare strumenti esterni direttamente in Visual Studio usando il menu **Strumenti**. Alcuni strumenti predefiniti sono disponibili nel menu **Strumenti**, ma è possibile aggiungere altri file eseguibili personalizzati.  
 
-## Strumenti disponibili nel menu Strumenti di Visual Studio
-<a id="tools-available-on-the-visual-studio-tools-menu" class="xliff"></a>
+## <a name="tools-available-on-the-visual-studio-tools-menu"></a>Strumenti disponibili nel menu Strumenti di Visual Studio
  Il menu **Strumenti** include alcuni strumenti predefiniti, ad esempio:
 
 *  **Estensioni e aggiornamenti** per la [gestione delle estensioni di Visual Studio](finding-and-using-visual-studio-extensions.md)
@@ -96,8 +94,7 @@ ms.lasthandoff: 05/24/2017
 *  **Personalizza** per la [personalizzazione di menu e barre degli strumenti](how-to-customize-menus-and-toolbars-in-visual-studio.md)
 *  **Opzioni** per l'[impostazione di un'ampia gamma di opzioni per l'IDE di Visual Studio e altri strumenti](reference/options-dialog-box-visual-studio.md)
 
-## Aggiungere nuovi strumenti al menu Strumenti
-<a id="add-new-tools-to-the-tools-menu" class="xliff"></a> 
+## <a name="add-new-tools-to-the-tools-menu"></a>Aggiungere nuovi strumenti al menu Strumenti 
  È possibile aggiungere uno strumento esterno al menu **Strumenti**. Aprire la finestra di dialogo **Strumenti esterni**, fare clic su **Aggiungi** e quindi specificare le informazioni. L'immissione seguente consente ad esempio di aprire la cartella dove si trova il file attualmente aperto in Visual Studio:  
   
 1.  Titolo: *Apri percorso file*
@@ -130,7 +127,6 @@ ms.lasthandoff: 05/24/2017
 |Directory soluzione|$(SolutionDir)|Directory della soluzione corrente (unità + percorso).|  
 |Nome file della soluzione|$(SolutionFileName)|Nome file della soluzione corrente (unità + percorso + nome file).|  
 
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Strumenti per la compilazione in C/C++](/cpp/build/reference/c-cpp-build-tools)
 

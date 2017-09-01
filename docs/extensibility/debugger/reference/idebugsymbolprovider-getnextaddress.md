@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetNextAddress | Documenti di Microsoft
+title: IDebugSymbolProvider::GetNextAddress | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 7f16f03e7e61fb059fdea10986ca76cf26b77590
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 61f05a9cdde32717d6151a15cf7f8d2176c7ed60
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugsymbolprovidergetnextaddress"></a>IDebugSymbolProvider::GetNextAddress
-Ottiene l'indirizzo di debug che segue un indirizzo di debug specificato in un metodo.  
+Gets the debug address that follows a given debug address in a method.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetNextAddress(   
    IDebugAddress*  pAddress,  
    BOOL            fStatementOnly,  
@@ -49,7 +50,7 @@ HRESULT GetNextAddress(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetNextAddress(   
    IDebugAddress     pAddress,  
    bool              fStatementOnly,  
@@ -57,18 +58,18 @@ int GetNextAddress(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `pAddress`  
- [in] Dato l'indirizzo di debug.  
+ [in] Given debug address.  
   
  `fStatementOnly`  
- [in] Se TRUE, limita gli indirizzi di debug per una singola istruzione.  
+ [in] If TRUE, limits the debug addresses to a single statement.  
   
  `ppAddress`  
- [out] Restituisce il successivo indirizzo di debug.  
+ [out] Returns the next debug address.  
   
-## <a name="return-value"></a>Valore restituito  
- Restituisce un oggetto valido `HRESULT`, in genere S_OK.  
+## <a name="return-value"></a>Return Value  
+ Returns a valid `HRESULT`, typically S_OK.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

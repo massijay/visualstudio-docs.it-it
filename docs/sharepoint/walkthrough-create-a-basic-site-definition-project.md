@@ -1,102 +1,107 @@
 ---
-title: "Procedura dettagliata: Creare un progetto di definizione di sito di base"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "sviluppo per SharePoint in Visual Studio, definizioni di sito"
-  - "definizioni di sito [sviluppo per SharePoint in Visual Studio]"
+title: 'Walkthrough: Create a Basic Site Definition Project | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, site definitions
+- site definitions [SharePoint development in Visual Studio]
 ms.assetid: b0df5b0e-5fa0-43d8-a339-6d92f1276764
 caps.latest.revision: 35
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 34
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: babd72dd748f07020a4480d0e97f7d449479e541
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Procedura dettagliata: Creare un progetto di definizione di sito di base
-  In questa procedura dettagliata viene illustrato come creare una definizione di sito di base in cui è contenuta una web part visiva e alcuni relativi controlli.  Per garantire una maggior chiarezza, la web part visiva creata dispone solo di alcuni controlli.  Tuttavia, è possibile creare definizioni di sito di SharePoint più sofisticate in cui sono incluse più funzionalità.  
+# <a name="walkthrough-create-a-basic-site-definition-project"></a>Walkthrough: Create a Basic Site Definition Project
+  This walkthrough shows you how to create a basic site definition that contains a visual Web part with some controls on it. For the sake of clarity, the visual Web part that you create has only a few controls. However, you can create more sophisticated SharePoint site definitions that include more functionality.  
   
- In questa procedura dettagliata vengono illustrate le attività seguenti:  
+ This walkthrough demonstrates the following tasks:  
   
--   Creazione di una definizione di sito tramite il modello di progetto di [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+-   Creating a site definition by using the [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] project template.  
   
--   Creazione di un sito di SharePoint tramite l'utilizzo di una definizione di sito in SharePoint.  
+-   Creating a SharePoint site by using a site definition in SharePoint.  
   
--   Aggiunta di una web part visiva alla soluzione.  
+-   Adding a visual Web part to the solution.  
   
--   Personalizzazione della pagina del sito default.aspx tramite l'aggiunta della nuova web part visiva.  
+-   Customizing the site's default.aspx page by adding the new visual Web part to it.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## Prerequisiti  
- Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   Edizioni supportate di Microsoft Windows e SharePoint.  Per ulteriori informazioni, vedere Requisiti per lo sviluppo di soluzioni SharePoint.  
+-   Supported editions of Microsoft Windows and SharePoint. For more information, see Requirements for Developing SharePoint Solutions.  
   
 -   Visual Studio.  
   
-## Creazione di una soluzione di definizione di sito  
- Creare il progetto di definizione di sito in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+## <a name="creating-a-site-definition-solution"></a>Creating a Site Definition Solution  
+ First, create the site definition project in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-#### Per creare un progetto di definizione di sito  
+#### <a name="to-create-a-site-definition-project"></a>To create a site definition project  
   
-1.  Sulla barra dei menu scegliere **File**, **Nuovo**, **Progetto**.  Se l'IDE è configurato per utilizzare le impostazioni di sviluppo di Visual Basic, nella barra dei menu, scegliere **File**, **Nuovo progetto**.  
+1.  On the menu bar, choose **File**, **New**, **Project**. If your IDE is set to use Visual Basic development settings, on the menu bar, choose **File**, **New Project**.  
   
-     Verrà visualizzata la finestra di dialogo **Nuovo progetto**.  
+     The **New Project** dialog box appears.  
   
-2.  Espandere il nodo **Visual C\#** o il nodo **Visual Basic**, espandere il nodo **SharePoint** quindi scegliere il nodo **2010**.  
+2.  Expand the **Visual C#** node or the **Visual Basic** node, expand the **SharePoint** node, and then choose the **2010** node.  
   
-3.  Nell'elenco **Modelli**, scegliere il modello **Progetto SharePoint 2010**.  
+3.  In the **Templates** list, choose the **SharePoint 2010 Project** template.  
   
-4.  Nella casella **Nome** immettere TestSiteDef, e quindi selezionare il pulsante **ApproveTimeOff**.  
+4.  In the **Name** box, enter **TestSiteDef**, and then choose the **OK** button.  
   
-     Viene visualizzata la **Personalizzazione guidata SharePoint**.  
+     The **SharePoint Customization Wizard** appears.  
   
-5.  Nella pagina **Specificare il sito e il livello di sicurezza per il debug** immettere l'URL per il sito del server SharePoint in cui si desidera eseguire il debug della definizione di sito o utilizzare il percorso predefinito \(http:\/\/*System Name*\/\).  
+5.  On the **Specify the site and security level for debugging** page, enter the URL for the SharePoint site where you want to debug the site definition, or use the default location (http://*System Name*/).  
   
-6.  Nella sezione **Selezionare il livello di attendibilità per la soluzione SharePoint** scegliere il pulsante di opzione **Distribuisci come soluzione farm**.  
+6.  In the **What is the trust level for this SharePoint solution?** section, choose the **Deploy as a farm solution** option button.  
   
-     Tutti i progetti di definizione di sito devono essere distribuiti come soluzioni della farm.  Per ulteriori informazioni sulle differenze tra le soluzioni create mediante sandbox e quelle della farm, vedere [Considerazioni sulle soluzioni create mediante sandbox](../sharepoint/sandboxed-solution-considerations.md).  
+     All site definition projects must be deployed as farm solutions. For more information about sandboxed solutions versus farm solutions, see [Sandboxed Solution Considerations](../sharepoint/sandboxed-solution-considerations.md).  
   
-7.  Fare clic sul pulsante **Fine**.  
+7.  Choose the **Finish** button.  
   
-     Il progetto viene visualizzato in **Esplora soluzioni**.  
+     The project appears in **Solution Explorer**.  
   
-8.  In **Esplora soluzioni** scegliere il nodo del progetto, quindi, nella barra dei menu scegliere **Progetto**, **Aggiungi nuovo elemento**.  
+8.  In **Solution Explorer**, choose the project node, and then, on the menu bar, choose **Project**, **Add New Item**.  
   
-9. Sotto **Visual C\#** o **Visual Basic**, espandere il nodo **SharePoint**, quindi scegliere il nodo **2010**.  
+9. Under either **Visual C#** or **Visual Basic**, expand the **SharePoint** node, and then choose the **2010** node.  
   
-10. Nel riquadro **Modelli**, scegliere il modello **Definizione di sito**, lasciare **Nome** come **SiteDefinition1** e quindi scegliere il pulsante **Aggiungi**.  
+10. In the **Templates** pane, choose the **Site Definition** template, leave the **Name** as **SiteDefinition1**, and then choose the **Add** button.  
   
-## Creare una web part visiva  
- Successivamente, creare una web part per visualizzare nella pagina principale della definizione di sito.  
+## <a name="create-a-visual-web-part"></a>Create a Visual Web Part  
+ Next, create a visual Web part to appear on the site definition's main page.  
   
-#### Per creare una web part visiva  
+#### <a name="to-create-a-visual-web-part"></a>To create a visual Web part  
   
-1.  In **Esplora soluzioni**, selezionare il pulsante **Mostra tutti i file**.  
+1.  In **Solution Explorer**, choose the **Show All Files** button.  
   
-2.  Scegliere il nodo del progetto **SiteDefinition1**, quindi sulla barra dei menu, scegliere **Progetto**, **Aggiungi nuovo elemento**.  
+2.  Choose the **SiteDefinition1** project node, and then, on the menu bar, choose **Project**, **Add New Item**.  
   
-     Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.  
+     The **Add New Item** dialog box appears.  
   
-3.  Espandere il nodo **Visual C\#** o il nodo **Visual Basic**, espandere il nodo **SharePoint** quindi scegliere il nodo **2010**.  
+3.  Expand the **Visual C#** node or the **Visual Basic** node, expand the **SharePoint** node, and then choose the **2010** node.  
   
-4.  Nell'elenco di modelli, scegliere il modello **Web part visiva**, mantenere il nome predefinito VisualWebPart1 quindi scegliere il pulsante **Aggiungi**.  
+4.  In the list of templates, choose the **Visual Web Part** template, keep the default name VisualWebPart1, and then choose the **Add** button.  
   
-     Il file di VisualWebPart1.ascx viene aperto.  
+     The VisualWebPart1.ascx file opens.  
   
-5.  Nella parte inferiore di VisualWebPart1UserControl.ascx, aggiungere il markup seguente per fornire tre controlli al form: una casella di testo, un pulsante e un'etichetta.  
+5.  At the bottom of VisualWebPart1.ascx, add the following markup to add three controls to the form: a text box, a button, and a label:  
   
     ```  
     <table>  
@@ -114,27 +119,26 @@ caps.handback.revision: 34
     </table>  
     ```  
   
-6.  Sotto VisualWebPart1.ascx, aprire il file VisualWebPart1.ascx.cs \(per [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)]\) o VisualWebPart1.ascx.vb \(per [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]\), quindi aggiungere il seguente codice:  
+6.  Under VisualWebPart1.ascx, open the VisualWebPart1.ascx.cs file (for [!INCLUDE[csprcs](../sharepoint/includes/csprcs-md.md)]) or VisualWebPart1.ascx.vb (for [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]) , and then add the following code:  
   
-     [!code-csharp[SP_SimpleSiteDef#1](../snippets/csharp/VS_Snippets_OfficeSP/sp_simplesitedef/cs/testsitedef/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.cs#1)]
-     [!code-vb[SP_SimpleSiteDef#1](../snippets/visualbasic/VS_Snippets_OfficeSP/sp_simplesitedef/vb/testsitedefvb/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.vb#1)]  
+     [!code-vb[SP_SimpleSiteDef#1](../sharepoint/codesnippet/VisualBasic/testsitedefvb/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.vb#1)]  [!code-csharp[SP_SimpleSiteDef#1](../sharepoint/codesnippet/CSharp/testsitedef/sitedefinition/visualwebpart1/visualwebpart1usercontrol.ascx.cs#1)]  
   
-     Questo codice consente di aggiungere funzionalità per il clic sul pulsante della web part.  
+     This code adds functionality for the web part's button click.  
   
-## Aggiungere la web part visiva alla pagina ASPX predefinita  
- Aggiungere la web part visiva alla pagina ASPX predefinita della definizione di sito.  
+## <a name="add-the-visual-web-part-to-the-default-aspx-page"></a>Add the Visual Web Part to the Default ASPX Page  
+ Next, add the visual Web part to the site definition's default ASPX page.  
   
-#### Per aggiungere una web part visiva alla pagina ASPX predefinita  
+#### <a name="to-add-a-visual-web-part-to-the-default-aspx-page"></a>To add a visual Web part to the default ASPX page  
   
-1.  Aprire la pagina default.aspx e aggiungere la linea seguente sotto il tag `WebPartPages`:  
+1.  Open the default.aspx page, and then add the following line under the `WebPartPages` tag:  
   
     ```  
     <%@ Register Tagprefix="MyWebPartControls" Namespace="TestSiteDef.VisualWebPart1" Assembly="$SharePoint.Project.AssemblyFullName$" %>  
     ```  
   
-     Questa riga consente di associare il nome MyWebPartControls alla web part e al codice.  Il parametro *Namespace* corrisponde allo spazio dei nomi utilizzato nel file di codice VisualWebPart1.ascx.  
+     This line associates the name MyWebPartControls with the Web part and its code. The *Namespace* parameter matches the namespace that's used in the VisualWebPart1.ascx code file.  
   
-2.  Dopo l'elemento `</asp:Content>`, sostituire tutta la sezione `ContentPlaceHolderId="PlaceHolderMain"` e il relativo contenuto con il seguente codice:  
+2.  After the `</asp:Content>` element, replace the entire `ContentPlaceHolderId="PlaceHolderMain"` section and its contents with the following code:  
   
     ```  
     <asp:Content ID="Content1" ContentPlaceHolderId="PlaceHolderMain" runat="server">  
@@ -142,51 +146,51 @@ caps.handback.revision: 34
     </asp:Content>  
     ```  
   
-     Questo codice consente di creare un riferimento alla web part visiva creata precedentemente.  
+     This code creates a reference to the visual Web part that you created earlier.  
   
-3.  In **Esplora soluzioni** aprire il menu di scelta rapida del nodo **SiteDefinition1**, quindi scegliere **Imposta elemento di avvio**.  
+3.  In **Solution Explorer**, open the shortcut menu for the **SiteDefinition1** node, and then choose **Set as Startup Item**.  
   
-## Distribuire ed eseguire la soluzione di definizione di sito  
- Successivamente, distribuire il progetto in SharePoint ed eseguire il progetto.  
+## <a name="deploy-and-run-the-site-definition-solution"></a>Deploy and Run the Site Definition Solution  
+ Next, deploy the project to SharePoint, and then run the project.  
   
-#### Per distribuire ed eseguire la definizione di sito  
+#### <a name="to-deploy-and-run-the-site-definition"></a>To deploy and run the site definition  
   
--   Nella barra dei menu ,scegliere **Compila**, **Distribuisci TestSiteDef**.  
+-   On the menu bar, choose **Build**, **Deploy TestSiteDef**.  
   
--   Premere F5.  
+-   Choose the F5 key.  
   
-     Visual Studio consente di compilare il codice, aggiungere le relative funzionalità, assemblare tutti i file in un file di soluzione SharePoint \(WSP\) e distribuire i file WSP per il server SharePoint.  Successivamente, tramite SharePoint, vengono installati i file e attivate le funzionalità.  
+     Visual Studio compiles the code, adds its features, packages all of the files into a SharePoint solution (WSP) file, and deploys the WSP file to SharePoint Server. SharePoint then installs the files and then activates the features.  
   
-## Creare un sito basato sulla definizione di sito  
- Creare un sito tramite la nuova definizione di sito.  
+## <a name="create-a-site-based-on-the-site-definition"></a>Create a Site Based on the Site Definition  
+ Next, create a site by using the new site definition.  
   
-#### Per creare un sito tramite la definizione di sito  
+#### <a name="to-create-a-site-by-using-the-site-definition"></a>To create a site by using the site definition  
   
-1.  Sul sito di SharePoint viene visualizzata la pagina Nuovo sito di SharePoint.  
+1.  On the SharePoint site, the New SharePoint Site page appears.  
   
-2.  Nella sezione **Titolo e descrizione** immettere Nuovo sito per il titolo e una descrizione del sito.  
+2.  In the **Title and Description** section, enter **My New Site** for the title and a description of the site.  
   
-3.  Nella sezione **Indirizzo sito Web** immettere nuovosito nella casella **Nome URL**.  
+3.  In the **Web Site Address** section, enter **mynewsite** in the **URL name** box.  
   
-4.  Nella sezione **Modello**, scegliere la scheda **Personalizzazioni di SharePoint**.  
+4.  In the **Template** section, choose the **SharePoint Customizations** tab.  
   
-5.  Nell'elenco **Seleziona un modello**, scegliere **SiteDefinition1**.  
+5.  In the **Select a template** list, choose **SiteDefinition1**.  
   
-6.  Mantenere i valori predefiniti delle altre impostazioni, selezionare il pulsante **Crea**.  
+6.  Leave the other settings at their default values, and then choose the **Create** button.  
   
-     Viene visualizzato il nuovo sito.  
+     The new site appears.  
   
-## Testare il nuovo sito  
- Testare il nuovo sito per verificare il corretto funzionamento.  
+## <a name="test-the-new-site"></a>Test the New Site  
+ Next, test the new site to verify whether it works correctly.  
   
-#### Per testare il nuovo sito  
+#### <a name="to-test-the-new-site"></a>To test the new site  
   
--   Nella pagina predefinita ASPX, inserire un testo e selezionare il pulsante **Modifica testo dell'etichetta** accanto alla casella di testo.  
+-   On the default ASPX page, enter some text, and then choose the **Change Label Text** button next to the text box.  
   
-     Il testo viene visualizzato nell'etichetta sul lato destro del pulsante.  
+     The text appears in the label on the right side of the button.  
   
-## Vedere anche  
- [Procedura: creare un ricevitore di eventi](../sharepoint/how-to-create-an-event-receiver.md)   
+## <a name="see-also"></a>See Also  
+ [How to: Create an Event Receiver](../sharepoint/how-to-create-an-event-receiver.md)   
  [Developing SharePoint Solutions](../sharepoint/developing-sharepoint-solutions.md)  
   
   

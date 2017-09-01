@@ -1,26 +1,42 @@
 ---
-title: "CA2138: I metodi Transparent non devono chiamare i metodi con l&#39;attributo SuppressUnmanagedCodeSecurity | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2138"
+title: 'CA2138: Transparent methods must not call methods with the SuppressUnmanagedCodeSecurity attribute | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2138
 ms.assetid: a14c4d32-f079-4f3a-956c-a1657cde0f66
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2138: I metodi Transparent non devono chiamare i metodi con l&#39;attributo SuppressUnmanagedCodeSecurity
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: b8c3d1b49e2fbb91fbf14da3bc8ae086c7f22e81
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute"></a>CA2138: Transparent methods must not call methods with the SuppressUnmanagedCodeSecurity attribute
 |||  
 |-|-|  
 |TypeName|TransparentMethodsMustNotCallSuppressUnmanagedCodeSecurityMethods|  
@@ -28,19 +44,19 @@ manager: "wpickett"
 |Category|Microsoft.Security|  
 |Breaking Change|Breaking|  
   
-## Causa  
- Un metodo SecurityTransparent chiama un metodo contrassegnato dall'attributo <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>.  
+## <a name="cause"></a>Cause  
+ A security transparent method calls a method that is marked with the <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> attribute.  
   
-## Descrizione della regola  
- Questa regola funziona su qualsiasi metodo trasparente che chiama direttamente in codice nativo, ad esempio tramite chiamata P\/Invoke \(platform invoke\).  P\/Invoke e metodi di interoperabilità COM contrassegnati dall'attributo <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> risultano in un LinkDemand eseguito sul metodo chiamante.  Poiché il codice SecurityTransparent non può soddisfare LinkDemands, il codice non può chiamare inoltre metodi contrassegnati dall'attributo SuppressUnmanagedCodeSecurity o metodi di classe contrassegnati dall'attributo SuppressUnmanagedCodeSecurity.  Il metodo non riuscirà o la richiesta sarà convertita in una richiesta completa.  
+## <a name="rule-description"></a>Rule Description  
+ This rule fires on any transparent method that calls directly into native code, for example, by using a via a P/Invoke (platform invoke) call. P/Invoke and COM interop methods that are marked with the <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> attribute result in a LinkDemand being done against the calling method. Because security transparent code cannot satisfy LinkDemands, the code also cannot call methods that are marked with the SuppressUnmanagedCodeSecurity attribute, or methods of class that is marked with SuppressUnmanagedCodeSecurity attribute. The method will fail, or the demand will be converted to a full demand.  
   
- Violazioni di questa regola conducono a <xref:System.MethodAccessException> nel modello SecurityTransparent di Livello 2 e ad una richiesta completa per <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> nel modello della trasparenza di livello 1.  
+ Violations of this rule lead to a <xref:System.MethodAccessException> in the Level 2 security transparency model, and a full demand for <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> in the Level 1 transparency model.  
   
-## Come correggere le violazioni  
- Per correggere una violazione di questa regola, rimuovere l'attributo <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> e contrassegnare il metodo con l'attributo <xref:System.Security.SecurityCriticalAttribute> o <xref:System.Security.SecuritySafeCriticalAttribute>.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, remove the <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> attribute and mark the method with the <xref:System.Security.SecurityCriticalAttribute> or the <xref:System.Security.SecuritySafeCriticalAttribute> attribute.  
   
-## Esclusione di avvisi  
- Non escludere un avviso da questa regola.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## Esempio  
- [!code-cs[FxCop.Security.CA2138.TransparentMethodsMustNotCallSuppressUnmanagedCodeSecurityMethods#1](../code-quality/codesnippet/CSharp/ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute_1.cs)]
+## <a name="example"></a>Example  
+ [!code-csharp[FxCop.Security.CA2138.TransparentMethodsMustNotCallSuppressUnmanagedCodeSecurityMethods#1](../code-quality/codesnippet/CSharp/ca2138-transparent-methods-must-not-call-methods-with-the-suppressunmanagedcodesecurity-attribute_1.cs)]

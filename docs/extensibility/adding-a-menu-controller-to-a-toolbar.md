@@ -1,48 +1,65 @@
 ---
-title: "Aggiunta di un Controller di Menu per una barra degli strumenti | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "barre degli strumenti [Visual Studio], aggiunta di controller di menu"
-  - "menu, aggiunta di controller di menu in barre degli strumenti"
-  - "controller di menu, aggiunta di barre degli strumenti"
+title: Adding a Menu Controller to a Toolbar | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- toolbars [Visual Studio], adding menu controllers
+- menus, adding menu controllers to toolbars
+- menu controllers, adding to toolbars
 ms.assetid: 6af9b0b4-037f-404c-bb40-aaa1970768ea
 caps.latest.revision: 38
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 38
----
-# Aggiunta di un Controller di Menu per una barra degli strumenti
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 998583202afcbf9c99f87d6bbdfcbb5747718bfa
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Questa procedura dettagliata si basa sul [Aggiunta di una barra degli strumenti a una finestra degli strumenti](../extensibility/adding-a-toolbar-to-a-tool-window.md) procedura dettagliata e viene illustrato come aggiungere un controller di menu per la finestra degli strumenti. I passaggi illustrati di seguito è possibile applicare anche alla barra degli strumenti creata nella [Aggiunta di una barra degli strumenti](../extensibility/adding-a-toolbar.md) procedura dettagliata.  
+---
+# <a name="adding-a-menu-controller-to-a-toolbar"></a>Adding a Menu Controller to a Toolbar
+This walkthrough builds on the [Adding a Toolbar to a Tool Window](../extensibility/adding-a-toolbar-to-a-tool-window.md) walkthrough and shows how to add a menu controller to the tool window toolbar. The steps shown here also can be applied to the toolbar that is created in the [Adding a Toolbar](../extensibility/adding-a-toolbar.md) walkthrough.  
   
- Un controller di menu è un controllo di divisione. Il lato sinistro del controller di menu viene visualizzato il comando utilizzato per ultimo e può essere eseguito facendovi clic sopra. La parte destra del controller di menu è una freccia che, quando si fa clic, viene visualizzato l'elenco di comandi aggiuntivi. Quando si sceglie un comando nell'elenco, l'esecuzione del comando, e sostituisce il comando sul lato sinistro del controller di menu. In questo modo, il controller menu opera come un pulsante di comando che mostra sempre il comando utilizzato per ultimo da un elenco.  
+ A menu controller is a split control. The left side of the menu controller shows the last-used command, and it can be run by clicking it. The right side of the menu controller is an arrow that, when clicked, opens a list of additional commands. When you click a command on the list, the command runs, and it replaces the command on the left side of the menu controller. In this way, the menu controller operates like a command button that always shows the last-used command from a list.  
   
- Controller di menu possono essere visualizzati nei menu ma vengono spesso usati nelle barre degli strumenti.  
+ Menu controllers can appear on menus but they are most often used on toolbars.  
   
-## Prerequisiti  
- A partire da Visual Studio 2015, non installare Visual Studio SDK dall'area download. È incluso come funzionalità facoltativa nel programma di installazione di Visual Studio. È inoltre possibile installare il SDK di Visual Studio in un secondo momento. Per altre informazioni, vedere [L'installazione di Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## Creazione di un Controller di Menu  
+## <a name="creating-a-menu-controller"></a>Creating a Menu Controller  
   
-#### Per creare un controller di menu  
+#### <a name="to-create-a-menu-controller"></a>To create a menu controller  
   
-1.  Seguire le procedure descritte in [Aggiunta di una barra degli strumenti a una finestra degli strumenti](../extensibility/adding-a-toolbar-to-a-tool-window.md) per creare una finestra degli strumenti con una barra degli strumenti.  
+1.  Follow the procedures described in [Adding a Toolbar to a Tool Window](../extensibility/adding-a-toolbar-to-a-tool-window.md) to create a tool window that has a toolbar.  
   
-2.  In TWTestCommandPackage.vsct, passare alla sezione simboli. Nell'elemento GuidSymbol denominato **guidTWTestCommandPackageCmdSet**, dichiarare il controller di menu, il gruppo di controller di menu e tre voci di menu.  
+2.  In TWTestCommandPackage.vsct, go to the Symbols section. In the GuidSymbol element named **guidTWTestCommandPackageCmdSet**, declare your menu controller, menu controller group, and three menu items.  
   
     ```xml  
     <IDSymbol name="TestMenuController" value="0x1300" /><IDSymbol name="TestMenuControllerGroup" value="0x1060" /><IDSymbol name="cmdidMCItem1" value="0x0130" /><IDSymbol name="cmdidMCItem2" value="0x0131" /><IDSymbol name="cmdidMCItem3" value="0x0132" />  
     ```  
   
-3.  Nella sezione Menus, dopo l'ultima voce di menu, definire il controller di menu come menu.  
+3.  In the Menus section, after the last menu entry, define the menu controller as a menu.  
   
     ```xml  
     <Menu guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" priority="0x0100" type="MenuController">  
@@ -57,9 +74,9 @@ Questa procedura dettagliata si basa sul [Aggiunta di una barra degli strumenti 
     </Menu>  
     ```  
   
-     Il `TextChanges` e `TextIsAnchorCommand` flag devono essere inclusi per consentire al controller di menu in modo da riflettere l'ultimo comando selezionato.  
+     The `TextChanges` and `TextIsAnchorCommand` flags must be included to enable the menu controller to reflect the last selected command.  
   
-4.  I gruppi di sezione, dopo l'ultima voce di gruppo, aggiungere il gruppo di controller di menu.  
+4.  In the Groups section, after the last group entry, add the menu controller group.  
   
     ```xml  
     <Group guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" priority="0x000">  
@@ -67,9 +84,9 @@ Questa procedura dettagliata si basa sul [Aggiunta di una barra degli strumenti 
     </Group>  
     ```  
   
-     Impostando il controller di menu come elemento padre, tutti i comandi in modalità di questo gruppo verranno visualizzato nel controller di menu. Il `priority` attributo viene omesso, che imposta il valore predefinito pari a 0, perché sarà l'unico gruppo nel controller di menu.  
+     By setting the menu controller as the parent, any commands placed in this group will appear in the menu controller. The `priority` attribute is omitted, which sets it to the default value of 0, because it will be the only group on the menu controller.  
   
-5.  Nella sezione pulsanti, dopo l'ultima voce pulsante, aggiungere un elemento Button per ognuna delle voci di menu.  
+5.  In the Buttons section, after the last button entry, add a Button element for each of your menu items.  
   
     ```xml  
     <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem1" priority="0x0000" type="Button">  
@@ -101,35 +118,35 @@ Questa procedura dettagliata si basa sul [Aggiunta di una barra degli strumenti 
     </Button>  
     ```  
   
-6.  A questo punto, è possibile esaminare il controller di menu. Compilare il progetto e avviare il debug. Dovrebbe essere l'istanza sperimentale.  
+6.  At this point, you can look at the menu controller. Build the project and start debugging. You should see the experimental instance.  
   
-    1.  Nel **Vista o altre finestre** dal menu **degli strumenti di Test**.  
+    1.  On the **View / Other Windows** menu, open **Test ToolWindow**.  
   
-    2.  Il controller di menu viene visualizzato sulla barra degli strumenti nella finestra degli strumenti.  
+    2.  The menu controller appears on the toolbar in the tool window.  
   
-    3.  Fare clic sulla freccia a destra del controller di menu per visualizzare i tre comandi possibili.  
+    3.  Click the arrow on the right-hand side of the menu controller to see the three possible commands.  
   
-     Si noti che quando si sceglie un comando, il titolo del controller di menu cambia per visualizzare il comando. Nella sezione successiva, si aggiungerà il codice per attivare i comandi seguenti.  
+     Notice that when you click a command, the title of the menu controller changes to display that command. In the next section, we will add the code to activate these commands.  
   
-## Implementazione dei comandi di Menu Controller  
+## <a name="implementing-the-menu-controller-commands"></a>Implementing the Menu Controller Commands  
   
-1.  In TWTestCommandPackageGuids.cs, aggiungere gli ID di comando per le tre voci di menu dopo l'ID di comando esistenti.  
+1.  In TWTestCommandPackageGuids.cs, add command IDs for your three menu items after the existing command IDs.  
   
-    ```c#  
-    public const int cmdidMCItem1 = 0x130;  
-    public const int cmdidMCItem2 = 0x131;  
-    public const int cmdidMCItem3 = 0x132;  
+    ```csharp  
+    public const int cmdidMCItem1 = 0x130;  
+    public const int cmdidMCItem2 = 0x131;  
+    public const int cmdidMCItem3 = 0x132;  
     ```  
   
-2.  In TWTestCommand.cs, aggiungere il codice seguente all'inizio della classe TWTestCommand.  
+2.  In TWTestCommand.cs, add the following code at the top of the TWTestCommand class.  
   
-    ```c#  
-    private int currentMCCommand; // The currently selected menu controller command  
+    ```csharp  
+    private int currentMCCommand; // The currently selected menu controller command  
     ```  
   
-3.  Nel costruttore TWTestCommand, dopo l'ultima chiamata per il `AddCommand` \(metodo\), aggiungere codice per inviare gli eventi per ogni comando tramite i gestori stesso.  
+3.  In the TWTestCommand constructor, after the last call to the `AddCommand` method, add code to route the events for each command through the same handlers.  
   
-    ```c#  
+    ```csharp  
     for (int i = TWTestCommandPackageGuids.cmdidMCItem1; i <=  
         TWTestCommandPackageGuids.cmdidMCItem3; i++)  
     {  
@@ -139,7 +156,7 @@ Questa procedura dettagliata si basa sul [Aggiunta di una barra degli strumenti 
           EventHandler(OnMCItemClicked), cmdID);  
         mc.BeforeQueryStatus += new EventHandler(OnMCItemQueryStatus);  
         commandService.AddCommand(mc);  
-        // The first item is, by default, checked.   
+        // The first item is, by default, checked.   
         if (TWTestCommandPackageGuids.cmdidMCItem1 == i)  
         {  
             mc.Checked = true;  
@@ -148,10 +165,10 @@ Questa procedura dettagliata si basa sul [Aggiunta di una barra degli strumenti 
     }  
     ```  
   
-4.  Aggiungere un gestore eventi alla classe TWTestCommand per contrassegnare il comando selezionato come selezionato.  
+4.  Add an event handler to the TWTestCommand class to mark the selected command as checked.  
   
-    ```c#  
-    private void OnMCItemQueryStatus(object sender, EventArgs e)  
+    ```csharp  
+    private void OnMCItemQueryStatus(object sender, EventArgs e)  
     {  
         OleMenuCommand mc = sender as OleMenuCommand;  
         if (null != mc)  
@@ -161,10 +178,10 @@ Questa procedura dettagliata si basa sul [Aggiunta di una barra degli strumenti 
     }  
     ```  
   
-5.  Aggiungere un gestore eventi che visualizza una finestra di messaggio quando l'utente seleziona un comando nel controller di menu:  
+5.  Add an event handler that displays a MessageBox when the user selects a command on the menu controller:  
   
-    ```c#  
-    private void OnMCItemClicked(object sender, EventArgs e)  
+    ```csharp  
+    private void OnMCItemClicked(object sender, EventArgs e)  
     {  
         OleMenuCommand mc = sender as OleMenuCommand;  
         if (null != mc)  
@@ -211,20 +228,20 @@ Questa procedura dettagliata si basa sul [Aggiunta di una barra degli strumenti 
     }  
     ```  
   
-## Il Menu Controller di test  
+## <a name="testing-the-menu-controller"></a>Testing the Menu Controller  
   
-1.  Compilare il progetto e avviare il debug. Dovrebbe essere l'istanza sperimentale.  
+1.  Build the project and start debugging. You should see the experimental instance.  
   
-2.  Aprire il **degli strumenti di Test** sul **visualizzazione \/ altre finestre** menu.  
+2.  Open the **Test ToolWindow** on the **View / Other Windows** menu.  
   
-     Il controller di menu viene visualizzato nella barra degli strumenti nella finestra degli strumenti e Visualizza **MC Item 1**.  
+     The menu controller appears in the toolbar in the tool window and displays **MC Item 1**.  
   
-3.  Fare clic sul pulsante di controller dal menu a sinistra della freccia.  
+3.  Click the menu controller button to the left of the arrow.  
   
-     Dovrebbe essere tre elementi, il primo dei quali è selezionato e include una casella di evidenziazione intorno relativa icona. Fare clic su **MC elemento 3**.  
+     You should see three items, the first of which is selected and has a highlight box around its icon. Click **MC Item 3**.  
   
-     Viene visualizzata una finestra di dialogo con messaggio **selezionato controller Menu Item 3**. Si noti che il messaggio corrisponde al testo del pulsante controller menu. Visualizza il pulsante di menu controller **MC elemento 3**.  
+     A dialog box appears with the message **You selected Menu controller Item 3**. Notice that the message corresponds to the text on the menu controller button. The menu controller button now displays **MC Item 3**.  
   
-## Vedere anche  
- [Aggiunta di una barra degli strumenti a una finestra degli strumenti](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
- [Aggiunta di una barra degli strumenti](../extensibility/adding-a-toolbar.md)
+## <a name="see-also"></a>See Also  
+ [Adding a Toolbar to a Tool Window](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
+ [Adding a Toolbar](../extensibility/adding-a-toolbar.md)

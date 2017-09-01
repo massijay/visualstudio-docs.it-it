@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 79460291e91f0659df0a4241e17616e55187a0e2
-ms.openlocfilehash: 97370aa7301442a6f7f416b92204461177acdc5a
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
+ms.openlocfilehash: f7dae97d2018e220c5d2584f8aee3e1b911cf0f3
+ms.contentlocale: it-it
+ms.lasthandoff: 05/30/2017
 
 ---
 # <a name="generatetemporarytargetassembly-task"></a>Attività GenerateTemporaryTargetAssembly
@@ -93,5 +94,5 @@ L'attività <xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly>
  [Riferimento alle attività](../msbuild/wpf-msbuild-task-reference.md)   
  [Informazioni di riferimento su MSBuild](../msbuild/msbuild-reference.md)   
  [Riferimento alle attività](../msbuild/msbuild-task-reference.md)   
- [Compilazione di un'applicazione WPF (WPF)](http://msdn.microsoft.com/Library/a58696fd-bdad-4b55-9759-136dfdf8b91c)   
- [Panoramica delle applicazioni browser XAML di WPF](http://msdn.microsoft.com/Library/3a7a86a8-75d5-4898-96b9-73da151e5e16)
+ [Compilazione di un'applicazione WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)   
+ [Panoramica delle applicazioni browser XAML di WPF](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)

@@ -1,55 +1,72 @@
 ---
-title: "IDebugExpressionEvaluator2::GetService | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugExpressionEvaluator2::GetService"
-  - "GetService"
+title: IDebugExpressionEvaluator2::GetService | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugExpressionEvaluator2::GetService
+- GetService
 ms.assetid: f8988a9e-9d18-42af-84a7-55f41e9adf63
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugExpressionEvaluator2::GetService
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: de9ba532baceeca6431aec6d94a1e290d5efb680
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Recupera un oggetto servizio fornito il relativo identificatore univoco.  
+---
+# <a name="idebugexpressionevaluator2getservice"></a>IDebugExpressionEvaluator2::GetService
+Retrieves a service object given its unique identifier.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetService (  
-   GUID        uid,  
-   IUnknown ** ppService  
+   GUID        uid,  
+   IUnknown ** ppService  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetService (  
-   Guid       uid,  
-   out object ppService  
+   Guid       uid,  
+   out object ppService  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `uid`  
- \[in\]  Identificatore univoco del servizio da recuperare.  
+ [in] Unique identifier of the service to retrieve.  
   
  `ppService`  
- \[out\]  restituisce un oggetto che rappresenta il servizio.  
+ [out] Returns an object that represents the service.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- Ciò può essere utilizzata da un analizzatore di espressioni di terze parti per ottenere servizi da un altro analizzatore di espressioni.  Ad esempio, questo metodo può essere utilizzato per ottenere l'interfaccia per il servizio del visualizzatore dall'analizzatore di espressioni predefinito.  Gli analizzatori di espressioni di terze parti non saranno da essere necessario implementare questa interfaccia.  
+## <a name="remarks"></a>Remarks  
+ This can be consumed by a third-party expression evaluator to obtain services from another expression evaluator. For example, this method could be used to obtain the interface for the visualizer service from the default expression evaluator. Third-party expression evaluators are unlikely to need to implement this interface.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

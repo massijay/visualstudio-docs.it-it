@@ -1,57 +1,73 @@
 ---
-title: "Factory editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "editor [Visual Studio SDK], legacy - factory editor"
+title: Editor Factories | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- editors [Visual Studio SDK], legacy - editor factories
 ms.assetid: cf4e8164-3546-441d-b465-e8a836ae7216
 caps.latest.revision: 20
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Factory editor
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 33e13e1c5c0c46d5380e1c090c3feb72a7b70428
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
-Una factory dell'editor vengono creati gli oggetti dell'editor e li inserisce in una struttura della finestra, nota come visualizzazione fisica.  Crea i dati del documento e gli oggetti visualizzazione del documento necessari per creare editor e finestre di progettazione.  Una factory dell'editor è obbligatoria per creare editor di base di Visual Studio e qualsiasi editor standard.  Un editor personalizzato può essere opportuno essere creato con una factory dell'editor.  
+---
+# <a name="editor-factories"></a>Editor Factories
+An editor factory creates editor objects and puts them in a window frame, known as a physical view. It creates the document data and document view objects that are necessary to create editors and designers. An editor factory is required to create the Visual Studio core editor and any standard editor. A custom editor can also optionally be created with an editor factory.  
   
- Creare una factory dell'editor implementando l'interfaccia di <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> .  Nell'esempio seguente viene illustrato come implementare <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> per creare una factory dell'editor:  
+ You create an editor factory by implementing the <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> interface. The following example illustrates how to implement <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> to create an editor factory:  
   
- [!code-vb[VSSDKEditorFactories#1](../extensibility/codesnippet/VisualBasic/editor-factories_1.vb)]
- [!code-cs[VSSDKEditorFactories#1](../extensibility/codesnippet/CSharp/editor-factories_1.cs)]  
+ [!code-vb[VSSDKEditorFactories#1](../extensibility/codesnippet/VisualBasic/editor-factories_1.vb)] [!code-csharp[VSSDKEditorFactories#1](../extensibility/codesnippet/CSharp/editor-factories_1.cs)]  
   
- Un editor viene caricato la prima volta che si apre un tipo di file gestiti dall'editor.  È possibile scegliere per aprire un editor specifico o l'editor predefinito.  Se si seleziona l'editor predefinito, l'ambiente di sviluppo \(IDE\) integrato \(IDE\) determina l'editor corretto per aprire e quindi aprirlo.  Per ulteriori informazioni, vedere [Determinazione di un File in un progetto che verrà aperto l'Editor](../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md).  
+ An editor is loaded the first time that you open a file type handled by that editor. You can choose to open either a specific editor or the default editor. If you select the default editor, the integrated development environment (IDE) determines the correct editor to open and then opens it. For more information, see [Determining Which Editor Opens a File in a Project](../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md).  
   
-## Registrare le factory dell'editor  
- Prima di poter utilizzare un editor creato, è innanzitutto necessario registrare le informazioni, incluse le estensioni di file che può gestire.  
+## <a name="registering-editor-factories"></a>Registering Editor Factories  
+ Before you can use an editor that you have created, you first must register information about it, including the file extensions it can handle.  
   
- Se il package VS è scritto in codice gestito, è possibile utilizzare il metodo gestito <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> \(MPF\) del Framework del pacchetto per registrare la factory dell'editor dopo che il package VS viene caricato.  Se il package VS è scritto in codice non gestito, è necessario registrare la factory dell'editor tramite il servizio di <xref:Microsoft.VisualStudio.Shell.Interop.SVsRegisterEditors> .  
+ If your VSPackage is written in managed code, you can use the Managed Package Framework (MPF) method <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> to register the editor factory after your VSPackage is loaded. If your VSPackage is written in unmanaged code, then you must register your editor factory by using the <xref:Microsoft.VisualStudio.Shell.Interop.SVsRegisterEditors> service.  
   
-### Registrando una factory dell'editor tramite codice gestito  
- È necessario registrare la factory dell'editor nel metodo di `Initialize` del package VS.  La prima chiamata `base.Initialize`quindi chiama <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> per ogni factory dell'editor  
+### <a name="registering-an-editor-factory-by-using-managed-code"></a>Registering an Editor Factory by Using Managed Code  
+ You must register your editor factory in your VSPackage's the `Initialize` method. First call `base.Initialize`, and then call <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> for each editor factory  
   
- Nel codice gestito, non è necessario annullare la registrazione di una factory dell'editor, poiché il package VS gestirà questo automaticamente.  Inoltre, se la factory dell'editor implementa <xref:System.IDisposable>, verrà automaticamente eliminato quando viene annullato la registrazione.  
+ In managed code, there is no need to unregister an editor factory, because the VSPackage will handle this for you. Also, if your editor factory implements <xref:System.IDisposable>, it is automatically disposed when it is unregistered.  
   
-### Registrando una factory dell'editor utilizzando codice non gestito  
- Nell'implementazione di <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> per il package editor, utilizzare il metodo di `QueryService` per chiamare `SVsRegisterEditors`.  Utilizzando questo restituisce un puntatore a <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors>.  Chiamare il metodo di <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> passando l'implementazione dell'interfaccia di <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> .  È necessario mplement <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> in una classe separata.  
+### <a name="registering-an-editor-factory-by-using-unmanaged-code"></a>Registering an editor factory by using unmanaged code  
+ In the <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> implementation for your editor package, use the `QueryService` method to call `SVsRegisterEditors`. Doing this returns a pointer to <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors>. Call the <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> method by passing your implementation of the <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> interface. You must mplement <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> in a separate class.  
   
-## Il processo di registrazione della factory dell'editor  
- I passaggi seguenti si verificano quando un utente apre un documento facente parte di una soluzione Microsoft Office.  
+## <a name="the-editor-factory-registration-process"></a>The Editor Factory Registration Process  
+ The following process occurs when Visual Studio loads your editor using your editor factory:  
   
 1.  The [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] project system calls <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>.  
   
-2.  Questo metodo restituisce la factory dell'editor.  Visual Studio ritarda caricare il package editor, tuttavia, finché un sistema di progetto abbia effettivamente necessario disporre dell'editor.  
+2.  This method returns the editor factory. Visual Studio delays loading the editor's package, however, until a project system actually needs the editor.  
   
 3.  When a project system needs the editor, Visual Studio calls <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>, a specialized method that returns both the document view and the document data objects.  
   
-4.  If calls by Visual Studio to your editor factory using <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> return both a document data object and a document view object, Visual Studio then creates the document window, places the document view object in it, and makes an entry into the running document table \(RDT\) for the document data object.  
+4.  If calls by Visual Studio to your editor factory using <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> return both a document data object and a document view object, Visual Studio then creates the document window, places the document view object in it, and makes an entry into the running document table (RDT) for the document data object.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>   
- [Tabella Document in esecuzione](../extensibility/internals/running-document-table.md)
+ [Running Document Table](../extensibility/internals/running-document-table.md)

@@ -1,52 +1,69 @@
 ---
-title: "IEEVisualizerService::GetCustomViewerCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEEVisualizerService::GetCustomViewerCount"
-helpviewer_keywords: 
-  - "Metodo IEEVisualizerService::GetCustomViewerCount"
+title: IEEVisualizerService::GetCustomViewerCount | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IEEVisualizerService::GetCustomViewerCount
+helpviewer_keywords:
+- IEEVisualizerService::GetCustomViewerCount method
 ms.assetid: f7b095c2-e538-4352-8cad-d4c6d4f6bdbc
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IEEVisualizerService::GetCustomViewerCount
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 4ed857941c2e6305a47269f4ad150e13116d8647
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Questo metodo ottiene il numero dei visualizzatori di tipi disponibili dal servizio.  
+---
+# <a name="ieevisualizerservicegetcustomviewercount"></a>IEEVisualizerService::GetCustomViewerCount
+This method gets the number of type visualizers available from this service.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetCustomViewerCount(  
-   ULONG* pcelt  
+HRESULT GetCustomViewerCount(  
+   ULONG* pcelt  
 );  
 ```  
   
-```c#  
-int GetCustomViewerCount(  
-   out uint pcelt  
+```csharp  
+int GetCustomViewerCount(  
+   out uint pcelt  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pcelt`  
- \[out\]  Restituisce il numero dei visualizzatori di tipi disponibili.  
+ [out] Returns the number of type visualizers available.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- [GetCustomViewerCount](../Topic/IDebugProperty3::GetCustomViewerCount.md) passa la richiesta a questo metodo nel supporto per i visualizzatori di tipi.  
+## <a name="remarks"></a>Remarks  
+ [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) passes the request to this method in its support for type visualizers.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)   
- [GetCustomViewerCount](../Topic/IDebugProperty3::GetCustomViewerCount.md)
+ [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md)

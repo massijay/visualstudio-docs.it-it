@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::SetReferenceType | Documenti di Microsoft
+title: IDebugReference2::SetReferenceType | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,36 +30,37 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4827e0e54caa6b10fdf876e4360a5f9df480de00
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5a92f623845bb737b9f767194e78242f5fd882dd
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugreference2setreferencetype"></a>IDebugReference2::SetReferenceType
-Imposta il tipo di riferimento. Riservato per utilizzi futuri.  
+Sets the reference type. Reserved for future use.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT SetReferenceType (   
    REFERENCE_TYPE dwRefType  
 );  
 ```  
   
-```c#  
+```csharp  
 int SetReferenceType (   
    enum_REFERENCE_TYPE dwRefType  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `dwRefType`  
- [in] Un valore di [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) enumerazione che specifica il tipo di riferimento.  
+ [in] A value from the [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) enumeration that specifies the reference type.  
   
-## <a name="return-value"></a>Valore restituito  
- Restituisce sempre `E_NOTIMPL`.  
+## <a name="return-value"></a>Return Value  
+ Always returns `E_NOTIMPL`.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)   
  [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md)

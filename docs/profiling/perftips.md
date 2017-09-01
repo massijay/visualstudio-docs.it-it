@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 65bceca75b87aaf187926ebbed1a54ce4f0e8eec
-ms.openlocfilehash: db7c9121beea3b6a27a435680dfe01cbc8cba8b6
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 8a544bd1e1242bb6fabe00f7842ac33ed9d9d444
+ms.openlocfilehash: b19a309f403daa0a3881ec154aa4cd3f5e4d97dc
+ms.contentlocale: it-it
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="perftips"></a>PerfTips
@@ -42,7 +43,7 @@ Il debugger di Visual Studio *PerfTips* e il debugger integrato **Strumenti di d
 ## <a name="perftips"></a>PerfTips  
  Quando il debugger interrompe l'esecuzione in un punto di interruzione o un'operazione passo a passo, il tempo trascorso tra l'interruzione e il precedente punto di interruzione viene visualizzato come un suggerimento nella finestra dell'editor. Per altre informazioni, vedere [PerfTips, informazioni immediate sulle prestazioni durante il debug in Visual Studio](http://blogs.msdn.com/b/visualstudioalm/archive/2014/08/18/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio.aspx).  
   
- ![PerfTip](~/profiling/media/dbgdiag_perf_perftip.png "DBGDIAG_PERF_PerfTip")  
+ ![PerfTip](../profiling/media/dbgdiag_perf_perftip.png "DBGDIAG_PERF_PerfTip")  
   
 ## <a name="diagnostics-tools-window"></a>Finestra Strumenti di diagnostica  
  I punti di interruzione e i dati di intervallo associati vengono registrati nella finestra Strumenti di diagnostica  
@@ -72,3 +73,7 @@ Il debugger di Visual Studio *PerfTips* e il debugger integrato **Strumenti di d
 1.  Scegliere **Opzioni** dal menu **Debug**.  
   
 2.  Selezionare o deselezionare **Abilita Strumenti di diagnostica durante il debug**.
+
+## <a name="see-also"></a>Vedere anche
+ [Profilatura in Visual Studio](../profiling/index.md) [Panoramica delle funzionalità di profilatura](../profiling/profiling-feature-tour.md)
+

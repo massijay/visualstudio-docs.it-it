@@ -1,86 +1,98 @@
 ---
-title: "Errore: accesso remoto al gruppo di lavoro non riuscito | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.workgroup_remote_logon_failure"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "accesso non riuscito, debug remoto"
-  - "debug remoto, accesso non riuscito"
+title: 'Error: Workgroup Remote Logon Failure | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.workgroup_remote_logon_failure
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- JScript
+- C++
+helpviewer_keywords:
+- logon failure, remote debugging
+- remote debugging, logon failure
 ms.assetid: 7be2c5bb-40fe-48d6-8cfc-c231fbd3d64e
 caps.latest.revision: 19
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Errore: accesso remoto al gruppo di lavoro non riuscito
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: d0ebccfdb523661ba04a103bf6999e9c6546d1c7
+ms.contentlocale: it-it
+ms.lasthandoff: 08/22/2017
 
-Il testo del messaggio di errore è il seguente:  
+---
+# <a name="error-workgroup-remote-logon-failure"></a>Error: Workgroup Remote Logon Failure
+This error reads:  
   
- Accesso non riuscito: nome utente sconosciuto o password errata.  
+ Logon failure: unknown user name or bad password  
   
- **Causa**  
+ **Cause**  
   
- Questo errore può verificarsi quando si esegue il debug da un computer che fa parte di un gruppo di lavoro e si tenta di stabilire la connessione a un computer remoto.  Fra le cause possibili vi sono le seguenti:  
+ This error can occur when you are debugging from a machine on a workgroup and you try to connect to remote machine. Possible causes include:  
   
--   Nel computer remoto non esiste un account con il nome e la password specificati.  
+-   There is no account with the matching name and password on the remote machine.  
   
--   Se il computer di Visual Studio e il computer remoto fanno entrambi parte di gruppi di lavoro, questo errore può essere causato dall'impostazione predefinita di **Criteri di sicurezza locali** del computer remoto.  L'impostazione predefinita di **Criteri di sicurezza locali** è **Solo Guest: gli utenti locali effettuano l'autenticazione come Guest**.  Per eseguire il debug con questa configurazione, è necessario modificare l'impostazione del computer remoto in **Classico: gli utenti locali effettuano l'autenticazione di se stessi**.  
+-   If both the Visual Studio computer and the remote machine are on workgroups, this error may occur due to the default **Local Security Policy** setting on the remote machine. The default setting for the **Local Security Policy** setting is **Guest only - local users authenticate as Guest**. To debug on this setup, you must change the setting on the remote machine to **Classic - local users authenticate as themselves**.  
   
 > [!NOTE]
->  Per effettuare le attività elencate di seguito è necessario disporre di diritti amministrativi.  
+>  You must be an administrator to carry out the following tasks.  
   
-### Per aprire la finestra Criteri di sicurezza locali  
+### <a name="to-open-the-local-security-policy-window"></a>To open the Local Security Policy window  
   
-1.  Avviare lo snap\-in **secpol.msc** di Microsoft Management Console.  Digitare secpol.msc nella funzionalità di ricerca di Windows, nella casella Esegui di Windows o a un prompt dei comandi.  
+1.  Start the **secpol.msc** Microsoft Management Console snap-in. Type secpol.msc in Windows search, the Windows Run box, or at a command prompt.  
   
-### Per aggiungere assegnazioni di diritti utente  
+### <a name="to-add-user-rights-assignments"></a>To add user rights assignments  
   
-1.  Aprire la  
+1.  Open the **Local Security Policy** window.  
   
-2.  Aprire la finestra **Criteri di sicurezza locali**.  
+2.  Expand the **Local Policies** folder.  
   
-3.  Espandere la cartella **Criteri locali**.  
+3.  Click **User Rights Assignment**.  
   
-4.  Scegliere **Assegnazione diritti utente**.  
+4.  In the **Policy** column, double-click **Debug programs** to view current local group policy assignments in the **Local Security Policy Setting** dialog box.  
   
-5.  Nella colonna **Criteri** fare doppio clic su **Debug di programmi** per visualizzare le assegnazioni dei criteri di gruppo locali correnti nella finestra di dialogo relativa all'impostazione di criteri di sicurezza locali.  
+     ![Local Security Policy User Rights](../debugger/media/dbg_err_localsecuritypolicy_userrightsdebugprograms.png "DBG_ERR_LocalSecurityPolicy_UserRightsDebugPrograms")  
   
-     ![Diritti utente criteri di sicurezza locali](../debugger/media/dbg_err_localsecuritypolicy_userrightsdebugprograms.png "DBG\_ERR\_LocalSecurityPolicy\_UserRightsDebugPrograms")  
+5.  To add new users, click the **Add User or Group** button.  
   
-6.  Per aggiungere nuovi utenti, fare clic sul pulsante **Aggiungi utente o gruppo**.  
+### <a name="to-change-the-sharing-and-security-model"></a>To change the Sharing and Security Model  
   
-### Per modificare il modello di condivisione e sicurezza  
+1.  Open the **Local Security Policy** window.  
   
-1.  Aprire la finestra **Criteri di sicurezza locali**.  
+2.  Expand the **Local Policies** folder.  
   
-2.  Espandere la cartella **Criteri locali**.  
+3.  Click **Security Options**.  
   
-3.  Fare clic su **Opzioni di sicurezza**.  
+4.  In the **Policy** column, double-click **Network access: Sharing and security model for local accounts**.  
   
-4.  Nella colonna **Criteri** fare doppio clic su **Accesso di rete: modello di condivisione e sicurezza per gli account locali**.  
+5.  In the **Network access: Sharing and security model for local accounts** dialog box, change the value to **Classic - local users authenticate as themselves** and click the **Apply** button.  
   
-5.  Nella finestra di dialogo **Accesso di rete: modello di condivisione e sicurezza per gli account locali** modificare l'impostazione in **Classico: gli utenti locali effettuano l'autenticazione di se stessi**, quindi scegliere il pulsante **Applica**.  
+     ![Local Security Policy Security Options](../debugger/media/dbg_err_localsecuritypolicy_securityoptions_networkaccess.png "DBG_ERR_LocalSecurityPolicy_SecurityOptions_NetworkAccess")  
   
-     ![Opzioni di sicurezza criteri di sicurezza locali](../debugger/media/dbg_err_localsecuritypolicy_securityoptions_networkaccess.png "DBG\_ERR\_LocalSecurityPolicy\_SecurityOptions\_NetworkAccess")  
-  
-## Vedere anche  
- [Errori e risoluzione dei problemi relativi al debug remoto](../debugger/remote-debugging-errors-and-troubleshooting.md)   
- [Debug remoto](../debugger/remote-debugging.md)
+## <a name="see-also"></a>See Also  
+ [Remote Debugging Errors and Troubleshooting](../debugger/remote-debugging-errors-and-troubleshooting.md)   
+ [Remote Debugging](../debugger/remote-debugging.md)

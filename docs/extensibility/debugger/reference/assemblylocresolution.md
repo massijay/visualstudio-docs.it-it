@@ -1,5 +1,5 @@
 ---
-title: ASSEMBLYLOCRESOLUTION | Documenti di Microsoft
+title: ASSEMBLYLOCRESOLUTION | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b51659e635e2df47edaf967ef60e3b0777fd4897
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 1357a55b240872237a9c838d1387cf07f14c6f92
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="assemblylocresolution"></a>ASSEMBLYLOCRESOLUTION
-Specifica un assembly in cui si trova.  
+Specifies where an assembly is located.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 enum enum_ASSEMBLYLOCRESOLUTION {  
    ALR_NAME      = 0x0,  
    ALR_USERDIR   = 0x1,  
@@ -51,7 +52,7 @@ enum enum_ASSEMBLYLOCRESOLUTION {
 typedef DWORD ASSEMBLYLOCRESOLUTION;  
 ```  
   
-```c#  
+```csharp  
 public enum enum_ASSEMBLYLOCRESOLUTION {  
    ALR_NAME      = 0x0,  
    ALR_USERDIR   = 0x1,  
@@ -60,32 +61,32 @@ public enum enum_ASSEMBLYLOCRESOLUTION {
 };  
 ```  
   
-## <a name="members"></a>Membri  
+## <a name="members"></a>Members  
  ALR_NAME  
- Assembly si trova nello spazio dei nomi corrente.  
+ Assembly is located in the current namespace.  
   
  ALR_USERDIR  
- Assembly si trova in una directory dell'utente.  
+ Assembly is located in a user directory.  
   
  ALR_SHAREDDIR  
- Assembly si trova nella directory condivisa.  
+ Assembly is located in shared directory.  
   
  ALR_REMOTEDIR  
- Assembly si trova in una directory remota.  
+ Assembly is located in a remote directory.  
   
-## <a name="remarks"></a>Note  
- Questi valori vengono restituiti per il [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md) e [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md) metodi.  
+## <a name="remarks"></a>Remarks  
+ These values are returned by the [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md) and [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md) methods.  
   
- Questi valori possono essere combinati con la `OR` operazione.  
+ These values can be combined with the `OR` operation.  
   
-## <a name="requirements"></a>Requisiti  
- Intestazione: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Vedere anche  
- [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md)   
  [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md)

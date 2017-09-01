@@ -1,89 +1,107 @@
 ---
-title: "Debug di un controllo WebView | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Debug a WebView control (Windows Store) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
 ms.assetid: 7d105907-8b39-4d07-8762-5c5ed74c7f21
 caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Debug di un controllo WebView
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: d4c6acdbe6ad8b6d9aeda8247c0d529da28d91ca
+ms.contentlocale: it-it
+ms.lasthandoff: 08/22/2017
 
-![Si applica a Windows e Windows Phone](~/debugger/media/windows_and_phone_content.png "windows\_and\_phone\_content")  
+---
+# <a name="debug-a-webview-control-in-a-windows-store-app"></a>Debug a WebView control in a Windows Store App
+![Applies to Windows and Windows Phone](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
- Per esaminare ed eseguire il debug dei controlli `WebView` in un'app di Windows Runtime, puoi configurare Visual Studio in modo da collegare Script Debugger all'avvio dell'app.  A partire da Visual Studio 2013 Update 2, sono disponibili due modi per interagire con i controlli `WebView` tramite il debugger:  
+ To inspect and debug `WebView` controls in a Windows Runtime app, you can configure Visual Studio to attach the script debugger when you start your app. Starting with Visual Studio 2013 Update 2, you have two ways to interact with `WebView` controls using the debugger:  
   
--   Apri [DOM Explorer](../debugger/quickstart-debug-html-and-css.md) per un'istanza di `WebView` ed esamina gli elementi DOM, controlla i problemi relativi allo stile CSS e sottoponi a test le modifiche apportate agli stili con rendering dinamico.  
+-   Open the [DOM Explorer](../debugger/quickstart-debug-html-and-css.md) for a `WebView` instance, and inspect DOM elements, investigate CSS style issues, and test dynamically rendered changes to styles.  
   
--   Seleziona la pagina Web o l'`iFrame` visualizzato nell'istanza di `WebView` come destinazione nella finestra [Console JavaScript](../debugger/javascript-console-commands.md) e quindi interagisci con la pagina Web usando i comandi della console.  La console consente di accedere al contesto di esecuzione dello script corrente.  
+-   Select the webpage or `iFrame` displayed in the `WebView` instance as a target in the [JavaScript Console](../debugger/javascript-console-commands.md) window, and then interact with the webpage using console commands. The console provides access to the current script execution context.  
   
-### Collegare il debugger \(C\#, Visual Basic, C\+\+\)  
+### <a name="attach-the-debugger-c-visual-basic-c"></a>Attach the debugger (C#, Visual Basic, C++)  
   
-1.  In Visual Studio, aggiungi un controllo `WebView` all'app di Windows Runtime.  
+1.  In Visual Studio, add a `WebView` control to your Windows Runtime app.  
   
-2.  In Esplora soluzioni, apri le proprietà del progetto scegliendo **Proprietà** nel menu di scelta rapida del progetto.  
+2.  In Solution Explorer, open the properties for the project by choosing **Properties** from the shortcut menu for the project.  
   
-3.  Scegli **Debug**.  Nell'elenco **Processo applicativo** scegli **Script**.  
+3.  Choose **Debug**. In the **Application process** list, choose **Script**.  
   
-     ![Collegamento del debugger di script](../debugger/media/js_dom_webview_script_debugger.png "JS\_DOM\_WebView\_Script\_Debugger")  
+     ![Attach the script debugger](../debugger/media/js_dom_webview_script_debugger.png "JS_DOM_WebView_Script_Debugger")  
   
-4.  \(Facoltativo\) Per le versioni non Express di Visual Studio, disabilita il debug just\-in\-time \(JIT\) scegliendo **Strumenti**, **Opzioni**, **Debug**, **Just\-In\-Time** e quindi disabilitando il debug JIT per Script.  
-  
-    > [!NOTE]
-    >  Disabilitando il debug JIT, puoi nascondere le finestre di dialogo per le eccezioni non gestite che si verificano in alcune pagine Web.  In Visual Studio Express, il debug JIT è sempre disabilitato.  
-  
-5.  Premere F5 per avviare il debug.  
-  
-### Usare DOM Explorer per esaminare ed eseguire il debug di un controllo WebView  
-  
-1.  \(C\#, Visual Basic, C\+\+\) Collega Script Debugger all'app.  Per istruzioni consulta la prima sezione.  
-  
-2.  Se non l'hai già fatto, aggiungi un controllo `WebView` all'app e premi F5 per avviare il debug.  
-  
-3.  Passa alla pagina contenente i controlli `Webview`.  
-  
-4.  Apri la finestra di DOM Explorer per il controllo `WebView` scegliendo **Debug**, **Finestre**, **DOM Explorer** e quindi scegli l'URL del controllo `WebView` che vuoi esaminare.  
-  
-     ![Apertura di DOM Explorer](../debugger/media/js_dom_webview.png "JS\_DOM\_WebView")  
-  
-     La finestra di DOM Explorer associata al controllo `WebView` viene visualizzata come nuova scheda in Visual Studio.  
-  
-5.  Visualizza e modifica gli elementi DOM attivi e gli stili CSS come descritto in [Eseguire il debug di stili CSS tramite DOM Explorer](../debugger/debug-css-styles-using-dom-explorer.md).  
-  
-### Usare la finestra Console JavaScript per esaminare ed eseguire il debug di un controllo WebView  
-  
-1.  \(C\#, Visual Basic, C\+\+\) Collega Script Debugger all'app.  Per istruzioni consulta la prima sezione.  
-  
-2.  Se non l'hai già fatto, aggiungi un controllo `WebView` all'app e premi F5 per avviare il debug.  
-  
-3.  Apri la finestra Console JavaScript per il controllo `WebView` scegliendo **Debug**, **Finestre**, **Console JavaScript**.  
-  
-     La finestra Console JavaScript viene visualizzata.  
-  
-4.  Passa alla pagina contenente i controlli `Webview`.  
-  
-5.  Nella finestra Console, seleziona la pagina Web o un `iFrame` visualizzato mediante il controllo `WebView` nell'elenco **Destinazione**.  
-  
-     ![Selezione della destinazione nella finestra della console JavaScript](~/debugger/media/js_console_target.png "JS\_Console\_Target")  
+4.  (Optional) For non-Express versions of Visual Studio, disable just-in-time (JIT) debugging by choosing **Tools > Options > Debugging > Just-In-Time**, and then disabling JIT debugging for Script.  
   
     > [!NOTE]
-    >  Tramite la console puoi interagire con un singolo `WebView`, `iFrame`, contratto di condivisione o Web worker alla volta.  Ogni elemento richiede un'istanza separata dell'host della piattaforma Web \(WWAHost.exe\).  Puoi interagire con un solo host alla volta.  
+    >  By disabling JIT debugging, you can hide dialog boxes for unhandled exceptions that occur on some webpages. In Visual Studio Express, JIT debugging is always disabled.  
   
-6.  Visualizza e modifica le variabili nell'app oppure usa i comandi della console, come descritto in [Guida introduttiva: Eseguire il debug di JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md) e [Comandi della console JavaScript](../debugger/javascript-console-commands.md).  
+5.  Press F5 to start debugging.  
   
-## Vedere anche  
- [Guida introduttiva: Eseguire il debug di HTML e CSS](../debugger/quickstart-debug-html-and-css.md)
+### <a name="use-the-dom-explorer-to-inspect-and-debug-a-webview-control"></a>Use the DOM Explorer to inspect and debug a WebView control  
+  
+1.  (C#, Visual Basic, C++) Attach the script debugger to your app. See the first section for instructions.  
+  
+2.  If you haven't already, add a `WebView` control to your app and press F5 to start debugging.  
+  
+3.  Navigate to the page containing the `Webview` control(s).  
+  
+4.  Open the DOM Explorer window for the `WebView` control by choosing **Debug**, **Windows**, **DOM Explorer**, and then choose the URL of the `WebView` that you want to inspect.  
+  
+     ![Opening the DOM Explorer](../debugger/media/js_dom_webview.png "JS_DOM_WebView")  
+  
+     The DOM Explorer associated with the `WebView` appears as a new tab in Visual Studio.  
+  
+5.  View and modify live DOM elements and CSS styles as described in [Debug CSS styles using DOM Explorer](../debugger/debug-css-styles-using-dom-explorer.md).  
+  
+### <a name="use-the-javascript-console-window-to-inspect-and-debug-a-webview-control"></a>Use the JavaScript Console window to inspect and debug a WebView control  
+  
+1.  (C#, Visual Basic, C++) Attach the script debugger to your app. See the first section for instructions.  
+  
+2.  If you haven't already, add a `WebView` control to your app and press F5 to start debugging.  
+  
+3.  Open the JavaScript Console window for the `WebView` control by choosing **Debug**, **Windows**, **JavaScript Console**.  
+  
+     The JavaScript Console window appears.  
+  
+4.  Navigate to the page containing the `Webview` control(s).  
+  
+5.  In the Console window, select the webpage or an `iFrame` displayed by the `WebView` control in the **Target** list.  
+  
+     ![Target selection in the JavaScript console window](../debugger/media/js_console_target.png "JS_Console_Target")  
+  
+    > [!NOTE]
+    >  Using the console, you can interact with a single `WebView`, `iFrame`, share contract, or web worker at a time. Each element requires a separate instance of the web platform host (WWAHost.exe). You can interact with one host at a time.  
+  
+6.  View and modify variables in your app or use console commands, as described in [QuickStart: Debug JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md) and [JavaScript Console commands](../debugger/javascript-console-commands.md).  
+  
+## <a name="see-also"></a>See Also  
+ [Quickstart: Debug HTML and CSS](../debugger/quickstart-debug-html-and-css.md)

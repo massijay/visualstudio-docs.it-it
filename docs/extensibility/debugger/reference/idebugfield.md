@@ -1,5 +1,5 @@
 ---
-title: IDebugField | Documenti Microsoft
+title: IDebugField | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,61 +30,62 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: b96de879e880fc786f3bcedbe797cb66e68e04b9
-ms.lasthandoff: 04/05/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 1e978ece2ecf56735dc538324b5c148f7f85b9bb
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugfield"></a>IDebugField
-Questa interfaccia rappresenta un campo, vale a dire, una descrizione di un tipo o un simbolo.  
+This interface represents a field, that is, a description of a symbol or type.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugField : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Note per gli implementatori  
- Un provider di simboli implementa questa interfaccia come classe base per tutti i campi.  
+## <a name="notes-for-implementers"></a>Notes for Implementers  
+ A symbol provider implements this interface as the base class for all fields.  
   
-## <a name="notes-for-callers"></a>Note per i chiamanti  
- Questa interfaccia è la classe base per tutti i campi. In base al valore restituito di [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md), questa interfaccia può restituire più specializzate interfacce tramite [QueryInterface](/cpp/atl/queryinterface). Inoltre, molte delle interfacce restituiscono `IDebugField` oggetti da vari metodi.  
+## <a name="notes-for-callers"></a>Notes for Callers  
+ This interface is the base class for all fields. Based on the return value of [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md), this interface may return more specialized interfaces by using [QueryInterface](/cpp/atl/queryinterface). In addition, many interfaces return `IDebugField` objects from various methods.  
   
-## <a name="methods-in-vtable-order"></a>Metodi nell'ordine Vtable  
- Nella tabella seguente sono illustrati i metodi di `IDebugField`.  
+## <a name="methods-in-vtable-order"></a>Methods in Vtable Order  
+ The following table shows the methods of `IDebugField`.  
   
-|Metodo|Descrizione|  
+|Method|Description|  
 |------------|-----------------|  
-|[GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)|Ottiene informazioni visualizzabili sul simbolo o un tipo.|  
-|[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)|Ottiene il tipo di campo.|  
-|[GetType](../../../extensibility/debugger/reference/idebugfield-gettype.md)|Ottiene il tipo di campo.|  
-|[GetContainer](../../../extensibility/debugger/reference/idebugfield-getcontainer.md)|Ottiene il contenitore del campo.|  
-|[GetAddress](../../../extensibility/debugger/reference/idebugfield-getaddress.md)|Ottiene l'indirizzo del campo.|  
-|[GetSize](../../../extensibility/debugger/reference/idebugfield-getsize.md)|Ottiene le dimensioni di un campo, in byte.|  
-|[GetExtendedInfo](../../../extensibility/debugger/reference/idebugfield-getextendedinfo.md)|Ottiene le informazioni relative a un campo estese.|  
-|[Uguale a](../../../extensibility/debugger/reference/idebugfield-equal.md)|Confronta due campi.|  
-|[GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)|Ottiene informazioni indipendente dal tipo di simbolo o un tipo.|  
+|[GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md)|Gets displayable information about the symbol or type.|  
+|[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)|Gets the kind of field.|  
+|[GetType](../../../extensibility/debugger/reference/idebugfield-gettype.md)|Gets the type of field.|  
+|[GetContainer](../../../extensibility/debugger/reference/idebugfield-getcontainer.md)|Gets the container of the field.|  
+|[GetAddress](../../../extensibility/debugger/reference/idebugfield-getaddress.md)|Gets the address of the field.|  
+|[GetSize](../../../extensibility/debugger/reference/idebugfield-getsize.md)|Gets the size of a field, in bytes.|  
+|[GetExtendedInfo](../../../extensibility/debugger/reference/idebugfield-getextendedinfo.md)|Gets extended information about a field.|  
+|[Equal](../../../extensibility/debugger/reference/idebugfield-equal.md)|Compares two fields.|  
+|[GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md)|Gets type-independent information about the symbol or type.|  
   
-## <a name="remarks"></a>Note  
- Un tipo è equivalente a un linguaggio C `typedef`.  
+## <a name="remarks"></a>Remarks  
+ A type is equivalent to a C language `typedef`.  
   
- Nell'esempio seguente linguaggio C++ `weather` è un tipo di classe e `sunny` e `stormy` simboli:  
+ In the following C++ language example, `weather` is a class type, and `sunny` and `stormy` are symbols:  
   
-```cpp#  
+```cpp  
 class weather;  
 weather sunny;  
 weather stormy;  
 ```  
   
- Se un campo rappresenta un simbolo o il tipo può essere determinato chiamando [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) ed esaminando il [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) risultato. Se il `FIELD_KIND_TYPE` bit viene impostato, il campo è un tipo e se il `FIELD_KIND_SYMBOL` bit viene impostato, è un simbolo.  
+ Whether a field represents a symbol or type can be determined by calling [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) and examining the [FIELD_KIND](../../../extensibility/debugger/reference/field-kind.md) result. If the `FIELD_KIND_TYPE` bit is set, the field is a type, and if the `FIELD_KIND_SYMBOL` bit is set, it is a symbol.  
   
-## <a name="requirements"></a>Requisiti  
- Intestazione: sh.h  
+## <a name="requirements"></a>Requirements  
+ Header: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>Vedere anche  
- [Interfacce del provider di simboli](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
+## <a name="see-also"></a>See Also  
+ [Symbol Provider Interfaces](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

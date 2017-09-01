@@ -1,29 +1,46 @@
 ---
-title: "CA2109: Controllare i gestori di eventi visibili | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2109"
-  - "ReviewVisibleEventHandlers"
-helpviewer_keywords: 
-  - "CA2109"
-  - "ReviewVisibleEventHandlers"
+title: 'CA2109: Review visible event handlers | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2109
+- ReviewVisibleEventHandlers
+helpviewer_keywords:
+- ReviewVisibleEventHandlers
+- CA2109
 ms.assetid: 8f8fa0ee-e94e-400e-b516-24d8727725d7
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 18
----
-# CA2109: Controllare i gestori di eventi visibili
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 930c98a6b91eee69c3e145479694a58050dd3d22
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2109-review-visible-event-handlers"></a>CA2109: Review visible event handlers
 |||  
 |-|-|  
 |TypeName|ReviewVisibleEventHandlers|  
@@ -31,38 +48,38 @@ caps.handback.revision: 18
 |Category|Microsoft.Security|  
 |Breaking Change|Breaking|  
   
-## Causa  
- È stato rilevato un metodo di gestione eventi pubblico o protetto.  
+## <a name="cause"></a>Cause  
+ A public or protected event-handling method was detected.  
   
-## Descrizione della regola  
- Un metodo di gestione eventi visibile esternamente presenta un problema di sicurezza che richiede revisione.  
+## <a name="rule-description"></a>Rule Description  
+ An externally visible event-handling method presents a security issue that requires review.  
   
- I metodi di gestione eventi non devono essere esposti se non assolutamente necessario.  Un gestore eventi, un tipo delegato, che richiama il metodo esposto può essere aggiunto a qualsiasi evento purché le firme di gestore ed evento corrispondano.  Gli eventi possono potenzialmente essere generati da qualsiasi codice e in molti casi vengono generati da codice di sistema altamente attendibile in risposta ad azioni dell'utente come la scelta di un pulsante.  L'aggiunta di un controllo di sicurezza a un metodo di gestione eventi non impedisce al codice di registrare un gestore eventi che richiama il metodo.  
+ Event-handling methods should not be exposed unless absolutely necessary. An event handler, a delegate type, that invokes the exposed method can be added to any event as long as the handler and event signatures match. Events can potentially be raised by any code, and are frequently raised by highly trusted system code in response to user actions such as clicking a button. Adding a security check to an event-handling method does not prevent code from registering an event handler that invokes the method.  
   
- Una richiesta non può proteggere in modo affidabile un metodo richiamato da un gestore eventi.  Le richieste di sicurezza consentono di proteggere il codice da chiamanti non attendibili esaminando i chiamanti nello stack di chiamate.  Il codice che aggiunge un gestore eventi a un evento non è necessariamente presente nello stack di chiamate quando vengono eseguiti i metodi del gestore eventi.  Pertanto, lo stack di chiamate può contenere solo chiamanti altamente attendibili quando viene richiamato il metodo del gestore eventi,  causando la riuscita delle richieste eseguite dal metodo del gestore eventi.  Inoltre, le autorizzazioni richieste potrebbero essere asserite quando il metodo viene richiamato.  Pertanto, il rischio di non correggere una violazione di questa regola può essere valutato solo dopo aver rivisto il metodo di gestione eventi.  Quando si rivede il codice, considerare quanto segue:  
+ A demand cannot reliably protect a method invoked by an event handler. Security demands help protect code from untrusted callers by examining the callers on the call stack. Code that adds an event handler to an event is not necessarily present on the call stack when the event handler's methods run. Therefore, the call stack might have only highly trusted callers when the event handler method is invoked. This causes demands made by the event handler method to succeed. Also, the demanded permission might be asserted when the method is invoked. For these reasons, the risk of not fixing a violation of this rule can only be assessed after reviewing the event-handling method. When you review your code, consider the following issues:  
   
--   Valutare se il gestore eventi esegue operazioni pericolose, ad esempio l'asserzione di autorizzazioni o l'eliminazione di autorizzazioni di codice non gestito.  
+-   Does your event handler perform any operations that are dangerous or exploitable, such as asserting permissions or suppressing unmanaged code permission?  
   
--   Valutare quali sono le minacce alla sicurezza poste dal codice, dal momento che può essere eseguito in qualsiasi momento solo con chiamanti altamente attendibili nello stack.  
+-   What are the security threats to and from your code because it can run at any time with only highly trusted callers on the stack?  
   
-## Come correggere le violazioni  
- Per correggere una violazione di questa regola, rivedere il metodo e valutare quanto segue:  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, review the method and evaluate the following:  
   
--   Valutare se è possibile rendere non pubblico il metodo di gestione eventi.  
+-   Can you make the event-handling method non-public?  
   
--   Valutare se è possibile spostare tutte le funzionalità pericolose al di fuori del gestore eventi.  
+-   Can you move all dangerous functionality out of the event handler?  
   
--   In caso si imponga una richiesta di sicurezza, valutare se possa essere eseguita in un altro modo.  
+-   If a security demand is imposed, can this be accomplished in some other manner?  
   
-## Esclusione di avvisi  
- Escludere un avviso da questa regola solo dopo un'attenta revisione della sicurezza per assicurarsi che il codice non comporti una minaccia alla sicurezza.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Suppress a warning from this rule only after a careful security review to make sure that your code does not pose a security threat.  
   
-## Esempio  
- Nel codice riportato di seguito viene illustrato un metodo di gestione eventi che può essere utilizzato in modo improprio da codice dannoso.  
+## <a name="example"></a>Example  
+ The following code shows an event-handling method that can be misused by malicious code.  
   
- [!code-cs[FxCop.Security.EventSecLib#1](../code-quality/codesnippet/CSharp/ca2109-review-visible-event-handlers_1.cs)]  
+ [!code-csharp[FxCop.Security.EventSecLib#1](../code-quality/codesnippet/CSharp/ca2109-review-visible-event-handlers_1.cs)]  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  <xref:System.Security.CodeAccessPermission.Demand%2A?displayProperty=fullName>   
  <xref:System.EventArgs?displayProperty=fullName>   
- [Security Demands](http://msdn.microsoft.com/it-it/324c14f8-54ff-494d-9fd1-bfd20962c8ba)
+ [Security Demands](http://msdn.microsoft.com/en-us/324c14f8-54ff-494d-9fd1-bfd20962c8ba)

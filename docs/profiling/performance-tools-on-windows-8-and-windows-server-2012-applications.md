@@ -1,7 +1,7 @@
 ---
 title: Strumenti per le prestazioni nelle applicazioni Windows 8 e Windows Server 2012 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 06/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -28,19 +28,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 65bceca75b87aaf187926ebbed1a54ce4f0e8eec
-ms.openlocfilehash: c1b3058b6a1af9161f71cbea995c562670013e86
-ms.lasthandoff: 02/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: baf12bba10dfba15f10d75fd1f7a4cdc4000e441
+ms.openlocfilehash: a5d885f8604bdb52907adae4f231b41e0881017f
+ms.contentlocale: it-it
+ms.lasthandoff: 06/21/2017
 
 ---
 # <a name="performance-tools-on-windows-8-and-windows-server-2012-applications"></a>Strumenti per le prestazioni nelle applicazioni Windows 8 e Windows Server 2012
-Le funzionalità di protezione avanzata di Windows 8 e Windows Server 2012 hanno richiesto modifiche significative delle modalità di raccolta dei dati in queste piattaforme da parte degli strumenti per le prestazioni di Visual Studio. Le app di Windows Store richiedono nuove tecniche di raccolta. Questo argomento descrive le modifiche agli strumenti per le prestazioni nelle piattaforme Windows 8 e Windows Server 2012.  
+Le funzionalità di protezione avanzata introdotte a partire da Windows 8 e Windows Server 2012 hanno richiesto modifiche significative delle modalità di raccolta dei dati in queste piattaforme con gli strumenti per le prestazioni di Visual Studio. Le app di Windows Store richiedono nuove tecniche di raccolta. Questo argomento descrive le modifiche agli strumenti per le prestazioni introdotte nelle piattaforme a partire da Windows 8 e Windows Server 2012.
   
 > [!NOTE]
->  Gli strumenti per le prestazioni per le altre versioni di Windows supportate (Windows 7, Windows Server 2008 R2) sono rimasti invariati.  
+>  Gli strumenti per le prestazioni per le altre versioni di Windows supportate (Windows 7, Windows Server 2008 R2) sono rimasti invariati.
   
-##  <a name="a-namebkmkinthistopica-in-this-topic"></a><a name="BKMK_In_this_topic"></a> Contenuto dell'argomento  
+##  <a name="BKMK_In_this_topic"></a> Contenuto dell'argomento  
  [Raccolta di dati nelle app di Windows Store dall'IDE di Visual Studio](#BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE)  
   
  [Raccolta di dati nelle app in esecuzione sul desktop di Windows 8 o in Windows Server 2012 dall'IDE di Visual Studio](#BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE)  
@@ -51,7 +52,7 @@ Le funzionalità di protezione avanzata di Windows 8 e Windows Server 2012 hanno
   
  [Raccolta di dati di interazione tra livelli (TIP)](#BKMK_Collecting_tier_interaction__TIP__data)  
   
-##  <a name="a-namebkmkprofilingwindowsstoreappsfromthevisualstudioidea-collecting-data-on-windows-store-apps-from-the-visual-studio-ide"></a><a name="BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE"></a> Raccolta di dati nelle app di Windows Store dall'IDE di Visual Studio  
+##  <a name="BKMK_Profiling_Windows_Store_apps_from_the_Visual_Studio_IDE"></a> Raccolta di dati nelle app di Windows Store dall'IDE di Visual Studio  
  Quando si profila un'app di Windows Store scritta in JavaScript e in HTML 5, si raccolgono dati di strumentazione per il codice JavaScript. Quando si profila un'app di Windows Store o un componente scritto in Visual C++, Visual C# o Visual Basic, si raccolgono dati di campionamento per il codice nativo e il codice gestito. È possibile profilare l'applicazione localmente o in un computer remoto.  
   
  Le seguenti funzionalità e opzioni di profilatura non sono supportate nella profilatura di app di Windows Store:  
@@ -88,19 +89,19 @@ Le funzionalità di protezione avanzata di Windows 8 e Windows Server 2012 hanno
   
  [Contenuto dell'argomento](#BKMK_In_this_topic)  
   
-##  <a name="a-namebkmkprofilingappsrunningonthewindows8desktoporonwindowsserver2012fromthevisualstudioidea-collecting-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-from-the-visual-studio-ide"></a><a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE"></a> Raccolta di dati nelle app in esecuzione sul desktop di Windows 8 o in Windows Server 2012 dall'IDE di Visual Studio  
+##  <a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_from_the_Visual_Studio_IDE"></a> Raccolta di dati nelle app in esecuzione sul desktop di Windows 8 o in Windows Server 2012 dall'IDE di Visual Studio  
  La profilatura mediante il metodo di strumentazione è rimasta invariata per Windows 8.  
   
  La profilatura di interazione tra livelli (TIP) non è supportata usando il metodo di campionamento.  
   
-###  <a name="a-namebkmkprofilingappsrunningonthewindows8desktoporonwindowsserver2012byusingsamplingfromthevisualstudioidea-collecting-data-on-apps-running-on-the-windows-8-desktop-or-on-windows-server-2012-by-using-sampling-from-the-visual-studio-ide"></a><a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_by_using_sampling_from_the_Visual_Studio_IDE"></a> Raccolta di dati nelle app in esecuzione sul desktop di Windows 8 o in Windows Server 2012 mediante campionamento dall'IDE di Visual Studio  
- Queste funzionalità e opzioni di profilatura non sono supportate quando si profilano applicazioni di Windows 8 Desktop o di Windows Server 2012 usando il metodo di campionamento:  
+###  <a name="BKMK_Profiling_apps_running_on_the_Windows_8_desktop_or_on_Windows_Server_2012_by_using_sampling_from_the_Visual_Studio_IDE"></a> Raccolta di dati nelle app in esecuzione sul desktop di Windows 8 o in Windows Server 2012 mediante campionamento dall'IDE di Visual Studio  
+ Queste funzionalità e opzioni di profilatura non sono supportate quando si profilano applicazioni di Windows 8 Desktop o di Windows Server 2012 usando il metodo di campionamento:
   
--   Profilatura di interazione tra livelli (TIP). La raccolta di dati TIP è supportata mediante la strumentazione.  
+-   Profilatura di interazione tra livelli (TIP). La raccolta di dati TIP è supportata mediante la strumentazione.
   
 -   Opzioni di campionamento, come l'impostazione dell'evento e dell'intervallo di campionamento o la raccolta di dati aggiuntivi del contatore delle prestazioni.  
   
-##  <a name="a-namebkmkprofilingfromthecommandlinea-profiling-from-the-command-line"></a><a name="BKMK_Profiling_from_the_command_line"></a> Profilatura dalla riga di comando  
+##  <a name="BKMK_Profiling_from_the_command_line"></a> Profilatura dalla riga di comando  
  Per raccogliere dati di profilatura nei dispositivi Windows 8 e Windows Server 2012, inclusi i dispositivi privi di installazione di Visual Studio, si usano due strumenti da riga di comando:  
   
 |Nome dello strumento|Descrizione|  
@@ -127,12 +128,12 @@ Le funzionalità di protezione avanzata di Windows 8 e Windows Server 2012 hanno
   
 -   Opzioni di campionamento, come l'impostazione dell'evento e dell'intervallo di campionamento o la raccolta di dati aggiuntivi del contatore delle prestazioni.  
   
-##  <a name="a-namebkmkcollectingtierinteractiontipdataa-collecting-tier-interaction-tip-data"></a><a name="BKMK_Collecting_tier_interaction__TIP__data"></a> Raccolta di dati di interazione tra livelli (TIP)  
+##  <a name="BKMK_Collecting_tier_interaction__TIP__data"></a> Raccolta di dati di interazione tra livelli (TIP)  
  La profilatura delle interazioni tra livelli offre informazioni aggiuntive sui tempi di esecuzione delle funzioni di applicazioni multilivello che comunicano con i database tramite i servizi ADO.NET. I dati vengono raccolti solo per le chiamate di funzione sincrone.  
   
  **Versioni di Visual Studio**  
   
- I dati di profilatura dell'interazione tra livelli possono essere raccolti usando [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)] o [!INCLUDE[vs_pro_current_short](../profiling/includes/vs_pro_current_short_md.md)]. ma possono essere visualizzati solo in [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)] e [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)].  
+ I dati di profilatura dell'interazione tra livelli possono essere raccolti usando [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)], [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]o [!INCLUDE[vs_pro_current_short](../profiling/includes/vs_pro_current_short_md.md)], ma possono essere visualizzati solo in [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)] e [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)].  
   
  **Windows 8 e Windows Server 2012**  
   
@@ -154,7 +155,7 @@ Le funzionalità di protezione avanzata di Windows 8 e Windows Server 2012 hanno
   
  **Report TIP**  
   
- I dati di interazione tra livelli possono essere visualizzati solo nell'IDE di [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)] o [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)]. I report sull'interazione tra livelli basati su file tramite [VSPerfReport](../profiling/vsperfreport.md) non sono disponibili.  
+ I dati di interazione tra livelli possono essere visualizzati solo nell'IDE di [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)] o [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)] . I report sull'interazione tra livelli basati su file tramite [VSPerfReport](../profiling/vsperfreport.md) non sono disponibili.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esplora prestazioni](../profiling/performance-explorer.md)   

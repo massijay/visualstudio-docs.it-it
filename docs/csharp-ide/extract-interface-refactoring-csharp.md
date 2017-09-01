@@ -1,42 +1,57 @@
 ---
-title: "Extract Interface Refactoring (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.csharp.refactoring.extractinterface"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "refactoring [C#], Extract Interface"
-  - "Extract Interface refactoring operation [C#]"
+redirect_url: /visualstudio/csharp-ide/refactoring/extract-interface
+title: Extract Interface Refactoring (C#) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- refactoring [C#], Extract Interface
+- Extract Interface refactoring operation [C#]
 ms.assetid: 7d0aa225-3b33-4331-9652-5a67cac6f3d0
 caps.latest.revision: 25
-caps.handback.revision: 25
-author: "BillWagner"
-ms.author: "wiwagn"
-manager: "wpickett"
----
-# Extract Interface Refactoring (C#)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: BillWagner
+ms.author: wiwagn
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2976187778d144259b697b5253c78d4afe65b4ff
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-L'operazione di refactoring Estrai interfaccia consente di creare una nuova interfaccia con membri che provengono da una classe, uno struct o un'interfaccia esistente.  
+---
+# <a name="extract-interface-refactoring-c"></a>Extract Interface Refactoring (C#)
+Extract Interface is a refactoring operation that provides an easy way to create a new interface with members that originate from an existing class, struct, or interface.  
   
- Quando in diversi client viene utilizzato lo stesso sottoinsieme di membri di una classe, uno struct o un'interfaccia o quando un sottoinsieme di membri è comune a diverse classi, struct o interfacce, può essere utile incorporare il sottoinsieme di membri in un'interfaccia.  Per ulteriori informazioni sull'utilizzo delle interfacce, vedere [Interfacce](/dotnet/csharp/programming-guide/interfaces/index).  
+ When several clients use the same subset of members from a class, struct, or interface, or when multiple classes, structs, or interfaces have a subset of members in common, it can be useful to embody the subset of members in an interface. For more information about using interfaces, see [Interfaces](/dotnet/csharp/programming-guide/interfaces/index).  
   
- Estrai interfaccia consente di generare un'interfaccia in un nuovo file, posizionando il cursore all'inizio del nuovo file.  È possibile specificare quali membri estrarre nella nuova interfaccia, il nome della nuova interfaccia e il nome del file generato utilizzando la finestra di dialogo **Estrai interfaccia**.  
+ Extract Interface generates an interface in a new file and positions the cursor at the beginning of the new file. You can specify which members to extract into the new interface, the name of the new interface, and the name of the generated file using the **Extract Interface** dialog box.  
   
-### Per utilizzare Estrai interfaccia  
+### <a name="to-use-extract-interface"></a>To use Extract Interface  
   
-1.  Creare un'applicazione console denominata `ExtractInterface` quindi sostituire `Program` con il codice riportato di seguito.  
+1.  Create a console application named `ExtractInterface`, and then replace `Program` with the following code  
   
-    ```c#  
+    ```csharp  
     // Invoke Extract Interface on ProtoA.  
     // Note:  the extracted interface will be created in a new file.  
     class ProtoA  
@@ -45,21 +60,21 @@ L'operazione di refactoring Estrai interfaccia consente di creare una nuova inte
     }  
     ```  
   
-2.  Dopo aver posizionato il cursore in `MethodB`, selezionare **Estrai interfaccia** dal menu **Effettua refactoring**.  
+2.  With the cursor positioned in `MethodB`, and click **Extract Interface** on the **Refactor** menu.  
   
-     Verrà visualizzata la finestra di dialogo **Estrai interfaccia**.  
+     The **Extract Interface** dialog box appears.  
   
-     È anche possibile premere i tasti di scelta rapida CTRL\+R, I per visualizzare la finestra di dialogo **Estrai interfaccia**.  
+     You can also type the keyboard shortcut CTRL+R, I to display the **Extract Interface** dialog box.  
   
-     È inoltre possibile fare clic con il pulsante destro del mouse, scegliere **Effettua refactoring**, quindi fare clic su **Estrai interfaccia** per visualizzare la finestra di dialogo **Estrai interfaccia**.  
+     You can also right-click the mouse, point to **Refactor**, and then click **Extract Interface** to display the **Extract Interface** dialog box.  
   
-3.  Fare clic su **Seleziona tutto**.  
+3.  Click **Select All**.  
   
-4.  Scegliere **OK**.  
+4.  Click **OK**.  
   
-     Verranno visualizzati il nuovo file, IProtoA.cs, e il codice di seguito riportato:  
+     You see the new file, IProtoA.cs, and the following code:  
   
-    ```c#  
+    ```csharp  
     using System;  
     namespace TopThreeRefactorings  
     {  
@@ -70,10 +85,10 @@ L'operazione di refactoring Estrai interfaccia consente di creare una nuova inte
     }  
     ```  
   
-## Note  
- Questa funzionalità è accessibile solo quando il cursore è posizionato nella classe, lo struct o l'interfaccia che contiene i membri da estrarre.  Quando il cursore si trova in questa posizione, richiamare l'operazione di refactoring Estrai interfaccia.  
+## <a name="remarks"></a>Remarks  
+ This feature is only accessible when the cursor is positioned in the class, struct, or interface that contains the members that you would like to extract. When the cursor is in this position, invoke the Extract Interface refactoring operation.  
   
- Quando si richiama Estrai interfaccia su una classe o uno struct, l'elenco delle basi e delle interfacce viene modificato per includere il nome della nuova interfaccia.  Quando si richiama Estrai interfaccia su un'interfaccia, l'elenco delle basi e delle interfacce non viene modificato.  
+ When you invoke extract interface on a class or on a struct, the bases and interfaces list is modified to include the new interface name. When you invoke extract interface on an interface, the bases and interfaces list is not modified.  
   
-## Vedere anche  
- [Refactoring \(C\#\)](../csharp-ide/refactoring-csharp.md)
+## <a name="see-also"></a>See Also  
+ [Refactoring (C#)](refactoring-csharp.md)

@@ -1,117 +1,138 @@
 ---
-title: "Funzionalit&#224; di IntelliTrace | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "debug [Visual Studio ALM], IntelliTrace"
-  - "debug [Visual Studio ALM], registrazione della cronologia delle esecuzioni"
-  - "IntelliTrace, debug con eventi"
-  - "IntelliTrace, debug con eventi e informazioni sulla chiamata"
-  - "IntelliTrace, disabilitazione"
-  - "IntelliTrace, abilitazione"
-  - "IntelliTrace, navigazione nella cronologia di eventi e chiamate"
-  - "IntelliTrace, registrazione della cronologia delle esecuzioni"
-  - "IntelliTrace, salvataggio della sessione"
-  - "IntelliTrace, avviare il debug"
-  - "IntelliTrace, disattivare"
-  - "IntelliTrace, attivare"
+title: IntelliTrace Features | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IntelliTrace, debugging with events
+- IntelliTrace, recording execution history
+- debugging [Visual Studio ALM], recording execution history
+- IntelliTrace, turn off
+- IntelliTrace, navigating event and call history
+- IntelliTrace, saving your session
+- IntelliTrace, enabling
+- IntelliTrace, start debugging
+- IntelliTrace, debugging with events and call information
+- IntelliTrace, disabling
+- IntelliTrace, turn on
+- debugging [Visual Studio ALM], IntelliTrace
 ms.assetid: 5ccc059c-6097-46b4-9d4b-34236c02d549
 caps.latest.revision: 67
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 67
----
-# Funzionalit&#224; di IntelliTrace
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: d54015ef6c1d73b4cefed55aa9577a23d4b24f04
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
-È possibile utilizzare IntelliTrace per registrare gli eventi e il metodo chiama l'applicazione, che consente di esaminare il relativo stato \(stack di chiamate e i valori delle variabili locali\) in diversi momenti dell'esecuzione.  È sufficiente avviare il debug come di consueto: IntelliTrace viene attivato per impostazione predefinita e si possono vedere le informazioni di registrazione di IntelliTrace nel nuovo **gli strumenti di diagnostica** finestra sotto la **eventi** scheda.  Selezionare un evento e fare clic su **attivare il debug cronologico** per visualizzare gli stack di chiamate e le variabili locali registrati per questo evento.  
+---
+# <a name="intellitrace-features"></a>IntelliTrace Features
+You can use IntelliTrace to record events and method calls your application, which allows you to examine its state (call stack and local variable values) at different points in the execution. Just start debugging as usual - IntelliTrace is turned on by default, and you can see the information IntelliTrace is recording in the new **Diagnostic Tools** window under the **Events** tab. Select an event and click **Activate Historical Debugging** to see the call stack and locals recorded for this event.  
   
- Per una descrizione dettagliata, vedere [Procedura dettagliata: Utilizzo di IntelliTrace](../debugger/walkthrough-using-intellitrace.md).  
+ For a step-by-step description, see [Walkthrough: Using IntelliTrace](../debugger/walkthrough-using-intellitrace.md).  
   
- È possibile utilizzare IntelliTrace in Visual Studio Enterprise edition ma non le edizioni Professional o Community.  
+ IntelliTrace is available in Visual Studio Enterprise edition, but not in the Visual Studio Professional or Community editions.  
   
- Per verificare che IntelliTrace è abilitato, aprire il **Strumenti \/ opzioni \/ IntelliTrace** pagina Opzioni.  **Abilita IntelliTrace** deve essere selezionata per impostazione predefinita.  
+ To confirm that IntelliTrace is turned on, open the **Tools > Options > IntelliTrace** options page. **Enable IntelliTrace** should be checked by default.  
   
 > [!NOTE]
->  L'ambito di tutte le impostazioni riguardanti il **IntelliTrace** pagina delle opzioni è Visual Studio come un intero, non i singoli progetti o soluzioni.  Una modifica di queste impostazioni si applica a tutte le istanze di Visual Studio, le sessioni di debug tutti e tutti i progetti o soluzioni.  
+>  The scope of all settings on the **IntelliTrace** options page is Visual Studio as a whole, not individual projects or solutions. A change in these settings applies to all instances of Visual Studio, all debugging sessions and all projects or solutions.  
   
-##  <a name="ChooseEvents"></a> Scegliere eventi registrati da IntelliTrace  
- È possibile attivare o disattivare la registrazione di eventi di IntelliTrace specifici.  
+##  <a name="ChooseEvents"></a> Choose the events that IntelliTrace records  
+ You can turn on or off recording for specific IntelliTrace events.  
   
- Se il debug è in corso, interromperlo.  Andare a **Strumenti, Opzioni, IntelliTrace,Eventi IntelliTrace**.  Scegliere gli eventi di IntelliTrace per registrare.  
+ If you're debugging, stop debugging. Go to **Tools > Options > IntelliTrace > IntelliTrace Events**. Choose the events you want IntelliTrace to record.  
   
-##  <a name="GoingFurther"></a> Eventi IntelliTrace e informazioni \_chiamate  
- Questo non è abilitato per impostazione predefinita, ma IntelliTrace è in grado di registrare le chiamate di metodo insieme agli eventi.  Per abilitare la raccolta di chiamate, passare al metodo in **Strumenti \/ Opzioni \/ IntelliTrace \/ Generale**, selezionare **Eventi IntelliTrace e informazioni di chiamata**.  
+##  <a name="GoingFurther"></a> Collect IntelliTrace events and call information  
+ This isn't enabled by default, but IntelliTrace can record method calls along with events. To enable collection of method calls go to **Tools > Options > IntelliTrace > General**, and select **IntelliTrace events and call information**.
+
+> [!NOTE]
+> Call information is not currently available for .NET Core apps. 
   
- In tal modo è possibile visualizzare la cronologia dello stack di chiamate e scorrere in avanti e indietro le chiamate nel codice.  IntelliTrace registra i dati, ad esempio nomi delle funzioni, punti di ingresso e uscita delle funzioni e alcuni valori di parametri e valori restituiti.  
+ This lets you see the call stack history and step backward and forward through calls in your code. IntelliTrace records data such as method names, method entry and exit points, and certain parameter values and return values.  
   
 > [!TIP]
->  Questa opzione non è abilitata per impostazione predefinita in quanto tale operazione comporta un notevole sovraccarico.  Non solo ha IntelliTrace intercettare ogni chiamata al metodo che rende l'applicazione, ma dispone anche di gestire un set di dati molto maggiore se si desidera visualizzare su schermo o renderli persistenti su disco.  
+>  This option is not enabled by default because it adds considerable overhead. Not only does IntelliTrace have to intercept every method call your application makes, but it also has to deal with a much larger set of data when it comes to showing it on the screen or persisting it to disk.  
 >   
->  È possibile ridurre l'overhead delle prestazioni limitando l'elenco degli eventi che registra IntelliTrace e mantenendo il numero di moduli si raccolgono al minimo.  Per maggiori informazioni [Controllare quante informazioni di chiamata vengono registrate da IntelliTrace](../debugger/intellitrace-features.md#ControlCallData).  
+>  You can reduce the performance overhead by restricting the list of events that IntelliTrace records and by keeping the number of modules you are collecting to a minimum. For more information, see [Control how much call information IntelliTrace records](../debugger/intellitrace-features.md#ControlCallData).  
   
-### Barra di navigazione  
- È possibile utilizzare la barra di navigazione viene visualizzato a sinistra della finestra del codice.  Se non viene visualizzata la barra di navigazione, andare al **Strumenti \/ opzioni \/ IntelliTrace avanzate**, e selezionare **Visualizza la barra di navigazione in modalità di debug**.  
+### <a name="using-the-navigation-gutter"></a>Using the navigation gutter  
+ You can use the navigation gutter that appears to the left of the code window. If you don't see the navigation gutter, go to **Tools > Options > IntelliTrace > Advanced**, and select **Display the navigation gutter while in debug mode**.  
   
- La barra di navigazione consente di spostarsi avanti e indietro tra chiamate ai metodi e gli eventi in modalità di debug cronologico.  Per ulteriori informazioni sul debug cronologico, vedere [Debug cronologico](../debugger/historical-debugging.md).  Dispone di una serie di comandi:  
+ The navigation gutter allows you to move forwards and backwards through method calls and events in historical debugging mode. For more information about historical debugging, see [Historical Debugging](../debugger/historical-debugging.md). It has a number of commands:  
   
 |||  
 |-|-|  
-|**Imposta contesto debugger**|Consente di impostare il contesto di debug sull'intervallo di tempo della chiamata dove viene visualizzato.<br /><br /> Questa icona compare solo sullo stack di chiamate corrente.|  
-|**Torna al sito di chiamata**|Spostare il puntatore e il contesto di debug indietro nel momento in cui è stata chiamata la funzione corrente.<br /><br /> Se si è in modalità debug attivo, questo comando attiva il debug cronologico.  Se si passa nuovamente all'interruzione dell'esecuzione originale, il debug cronologico è disattivato e Live debug è attivato.|  
-|**Vai a chiamata o a evento IntelliTrace precedente**|Spostare il puntatore e il contesto di debug indietro nel tempo all'evento o alla chiamata precedente.<br /><br /> Se si è in modalità debug attivo, questo comando attiva il debug cronologico.|  
-|**Entra**|Passaggio alla funzione attualmente selezionato.<br /><br /> Questo comando è disponibile solo quando si esegue il debug con IntelliTrace.|  
-|**Vai a chiamata o a evento IntelliTrace successivo**|Spostare il puntatore e il contesto di debug avanti nel tempo nella chiamata o nell’evento successivo per cui esistono dati IntelliTrace.<br /><br /> Questo comando è disponibile solo quando si esegue il debug con IntelliTrace.|  
-|**Passa alla modalità attiva**|Torna alla modalità debug attivo|  
+|**Set Debugger Context Here**|Set the debugging context to the call timeframe where it appears.<br /><br /> This icon appears only on the current call stack.|  
+|**Return to Call Site**|Move the pointer and debugging context back to where the current function was called.<br /><br /> If you are in Live Debugging mode, this command turns Historical Debugging on. If you navigate back to the original execution break, Historical Debugging is turned off and Live Debugging is turned on.|  
+|**Go to Previous Call or IntelliTrace Event**|Move the pointer and debugging context back to the previous call or event.<br /><br /> If you are in Live Debugging mode, this command turns on Historical Debugging.|  
+|**Step In**|Step into the currently selected function.<br /><br /> This command is available only when you are in Historical Debugging mode.|  
+|**Go to Next Call or IntelliTrace Event**|Move the pointer and debugging context to the next call or event for which IntelliTrace data exists.<br /><br /> This command is available only when you are in Historical Debugging mode.|  
+|**Go to Live Mode**|Return to Live Debugging mode.|  
   
-### Cerca una riga o metodo in IntelliTrace  
- È possibile cercare i metodi solo quando è state abilitate informazioni sulla chiamata di metodo.  È possibile cercare la cronologia di IntelliTrace per un metodo o una riga specifica.  Durante l'esecuzione del debugger viene interrotto, il pulsante destro del mouse all'interno del corpo della funzione per visualizzare il menu di scelta rapida e fare clic su **ricerca riga In IntelliTrace** o **Cerca metodo In IntelliTrace**.  
+### <a name="search-for-a-line-or-method-in-intellitrace"></a>Search for a line or method in IntelliTrace  
+ You can search methods only when method call information has been enabled. You can search IntelliTrace history for a specific line or method. While debugger execution is halted, right-click inside the body of the function to see the context menu, and click either **Search For This LIne In IntelliTrace** or **Search For This Method In IntelliTrace**.  
   
-###  <a name="ControlCallData"></a> Controllare quante informazioni di chiamata vengono registrate da IntelliTrace  
- Per impostazione predefinita IntelliTrace registra le informazioni per tutti i moduli utilizzati nella soluzione.  È possibile disporre delle registrazioni delle informazioni sulle chiamate di IntelliTrace solo per i moduli di interesse.  In **Strumenti \/ opzioni \/ IntelliTrace \/ moduli**, è possibile specificare i moduli da includere o moduli per escludere da IntelliTrace.  IntelliTrace verrà raccolti solo gli eventi originati da moduli che è stato specificato e le chiamate al metodo che si sono verificati all'interno di moduli che si è interessati.  
+###  <a name="ControlCallData"></a> Control how much call information IntelliTrace records  
+ By default IntelliTrace records information for all the modules used by your solution. You can set IntelliTrace to record call information only for the modules that interest you. In **Tools > Options > IntelliTrace > Modules**, You can specify the modules to include or the modules to exclude from IntelliTrace. IntelliTrace will collect only the events that originated from the modules you have specified, and the method calls that happened within the modules you are interested in.  
   
- Per aggiungere più moduli, utilizzare il carattere jolly \* all'inizio o alla fine della stringa.  Per i nomi dei moduli, utilizzare nomi di file e non nomi di assembly.  I percorsi file non sono accettati.  
+ To add multiple modules, use the wildcard character * at the start or the end of the string. For module names, use file names, not assembly names. File paths are not accepted.  
   
- Provare a ridurre al minimo il numero di moduli.  È possibile ottenere prestazioni migliori perché non ci sono meno dati da raccogliere.  Si ottiene anche meno rumore nell'interfaccia utente perché non ci sono meno dati passino attraverso.  
+ Try to keep the number of modules to a minimum. You get better performance because there is less data to be collected. You also get less noise in the UI because there is less data to go through.  
   
-##  <a name="SaveSession"></a> Salvataggio della sessione IntelliTrace su file  
- È possibile salvare i dati raccolti da IntelliTrace dovrà **Debug \/ IntelliTrace \/ Salva la sessione di IntelliTrace** mentre si esegue il debug e l'applicazione è in uno stato di interruzione.  La voce di menu è disabilitata e non sarà in grado di salvare i dati che raccolti da IntelliTrace se l'applicazione è ancora in esecuzione o se si interrompe il debug.  
+##  <a name="SaveSession"></a> Saving IntelliTrace data to file  
+ You can save the data that IntelliTrace has collected going to **Debug > IntelliTrace > Save IntelliTrace Session** while you are debugging and the application is in a break state. The menu item is disabled and you will not be able to save the data IntelliTrace has collected if the application is still running or if you have stopped debugging.  
   
- È possibile configurare IntelliTrace per salvare automaticamente in un file visitando **Strumenti \/ opzioni \/ IntelliTrace avanzate** e selezionando **Archivia le registrazioni IntelliTrace nella directory**.  È inoltre possibile configurare una dimensione fissa per il file generato, provocando IntelliTrace per sovrascrivere i dati meno recenti quando si esaurisce lo spazio.  Visual Studio crea due file  per ogni sessione di IntelliTrace quando vengono salvati automaticamente e il processo di hosting di Visual Studio \(vshost.exe\) è attivato.  
+ You can configure IntelliTrace to automatically save to a file by going to **Tools > Options > IntelliTrace > Advanced** and selecting **Store IntelliTrace recordings in this directory**. You can also configure a set size for the generated file, which causes IntelliTrace to write over older data when it runs out of space. Visual Studio creates two files for each IntelliTrace session when they are saved automatically and the Visual Studio hosting process (vshost.exe) is turned on.  
   
 > [!TIP]
->  Per risparmiare spazio su disco, disattivare il salvataggio dei file automaticamente quando non sono più necessari.  Tutti i file esistenti non verranno eliminati.  È sempre possibile salvare il file su richiesta dal menu di scelta rapida.  
+>  To save disk space, turn off saving files automatically when you don't need them anymore. Any existing files will not be deleted. You can always save to file on demand from the context menu.  
   
- Quando si salvano i dati di IntelliTrace per file, è possibile ottenere un file con estensione iTrace per ogni processo IntelliTrace raccolti da.  È quindi possibile aprire il file con estensione iTrace in Visual Studio visitando **File \/ Apri \/ File** e selezionando il file con estensione iTrace dalla finestra di dialogo Apri File.  Per ulteriori informazioni, vedere [Eseguire il debug dell'app usando dati di IntelliTrace salvati](../debugger/using-saved-intellitrace-data.md).  
+ When you save IntelliTrace data to file, you get one .itrace file for each process that IntelliTrace collected from. You can then open the .itrace file in Visual Studio by going to **File > Open > File** and selecting the .itrace file from the Open File dialog. For more information, see [Using saved IntelliTrace data](../debugger/using-saved-intellitrace-data.md).  
   
-## Blog  
+## <a name="blogs"></a>Blogs  
  [IntelliTrace in Visual Studio Enterprise 2015](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/intellitrace-in-visual-studio-ultimate-2015.aspx)  
   
- [Procedura dettagliata del debug attivo tramite IntelliTrace in Visual Studio 2015 \(Editor di testo\)](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-text-editor.aspx)  
+ [Walkthrough of Live Debugging using IntelliTrace in Visual Studio 2015 (Text Editor)](http://blogs.msdn.com/b/visualstudioalm/archive/2015/01/16/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-text-editor.aspx)  
   
- [Procedura dettagliata del debug attivo tramite IntelliTrace in Visual Studio 2015 \(Social Club\)](http://blogs.msdn.com/b/visualstudioalm/archive/2000/1/1/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-social-club.aspx)  
+ [Walkthrough of Live Debugging using IntelliTrace in Visual Studio 2015 (Social Club)](http://blogs.msdn.com/b/visualstudioalm/archive/2000/1/1/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-social-club.aspx)  
   
- [IntelliTrace in Visual Studio Enterprise ora supporta l’allegato](http://blogs.msdn.com/b/visualstudioalm/archive/2015/05/14/intellitrace-in-visual-studio-enterprise-2015-now-supports-attach.aspx)  
+ [IntelliTrace in Visual Studio Enterprise 2015 now supports attach!](http://blogs.msdn.com/b/visualstudioalm/archive/2015/05/14/intellitrace-in-visual-studio-enterprise-2015-now-supports-attach.aspx)  
   
- [Raccogliere i dati da un servizio di windows utilizzando l'agente di raccolta autonomo IntelliTrace](http://blogs.msdn.com/b/visualstudioalm/archive/2015/05/14/collect-data-from-a-windows-service-using-the-intellitrace-standalone-collector.aspx)  
+ [Collect data from a windows service using the IntelliTrace Standalone Collector](http://blogs.msdn.com/b/visualstudioalm/archive/2015/05/14/collect-data-from-a-windows-service-using-the-intellitrace-standalone-collector.aspx)  
   
- [Modifica il piano di raccolta IntelliTrace](http://blogs.msdn.com/b/visualstudioalm/archive/2015/03/09/editing-the-intellitrace-collection-plan.aspx)  
+ [Editing the IntelliTrace collection plan](http://blogs.msdn.com/b/visualstudioalm/archive/2015/03/09/editing-the-intellitrace-collection-plan.aspx)  
   
- [TraceSource personalizzato e il debug con IntelliTrace](http://blogs.msdn.com/b/visualstudioalm/archive/2014/12/17/custom-tracesource-and-debugging-using-intellitrace.aspx)  
+ [Custom TraceSource and debugging using IntelliTrace](http://blogs.msdn.com/b/visualstudioalm/archive/2014/12/17/custom-tracesource-and-debugging-using-intellitrace.aspx)  
   
- [Agente di raccolta autonomo IntelliTrace e pool di applicazioni in esecuzione con account di Active Directory](http://blogs.msdn.com/b/visualstudioalm/archive/2014/12/22/intellitrace-standalone-collector-and-application-pools-running-under-active-directory-accounts.aspx)  
+ [IntelliTrace Standalone Collector and Application Pools running under Active Directory accounts](http://blogs.msdn.com/b/visualstudioalm/archive/2014/12/22/intellitrace-standalone-collector-and-application-pools-running-under-active-directory-accounts.aspx)  
   
-## Forum  
- [Debugger di Visual Studio](http://go.microsoft.com/fwlink/?LinkId=262263)  
+## <a name="forums"></a>Forums  
+ [Visual Studio Debugger](http://go.microsoft.com/fwlink/?LinkId=262263)  
   
-## Video  
- [IntelliTrace esperienza](https://channel9.msdn.com/Series/Visual-Studio-2015-Enterprise-Videos/IntelliTrace-Experience)  
+## <a name="videos"></a>Videos  
+ [IntelliTrace Experience](https://channel9.msdn.com/Series/Visual-Studio-2015-Enterprise-Videos/IntelliTrace-Experience)  
   
- [Cronologici debug con IntelliTrace in Microsoft Visual Studio Ultimate 2015](https://channel9.msdn.com/events/Ignite/2015/BRK3716)
+ [Historical Debugging with IntelliTrace in Microsoft Visual Studio Ultimate 2015](https://channel9.msdn.com/events/Ignite/2015/BRK3716)
+

@@ -1,26 +1,33 @@
 ---
-title: "Riferimenti (Runtime JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: Riferimenti (Runtime JavaScript) |Microsoft Docs
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 0bfe50da-fd79-4e00-9458-bc667769b415
 caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 29eb97427c2c5a29ee9a66e8e2a85953fd797efd
+ms.openlocfilehash: 90b22d51a79bbf6252781a49e2ac6b1749d3674f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/11/2017
+
 ---
-# Riferimenti (Runtime JavaScript)
-Tramite le API del runtime JavaScript \(JsRT\) è possibile aggiungere funzionalità di script alle applicazioni desktop e lato server in esecuzione in Windows.  
+# <a name="reference-javascript-runtime"></a>Riferimenti (Runtime JavaScript)
+Tramite le API del runtime JavaScript (JsRT) è possibile aggiungere funzionalità di script alle applicazioni desktop e lato server in esecuzione in Windows.  
   
-## In questa sezione  
+ Se si intende incorporare [ChakraCore](https://github.com/Microsoft/ChakraCore) nell'applicazione, fare invece riferimento a [ChakraCore Wiki](http://aka.ms/corejsrtref) per i riferimenti a JSRT.  
+  
+## <a name="in-this-section"></a>Contenuto della sezione  
  Typedef, costanti ed enumerazioni che supportano l'hosting di JsRT sono descritti di seguito:  
   
--   [Typedef, costanti ed enumerazioni del runtime di JavaScript](../chakra-hosting/javascript-runtime-typedefs-constants-and-enumerations.md)  
+-   [Typedef, costanti ed enumerazioni del runtime JavaScript](../chakra-hosting/javascript-runtime-typedefs-constants-and-enumerations.md)  
   
  L'hosting di JsRT viene abilitato dalle funzioni seguenti:  
   
@@ -208,7 +215,7 @@ Tramite le API del runtime JavaScript \(JsRT\) è possibile aggiungere funzional
   
 -   [Funzione JsRunSerializedScript](../chakra-hosting/jsrunserializedscript-function.md)  
   
--   [funzione JsRunSerializedScriptWithCallback](../chakra-hosting/jsrunserializedscriptwithcallback-function.md)  
+-   [Funzione JsRunSerializedScriptWithCallback](../chakra-hosting/jsrunserializedscriptwithcallback-function.md)  
   
 -   [Funzione JsSerializeScript](../chakra-hosting/jsserializescript-function.md)  
   
@@ -254,6 +261,6 @@ Tramite le API del runtime JavaScript \(JsRT\) è possibile aggiungere funzional
   
 -   [Funzione JsVariantToValue](../chakra-hosting/jsvarianttovalue-function.md)  
   
-## Vedere anche  
- [Hosting del runtime di JavaScript](../chakra-hosting/hosting-the-javascript-runtime.md)   
- [Hosting del runtime di JavaScript](../chakra-hosting/javascript-runtime-hosting.md)
+## <a name="see-also"></a>Vedere anche  
+ [Hosting del runtime JavaScript](../chakra-hosting/hosting-the-javascript-runtime.md)   
+ [Runtime JavaScript - Hosting](../chakra-hosting/javascript-runtime-hosting.md)

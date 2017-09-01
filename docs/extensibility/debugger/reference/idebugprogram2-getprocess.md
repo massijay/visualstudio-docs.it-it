@@ -1,55 +1,72 @@
 ---
-title: "IDebugProgram2::GetProcess | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgram2::GetProcess"
-helpviewer_keywords: 
-  - "IDebugProgram2::GetProcess"
+title: IDebugProgram2::GetProcess | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgram2::GetProcess
+helpviewer_keywords:
+- IDebugProgram2::GetProcess
 ms.assetid: 1d602485-ebaf-451c-9165-f2e226f20a90
 caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# IDebugProgram2::GetProcess
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 87f9a71027f072a6083ff556402ae31dc03be53f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Ottenere il processo che il programma è in esecuzione.  
+---
+# <a name="idebugprogram2getprocess"></a>IDebugProgram2::GetProcess
+Get the process that this program is running in.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetProcess(  
-   IDebugProcess2** ppProcess  
+   IDebugProcess2** ppProcess  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetProcess(  
-   out IDebugProcess2 ppProcess  
+   out IDebugProcess2 ppProcess  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `ppProcess`  
- \[out\]  restituisce [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) l'interfaccia che rappresenta il processo.  
+ [out] Returns the [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) interface that represents the process.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- A meno che il \(DE\) modulo di debug implementi [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md) l'interfaccia, l'implementazione di DE di questo metodo restituirà sempre `E_NOTIMPL` perché un DE non può determinare il processo è in esecuzione e pertanto non può soddisfare un'implementazione del metodo.  
+## <a name="remarks"></a>Remarks  
+ Unless a debug engine (DE) implements the [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md) interface, the DE's implementation of this method should always return `E_NOTIMPL` because a DE cannot determine which process it is running in and therefore cannot satisfy an implementation of this method.  
   
- Implementare l'interfaccia di `IDebugEngineLaunch2` significa che il DE necessario sapere come creare un processo; di conseguenza, l'implementazione di DE [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) dell'interfaccia può conoscere il processo è in esecuzione.  
+ Implementing the `IDebugEngineLaunch2` interface means that the DE must know how to create a process; therefore, the DE's implementation of the [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) interface is able to know what process it is running in.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   
  [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)

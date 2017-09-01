@@ -1,53 +1,67 @@
 ---
-title: "Procedura dettagliata: creazione di un database semplice di piccole dimensioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
+title: Create a SQL database by using a script | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 36f913c0-f5a7-4831-83a0-baba721ac95c
 caps.latest.revision: 14
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
+ms.openlocfilehash: bb7d40a3acba967b725676607dd852c0c3bb978d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Procedura dettagliata: creazione di un database semplice di piccole dimensioni
-In questa procedura dettagliata, viene utilizzato Visual Studio per creare un piccolo database contenente il codice di esempio in [Procedura dettagliata: creazione di un'applicazione dati semplice tramite ADO.NET](../data-tools/create-a-simple-data-application-by-using-adonet.md).  
+# <a name="create-a-sql-database-by-using-a-script"></a>Create a SQL database by using a script
+In this walkthrough, you use Visual Studio to create a small database that contains the sample code for [Create a simple data application by using ADO.NET](../data-tools/create-a-simple-data-application-by-using-adonet.md).  
   
- **In questo argomento**  
+ **In this topic**  
   
--   [Creare uno script in cui è contenuto uno schema di database](../data-tools/create-a-sql-database-by-using-a-script.md#CreateScript)  
+-   [Create a script that contains a database schema](../data-tools/create-a-sql-database-by-using-a-script.md#CreateScript)  
   
--   [Creare un progetto di database e importare uno schema](../data-tools/create-a-sql-database-by-using-a-script.md#CreateProject)  
+-   [Create a database project and import a schema](../data-tools/create-a-sql-database-by-using-a-script.md#CreateProject)  
   
--   [Distribuire il database](../data-tools/create-a-sql-database-by-using-a-script.md#DeployDatabase)  
+-   [Deploy the database](../data-tools/create-a-sql-database-by-using-a-script.md#DeployDatabase)  
   
-## Prerequisiti  
- Per completare questa procedura dettagliata è necessario avere installato [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)].  Si potrebbe inoltre essere in grado di connettersi a un server database o a un database LocalDB per il quale si dispone delle autorizzazioni per la creazione e la distribuzione di un database.  
+## <a name="prerequisites"></a>Prerequisites  
+ To complete this walkthrough, you must have SQL Server Express LocalDB, or another SQL database, installed.  
   
-##  <a name="CreateScript"></a> Creare uno script in cui è contenuto uno schema di database  
+##  <a name="CreateScript"></a> Create a script that contains a database schema  
   
-#### Per creare uno script da cui sia possibile importare uno schema  
+#### <a name="to-create-a-script-from-which-you-can-import-a-schema"></a>To create a script from which you can import a schema  
   
-1.  Nella barra dei menu di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]scegliere **File**, **Nuovo**, **File**.  
+1.  In [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], on the menu bar, select **File** > **New** > **File**.  
   
-     Viene visualizzata la finestra di dialogo **Nuovo file**.  
+     The **New File** dialog box appears.  
   
-2.  Nell'elenco **Categorie** scegliere **Generale**.  
+2.  In the **Categories** list, select **General**.  
   
-3.  Nell'elenco **Modelli** selezionare **File SQL**, quindi fare clic sul pulsante **Apri**.  
+3.  In the **Templates** list, select **Sql File**, and then select the **Open** button.  
   
-     Viene visualizzato l'editor Transact\-SQL.  
+     The Transact-SQL editor opens.  
   
-4.  Copiare il seguente codice Transact\-SQL, quindi incollarlo nell'editor Transact\-SQL.  
+4.  Copy the following Transact-SQL code, and then paste it into the Transact-SQL editor.  
   
     ```  
     PRINT N'Creating Sales...';  
@@ -209,62 +223,62 @@ In questa procedura dettagliata, viene utilizzato Visual Studio per creare un pi
     GO  
     ```  
   
-5.  Nella barra dei menu, scegliere **File**, **Salva SqlQuery\_1.sql con nome**.  
+5.  On the menu bar, select **File** > **Save SqlQuery_1.sql As...**.  
   
-     Verrà visualizzata la finestra di dialogo **Salva file con nome**.  
+     The **Save File As** dialog box appears.  
   
-6.  Nella casella **Nome file** immettere `SampleImportScript.sql`, prendere nota della posizione in cui verrà salvato il file, quindi scegliere il pulsante **Salva**.  
+6.  In the **File Name** box, enter `SampleImportScript.sql`, note the location where you'll save the file, and then select the **Save** button.  
   
-7.  Nella barra dei menu, scegliere **File**, **Chiudi soluzione**.  
+7.  On the menu bar, select **File** > **Close Solution**.  
   
-     A questo punto è possibile creare un progetto di database e quindi importare lo schema dallo script creato.  
+     Next, create a database project, and then import the schema from the script that you've created.  
   
-##  <a name="CreateProject"></a> Creare un progetto di database e importare uno schema  
+##  <a name="CreateProject"></a> Create a database project and import a schema  
   
-#### Per creare un progetto di database  
+#### <a name="to-create-a-database-project"></a>To create a database project  
   
-1.  Nella barra dei menu, scegliere **File**, **Nuovo**, **Progetto**.  
+1.  On the menu bar, select **File** > **New** > **Project**.  
   
-     Verrà visualizzata la finestra di dialogo **Nuovo progetto**.  
+     The **New Project** dialog box appears.  
   
-2.  In **Installato**, espandere il nodo **Modelli**, espandere il nodo **Altri linguaggi**, scegliere la categoria **SQL Server** e quindi scegliere il modello **Progetto di database SQL Server**.  
+2.  Under **Installed**, expand the **Templates** node, expand the **Other Languages** node, select the **SQL Server** category, and then select the **SQL Server Database Project** template.  
   
     > [!NOTE]
-    >  Il nodo **Altri linguaggi** non viene visualizzato in tutte le installazioni di Visual Studio.  
+    >  The **Other Languages** node doesn't appear in all installations of Visual Studio.  
   
-3.  Nella casella **Nome** immettere `Small Database`.  
+3.  In the **Name** box, enter `Small Database`.  
   
-4.  Selezionare la casella di controllo **Crea directory per soluzione**, se non è già selezionata.  
+4.  Select the **Create directory for solution** check box if it isn't already selected.  
   
-5.  Deselezionare la casella di controllo **Aggiungi al controllo del codice sorgente**, se non è già deselezionata, quindi scegliere il pulsante **OK**.  
+5.  Clear the **Add to source control** check box if it isn't already cleared, and then select the **OK** button.  
   
-     Il progetto di database verrà creato e visualizzato in **Esplora soluzioni**.  
+     The database project is created and appears in **Solution Explorer**.  
   
-     A questo punto, è possibile procedere all'importazione dello schema di database dallo script.  
+     Next, import the database schema from the script.  
   
-#### Per importare uno schema di database da uno script  
+#### <a name="to-import-a-database-schema-from-a-script"></a>To import a database schema from a script  
   
-1.  Nella barra dei menu, scegliere **Progetto**, **Importa**, **Script**.  
+1.  On the menu bar, select **Project** > **Import** > **Script**.  
   
-2.  Nella pagina di benvenuto, rivedere il testo e scegliere **Avanti**.  
+2.  On the **Welcome** page, review the text, and then select the **Next** button.  
   
-3.  Selezionare il pulsante di opzione **Singolo file**, quindi selezionare il pulsante **Esplora**.  
+3.  Select the **Single File** option button, and then select the **Browse** button.  
   
-     Viene visualizzata la finestra di dialogo **Importa script SQL**.  
+     The **Import SQL Script** dialog box appears.  
   
-4.  Aprire la cartella in cui è stato salvato il file SampleImportScript.sql, scegliere il file, quindi scegliere il pulsante **Apri**.  
+4.  Open the folder where you saved the SampleImportScript.sql file, select the file, and then select the **Open** button.  
   
-5.  Selezionare il pulsante **Fine** per chiudere la finestra di dialogo **Importa script SQL**.  
+5.  Select the **Finish** button to close the **Import SQL Script** dialog box.  
   
-     Lo script viene importato e gli oggetti che vi sono definiti vengono aggiunti al progetto di database.  
+     The script is imported, and the objects that the script defines are added to your database project.  
   
-6.  Esaminare il riepilogo e quindi scegliere il pulsante **Fine** per chiudere la finestra di dialogo **File di script SQL di importazione**.  
+6.  Review the summary, and then click the **Finish** button to close the **Import SQL Script File** dialog box.  
   
-7.  In **Esplora soluzioni** espandere le cartelle Vendite, Script e Sicurezza del progetto e verificare che contengano file SQL.  
+7.  In **Solution Explorer**, expand the Sales, Scripts, and Security folders of your project, and verify that they contain .sql files.  
   
-8.  In **Esplora oggetti di SQL Server** verificare che il database venga visualizzato nel nodo **Progetti**.  
+8.  In **SQL Server Object Explorer**, verify that the database appears under the **Projects** node.  
   
-     A questo punto, il database contiene solo gli oggetti di sistema, ad esempio tabelle e stored procedure.  Dopo aver distribuito il database, questo conterrà le tabelle utente e le stored procedure che definiscono gli script.  
+     At this point, the database contains only system objects, such as tables and stored procedures. After you deploy the database, it will contain the user tables and stored procedures that the scripts define.  
   
-##  <a name="DeployDatabase"></a> Distribuire il database  
- Per impostazioni predefinita, quando si preme F5, si distribuisce \(o si pubblica\) il database in un database LocalDB.  È possibile distribuire il database in un percorso diverso dalla pagina delle proprietà per il progetto, scegliendo la scheda **Debug** e quindi modificando la stringa di connessione.
+##  <a name="DeployDatabase"></a> Deploy the database  
+ When you press the **F5** key, you deploy (or publish) the database to a LocalDB database by default. You can deploy the database to a different location by opening the properties page for the project, selecting the **Debug** tab, and then changing the connection string.

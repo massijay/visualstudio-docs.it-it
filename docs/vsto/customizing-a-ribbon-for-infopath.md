@@ -1,72 +1,76 @@
 ---
-title: "Personalizzazione di una barra multifunzione per InfoPath"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "InfoPath [sviluppo per Office in Visual Studio], Ribbon"
-  - "Ribbon [sviluppo per Office in Visual Studio], InfoPath"
+title: Customizing a Ribbon for InfoPath | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- InfoPath [Office development in Visual Studio], Ribbon
+- Ribbon [Office development in Visual Studio], InfoPath
 ms.assetid: 498c6457-679a-46f2-939f-c0597a17b7ec
 caps.latest.revision: 19
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 18
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: befccdbf740c8ff166cb9d57e1998b07a1c24619
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Personalizzazione di una barra multifunzione per InfoPath
-  Quando si personalizza la barra multifunzione in Microsoft Office InfoPath, è necessario considerare la posizione in cui la barra multifunzione personalizzata verrà visualizzata nell'applicazione. In [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] è possibile visualizzare la barra multifunzione nei tre tipi seguenti di finestre dell'applicazione InfoPath:  
+# <a name="customizing-a-ribbon-for-infopath"></a>Customizing a Ribbon for InfoPath
+  When you customize the Ribbon in Microsoft Office InfoPath, you must consider where your custom Ribbon will appear in the application. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] can display the Ribbon in the following three types of InfoPath application windows:  
   
--   Finestre in cui viene visualizzato un modello di form aperto in modalità di progettazione.  
+-   Windows that display a form template that is opened in design mode.  
   
--   Finestre in cui è visualizzato un form basato su un modello di form.  
+-   Windows that display a form that is based on a form template.  
   
--   Finestra Anteprima di stampa.  
+-   The Print Preview window.  
   
- **Si applica a:** le informazioni in questo argomento si applicano a progetti di componente aggiuntivo VSTO per InfoPath 2010. Per altre informazioni, vedere [Funzionalità disponibili in base ai tipi di progetto e applicazioni di Office](../vsto/features-available-by-office-application-and-project-type.md).  
+ **Applies to:** The information in this topic applies to VSTO Add-in projects for InfoPath 2010. For more information, see [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md).  
   
- Utenti e progettisti aprono un modello di form in modalità di progettazione per modificarne l'aspetto e il layout. Gli utenti aprono i form basati su un modello di form per aggiungere contenuto.  
+ Users and designers open a form template in design mode to modify the appearance and layout of the template. Users open forms that are based in a form template to add content.  
   
- La finestra Anteprima di stampa consente ai progettisti e agli utenti di visualizzare in anteprima le pagine di un form o di un modello di form prima della stampa.  
+ The Print Preview window enables designers and users to preview the pages of a form or form template before they print them.  
   
 > [!NOTE]  
->  La scheda **AddIns** non è presente nella finestra Anteprima di stampa. Se si vuole visualizzare una scheda personalizzata nella finestra Anteprima di stampa, verificare che la proprietà **OfficeId** della scheda non sia impostata su **TabAddIns**.  
+>  The **AddIns** tab does not appear in the Print Preview window. If you want a custom tab to appear in the Print Preview window, make sure that the **OfficeId** property of the tab is not set to **TabAddIns**.  
   
- È necessario specificare il tipo di barra multifunzione di ogni finestra in cui si vuole visualizzare la barra multifunzione.  
+ You must specify the Ribbon type of each window in which you want your Ribbon to appear.  
   
-## Specifica del tipo di barra multifunzione nella finestra di progettazione della barra multifunzione  
- Se si usa l'elemento **Barra multifunzione \(finestra di progettazione visiva\)**, fare clic sulla proprietà **RibbonType** della barra multifunzione nella finestra **Proprietà**, quindi selezionare uno degli ID indicati nella tabella seguente.  
+## <a name="specifying-the-ribbon-type-in-the-ribbon-designer"></a>Specifying the Ribbon Type in the Ribbon Designer  
+ If you are using the **Ribbon (Visual Designer)** item, click the **RibbonType** property of the Ribbon in the **Properties** window, and then select any of the Ribbon ID's described in the following table.  
   
-|ID della barra multifunzione|Finestra in cui verrà visualizzata la barra multifunzione all'esecuzione del progetto|  
-|----------------------------------|-------------------------------------------------------------------------------------------|  
-|**Microsoft.InfoPath.Designer**|Finestre in cui viene visualizzato un modello di form aperto in modalità di progettazione.|  
-|**Microsoft.InfoPath.Editor**|Finestre in cui è visualizzato un form basato su un modello di form.|  
-|**Microsoft.InfoPath.PrintPreview**|Finestra Anteprima di stampa.|  
+|Ribbon ID|Window in which the Ribbon will appear when you run the project|  
+|---------------|---------------------------------------------------------------------|  
+|**Microsoft.InfoPath.Designer**|Windows that display a form template that is opened in design mode.|  
+|**Microsoft.InfoPath.Editor**|Windows that display a form that is based on a form template.|  
+|**Microsoft.InfoPath.PrintPreview**|The Print Preview window.|  
   
- È possibile aggiungere più barre multifunzione a un progetto. Se più barre multifunzione condividono uno stesso ID di barra, eseguire l'override del metodo CreateRibbonExtensibilityObject nella classe `ThisAddin` del progetto per specificare la barra multifunzione da visualizzare in fase di esecuzione. Per altre informazioni, vedere [Cenni preliminari sulla barra multifunzione](../vsto/ribbon-overview.md).  
+ You can add more than one Ribbon to a project. If more than one Ribbon share a Ribbon ID, override the CreateRibbonExtensibilityObject method in the `ThisAddin` class of your project to specify which Ribbon to display at run time. For more information, see [Ribbon Overview](../vsto/ribbon-overview.md).  
   
-## Specifica del tipo di barra multifunzione con l'elemento XML della barra multifunzione  
- Se si usa l'elemento **Barra multifunzione \(XML\)**, controllare il valore del parametro *ribbonID* nel metodo <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> e restituire la barra multifunzione appropriata.  
+## <a name="specifying-the-ribbon-type-by-using-ribbon-xml"></a>Specifying the Ribbon Type by Using Ribbon XML  
+ If you are using the **Ribbon (XML)** item, check the value of the *ribbonID* parameter in the <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> method and return the appropriate Ribbon.  
   
- Il metodo <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> viene generato automaticamente da Visual Studio nel file di codice della barra multifunzione. Il parametro *ribbonID* è una stringa che identifica il tipo di finestra di InfoPath che viene aperto.  
+ The <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> method is automatically generated by Visual Studio in the Ribbon code file. The *ribbonID* parameter is a string that identifies the type of InfoPath window that is opening.  
   
- Nell'esempio di codice seguente viene illustrato come visualizzare una barra multifunzione personalizzata solo in una finestra che visualizza un modello di form in modalità di progettazione. La barra multifunzione da visualizzare viene specificata nel metodo `GetResourceText()`, generato nella classe Ribbon. Per altre informazioni sulla classe Ribbon, vedere [Elemento XML della barra multifunzione](../vsto/ribbon-xml.md).  
+ The following code example demonstrates how to display a custom Ribbon only in a window that displays a form template in design mode. The Ribbon to display is specified in the `GetResourceText()` method, which is generated in the Ribbon class. For more information about the Ribbon class, see [Ribbon XML](../vsto/ribbon-xml.md).  
   
- [!code-csharp[Trin_RibbonInfoPathBasic#1](../snippets/csharp/VS_Snippets_OfficeSP/trin_ribboninfopathbasic/cs/ribbon.cs#1)]
- [!code-vb[Trin_RibbonInfoPathBasic#1](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_ribboninfopathbasic/vb/ribbon.vb#1)]  
+ [!code-csharp[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/CSharp/myinfopathproject/ribbon.cs#1)] [!code-vb[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/VisualBasic/myinfopathproject/ribbon.vb#1)]  
   
-## Vedere anche  
- [Accesso alla barra multifunzione in fase di esecuzione](../vsto/accessing-the-ribbon-at-run-time.md)   
- [Cenni preliminari sulla barra multifunzione](../vsto/ribbon-overview.md)   
- [Finestra di progettazione della barra multifunzione](../vsto/ribbon-designer.md)   
- [Elemento XML della barra multifunzione](../vsto/ribbon-xml.md)  
+## <a name="see-also"></a>See Also  
+ [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
+ [Ribbon Overview](../vsto/ribbon-overview.md)   
+ [Ribbon Designer](../vsto/ribbon-designer.md)   
+ [Ribbon XML](../vsto/ribbon-xml.md)  
   
   

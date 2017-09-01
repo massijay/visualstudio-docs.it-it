@@ -1,30 +1,47 @@
 ---
-title: "CA1412: Contrassegnare le interfacce ComSource come IDispatch | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MarkComSourceInterfacesAsIDispatch"
-  - "CA1412"
-helpviewer_keywords: 
-  - "CA1412"
-  - "MarkComSourceInterfacesAsIDispatch"
+title: 'CA1412: Mark ComSource Interfaces as IDispatch | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MarkComSourceInterfacesAsIDispatch
+- CA1412
+helpviewer_keywords:
+- CA1412
+- MarkComSourceInterfacesAsIDispatch
 ms.assetid: 131a7563-0410-443c-a8f5-52104250cfb4
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1412: Contrassegnare le interfacce ComSource come IDispatch
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 0a12e8ed8b7ef2d64c53837eca32f3823fc421d3
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1412-mark-comsource-interfaces-as-idispatch"></a>CA1412: Mark ComSource Interfaces as IDispatch
 |||  
 |-|-|  
 |TypeName|MarkComSourceInterfacesAsIDispatch|  
@@ -32,27 +49,26 @@ manager: "wpickett"
 |Category|Microsoft.Interoperability|  
 |Breaking Change|Breaking|  
   
-## Causa  
- Un tipo è contrassegnato con l'attributo <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> e almeno una delle interfacce specificate non è contrassegnata con l'attributo <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> impostato sul valore di `InterfaceIsDispatch`.  
+## <a name="cause"></a>Cause  
+ A type is marked with the <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> attribute and at least one specified interface is not marked with the <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> attribute set to the `InterfaceIsDispatch` value.  
   
-## Descrizione della regola  
- L'oggetto <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> consente di identificare le interfacce di eventi che una classe espone ai client COM \(Component Object Model\).  Tali interfacce devono essere esposte come `InterfaceIsIDispatch` per consentire ai client COM di Visual Basic 6 di ricevere notifiche di eventi.  Per impostazione predefinita, se un'interfaccia non viene contrassegnata dall'attributo <xref:System.Runtime.InteropServices.InterfaceTypeAttribute>, essa viene esposta come interfaccia duale.  
+## <a name="rule-description"></a>Rule Description  
+ <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> is used to identify the event interfaces that a class exposes to Component Object Model (COM) clients. These interfaces must be exposed as `InterfaceIsIDispatch` to enable Visual Basic 6 COM clients to receive event notifications. By default, if an interface is not marked with the <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> attribute, it is exposed as a dual interface.  
   
-## Come correggere le violazioni  
- Per correggere una violazione di questa regola, aggiungere o modificare l'attributo <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> in modo che il relativo valore sia impostato su InterfaceIsIDispatch per tutte le interfacce specificate con l'attributo <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, add or modify the <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> attribute so that its value is set to InterfaceIsIDispatch for all interfaces that are specified with the <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> attribute.  
   
-## Esclusione di avvisi  
- Non escludere un avviso da questa regola.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## Esempio  
- Nell'esempio illustrato di seguito viene visualizzata una classe in cui una delle interfacce viola la regola.  
+## <a name="example"></a>Example  
+ The following example shows a class where one of the interfaces violates the rule.  
   
- [!code-cs[FxCop.Interoperability.MarkIDispatch#1](../code-quality/codesnippet/CSharp/ca1412-mark-comsource-interfaces-as-idispatch_1.cs)]
- [!code-vb[FxCop.Interoperability.MarkIDispatch#1](../code-quality/codesnippet/VisualBasic/ca1412-mark-comsource-interfaces-as-idispatch_1.vb)]  
+ [!code-csharp[FxCop.Interoperability.MarkIDispatch#1](../code-quality/codesnippet/CSharp/ca1412-mark-comsource-interfaces-as-idispatch_1.cs)] [!code-vb[FxCop.Interoperability.MarkIDispatch#1](../code-quality/codesnippet/VisualBasic/ca1412-mark-comsource-interfaces-as-idispatch_1.vb)]  
   
-## Regole correlate  
- [CA1408: Non utilizzare AutoDual ClassInterfaceType](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1408: Do not use AutoDual ClassInterfaceType](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)  
   
-## Vedere anche  
- [How to: Raise Events Handled by a COM Sink](http://msdn.microsoft.com/it-it/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd)   
- [Interoperating with Unmanaged Code](../Topic/Interoperating%20with%20Unmanaged%20Code.md)
+## <a name="see-also"></a>See Also  
+ [How to: Raise Events Handled by a COM Sink](http://msdn.microsoft.com/en-us/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd)   
+ [Interoperating with Unmanaged Code](/dotnet/framework/interop/index)

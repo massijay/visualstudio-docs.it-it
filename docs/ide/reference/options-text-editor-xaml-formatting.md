@@ -56,15 +56,13 @@ ms.contentlocale: it-it
 ms.lasthandoff: 05/30/2017
 
 ---
-# Opzioni, Editor di testo, XAML, Formattazione
-<a id="options-text-editor-xaml-formatting" class="xliff"></a>
+# <a name="options-text-editor-xaml-formatting"></a>Opzioni, Editor di testo, XAML, Formattazione
 Usare la pagina delle proprietà **Formattazione** per specificare la formattazione di elementi e attributi nei documenti XAML. Per aprire la finestra di dialogo **Opzioni**, fare clic sul menu **Strumenti** e quindi su **Opzioni**. Per accedere alla finestra delle proprietà **Formattazione**, espandere **Editor di testo**, **XAML** e il nodo **Formattazione**.  
 
 > [!NOTE]
 >  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).  
 
-## Eventi di formattazione automatica
-<a id="auto-formatting-events" class="xliff"></a>  
+## <a name="auto-formatting-events"></a>Eventi di formattazione automatica  
  La formattazione automatica può verificarsi quando vengono rilevati gli eventi seguenti.  
 
 -   Completamento di un tag di fine o un tag semplice.  
@@ -83,8 +81,7 @@ Usare la pagina delle proprietà **Formattazione** per specificare la formattazi
 |**Al completamento del tag di inizio**|La formattazione automatica si verifica quando si finisce di digitare un tag di inizio.|  
 |**All'inserimento degli Appunti**|La formattazione automatica si verifica quando si incolla XAML dagli Appunti nella visualizzazione XAML.|  
 
-## Stile virgolette
-<a id="quotation-mark-style" class="xliff"></a>  
+## <a name="quotation-mark-style"></a>Stile virgolette  
  Questa impostazione indica se i valori di attributo sono racchiusi tra virgolette singole o doppie. Il formattatore automatico e il completamento automatico IntelliSense usano questa impostazione.  
 
  Dopo l'impostazione, questa opzione viene applicata solo agli attributi aggiunti successivamente usando la finestra di progettazione o manualmente nella visualizzazione XAML.  
@@ -94,8 +91,7 @@ Usare la pagina delle proprietà **Formattazione** per specificare la formattazi
 |**Virgolette doppie (")**|I valori di attributo sono racchiusi tra virgolette doppie.<br /><br /> `<Button Name="button1">Hello</Button>`|  
 |**Virgolette singole (')**|I valori di attributo sono racchiusi tra virgolette singole.<br /><br /> `<Button Name='button1'>Hello</Button>`|  
 
-## Ritorno a capo dei tag
-<a id="tag-wrapping" class="xliff"></a>  
+## <a name="tag-wrapping"></a>Ritorno a capo dei tag  
  È possibile specificare una lunghezza di riga per il ritorno a capo dei tag. Quando il ritorno a capo dei tag è abilitato, verrà applicato il ritorno a capo appropriato a qualsiasi XAML aggiunto successivamente usando la finestra di progettazione.  
 
 |||  
@@ -103,8 +99,7 @@ Usare la pagina delle proprietà **Formattazione** per specificare la formattazi
 |**Testo a capo per i tag che eccedono la lunghezza specificata**|Specifica se il ritorno a capo viene applicato alle righe alla lunghezza di riga specificata da **Lunghezza**.|  
 |**Lunghezza**|Il numero di caratteri che una riga può contenere. Se necessario, alcune righe XAML possono superare la lunghezza di riga specificata.|  
 
-## Spaziatura attributi
-<a id="attribute-spacing" class="xliff"></a>  
+## <a name="attribute-spacing"></a>Spaziatura attributi  
  Usare questa impostazione per controllare la disposizione degli attributi nel documento XAML  
 
 |||  
@@ -114,8 +109,7 @@ Usare la pagina delle proprietà **Formattazione** per specificare la formattazi
 |**Posiziona ogni attributo su una riga diversa**|Ogni attributo occupa una riga. Ciò è utile quando presenti molti attributi.<br /><br /> `<Button`<br /><br /> `Height="23"`<br /><br /> `Name="button1"`<br /><br /> `Width="75">Hello</Button>`|  
 |**Posiziona il primo attributo sulla stessa riga del tag di inizio**|Se questa opzione è selezionata, il primo attributo viene visualizzato sulla stessa riga del tag di inizio dell'elemento.<br /><br /> `<Button Height="23"`<br /><br /> `Name="button1"`<br /><br /> `Width="75">Hello</Button>`|  
 
-## Spaziatura elementi
-<a id="element-spacing" class="xliff"></a>  
+## <a name="element-spacing"></a>Spaziatura elementi  
  Usare questa impostazione per controllare la disposizione degli elementi nel documento XAML  
 
 |||  
@@ -124,8 +118,7 @@ Usare la pagina delle proprietà **Formattazione** per specificare la formattazi
 |**Comprimi più righe vuote nel contenuto in una sola riga**|Le righe vuote nel contenuto dell'elemento vengono compresse in una singola riga.<br /><br /> `<Grid>`<br /><br /> ``<br /><br /> `<Button Name="button1">Hello</Button>`<br /><br /> ``<br /><br /> `</Grid>`|  
 |**Rimuovi le righe vuote nel contenuto**|Tutte le righe vuote nel contenuto dell'elemento vengono rimosse.<br /><br /> `<Grid>`<br /><br /> `<Button Name="button1">Hello</Button>`<br /><br /> `</Grid>`|  
 
-## Sezione Varie, Inserimento automatico
-<a id="miscellaneous-section-auto-insert" class="xliff"></a>  
+## <a name="miscellaneous-section-auto-insert"></a>Sezione Varie, Inserimento automatico  
  Usare questa impostazione per controllare la generazione automatica di tag e virgolette.  
 
 |||  
@@ -135,8 +128,7 @@ Usare la pagina delle proprietà **Formattazione** per specificare la formattazi
 |**Parentesi graffe di chiusura per MarkupExtensions**|Specifica se una parentesi graffa di chiusura dell'estensione del markup (}) viene generata automaticamente quando si digita il carattere di parentesi graffa di apertura ({).|  
 |**Virgole per separare i parametri di MarkupExtension**|Specifica se vengono generate le virgole quando si digita più di un parametro in un'estensione di markup.|  
 
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [XAML in WPF](/dotnet/framework/wpf/advanced/xaml-in-wpf)   
  [Procedura: Modificare le impostazioni di visualizzazione XAML](http://msdn.microsoft.com/en-us/aee87c79-ca01-4f84-8fb7-a9e47048ee47)   
  [Procedure dettagliate relative all'uso di XAML e del codice](http://msdn.microsoft.com/en-us/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c)

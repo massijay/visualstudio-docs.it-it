@@ -1,47 +1,51 @@
 ---
-title: "Procedura: utilizzare l&#39;interfaccia utente multilingue (MUI) di Office"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "globalizzazione [sviluppo per Office in Visual Studio], destinazione dell'interfaccia utente"
-  - "localizzazione [sviluppo per Office in Visual Studio], destinazione dell'interfaccia utente"
-  - "MUI [sviluppo per Office in Visual Studio]"
-  - "Multilingual User Interface [sviluppo per Office in Visual Studio]"
-  - "Applicazioni Office [sviluppo per Office in Visual Studio], globalizzazione"
-  - "Applicazioni Office [sviluppo per Office in Visual Studio], localizzazione"
+title: 'How to: Target the Office Multilingual User Interface | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- globalization [Office development in Visual Studio], user interface targeting
+- MUI [Office development in Visual Studio]
+- Office applications [Office development in Visual Studio], localization
+- Multilingual User Interface [Office development in Visual Studio]
+- localization [Office development in Visual Studio], user interface targeting
+- Office applications [Office development in Visual Studio], globalization
 ms.assetid: b1f03164-f0cf-42e3-942b-8cf90c242ffb
 caps.latest.revision: 30
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 29
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 424211704500cb93b37a78a799ddbe06872559b5
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Procedura: utilizzare l&#39;interfaccia utente multilingue (MUI) di Office
-  L'interfaccia utente multilingue \(MUI, Multilingual User Interface\) costituisce una funzionalità di Microsoft Office che offre all'utente finale la possibilità di modificare la lingua dell'interfaccia utente.  Un utente che utilizza un'interfaccia utente in inglese, ad esempio, può modificarne la lingua in modo da utilizzare lo spagnolo.  
+# <a name="how-to-target-the-office-multilingual-user-interface"></a>How to: Target the Office Multilingual User Interface
+  The Multilingual User Interface (MUI) is a Microsoft Office feature that gives the end user the ability to change the language of the user interface (UI). For example, an end user working with an English UI can change the language of the UI to Spanish.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- Se l'applicazione è destinata a utenti che utilizzano più lingue di Office, è possibile aggiungere codice per modificare automaticamente la lingua delle stringhe dell'interfaccia utente in base alla lingua utilizzata in Office sul computer dell'utente, a condizione che vi siano installate le risorse corrette.  
+ If your application will be used by people who use multiple languages of Office, you can add code to automatically change the language of your UI strings to match the language being used by Office on the user's computer (if the user has the correct resources installed).  
   
-### Per verificare l'impostazione corrente dell'interfaccia utente di Office  
+### <a name="to-check-the-current-office-ui-setting"></a>To check the current Office UI setting  
   
-1.  Utilizzare la proprietà <xref:System.Threading.Thread.CurrentUICulture%2A> del thread corrente.  Impostare la lingua delle stringhe dell'interfaccia utente in modo che corrisponda a quella utilizzata nella versione di Office attualmente in esecuzione nel computer dell'utente.  
+1.  Use the <xref:System.Threading.Thread.CurrentUICulture%2A> property of the current thread. Set the language of your UI strings to match the language being used by the version of Office currently running on the user's computer.  
   
-     [!code-csharp[Trin_VstcoreCreatingExcel#10](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreCreatingExcel/CS/Sheet1.cs#10)]
-     [!code-vb[Trin_VstcoreCreatingExcel#10](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreCreatingExcel/VB/Sheet1.vb#10)]  
+     [!code-vb[Trin_VstcoreCreatingExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#10)]  [!code-csharp[Trin_VstcoreCreatingExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#10)]  
   
-## Vedere anche  
- [Procedura: sviluppare applicazioni di Office mediante gli assembly di interoperabilità primari](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
- [Associazione tardiva nelle soluzioni Office](../vsto/late-binding-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [How to: Target Office Applications Through Primary Interop Assemblies](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
+ [Late Binding in Office Solutions](../vsto/late-binding-in-office-solutions.md)  
   
   

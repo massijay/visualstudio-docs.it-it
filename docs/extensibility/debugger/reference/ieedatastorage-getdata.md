@@ -1,5 +1,5 @@
 ---
-title: IEEDataStorage::GetData | Documenti di Microsoft
+title: IEEDataStorage::GetData | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 2e2430a6b2e8ae1a39882611e55499ebdb9bf4d8
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: f9642911606d9bbd72382fa1209484cded9bdf74
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="ieedatastoragegetdata"></a>IEEDataStorage::GetData
-Recupera il numero specificato di byte dall'oggetto.  
+Retrieves the specified number of bytes from the object.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetData(  
    ULONG  dataSize,  
    ULONG* sizeGotten,  
@@ -49,7 +50,7 @@ HRESULT GetData(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetData(  
    uint     dataSize,  
    out uint sizeGotten,  
@@ -57,22 +58,22 @@ int GetData(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `dataSize`  
- [in] Il numero di byte da recuperare (il `data` matrice deve contenere almeno questo numero di byte).  
+ [in] The number of bytes to retrieve (the `data` array must hold at least this number of bytes).  
   
  `sizeGotten`  
- [out] Restituisce il numero di byte effettivamente recuperati.  
+ [out] Returns the number of bytes actually retrieved.  
   
  `data`  
- [in, out] Matrice da riempire con i dati richiesti.  
+ [in, out] Array to be filled in with the requested data.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Note  
- L'utilizzo di questo metodo consigliato consiste nel recuperare tutti i byte di dati in una matrice locale, poiché non è possibile ignorare in byte del processo di recupero. In questo caso, il parametro `dataSize` deve essere il valore restituito dal [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md) metodo.  
+## <a name="remarks"></a>Remarks  
+ The recommended use of this method is to retrieve all the data bytes into a local array, since there is no way to skip over bytes in the retrieval process. In this case, the parameter `dataSize` should be the value returned by the [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md) method.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   
  [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md)

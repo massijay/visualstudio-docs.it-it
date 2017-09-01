@@ -1,63 +1,65 @@
 ---
-title: "Procedura: applicare il colore a intervalli di Excel a livello di codice"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "colore, intervalli di Excel"
-  - "formattazione [sviluppo per Office in Visual Studio]"
-  - "intervalli, applicazione di colore"
+title: 'How to: Programmatically Apply Color to Excel Ranges | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- formatting [Office development in Visual Studio]
+- color, Excel ranges
+- ranges, applying color
 ms.assetid: a9c40229-5308-459a-9216-7e13d82c7cb5
 caps.latest.revision: 47
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 46
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 6407cd7fee22f42eeea5f89558116291c79dd233
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Procedura: applicare il colore a intervalli di Excel a livello di codice
-  Per applicare un colore al testo all'interno di un intervallo di celle, utilizzare un controllo <xref:Microsoft.Office.Tools.Excel.NamedRange> o un oggetto intervallo nativo di Excel.  
+# <a name="how-to-programmatically-apply-color-to-excel-ranges"></a>How to: Programmatically Apply Color to Excel Ranges
+  To apply a color to text within a range of cells, use a <xref:Microsoft.Office.Tools.Excel.NamedRange> control or a native Excel range object.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## Utilizzo di un controllo NamedRange  
- Questo esempio è valido per personalizzazioni a livello di documento.  
+## <a name="using-a-namedrange-control"></a>Using a NamedRange Control  
+ This example is for document-level customizations.  
   
-#### Per applicare un colore a un controllo NamedRange  
+#### <a name="to-apply-color-to-a-namedrange-control"></a>To apply color to a NamedRange control  
   
-1.  Creare un controllo <xref:Microsoft.Office.Tools.Excel.NamedRange> in corrispondenza della cella A1.  
+1.  Create a <xref:Microsoft.Office.Tools.Excel.NamedRange> control at cell A1.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#65](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#65)]
-     [!code-vb[Trin_VstcoreExcelAutomation#65](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#65)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#65](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#65)]  [!code-vb[Trin_VstcoreExcelAutomation#65](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#65)]  
   
-2.  Impostare il colore del testo nel controllo <xref:Microsoft.Office.Tools.Excel.NamedRange>.  
+2.  Set the color of the text in the <xref:Microsoft.Office.Tools.Excel.NamedRange> control.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#66](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#66)]
-     [!code-vb[Trin_VstcoreExcelAutomation#66](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#66)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#66](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#66)]  [!code-vb[Trin_VstcoreExcelAutomation#66](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#66)]  
   
-## Utilizzo di intervalli nativi di Excel  
+## <a name="using-native-excel-ranges"></a>Using Native Excel Ranges  
   
-#### Per applicare un colore a un oggetto intervallo nativo di Excel  
+#### <a name="to-apply-color-to-a-native-excel-range-object"></a>To apply color to a native Excel range object  
   
-1.  Creare un intervallo in corrispondenza della cella A1 e impostare il colore del testo.  
+1.  Create a range at cell A1 and then set the color of the text.  
   
-     [!code-csharp[Trin_VstcoreExcelAutomation#67](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#67)]
-     [!code-vb[Trin_VstcoreExcelAutomation#67](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#67)]  
+     [!code-csharp[Trin_VstcoreExcelAutomation#67](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#67)]  [!code-vb[Trin_VstcoreExcelAutomation#67](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#67)]  
   
-## Vedere anche  
- [Utilizzo degli intervalli](../vsto/working-with-ranges.md)   
- [Controllo NamedRange](../vsto/namedrange-control.md)   
- [Procedura: Applicare stili agli intervalli nei fogli di lavoro a livello di codice](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
- [Procedura: fare riferimento agli intervalli dei fogli di lavoro nel codice a livello di codice](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   
- [Automazione di Excel usando oggetti estesi](../vsto/automating-excel-by-using-extended-objects.md)   
- [Parametri facoltativi nelle soluzioni Office](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Working with Ranges](../vsto/working-with-ranges.md)   
+ [NamedRange Control](../vsto/namedrange-control.md)   
+ [How to: Programmatically Apply Styles to Ranges in Workbooks](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
+ [How to: Programmatically Refer to Worksheet Ranges in Code](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   
+ [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   
   

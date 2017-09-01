@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::GetMethodLocationProperty | Documenti di Microsoft
+title: IDebugExpressionEvaluator::GetMethodLocationProperty | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: bdb0598a62de6b16ae8843d61b9346cb86d5cc9e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 592a3401d0f9712a78fcab9cf1056b05c6a746b8
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugexpressionevaluatorgetmethodlocationproperty"></a>IDebugExpressionEvaluator::GetMethodLocationProperty
-Questo metodo converte un percorso di metodo e l'offset in un indirizzo di memoria.  
+This method converts a method location and offset into a memory address.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetMethodLocationProperty(   
    LPCOLESTR             upstrFullyQualifiedMethodPlusOffset,  
    IDebugSymbolProvider* pSymbolProvider,  
@@ -51,7 +52,7 @@ HRESULT GetMethodLocationProperty(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetMethodLocationProperty(  
    string               upstrFullyQualifiedMethodPlusOffset,   
    IDebugSymbolProvider pSymbolProvider,   
@@ -61,31 +62,31 @@ int GetMethodLocationProperty(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `upstrFullyQualifiedMethodPlusOffset`  
- [in] Il percorso di metodo e l'offset, espresso come stringa.  
+ [in] The method location and offset, expressed as a string.  
   
  `pSymbolProvider`  
- [in] Il provider di simboli espresso come un [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) oggetto.  
+ [in] The symbol provider expressed as an [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) object.  
   
  `pAddress`  
- [in] Un indirizzo all'interno del metodo, espresso come un [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) oggetto.  
+ [in] An address within the method, expressed as an [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) object.  
   
  `pBinder`  
- [in] Il gestore di associazione espresso come un [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) oggetto.  
+ [in] The binder expressed as an [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) object.  
   
  `ppProperty`  
- [out] Restituisce un [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) interfaccia che rappresenta l'indirizzo di memoria.  
+ [out] Returns an [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) interface that represents the memory address.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Note  
- L'indirizzo restituito può essere utilizzato per impostare un punto di interruzione, ad esempio.  
+## <a name="remarks"></a>Remarks  
+ The returned address can be used to set a breakpoint, for example.  
   
- Nonostante il nome `upstrFullyQualifiedMethodPlusOffset`, questo parametro può essere passato un nome di metodo parziale. In tal caso, il metodo selezionato è quello che racchiude `pAddress`. Modalità di interpretazione di questo parametro è l'implementazione dell'analizzatore di espressioni e la lingua supportata.  
+ Despite the name `upstrFullyQualifiedMethodPlusOffset`, this parameter can be passed a partially qualified method name. In that case, the selected method is the one that encloses `pAddress`. How this parameter is interpreted is up to the implementation of the expression evaluator and the language it supports.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   

@@ -1,51 +1,68 @@
 ---
-title: "IDebugStackFrame2::GetName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugStackFrame2::GetName"
-helpviewer_keywords: 
-  - "IDebugStackFrame2::GetName"
+title: IDebugStackFrame2::GetName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugStackFrame2::GetName
+helpviewer_keywords:
+- IDebugStackFrame2::GetName
 ms.assetid: 069d4f96-363f-404e-9c89-5318c4c9821b
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugStackFrame2::GetName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e1d2f407fcb6dc4ab9d26a8cd47804310c2b8e4f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Ottiene il nome dello stack frame.  
+---
+# <a name="idebugstackframe2getname"></a>IDebugStackFrame2::GetName
+Gets the name of the stack frame.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetName (   
-   BSTR* pbstrName  
+```cpp  
+HRESULT GetName (   
+   BSTR* pbstrName  
 );  
 ```  
   
-```c#  
-int GetName (   
-   out string pbstrName  
+```csharp  
+int GetName (   
+   out string pbstrName  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pbstrName`  
- \[out\]  Restituisce il nome dello stack frame.  
+ [out] Returns the name of the stack frame.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- Il nome di uno stack frame in genere è il nome del metodo eseguito.  
+## <a name="remarks"></a>Remarks  
+ The name of a stack frame is typically the name of the method being executed.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

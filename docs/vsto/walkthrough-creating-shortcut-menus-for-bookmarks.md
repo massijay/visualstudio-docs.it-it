@@ -1,118 +1,122 @@
 ---
-title: "Procedura dettagliata: creazione di menu di scelta rapida per segnalibri"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Bookmark (controllo), eventi"
-  - "menu di scelta rapida, Word"
-  - "menu, creazione in applicazioni Office"
-  - "menu di scelta rapida, Word"
+title: 'Walkthrough: Creating Shortcut Menus for Bookmarks | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- context menus, Word
+- Bookmark control, events
+- shortcut menus, Word
+- menus, creating in Office applications
 ms.assetid: 86dbf3ff-ba75-42f9-8df6-abfc19b3cf6b
 caps.latest.revision: 57
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 53
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 2479bc8afdf4f02b586e4631d75fcf884bb2271e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Procedura dettagliata: creazione di menu di scelta rapida per segnalibri
-  In questa procedura dettagliata viene illustrato come creare menu di scelta rapida per i controlli <xref:Microsoft.Office.Tools.Word.Bookmark> in una personalizzazione a livello di documento per Word.  Quando un utente fa clic con il pulsante destro del mouse sul testo di un segnalibro, il sistema visualizza un menu di scelta rapida contenente alcune opzioni di formattazione del testo.  
+# <a name="walkthrough-creating-shortcut-menus-for-bookmarks"></a>Walkthrough: Creating Shortcut Menus for Bookmarks
+  This walkthrough demonstrates how to create shortcut menus for <xref:Microsoft.Office.Tools.Word.Bookmark> controls in a document-level customization for Word. When a user right-clicks the text in a bookmark, a shortcut menu appears and gives the user options for formatting the text.  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
- In questa procedura dettagliata vengono illustrate le attività seguenti:  
+ This walkthrough illustrates the following tasks:  
   
--   [Creazione del progetto](#BKMK_CreateProject).  
+-   [Creating the Project](#BKMK_CreateProject).  
   
--   [Aggiunta di testo e segnalibri al documento](#BKMK_addtextandbookmarks).  
+-   [Adding Text and Bookmarks to the Document](#BKMK_addtextandbookmarks).  
   
--   [Aggiunta di controlli a un menu di scelta rapida](#BKMK_AddCmndsShortMenu).  
+-   [Adding Commands to a Shortcut Menu](#BKMK_AddCmndsShortMenu).  
   
--   [Formattare il testo in un segnalibro](#BKMK_formattextbkmk).  
+-   [Format the Text in the Bookmark](#BKMK_formattextbkmk).  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## Prerequisiti  
- Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
--   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] o [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]  
+-   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] or [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]  
   
-##  <a name="BKMK_CreateProject"></a> Creazione del progetto  
- Il primo passaggio consiste nel creare un progetto Documento di Word in Visual Studio.  
+##  <a name="BKMK_CreateProject"></a> Creating the Project  
+ The first step is to create a Word document project in Visual Studio.  
   
-#### Per creare un nuovo progetto  
+#### <a name="to-create-a-new-project"></a>To create a new project  
   
--   Creare un progetto Documento di Word denominato My Bookmark Shortcut Menu.  Nella procedura guidata, scegliere **Crea un nuovo documento**.  Per ulteriori informazioni, vedere [Procedura: creare progetti di Office in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+-   Create a Word document project that has the name **My Bookmark Shortcut Menu**. In the wizard, select **Create a new document**. For more information, see [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     Il nuovo documento di Word verrà aperto nella finestra di progettazione e il progetto **My Bookmark Shortcut Menu** verrà aggiunto in **Esplora soluzioni**.  
+     Visual Studio opens the new Word document in the designer and adds the **My Bookmark Shortcut Menu** project to **Solution Explorer**.  
   
-##  <a name="BKMK_addtextandbookmarks"></a> Aggiunta di testo e segnalibri al documento  
- Aggiungere testo al documento e quindi aggiungere due segnalibri sovrapposti.  
+##  <a name="BKMK_addtextandbookmarks"></a> Adding Text and Bookmarks to the Document  
+ Add some text to your document and then add two overlapping bookmarks.  
   
-#### Per aggiungere testo al documento  
+#### <a name="to-add-text-to-your-document"></a>To add text to your document  
   
--   Nel documento visualizzato nella finestra di progettazione del progetto, digitare il seguente testo.  
+-   In the document that appears in the designer of your project, type the following text.  
   
-     This is an example of creating a shortcut menu when you right\-click the text in a bookmark.  
+     **This is an example of creating a shortcut menu when you right-click the text in a bookmark.**  
   
-#### Per aggiungere un controllo Bookmark al documento  
+#### <a name="to-add-a-bookmark-control-to-your-document"></a>To add a Bookmark control to your document  
   
-1.  In **Casella degli strumenti**, dalla scheda **Controlli Word**, trascinare un controllo <xref:Microsoft.Office.Tools.Word.Bookmark> al documento.  
+1.  In the **Toolbox**, from the **Word Controls** tab, drag a <xref:Microsoft.Office.Tools.Word.Bookmark> control to your document.  
   
-     Verrà visualizzata la finestra di dialogo **Aggiungi controllo Bookmark**.  
+     The **Add Bookmark Control** dialog box appears.  
   
-2.  Selezionare le parole "per creare un menu di scelta rapida facendo clic con il pulsante destro del mouse sul testo" e quindi fare clic su **OK**.  
+2.  Select the words "creating a shortcut menu when you right-click the text", and then click **OK**.  
   
-     `bookmark1` verrà aggiunto al documento.  
+     `bookmark1` is added to the document.  
   
-3.  Aggiungere un altro controllo <xref:Microsoft.Office.Tools.Word.Bookmark> alle parole "fare clic con il pulsante destro del mouse sul testo in un segnalibro".  
+3.  Add another <xref:Microsoft.Office.Tools.Word.Bookmark> control to the words "right-click the text in a bookmark".  
   
-     `bookmark2` verrà aggiunto al documento.  
+     `bookmark2` is added to the document.  
   
     > [!NOTE]  
-    >  Le parole "fare clic con il pulsante destro del mouse sul testo" sono in `bookmark1` e `bookmark2`.  
+    >  The words "right-click the text" are in both `bookmark1` and `bookmark2`.  
   
- Quando si aggiunge in fase di progettazione un segnalibro a un documento, il sistema crea un controllo <xref:Microsoft.Office.Tools.Word.Bookmark>.  È possibile programmare il segnalibro in funzione di vari eventi.  È possibile scrivere codice nell'evento <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick> del segnalibro che consente di visualizzare un menu di scelta rapida quando l'utente fa clic con il pulsante destro del mouse sul testo del segnalibro.  
+ When you add a bookmark to a document at design time, a <xref:Microsoft.Office.Tools.Word.Bookmark> control is created. You can program against several events of the bookmark. You can write code in the <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick> event of the bookmark so that when the user right-clicks the text in the bookmark, a shortcut menu appears.  
   
-##  <a name="BKMK_AddCmndsShortMenu"></a> Aggiunta di controlli a un menu di scelta rapida  
- Aggiungere pulsanti al menu di scelta rapida visualizzato quando si fa clic con il pulsante destro del mouse sul documento.  
+##  <a name="BKMK_AddCmndsShortMenu"></a> Adding Commands to a Shortcut Menu  
+ Add buttons to the shortcut menu that appears when you right-click the document.  
   
-#### Per aggiungere controlli a un menu di scelta rapida  
+#### <a name="to-add-commands-to-a-shortcut-menu"></a>To add commands to a shortcut menu  
   
-1.  Aggiungere un elemento **Barra multifunzione XML** al progetto.  Per ulteriori informazioni, vedere [Procedura: iniziare a personalizzare la barra multifunzione](../vsto/how-to-get-started-customizing-the-ribbon.md).  
+1.  Add a **Ribbon XML** item to the project. For more information, see [How to: Get Started Customizing the Ribbon](../vsto/how-to-get-started-customizing-the-ribbon.md).  
   
-2.  In **Esplora soluzioni**, selezionare **ThisDocument.cs** o in **ThisDocument.vb**.  
+2.  In **Solution Explorer**, select **ThisDocument.cs** or **ThisDocument.vb**.  
   
-3.  Nella barra dei menu scegliere **Visualizza**, **Codice**.  
+3.  On the menu bar, choose **View**, **Code**.  
   
-     Il file di classe **ThisDocument** viene aperto nell'editor di codice.  
+     The **ThisDocument** class file opens in the Code Editor.  
   
-4.  Aggiungere il codice seguente alla classe **ThisDocument**.  Questo codice esegue l'override del metodo CreateRibbonExtensibilityObject e restituisce la classe Ribbon XML all'applicazione di Office.  
+4.  Add the following code to the **ThisDocument** class. This code overrides the CreateRibbonExtensibilityObject method and returns the Ribbon XML class to the Office application.  
   
-     [!code-csharp[Trin_Word_Document_Menus#1](../snippets/csharp/VS_Snippets_OfficeSP/trin_word_document_menus/cs/thisdocument.cs#1)]
-     [!code-vb[Trin_Word_Document_Menus#1](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_word_document_menus/vb/thisdocument.vb#1)]  
+     [!code-csharp[Trin_Word_Document_Menus#1](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#1)]  [!code-vb[Trin_Word_Document_Menus#1](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#1)]  
   
-5.  In **Esplora soluzioni**, selezionare il file XML della barra multifunzione.  Per impostazione predefinita, il file XML della barra multifunzione è denominato Ribbon1.xml.  
+5.  In **Solution Explorer**, select the Ribbon XML file. By default, the Ribbon XML file is named Ribbon1.xml.  
   
-6.  Nella barra dei menu scegliere **Visualizza**, **Codice**.  
+6.  On the menu bar, choose **View**, **Code**.  
   
-     Il file XML della barra multifunzione viene aperto nell'editor di codice.  
+     The Ribbon xml file opens in the Code Editor.  
   
-7.  Nell'editor di codice, sostituire il contenuto del file XML della barra multifunzione con il codice seguente.  
+7.  In the Code Editor, replace the contents of the Ribbon XML file with the following code.  
   
     ```  
-  
+    <?xml version="1.0" encoding="UTF-8"?>  
     <customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">  
       <contextMenus>  
         <contextMenu idMso="ContextMenuText">  
@@ -125,80 +129,76 @@ caps.handback.revision: 53
     </customUI>  
     ```  
   
-     Questo codice consente di aggiungere due pulsanti al menu di scelta rapida visualizzato quando si fa clic con il pulsante destro del mouse sul documento.  
+     This code adds two buttons to the shortcut menu that appears when you right-click the document.  
   
-8.  In **Esplora soluzioni**, fare clic con il pulsante destro del mouse su `ThisDocument` e quindi scegliere **Visualizza codice**.  
+8.  In **Solution Explorer**, right-click `ThisDocument`, and then click **View Code**.  
   
-9. Dichiarare le variabili e una variabile segnalibro a livello di classe.  
+9. Declare the following variables and a bookmark variable at the class level.  
   
-     [!code-csharp[Trin_Word_Document_Menus#2](../snippets/csharp/VS_Snippets_OfficeSP/trin_word_document_menus/cs/thisdocument.cs#2)]
-     [!code-vb[Trin_Word_Document_Menus#2](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_word_document_menus/vb/thisdocument.vb#2)]  
+     [!code-csharp[Trin_Word_Document_Menus#2](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#2)]   [!code-vb[Trin_Word_Document_Menus#2](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#2)]  
   
-10. In **Esplora soluzioni**, selezionare il file di codice di.  Per impostazione predefinita, il file di codice di è denominato **Ribbon1.cs** o **Ribbon1.vb**.  
+10. In **Solution Explorer**, select the Ribbon code file. By default, the Ribbon code file is named **Ribbon1.cs** or **Ribbon1.vb**.  
   
-11. Nella barra dei menu scegliere **Visualizza**, **Codice**.  
+11. On the menu bar, choose **View**, **Code**.  
   
-     Il file di codice della barra multifunzione viene aperto nell'editor di codice.  
+     The Ribbon code file opens in the Code Editor.  
   
-12. Nel file di codice della barra multifunzione, aggiungere il seguente metodo.  Si tratta di un metodo di callback per i due pulsanti aggiunto al menu di scelta rapida del documento.  Questo metodo determina se questi pulsanti visualizzati nel menu di scelta rapida.  I pulsanti grassetto e corsivo vengono visualizzati solo facendo clic con il pulsante destro del mouse sul testo nel segnalibro.  
+12. In the Ribbon code file, add the following method. This is a callback method for the two buttons that you have added to the shortcut menu of the document. This method determines whether these buttons appear in the shortcut menu. The bold and italic buttons appear only if you right-click text within the bookmark.  
   
-     [!code-csharp[Trin_Word_Document_Menus#5](../snippets/csharp/VS_Snippets_OfficeSP/trin_word_document_menus/cs/ribbon1.cs#5)]
-     [!code-vb[Trin_Word_Document_Menus#5](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_word_document_menus/vb/ribbon1.vb#5)]  
+     [!code-csharp[Trin_Word_Document_Menus#5](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#5)]  [!code-vb[Trin_Word_Document_Menus#5](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#5)]  
   
-##  <a name="BKMK_formattextbkmk"></a> Formattare il testo in un segnalibro  
+##  <a name="BKMK_formattextbkmk"></a> Format the Text in the Bookmark  
   
-#### Per formattare il testo nel segnalibro  
+#### <a name="to-format-the-text-in-the-bookmark"></a>To format the text in the bookmark  
   
-1.  Nel file di codice della barra multifunzione, aggiungere un gestore eventi `ButtonClick` per applicare la formattazione al segnalibro.  
+1.  In the Ribbon code file, add a `ButtonClick` event handler to apply formatting to the bookmark.  
   
-     [!code-csharp[Trin_Word_Document_Menus#6](../snippets/csharp/VS_Snippets_OfficeSP/trin_word_document_menus/cs/ribbon1.cs#6)]
-     [!code-vb[Trin_Word_Document_Menus#6](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_word_document_menus/vb/ribbon1.vb#6)]  
+     [!code-csharp[Trin_Word_Document_Menus#6](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#6)]  [!code-vb[Trin_Word_Document_Menus#6](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#6)]  
   
-2.  **Esplora soluzioni**, selezionare **ThisDocument.cs** o **ThisDocument.vb**.  
+2.  **Solution Explorer**, select **ThisDocument.cs** or **ThisDocument.vb**.  
   
-3.  Nella barra dei menu scegliere **Visualizza**, **Codice**.  
+3.  On the menu bar, choose **View**, **Code**.  
   
-     Il file di classe **ThisDocument** viene aperto nell'editor di codice.  
+     The **ThisDocument** class file opens in the Code Editor.  
   
-4.  Aggiungere il codice seguente alla classe **ThisDocument**.  
+4.  Add the following code to the **ThisDocument** class.  
   
-     [!code-csharp[Trin_Word_Document_Menus#3](../snippets/csharp/VS_Snippets_OfficeSP/trin_word_document_menus/cs/thisdocument.cs#3)]
-     [!code-vb[Trin_Word_Document_Menus#3](../snippets/visualbasic/VS_Snippets_OfficeSP/trin_word_document_menus/vb/thisdocument.vb#3)]  
+     [!code-csharp[Trin_Word_Document_Menus#3](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#3)]  [!code-vb[Trin_Word_Document_Menus#3](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/thisdocument.vb#3)]  
   
     > [!NOTE]  
-    >  È necessario creare codice per gestire eventuali segnalibri sovrapposti.  In caso contrario, per impostazione predefinita verrà chiamato il codice di tutti i segnalibri all'interno della selezione.  
+    >  You must write code to handle the case where bookmarks overlap. If you do not, by default, the code will be called for all bookmarks in the selection.  
   
-5.  In C\# è necessario aggiungere gestori eventi per i controlli Bookmark all'evento <xref:Microsoft.Office.Tools.Word.Document.Startup>.  Per ulteriori informazioni sulla creazione di gestori eventi, vedere [Procedura: creare gestori eventi in progetti di Office](../vsto/how-to-create-event-handlers-in-office-projects.md).  
+5.  In C#, you must add event handlers for the bookmark controls to the <xref:Microsoft.Office.Tools.Word.Document.Startup> event. For information about creating event handlers, see [How to: Create Event Handlers in Office Projects](../vsto/how-to-create-event-handlers-in-office-projects.md).  
   
-     [!code-csharp[Trin_Word_Document_Menus#4](../snippets/csharp/VS_Snippets_OfficeSP/trin_word_document_menus/cs/thisdocument.cs#4)]  
+     [!code-csharp[Trin_Word_Document_Menus#4](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/thisdocument.cs#4)]  
   
-## Verifica dell'applicazione  
- Verificare il documento per verificare che le voci di menu bold e corsive vengono visualizzati nel menu di scelta rapida facendo clic con il pulsante destro del mouse sul testo nel segnalibro e che il testo sia corretta.  
+## <a name="testing-the-application"></a>Testing the Application  
+ Test your document to verify that the bold and italic menu items appear in the shortcut menu when you right-click text in a bookmark and that the text is properly formatted.  
   
-#### Per testare il documento  
+#### <a name="to-test-your-document"></a>To test your document  
   
-1.  Premere F5 per eseguire il progetto.  
+1.  Press F5 to run your project.  
   
-2.  Fare clic con il pulsante destro del mouse sul primo segnalibro e quindi scegliere **Bold**.  
+2.  Right-click in the first bookmark, and then click **Bold**.  
   
-3.  Verificare che tutto il testo presente in `bookmark1` sia formattato in grassetto.  
+3.  Verify that all of the text in `bookmark1` is formatted as bold.  
   
-4.  Fare clic con il pulsante destro del mouse sul testo di sovrapposizione dei segnalibri e quindi fare clic su **Italic**.  
+4.  Right-click the text where the bookmarks overlap, and then click **Italic**.  
   
-5.  Verificare che l'intero testo del segnalibro `bookmark2` sia in corsivo e che solo la parte di testo del segnalibro `bookmark1` che si sovrappone al segnalibro `bookmark2` sia in corsivo.  
+5.  Verify that all of the text in `bookmark2` is italic, and only the part of the text in `bookmark1` that overlaps `bookmark2` is italic.  
   
-## Passaggi successivi  
- Di seguito sono elencate alcune procedure che potrebbero essere necessarie per estendere il progetto:  
+## <a name="next-steps"></a>Next Steps  
+ Here are some tasks that might come next:  
   
--   Creazione di codice in risposta a eventi di controlli host in Excel.  Per ulteriori informazioni, vedere [Procedura dettagliata: programmazione per eventi di un controllo NamedRange](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md).  
+-   Write code to respond to events of host controls in Excel. For more information, see [Walkthrough: Programming Against Events of a NamedRange Control](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md).  
   
--   Utilizzo di una casella di controllo per modificare la formattazione di un segnalibro.  Per ulteriori informazioni, vedere [Procedura dettagliata: modifica della formattazione dei documenti mediante i controlli CheckBox](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md).  
+-   Use a check box to change formatting in a bookmark. For more information, see [Walkthrough: Changing Document Formatting Using CheckBox Controls](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md).  
   
-## Vedere anche  
- [Procedure dettagliate con Word](../vsto/walkthroughs-using-word.md)   
- [Personalizzazione dell'interfaccia utente di Office](../vsto/office-ui-customization.md)   
- [Automazione di Word usando oggetti estesi](../vsto/automating-word-by-using-extended-objects.md)   
- [Controllo Bookmark](../vsto/bookmark-control.md)   
- [Parametri facoltativi nelle soluzioni Office](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Walkthroughs Using Word](../vsto/walkthroughs-using-word.md)   
+ [Office UI Customization](../vsto/office-ui-customization.md)   
+ [Automating Word by Using Extended Objects](../vsto/automating-word-by-using-extended-objects.md)   
+ [Bookmark Control](../vsto/bookmark-control.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   
   

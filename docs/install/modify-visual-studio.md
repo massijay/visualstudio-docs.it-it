@@ -18,30 +18,15 @@ ms.assetid: 3399ea7b-a291-4a9e-80a1-b861a21afa1d
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: f8d907587deb8e14e777d9c69f07da6d819143e5
+ms.translationtype: HT
+ms.sourcegitcommit: 89f86a5935ad283ef5c0e29ea2db0ae22cf603a8
+ms.openlocfilehash: 3899b139066dddf0b39acaabe2874e0a7d9ad3d3
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 # <a name="modify-visual-studio-2017-by-adding-or-removing-workloads-and-components"></a>Modificare Visual Studio 2017 aggiungendo o rimuovendo carichi di lavoro e componenti
-Oltre ad aver semplificato la personalizzazione di Visual Studio in base alle attività da eseguire, è stata semplificata anche la modifica di Visual Studio. Per eseguire questa operazione non è più necessario eseguire una ricerca nel Pannello di controllo, ma è sufficiente avviare il nuovo programma di installazione di Visual Studio ed effettuare le modifiche desiderate.  
+Oltre ad aver semplificato la personalizzazione di Visual Studio in base alle attività da eseguire, è stata semplificata anche la modifica di Visual Studio. Per eseguire questa operazione non è più necessario eseguire una ricerca nel Pannello di controllo, ma è sufficiente avviare il nuovo programma di installazione di Visual Studio ed effettuare le modifiche desiderate.
 
 Ecco come fare.  
 
@@ -52,18 +37,18 @@ Ecco come fare.
 
      Ad esempio, in un computer che esegue l'Aggiornamento dell'anniversario di Windows 10 selezionare **Start** e scorrere fino alla lettera **P** in cui viene visualizzato come **Programma di installazione di Visual Studio**.  
 
-     ![Programma di installazione di Visual Studio](~/install/media/vs2017-locate-the-visual-studio-installer.PNG "Individuare il programma di installazione di Microsoft Visual Studio")
+     ![Programma di installazione di Visual Studio](media/vs2017-locate-the-visual-studio-installer.PNG "Individuare il programma di installazione di Microsoft Visual Studio")
 
      >[!NOTE]
-     In alcuni computer il programma di installazione di Visual Studio potrebbe trovarsi sotto la lettera **"M"** come **Microsoft Visual Studio: programma di installazione**.
+     In alcuni computer il programma di installazione di Visual Studio potrebbe trovarsi sotto la lettera **"M"** come **Microsoft Visual Studio: programma di installazione**.<br/><br/> In alternativa, è possibile trovare il programma di installazione di Visual Studio nel percorso seguente: `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
 2.  Fare clic o toccare per avviare il programma di installazione e quindi selezionare **Modifica**.  
 
-     ![Avviare o modificare Visual Studio](~/install/media/vs2017-modify.PNG "Modificare Visual Studio 2017")  
+     ![Avviare o modificare Visual Studio](media/vs2017-modify.PNG "Modificare Visual Studio 2017")  
 
 3.  Nella schermata **Carichi di lavoro** selezionare o deselezionare i carichi di lavoro da installare o disinstallare.  
 
-    ![Finestra di dialogo di installazione di Visual Studio 2017](~/install/media/vs2017-modify-workloads.PNG "Scegliere un carico di lavoro in Visual Studio 2017")
+    ![Finestra di dialogo di installazione di Visual Studio 2017](media/vs2017-modify-workloads.PNG "Scegliere un carico di lavoro in Visual Studio 2017")
 
 4. Fare clic o toccare **Modifica** di nuovo.  
 
@@ -74,7 +59,7 @@ Ecco come fare.
 Se non si intende usare la comoda funzionalità Carichi di lavoro per personalizzare l'installazione di Visual Studio, scegliere l'opzione **Singoli componenti** dal programma di installazione di Visual Studio, selezionare i componenti desiderati e seguire le istruzioni visualizzate.  
 
 ## <a name="get-support"></a>Supporto
-Non sempre tutto funziona correttamente. Se l'installazione di Visual Studio non riesce, vedere l'articolo [Risoluzione degli errori di installazione e aggiornamento di Visual Studio 2017](https://support.microsoft.com/help/4015967/troubleshooting-visual-studio-2017-installation-and-upgrade-failures) della Knowledge Base che include suggerimenti utili per la risoluzione dei problemi.
+Non sempre tutto funziona correttamente. Se l'installazione di Visual Studio non riesce,per suggerimenti per la risoluzione dei problemi vedere la pagina [Risoluzione degli errori di installazione e aggiornamento di Visual Studio 2017](troubleshooting-installation-issues.md).
 
 ## <a name="see-also"></a>Vedere anche  
 * [Installare Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=833223)

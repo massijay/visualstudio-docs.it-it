@@ -1,90 +1,70 @@
 ---
-title: "Procedura: aggiornare i dati mediante un TableAdapter | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "dati [Visual Studio], salvataggio"
-  - "dati [Visual Studio], TableAdapters"
-  - "dati [Visual Studio], aggiornamento"
-  - "salvataggio di dati"
-  - "TableAdapters, aggiornamento di dati"
-  - "aggiornamento di dati, TableAdapters"
+title: Update data by using a TableAdapter | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data [Visual Studio], saving
+- data [Visual Studio], TableAdapters
+- updating data, TableAdapters
+- TableAdapters, updating data
+- data [Visual Studio], updating
+- saving data
 ms.assetid: 5e32e10e-9bac-4969-9bdd-b8f6919d3516
 caps.latest.revision: 15
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 130c127cb0787e3f13f90adfef72de072300fcf3
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Procedura: aggiornare i dati mediante un TableAdapter
-Dopo aver modificato e convalidato i dati del dataset in uso, è possibile inviare i dati aggiornati a un database.  A tale scopo, viene chiamato il metodo `Update` di un oggetto [TableAdapter](../data-tools/tableadapter-overview.md).  Il metodo `Update` dell'adattatore consente di aggiornare una tabella di dati singola e di eseguire il comando corretto \(INSERT, UPDATE o DELETE\) in base alla proprietà <xref:System.Data.DataRow.RowState%2A> di ciascuna riga di dati della tabella.  Quando si salvano i dati nelle tabelle correlate, Visual Studio fornisce un nuovo componente TableAdapterManager che consente di eseguire i salvataggi nell'ordine corretto in base ai vincoli di chiave esterna definiti nel database.  Per ulteriori informazioni, vedere [Cenni preliminari sull'aggiornamento gerarchico](../Topic/Hierarchical%20Update%20Overview.md).  
+# <a name="update-data-by-using-a-tableadapter"></a>Update data by using a TableAdapter
+After the data in your dataset has been modified and validated, you can send the updated data back to a database by calling the `Update` method of a [TableAdapter](../data-tools/create-and-configure-tableadapters.md). The `Update` method updates a single data table and runs the correct command (INSERT, UPDATE, or DELETE) based on the <xref:System.Data.DataRow.RowState%2A> of each data row in the table. When a dataset has related tables, Visual Studio generates a TableAdapterManager class that you  use to do the updates. The TableAdapterManager class ensures that updates are made in the correct order based on the foreign-key constraints that are defined in the database. When you use data-bound controls, the databinding architecture creates a member variable of the TableAdapterManager class called tableAdapterManager. 
   
 > [!NOTE]
->  Poiché il tentativo di aggiornare un'origine dati con il contenuto di un dataset può causare errori, è necessario immettere il codice che chiama il metodo `Update` dell'adattatore all'interno di un blocco `try`\/`catch`.  
+>  When you try to update a data source with the contents of a dataset, you can get errors.To avoid errors, we recommend that you put the code that calls the adapter's `Update` method inside a `try`/`catch` block.  
   
- La procedura corretta per aggiornare un'origine dati può variare a seconda delle esigenze aziendali, ma l'applicazione dovrà comprendere i seguenti passaggi:  
+ The exact procedure for updating a data source can vary depending on business needs, but  includes the following steps:  
   
-1.  Chiamare il metodo `Update` dell'adattatore all'interno di un blocco `try`\/`catch`.  
+1.  Call the adapter's `Update` method in a `try`/`catch` block.  
   
-2.  Se si intercetta un'eccezione, individuare la riga di dati che ha provocato l'errore.  Per ulteriori informazioni, vedere [Procedura: individuare righe con errori](../Topic/How%20to:%20Locate%20Rows%20that%20Have%20Errors.md).  
+2.  If an exception is caught, locate the data row that caused the error. 
   
-3.  Risolvere il problema nella riga di dati, se possibile a livello di codice oppure presentando la riga non valida all'utente per la modifica, quindi tentare nuovamente l'aggiornamento \(proprietà <xref:System.Data.DataRow.HasErrors%2A>, metodo <xref:System.Data.DataTable.GetErrors%2A>\).  
+3.  Reconcile the problem in the data row (programmatically if you can, or by presenting the invalid row to the user for modification), and then try the update again (<xref:System.Data.DataRow.HasErrors%2A>, <xref:System.Data.DataTable.GetErrors%2A>).  
   
-## Salvataggio dei dati in un database  
- Chiamare il metodo `Update` di un TableAdapter, passando il nome della tabella di dati che contiene i valori da scrivere nel database.  
+## <a name="save-data-to-a-database"></a>Save data to a database  
+ Call the `Update` method of a TableAdapter. Pass the name of the data table that contains the values to be written to the database.  
   
-#### Per aggiornare un database con un dataset mediante un TableAdapter  
+#### <a name="to-update-a-database-by-using-a-tableadapter"></a>To update a database by using a TableAdapter  
   
--   Racchiudere il metodo `Update` dell'adattatore all'interno di un blocco `try`\/`catch`.  Nell'esempio che segue viene illustrato un tentativo di aggiornamento dall'interno di un blocco `try`\/`catch` con il contenuto della tabella `Customers` nel dataset `NorthwindDataSet`.  
+-   Enclose the TableAdapter's`Update` method in a `try`/`catch` block. The following example shows how to  update  the contents of the `Customers` table in `NorthwindDataSet` from within a `try`/`catch` block .  
   
-     [!code-cs[VbRaddataSaving#9](../data-tools/codesnippet/CSharp/update-data-by-using-a-tableadapter_1.cs)]
-     [!code-vb[VbRaddataSaving#9](../data-tools/codesnippet/VisualBasic/update-data-by-using-a-tableadapter_1.vb)]  
+     [!code-csharp[VbRaddataSaving#9](../data-tools/codesnippet/CSharp/update-data-by-using-a-tableadapter_1.cs)]  [!code-vb[VbRaddataSaving#9](../data-tools/codesnippet/VisualBasic/update-data-by-using-a-tableadapter_1.vb)]  
   
-## Aggiornamento di due tabelle correlate di un dataset con un TableAdapter  
- Quando si aggiornano le tabelle correlate in un dataset, è necessario effettuare l'aggiornamento nella sequenza corretta, in modo da ridurre la possibilità di violare i vincoli di integrità referenziale.   L'ordine di esecuzione dei comandi seguirà anche gli indici dell'oggetto <xref:System.Data.DataRowCollection> nel dataset.  Per impedire che vengano generati errori di integrità dei dati, è preferibile aggiornare il database rispettando questa sequenza:  
-  
-1.  Tabella figlio: eliminare i record.  
-  
-2.  Tabella padre: inserire, aggiornare ed eliminare i record.  
-  
-3.  Tabella figlio: inserire e aggiornare i record.  
-  
-    > [!NOTE]
-    >  Se è in corso l'aggiornamento di due o più tabelle correlate, includere tutta la logica di aggiornamento all'interno di una transazione.  Una transazione è un processo che garantisce il corretto inserimento di tutte le modifiche correlate in un database prima del relativo commit.  Per ulteriori informazioni, vedere [Transazioni e concorrenza](../Topic/Transactions%20and%20Concurrency.md).  
-  
-#### Per aggiornare due tabelle correlate mediante un TableAdapter  
-  
-1.  Creare tre tabelle di dati  temporanee in cui collocare i diversi record.  
-  
-2.  Chiamare il metodo `Update` per ciascun sottoinsieme di righe da un blocco `try`\/`catch`.  Se si verificano errori di aggiornamento, interrompere il processo e risolverli.  
-  
-3.  Eseguire il commit delle modifiche nel database.  
-  
-4.  Eliminare le tabelle di dati temporanee per liberare le risorse.  
-  
-     Nell'esempio seguente viene illustrata la procedura per aggiornare un'origine dati con un dataset che contiene tabelle correlate.  
-  
-     [!code-vb[VbRaddataSaving#27](../data-tools/codesnippet/VisualBasic/update-data-by-using-a-tableadapter_2.vb)]
-     [!code-cs[VbRaddataSaving#27](../data-tools/codesnippet/CSharp/update-data-by-using-a-tableadapter_2.cs)]  
-  
-## Vedere anche  
- [Cenni preliminari sugli oggetti TableAdapter](../data-tools/tableadapter-overview.md)   
- [Procedure dettagliate relative ai dati](../Topic/Data%20Walkthroughs.md)   
- [Associazione di controlli Windows Form ai dati in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
- [Connessione ai dati in Visual Studio](../data-tools/connecting-to-data-in-visual-studio.md)   
- [Preparazione dell'applicazione al ricevimento di dati](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [Recupero di dati nell'applicazione](../data-tools/fetching-data-into-your-application.md)   
- [Associazione di controlli ai dati in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [Modifica di dati nell'applicazione](../data-tools/editing-data-in-your-application.md)   
- [Convalida dei dati](../Topic/Validating%20Data.md)   
- [Salvataggio di dati](../data-tools/saving-data.md)
+## <a name="see-also"></a>See Also  
+ [Save data back to the database](../data-tools/save-data-back-to-the-database.md)

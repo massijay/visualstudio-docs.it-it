@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: fbc3a182d2c3dbceaa17685f649ea73a3e73ed85
+ms.sourcegitcommit: 11a9cee75f912c5fb31cf4a031644abe9c63d744
+ms.openlocfilehash: db500747061b436db2a0897e5b43a1cae4a3acae
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="improve-code-quality"></a>Migliorare la qualità del codice
@@ -54,8 +54,8 @@ Che cos'è la qualità del codice? Precisione, manutenibilità e anche eleganza 
 |[Misurazione della complessità e della manutenibilità del codice gestito](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)|La metrica del codice è un insieme di misure del software in grado di fornire agli sviluppatori una migliore comprensione del codice che stanno sviluppando. Le metriche includono un indice di manutenibilità per funzioni e classi, complessità ciclomatica di funzioni, profondità dell'ereditarietà delle classi e quantità di accoppiamenti tra le classi.|  
   
 ## <a name="related-scenarios"></a>Scenari correlati  
- [Adozione di Visual Studio e Team Foundation Server per la gestione del ciclo di vita delle applicazioni](assetId:///7ae9182f-4762-4bd3-b238-39ce987932e5)  
- Se non si ha familiarità con Visual Studio Team Foundation, è possibile acquisire ulteriori informazioni sul suo utilizzo in un ambiente di sviluppo team per migliorare la produttività e ridurre i rischi correlati allo sviluppo dell'applicazione.  
+ [Panoramica di DevOps per Team Services e TFS](https://www.visualstudio.com/docs/devops-alm-overview)  
+ Se non si ha familiarità con Visual Studio Team Foundation e Visual Studio Team Services, è possibile acquisire ulteriori informazioni sul loro uso in un ambiente di sviluppo team per migliorare la produttività e ridurre i rischi correlati allo sviluppo dell'applicazione.  
   
  [Analisi e modellazione dell'architettura](../modeling/analyze-and-model-your-architecture.md)  
  È possibile utilizzare [!INCLUDE[vsPreExt](../test/includes/vspreext_md.md)] per gestire le problematiche e le difficoltà legate alla progettazione del software. [!INCLUDE[vsPreShort](../test/includes/vspreshort_md.md)] consente di modellare visivamente l'applicazione, sia nello stato attuale sia nello stato futuro. È possibile creare e gestire diagrammi con i quali visualizzare i modelli logici dell'applicazione mentre vengono mappati ai modelli fisici allo scopo di poter modificare, convalidare e analizzare il software in fase di progettazione.  

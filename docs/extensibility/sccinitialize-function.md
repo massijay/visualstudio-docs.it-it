@@ -1,91 +1,108 @@
 ---
-title: "Funzione SccInitialize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccInitialize"
-helpviewer_keywords: 
-  - "Funzione SccInitialize"
+title: SccInitialize Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccInitialize
+helpviewer_keywords:
+- SccInitialize function
 ms.assetid: 5bc0d28b-2c68-4d43-9e51-541506a8f76e
 caps.latest.revision: 14
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Funzione SccInitialize
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 76235f932ccaac04672e50f8d349ab6fcd55cd4d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Questa funzione consente di inizializzare il plug\-in del controllo del codice sorgente e fornisce funzionalità e i limiti per l'ambiente di sviluppo integrato \(IDE\).  
+---
+# <a name="sccinitialize-function"></a>SccInitialize Function
+This function initializes the source control plug-in and provides capabilities and limits to the integrated development environment (IDE).  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccInitialize (  
-   LPVOID* ppvContext,  
-   HWND    hWnd,  
-   LPCSTR  lpCallerName,  
-   LPSTR   lpSccName,  
-   LPLONG  lpSccCaps,  
-   LPSTR   lpAuxPathLabel,  
-   LPLONG  pnCheckoutCommentLen,  
-   LPLONG  pnCommentLen  
+   LPVOID* ppvContext,  
+   HWND    hWnd,  
+   LPCSTR  lpCallerName,  
+   LPSTR   lpSccName,  
+   LPLONG  lpSccCaps,  
+   LPSTR   lpAuxPathLabel,  
+   LPLONG  pnCheckoutCommentLen,  
+   LPLONG  pnCommentLen  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `ppvContext`  
- \[in\] Il plug\-in del controllo del codice sorgente è possibile inserire un puntatore alla struttura relativo contesto qui.  
+ [in] The source control plug-in can place a pointer to its context structure here.  
   
  `hWnd`  
- \[in\] Handle di finestra IDE che il plug\-in del controllo del codice sorgente è possibile utilizzare come padre per finestre di dialogo che fornisce.  
+ [in] A handle to the IDE window that the source control plug-in can use as a parent for any dialog boxes that it provides.  
   
  `lpCallerName`  
- \[in\] Il nome del programma di chiamata del plug\-in di controllo del codice sorgente.  
+ [in] The name of the program calling the source control plug-in.  
   
  `lpSccName`  
- \[in, out\] Il buffer in cui il plug\-in del controllo del codice sorgente inserisce il proprio nome \(non superiore a `SCC_NAME_LEN`\).  
+ [in, out] The buffer where the source control plug-in puts its own name (not to exceed `SCC_NAME_LEN`).  
   
  `lpSccCaps`  
- \[out\] Restituisce il controllo del codice sorgente il flag di capacità del plug\-in.  
+ [out] Returns the source control plug-in's capability flags.  
   
  `lpAuxPathLabel`  
- \[in, out\] Il buffer in cui il plug\-in del controllo del codice sorgente inserisce una stringa che descrive il `lpAuxProjPath` restituito dal parametro il [SccOpenProject](../extensibility/sccopenproject-function.md) e [SccGetProjPath](../extensibility/sccgetprojpath-function.md) \(non superiore a `SCC_AUXLABEL_LEN`\).  
+ [in, out] The buffer where the source control plug-in puts a string that describes the `lpAuxProjPath` parameter returned by the [SccOpenProject](../extensibility/sccopenproject-function.md) and the [SccGetProjPath](../extensibility/sccgetprojpath-function.md) (not to exceed `SCC_AUXLABEL_LEN`).  
   
  `pnCheckoutCommentLen`  
- \[out\] Restituisce la lunghezza massima consentita per un commento di estrazione.  
+ [out] Returns the maximum permissible length for a checkout comment.  
   
  `pnCommentLen`  
- \[out\] Restituisce la lunghezza massima consentita per gli altri commenti.  
+ [out] Returns the maximum permissible length for other comments.  
   
-## Valore restituito  
- Implementazione di plug\-in controllo dell'origine di questa funzione deve restituire uno dei valori seguenti:  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|SCC\_OK|Inizializzazione di controllo di origine ha avuto esito positivo.|  
-|SCC\_E\_INITIALIZEFAILED|Impossibile inizializzare il sistema.|  
-|SCC\_E\_NOTAUTHORIZED|L'utente non è possibile eseguire l'operazione specificata.|  
-|SCC\_E\_NONSPECFICERROR|Errore non specificato. controllo del codice sorgente non è stato inizializzato.|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|Source control initialization succeeded.|  
+|SCC_E_INITIALIZEFAILED|System could not be initialized.|  
+|SCC_E_NOTAUTHORIZED|The user is not allowed to perform the specified operation.|  
+|SCC_E_NONSPECFICERROR|Nonspecific failure; source control system was not initialized.|  
   
-## Note  
- Questa funzione viene chiamata l'IDE al primo caricamento del plug\-in controllo del codice sorgente. In questo modo l'IDE passare a determinate informazioni, ad esempio il nome del chiamante, il plug\-in. L'IDE inoltre consente di ottenere determinate informazioni, quali la lunghezza massima consentita per le funzionalità del plug\-in e i commenti.  
+## <a name="remarks"></a>Remarks  
+ The IDE calls this function when it first loads the source control plug-in. It enables the IDE to pass certain information, such as the caller name, to the plug-in. The IDE also gets back certain information such as the maximum allowable length for comments and the plug-in's capabilities.  
   
- Il `ppvContext` punta a un `NULL` puntatore. Il plug\-in del controllo del codice sorgente può allocare una struttura per l'utilizzo e archiviare un puntatore a tale struttura in `ppvContext`. L'IDE passerà il puntatore per qualsiasi altra funzione API VSSCI, consentendo il plug\-in sono disponibili informazioni di contesto senza ricorrere a un archivio globale e per supportare più istanze di plug\-in. Questa struttura deve essere deallocata quando il [SccUninitialize](../extensibility/sccuninitialize-function.md) viene chiamato.  
+ The `ppvContext` points to a `NULL` pointer. The source control plug-in can allocate a structure for its own use and store a pointer to that structure in `ppvContext`. The IDE will pass this pointer to every other VSSCI API function, allowing the plug-in to have context information available without resorting to global storage and to support multiple instances of the plug-in. This structure should be deallocated when the [SccUninitialize](../extensibility/sccuninitialize-function.md) is called.  
   
- Il `lpCallerName` e `lpSccName` i parametri consentono l'IDE e il plug\-in del controllo del codice sorgente per lo scambio di nomi. Questi nomi possono essere utilizzati semplicemente per distinguere tra più istanze, o possono essere effettivamente visualizzate nei menu o finestre di dialogo.  
+ The `lpCallerName` and `lpSccName` parameters enable the IDE and the source control plug-in to exchange names. These names may be used simply to distinguish among multiple instances, or they may actually appear in menus or dialog boxes.  
   
- Il `lpAuxPathLabel` parametro è una stringa utilizzata come un commento per identificare il percorso del progetto ausiliarie che viene archiviato nel file di soluzione e passato il controllo del codice sorgente plug\-in una chiamata al [SccOpenProject](../extensibility/sccopenproject-function.md).[!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] utilizza la stringa "progetto di Visual SourceSafe:"; altri plug\-in del controllo origine deve evitare l'utilizzo di questa particolare stringa.  
+ The `lpAuxPathLabel` parameter is a string used as a comment to identify the auxiliary project path that is stored in the solution file and passed to the source control plug-in in a call to the [SccOpenProject](../extensibility/sccopenproject-function.md). [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] uses the string "SourceSafe Project:"; other source control plug-ins should refrain from using this particular string.  
   
- Il `lpSccCaps` parametro fornisce il controllo del codice sorgente del plug\-in una posizione in cui archiviare i flag di bit che indica le capacità del plug\-in. \(Per un elenco completo dei flag di bit di funzionalità, vedere [Flag di capacità](../extensibility/capability-flags.md)\). Ad esempio, se i piani di plug\-in per scrivere i risultati in una funzione di callback fornito dal chiamante, il plug\-in necessario impostare la funzionalità di bit SCC\_CAP\_TEXTOUT. Questo potrebbe segnalare l'IDE per creare una finestra per i risultati di controllo di versione.  
+ The `lpSccCaps` parameter gives the source control plug-in a place to store bitflags indicating the plug-in's capabilities. (For a full list of capability bitflags, see [Capability Flags](../extensibility/capability-flags.md)). For instance, if the plug-in plans to write results into a caller-provided callback function, the plug-in would set the capability bit SCC_CAP_TEXTOUT. This would signal the IDE to create a window for version control results.  
   
-## Vedere anche  
- [Funzioni API plug\-in del controllo sorgente](../extensibility/source-control-plug-in-api-functions.md)   
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
  [SccUninitialize](../extensibility/sccuninitialize-function.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)   
- [Flag di capacità](../extensibility/capability-flags.md)
+ [Capability Flags](../extensibility/capability-flags.md)

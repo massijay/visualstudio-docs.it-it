@@ -1,44 +1,58 @@
 ---
-title: "Finestra di dialogo Terminazione debug in corso | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.stopnow"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "SQL"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "Terminazione debug in corso (finestra di dialogo)"
+title: Stop Debugging In Progress Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.stopnow
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+- SQL
+helpviewer_keywords:
+- Stop Debugging in Progress dialog box
 ms.assetid: ed7ef49d-e25f-4a4d-9396-9bc7b4143117
 caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Finestra di dialogo Terminazione debug in corso
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: d07ab45ca55e164f5b5eaff3603293c862bd7c7a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/22/2017
 
-Questa finestra di dialogo viene visualizzata quando il debugger tenta di interrompere una sessione di debug, ma questa operazione richiede tempo.  L'interruzione di una sessione di debug è in genere un'operazione molto veloce e questa finestra di dialogo non viene visualizzata.  Talvolta, tuttavia, è necessario più tempo per la disconnessione da tutti i processi in fase di debug.  Se l'interruzione della sessione richiede diversi secondi o si verifica un errore di disconnessione, viene visualizzata questa finestra di dialogo.  Se ciò avviene di frequente, è possibile che sia presente un problema interno. Può quindi essere opportuno contattare il Servizio Supporto Tecnico Clienti Microsoft.  
+---
+# <a name="stop-debugging-in-progress-dialog-box"></a>Stop Debugging In Progress Dialog Box
+This dialog box appears when the debugger is trying to stop a debugging session, but stopping the session is going to take some time. Stopping a debugging session is normally very fast and this dialog box does not appear. Sometimes, however, it takes additional time to detach from all the processes being debugged. If stopping the session takes more than a few seconds (or if a detach error occurs), this dialog box appears. If this occurs frequently, it may be due to an internal problem and you may want to contact Product Support Services.  
   
- È possibile attendere la disconnessione dei processi e la chiusura della finestra di dialogo oppure utilizzare il pulsante **Termina ora** per terminare immediatamente l'operazione.  
+ You can wait for the processes to detach and this dialog box to disappear, or use the **Stop Now** button to force immediate termination.  
   
- **Termina ora**  
- Fare clic su questo pulsante per terminare immediatamente la sessione di debug.  Con il pulsante **Termina ora** i processi sottoposti a debug vengono interrotti, anziché disconnessi.  Se si esegue il debug di processi di sistema, l'interruzione di tali processi con **Termina ora** può generare effetti imprevisti e indesiderati.  
+ **Stop Now**  
+ Click this button to end the debugging session immediately. Using **Stop Now** will terminate rather than detaching the processes being debugged. If you are debugging system processes, terminating those processes with **Stop Now** can have unexpected and undesired effects.  
   
-## Vedere anche  
- [Sicurezza del debugger](../debugger/debugger-security.md)   
- [Detaching Programs](http://msdn.microsoft.com/it-it/f2c756c2-8079-474b-94c2-01c19a141a01)
+## <a name="see-also"></a>See Also  
+ [Debugger Security](../debugger/debugger-security.md)   
+ [Detaching Programs](http://msdn.microsoft.com/en-us/f2c756c2-8079-474b-94c2-01c19a141a01)

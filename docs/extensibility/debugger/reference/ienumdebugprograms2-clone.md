@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugPrograms2::Clone | Documenti di Microsoft
+title: IEnumDebugPrograms2::Clone | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,38 +30,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 13f35b5425c1a1480ec0b014099276bd8122aaf3
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 31d655aee812dd76df925ae98eea79e60f12286a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="ienumdebugprograms2clone"></a>IEnumDebugPrograms2::Clone
-Restituisce una copia dell'enumerazione corrente come oggetto separato.  
+Returns a copy of the current enumeration as a separate object.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT Clone(  
    IEnumDebugPrograms2** ppEnum  
 );  
 ```  
   
-```c#  
+```csharp  
 int Clone(  
    out IEnumDebugPrograms2 ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `ppEnum`  
- [out] Restituisce una copia di questa enumerazione come oggetto separato.  
+ [out] Returns a copy of this enumeration as a separate object.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Note  
- La copia dell'enumerazione con lo stesso stato dell'originale al momento che questo metodo viene chiamato. Tuttavia, gli Stati dell'originale e la copia sono separati e possono essere modificati singolarmente.  
+## <a name="remarks"></a>Remarks  
+ The copy of the enumeration has the same state as the original at the time this method is called. However, the copy's and the original's states are separate and can be changed individually.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)

@@ -1,56 +1,73 @@
 ---
-title: "IDebugCanStopEvent2::CanStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCanStopEvent2::CanStop"
-helpviewer_keywords: 
-  - "IDebugCanStopEvent2::CanStop"
+title: IDebugCanStopEvent2::CanStop | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCanStopEvent2::CanStop
+helpviewer_keywords:
+- IDebugCanStopEvent2::CanStop
 ms.assetid: 7d61adbe-6b3d-41f3-86a1-45d9cc01a7f8
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugCanStopEvent2::CanStop
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: ca920a3aff5cda28edfbd2b0c0b6a4329fb34988
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Notifica al motore \(DE\) di debug indipendentemente dal fatto che l'interruzione in corrispondenza della posizione corrente di codice o continuare immediatamente l'esecuzione.  
+---
+# <a name="idebugcanstopevent2canstop"></a>IDebugCanStopEvent2::CanStop
+Notifies the debug engine (DE) whether or not to stop at the current code location or just continue execution.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT CanStop (   
-   BOOL fCanStop  
+```cpp  
+HRESULT CanStop (   
+   BOOL fCanStop  
 );  
 ```  
   
-```c#  
-int CanStop (   
-   int fCanStop  
+```csharp  
+int CanStop (   
+   int fCanStop  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `fCanStop`  
- \[in\]  Diverso da zero \(`TRUE`\) se il DE si ferma in corrispondenza della posizione corrente di codice; in caso contrario, lo zero \(`FALSE`\).  
+ [in] Non-zero (`TRUE`) if the DE should stop at the current code location; otherwise, zero (`FALSE`).  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- Il ricevitore di questo evento in genere chiama [GetReason](../Topic/IDebugCanStopEvent2::GetReason.md) il metodo per determinare il motivo per cui il DE desidera arrestare e chiama quindi il metodo di `IDebugCanStopEvent2::CanStop` con la risposta appropriata.  
+## <a name="remarks"></a>Remarks  
+ The receiver of this event typically calls the [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) method to determine the reason the DE wants to stop, and then calls the `IDebugCanStopEvent2::CanStop` method with the appropriate response.  
   
- Se il DE si interrompe, invia un evento che descrive il motivo per arrestare.  È in genere due eventi inviati, un utente o un'interruzione del segnale rappresentata [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) dall'interfaccia e un evento del punto di interruzione rappresentato [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) dall'interfaccia.  
+ If the DE stops, it sends an event that describes the reason for stopping. There are typically two events that are sent, a user or signal break represented by the [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) interface, and a breakpoint event represented by the [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) interface.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)   
  [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md)   
  [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)   
- [GetReason](../Topic/IDebugCanStopEvent2::GetReason.md)
+ [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md)

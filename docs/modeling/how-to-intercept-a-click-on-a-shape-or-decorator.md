@@ -1,27 +1,30 @@
 ---
-title: "Procedura: intercettare un clic su una forma o su un elemento Decorator | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Linguaggio specifico di dominio, programmazione di modelli di dominio"
+title: 'How to: Intercept a Click on a Shape or Decorator | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Domain-Specific Language, programming domain models
 ms.assetid: e2bc3124-c0c0-4104-9779-a5bf565d7f51
 caps.latest.revision: 21
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 21
----
-# Procedura: intercettare un clic su una forma o su un elemento Decorator
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 3eb235ec6c38b4995460308c0ac8b104b76f8492
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Le procedure riportate di seguito illustrano come intercettare un clic su un form o su un elemento Decorator icona.  È possibile intercettare i clic, fare doppio clic su, trascinamento e altri movimenti e preparato l'elemento rispondere.  
+---
+# <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>How to: Intercept a Click on a Shape or Decorator
+The following procedures demonstrate how to intercept a click on a shape or an icon decorator. You can intercept clicks, double-clicks, drags, and other gestures, and make the element respond.  
   
-## Per intercettare fa clic su forme  
- In il progetto di Dsl, in un file di codice che è separato da file di codice generati, scrivere una definizione di classe parziale per la classe della forma.  Eseguire l'override di `OnDoubleClick()` o uno degli altri metodi che hanno un nome a partire da `On...` Di seguito è riportato un esempio:  
+## <a name="to-intercept-clicks-on-shapes"></a>To Intercept Clicks on Shapes  
+ In the Dsl project, in a code file that is separate from the generated code files, write a partial class definition for the shape class. Override `OnDoubleClick()` or one of the other methods that has a name beginning with `On...`. For example:  
   
 ```  
 public partial class MyShape // change  
@@ -35,20 +38,20 @@ public partial class MyShape // change
 ```  
   
 > [!NOTE]
->  Impostare `e.Handled` a `true`, a meno che non si desideri che l'evento da passare alla forma o al diagramma contenitore.  
+>  Set `e.Handled` to `true`, unless you want the event to be passed to the containing shape or diagram.  
   
-## Per intercettare fa clic sugli elementi Decorator  
- Gli elementi Decorator di immagini sono portati in un'istanza della classe di ImageField, che ha un metodo di un OnDoubleClick.  È possibile intercettare i clic su se si scrive una sottoclasse di ImageField.  I campi sono configurati nel metodo di InitializeShapeFields.  Pertanto, è necessario modificare il metodo per creare un'istanza della sottoclasse anziché ImageField normale.  Il metodo di InitializeShapeFields al codice generato della classe della forma.  È possibile eseguire l'override della classe di forma se si imposta la proprietà di `Generates Double Derived` come descritto nella procedura riportata di seguito.  
+## <a name="to-intercept-clicks-on-decorators"></a>To Intercept Clicks on Decorators  
+ Image decorators are carried on an instance of ImageField class, which has an OnDoubleClick method. You can intercept the clicks if you write an ImageField subclass. The fields are set up in the InitializeShapeFields method. Therefore, you must change that method to instantiate your subclass instead of the regular ImageField. The InitializeShapeFields method is in the generated code of the shape class. You can override the shape class if you set its `Generates Double Derived` property as described in the following procedure.  
   
- Sebbene InitializeShapeFields è un metodo di istanza, viene chiamato una volta per ogni classe.  Di conseguenza, una sola istanza di ClickableImageField esiste per ogni campo in ogni classe, non un'unica istanza per ogni forma del diagramma.  Quando l'utente fa doppio clic su un'istanza, è necessario identificare quali l'istanza raggiunta, come illustrato nel codice riportato nell' esempio seguente.  
+ Although InitializeShapeFields is an instance method, it is called only once for each class. Therefore, only one instance of ClickableImageField exists for each field in each class, not one instance for each shape in the diagram. When the user double-clicks an instance, you must identify which instance has been hit, as the code in the example demonstrates.  
   
-#### Per intercettare un clic su un elemento Decorator icona  
+#### <a name="to-intercept-a-click-on-an-icon-decorator"></a>To intercept a click on an icon decorator  
   
-1.  Aprire o creare una soluzione DSL.  
+1.  Open or create a DSL solution.  
   
-2.  Scegliere o creare una forma con un elemento Decorator icona ed eseguirne il mapping a una classe di dominio.  
+2.  Choose or create a shape that has an icon decorator, and map it to a domain class.  
   
-3.  In un file di codice che è separato dai file nella cartella di `GeneratedCode` , creare una nuova sottoclasse di ImageField:  
+3.  In a code file that is separate from the files in the `GeneratedCode` folder, create the new subclass of ImageField:  
   
     ```  
     using Microsoft.VisualStudio.Modeling;  
@@ -84,9 +87,9 @@ public partial class MyShape // change
     }  
     ```  
   
-     È necessario impostare gestito su true se non si desidera che l'evento da passare alla forma contenitore.  
+     You should set Handled to true if you do not want the event to be passed to the containing shape.  
   
-4.  Eseguire l'override del metodo di InitializeShapeFields in classs shape aggiungendo la seguente definizione di classe parziale.  
+4.  Override the InitializeShapeFields method in your shape classs by adding the following partial class definition.  
   
     ```  
     public partial class MyShape // change  
@@ -113,40 +116,40 @@ public partial class MyShape // change
     }  
     ```  
   
-1.  Compilare ed eseguire la soluzione.  
+1.  Build and run the solution.  
   
-2.  Fare doppio clic sull' icona in un'istanza della forma.  Il messaggio di testo visualizzato.  
+2.  Double-click the icon on an instance of the shape. Your test message should appear.  
   
-## L'intercettazione fare clic su e si trascinano gli elenchi di CompartmentShape  
- Il seguente esempio consente agli utenti riordinino gli elementi in una forma del raggruppamento trascinandoli.  Per eseguire questo codice:  
+## <a name="intercepting-clicks-and-drags-on-compartmentshape-lists"></a>Intercepting clicks and drags on CompartmentShape lists  
+ The following sample allows users to re-order items in a compartment shape by dragging them. To run this code:  
   
-1.  Creare una nuova soluzione DSL utilizzando il modello della soluzione di **diagrammi classi** .  
+1.  Create a new DSL solution by using the **Class Diagrams** solution template.  
   
-     È possibile utilizzare una soluzione di diventi proprietaria contenente le forme di raggruppamento.  In questo codice si presuppone che sia presente una relazione che utilizza tra elementi del modello rappresentati dalla forma e gli elementi rappresentati negli elementi dell' elenco di raggruppamento.  
+     You can also work with a solution of your own that contains compartment shapes. This code assumes that there is an embedding relationship between the model elements represented by the shape, and the elements represented in the compartment list items.  
   
-2.  Impostare la proprietà di **genera il doppio derivato** della forma del raggruppamento.  
+2.  Set the **Generates Double Derived** property of the compartment shape.  
   
-3.  Aggiungere questo codice in un file nel progetto **Dsl** .  
+3.  Add this code in a file in the **Dsl** project.  
   
-4.  Modificare i nomi di forma e la classe di dominio nel codice per la corrispondenza per contenere il modello DSL.  
+4.  Adjust the domain class and shape names in this code to match your own DSL.  
   
- In breve, che il codice come segue.  In questo esempio, `ClassShape` è il nome della forma del raggruppamento.  
+ In summary, the code works as follows. In this example, `ClassShape` is the name of the compartment shape.  
   
--   Un set di gestori eventi del mouse è associato a ogni istanza del raggruppamento quando viene creata.  
+-   A set of mouse event handlers is attached to each compartment instance when it is created.  
   
--   l'evento di `ClassShape.MouseDown` archivia l'elemento corrente.  
+-   The `ClassShape.MouseDown` event stores the current item.  
   
--   Quando il mouse si sposta l'elemento corrente, un'istanza di MouseAction viene creata, che imposta il cursore e acquisisce il mouse fino a rilasciarlo.  
+-   When the mouse moves out of the current item, an instance of MouseAction is created, which sets the cursor and captures the mouse until it is released.  
   
-     Per evitare interferire con le azioni del mouse, come selezionare il testo di un elemento, il MouseAction non vengono creati finché il mouse non ha lasciato l'elemento originale.  
+     To avoid interfering with other mouse actions, such as selecting the text of an item, the MouseAction is not created until the mouse has left the original item.  
   
-     Un'alternativa alla creazione di un MouseAction sarebbe sufficiente di rimanere in ascolto MouseUp.  Tuttavia, questo non verrà eseguita correttamente se l'utente rilascia il mouse dopo avere trascinatolo all' esterno del contesto.  Il MouseAction possibile eseguire l'azione appropriata quando il mouse viene rilasciato.  
+     An alternative to creating a MouseAction would be simply to listen for MouseUp. However, this would not work properly if the user releases the mouse after dragging it outside the compartment. The MouseAction is able to perform the appropriate action no matter where the mouse is released.  
   
--   Quando il mouse viene rilasciato, MouseAction.MouseUp ridisporre l'ordine dei collegamenti tra elementi del modello.  
+-   When the mouse is released, MouseAction.MouseUp rearranges the order of the links between the model elements.  
   
--   La modifica del ruolo dell' ordine genera una regola che aggiorna la visualizzazione.  Questo comportamento è già definito e non esiste alcun codice aggiuntivo richiesto.  
+-   The change of role order fires a rule that updates the display. This behavior is already defined, and no additional code is required.  
   
-```c#  
+```csharp  
 using Microsoft.VisualStudio.Modeling;  
 using Microsoft.VisualStudio.Modeling.Design;  
 using Microsoft.VisualStudio.Modeling.Diagrams;  
@@ -395,6 +398,6 @@ namespace Company.CompartmentDrag
   
 ```  
   
-## Vedere anche  
- [Risposta alle modifiche e propagazione delle modifiche](../modeling/responding-to-and-propagating-changes.md)   
- [Proprietà degli elementi Decorator](../modeling/properties-of-decorators.md)
+## <a name="see-also"></a>See Also  
+ [Responding to and Propagating Changes](../modeling/responding-to-and-propagating-changes.md)   
+ [Properties of Decorators](../modeling/properties-of-decorators.md)

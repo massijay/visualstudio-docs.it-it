@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 19019bfbc0a731f566e1ffd13fa30dd497eb0f96
-ms.lasthandoff: 02/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: deee8db477425c628e214ad1332884f5a5693ea4
+ms.contentlocale: it-it
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="move-task"></a>Attività Move
@@ -57,9 +58,12 @@ Sposta i file in una nuova posizione.
   
 ## <a name="remarks"></a>Note  
  È necessario specificare il parametro `DestinationFolder` o `DestinationFiles`, ma non entrambi. Se vengono specificati entrambi, l'attività avrà esito negativo e verrà registrato un errore.  
-  
- Oltre a presentare i parametri elencati nella tabella, questa attività eredita i parametri dalla classe <xref:Microsoft.Build.Tasks.TaskExtension>, che a sua volta eredita dalla classe <xref:Microsoft.Build.Utilities.Task>. Per un elenco di tali parametri aggiuntivi e le rispettive descrizioni, vedere [TaskExtension Base Class](../msbuild/taskextension-base-class.md) (Classe di base TaskExtension).  
+
+ L'attività `Move` crea le cartelle necessarie per i file di destinazione desiderati.
+
+ Oltre a usare i parametri elencati nella tabella, questa attività eredita i parametri dalla classe <xref:Microsoft.Build.Tasks.TaskExtension> che a sua volta eredita dalla classe <xref:Microsoft.Build.Utilities.Task>. Per un elenco di questi parametri aggiuntivi e le rispettive descrizioni, vedere [TaskExtension Base Class](../msbuild/taskextension-base-class.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tasks](../msbuild/msbuild-tasks.md)  (Attività)  
- [Task Reference](../msbuild/msbuild-task-reference.md) (Riferimento alle attività)
+ [Attività](../msbuild/msbuild-tasks.md)   
+ [Riferimento alle attività](../msbuild/msbuild-task-reference.md)
+

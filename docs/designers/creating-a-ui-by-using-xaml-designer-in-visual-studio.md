@@ -1,7 +1,7 @@
 ---
-title: Creazione di un&quot;interfaccia utente tramite la finestra di progettazione XAML in Visual Studio | Microsoft Docs
+title: Creazione di un'interfaccia utente tramite la finestra di progettazione XAML in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 7/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,32 +18,17 @@ caps.latest.revision: 29
 author: kempb
 ms.author: kempb
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 0b6b302637113be1fb2700100124cf4079c06298
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 0122714fa0c932a1fba849226e1200795ff20cfa
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="creating-a-ui-by-using-xaml-designer-in-visual-studio"></a>Creazione di un'interfaccia utente tramite la finestra di progettazione XAML in Visual Studio
-La finestra di progettazione XAML in Visual Studio offre un'interfaccia visiva per semplificare la progettazione di app per Windows Store, Windows Phone, WPF e Silverlight basate su XAML. È possibile creare interfacce utente per le app trascinando i controlli dalla **Casella degli strumenti** e impostando le proprietà nella finestra **Proprietà** . È anche possibile modificare il codice XAML direttamente nella visualizzazione XAML.  
+La finestra di progettazione XAML in Visual Studio offre un'interfaccia visiva per semplificare la progettazione di app per Windows e per il Web. È possibile creare interfacce utente per le app trascinando i controlli dalla **Casella degli strumenti** e impostando le proprietà nella finestra **Proprietà** . È anche possibile modificare il codice XAML direttamente nella visualizzazione XAML.  
   
- Per attività di progettazione XAML avanzate quali animazioni e comportamenti, vedere [Creating a UI by using Blend for Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md).  
+ Per attività di progettazione XAML avanzate quali animazioni e comportamenti, vedere [Creating a UI by using Blend for Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md). Per un confronto tra gli strumenti, vedere anche [Progettazione di XAML in Visual Studio e Blend per Visual Studio](../designers/designing-xaml-in-visual-studio.md).
   
 ## <a name="xaml-designer-workspace"></a>Area di lavoro della finestra di progettazione XAML  
  L'area di lavoro della finestra di progettazione XAML è costituita da alcuni elementi dell'interfaccia visiva, ad esempio la tavola da disegno, l'Editor XAML, la finestra Dispositivo, la finestra Struttura documento e la finestra Proprietà. Per aprire la finestra di progettazione XAML, fare clic con il pulsante destro del mouse su un file XAML in **Esplora soluzioni** , quindi scegliere **Progettazione visualizzazioni**.  
@@ -61,7 +46,7 @@ La finestra di progettazione XAML in Visual Studio offre un'interfaccia visiva p
  Le guide di allineamento sono *limiti di allineamento* , visualizzati sotto forma di linee tratteggiate rosse, per indicare quando i bordi dei controlli sono allineati o quando le linee di base del testo sono allineate. I limiti di allineamento vengono visualizzati solo quando è abilitato l' **allineamento alle guide di allineamento** .  
   
  **Sbarre della griglia**  
-Le sbarre `Grid` consentono di gestire righe e colonne in un pannello [Grid](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) . È possibile creare ed eliminare righe e colonne e modificare le rispettive larghezze e altezze. La sbarra verticale della griglia, visualizzata nel lato sinistro della tavola da disegno, viene usata per le righe, mentre la sbarra orizzontale, visualizzata in alto, viene usata per le colonne.  
+ Le sbarre`Grid` consentono di gestire righe e colonne in un pannello [Grid](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.grid.aspx) . È possibile creare ed eliminare righe e colonne e modificare le rispettive larghezze e altezze. La sbarra verticale della griglia, visualizzata nel lato sinistro della tavola da disegno, viene usata per le righe, mentre la sbarra orizzontale, visualizzata in alto, viene usata per le colonne.  
   
  **Strumenti decorativi griglia**  
  Uno strumento decorativo `Grid` viene visualizzato sotto forma di triangolo a cui è collegata una linea verticale oppure orizzontale sulla sbarra della `Grid` . Quando si trascina uno strumento decorativo `Grid` , le larghezze o altezze delle colonne o righe adiacenti vengono aggiornate in base allo spostamento del mouse.  
@@ -82,7 +67,7 @@ Le sbarre `Grid` consentono di gestire righe e colonne in un pannello [Grid](htt
   
  Nella visualizzazione Progettazione sono disponibili comandi aggiuntivi della tavola da disegno nell'area inferiore sinistra della schermata, come illustrato di seguito:  
   
- ![Comandi della visualizzazione di progettazione](~/designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")  
+ ![Comandi della visualizzazione di progettazione](../designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")  
   
  Nella barra degli strumenti sono disponibili i comandi seguenti:  
   
@@ -109,7 +94,7 @@ Le sbarre `Grid` consentono di gestire righe e colonne in un pannello [Grid](htt
  Lo zoom di markup consente di ridimensionare la visualizzazione XAML. È possibile ingrandire dal 20% al 400%.  
   
 ## <a name="device-window"></a>Finestra Dispositivo  
- La finestra Dispositivo nella finestra di progettazione XAML per Visual Studio consente di simulare in fase di progettazione diverse visualizzazioni e opzioni di visualizzazione per il progetto Windows Store o Windows Phone. La finestra Dispositivo è disponibile nel menu **Progettazione** quando si usa la finestra di progettazione XAML e ha l'aspetto seguente:  
+ La finestra Dispositivo nella finestra di progettazione XAML consente di simulare in fase di progettazione diverse viste, visualizzazioni e opzioni di visualizzazione per il progetto. La finestra Dispositivo è disponibile nel menu **Progettazione** quando si usa la finestra di progettazione XAML e ha l'aspetto seguente:  
   
  ![Finestra dispositivo](../designers/media/xaml_editor_device_panel.png "xaml_editor_device_panel")  
   

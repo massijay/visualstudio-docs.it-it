@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2::PublishProgram | Documenti di Microsoft
+title: IDebugProgramPublisher2::PublishProgram | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,16 +30,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b37048ed7af208d384a52f25cc5cf99122db1f1e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 3f573f35ed0130eb020ac2e8e19a0391050ec06e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugprogrampublisher2publishprogram"></a>IDebugProgramPublisher2::PublishProgram
-Questo metodo crea un programma disponibile per i motori di debug (DEs) e il gestore di sessione di debug.  
+This method makes a program available for debug engines (DEs) and the session debug manager.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT PublishProgram(  
@@ -49,7 +50,7 @@ HRESULT PublishProgram(
 );  
 ```  
   
-```c#  
+```csharp  
 int PublishProgram(  
    CONST_GUID_ARRAY Engines,  
    string           szFriendlyName,  
@@ -57,22 +58,22 @@ int PublishProgram(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `Engines`  
- [in] Matrice di GUID per la crittografia DEs che è possibile avviare o allegare a questo programma.  
+ [in] An array of GUIDs for DEs that can launch or attach to this program.  
   
  `szFriendlyName`  
- [in] Nome descrittivo per il programma (viene visualizzata nel menu e finestre di dialogo presentate all'utente).  
+ [in] Friendly name for the program (this appears in menus or dialogs presented to the user).  
   
  `pDebuggeeInterface`  
- [in] `IUnknown` interfaccia per il programma (questo valore viene utilizzato come un cookie per identificare in modo univoco il programma, viene utilizzato lo stesso valore per "annullare la pubblicazione" il programma)  
+ [in] `IUnknown` interface for the program (this value is used as a cookie to uniquely identify the program; this same value is used to "unpublish" the program)  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Note  
- Per rendere non disponibile per il debug di un programma, chiamare [UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md).  
+## <a name="remarks"></a>Remarks  
+ To make a program no longer available for debugging, call [UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   
  [UnpublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogram.md)

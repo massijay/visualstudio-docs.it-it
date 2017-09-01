@@ -1,35 +1,40 @@
 ---
-title: "Cenni preliminari sul modello a oggetti di Excel"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "modello a oggetti di Excel"
-  - "modelli a oggetti [sviluppo per Office in Visual Studio], Excel"
-  - "modelli a oggetti [sviluppo per Office in Visual Studio], Office"
-  - "oggetti [sviluppo per Office in Visual Studio], modelli a oggetti di Office"
-  - "modelli a oggetti di Office"
-  - "Range (oggetto)"
-  - "Workbook (classe)"
-  - "Worksheet (oggetto)"
+title: Excel Object Model Overview | Microsoft Docs
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Worksheet object
+- Range object
+- object models [Office development in Visual Studio], Excel
+- object models [Office development in Visual Studio], Office
+- Workbook class
+- objects [Office development in Visual Studio], Office object models
+- Excel object model
+- Office object models
 ms.assetid: e4b2e46b-ea6c-4a88-a416-a7d4f495fc33
 caps.latest.revision: 66
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 65
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: fc96fe66349ca54082a2d75c81d176294b2528d9
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Cenni preliminari sul modello a oggetti di Excel
-  Per sviluppare soluzioni che utilizzano Microsoft Office Excel, è possibile interagire con gli oggetti forniti dal modello a oggetti di Excel.  In questo argomento vengono introdotti gli oggetti più importanti:  
+# <a name="excel-object-model-overview"></a>Excel Object Model Overview
+  To develop solutions that use Microsoft Office Excel, you can interact with the objects provided by the Excel object model. This topic introduces the most important objects:  
   
 -   <xref:Microsoft.Office.Interop.Excel.Application>  
   
@@ -41,86 +46,85 @@ caps.handback.revision: 65
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- Il modello a oggetti è strettamente basato sull'interfaccia utente.  L’oggetto <xref:Microsoft.Office.Interop.Excel.Application> rappresenta l'intera applicazione e ogni oggetto <xref:Microsoft.Office.Interop.Excel.Workbook> contiene una raccolta di oggetti `Worksheet`.  La principale astrazione che rappresenta le celle è l’oggetto <xref:Microsoft.Office.Interop.Excel.Range> che consente di lavorare con singole celle o gruppi di celle.  
+ The object model closely follows the user interface. The <xref:Microsoft.Office.Interop.Excel.Application> object represents the entire application, and each <xref:Microsoft.Office.Interop.Excel.Workbook> object contains a collection of `Worksheet` objects. From there, the major abstraction that represents cells is the <xref:Microsoft.Office.Interop.Excel.Range> object, which enables you to work with individual cells or groups of cells.  
   
- Oltre al modello a oggetti di Excel, i progetti di Office in Visual Studio forniscono *elementi host* e *controlli host* che estendono alcuni oggetti del modello a oggetti di Excel.  Gli elementi host e i controlli host si comportano come gli oggetti di Excel che estendono, ma dispongono anche di funzionalità aggiuntive, ad esempio funzionalità di associazione dati ed eventi aggiuntivi.  Per ulteriori informazioni, vedere [Automazione di Excel usando oggetti estesi](../vsto/automating-excel-by-using-extended-objects.md) e [Panoramica degli elementi e dei controlli host](../vsto/host-items-and-host-controls-overview.md).  
+ In addition to the Excel object model, Office projects in Visual Studio provide *host items* and *host controls* that extend some objects in the Excel object model. Host items and host controls behave like the Excel objects they extend, but they also have additional functionality such as data-binding capabilities and extra events. For more information, see [Automating Excel by Using Extended Objects](../vsto/automating-excel-by-using-extended-objects.md) and [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md).  
   
- In questo argomento viene illustrato brevemente il modello a oggetti di Excel.  Per le risorse con ulteriori informazioni sull'intero modello a oggetti di Excel, vedere [Utilizzo della documentazione del modello a oggetti di Excel](#ExcelOMDocumentation).  
+ This topic provides a brief overview of the Excel object model. For resources where you can learn more about the entire Excel object model, see [Using the Excel Object Model Documentation](#ExcelOMDocumentation).  
   
- ![Collegamento a video](~/data-tools/media/playvideo.gif "Collegamento a video") Per una dimostrazione video correlata, vedere [Ricerca per categorie: utilizzare i gestori eventi in un componente aggiuntivo Excel 2007](http://go.microsoft.com/fwlink/?LinkID=130291) e [Ricerca per categorie: utilizzare le forme per creare un grafico a bolle in Excel](http://go.microsoft.com/fwlink/?LinkID=130313).  
+ ![link to video](../vsto/media/playvideo.gif "link to video") For a related video demonstration, see [How Do I: Use Event Handlers in an Excel 2007 Add-in?](http://go.microsoft.com/fwlink/?LinkID=130291), and [How Do I: Use Shapes to Create a Bubble Chart in Excel?](http://go.microsoft.com/fwlink/?LinkID=130313).  
   
-## Accesso agli oggetti in un progetto di Excel  
- Quando si crea un nuovo progetto di componente aggiuntivo VSTO per Excel, Visual Studio crea automaticamente un file di codice ThisAddIn.vb o ThisAddIn.cs.  È possibile accedere all'oggetto applicazione tramite `Me.Application` o `this.Application`.  
+## <a name="accessing-objects-in-an-excel-project"></a>Accessing Objects in an Excel Project  
+ When you create a new VSTO Add-in project for Excel, Visual Studio automatically creates a ThisAddIn.vb or ThisAddIn.cs code file. You can access the Application object by using `Me.Application` or `this.Application`.  
   
- Quando si crea un nuovo progetto a livello di documento per Excel, è possibile creare un nuovo progetto cartella di lavoro di Excel o modello di Excel.  Visual Studio crea automaticamente i file di codice seguenti nel nuovo progetto di Excel per i progetti di cartella di lavoro e modello.  
+ When you create a new document-level project for Excel, you have the option of creating a new Excel Workbook or Excel Template project. Visual Studio automatically creates the following code files in your new Excel project for both workbook and template projects.  
   
-|Visual Basic|C\#|  
+|Visual Basic|C#|  
 |------------------|---------|  
 |ThisWorkbook.vb|ThisWorkbook.cs|  
 |Sheet1.vb|Sheet1.cs|  
 |Sheet2.vb|Sheet2.cs|  
 |Sheet3.vb|Sheet3.cs|  
   
- È possibile utilizzare la classe `Globals` nel progetto per accedere a `ThisWorkbook`, `Sheet1`, `Sheet2` o `Sheet3` dall'esterno della rispettiva classe.  Per ulteriori dettagli, vedere [Accesso globale a oggetti nei progetti di Office](../vsto/global-access-to-objects-in-office-projects.md).  Nell'esempio seguente viene chiamato il metodo <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A> di `Sheet1` indipendentemente dal fatto che il codice sia posizionato in una delle classi `Sheet`*n* o nella classe `ThisWorkbook`.  
+ You can use the `Globals` class in your project to access `ThisWorkbook`, `Sheet1`, `Sheet2`, or `Sheet3` from outside of the respective class. For more information, see [Global Access to Objects in Office Projects](../vsto/global-access-to-objects-in-office-projects.md). The following example calls the <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A> method of `Sheet1` regardless of whether the code is placed in one of the `Sheet`*n* classes or the `ThisWorkbook` class.  
   
- [!code-csharp[Trin_VstcoreExcelAutomation#82](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/CS/Sheet1.cs#82)]
- [!code-vb[Trin_VstcoreExcelAutomation#82](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreExcelAutomation/VB/Sheet1.vb#82)]  
+ [!code-csharp[Trin_VstcoreExcelAutomation#82](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#82)] [!code-vb[Trin_VstcoreExcelAutomation#82](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#82)]  
   
- Poiché i dati in un documento di Excel sono altamente strutturati, il modello a oggetti è gerarchico e diretto.  In Excel sono disponibili centinaia di oggetti con cui è possibile interagire, ma è possibile iniziare bene a utilizzare il modello a oggetti focalizzando l'attenzione su un subset estremamente ridotto degli oggetti disponibili.  Questi oggetti sono i seguenti quattro:  
+ Because the data in an Excel document is highly structured, the object model is hierarchical and straightforward. Excel provides hundreds of objects with which you might want to interact, but you can get a good start on the object model by focusing on a very small subset of the available objects. These objects include the following four:  
   
--   Applicazione  
+-   Application  
   
 -   Workbook  
   
 -   Worksheet  
   
--   Intervallo  
+-   Range  
   
- La maggior parte del lavoro svolto con Excel coinvolge questi quattro oggetti e i relativi membri.  
+ Much of the work done with Excel centers around these four objects and their members.  
   
-### Oggetto Application  
- L’oggetto <xref:Microsoft.Office.Interop.Excel.Application> di Excel rappresenta l'applicazione Excel stessa.  L’oggetto <xref:Microsoft.Office.Interop.Excel.Application> espone una grande quantità di informazioni sull'applicazione in esecuzione, le opzioni applicate a tale istanza e gli oggetti dell'utente corrente aperti all'interno dell'istanza.  
+### <a name="application-object"></a>Application Object  
+ The Excel <xref:Microsoft.Office.Interop.Excel.Application> object represents the Excel application itself. The <xref:Microsoft.Office.Interop.Excel.Application> object exposes a great deal of information about the running application, the options applied to that instance, and the current user objects open within the instance.  
   
 > [!NOTE]  
->  Non è necessario impostare la proprietà <xref:Microsoft.Office.Interop.Excel.ApplicationClass.EnableEvents%2A> dell’oggetto <xref:Microsoft.Office.Interop.Excel.Application> in Excel su **false**.  Impostando questa proprietà su false si impedisce ad Excel di generare eventi, inclusi gli eventi dei controlli host.  
+>  You should not set the <xref:Microsoft.Office.Interop.Excel.ApplicationClass.EnableEvents%2A> property of the <xref:Microsoft.Office.Interop.Excel.Application> object in Excel to **false**. Setting this property to false prevents Excel from raising any events, including the events of host controls.  
   
-### Oggetto Workbook  
- L’oggetto <xref:Microsoft.Office.Interop.Excel.Workbook> rappresenta una singola cartella di lavoro all'interno dell'applicazione Excel.  
+### <a name="workbook-object"></a>Workbook Object  
+ The <xref:Microsoft.Office.Interop.Excel.Workbook> object represents a single workbook within the Excel application.  
   
- Gli strumenti di sviluppo per Office in Visual Studio estendono l’oggetto <xref:Microsoft.Office.Interop.Excel.Workbook> fornendo il tipo <xref:Microsoft.Office.Tools.Excel.Workbook>.  Questo tipo consente di accedere a tutte le funzionalità di un oggetto <xref:Microsoft.Office.Interop.Excel.Workbook>.  Per altre informazioni, vedere [Elemento host Workbook](../vsto/workbook-host-item.md).  
+ The Office development tools in Visual Studio extends the <xref:Microsoft.Office.Interop.Excel.Workbook> object by providing the <xref:Microsoft.Office.Tools.Excel.Workbook> type. This type gives you access to all features of a <xref:Microsoft.Office.Interop.Excel.Workbook> object. For more information, see [Workbook Host Item](../vsto/workbook-host-item.md).  
   
-### Oggetto Worksheet  
- L'oggetto <xref:Microsoft.Office.Interop.Excel.Worksheet> è membro della raccolta <xref:Microsoft.Office.Interop.Excel.Worksheets>.  Molte proprietà, metodi ed eventi dell’oggetto <xref:Microsoft.Office.Interop.Excel.Worksheet> sono identici o simili ai membri forniti dagli oggetti <xref:Microsoft.Office.Interop.Excel.Application> o <xref:Microsoft.Office.Interop.Excel.Workbook>.  
+### <a name="worksheet-object"></a>Worksheet Object  
+ The <xref:Microsoft.Office.Interop.Excel.Worksheet> object is a member of the <xref:Microsoft.Office.Interop.Excel.Worksheets> collection. Many of the properties, methods, and events of the <xref:Microsoft.Office.Interop.Excel.Worksheet> are identical or similar to members provided by the <xref:Microsoft.Office.Interop.Excel.Application> or <xref:Microsoft.Office.Interop.Excel.Workbook> objects.  
   
- Excel fornisce una raccolta <xref:Microsoft.Office.Interop.Excel.Sheets> come proprietà di un oggetto <xref:Microsoft.Office.Interop.Excel.Workbook>.  Ogni membro della raccolta <xref:Microsoft.Office.Interop.Excel.Sheets> può essere un oggetto <xref:Microsoft.Office.Interop.Excel.Worksheet> o <xref:Microsoft.Office.Interop.Excel.Chart>.  
+ Excel provides a <xref:Microsoft.Office.Interop.Excel.Sheets> collection as a property of a <xref:Microsoft.Office.Interop.Excel.Workbook> object. Each member of the <xref:Microsoft.Office.Interop.Excel.Sheets> collection is either a <xref:Microsoft.Office.Interop.Excel.Worksheet> or a <xref:Microsoft.Office.Interop.Excel.Chart> object.  
   
- Gli strumenti di sviluppo di Office in Visual Studio estendono l’oggetto <xref:Microsoft.Office.Interop.Excel.Worksheet> fornendo il tipo <xref:Microsoft.Office.Tools.Excel.Worksheet>.  Questo tipo consente di accedere a tutte le funzionalità di un oggetto <xref:Microsoft.Office.Interop.Excel.Worksheet>, nonché nuove funzionalità quali la possibilità di ospitare controlli gestiti e gestire i nuovi eventi.  Per altre informazioni, vedere [Elemento host Worksheet](../vsto/worksheet-host-item.md).  
+ The Office development tools in Visual Studio extend the <xref:Microsoft.Office.Interop.Excel.Worksheet> object by providing the <xref:Microsoft.Office.Tools.Excel.Worksheet> type. This type gives you access to all features of a <xref:Microsoft.Office.Interop.Excel.Worksheet> object, as well as new features such as the ability to host managed controls and handle new events. For more information, see [Worksheet Host Item](../vsto/worksheet-host-item.md).  
   
-### Oggetto Range  
- L’oggetto <xref:Microsoft.Office.Interop.Excel.Range> è quello più utilizzato nelle applicazioni di Excel.  Prima di poter modificare un'area in Excel, è necessario esprimerlo come oggetto <xref:Microsoft.Office.Interop.Excel.Range> e utilizzare i metodi e le proprietà di tale intervallo.  Un oggetto <xref:Microsoft.Office.Interop.Excel.Range> rappresenta una cella, una riga, una colonna, una selezione di celle contenenti uno o più blocchi di celle che possono o meno essere contigui o anche un gruppo di celle in più fogli.  
+### <a name="range-object"></a>Range Object  
+ The <xref:Microsoft.Office.Interop.Excel.Range> object is the object you will use most within your Excel applications. Before you can manipulate any region within Excel, you must express it as a <xref:Microsoft.Office.Interop.Excel.Range> object and work with methods and properties of that range. A <xref:Microsoft.Office.Interop.Excel.Range> object represents a cell, a row, a column, a selection of cells that contains one or more blocks of cells, which might or might not be contiguous, or even a group of cells on multiple sheets.  
   
- Visual Studio estende l’oggetto <xref:Microsoft.Office.Interop.Excel.Range> fornendo i tipi <xref:Microsoft.Office.Tools.Excel.NamedRange> e <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>.  Questi tipi hanno la maggior parte delle medesime funzionalità di un oggetto <xref:Microsoft.Office.Interop.Excel.Range>, nonché nuove funzionalità, quali la funzionalità di associazione dati, e nuovi eventi.  Per ulteriori informazioni, vedere [Controllo NamedRange](../vsto/namedrange-control.md) e [Controllo XmlMappedRange](../vsto/xmlmappedrange-control.md).  
+ Visual Studio extends the <xref:Microsoft.Office.Interop.Excel.Range> object by providing the <xref:Microsoft.Office.Tools.Excel.NamedRange> and <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> types. These types have most of the same features as a <xref:Microsoft.Office.Interop.Excel.Range> object, as well as new features such as the data binding capability and new events. For more information, see [NamedRange Control](../vsto/namedrange-control.md) and [XmlMappedRange Control](../vsto/xmlmappedrange-control.md).  
   
-##  <a name="ExcelOMDocumentation"></a> Utilizzo della documentazione del modello a oggetti di Excel  
- Per informazioni complete sul modello a oggetti di Excel, è possibile utilizzare il riferimento di assembly di interoperabilità primario di Excel e il riferimento del modello a oggetti VBA.  
+##  <a name="ExcelOMDocumentation"></a> Using the Excel Object Model Documentation  
+ For complete information about the Excel object model, you can refer to the Excel primary interop assembly (PIA) reference and the VBA object model reference.  
   
-### Riferimento degli assembly di interoperabilità primari  
- Nella documentazione di riferimento dell’assembly di interoperabilità primario di Excel vengono descritti i tipi dell'assembly di interoperabilità primario per Excel.  La documentazione è disponibile nel seguente percorso: [Riferimento ad assembly di interoperabilità primari di Excel 2010](http://go.microsoft.com/fwlink/?LinkId=189585).  
+### <a name="primary-interop-assembly-reference"></a>Primary Interop Assembly Reference  
+ The Excel PIA reference documentation describes the types in the primary interop assembly for Excel. This documentation is available from the following location: [Excel 2010 Primary Interop Assembly Reference](http://go.microsoft.com/fwlink/?LinkId=189585).  
   
- Per ulteriori informazioni sulla progettazione degli assembly di interoperabilità primari di Excel, ad esempio le differenze tra classi e interfacce nell'assembly di interoperabilità primario e l'implementazione degli eventi nell'assembly di interoperabilità primario, vedere [Cenni preliminari su classi e interfacce negli assembly di interoperabilità primari di Office](http://go.microsoft.com/fwlink/?LinkId=189592).  
+ For more information about the design of the Excel PIA, such as the differences between classes and interfaces in the PIA and how events in the PIA are implemented, see [Overview of Classes and Interfaces in the Office Primary Interop Assemblies](http://go.microsoft.com/fwlink/?LinkId=189592).  
   
-### Riferimento del modello a oggetti VBA  
- Nel riferimento del modello a oggetti VBA è illustrato il modello a oggetti di Excel esposto al codice Visual Basic Applications \(VBA\).  Per ulteriori informazioni, vedere [Riferimento del modello oggetto di Excel 2010](http://go.microsoft.com/fwlink/?LinkId=199768).  
+### <a name="vba-object-model-reference"></a>VBA Object Model Reference  
+ The VBA object model reference documents the Excel object model as it is exposed to Visual Basic for Applications (VBA) code. For more information, see [Excel 2010 Object Model Reference](http://go.microsoft.com/fwlink/?LinkId=199768).  
   
- Tutti gli oggetti e i membri del riferimento del modello a oggetti VBA corrispondono ai tipi e ai membri dell'assembly di interoperabilità primario di Excel.  Ad esempio, l’oggetto Worksheet del riferimento del modello a oggetti VBA corrisponde all’oggetto <xref:Microsoft.Office.Interop.Excel.Worksheet> nell'assembly di interoperabilità primario di Excel.  Sebbene il riferimento del modello a oggetti VBA fornisce esempi di codice per la maggior parte delle proprietà, dei metodi e degli eventi, è necessario convertire il codice VBA di questo riferimento per Visual Basic o Visual C\#, se si desidera utilizzarlo in un progetto di Excel che è possibile creare tramite Visual Studio.  
+ All of the objects and members in the VBA object model reference correspond to types and members in the Excel PIA. For example, the Worksheet object in the VBA object model reference corresponds to the <xref:Microsoft.Office.Interop.Excel.Worksheet> object in the Excel PIA. Although the VBA object model reference provides code examples for most properties, methods, and events, you must translate the VBA code in this reference to Visual Basic or Visual C# if you want to use them in an Excel project that you create by using Visual Studio.  
   
-### Argomenti correlati  
+### <a name="related-topics"></a>Related Topics  
   
-|Titolo|Descrizione|  
-|------------|-----------------|  
-|[Soluzioni Excel](../vsto/excel-solutions.md)|Viene illustrato come creare personalizzazioni a livello di documento e componenti aggiuntivi VSTO per Microsoft Office Excel.|  
-|[Utilizzo degli intervalli](../vsto/working-with-ranges.md)|Vengono forniti esempi che illustrano come eseguire attività comuni con gli intervalli.|  
-|[Utilizzo dei fogli di lavoro](../vsto/working-with-worksheets.md)|Vengono forniti esempi che illustrano come eseguire attività comuni con i fogli di lavoro.|  
-|[Uso delle cartelle di lavoro](../vsto/working-with-workbooks.md)|Vengono forniti esempi che illustrano come eseguire attività comuni con le cartelle di lavoro.|  
+|Title|Description|  
+|-----------|-----------------|  
+|[Excel Solutions](../vsto/excel-solutions.md)|Explains how you can create document-level customizations and VSTO Add-ins for Microsoft Office Excel.|  
+|[Working with Ranges](../vsto/working-with-ranges.md)|Provides examples that show how to perform common tasks with ranges.|  
+|[Working with Worksheets](../vsto/working-with-worksheets.md)|Provides examples that show how to perform common tasks with worksheets.|  
+|[Working with Workbooks](../vsto/working-with-workbooks.md)|Provides examples that show how to perform common tasks with workbooks.|  
   
   

@@ -46,7 +46,7 @@ ms.lasthandoff: 06/23/2017
 Questa soluzione offre funzionalità di protezione avanzata ed eliminazione per le applicazioni progettate per desktop, dispositivi mobili o server e per le applicazioni incorporate, in modo da proteggere segreti commerciali e altri dati di proprietà intellettuale, ridurre gli attacchi di pirateria e i rischi di contraffazione, nonché evitare manomissioni e operazioni di debug non autorizzate.
 Dotfuscator viene eseguito sugli assembly compilati senza richiedere altre attività di programmazione e nemmeno l'accesso al codice sorgente.
 
-![](~/ide/dotfuscator/media/header.svg)
+![](media/header.svg)
 
 ## <a name="why-protection-matters"></a>Importanza della protezione
 
@@ -96,7 +96,7 @@ Per iniziare a usare Dotfuscator CE da Visual Studio, digitare `dotfuscator` nel
 
 Questa pagina e le relative pagine secondarie presentano una panoramica di alto livello delle funzionalità di Dotfuscator CE e forniscono [istruzioni per l'installazione dello strumento][install].
 
-Vedere la [Guida dell'utente completa di Dotfuscator CE sul sito preemptive.com] [ full] per istruzioni dettagliate sull'uso, incluse quelle per [iniziare a usare l'interfaccia utente di Dotfuscator CE][get-started].
+Vedere la [Guida dell'utente completa di Dotfuscator CE sul sito preemptive.com][full] per istruzioni dettagliate sull'uso, incluse quelle per [iniziare a usare l'interfaccia utente di Dotfuscator CE][get-started].
 
 <!-- Copyright © 2017 PreEmptive Solutions, LLC -->
 

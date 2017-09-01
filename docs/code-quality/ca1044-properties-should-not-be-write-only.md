@@ -1,29 +1,46 @@
 ---
-title: "CA1044: Le propriet&#224; non devono essere in sola scrittura | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PropertiesShouldNotBeWriteOnly"
-  - "CA1044"
-helpviewer_keywords: 
-  - "CA1044"
-  - "PropertiesShouldNotBeWriteOnly"
+title: 'CA1044: Properties should not be write only | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PropertiesShouldNotBeWriteOnly
+- CA1044
+helpviewer_keywords:
+- CA1044
+- PropertiesShouldNotBeWriteOnly
 ms.assetid: 8386bf3a-b161-4841-bf8b-92591595aea9
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 15
----
-# CA1044: Le propriet&#224; non devono essere in sola scrittura
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 129c2ded7f18a21c97f95869fa385f897e12125a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1044-properties-should-not-be-write-only"></a>CA1044: Properties should not be write only
 |||  
 |-|-|  
 |TypeName|PropertiesShouldNotBeWriteOnly|  
@@ -31,20 +48,19 @@ caps.handback.revision: 15
 |Category|Microsoft.Design|  
 |Breaking Change|Breaking|  
   
-## Causa  
- La proprietà pubblica o protetta presenta una funzione di accesso set, ma non una funzione di accesso get.  
+## <a name="cause"></a>Cause  
+ The public or protected property has a set accessor but does not have a get accessor.  
   
-## Descrizione della regola  
- Le funzioni di accesso get forniscono accesso in lettura a una proprietà, mentre le funzioni di accesso set forniscono accesso in scrittura.  Sebbene la presenza di proprietà di sola lettura sia accettabile e spesso necessaria, le linee guida di progettazione proibiscono l'utilizzo di proprietà di sola scrittura.  Questo si verifica perché consentire a un utente di impostare un valore e poi impedirgli di visualizzarlo non offre alcuna garanzia di sicurezza.  Inoltre, senza accesso in lettura, lo stato degli oggetti condivisi non può essere visualizzato, il che ne limita l'utilità.  
+## <a name="rule-description"></a>Rule Description  
+ Get accessors provide read access to a property and set accessors provide write access. Although it is acceptable and often necessary to have a read-only property, the design guidelines prohibit the use of write-only properties. This is because letting a user set a value and then preventing the user from viewing the value does not provide any security. Also, without read access, the state of shared objects cannot be viewed, which limits their usefulness.  
   
-## Come correggere le violazioni  
- Per correggere una violazione di questa regola, aggiungere una funzione di accesso get alla proprietà.  In alternativa, se il comportamento di una proprietà in sola scrittura è necessario, valutare la conversione di tale proprietà in un metodo.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, add a get accessor to the property. Alternatively, if the behavior of a write-only property is necessary, consider converting this property to a method.  
   
-## Esclusione di avvisi  
- È consigliabile non escludere un avviso da questa regola.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is strongly recommended that you do not suppress a warning from this rule.  
   
-## Esempio  
- Nell'esempio riportato di seguito, `BadClassWithWriteOnlyProperty` è un tipo contenente una proprietà di sola scrittura.  `GoodClassWithReadWriteProperty` contiene il codice corretto.  
+## <a name="example"></a>Example  
+ In the following example, `BadClassWithWriteOnlyProperty` is a type with a write-only property. `GoodClassWithReadWriteProperty` contains the corrected code.  
   
- [!code-vb[FxCop.Design.PropertiesNotWriteOnly#1](../code-quality/codesnippet/VisualBasic/ca1044-properties-should-not-be-write-only_1.vb)]
- [!code-cs[FxCop.Design.PropertiesNotWriteOnly#1](../code-quality/codesnippet/CSharp/ca1044-properties-should-not-be-write-only_1.cs)]
+ [!code-vb[FxCop.Design.PropertiesNotWriteOnly#1](../code-quality/codesnippet/VisualBasic/ca1044-properties-should-not-be-write-only_1.vb)] [!code-csharp[FxCop.Design.PropertiesNotWriteOnly#1](../code-quality/codesnippet/CSharp/ca1044-properties-should-not-be-write-only_1.cs)]

@@ -1,71 +1,88 @@
 ---
-title: "BP_FLAGS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_FLAGS"
-helpviewer_keywords: 
-  - "Enumerazione BP_FLAGS"
+title: BP_FLAGS | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- BP_FLAGS
+helpviewer_keywords:
+- BP_FLAGS enumeration
 ms.assetid: c45dfc74-5e7f-4f1e-a147-ab2a55dccbd0
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# BP_FLAGS
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: b3ae297bd299efd54cf1df611e67777d15681ae2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Fornisce i flag facoltativi che possono essere utilizzati per specificare informazioni aggiuntive quando si imposta un punto di interruzione.  
+---
+# <a name="bpflags"></a>BP_FLAGS
+Provides optional flags that may be used to specify additional information when setting a breakpoint.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-enum enum_BP_FLAGS {   
-   BP_FLAG_NONE            = 0x0000,  
-   BP_FLAG_MAP_DOCPOSITION = 0x0001,  
-   BP_FLAG_DONT_STOP       = 0x0002  
+```cpp  
+enum enum_BP_FLAGS {   
+   BP_FLAG_NONE            = 0x0000,  
+   BP_FLAG_MAP_DOCPOSITION = 0x0001,  
+   BP_FLAG_DONT_STOP       = 0x0002  
 };  
 typedef DWORD BP_FLAGS;  
 ```  
   
-```c#  
-public enum enum_BP_FLAGS {   
-   BP_FLAG_NONE            = 0x0000,  
-   BP_FLAG_MAP_DOCPOSITION = 0x0001,  
-   BP_FLAG_DONT_STOP       = 0x0002  
+```csharp  
+public enum enum_BP_FLAGS {   
+   BP_FLAG_NONE            = 0x0000,  
+   BP_FLAG_MAP_DOCPOSITION = 0x0001,  
+   BP_FLAG_DONT_STOP       = 0x0002  
 };  
 ```  
   
-## Membri  
- BP\_FLAG\_NONE  
- Non specifica il flag punto di interruzione.  
+## <a name="members"></a>Members  
+ BP_FLAG_NONE  
+ Specifies no breakpoint flag.  
   
- BP\_FLAG\_MAP\_DOCPOSITION  
- Specifica che il motore di debug \(DE\) deve eseguire il mapping del punto di interruzione utilizzando la posizione del documento.  È applicabile solo ai punti di interruzione in un file di origine basati su script come pagine \(ASP\) ASP.  
+ BP_FLAG_MAP_DOCPOSITION  
+ Specifies that the debug engine (DE) should map the breakpoint using the document position. This is applicable only to breakpoints set in script-oriented source files such as Active Server Pages (ASP).  
   
- \_STOP OF BP\_FLAG\_DO NOT  
- Specifica che il punto di interruzione deve essere elaborato dal motore di debug, ma che il motore di debug finally non verrà arrestata in \(ovvero [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) un oggetto evento non è necessario inviare\).  Questo flag è progettato per essere utilizzato principalmente con i punti di analisi.  
+ BP_FLAG_DONT_STOP  
+ Specifies that the breakpoint should be processed by the debug engine, but that the debug engine ultimately should not stop there (that is, an [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) event object should not be sent). This flag is designed to be used primarily with tracepoints.  
   
-## Note  
- Utilizzato per il membro di `dwFlags` [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md) e [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) strutture.  
+## <a name="remarks"></a>Remarks  
+ Used for the `dwFlags` member of the [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) and [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) structures.  
   
- Questi valori possono essere combinate con `OR`bit per bit.  
+ These values may be combined with a bitwise `OR`.  
   
-## Requisiti  
- intestazione: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## Vedere anche  
- [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
- [BP\_REQUEST\_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)   
+## <a name="see-also"></a>See Also  
+ [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
+ [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)   
  [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)

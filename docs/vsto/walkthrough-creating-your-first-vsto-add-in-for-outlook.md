@@ -1,148 +1,150 @@
 ---
-title: "Procedura dettagliata: Creazione del primo componente aggiuntivo VSTO per Outlook"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "componenti aggiuntivi a livello di applicazione [sviluppo per Office in Visual Studio], creazione del primo progetto"
-  - "sviluppo per Office in Visual Studio, creazione del primo progetto"
-  - "componenti aggiuntivi [sviluppo per Office in Visual Studio], creazione del primo progetto"
-  - "Outlook [sviluppo per Office in Visual Studio], creazione del primo progetto"
+title: 'Walkthrough: Creating Your First VSTO Add-In for Outlook | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- application-level add-ins [Office development in Visual Studio], creating your first project
+- Office development in Visual Studio, creating your first project
+- add-ins [Office development in Visual Studio], creating your first project
+- Outlook [Office development in Visual Studio], creating your first project
 ms.assetid: 2c5c5d75-27ee-471f-9328-58f0cf05b2b7
 caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: dcaacc506c39734859b9d526ec34155f7111efeb
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Procedura dettagliata: Creazione del primo componente aggiuntivo VSTO per Outlook
-  Questa procedura dettagliata illustra come creare un componente aggiuntivo VSTO per Microsoft Office Outlook. Le funzionalità create in questo tipo di soluzione sono disponibili per l'applicazione indipendentemente dagli elementi Outlook aperti. Per altre informazioni, vedere [Panoramica dello sviluppo di soluzioni Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).  
+# <a name="walkthrough-creating-your-first-vsto-add-in-for-outlook"></a>Walkthrough: Creating Your First VSTO Add-In for Outlook
+  This walkthrough shows you how to create a VSTO Add-in for Microsoft Office Outlook. The features that you create in this kind of solution are available to the application itself, regardless of which Outlook item is open. For more information, see [Office Solutions Development Overview &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
- Questa procedura dettagliata illustra le attività seguenti:  
+ This walkthrough illustrates the following tasks:  
   
--   Creazione di un progetto di componente aggiuntivo VSTO per Outlook.  
+-   Creating an Outlook VSTO Add-in project for Outlook.  
   
--   Scrittura del codice che usa il modello a oggetti di Outlook per aggiungere testo all'oggetto e al corpo di un nuovo messaggio di posta elettronica.  
+-   Writing code that uses the object model of Outlook to add text to the subject and body of a new mail message.  
   
--   Creazione ed esecuzione del progetto a scopo di test.  
+-   Building and running the project to test it.  
   
--   Pulizia del progetto completato, per fare in modo che il componente aggiuntivo VSTO non venga più eseguito automaticamente nel computer di sviluppo.  
+-   Cleaning up the completed project so that the VSTO Add-in no longer runs automatically on your development computer.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## Prerequisiti  
- Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
 -   Microsoft Outlook  
   
-## Creazione del progetto  
+## <a name="creating-the-project"></a>Creating the Project  
   
-#### Per creare un nuovo progetto Outlook in Visual Studio  
+#### <a name="to-create-a-new-outlook-project-in-visual-studio"></a>To create a new Outlook project in Visual Studio  
   
-1.  Avviare [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.  
+2.  On the **File** menu, point to **New**, and then click **Project**.  
   
-3.  Nel riquadro dei modelli, espandere **Visual C\#** o **Visual Basic**, quindi espandere **Office\/SharePoint**.  
+3.  In the templates pane, expand **Visual C#** or **Visual Basic**, and then expand **Office/SharePoint**.  
   
-4.  Nel nodo **Office\/SharePoint** espanso, selezionare il nodo **Componenti aggiuntivi di Office**.  
+4.  Under the expanded **Office/SharePoint** node, select the **Office Add-ins** node.  
   
-5.  Nell'elenco dei modelli di progetto scegliere un progetto di componente aggiuntivo VSTO di Outlook.  
+5.  In the list of project templates, choose an Outlook VSTO Add-in project.  
   
-6.  Nella casella **Nome**, digitare **FirstOutlookAddIn**.  
+6.  In the **Name** box, type **FirstOutlookAddIn**.  
   
-7.  Fare clic su **OK**.  
+7.  Click **OK**.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] consente di creare il progetto **FirstOutlookAddIn** e di aprire il file di codice **ThisAddIn** nell'editor.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] creates the **FirstOutlookAddIn** project and opens the **ThisAddIn** code file in the editor.  
   
-## Scrittura del codice che aggiunge testo a ogni nuovo messaggio di posta elettronica  
- Aggiungere quindi codice al file di codice ThisAddIn. Il nuovo codice usa il modello a oggetti di Outlook per aggiungere il testo a ciascun nuovo messaggio di posta elettronica. Per impostazione predefinita, il file di codice ThisAddIn contiene il seguente codice generato:  
+## <a name="writing-code-that-adds-text-to-each-new-mail-message"></a>Writing Code that Adds Text to Each New Mail Message  
+ Next, add code to the ThisAddIn code file. The new code uses the object model of Outlook to add text to each new mail message. By default, the ThisAddIn code file contains the following generated code:  
   
--   Una definizione parziale della classe `ThisAddIn`. Questa classe fornisce un punto di ingresso per il codice e fornisce l'accesso al modello a oggetti di Outlook. Per altre informazioni, vedere [Programmazione di componenti aggiuntivi VSTO](../vsto/programming-vsto-add-ins.md). Il resto della classe `ThisAddIn` viene definito in un file di codice nascosto che l'utente non deve modificare.  
+-   A partial definition of the `ThisAddIn` class. This class provides an entry point for your code and provides access to the object model of Outlook. For more information, see [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md). The remainder of the `ThisAddIn` class is defined in a hidden code file that you should not modify.  
   
--   I gestori eventi `ThisAddIn_Startup` e `ThisAddIn_Shutdown`. Questi gestori eventi vengono chiamati quando Outlook carica e scarica il componente aggiuntivo VSTO. Usare questi gestori eventi per inizializzare il componente aggiuntivo VSTO al momento del caricamento e per eseguire la pulizia delle risorse usate dal componente aggiuntivo VSTO quando viene scaricato. Per altre informazioni, vedere [Eventi nei progetti di Office](../vsto/events-in-office-projects.md).  
+-   The `ThisAddIn_Startup` and `ThisAddIn_Shutdown` event handlers. These event handlers are called when Outlook loads and unloads your VSTO Add-in. Use these event handlers to initialize your VSTO Add-in when it is loaded, and to clean up resources used by your VSTO Add-in when it is unloaded. For more information, see [Events in Office Projects](../vsto/events-in-office-projects.md).  
   
-#### Per aggiungere testo all'oggetto e al corpo di ciascun nuovo messaggio di posta elettronica  
+#### <a name="to-add-text-to-the-subject-and-body-of-each-new-mail-message"></a>To add text to the subject and body of each new mail message  
   
-1.  Nel file di codice ThisAddIn, dichiarare un campo denominato `inspectors` nella classe `ThisAddIn`. Il campo `inspectors` gestisce un riferimento alla raccolta di finestre di controllo nell'istanza Outlook corrente. Questo riferimento impedisce al Garbage Collector di liberare la memoria in cui è contenuto il gestore eventi per l'evento <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector>.  
+1.  In the ThisAddIn code file, declare a field named `inspectors` in the `ThisAddIn` class. The `inspectors` field maintains a reference to the collection of Inspector windows in the current Outlook instance. This reference prevents the garbage collector from freeing the memory that contains the event handler for the <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> event.  
   
-     [!code-csharp[Trin_OutlookAddInTutorial#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_OutlookAddInTutorial/CS/ThisAddIn.cs#1)]
-     [!code-vb[Trin_OutlookAddInTutorial#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_OutlookAddInTutorial/VB/ThisAddIn.vb#1)]  
+     [!code-vb[Trin_OutlookAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#1)]  [!code-csharp[Trin_OutlookAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#1)]  
   
-2.  Sostituire il metodo `ThisAddIn_Startup` con il codice seguente. Questo codice consente di collegare un gestore eventi all'evento <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector>.  
+2.  Replace the `ThisAddIn_Startup` method with the following code. This code attaches an event handler to the <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> event.  
   
-     [!code-csharp[Trin_OutlookAddInTutorial#2](../snippets/csharp/VS_Snippets_OfficeSP/Trin_OutlookAddInTutorial/CS/ThisAddIn.cs#2)]
-     [!code-vb[Trin_OutlookAddInTutorial#2](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_OutlookAddInTutorial/VB/ThisAddIn.vb#2)]  
+     [!code-vb[Trin_OutlookAddInTutorial#2](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#2)]  [!code-csharp[Trin_OutlookAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#2)]  
   
-3.  Nel file di codice ThisAddIn, aggiungere il codice seguente alla classe `ThisAddIn`. Questo codice consente di definire un gestore eventi per l'evento <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector>.  
+3.  In the ThisAddIn code file, add the following code to the `ThisAddIn` class. This code defines an event handler for the <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> event.  
   
-     Quando l'utente crea un nuovo messaggio di posta elettronica, questo gestore eventi consente di aggiungere il testo alla riga dell'oggetto e al corpo del messaggio.  
+     When the user creates a new mail message, this event handler adds text to the subject line and body of the message.  
   
-     [!code-csharp[Trin_OutlookAddInTutorial#3](../snippets/csharp/VS_Snippets_OfficeSP/Trin_OutlookAddInTutorial/CS/ThisAddIn.cs#3)]
-     [!code-vb[Trin_OutlookAddInTutorial#3](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_OutlookAddInTutorial/VB/ThisAddIn.vb#3)]  
+     [!code-vb[Trin_OutlookAddInTutorial#3](../vsto/codesnippet/VisualBasic/Trin_OutlookAddInTutorial/ThisAddIn.vb#3)]  [!code-csharp[Trin_OutlookAddInTutorial#3](../vsto/codesnippet/CSharp/Trin_OutlookAddInTutorial/ThisAddIn.cs#3)]  
   
- Per modificare ciascun nuovo messaggio di posta elettronica, negli esempi di codice precedenti vengono usati gli oggetti seguenti:  
+ To modify each new mail message, the previous code examples use the following objects:  
   
--   Il campo `Application` della classe `ThisAddIn`. Il campo `Application` restituisce un oggetto <xref:Microsoft.Office.Interop.Outlook.Application> che rappresenta l'istanza corrente di Outlook.  
+-   The `Application` field of the `ThisAddIn` class. The `Application` field returns an <xref:Microsoft.Office.Interop.Outlook.Application> object, which represents the current instance of Outlook.  
   
--   Il parametro `Inspector` del gestore eventi dell'evento <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector>. Il parametro `Inspector` è un oggetto <xref:Microsoft.Office.Interop.Outlook.Inspector> che rappresenta la finestra di controllo del nuovo messaggio di posta elettronica. Per altre informazioni, vedere [Soluzioni Outlook](../vsto/outlook-solutions.md).  
+-   The `Inspector` parameter of the event handler for the <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector> event. The `Inspector` parameter is an <xref:Microsoft.Office.Interop.Outlook.Inspector> object, which represents the Inspector window of the new mail message. For more information, see [Outlook Solutions](../vsto/outlook-solutions.md).  
   
-## Test del progetto  
- Quando il progetto viene compilato ed eseguito, verificare che il testo venga visualizzato nella riga dell'oggetto e nel corpo di un nuovo messaggio di posta elettronica.  
+## <a name="testing-the-project"></a>Testing the Project  
+ When you build and run the project, verify that the text appears in the subject line and body of a new mail message.  
   
-#### Per testare il progetto  
+#### <a name="to-test-the-project"></a>To test the project  
   
-1.  Premere **F5** per compilare ed eseguire il progetto.  
+1.  Press **F5** to build and run your project.  
   
-     Quando si crea il progetto, il codice viene compilato in un assembly incluso nella cartella di output di compilazione relativa al progetto. Visual Studio crea anche un set di voci del Registro di sistema che consentono a Outlook di trovare e caricare il componente aggiuntivo VSTO e di configurare le impostazioni di sicurezza nel computer di sviluppo; in questo modo, si attiva l'esecuzione del componente aggiuntivo VSTO. Per altre informazioni, vedere [Office Solution Build Process Overview](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md).  
+     When you build the project, the code is compiled into an assembly that is included in the build output folder for the project. Visual Studio also creates a set of registry entries that enable Outlook to discover and load the VSTO Add-in, and it configures the security settings on the development computer to enable the VSTO Add-in to run. For more information, see [Office Solution Build Process Overview](../vsto/walkthrough-creating-your-first-vsto-add-in-for-outlook.md).  
   
-2.  In Outlook, creare un nuovo messaggio di posta elettronica.  
+2.  In Outlook, create a new mail message.  
   
-3.  Verificare che il testo seguente venga aggiunto sia alla riga dell'oggetto, sia al corpo del messaggio.  
+3.  Verify that the following text is added to both the subject line and body of the message.  
   
      **This text was added by using code.**  
   
-4.  Chiudere Outlook.  
+4.  Close Outlook.  
   
-## Pulizia del progetto  
- Al termine dello sviluppo di un progetto, rimuovere l'assembly del componente aggiuntivo VSTO, le voci del Registro di sistema e le impostazioni di sicurezza dal computer di sviluppo. In caso contrario, il componente aggiuntivo VSTO verrà eseguito ogni volta che si apre Outlook nel computer di sviluppo.  
+## <a name="cleaning-up-the-project"></a>Cleaning up the Project  
+ When you finish developing a project, remove the VSTO Add-in assembly, registry entries, and security settings from your development computer. Otherwise, the VSTO Add-in will run every time that you open Outlook on the development computer.  
   
-#### Per pulire il progetto  
+#### <a name="to-clean-up-your-project"></a>To clean up your project  
   
-1.  In Visual Studio, nel menu **Compila**, fare clic su **Pulisci soluzione**.  
+1.  In Visual Studio, on the **Build** menu, click **Clean Solution**.  
   
-## Passaggi successivi  
- Ora che è stato creato un componente aggiuntivo VSTO di base per Outlook, è possibile visualizzare altre informazioni sullo sviluppo di componenti aggiuntivi VSTO in questi argomenti:  
+## <a name="next-steps"></a>Next Steps  
+ Now that you have created a basic VSTO Add-in for Outlook, you can learn more about how to develop VSTO Add-ins from these topics:  
   
--   Attività di programmazione generali che è possibile eseguire usando i componenti aggiuntivi VSTO per Outlook. Per altre informazioni, vedere [Programmazione di componenti aggiuntivi VSTO](../vsto/programming-vsto-add-ins.md).  
+-   General programming tasks that you can perform by using VSTO Add-ins for Outlook. For more information, see [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md).  
   
--   Uso del modello a oggetti di Outlook. Per altre informazioni, vedere [Soluzioni Outlook](../vsto/outlook-solutions.md).  
+-   Using the object model of Outlook. For more information, see [Outlook Solutions](../vsto/outlook-solutions.md).  
   
--   Personalizzazione dell'interfaccia utente di Outlook, ad esempio con l'aggiunta di una scheda personalizzata alla barra multifunzione o la creazione di un riquadro attività personalizzato. Per altre informazioni, vedere [Personalizzazione dell'interfaccia utente di Office](../vsto/office-ui-customization.md).  
+-   Customizing the UI of Outlook, for example, by adding a custom tab to the Ribbon or creating your own custom task pane. For more information, see [Office UI Customization](../vsto/office-ui-customization.md).  
   
--   Compilazione e debug di componenti aggiuntivi VSTO per Outlook. Per altre informazioni, vedere [Compilazione di soluzioni Office](../vsto/building-office-solutions.md).  
+-   Building and debugging VSTO Add-ins for Outlook. For more information, see [Building Office Solutions](../vsto/building-office-solutions.md).  
   
--   Distribuzione di componenti aggiuntivi VSTO per Outlook. Per altre informazioni, vedere [Distribuzione di una soluzione Office](../vsto/deploying-an-office-solution.md).  
+-   Deploying VSTO Add-ins for Outlook. For more information, see [Deploying an Office Solution](../vsto/deploying-an-office-solution.md).  
   
-## Vedere anche  
- [Programmazione di componenti aggiuntivi VSTO](../vsto/programming-vsto-add-ins.md)   
- [Soluzioni Outlook](../vsto/outlook-solutions.md)   
- [Personalizzazione dell'interfaccia utente di Office](../vsto/office-ui-customization.md)   
- [Compilazione di soluzioni Office](../vsto/building-office-solutions.md)   
- [Distribuzione di una soluzione Office](../vsto/deploying-an-office-solution.md)   
- [Panoramica dei modelli di progetto di Office](../vsto/office-project-templates-overview.md)  
+## <a name="see-also"></a>See Also  
+ [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
+ [Outlook Solutions](../vsto/outlook-solutions.md)   
+ [Office UI Customization](../vsto/office-ui-customization.md)   
+ [Building Office Solutions](../vsto/building-office-solutions.md)   
+ [Deploying an Office Solution](../vsto/deploying-an-office-solution.md)   
+ [Office Project Templates Overview](../vsto/office-project-templates-overview.md)  
   
   

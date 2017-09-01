@@ -1,96 +1,96 @@
 ---
-title: "Procedura: salvare documenti a livello di codice"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "documenti [sviluppo per Office in Visual Studio], salvataggio"
-  - "Word [sviluppo per Office in Visual Studio], salvataggio di documenti"
+title: 'How to: Programmatically Save Documents | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- documents [Office development in Visual Studio], saving
+- Word [Office development in Visual Studio], saving documents
 ms.assetid: a6225ae9-94f5-421a-9860-5299002d543d
 caps.latest.revision: 44
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 43
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 7b9e68b81903ea309df6ad2903e98b6c8900a0aa
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Procedura: salvare documenti a livello di codice
-  Esistono molti modi per salvare i documenti di Microsoft Office Word.  È possibile salvare un documento senza modificarne il nome oppure con un nome nuovo.  
+# <a name="how-to-programmatically-save-documents"></a>How to: Programmatically Save Documents
+  There are several ways to save Microsoft Office Word documents. You can save a document without changing the name of the document, or you can save a document with a new name.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## Salvataggio di un documento senza modificarne il nome  
+## <a name="saving-a-document-without-changing-the-name"></a>Saving a Document Without Changing the Name  
   
-#### Per salvare il documento associato a una personalizzazione a livello di documento  
+#### <a name="to-save-the-document-associated-with-a-document-level-customization"></a>To save the document associated with a document-level customization  
   
-1.  Chiamare il metodo <xref:Microsoft.Office.Tools.Word.Document.Save%2A> della classe <xref:Microsoft.Office.Tools.Word.Document>.  Per utilizzare questo esempio di codice, eseguirlo dalla classe `ThisDocument` nel progetto.  
+1.  Call the <xref:Microsoft.Office.Tools.Word.Document.Save%2A> method of the <xref:Microsoft.Office.Tools.Word.Document> class. To use this code example, run it from the `ThisDocument` class in your project.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#7](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#7)]
-     [!code-vb[Trin_VstcoreWordAutomation#7](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#7)]  
+     [!code-vb[Trin_VstcoreWordAutomation#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#7)]  [!code-csharp[Trin_VstcoreWordAutomation#7](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#7)]  
   
-#### Per salvare il documento attivo  
+#### <a name="to-save-the-active-document"></a>To save the active document  
   
-1.  Chiamare il metodo <xref:Microsoft.Office.Interop.Word._Document.Save%2A> del documento attivo.  Per utilizzare questo esempio di codice, eseguirlo dalla classe `ThisDocument` o `ThisAddIn` nel progetto.  
+1.  Call the <xref:Microsoft.Office.Interop.Word._Document.Save%2A> method for the active document. To use this code example, run it from the `ThisDocument` or `ThisAddIn` class in your project.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#8](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#8)]
-     [!code-vb[Trin_VstcoreWordAutomation#8](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#8)]  
+     [!code-vb[Trin_VstcoreWordAutomation#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#8)]  [!code-csharp[Trin_VstcoreWordAutomation#8](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#8)]  
   
- Se non si è certi che il documento da salvare sia il documento attivo, è possibile farvi riferimento utilizzandone il nome.  
+ If you are not sure whether the document you want to save is the active document, you can refer to it by its name.  
   
-#### Per salvare un documento specificato mediante il nome  
+#### <a name="to-save-a-document-specified-by-name"></a>To save a document specified by name  
   
-1.  Utilizzare il nome del documento come argomento per la raccolta <xref:Microsoft.Office.Interop.Word.Documents>.  Per utilizzare questo esempio di codice, eseguirlo dalla classe `ThisDocument` o `ThisAddIn` nel progetto.  
+1.  Use the document name as an argument to the <xref:Microsoft.Office.Interop.Word.Documents> collection. To use this code example, run it from the `ThisDocument` or `ThisAddIn` class in your project.  
   
-     [!code-csharp[Trin_VstcoreWordAutomation#9](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#9)]
-     [!code-vb[Trin_VstcoreWordAutomation#9](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#9)]  
+     [!code-vb[Trin_VstcoreWordAutomation#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#9)]  [!code-csharp[Trin_VstcoreWordAutomation#9](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#9)]  
   
-## Salvataggio di un documento con un nuovo nome  
- Utilizzare il metodo SaveAs per salvare un documento con un nuovo nome.  È possibile utilizzare questo metodo dell'elemento host <xref:Microsoft.Office.Tools.Word.Document> in un progetto Word a livello di documento o di un oggetto nativo <xref:Microsoft.Office.Interop.Word.Document> in qualsiasi progetto Word.  Questo metodo richiede che si specifichi il nuovo nome di file, mentre gli altri argomenti sono facoltativi.  
+## <a name="saving-a-document-with-a-new-name"></a>Saving a Document With a New Name  
+ Use the SaveAs method to save a document with a new name. You can use this method of the <xref:Microsoft.Office.Tools.Word.Document> host item in a document-level Word project, or of a native <xref:Microsoft.Office.Interop.Word.Document> object in any Word project. This method requires that you specify the new file name, but other arguments are optional.  
   
 > [!NOTE]  
->  Se si visualizza la finestra di dialogo **SaveAs** all'interno del gestore eventi <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> di `ThisDocument` e si imposta il parametro *Cancel* su **false**, l'applicazione potrebbe essere chiusa in modo imprevisto.  Se si imposta il parametro *Cancel* su **true**, un messaggio di errore indicherà che è stata disabilitata la funzione di salvataggio automatico.  
+>  If you show the **SaveAs** dialog box inside of the <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> event handler of `ThisDocument` and set the *Cancel* parameter to **false**, the application might quit unexpectedly. If you set the *Cancel* parameter to **true**, an error message appears indicating that Autosave has been disabled.  
   
-#### Per salvare il documento associato a una personalizzazione a livello di documento con un nuovo nome  
+#### <a name="to-save-the-document-associated-with-a-document-level-customization-with-a-new-name"></a>To save the document associated with a document-level customization with a new name  
   
-1.  Chiamare il metodo <xref:Microsoft.Office.Tools.Word.Document.SaveAs%2A> della classe `ThisDocument` nel progetto utilizzando un nome file e un percorso completo.  Se nella stessa cartella è già presente un file con lo stesso nome, tale file verrà sovrascritto automaticamente.  Per utilizzare questo esempio di codice, eseguirlo dalla classe `ThisDocument`.  
-  
-    > [!NOTE]  
-    >  Se la directory di destinazione non esiste o si verificano altri problemi durante il salvataggio di un file, il metodo <xref:Microsoft.Office.Tools.Word.Document.SaveAs%2A> genera un'eccezione.  È opportuno utilizzare un blocco **try…catch** per racchiudere il metodo <xref:Microsoft.Office.Tools.Word.Document.SaveAs%2A> o all'interno di un metodo chiamante.  
-  
-     [!code-csharp[Trin_VstcoreWordAutomation#10](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/CS/ThisDocument.cs#10)]
-     [!code-vb[Trin_VstcoreWordAutomation#10](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomation/VB/ThisDocument.vb#10)]  
-  
-#### Per salvare un documento nativo con un nuovo nome  
-  
-1.  Chiamare il metodo <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> dell'oggetto <xref:Microsoft.Office.Interop.Word.Document> che si desidera salvare, utilizzando un nome file e un percorso completo.  Se nella stessa cartella è già presente un file con lo stesso nome, tale file verrà sovrascritto automaticamente.  
-  
-     Nell'esempio di codice riportato di seguito viene salvato il documento attivo con un nuovo nome.  Per utilizzare questo esempio di codice, eseguirlo dalla classe `ThisDocument` o `ThisAddIn` nel progetto.  
+1.  Call the <xref:Microsoft.Office.Tools.Word.Document.SaveAs%2A> method of the `ThisDocument` class in your project, using a fully qualified path and file name. If a file by that name already exists in that folder, it is silently overwritten. To use this code example, run it from the `ThisDocument` class.  
   
     > [!NOTE]  
-    >  Se la directory di destinazione non esiste o si verificano altri problemi durante il salvataggio di un file, il metodo <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> genera un'eccezione.  È opportuno utilizzare un blocco **try…catch** per racchiudere il metodo <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> o all'interno di un metodo chiamante.  
+    >  The <xref:Microsoft.Office.Tools.Word.Document.SaveAs%2A> method throws an exception if a target directory does not exist or if there are other problems saving a file. It is a good practice to use a **try...catch** block around the <xref:Microsoft.Office.Tools.Word.Document.SaveAs%2A> method or inside a calling method.  
   
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#10](../snippets/csharp/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/CS/ThisAddIn.cs#10)]
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#10](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_VstcoreWordAutomationAddIn/VB/ThisAddIn.vb#10)]  
+     [!code-vb[Trin_VstcoreWordAutomation#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#10)]  [!code-csharp[Trin_VstcoreWordAutomation#10](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#10)]  
   
-## Compilazione del codice  
- Di seguito sono indicati i requisiti di questo esempio di codice:  
+#### <a name="to-save-a-native-document-with-a-new-name"></a>To save a native document with a new name  
   
--   Per salvare un documento con il nome, è necessario che sull'unità C sia presente un documento denominato NewDocument.doc in una directory denominata Test.  
+1.  Call the <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> method of the <xref:Microsoft.Office.Interop.Word.Document> that you want to save, using a fully qualified path and file name. If a file by that name already exists in that folder, it is silently overwritten.  
   
--   Per salvare un documento con un nuovo nome, è necessario che sull'unità C sia presente una directory denominata Test.  
+     The following code example saves the active document with a new name. To use this code example, run it from the `ThisDocument` or `ThisAddIn` class in your project.  
   
-## Vedere anche  
- [Procedura: Chiudere documenti a livello di codice](../vsto/how-to-programmatically-close-documents.md)   
- [Procedura: aprire documenti esistenti a livello di codice](../vsto/how-to-programmatically-open-existing-documents.md)   
- [Elemento host Document](../vsto/document-host-item.md)   
- [Parametri facoltativi nelle soluzioni Office](../vsto/optional-parameters-in-office-solutions.md)  
+    > [!NOTE]  
+    >  The <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> method throws an exception if a target directory does not exist or if there are other problems saving a file. It is a good practice to use a **try...catch** block around the <xref:Microsoft.Office.Interop.Word._Document.SaveAs%2A> method or inside a calling method.  
+  
+     [!code-vb[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#10)]  [!code-csharp[Trin_VstcoreWordAutomationAddIn#10](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#10)]  
+  
+## <a name="compiling-the-code"></a>Compiling the Code  
+ This code example requires the following:  
+  
+-   To save a document by name, a document named NewDocument.doc must exist in a directory named Test on drive C.  
+  
+-   To save a document with a new name, a directory named Test must exist on drive C.  
+  
+## <a name="see-also"></a>See Also  
+ [How to: Programmatically Close Documents](../vsto/how-to-programmatically-close-documents.md)   
+ [How to: Programmatically Open Existing Documents](../vsto/how-to-programmatically-open-existing-documents.md)   
+ [Document Host Item](../vsto/document-host-item.md)   
+ [Optional Parameters in Office Solutions](../vsto/optional-parameters-in-office-solutions.md)  
   
   

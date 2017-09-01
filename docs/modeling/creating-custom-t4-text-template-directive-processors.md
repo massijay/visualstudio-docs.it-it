@@ -1,70 +1,87 @@
 ---
-title: "Creating Custom T4 Text Template Directive Processors | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "text templates, custom directive processors"
+title: Creazione di processori di direttiva modello di testo T4 personalizzati | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- text templates, custom directive processors
 ms.assetid: 422b47af-5441-4b02-b5ad-1b8b328457e3
 caps.latest.revision: 29
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 29
----
-# Creating Custom T4 Text Template Directive Processors
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: alancameronwills
+ms.author: awills
+manager: douge
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: a8f56201528b15da04c5861be5c9afdd9a9b379e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/17/2017
 
-Nel *processo di trasformazione di un modello di testo* viene preso un file *modello di testo* come input e viene generato un file di testo come output.  Il processo viene controllato dal *motore di trasformazione del modello di testo*, il quale interagisce inoltre con un host di trasformazione del modello di testo e uno o più *processori di direttiva* del modello di testo per completare il processo.  Per ulteriori informazioni, vedere [The Text Template Transformation Process](../modeling/the-text-template-transformation-process.md).  
+---
+# <a name="creating-custom-t4-text-template-directive-processors"></a>Creazione di processori di direttiva di modelli di testo T4 personalizzati
+Il *processo di trasformazione del modello testo* accetta un *modello di testo* file come input e produce un file di testo come output. Il *motore di trasformazione del modello di testo* il processo e il motore interagisce con un host di trasformazione del modello di testo e il modello di testo di uno o più controlli *processori di direttiva* per completare il processo. Per ulteriori informazioni, vedere [il processo di trasformazione di modello di testo](../modeling/the-text-template-transformation-process.md).  
   
  Per creare un processore di direttiva personalizzato, si crea una classe che eredita da <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> o <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>.  
   
- La differenza tra queste due classi è che <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> implementa l'interfaccia minima necessaria a ottenere i parametri dall'utente e a generare il codice che produce il file di output del modello.  <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> implementa il modello di progettazione requires\/provides.  <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> gestisce due parametri speciali, `requires` e `provides`.  Ad esempio, un processore di direttiva personalizzato potrebbe accettare un nome file dall'utente, aprire e leggere il file, quindi archiviarne il testo in una variabile denominata `fileText`.  Una sottoclasse della classe <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> potrebbe prendere un nome file dall'utente come valore del parametro `requires` e il nome della variabile nella quale archiviare il testo come valore del parametro `provides`.  Questo processore aprirebbe e leggerebbe il file, quindi ne archivierebbe il testo nella variabile specificata.  
+ La differenza tra questi due è che <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> implementa l'interfaccia minima che è necessario recuperare parametri da parte dell'utente e per generare il codice che genera il file di output del modello. <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>implementa il modello di progettazione richiede/fornisce. <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>gestisce due parametri speciali, `requires` e `provides`.  Ad esempio, un processore di direttiva personalizzato potrebbe accettare un nome file dall'utente, aprire e leggere il file e quindi archiviare il testo del file in una variabile denominata `fileText`. Una sottoclasse del <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor> classe potrebbe richiedere un nome di file da parte dell'utente come valore della `requires` parametro e il nome della variabile in cui archiviare il testo come valore della `provides` parametro. Questo processore verrebbe aprire e leggere il file e quindi archiviare il testo del file nella variabile specificata.  
   
  Prima di chiamare un processore di direttiva personalizzato da un modello di testo in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], è necessario registrarlo.  
   
- Per ulteriori informazioni su come aggiungere una chiave del Registro di sistema, vedere [Deploying a Custom Directive Processor](../modeling/deploying-a-custom-directive-processor.md).  
+ Per ulteriori informazioni su come aggiungere la chiave del Registro di sistema, vedere [distribuzione di un processore di direttiva personalizzato](../modeling/deploying-a-custom-directive-processor.md).  
   
-## Direttive personalizzate  
- Una direttiva personalizzata ha un aspetto simile al seguente:  
+## <a name="custom-directives"></a>Direttive personalizzate  
+ Una direttiva personalizzata è simile al seguente:  
   
- `<#@ MyDirective Processor="MyDirectiveProcessor" parameter1="value1" … #>`  
+ `<#@ MyDirective Processor="MyDirectiveProcessor" parameter1="value1" ... #>`  
   
- È possibile utilizzare un processore di direttiva personalizzato quando si desidera accedere a dati o risorse esterni da un modello di testo.  
+ È possibile utilizzare un processore di direttiva personalizzato quando si desidera accedere alle risorse o dati esterni da un modello di testo.  
   
- Modelli di testo differenti possono condividere la funzionalità fornita da un singolo processore di direttiva, pertanto i processori di direttiva forniscono un modo per scomporre il codice per il riutilizzo.  La direttiva `include` incorporata è simile, perché può essere utilizzata per scomporre il codice e condividerlo fra modelli di testo diversi.  La differenza consiste nel fatto che qualsiasi funzionalità fornita dalla direttiva `include` è fissa e non accetta parametri.  Se si desidera fornire una funzionalità comune a un modello di testo e consentire al modello di passare dei parametri, è necessario creare un processore di direttiva personalizzato.  
+ Modelli di testo diversi possono condividere la funzionalità che fornisce un singolo processore di direttiva, pertanto i processori di direttiva forniscono un modo per scomporre il codice per il riutilizzo. L'elemento predefinito `include` direttiva è simile, quanto è possibile utilizzarlo per scomporre il codice e condividerlo tra modelli di testo diversi. La differenza è che le funzionalità che la `include` fornita dalla direttiva è fisso e non accetta parametri. Se si desidera fornire funzionalità comuni a un modello di testo e consente di passare i parametri di modello, è necessario creare un processore di direttiva personalizzato.  
   
- Alcuni esempi di processori di direttiva personalizzati potrebbero essere:  
+ Alcuni esempi di processori di direttiva personalizzati può essere:  
   
--   Un processore di direttiva per la restituzione di dati da un database che accetta un nome utente e una password come parametri.  
+-   Un processore di direttiva per restituire dati da un database che accetta un nome utente e una password come parametri.  
   
--   Un processore di direttiva per l'apertura e la lettura di un file che accetta il nome del file come parametro.  
+-   Un processore di direttiva ad aprire e leggere un file che accetta il nome del file come parametro.  
   
-### Parti principali di un processore di direttiva personalizzato  
+### <a name="principal-parts-of-a-custom-directive-processor"></a>Parti principali di un processore di direttiva personalizzato  
  Per sviluppare un processore di direttiva, è necessario creare una classe che eredita da <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> o <xref:Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor>.  
   
- I metodi `DirectiveProcessor` più importanti che devono essere implementati sono i seguenti.  
+ La più importante `DirectiveProcessor` metodi che è necessario implementare sono i seguenti.  
   
--   `bool IsDirectiveSupported(string directiveName)`: restituisce `true` se il processore di direttiva può gestire la direttiva denominata.  
+-   `bool IsDirectiveSupported(string directiveName)`-Restituito `true` se il processore di direttiva può gestire la direttiva denominata.  
   
--   `void ProcessDirective (string directiveName, IDictionary<string, string> arguments)`: questo metodo viene chiamato dal motore del modello ad ogni occorrenza di una direttiva nel modello.  Il processore deve salvare i risultati.  
+-   `void ProcessDirective (string directiveName, IDictionary<string, string> arguments)`-Il motore del modello chiama questo metodo per ogni occorrenza di una direttiva nel modello. Il processore deve salvare i risultati.  
   
- Dopo tutte le chiamate a ProcessDirective\(\), il motore del modello chiamerà questi metodi:  
+ Dopo tutte le chiamate a ProcessDirective (), il motore del modello chiamerà tali metodi:  
   
--   `string[] GetReferencesForProcessingRun()`: restituisce i nomi di assembly richiesti dal codice del modello.  
+-   `string[] GetReferencesForProcessingRun()`: Restituisce i nomi degli assembly che richiede il codice del modello.  
   
--   `string[] GetImportsForProcessingRun()`: restituisce gli spazi dei nomi che possono essere utilizzati nel codice del modello.  
+-   `string[] GetImportsForProcessingRun()`: Restituisce gli spazi dei nomi che può essere usato nel codice del modello.  
   
--   `string GetClassCodeForProcessingRun()`: restituisce il codice di metodi, proprietà e altre dichiarazioni che il codice del modello può utilizzare.  Il modo più semplice per fare quanto indicato consiste nel compilare una stringa che contenga codice C\# o Visual Basic.  Per fare in modo che il processore di direttiva possa essere chiamato da un modello che utilizza un qualsiasi linguaggio CLR, è possibile creare le istruzioni come struttura ad albero CodeDom e restituire quindi il risultato della serializzazione della struttura ad albero nel linguaggio utilizzato dal modello.  
+-   `string GetClassCodeForProcessingRun()`: Restituisce il codice di metodi, proprietà e altre dichiarazioni che è possibile utilizzare il codice del modello. Il modo più semplice per eseguire questa operazione consiste nel compilare una stringa contenente il codice c# o Visual Basic. Affinché il processore di direttiva sia in grado di essere chiamato da un modello che utilizza un qualsiasi linguaggio CLR, è possibile creare le istruzioni come una struttura ad albero CodeDom e quindi restituire il risultato della serializzazione l'albero nella lingua utilizzata dal modello.  
   
--   Per ulteriori informazioni, vedere [Walkthrough: Creating a Custom Directive Processor](../modeling/walkthrough-creating-a-custom-directive-processor.md).  
+-   Per ulteriori informazioni, vedere [procedura dettagliata: creazione di un processore di direttiva personalizzato](../modeling/walkthrough-creating-a-custom-directive-processor.md).  
   
-## Argomenti della sezione  
- [Deploying a Custom Directive Processor](../modeling/deploying-a-custom-directive-processor.md)  
- Viene spiegato come registrare un processore di direttiva personalizzato.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Distribuzione di un processore di direttiva personalizzato](../modeling/deploying-a-custom-directive-processor.md)  
+ Viene illustrato come registrare un processore di direttiva personalizzato.  
   
- [Walkthrough: Creating a Custom Directive Processor](../modeling/walkthrough-creating-a-custom-directive-processor.md)  
- Viene descritto come creare un processore di direttiva personalizzato, come registrare e testare il processore di direttiva e come formattare i file di output come HTML.
+ [Procedura dettagliata: creazione di un processore di direttiva personalizzato](../modeling/walkthrough-creating-a-custom-directive-processor.md)  
+ Viene descritto come creare un processore di direttiva personalizzato, come registrare e testare il processore di direttiva e come formattare il file di output in formato HTML.

@@ -1,36 +1,18 @@
-# [Visual Studio 2017](welcome-to-visual-studio.md)
-
-# [Novità](ide/whats-new-in-visual-studio.md)
-
-# [Installazione](install/TOC.md)
-
-# [IDE di Visual Studio](ide/visual-studio-ide.md)
-
+# [Welcome to Visual Studio 2017!](welcome-to-visual-studio.md)
+# [What's New](ide/whats-new-in-visual-studio.md)
+# [Installation](install/TOC.md)
+# [Visual Studio IDE](ide/visual-studio-ide.md)
 # [Visual Basic](/dotnet/visual-basic)
-
 # [Visual C#](/dotnet/csharp)
-
 # [Visual C++](/cpp/top/visual-cpp-in-visual-studio)
-
 # [JavaScript](/scripting/javascript)
-
 # [Python](python/getting-started-with-python.md)
-
 # [R](rtvs/index.md)
-
 # [Visual F#](/dotnet/fsharp/)
-
-# [Accesso ai dati](data-tools/TOC.md)
-
-# [Sviluppo di app per dispositivi mobili multipiattaforma](cross-platform/cross-platform-mobile-development-in-visual-studio.md)
-
-# [Sviluppo per Office e Sharepoint](vsto/office-and-sharepoint-development-in-visual-studio.md)
-
-# [Trasferire, migrare e aggiornare il codice](porting\port-migrate-and-upgrade-visual-studio-projects.md)
-
-# [Estendibilità](extensibility/extensibility-in-visual-studio.md)
-
-# [Comunicazioni con Microsoft](ide/talk-to-us.md)
-
-## [Come segnalare un problema con Visual Studio 2017](ide/how-to-report-a-problem-with-visual-studio-2017.md)
-
+# [Data Access](data-tools/TOC.md)
+# [Cross-Platform Mobile Development](cross-platform/cross-platform-mobile-development-in-visual-studio.md)
+# [Office and Sharepoint Development](vsto/office-and-sharepoint-development-in-visual-studio.md)
+# [Port, Migrate, and Upgrade Your Code](porting\port-migrate-and-upgrade-visual-studio-projects.md)
+# [Extensibility](extensibility/)
+# [Talk to Us](ide/talk-to-us.md)
+## [How to Report a Problem with Visual Studio 2017](ide/how-to-report-a-problem-with-visual-studio-2017.md)

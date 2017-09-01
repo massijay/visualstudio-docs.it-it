@@ -27,24 +27,24 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 1600207e0c504f4b4dcbf620e92bcc06e14ec035
+ms.translationtype: HT
+ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
+ms.openlocfilehash: 4401606f97452de235b8a2d406451e5481518006
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Configurazione di unit test usando un file con estensione runsettings
-Gli unit test in Visual Studio possono essere configurati usando un file di tipo *.runsettings. Il nome file non è rilevante, purché si usi l'estensione "runsettings". Ad esempio, è possibile modificare la versione di .NET Framework in cui vengono eseguiti i test, la directory in cui vengono recapitati i risultati e i dati raccolti durante l'esecuzione dei test.  
+Gli unit test in Visual Studio possono essere configurati usando un file \*.runsettings. Il nome file non è rilevante, purché si usi l'estensione "runsettings". Ad esempio, è possibile modificare la versione di .NET Framework in cui vengono eseguiti i test, la directory in cui vengono recapitati i risultati e i dati raccolti durante l'esecuzione dei test.  
   
- Se non si vogliono eseguire configurazioni particolari, non sarà necessario alcun file di tipo *.runsettings. L'opzione più frequente consiste nel personalizzare il [code coverage](../test/customizing-code-coverage-analysis.md).  
+ Se non si vogliono eseguire configurazioni particolari, non sarà necessario alcun file \*.runsettings. L'opzione più frequente consiste nel personalizzare il [code coverage](../test/customizing-code-coverage-analysis.md).  
   
 > [!NOTE]
 >  **File con estensione runsettings e testsettings**  
 >   
->  Sono disponibili due tipi di file per la configurazione dei test. I file di tipo *.runsettings sono usati per gli unit test. I file con estensione \*testsettings sono usati per [test in ambiente lab](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests), test relativi a caricamento e prestazioni Web e per la personalizzazione di alcuni tipi di adattatori di dati di diagnostica, ad esempio IntelliTrace e gli adattatori di log eventi.  
+>  Sono disponibili due tipi di file per la configurazione dei test. I file \*.runsettings sono usati per gli unit test. I file con estensione \*testsettings sono usati per [test in ambiente lab](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests), test relativi a caricamento e prestazioni Web e per la personalizzazione di alcuni tipi di adattatori di dati di diagnostica, ad esempio IntelliTrace e gli adattatori di log eventi.  
 >   
->  Nelle edizioni precedenti di Visual Studio, fino alla 2010, la personalizzazione degli unit test viene eseguita con file di tipo *.testsettings. È ancora possibile usare questa procedura, ma l'esecuzione dei test sarà più lenta rispetto all'uso delle configurazioni equivalenti in un file con estensione \*runsettings.  
+>  Nelle edizioni precedenti di Visual Studio, fino alla 2010, la personalizzazione degli unit test viene eseguita con file \*.testsettings. È ancora possibile usare questa procedura, ma l'esecuzione dei test sarà più lenta rispetto all'uso delle configurazioni equivalenti in un file con estensione \*runsettings.  
   
 ## <a name="customizing-tests-with-a-runsettings-file"></a>Personalizzazione dei test con un file con estensione runsettings  
   
@@ -61,7 +61,7 @@ Gli unit test in Visual Studio possono essere configurati usando un file di tipo
  ![Abilitazione di un file di impostazioni di esecuzione](../test/media/runsettings-1.png "RunSettings-1")  
   
 ##  <a name="example"></a> Copiare il file di esempio con estensione runsettings  
- Di seguito è riportato un tipico file di tipo *.runsettings. Ogni elemento del file è facoltativo, perché ogni valore ha un'impostazione predefinita.  
+ Di seguito è riportato un tipico file \*.runsettings. Ogni elemento del file è facoltativo, perché ogni valore ha un'impostazione predefinita.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

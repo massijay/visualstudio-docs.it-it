@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 4: Aggiungere un gestore degli eventi Click a ogni etichetta | Microsoft Docs'
+title: 'Step 4: Add a Click Event Handler to Each Label | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,53 +27,53 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 0e5b7a1c40e53fa70fe3f6931e1e2a871defe183
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: b7a7fc66913ff7cc4afc952f2f797781a6f90819
 ms.contentlocale: it-it
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="step-4-add-a-click-event-handler-to-each-label"></a>Passaggio 4: aggiungere un gestore degli eventi Click a ogni etichetta
-Il gioco delle coppie funziona come segue:  
+# <a name="step-4-add-a-click-event-handler-to-each-label"></a>Step 4: Add a Click Event Handler to Each Label
+The matching game works as follows:  
   
-1.  Quando un giocatore sceglie uno dei quadrati con un'icona nascosta, il programma mostra l'icona al giocatore facendola diventare nera.  
+1.  When a player chooses one of the squares with a hidden icon, the program shows the icon to the player by changing the icon color to black.  
   
-2.  Quindi il giocatore sceglie un'altra icona nascosta.  
+2.  Then the player chooses another hidden icon.  
   
-3.  Se le icone corrispondono, restano visibili. In caso contrario, vengono nuovamente nascoste.  
+3.  If the icons match, they stay visible. If not, both icons are hidden again.  
   
- Per far sì che il programma funzioni in questo modo, si aggiunge un gestore eventi Click che modifica il colore dell'etichetta scelta.  
+ To get your program to work that way, you add a Click event handler that changes the color of the label that is chosen.  
   
-### <a name="to-add-a-click-event-handler-to-each-label"></a>Per aggiungere un gestore degli eventi Click a ogni etichetta  
+### <a name="to-add-a-click-event-handler-to-each-label"></a>To add a Click event handler to each label  
   
-1.  Aprire il form in Progettazione Windows Form. In Esplora soluzioni scegliere Form1.cs o Form1.vb. Sulla barra dei menu scegliere **Visualizza**, **Finestra di progettazione**.  
+1.  Open the form in the Windows Forms Designer. In Solution Explorer, choose Form1.cs or Form1.vb. On the menu bar, choose **View**, **Designer**.  
   
-2.  Scegliere il primo controllo etichetta per selezionarlo. Tenere quindi premuto il tasto CTRL mentre si sceglie ognuna delle altre etichette per selezionarle. Assicurarsi che ogni etichetta sia selezionata.  
+2.  Choose the first label control to select it. Then, hold down the CTRL key while you choose each of the other labels to select them. Be sure that every label is selected.  
   
-3.  Fare clic sul pulsante **Eventi** della barra degli strumenti della finestra **Proprietà** per visualizzare la pagina **Eventi** nella finestra **Proprietà**. Scorrere verso il basso fino all'evento **Click** e immettere **label_Click** nella casella, come illustrato nell'immagine seguente.  
+3.  Choose the **Events** button on the tool bar in the **Properties** window to view the **Events** page in the **Properties** window. Scroll down to the **Click** event, and enter **label_Click** in the box, as shown in the following picture.  
   
-     ![Finestra Proprietà con evento Click visualizzato](~/ide/media/express_labelclick.png "Express_labelClick")  
-Finestra Proprietà con evento Click visualizzato  
+     ![Properties window showing Click event](../ide/media/express_labelclick.png "Express_labelClick")  
+Properties window showing Click event  
   
-4.  Premere il tasto INVIO. IDE aggiunge un gestore eventi Click chiamato `label_Click()` al codice e lo collega a ognuna delle etichette nel form.  
+4.  Choose the ENTER key. The IDE adds a Click event handler called `label_Click()` to the code, and hooks it to each of the labels on the form.  
   
-5.  Compilare la parte restante di codice come segue:  
+5.  Fill in the rest of the code, as follows:  
   
-     [!code-cs[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/CSharp/step-4-add-a-click-event-handler-to-each-label_1.cs)]  [!code-vb[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/VisualBasic/step-4-add-a-click-event-handler-to-each-label_1.vb)]  
-  
-    > [!NOTE]
-    >  Se si sceglie di copiare e incollare il blocco di codice `label_Click()` anziché immetterlo manualmente, è necessario verificare di sostituire il codice `label_Click()` esistente. In caso contrario, verrà generato un blocco di codice duplicato.  
+     [!code-csharp[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/CSharp/step-4-add-a-click-event-handler-to-each-label_1.cs)]  [!code-vb[VbExpressTutorial4Step2_3_4#4](../ide/codesnippet/VisualBasic/step-4-add-a-click-event-handler-to-each-label_1.vb)]  
   
     > [!NOTE]
-    >  È possibile riconoscere `object sender` all'inizio del gestore eventi. È infatti uguale a quello usato nell'[Esercitazione 2: creare un quiz matematico a tempo](../ide/tutorial-2-create-a-timed-math-quiz.md). Poiché eventi Click di diversi controlli etichetta sono stati collegati a un unico metodo del gestore eventi, viene chiamato lo stesso metodo, indipendentemente dall'etichetta scelta dall'utente. Il metodo del gestore eventi deve sapere quale etichetta è stata scelta, per cui usa il nome **sender** per identificare il controllo etichetta. La prima riga del metodo indica al programma che non si tratta di un oggetto generico, bensì di un controllo etichetta e che questo oggetto usa il nome **clickedLabel** per accedere ai metodi e alle proprietà dell'etichetta.  
+    >  If you copy and paste the `label_Click()` code block rather than entering the code manually, be sure to replace the existing `label_Click()` code. Otherwise, you'll end up with a duplicate code block.  
   
-     Questo metodo prima verifica che **clickedLabel** sia stato correttamente convertito (cast) da un oggetto in un controllo etichetta. In caso contrario, il valore sarà `null` (C#) o `Nothing` (Visual Basic) e non è consigliabile eseguire la parte restante di codice nel metodo. Il metodo controlla quindi il colore del testo dell'etichetta scelta tramite la proprietà **ForeColor** dell'etichetta. Se il colore del testo dell'etichetta è nero, significa che l'icona è già stata scelta e il metodo è terminato. Questa è l'azione eseguita dall'istruzione `return`, che indica al programma di arrestare l'esecuzione del metodo. In caso contrario, l'icona non è stata scelta, pertanto il programma cambierà in nero il colore del testo dell'etichetta.  
+    > [!NOTE]
+    >  You may recognize `object sender` at the top of the event handler as the same one used in the [Tutorial 2: Create a Timed Math Quiz](../ide/tutorial-2-create-a-timed-math-quiz.md) tutorial. Because you hooked up different label control Click event to a single event handler method, the same method is called no matter which label the user chooses. The event handler method needs to know which label was chosen, so it uses the name **sender** to identify the label control. The first line of the method tells the program that it's not just a generic object, but specifically a label control, and that it uses the name **clickedLabel** to access the label's properties and methods.  
   
-6.  Sulla barra dei menu scegliere **File**, **Salva tutto** per salvare lo stato di avanzamento e quindi sulla barra dei menu scegliere **Debug**, **Avvia debug** per eseguire il programma. Si dovrebbe visualizzare un form vuoto con uno sfondo blu. Scegliere una cella qualsiasi nel form: una delle icone deve diventare visibile. Continuare a scegliere diversi punti nel form. Le icone scelte verranno visualizzate.  
+     This method first checks whether **clickedLabel** was successfully converted (cast) from an object to a label control. If unsuccessful, it has a value of `null` (C#) or `Nothing` (Visual Basic), and you don't want to execute the remainder of the code in the method. Next, the method checks the chosen label's text color by using the label's **ForeColor** property. If the label's text color is black, then that means the icon's already been chosen and the method is done. (That's what the `return` statement does: It tells the program to stop executing the method.) Otherwise, the icon hasn't been chosen, so the program changes the label's text color to black.  
   
-### <a name="to-continue-or-review"></a>Per continuare o rivedere l'esercitazione  
+6.  On the menu bar, choose **File**, **Save All** to save your progress, and then, on the menu bar, choose **Debug**, **Start Debugging** to run your program. You should see an empty form with a blue background. Choose any of the cells in the form, and one of the icons should become visible. Continue choosing different places in the form. As you choose the icons, they should appear.  
   
--   Per andare al passaggio successivo dell'esercitazione, vedere [Passaggio 5: aggiungere riferimenti alle etichette](../ide/step-5-add-label-references.md).  
+### <a name="to-continue-or-review"></a>To continue or review  
   
--   Per tornare al passaggio precedente dell'esercitazione, vedere [Passaggio 3: Assegnare un'icona casuale a ogni etichetta](../ide/step-3-assign-a-random-icon-to-each-label.md).
+-   To go to the next tutorial step, see [Step 5: Add Label References](../ide/step-5-add-label-references.md).  
+  
+-   To return to the previous tutorial step, see [Step 3: Assign a Random Icon to Each Label](../ide/step-3-assign-a-random-icon-to-each-label.md).

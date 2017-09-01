@@ -1,64 +1,80 @@
 ---
-title: "CA2108: Controllare la sicurezza dichiarativa sui tipi di valori | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ReviewDeclarativeSecurityOnValueTypes"
-  - "CA2108"
-helpviewer_keywords: 
-  - "CA2108"
-  - "ReviewDeclarativeSecurityOnValueTypes"
+title: 'CA2108: Review declarative security on value types | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ReviewDeclarativeSecurityOnValueTypes
+- CA2108
+helpviewer_keywords:
+- ReviewDeclarativeSecurityOnValueTypes
+- CA2108
 ms.assetid: d62bffdd-3826-4d52-a708-1c646c5d48c2
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA2108: Controllare la sicurezza dichiarativa sui tipi di valori
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: a4aa6fa02329c6d82800f3a45f8002bf8a4f10e7
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108: Review declarative security on value types
 |||  
 |-|-|  
 |TypeName|ReviewDeclarativeSecurityOnValueTypes|  
 |CheckId|CA2108|  
-|Categoria|Microsoft.Security|  
-|Breaking Change|Non sostanziale|  
+|Category|Microsoft.Security|  
+|Breaking Change|Non Breaking|  
   
-## Causa  
- Un tipo di valore pubblico o protetto è protetto da [Dati e modellazione](../Topic/Data%20and%20Modeling%20in%20the%20.NET%20Framework.md) o [Link Demands](../Topic/Link%20Demands.md).  
+## <a name="cause"></a>Cause  
+ A public or protected value type is secured by a [Data and Modeling](/dotnet/framework/data/index) or [Link Demands](/dotnet/framework/misc/link-demands).  
   
-## Descrizione della regola  
- I tipi di valore vengono allocati e inizializzati dai relativi costruttori predefiniti prima dell'esecuzione di altri costruttori.  Se un tipo di valore è protetto da Demand o LinkDemand e il chiamante non dispone di autorizzazioni sufficienti per il controllo di sicurezza, qualsiasi costruttore diverso da quello predefinito avrà esito negativo e verrà generata un'eccezione di sicurezza.  Il tipo di valore non viene deallocato, ma viene lasciato nello stato impostato dal relativo costruttore predefinito.  Non presupporre che un chiamante che passa un'istanza del tipo di valore disponga dell'autorizzazione a creare o ad accedere all'istanza.  
+## <a name="rule-description"></a>Rule Description  
+ Value types are allocated and initialized by their default constructors before other constructors execute. If a value type is secured by a Demand or LinkDemand, and the caller does not have permissions that satisfy the security check, any constructor other than the default will fail, and a security exception will be thrown. The value type is not deallocated; it is left in the state set by its default constructor. Do not assume that a caller that passes an instance of the value type has permission to create or access the instance.  
   
-## Come correggere le violazioni  
- Non è possibile correggere una violazione di questa regola se non rimuovendo il controllo di sicurezza dal tipo e utilizzando in sostituzione controlli di sicurezza a livello di metodo.  Si noti che questa correzione della violazione non impedisce ai chiamanti con autorizzazioni non adeguate di ottenere istanze del tipo di valore.  È necessario assicurarsi che un'istanza del tipo di valore, nello stato predefinito, non esponga informazioni riservate e non possa essere utilizzata in modo dannoso.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ You cannot fix a violation of this rule unless you remove the security check from the type, and use method level security checks in its place. Note that fixing the violation in this manner will not prevent callers with inadequate permissions from obtaining instances of the value type. You must ensure that an instance of the value type, in its default state, does not expose sensitive information, and cannot be used in a harmful manner.  
   
-## Esclusione di avvisi  
- È possibile escludere un avviso da questa regola se qualsiasi chiamante può ottenere istanze del tipo di valore nello stato predefinito senza causare una minaccia alla sicurezza.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ You can suppress a warning from this rule if any caller can obtain instances of the value type in its default state without posing a threat to security.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrata una libreria contenente un tipo di valore che viola questa regola.  Si noti che il tipo `StructureManager` presuppone che un chiamante che passa un'istanza del tipo di valore disponga dell'autorizzazione a creare o ad accedere all'istanza.  
+## <a name="example"></a>Example  
+ The following example shows a library containing a value type that violates this rule. Note that the `StructureManager` type assumes that a caller that passes an instance of the value type has permission to create or access the instance.  
   
- [!code-cs[FxCop.Security.DemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_1.cs)]  
+ [!code-csharp[FxCop.Security.DemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_1.cs)]  
   
-## Esempio  
- Nella seguente applicazione vengono illustrati i punti deboli della libreria.  
+## <a name="example"></a>Example  
+ The following application demonstrates the library's weakness.  
   
- [!code-cs[FxCop.Security.TestDemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_2.cs)]  
+ [!code-csharp[FxCop.Security.TestDemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_2.cs)]  
   
- Questo esempio produce l'output che segue.  
+ This example produces the following output.  
   
-  **Structure custom constructor: Request failed.**  
+ **Structure custom constructor: Request failed.**  
 **New values SecuredTypeStructure 100 100**  
 **New values SecuredTypeStructure 200 200**   
-## Vedere anche  
- [Link Demands](../Topic/Link%20Demands.md)   
- [Dati e modellazione](../Topic/Data%20and%20Modeling%20in%20the%20.NET%20Framework.md)
+## <a name="see-also"></a>See Also  
+ [Link Demands](/dotnet/framework/misc/link-demands)   
+ [Data and Modeling](/dotnet/framework/data/index)

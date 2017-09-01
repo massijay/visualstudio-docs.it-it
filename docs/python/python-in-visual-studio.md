@@ -1,46 +1,33 @@
 ---
 title: Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 5/2/2017
+ms.date: 7/13/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
+ms.devlang: python
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: hero-article
 ms.assetid: 33f4f6fb-0ae4-4234-9df2-531f2d3af17f
 caps.latest.revision: 11
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
-ms.openlocfilehash: c46c8b7a0d9ea1509dcda2ef711562b3cf95b259
+ms.translationtype: HT
+ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
+ms.openlocfilehash: 082ac09fcc1bb466de891d0daa7178e505c35770
 ms.contentlocale: it-it
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 
 # <a name="working-with-python-in-visual-studio"></a>Uso di Python in Visual Studio
 
-Python è un linguaggio di programmazione molto diffuso affidabile, flessibile, facile da imparare, utilizzabile gratis in tutti i sistemi operativi e supportato da un'attiva community di sviluppatori e da numerose librerie gratuite. Python supporta tutte le modalità di sviluppo, tra cui applicazioni Web, servizi Web, app desktop, script e calcolo scientifico. Viene usato in molte università, nonché da scienziati, sviluppatori professionisti e non professionisti. Per altre informazioni sul linguaggio, vedere [python.org](https://www.python.org) e [Python for Beginners](https://www.python.org/about/gettingstarted/) (Python per principianti).
+Python è un linguaggio di programmazione molto diffuso affidabile, flessibile, facile da imparare, il cui uso è gratuito in tutti i sistemi operativi e supportato sia da un'attiva community di sviluppatori che da numerose librerie gratuite. Python supporta tutte le modalità di sviluppo, tra cui applicazioni Web, servizi Web, app desktop, script e calcolo scientifico. Viene usato in molte università, nonché da scienziati, sviluppatori professionisti e non professionisti. Per altre informazioni sul linguaggio, vedere [python.org](https://www.python.org) e [Python for Beginners](https://www.python.org/about/gettingstarted/) (Python per principianti).
 
-Visual Studio offre supporto [open source](https://github.com/Microsoft/ptvs) per il linguaggio Python tramite i carichi di lavoro Data Science e di sviluppo Python (Visual Studio 2017) e l'estensione gratuita Python Tools for Visual Studio (Visual Studio 2015 e versioni precedenti). 
+Visual Studio in Windows offre supporto [open source](https://github.com/Microsoft/ptvs) per il linguaggio Python attraverso lo sviluppo di Python e i carichi di lavoro Data Science (Visual Studio 2017), altre all'estensione gratuita Python Tools for Visual Studio (Visual Studio 2015 e versioni precedenti). Python non è attualmente supportato in Visual Studio per Mac, ma viene offerto su Mac e Linux tramite Visual Studio Code (vedere le [Domande e risposte](#questions-and-answers) riportate di seguito).
 
 Seguire le [istruzioni di installazione](installation.md) per configurare il carico di lavoro Python, quindi usare i collegamenti seguenti per saperne di più sulle funzionalità correlate a Python, nonché sulle funzionalità di Visual Studio stesso.
 
@@ -52,11 +39,11 @@ Seguire le [istruzioni di installazione](installation.md) per configurare il car
 | Supporto di IPython | Include il supporto per IPython/Jupyter in REPL per grafici inline, .NET e Windows Presentation Foundation (WPF). | n/d |
 | [Modifica avanzata, IntelliSense e comprensione del codice](code-editing.md) | Colorazione della sintassi, completamento automatico in tutto il codice e in tutte le librerie, [formattazione del codice](code-formatting.md), supporto per la firma, visualizzazione delle classi, accesso alle definizioni, opzione per trovare tutti i riferimenti, frammenti di codice, [refactoring](code-refactoring.md), [PyLint](code-pylint.md) e altro ancora. | [Scrittura di codice nell'Editor di testo e del codice](../ide/writing-code-in-the-code-and-text-editor.md) |
 | [Finestra interattiva](interactive-repl.md) | Fornisce un'esperienza rapida di REPL per Python e consente di evidenziare facilmente una parte del codice e di inviarla alla finestra interattiva. | n/d |
-| [Debug con funzionalità complete](debugging.md) | Il debug può essere eseguito con o senza un progetto di Visual Studio. Include funzionalità per il collegamento a un eseguibile esistente, il [debug Python/C++ in modalità mista](debugging-mixed-mode.md), il [debug remoto](debugging-cross-platform-remote.md) in Linux/Windows/Mac, il [debug remoto in Azure](debugging-azure-remote.md) e il debug all'interno della finestra interattiva. | [Debug in Visual Studio](../debugger/debugging-in-visual-studio.md) |
+| [Debug con funzionalità complete](debugging.md) | Il debug può essere eseguito con o senza un progetto di Visual Studio. Include la funzionalità per eseguire il debug di un eseguibile esistente, il [debug Python/C++ in modalità mista](debugging-mixed-mode.md), il [debug remoto](debugging-cross-platform-remote.md) in Linux/Windows/Mac, il [debug remoto in Azure](debugging-azure-remote.md) e il debug all'interno della finestra interattiva. | [Debug in Visual Studio](../debugger/debugging-in-visual-studio.md) |
 | [Strumenti di profilatura con funzionalità complete di creazione report](profiling.md) | Esamina l'uso del tempo nell'applicazione e consente di confrontare le prestazioni tra diverse esecuzioni della profilatura. | [Strumenti di profilatura](../profiling/profiling-tools.md) (non tutte le funzionalità di profilatura di Visual Studio sono disponibili per Python) |
 | [Strumenti per unit test](unit-testing.md) | Consentono di individuare, eseguire e gestire i test in Esplora test di Visual Studio e di eseguire facilmente il debug di unit test. | [Eseguire unit test del codice](../test/unit-test-your-code.md) |
 
-Il carico di lavoro Python include anche [Azure SDK per Python](azure-sdk-for-python.md), che semplifica l'utilizzo dei servizi Azure e offre il supporto per Windows, Mac OS X e Linux.
+Il carico di lavoro Python include anche [Azure SDK per Python](azure-sdk-for-python.md), che semplifica l'uso dei servizi Azure da applicazioni Windows, Mac OS X e Linux.
 
 La serie di [video introduttivi e di approfondimento](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff) su YouTube offre una panoramica delle funzionalità principali.
 
@@ -64,13 +51,17 @@ La serie di [video introduttivi e di approfondimento](https://www.youtube.com/pl
 
 ## <a name="questions-and-answers"></a>Domande e risposte
 
+**D. Il supporto di Python è disponibile in Visual Studio per Mac?**
+
+R. Non in questo momento, sebbene sia richiesto in [UserVoice](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac/suggestions/18670291-python-tools-for-visual-studio-mac). La documentazione di [Visual Studio per Mac](https://docs.microsoft.com/visualstudio/mac/) identifica gli attuali tipi di sviluppo che supporta. Nel frattempo, Visual Studio Code su Windows, Mac e Linux [funziona bene con Python mediante le estensioni disponibili](https://code.visualstudio.com/docs/languages/python).
+
 **D. Cosa si può usare per compilare un'interfaccia utente con Python?**
 
-Un  La proposta migliore in questo campo è il [progetto Qt](https://www.qt.io/qt-for-application-development/), con le associazioni per Python note come [PySide (l'associazione ufficiale)](http://wiki.qt.io/PySide) (vedere anche [PySide downloads](https://download.qt.io/official_releases/pyside/.)) e [PyQt](https://wiki.python.org/moin/PyQt). Attualmente il supporto di Python in Visual Studio non include strumenti specifici per lo sviluppo dell'interfaccia utente.
+R. La proposta migliore in questo campo è il [progetto Qt](https://www.qt.io/qt-for-application-development/), con le associazioni per Python note come [PySide (l'associazione ufficiale)](http://wiki.qt.io/PySide) (vedere anche [PySide downloads](https://download.qt.io/official_releases/pyside/.)) e [PyQt](https://wiki.python.org/moin/PyQt). Attualmente il supporto di Python in Visual Studio non include strumenti specifici per lo sviluppo dell'interfaccia utente.
 
 **D. Un progetto Python può produrre un file eseguibile autonomo?**
 
-Un  Python è in genere un linguaggio interpretato, con il codice eseguito su richiesta in un ambiente in grado di supportare Python, ad esempio Visual Studio e i server Web. Visual Studio attualmente non offre la possibilità di creare un file eseguibile autonomo, ovvero un programma con un interprete Python incorporato. Tuttavia, esistono diversi metodi all'interno della community di Python per eseguire questa operazione, come descritto in [StackOverflow](http://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency). CPython può anche essere incorporato in un'applicazione nativa, come descritto nel post del blog, [Using CPython's Embeddable Zip File](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/26/cpython-embeddable-zip-file/) (Uso del file ZIP incorporabile di CPython).
+R. Python è in genere un linguaggio interpretato, con cui il codice viene eseguito su richiesta in un ambiente in grado di supportare Python, ad esempio Visual Studio e i server Web. Visual Studio attualmente non offre la possibilità di creare un file eseguibile autonomo, ovvero un programma con un interprete Python incorporato. Tuttavia, esistono diversi metodi all'interno della community di Python per creare file eseguibili, come descritto in [StackOverflow](http://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency). CPython può anche essere incorporato in un'applicazione nativa, come descritto nel post del blog, [Using CPython's Embeddable Zip File](https://blogs.msdn.microsoft.com/pythonengineering/2016/04/26/cpython-embeddable-zip-file/) (Uso del file ZIP incorporabile di CPython).
 
 ## <a name="features-matrix"></a>Matrice delle funzionalità
 
@@ -78,9 +69,9 @@ Un  Python è in genere un linguaggio interpretato, con il codice eseguito su ri
 
 - [Visual Studio 2017 (tutte le edizioni)](https://www.visualstudio.com/vs/)
 - [Visual Studio 2015 (tutte le edizioni)] (https://www.visualstudio.com/it-it/downloads/visual-studio-2015-downloads-vs)
-- [Visual Studio 2013 Community Edition] (https://www.visualstudio.com/it-it/products/visual-studio-community-vs.aspx)
-- [Visual Studio 2013 Express per il Web, Update 2 o versione successiva](https://www.microsoft.com/en-us/download/details.aspx?id=44912)
-- [Visual Studio 2013 Express per Desktop, Update 2 o versione successiva](https://www.microsoft.com/en-US/download/details.aspx?id=44914)
+- Visual Studio 2013 Community Edition
+- Visual Studio 2013 Express per il Web, Update 2 o versione successiva
+- Visual Studio 2013 Express per Desktop, Update 2 o versione successiva
 - Visual Studio 2013 (Professional Edition o versione successiva)
 - Visual Studio 2012 (Professional Edition o versione successiva)
 - Visual Studio 2010 SP1 (Professional Edition o versione successiva; richiede .NET 4.5)
@@ -146,9 +137,9 @@ Funzionalità supportate in base alla versione e all'edizione di Visual Studio:
 
 | Azure | 2017 | 2015 | 2013 Community | 2013 Desktop | 2013 Web | 2013 Professional e successive | 2012 Professional e successive | 2010 SP1 Professional e successive |
 | --- | --- | --- | --- | --- | --- | --- | --- | ---|
-| Distribuzione Web in sito Web | &#10004; | &#10004; | &#10004; | &#10007; | &#10004; | &#10004; | &#10004; | &#10004;<sup>2</sup> |
-| Distribuzione Web in ruolo Web | &#10004; | &#10004; | &#10004; | &#10007; | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>3</sup> | &#10007; |
-| Distribuzione Web in ruolo di lavoro | ? | ? | ? | &#10007; | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>3</sup> | &#10007; |
+| Distribuzione in sito Web | &#10004; | &#10004; | &#10004; | &#10007; | &#10004; | &#10004; | &#10004; | &#10004;<sup>2</sup> |
+| Distribuzione in ruolo Web | &#10004; | &#10004; | &#10004; | &#10007; | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>3</sup> | &#10007; |
+| Distribuzione in ruolo di lavoro | ? | ? | ? | &#10007; | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>3</sup> | &#10007; |
 | Esecuzione nell'emulatore di Azure | ? | ? | ? | &#10007; | &#10004;<sup>4</sup> | &#10004;<sup>4</sup> | &#10004;<sup>3</sup> | &#10007; |
 | Debug remoto | &#10004; | &#10004; | &#10004; | &#10007; | &#10004;<sup>6</sup> | &#10004;<sup>8</sup> | &#10004;<sup>8</sup> | &#10007; |
 | Collegamento a Esplora server | &#10004; | &#10004; | &#10004; | &#10007; | &#10004;<sup>7</sup> | &#10004;<sup>7</sup> | &#10007; | &#10007; |
@@ -193,7 +184,7 @@ Funzionalità supportate in base alla versione e all'edizione di Visual Studio:
 
 5. L'editor di modelli Django in Visual Studio 2013 presenta alcuni problemi noti che vengono risolti installando l'Update 2.
 
-6. Richiede Windows 8 o versione successiva. La finestra Collega a processo non è disponibile in Visual Studio 2013 Express per il Web, ma è comunque possibile eseguire il debug remoto del sito Web di Azure usando il comando Collega debugger (Python) in Esplora server. Per questo comando è richiesto [Azure SDK per .NET 2.3 - Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkId=323510) o versione successiva.
+6. Richiede Windows 8 o versione successiva. La finestra Collega a processo non è disponibile in Visual Studio 2013 Express per il Web, ma è comunque possibile eseguire il debug remoto del sito Web di Azure usando il comando Collega debugger (Python) in Esplora server. Il debug remoto richiede [Azure SDK per .NET 2.3 - Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkId=323510) o versione successiva.
 
 7. Richiede Windows 8 o versione successiva. Per il comando Collega debugger (Python) in Esplora server è richiesto [Azure SDK per .NET 2.3 - Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkId=323510) o versione successiva.
 
@@ -203,5 +194,6 @@ Funzionalità supportate in base alla versione e all'edizione di Visual Studio:
 
 - [Writing Kinect games with Python using PyKinect](https://github.com/Microsoft/PTVS/wiki/PyKinect) (Uso di PyKinect per scrivere di giochi Kinect con Python) (wiki GitHub)
 - [WFastCGI bridge between IIS and Python](https://pypi.python.org/pypi/wfastcgi) (Ponte WFastCGI tra IIS e Python) (python.org)
-- - [Corsi gratuiti per Python in Microsoft Virtual Academy](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
+- [Corsi gratuiti per Python in Microsoft Virtual Academy](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
+- [Top Python Questions alla Microsoft Virtual Academy](https://aka.ms/mva-top-python-questions)
 

@@ -1,75 +1,106 @@
 ---
-title: "Procedura: eseguire il debug da un progetto di DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "debug [Visual Studio], DLL"
-  - "debug di DLL"
-  - "DLL (progetti), debug"
-  - "DLL, debug di progetti"
+title: 'How to: Debug from a DLL Project | Microsoft Docs'
+ms.custom: 
+ms.date: 05/24/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- DLL projects, debugging
+- debugging DLLs
+- DLLs, debugging projects
+- debugging [Visual Studio], DLLs
 ms.assetid: 40a94339-d3f7-4ab9-b8a1-b8cf82942f44
 caps.latest.revision: 30
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# Procedura: eseguire il debug da un progetto di DLL
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 62f65784f36031eb754252f385f7c78c821fc5ec
+ms.contentlocale: it-it
+ms.lasthandoff: 08/22/2017
 
-Per avviare il debug di un progetto DLL, è necessario specificare l'applicazione chiamante nelle proprietà del progetto.  Il layout e il contenuto delle pagine delle proprietà di C\+\+ sono diversi da quelli delle pagine delle proprietà di C\# e Visual Basic.  
+---
+# <a name="how-to-debug-from-a-dll-project-in-visual-studio"></a>How to: Debug from a DLL Project in Visual Studio
+One way to debug a DLL project is to specify the calling application in the project properties of the DLL project and then you can start debugging from the DLL project itself. For this method to work, the application must call the DLL, and the DLL must be in the location where the application expects to find it (otherwise, the application might find a different version of the DLL and load that instead, and it won't hit your breakpoints). For other methods of debugging DLLs, see [Debugging DLL Projects](../debugger/debugging-dll-projects.md).
   
- Se una DLL gestita viene chiamata da codice nativo e si vuole eseguire il debug di entrambi, specificarlo nelle proprietà del progetto.  Per altre informazioni, vedere [Procedura: eseguire il debug in modalità mista](../debugger/how-to-debug-in-mixed-mode.md).  
+If a managed DLL is called by native code and you want to debug both, you can specify this in the project properties. For more information, see [How to: Debug in Mixed Mode](../debugger/how-to-debug-in-mixed-mode.md).   
+
+The C++ property pages differ in layout and content from the C# and Visual Basic property pages. 
   
-> [!NOTE]
->  Non è possibile specificare un'applicazione chiamante esterna nelle edizioni Express di Visual Studio.  È necessario aggiungere un progetto eseguibile alla soluzione, impostarlo come progetto di avvio e chiamare i metodi nella DLL dal progetto eseguibile.  
+### <a name="to-specify-the-calling-application-in-a-c-project"></a>To specify the calling application in a C++ project  
   
-### Per specificare l'applicazione chiamante in un progetto C\+\+  
+1.  Right-click the project node in the **Solution Explorer** and select **Properties**.  
   
-1.  Fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**.  Passare alla scheda **Debug**.  
+2.  Make sure that the **Configuration** field at the top of the window is set to **Debug**. 
+
+    A **Debug** configuration is required for this method. 
   
-2.  Assicurarsi che il campo **Configurazione** nella parte superiore della finestra sia impostato su **Debug**.  
+3.  Go to **Configuration Properties > Debugging**.  
   
-3.  Passare a **Proprietà di configurazione \/ Debug**.  
+4.  In the **Debugger to launch** list, choose **Local Windows Debugger** or **Remote Windows Debugger**.  
   
-4.  Nell'elenco **Debugger da avviare** scegliere **Debugger Windows locale** o **Debugger Windows remoto**.  
+5.  In the **Command** or **Remote Command** box, add the fully-qualified path name of the calling application (such as an .exe file).
+
+    ![Debugging Properties Window](../debugger/media/dbg-debugging-properties-dll.png "DebuggingPropertiesWindow")  
   
-5.  Nella casella **Comando** o **Comando remoto** aggiungere il nome del percorso completo dell'applicazione.  
+6.  Add any necessary program arguments to the **Command Arguments** box.  
   
-6.  Aggiungere tutti gli argomenti del programma necessari nella casella **Argomenti del comando**.  
+### <a name="to-specify-the-calling-application-in-a-c-or-visual-basic-project"></a>To specify the calling application in a C# or Visual Basic project  
   
-### Per specificare l'applicazione chiamante in un progetto C\# o Visual Basic  
+1.  Right-click the project node in the **Solution Explorer** and select **Properties**, and then select the **Debug** tab.
+
+2.  Make sure that the **Configuration** field at the top of the window is set to **Debug**.
+
+3.  (.NET Framework) Select **Start external program**, and add the fully-qualified path name of the calling application.
+
+4.  (.NET Core) Select **Executable** from the **Launch** list, and then add the fully-qualified path name of the calling application in the **Executable** field. 
   
-1.  Fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**.  Passare alla scheda **Debug**.  
+     If you need to add the external program's command line arguments, add them in the **Command line arguments** (or **Application arguments**) field.
+
+    ![Debugging Properties Window](../debugger/media/dbg-debugging-properties-dll-csharp.png "DebuggingPropertiesWindow") 
+
+5.  If you need to, you can also call an application as a URL. (You might want to do this if you are debugging a managed DLL used by a local ASP.NET application.)  
   
-     Selezionare **Avvia programma esterno** e aggiungere il nome del percorso completo del programma da eseguire.  
+     Under **Start Action**, select the **Start browser with URL:** radio button and fill in the URL.
   
-     Se è necessario aggiungere gli argomenti della riga di comando del programma esterno, aggiungerli nel campo **Argomenti della riga di comando**.  
+### <a name="to-start-debugging-from-the-dll-project"></a>To start debugging from the DLL project  
   
-2.  È anche possibile chiamare un'applicazione sotto forma di URL.  Potrebbe essere necessario eseguire questa operazione se si esegue il debug di una DLL gestita usata da un'applicazione ASP.NET locale.  
+1.  Set breakpoints in the DLL project. 
+
+2.  Right-click the DLL project and choose **Set as Startup Project**. 
+
+    (Also, make sure that the **Solutions Configuration** field is still set to **Debug**.)   
   
-     In **Azione di avvio** selezionare il pulsante di opzione **Avvia il browser con URL:** e specificare l'URL.  
+3.  Start debugging (press F5, click the green arrow, or click **Debug > Start Debugging**).
+
+    You will hit the breakpoints in your DLL. If you aren't able to hit the breakpoints, make sure that your DLL output (by default, the **project\Debug** folder) is in a location that the calling application expects to find it.
   
-### Per avviare il debug dal progetto DLL  
-  
-1.  Impostare i punti di interruzione necessari.  
-  
-2.  Avviare il debug \(premere F5, fare clic sulla freccia verde o fare clic su **Debug \/ Avvia debug**\).  
-  
-## Vedere anche  
- [Debug di progetti di DLL](../debugger/debugging-dll-projects.md)   
- [Impostazioni di progetto per le configurazioni di debug C\#](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [Impostazioni di progetto per una configurazione di debug Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
- [Impostazioni di progetto per una configurazione di debug C\+\+](../debugger/project-settings-for-a-cpp-debug-configuration.md)
+## <a name="see-also"></a>See Also  
+ [Debugging DLL Projects](../debugger/debugging-dll-projects.md)   
+ [Project Settings for  C# Debug Configurations](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Project Settings for a Visual Basic Debug Configuration](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [Project Settings for a C++ Debug Configuration](../debugger/project-settings-for-a-cpp-debug-configuration.md)

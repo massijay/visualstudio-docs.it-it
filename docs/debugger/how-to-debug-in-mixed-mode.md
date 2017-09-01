@@ -1,51 +1,81 @@
 ---
-title: "Procedura: eseguire il debug in modalit&#224; mista | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "debug [Visual Studio], modalità mista"
-  - "debug di DLL"
-  - "debug in modalità mista"
+title: 'How to: Debug in Mixed Mode | Microsoft Docs'
+ms.custom: 
+ms.date: 06/19/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+helpviewer_keywords:
+- debugging DLLs
+- debugging [Visual Studio], mixed-mode
+- mixed-mode debugging
 ms.assetid: 2859067d-7fcc-46b0-a4df-8c2101500977
 caps.latest.revision: 29
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 29
----
-# Procedura: eseguire il debug in modalit&#224; mista
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 7c034f8ab86789a16289a33279c253a5d862f1aa
+ms.contentlocale: it-it
+ms.lasthandoff: 08/22/2017
 
-Nelle procedure riportate di seguito viene spiegato come eseguire il debug in modalità mista, ovvero sia di codice gestito che di codice nativo.  Gli scenari possibili sono due, a seconda che la DLL o l'applicazione sia scritta in codice nativo:  
+---
+# <a name="how-to-debug-in-mixed-mode"></a>How to: Debug in Mixed Mode
+The following procedures describe how to debug both managed and native code, also known as mixed-mode debugging. There are two scenarios for doing so, depending on whether the DLL or the application is written in native code:  
   
--   L'applicazione che chiama la DLL è scritta in codice nativo.  In tal caso, la DLL è gestita ed è necessario attivare sia il debugger del codice gestito sia quello del codice nativo per eseguire il debug di entrambi.  È possibile eseguire questa verifica nella finestra di dialogo **Pagine delle proprietà di \<Progetto\>**.  L'esecuzione di questa operazione varia a seconda che il debug venga avviato dal progetto della DLL o da quello dell'applicazione chiamante.  
+-   The calling application that calls your DLL is written in native code. In this case your DLL is managed, and both managed and native debuggers must be enabled to debug both. You can check this in the **\<Project> Property Pages** dialog box. How you do this depends on whether you start debugging from the DLL project or the calling application project.  
   
--   L'applicazione che chiama la DLL è scritta in codice gestito e la DLL è scritta in codice nativo.  
+-   The calling application that calls your DLL is written in managed code and your DLL is written in native code.  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/Esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition. To change your settings, choose **Import and Export Settings** on the **Tools** menu. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).
+
+If you don't have access to the project for the calling app, you can debug a DLL from the DLL project. For more information, see [How to: Debug from a DLL Project](../debugger/how-to-debug-from-a-dll-project.md). You don't need to use mixed to debug just the DLL project.
   
-### Per abilitare il debug in modalità mista  
+### <a name="to-enable-mixed-mode-debugging-c-calling-app"></a>To enable mixed-mode debugging (C++ calling app)  
   
-1.  Selezionare il progetto in **Esplora soluzioni**.  
+1.  In **Solution Explorer**, select the native project.
   
-2.  Scegliere **Pagine delle proprietà** dal menu **Visualizza**.  
+2.  On the **View** menu, click **Property Pages**.
   
-3.  Nella finestra di dialogo **Pagine delle proprietà di \<Progetto\>** espandere il nodo **Proprietà di configurazione** e selezionare **Debug**.  
+3.  In the **\<Project> Property Pages** dialog box, expand the **Configuration Properties** node, and then select **Debugging**.  
   
-4.  Impostare **Tipo debugger** su **Misto** o **Automatico**.  
+4.  Set **Debugger Type** to **Mixed** or **Auto**.
+
+    ![Enable mixed mode debugging](../debugger/media/dbg-mixed-mode-from-native.png "Enable mixed mode debugging")
+
+### <a name="to-enable-mixed-mode-debugging-c-or-vb-calling-app"></a>To enable mixed-mode debugging (C# or VB calling app)  
   
-## Vedere anche  
- [Procedura: eseguire il debug da un progetto di DLL](../debugger/how-to-debug-from-a-dll-project.md)
+1.  In **Solution Explorer**, select the managed project.  
+  
+2.  On the **View** menu, click **Property Pages**.  
+  
+3.  In the **\<Project> Property Pages** dialog box, select the **Debug** tab, and then select **Enable native code debugging**
+
+    ![Enable native code debugging](../debugger/media/dbg-mixed-mode-from-csharp.png "Enable native code debugging")
+  
+## <a name="see-also"></a>See Also  
+ [How to: Debug from a DLL Project](../debugger/how-to-debug-from-a-dll-project.md)

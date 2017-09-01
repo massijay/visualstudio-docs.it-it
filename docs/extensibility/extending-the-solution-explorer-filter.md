@@ -1,39 +1,56 @@
 ---
-title: "Estendere il filtro di Esplora soluzioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Esplora soluzioni, estensione"
-  - "estensibilità [Visual Studio], progetti e soluzioni"
+title: Extending the Solution Explorer Filter | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Solution Explorer, extending
+- extensibility [Visual Studio], projects and solutions
 ms.assetid: df976c76-27ec-4f00-ab6d-a26a745dc6c7
 caps.latest.revision: 25
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# Estendere il filtro di Esplora soluzioni
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 0bbfc6c783a44a6f9aa3254e613781b186e24839
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-È possibile estendere **Esplora** per mostrare o nascondere i file di diversi funzionalità di filtro. Ad esempio, è possibile creare un filtro che mostra solo classe factory file c\# il **Esplora**, come illustrato in questa procedura dettagliata.  
+---
+# <a name="extending-the-solution-explorer-filter"></a>Extending the Solution Explorer Filter
+You can extend **Solution Explorer** filter functionality to show or hide different files. For example, you can create a filter that shows only C# class factory files in the **Solution Explorer**, as this walkthrough demonstrates.  
   
-## Prerequisiti  
- A partire da Visual Studio 2015, non installare Visual Studio SDK dall'area download. È incluso come funzionalità facoltativa nel programma di installazione di Visual Studio. È inoltre possibile installare il SDK di Visual Studio in un secondo momento. Per altre informazioni, vedere [L'installazione di Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-### Creare un progetto di pacchetto Visual Studio  
+### <a name="create-a-visual-studio-package-project"></a>Create a Visual Studio Package Project  
   
-1.  Creare un progetto VSIX denominato `FileFilter`. Aggiungere un modello di elemento di comando personalizzato denominato **FileFilter**. Per altre informazioni, vedere [Creazione di un'estensione con un comando di Menu](../extensibility/creating-an-extension-with-a-menu-command.md).  
+1.  Create a VSIX project named `FileFilter`. Add a custom command item template named **FileFilter**. For more information, see [Creating an Extension with a Menu Command](../extensibility/creating-an-extension-with-a-menu-command.md).  
   
-2.  Aggiungere un riferimento a `System.ComponentModel.Composition` e `Microsoft.VisualStudio.Utilities`.  
+2.  Add a reference to `System.ComponentModel.Composition` and `Microsoft.VisualStudio.Utilities`.  
   
-3.  Impostare il comando di menu venga visualizzato il **Esplora** sulla barra degli strumenti. Aprire il file FileFilterPackage.vsct.  
+3.  Make the menu command appear on the **Solution Explorer** toolbar. Open the FileFilterPackage.vsct file.  
   
-4.  Modifica il `<Button>` blocco per le operazioni seguenti:  
+4.  Change the `<Button>` block to the following:  
   
     ```xml  
     <Button guid="guidFileFilterPackageCmdSet" id="FileFilterId" priority="0x0400" type="Button">  
@@ -45,36 +62,36 @@ caps.handback.revision: 25
     </Button>  
     ```  
   
-### Aggiornare il File manifesto  
+### <a name="update-the-manifest-file"></a>Update the Manifest File  
   
-1.  Nel file source.extension.vsixmanifest, aggiungere un asset che è un componente MEF.  
+1.  In the source.extension.vsixmanifest file, add an asset that is a MEF component.  
   
-2.  Nel **asset** scheda, scegliere il **nuovo** pulsante.  
+2.  On the **Assets** tab, choose the **New** button.  
   
-3.  Nel **tipo** scegliere **Microsoft.VisualStudio.MefComponent**.  
+3.  In the **Type** field, choose **Microsoft.VisualStudio.MefComponent**.  
   
-4.  Nel **origine** selezionare **un progetto nella soluzione corrente**.  
+4.  In the **Source** field, choose **A project in current solution**.  
   
-5.  Nel **progetto** selezionare **FileFilter**, quindi scegliere il **OK** pulsante.  
+5.  In the **Project** field, choose **FileFilter**, and then choose the **OK** button.  
   
-### Aggiungere il codice di filtro  
+### <a name="add-the-filter-code"></a>Add the Filter Code  
   
-1.  Aggiungere alcuni GUID per il file FileFilterPackageGuids.cs:  
+1.  Add some GUIDs to the FileFilterPackageGuids.cs file:  
   
-    ```c#  
+    ```csharp  
     public const string guidFileFilterPackageCmdSetString = "00000000-0000-0000-0000-00000000"; // get your GUID from the .vsct file  
     public const int FileFilterId = 0x100;  
     ```  
   
-2.  Aggiungere un file di classe al progetto FileFilter denominato FileNameFilter.cs.  
+2.  Add a class file to the FileFilter project named FileNameFilter.cs.  
   
-3.  Sostituire con il codice seguente alla classe vuota e lo spazio dei nomi vuoto.  
+3.  Replace the empty namespace and the empty class with the code below.  
   
-     Il `Task<IReadOnlyObservableSet> GetIncludedItemsAsync(IEnumerable<IVsHierarchyItem rootItems)` accetta la raccolta che contiene la radice della soluzione \(`rootItems`\) e restituisce la raccolta di elementi da includere nel filtro.  
+     The `Task<IReadOnlyObservableSet> GetIncludedItemsAsync(IEnumerable<IVsHierarchyItem rootItems)` method takes the collection that contains the root of the solution (`rootItems`) and returns the collection of items to be included in the filter.  
   
-     Il `ShouldIncludeInFilter` metodo filtra gli elementi di **Esplora** gerarchia in base a condizione che si specifica.  
+     The `ShouldIncludeInFilter` method filters the items in the **Solution Explorer** hierarchy based on the condition that you specify.  
   
-    ```c#  
+    ```csharp  
     using System;  
     using System.Collections.Generic;  
     using System.ComponentModel.Composition;  
@@ -159,9 +176,9 @@ caps.handback.revision: 25
   
     ```  
   
-4.  In FileFilter.cs, rimuovere il codice di posizionamento e la gestione di comando dal costruttore FileFilter. Il risultato dovrebbe essere simile al seguente:  
+4.  In FileFilter.cs, remove the command placement and handling code from the FileFilter constructor. The result should look like this:  
   
-    ```c#  
+    ```csharp  
     private FileFilter(Package package)  
     {  
         if (package == null)  
@@ -173,11 +190,11 @@ caps.handback.revision: 25
     }  
     ```  
   
-     Rimuovere anche il metodo ShowMessageBox\(\).  
+     Remove the ShowMessageBox() method as well.  
   
-5.  In FileFilterPackage, cs, sostituire il codice nel metodo Initialize \(\) con il codice seguente:  
+5.  In FileFilterPackage,cs, replace the code in the Initialize() method with the following:  
   
-    ```c#  
+    ```csharp  
     protected override void Initialize()  
     {  
         Debug.WriteLine (string.Format(CultureInfo.CurrentCulture, "Entering Initialize() of: {0}", this.ToString()));  
@@ -185,12 +202,12 @@ caps.handback.revision: 25
     }  
     ```  
   
-### Test del codice  
+### <a name="test-your-code"></a>Test Your Code  
   
-1.  Compilare ed eseguire il progetto. Verrà visualizzata una seconda istanza di Visual Studio. Si tratta l'istanza sperimentale.  
+1.  Build and run the project. A second instance of Visual Studio appears. This is called the experimental instance.  
   
-2.  Nell'istanza sperimentale di Visual Studio, aprire un progetto c\#.  
+2.  In the experimental instance of Visual Studio, open a C# project.  
   
-3.  Cercare il pulsante che nella barra degli strumenti Esplora soluzioni è stato aggiunto. Deve essere il quarto pulsante da sinistra.  
+3.  Look for the button you added on the Solution Explorer toolbar. It should be the fourth button from the left.  
   
-4.  Quando si fa clic sul pulsante, tutti i file devono essere filtrati e dovrebbe essere "tutti gli elementi sono stati filtrati dalla visualizzazione". in Esplora soluzioni.
+4.  When you click the button, all the files should be filtered out, and you should see "All items have been filtered from view." in the Solution Explorer.

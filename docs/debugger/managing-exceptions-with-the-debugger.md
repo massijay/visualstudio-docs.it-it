@@ -1,81 +1,99 @@
 ---
-title: "Gestione delle eccezioni con il Debugger | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.exceptions"
-  - "vs.debug.exceptions.find"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "Common Language Runtime, eccezioni"
-  - "debugger, errori di runtime"
-  - "debug [Visual Studio], gestione eccezioni"
-  - "gestione errori"
-  - "errori [debugger]"
-  - "gestione eccezioni, durante il debug"
-  - "eccezioni, debug"
-  - "eccezioni, Win32"
-  - "controlli runtime nativo"
-  - "gestori di errori On Error"
-  - "runtime, eccezioni"
-  - "errori di runtime"
-  - "errori di runtime, debug"
-  - "Win32, eccezioni"
+title: Manage exceptions with the Visual Studio debugger | Microsoft Docs
+ms.custom: 
+ms.date: 04/05/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.exceptions
+- vs.debug.exceptions.find
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- run-time errors
+- exception handling, during debugging
+- errors [debugger]
+- debugger, runtime errors
+- On Error-style error handlers
+- exceptions, Win32
+- run-time errors, debugging
+- Win32, exceptions
+- run time, exceptions
+- error handling
+- debugging [Visual Studio], exception handling
+- common language runtime, exceptions
+- native run-time checks
+- exceptions, debugging
 ms.assetid: 43a77fa8-37d0-4c98-a334-0134dbca4ece
 caps.latest.revision: 35
-caps.handback.revision: 35
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Gestione delle eccezioni con il Debugger
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 972079ccba97db41d25b84de3394bdc40c1473c1
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Un'eccezione è un'indicazione di uno stato di errore che si verifica durante l’esecuzione di un programma. È possibile e consigliabile fornire gestori che rispondono alle eccezioni più importanti, ma è fondamentale sapere come impostare il debugger per l’interruzione dell’esecuzione in corrispondenza delle eccezioni che si desidera visualizzare.  
+---
+# <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Manage exceptions with the debugger in Visual Studio
+
+An exception is an indication of an error state that occurs while a program is being executed. You can tell the debugger which exceptions (or sets of exceptions) to break on, and at which point you want the debugger to break (when the debugger breaks, it shows you where the exception was thrown). You can also add or delete exceptions. With a solution open in Visual Studio, use **Debug > Windows > Exception Settings** to open the **Exception Settings** window. 
+
+You can and should provide handlers that respond to the most important exceptions, but it's important to know how to configure the debugger to always break execution for some exceptions.
   
- Quando si verifica un'eccezione, il debugger scrive un messaggio di eccezione nella finestra di Output. Il debugger può interrompere l'esecuzione nei casi seguenti:  
+When an exception occurs, the debugger writes an exception message to the Output window. It may break execution in the following cases:  
   
--   quando un'eccezione viene generata e non viene gestita.  
+-   When an exception is thrown and is not handled.  
   
--   quando il debugger è impostato in modo da interrompere l'esecuzione immediatamente quando viene generata un'eccezione, prima che venga richiamato un gestore.  
+-   When the debugger is configured to break execution before any handler is invoked.  
   
--   se è stato impostato [Just My Code](../debugger/just-my-code.md) e il debugger è impostato in modo da interrompere l'esecuzione per qualsiasi eccezione non gestita nel codice utente.  
+-   If you have set [Just My Code](../debugger/just-my-code.md), and the debugger is configured to break on any exception that is not handled in user code.  
   
 > [!NOTE]
->  ASP.NET dispone di un gestore di eccezioni di livello superiore che mostra le pagine di errore in un browser. Questo gestore non interrompe l'esecuzione a meno che **Just My Code** non sia attivato. Per un esempio, vedere [Impostazione del debugger per continuare in caso di eccezioni non gestite dall'utente](../debugger/managing-exceptions-with-the-debugger.md#BKMK_UserUnhandled) di seguito.  
+>  ASP.NET has a top-level exception handler that shows error pages in a browser. It does not break execution unless **Just My Code** is turned on. For an example, see [Setting the debugger to continue on user-unhandled exceptions](../debugger/managing-exceptions-with-the-debugger.md#BKMK_UserUnhandled) below.  
   
 > [!NOTE]
->  In un'applicazione Visual Basic, il debugger gestisce tutti gli errori come eccezioni, anche se si usano gestori degli errori di tipo On Error.  
+>  In a Visual Basic application, the debugger manages all errors as exceptions, even if you use On Error-style error handlers.    
   
-## Gestione delle eccezioni con la finestra Impostazioni eccezioni  
- È possibile usare la finestra **Impostazioni eccezioni** per specificare quali eccezioni \(o set di eccezioni\) causeranno l'interruzione da parte del debugger e in quale punto si verificherà l’interruzione. È possibile aggiungere o eliminare eccezioni o specificare in corrispondenza di quali eccezioni interrompere l’esecuzione. Aprire la finestra quando è aperta una soluzione facendo clic su **Debug\/Windows\/Impostazioni eccezioni**.  
+## <a name="tell-the-debugger-to-break-when-an-exception-is-thrown"></a>Tell the debugger to break when an exception is thrown  
+The debugger can break execution at the point where an exception is thrown, giving you a chance to examine the exception before a handler is invoked.  
   
- È possibile trovare eccezioni specifiche dalla finestra **Cerca** nella barra degli strumenti **Impostazioni eccezioni** o utilizzare la ricerca per filtrare per spazi dei nomi specifici \(ad esempio **System.IO**\).  
+In the **Exception Settings** window (**Debug > Windows > Exception Settings**), expand the node for a category of exceptions (for example, **Common Language Runtime Exceptions**, meaning .NET exceptions), and select the check box for a specific exception within that category (for example **System.AccessViolationException**). You can also select an entire category of exceptions.  
   
-### Impostazione del debugger per interrompere l'esecuzione in caso di eccezione  
- È possibile impostare il debugger in modo da interrompere l'esecuzione quando si verifica un'eccezione e poter quindi esaminare l'eccezione prima che venga richiamato un gestore.  
+![Checked AccessViolationException](../debugger/media/exceptionsettingscheckaccess.png "ExceptionSettingsCheckAccess")  
+
+> [!TIP]
+> You can find specific exceptions by using the **Search** window in the **Exception Settings** toolbar, or use search to filter for specific namespaces (for example **System.IO**).
   
- Nella finestra **Impostazioni eccezioni**, espandere il nodo per una categoria di eccezioni \(ad esempio, **Eccezioni Common Language Runtime**, vale a dire eccezioni .NET\) e selezionare la casella di controllo per un'eccezione specifica all'interno di tale categoria \(ad esempio **System. AccessViolationException**\). È inoltre possibile selezionare un'intera categoria di eccezioni.  
+If you select an exception in the **Exception Settings** window, debugger execution will break wherever the exception is thrown, regardless of whether it is handled or unhandled. At this point the exception is called a first chance exception. For example, here are a couple of scenarios:  
   
- ![AccessViolationException selezionata](../debugger/media/exceptionsettingscheckaccess.png "ExceptionSettingsCheckAccess")  
+*  In the following C# console application, the Main method throws an **AccessViolationException** inside a `try/catch` block:  
   
- Se si seleziona una determinata eccezione, l’esecuzione del debugger viene interrotta ogni volta che viene generata l'eccezione, indipendentemente dal fatto che venga gestita o meno. A questo punto, l'eccezione viene chiamata eccezione first\-chance. Di seguito vengono riportati un paio di scenari di esempio:  
-  
-1.  Nell'applicazione console C\# seguente, il metodo Main genera un'eccezione **AccessViolationException** all'interno di un blocco `try/catch`:  
-  
-    ```c#  
+    ```CSharp  
     static void Main(string[] args)  
     {  
         try  
@@ -91,18 +109,18 @@ Un'eccezione è un'indicazione di uno stato di errore che si verifica durante l�
     }  
     ```  
   
-     Se l'eccezione **AccessViolationException** è selezionata in **Impostazioni eccezioni**, quando si esegue questo codice nel debugger, l'esecuzione si interrompe alla riga `throw`. È quindi possibile continuare l'esecuzione. Nella console dovrebbero essere visualizzate entrambe le righe:  
+     If you have **AccessViolationException** checked in **Exception Settings**, when you run this code in the debugger execution will break on the `throw` line. You can then continue execution. The console should display both lines:  
   
     ```  
     caught exception  
     goodbye  
     ```  
   
-     ma non viene visualizzata la riga `here`.  
+     but it does not display the `here` line.  
   
-2.  Un'applicazione console C\# che fa riferimento a una libreria di classi con una classe che dispone di due metodi, un metodo che genera un'eccezione e la gestisce e un secondo metodo che genera la stessa eccezione e non la gestisce:  
+*  A C# console application references a class library with a class that has two methods, a method that throws an exception and handles it and a second method that throws the same exception and doesn't handle it:  
   
-    ```vb  
+    ```csharp 
     public class Class1  
     {  
         public void ThrowHandledException()  
@@ -124,9 +142,9 @@ Un'eccezione è un'indicazione di uno stato di errore che si verifica durante l�
     }  
     ```  
   
-     Ecco il metodo Main\(\) dell'applicazione console:  
+     Here's the Main() method of the console application:  
   
-    ```c#  
+    ```CSharp  
     static void Main(string[] args)  
     {  
         Class1 class1 = new Class1();  
@@ -135,40 +153,40 @@ Un'eccezione è un'indicazione di uno stato di errore che si verifica durante l�
     }  
     ```  
   
-     Se l'eccezione **AccessViolationException** è selezionata in **Impostazioni eccezioni**, quando si esegue questo codice nel debugger, l'esecuzione si interrompe alla riga `throw` in **ThrowHandledException\(\)** e **ThrowUnhandledException\(\)**.  
+     If you have **AccessViolationException** checked in **Exception Settings**, when you run this code in the debugger execution will break on the `throw` line in both **ThrowHandledException()** and **ThrowUnhandledException()**.  
   
- Se si desidera ripristinare le impostazioni di eccezioni sulle impostazioni predefinite, è possibile scegliere il pulsante **Ripristina** nella barra degli strumenti:  
+ If you would like to restore the exception settings to the defaults, you can click the **Restore** button on the toolbar:  
   
- ![Ripristinare i valori predefiniti in Impostazioni eccezione](../debugger/media/restoredefaultexceptions.png "RestoreDefaultExceptions")  
+ ![Restore defaults in Exception Settings](../debugger/media/restoredefaultexceptions.png "RestoreDefaultExceptions")  
   
-###  <a name="BKMK_UserUnhandled"></a> Impostazione del debugger per continuare in caso di eccezioni non gestite dall'utente  
- Se si esegue il debug del codice .NET o JavaScript con [Just My Code](../debugger/just-my-code.md), è possibile impostare il debugger in modo da non interrompere l'esecuzione in corrispondenza di eccezioni non gestite nel codice utente, ma gestite in un'altra posizione.  
+##  <a name="BKMK_UserUnhandled"></a> Tell the debugger to continue on user-unhandled exceptions  
+ If you are debugging .NET or JavaScript code with [Just My Code](../debugger/just-my-code.md), you can tell the debugger not to break on exceptions that are not handled in user code but are handled somewhere else.  
   
-1.  Nella finestra **Impostazioni eccezioni**, aprire il menu di scelta rapida facendo clic con il pulsante destro del mouse nella finestra e selezionando **Mostra colonne**. \(Se **Just My Code** è stato disattivato, questo comando non verrà visualizzato\).  
+1.  In the **Exception Settings** window, open the context menu by right-clicking in window and then selecting **Show Columns**. (If you have turned off **Just My Code**, you will not see this command.)  
   
-2.  Dovrebbe essere visualizzata una seconda colonna denominata **Azioni aggiuntive**. In questa colonna viene visualizzato **Continua se non gestita dal codice utente** per eccezioni specifiche, vale a dire che il debugger non interrompe l’esecuzione se l'eccezione non viene gestita nel codice utente ma viene gestita nel codice esterno.  
+2.  You should see a second column named **Additional Actions**. This column displays **Continue when unhandled by user code** on specific exceptions, meaning that the debugger does not break if that exception is not handled in user code but is handled in external code.  
   
-3.  È possibile modificare questa impostazione per una determinata eccezione \(selezionare l'eccezione, fare clic con il pulsante destro del mouse e selezionare\/deselezionare **Continua se non gestita nel codice utente**\) o per un'intera categoria di eccezioni \(ad esempio, tutte le eccezioni Common Language Runtime\).  
+3.  You can change this setting either for a particular exception (select the exception, right-click, and select/deselect **Continue when Unhandled in User Code**) or for an entire category of exceptions (for example, all the Common Language Runtime exceptions).  
   
- Ad esempio, le applicazioni Web ASP.NET gestiscono le eccezioni convertendole in un codice di stato HTTP 500 \([Gestione delle eccezioni nell'API ASP.NET](http://www.asp.net/web-api/overview/error-handling/exception-handling)\), che potrebbe non aiutare a determinare l'origine dell'eccezione. Nell'esempio seguente, il codice utente effettua una chiamata a `String.Format()` che genera un’eccezione <xref:System.FormatException>. L'esecuzione si interrompe come segue:  
+ For example, ASP.NET web applications handle exceptions by converting them to an HTTP 500 status code ([Exception Handling in ASP.NET API](http://www.asp.net/web-api/overview/error-handling/exception-handling)), which may not help you to determine the source of the exception. In the example below, the user code makes a call to `String.Format()` that throws a <xref:System.FormatException>. Execution breaks as follows:  
   
- ![Interruzioni su eccezioni non gestite dall'utente](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")  
+ ![breaks on user&#45;unhanlded exception](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")  
   
-### Aggiunta ed eliminazione di eccezioni  
- È possibile aggiungere ed eliminare le eccezioni. È possibile eliminare qualsiasi tipo di eccezione da qualsiasi categoria selezionando l'eccezione e facendo clic sul pulsante **Elimina** \(il segno meno\) nella barra degli strumenti **Impostazioni eccezioni** o facendo clic con il pulsante destro del mouse sull'eccezione e selezionando **Elimina** dal menu di scelta rapida. L'eliminazione di un'eccezione ha lo stesso effetto di un’eccezione non selezionata, vale a dire che il debugger non interrompe l’esecuzione quando l’eccezione viene generata.  
+## <a name="add-and-delete-exceptions"></a>Add and delete exceptions  
+ You can add and delete exceptions. You can delete any type of exception from any category by selecting the exception and clicking the **Delete** button (the minus sign) on the **Exception Settings** toolbar, or right-clicking the exception and selecting **Delete** from the context menu. Deleting an exception has the same effect as having the exception unchecked, which is that the debugger will not break when it is thrown.  
   
- Per aggiungere un'eccezione: nella finestra **Impostazioni eccezioni** selezionare una delle categorie di eccezioni \(ad esempio, **Common Language Runtime**\) e fare clic sul pulsante **Aggiungi**. Digitare il nome dell'eccezione \(ad esempio **System.UriTemplateMatchException**\). L'eccezione viene aggiunta all'elenco \(in ordine alfabetico\) e viene selezionata automaticamente.  
+ To add an exception: in the **Exception Settings** window, select one of the exception categories (for example, **Common Language Runtime**) and click the **Add** button. Type the name of the exception (for example. **System.UriTemplateMatchException**). The exception is added to the list (in alphabetical order), and is automatically checked.  
   
- Se si desidera aggiungere un'eccezione alle eccezioni di accesso alla memoria GPU, alle eccezioni di runtime JavaScript o alle categorie di eccezioni Win32, è necessario includere il codice di errore, nonché la descrizione.  
+ If you want to add an exception to the GPU Memory Access Exceptions, JavaScript Runtime Exceptions, or Win32 Exceptions categories, you need to include the error code as well as the description.  
   
 > [!TIP]
->  Controllare l’ortografia. La finestra **Impostazioni eccezioni** non verifica l'esistenza di un'eccezione aggiunta. Pertanto, se si digita **Sytem.UriTemplateMatchException**, si ottiene una voce per tale eccezione \(e non per **System.UriTemplateMatchException**\).  
+>  Check your spelling! The **Exception Settings** window doesn't check for the existence of an added exception. So if you type **Sytem.UriTemplateMatchException**, you'll get an entry for that exception (and not for **System.UriTemplateMatchException**).  
   
- Le impostazioni di eccezioni sono persistenti nel file con estensione suo della soluzione, per cui si applicano a una particolare soluzione. Non è possibile riutilizzare impostazioni di eccezioni specifiche in tutte le soluzioni. A questo punto, vengono mantenute solo le eccezioni aggiunte e non le eccezioni eliminate. In altre parole, è possibile aggiungere un'eccezione, chiudere e riaprire la soluzione e l'eccezione sarà ancora disponibile. Ma se si elimina un'eccezione e si chiude e si riapre la soluzione, l'eccezione viene visualizzata nuovamente.  
+ Exception settings are persisted in the solution's .suo file, so they apply to a particular solution. You can't reuse specific exception settings across solutions. At this point, only added exceptions are persisted; deleted exceptions are not. In other words, you can add an exception, close and reopen the solution, and the exception will still be there. But if you delete an exception and close/reopen the solution, the exception will reappear.  
   
- La finestra **Impostazioni eccezioni** supporta tipi di eccezioni generiche in C\#, ma non in Visual Basic. Per interrompere l’esecuzione in corrispondenza di eccezioni come `MyNamespace.GenericException<T>`, è necessario aggiungere l'eccezione come **MyNamespace.GenericException'1**. Vale a dire, se è stata creata un'eccezione simile alla seguente:  
+ The **Exception Settings** window supports generic exception types in C# but not in Visual Basic. To break on exceptions like `MyNamespace.GenericException<T>`, you must add the exception as **MyNamespace.GenericException`1**. That is, if you have created an exception like this:  
   
-```c#  
+```CSharp  
 public class GenericException<T> : Exception  
 {  
     public GenericException() : base("This is a generic exception.")  
@@ -177,14 +195,24 @@ public class GenericException<T> : Exception
 }  
 ```  
   
- È possibile aggiungere l'eccezione a **Impostazioni eccezioni** come segue:  
+ You can add the exception to **Exception Settings** like this:  
   
- ![Aggiunta di eccezione generica](../debugger/media/addgenericexception.png "AddGenericException")  
+ ![adding generic exception](../debugger/media/addgenericexception.png "AddGenericException")  
+
+## <a name="add-conditions-to-an-exception"></a>Add conditions to an exception
+
+You can set conditions on exceptions in the **Exception Settings** dialog box. Currently supported conditions include the module name(s) to include or exclude for the exception. By setting module names as conditions, you can choose to break for the exception only on particular code modules, or you can avoid breaking on particular modules.
+
+> [!NOTE]
+> Adding conditions to an exception is new in [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
+
+To add conditional exceptions, choose the **Edit condition** icon in the Exception Settings dialog box or right-click the exception and choose **Edit Conditions**.
+
+![Conditions on an Exception](../debugger/media/dbg-conditional-exception.png "DbgConditionalException")
   
-## Vedere anche  
- [Continuazione dell'esecuzione dopo un'eccezione](../debugger/continuing-execution-after-an-exception.md)   
- [Procedura: esaminare il codice di sistema dopo un'eccezione](../debugger/how-to-examine-system-code-after-an-exception.md)   
- [Procedura: utilizzare controlli runtime nativi](../debugger/how-to-use-native-run-time-checks.md)   
- [Utilizzo dei controlli runtime senza la libreria di runtime del linguaggio C](../debugger/using-run-time-checks-without-the-c-run-time-library.md)   
- [Exception Assistant](../Topic/Exception%20Assistant.md)   
- [Nozioni di base sul debugger](../debugger/debugger-basics.md)
+## <a name="see-also"></a>See Also  
+ [Continuing Execution After an Exception](../debugger/continuing-execution-after-an-exception.md)   
+ [How to: Examine System Code After an Exception](../debugger/how-to-examine-system-code-after-an-exception.md)   
+ [How to: Use Native Run-Time Checks](../debugger/how-to-use-native-run-time-checks.md)   
+ [Using Run-Time Checks Without the C Run-Time Library](../debugger/using-run-time-checks-without-the-c-run-time-library.md)   
+ [Debugger Basics](../debugger/debugger-basics.md)

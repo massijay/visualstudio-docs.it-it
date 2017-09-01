@@ -1,5 +1,5 @@
 ---
-title: Analizzare l&quot;utilizzo della rete nelle app UWP in Visual Studio | Microsoft Docs
+title: Analizzare l'utilizzo della rete nelle app UWP in Visual Studio | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,14 +29,14 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 44110390bcddc67d86dcfcc81c2d5961e346ccf7
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: a8d9473804b42169b5b33795b023832b753837d0
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 06/30/2017
 
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>Analizzare l'utilizzo della rete nelle app UWP
-Lo strumento di diagnostica **Rete** di Visual Studio consente di raccogliere dati sulle operazioni di rete eseguite con l'[API Windows.Web.Http](https://msdn.microsoft.com/library/windows/apps/windows.web.http.aspx). L'analisi dei dati può essere utile nella risoluzione di problemi di accesso e autenticazione, di uso errato della cache, nonché in caso di problemi di prestazioni relativi a visualizzazione e download.  
+Lo strumento di diagnostica **Rete** di Visual Studio consente di raccogliere dati sulle operazioni di rete eseguite con l'[API Windows.Web.Http](/uwp/api/windows.web.http). L'analisi dei dati può essere utile nella risoluzione di problemi di accesso e autenticazione, di uso errato della cache, nonché in caso di problemi di prestazioni relativi a visualizzazione e download.  
   
  Lo strumento Rete supporta solo app della piattaforma Windows Universal. Altre piattaforme non sono attualmente supportate.  
   
@@ -58,7 +58,7 @@ Lo strumento di diagnostica **Rete** di Visual Studio consente di raccogliere da
   
  La finestra di report dovrebbe essere analoga alla seguente:  
   
- ![Finestra dello strumento Rete](~/profiling/media/network_fullwindow.png "NETWORK_FullWindow")  
+ ![Finestra dello strumento Rete](../profiling/media/network_fullwindow.png "NETWORK_FullWindow")  
   
 ## <a name="analyzing-data"></a>Analisi dei dati  
  È possibile analizzare il traffico HTTP acquisito mentre l'applicazione è in esecuzione o anche dopo che l'applicazione è stata chiusa, selezionando una delle operazioni di rete visualizzate nella visualizzazione di riepilogo.  
@@ -91,6 +91,5 @@ Lo strumento di diagnostica **Rete** di Visual Studio consente di raccogliere da
 3.  Il pulsante di stampa della risposta (all'interno della scheda corpo) consente di analizzare i paylod di risposta JSON, XML, HTML, CSS, JavaScript e TypeScript aumentando la leggibilità del contenuto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione degli strumenti di profilatura con o senza il debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
- [Blog di Visual Studio: Introducing Visual Studio's network inspector](http://go.microsoft.com/fwlink/?LinkId=535022)  (Introduzione al controllo di rete di Visual Studio)  
- [Video di Channel 9: Strumenti di diagnostica di Visual Studio - Nuovo Profiler di rete](http://channel9.msdn.com/Series/ConnectOn-Demand/206)
+ [Esecuzione degli strumenti di profilatura con o senza il debugger](../profiling/running-profiling-tools-with-or-without-the-debugger.md) [Blog di Visual Studio: Introducing Visual Studio's network inspector](http://go.microsoft.com/fwlink/?LinkId=535022)  (Introduzione al controllo di rete di Visual Studio)  
+ [Video di Channel 9: Strumenti di diagnostica di Visual Studio - Nuovo Profiler di rete](http://channel9.msdn.com/Series/ConnectOn-Demand/206) [Profilatura in Visual Studio](../profiling/index.md) [Panoramica sulle funzionalità di profilatura](../profiling/profiling-feature-tour.md)

@@ -1,44 +1,61 @@
 ---
-title: "IDebugProcessSecurity::QueryCanSafelyAttach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugProcessSecurity::QueryCanSafelyAttach"
+title: IDebugProcessSecurity::QueryCanSafelyAttach | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugProcessSecurity::QueryCanSafelyAttach
 ms.assetid: 63ec1ae8-27da-4574-aa15-1c986fe9fe58
 caps.latest.revision: 4
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# IDebugProcessSecurity::QueryCanSafelyAttach
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 8f0e6f4942a9151bb95d4f14e074355562016096
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Questo metodo consente al fornitore di porte visualizzare un avviso prima che si connette utente a un processo non sicuro.  
+---
+# <a name="idebugprocesssecurityquerycansafelyattach"></a>IDebugProcessSecurity::QueryCanSafelyAttach
+This method allows the port supplier to display a warning before the user attaches to an unsafe process.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT QueryCanSafelyAttach();  
 ```  
   
-```c#  
+```csharp  
 int QueryCanSafelyAttach();  
 ```  
   
-## Valore restituito  
- I valori restituiti sono le seguenti:  
+## <a name="return-value"></a>Return Value  
+ The return values are as follows:  
   
--   `S_OK`: Allegare da elaborare è sicuro e alcuna finestra di dialogo di avviso viene visualizzata.  
+-   `S_OK`: Attaching to process is safe and no warning dialog box is shown.  
   
--   `S_FALSE`: La connessione potrebbe esserci un problema di sicurezza e una finestra di dialogo contenente un avviso viene visualizzata.  
+-   `S_FALSE`: Attaching could be a security problem and a dialog box with a warning is shown.  
   
--   `FAILURE`: Allegare per l'elaborazione avrà esito negativo.  
+-   `FAILURE`: Attaching to process fails.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugProcessSecurity](../../../extensibility/debugger/reference/idebugprocesssecurity.md)

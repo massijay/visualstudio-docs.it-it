@@ -1,76 +1,80 @@
 ---
-title: "Procedura: esportare una barra multifunzione dalla finestra di progettazione in un elemento XML della barra"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "barra multifunzione personalizzata, XML"
-  - "personalizzazione della barra multifunzione, XML"
-  - "esportazione della barra multifunzione"
-  - "barra multifunzione [sviluppo per Office in Visual Studio], esportazione"
-  - "barra multifunzione [sviluppo per Office in Visual Studio], XML"
-  - "finestra di progettazione della barra multifunzione [sviluppo per Office in Visual Studio]"
-  - "XML [sviluppo per Office in Visual Studio], barra multifunzione"
+title: 'How to: Export a Ribbon from the Ribbon Designer to Ribbon XML | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- custom Ribbon, XML
+- customizing the Ribbon, XML
+- Ribbon [Office development in Visual Studio], XML
+- Ribbon [Office development in Visual Studio], exporting
+- XML [Office development in Visual Studio], Ribbon
+- Ribbon Designer [Office development in Visual Studio]
+- exporting Ribbon
 ms.assetid: 96e0e9ed-4392-4f45-ac33-b6f7c22ea321
 caps.latest.revision: 37
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 33
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: cf3b9b66e0626328bccac92ab473dee33326b0f2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Procedura: esportare una barra multifunzione dalla finestra di progettazione in un elemento XML della barra
-  L'elemento **Barra multifunzione \(finestra di progettazione visiva\)** non supporta tutti i possibili tipi di personalizzazione della barra multifunzione.  Per personalizzare la barra multifunzione in modalità avanzate è possibile esportare la barra multifunzione dalla finestra di progettazione nell'XML della barra multifunzione.  
+# <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>How to: Export a Ribbon from the Ribbon Designer to Ribbon XML
+  The **Ribbon (Visual Designer)** item does not support all possible types of Ribbon customization. To customize the Ribbon in advanced ways, you can export the Ribbon from the designer to Ribbon XML and edit the XML directly.  
   
 > [!NOTE]  
->  Non tutti i valori delle proprietà sono presenti nel file XML della barra multifunzione.  Per ulteriori informazioni, vedere [Cenni preliminari sulla barra multifunzione](../vsto/ribbon-overview.md).  
+>  Not all property values appear in the Ribbon XML file. For more information, see [Ribbon Overview](../vsto/ribbon-overview.md).  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
   
-### Per esportare una barra multifunzione dalla finestra di progettazione in un elemento XML della barra multifunzione  
+### <a name="to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>To export a Ribbon from the Ribbon Designer to Ribbon XML  
   
-1.  Fare clic con il pulsante destro del mouse sul file di codice della barra multifunzione in **Esplora soluzioni**, quindi scegliere **Visualizza finestra di progettazione**.  
+1.  Right-click the Ribbon code file in **Solution Explorer**, and then click **View Designer**.  
   
-2.  Fare clic con il pulsante destro del mouse sulla finestra di progettazione della barra multifunzione, quindi scegliere **Esporta barra multifunzione in XML**.  
+2.  Right-click the Ribbon Designer, and then click **Export Ribbon to XML**.  
   
-     In Visual Studio viene aggiunto un file XML e un file di codice XML della barra multifunzione al progetto.  
+     Visual Studio adds a Ribbon XML file and a Ribbon XML code file to your project.  
   
-3.  Nella classe del codice della barra multifunzione, trovare i commenti che iniziano con `TODO:.`  
+3.  In the Ribbon code class, locate the comments that start with `TODO:`.  
   
-4.  Copiare il blocco di codice in questi commenti nella classe **ThisAddin**, **ThisWorkbook** o **ThisDocument**, a seconda del tipo di soluzione che si sta sviluppando.  
+4.  Copy the code block in these comments to the **ThisAddin**, **ThisWorkbook**, or **ThisDocument** class, depending on which type of solution you are developing.  
   
-     Questo codice consente all'applicazione di Microsoft Office di individuare e caricare la barra multifunzione personalizzata.  Per ulteriori informazioni, vedere [Elemento XML della barra multifunzione](../vsto/ribbon-xml.md).  
+     This code enables the Microsoft Office application to discover and load your custom Ribbon. For more information, see [Ribbon XML](../vsto/ribbon-xml.md).  
   
-5.  Nella classe **ThisAddin**, **ThisWorkbook** o **ThisDocument**, rimuovere il commento dal blocco di codice.  
+5.  In the **ThisAddin**, **ThisWorkbook**, or **ThisDocument** class, uncomment the code block.  
   
-     Dopo avere rimosso il commento dal codice, il risultato sarà simile all'esempio seguente.  In questo esempio la classe Ribbon è denominata `MyRibbon`.  
+     After you uncomment the code, it should resemble the following example. In this example, the Ribbon class is called `MyRibbon`.  
   
-     [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab_XML/CS/ThisAddIn.cs#1)]
-     [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../snippets/visualbasic/VS_Snippets_OfficeSP/Trin_Ribbon_Custom_Tab_XML/VB/ThisAddIn.vb#1)]  
+     [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs#1)]  [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]  
   
-6.  Passare al file di codice XML della barra multifunzione e cercare l'area `Ribbon Callbacks`.  
+6.  Switch to the Ribbon XML code file and find the `Ribbon Callbacks` region.  
   
-     In questa area si scrivono i metodi di callback per gestire le azioni dell'utente, ad esempio la selezione di un pulsante tramite il mouse.  
+     This is where you write callback methods to handle user actions, such as clicking a button.  
   
-7.  Creare un metodo di callback per ogni gestore eventi che si scrive nel codice della finestra di progettazione della barra multifunzione.  
+7.  Create a callback method for each event handler that you wrote in the Ribbon Designer code.  
   
-8.  Spostare tutto il codice dai gestori eventi in questi metodi di callback e modificarlo in modo che utilizzi il modello di programmazione di estensibilità della barra multifunzione \(RibbonX\).  
+8.  Move all your event handler code from the event handlers to the callback methods, and modify the code to work with the Ribbon extensibility (RibbonX) programming model.  
   
-     Per informazioni sulla scrittura dei metodi di callback e l'utilizzo del modello di programmazione RibbonX, vedere [Elemento XML della barra multifunzione](../vsto/ribbon-xml.md).  
+     For information about writing callback methods and using the RibbonX programming model, see [Ribbon XML](../vsto/ribbon-xml.md).  
   
-## Vedere anche  
- [Cenni preliminari sulla barra multifunzione](../vsto/ribbon-overview.md)   
- [Finestra di progettazione della barra multifunzione](../vsto/ribbon-designer.md)   
- [Elemento XML della barra multifunzione](../vsto/ribbon-xml.md)   
- [Procedura dettagliata: creazione di una scheda personalizzata utilizzando la finestra di progettazione della barra multifunzione](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
- [Procedura dettagliata: creazione di una scheda personalizzata utilizzando l'elemento XML della barra multifunzione](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)  
+## <a name="see-also"></a>See Also  
+ [Ribbon Overview](../vsto/ribbon-overview.md)   
+ [Ribbon Designer](../vsto/ribbon-designer.md)   
+ [Ribbon XML](../vsto/ribbon-xml.md)   
+ [Walkthrough: Creating a Custom Tab by Using the Ribbon Designer](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
+ [Walkthrough: Creating a Custom Tab by Using Ribbon XML](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)  
   
   

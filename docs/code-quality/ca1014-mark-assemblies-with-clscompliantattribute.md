@@ -1,58 +1,73 @@
 ---
-title: "CA1014: Contrassegnare gli assembly con CLSCompliantAttribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1014"
-  - "MarkAssembliesWithClsCompliant"
-helpviewer_keywords: 
-  - "CA1014"
-  - "MarkAssembliesWithClsCompliant"
+title: 'CA1014: Mark assemblies with CLSCompliantAttribute | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1014
+- MarkAssembliesWithClsCompliant
+helpviewer_keywords:
+- CA1014
+- MarkAssembliesWithClsCompliant
 ms.assetid: 4fe57449-cf45-4745-bcd2-6345f1ed266d
 caps.latest.revision: 18
-caps.handback.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1014: Contrassegnare gli assembly con CLSCompliantAttribute
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 4d15d5c6d111f75bed1e73da1f94cbdae391c4ec
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1014-mark-assemblies-with-clscompliantattribute"></a>CA1014: Mark assemblies with CLSCompliantAttribute
 |||  
 |-|-|  
 |TypeName|MarkAssembliesWithClsCompliant|  
 |CheckId|CA1014|  
 |Category|Microsoft.Design|  
-|Breaking Change|Non sostanziale|  
+|Breaking Change|Non-breaking|  
   
-## Causa  
- A un assembly non è applicato l'attributo <xref:System.CLSCompliantAttribute?displayProperty=fullName>.  
+## <a name="cause"></a>Cause  
+ An assembly does not have the <xref:System.CLSCompliantAttribute?displayProperty=fullName> attribute applied to it.  
   
-## Descrizione della regola  
- In Common Language Specification \(CLS\) vengono definite limitazioni di denominazione, tipi di dati e regole che gli assembly devono rispettare per poter essere utilizzati tra diversi linguaggi di programmazione.  In una buona programmazione tutti gli assembly devono indicare in modo esplicito la conformità CLS all'oggetto <xref:System.CLSCompliantAttribute>.  Se l'attributo non è presente su un assembly, tale assembly non è conforme.  
+## <a name="rule-description"></a>Rule Description  
+ The Common Language Specification (CLS) defines naming restrictions, data types, and rules to which assemblies must conform if they will be used across programming languages. Good design dictates that all assemblies explicitly indicate CLS compliance with <xref:System.CLSCompliantAttribute>. If the attribute is not present on an assembly, the assembly is not compliant.  
   
- È possibile che un assembly conforme a CLS contenga tipi o membri di tipi non compatibili.  
+ It is possible for a CLS-compliant assembly to contain types or type members that are not compliant.  
   
-## Come correggere le violazioni  
- Per correggere una violazione di questa regola, aggiungere l'attributo all'assembly.  Anziché contrassegnare l'intero assembly come non conforme, è opportuno determinare quali tipi o membri di tipi non sono conformi e contrassegnarli come tali.  Se possibile, è opportuno fornire un'alternativa conforme a CLS per i membri non conformi in modo che il maggior numero possibile di destinatari possa accedere a tutte le funzionalità dell'assembly.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, add the attribute to the assembly. Instead of marking the whole assembly as noncompliant, you should determine which type or type members are not compliant and mark these elements as such. If possible, you should provide a CLS-compliant alternative for noncompliant members so that the widest possible audience can access all the functionality of your assembly.  
   
-## Esclusione di avvisi  
- Non escludere un avviso da questa regola.  Se non si desidera che l'assembly sia conforme, applicare l'attributo e impostare il relativo valore su `false`.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule. If you do not want the assembly to be compliant, apply the attribute and set its value to `false`.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato un assembly con l'attributo <xref:System.CLSCompliantAttribute?displayProperty=fullName> applicato che lo dichiara come conforme a CLS.  
+## <a name="example"></a>Example  
+ The following example shows an assembly that has the <xref:System.CLSCompliantAttribute?displayProperty=fullName> attribute applied that declares it CLS-compliant.  
   
- [!code-cs[FxCop.Design.AssembliesCls#1](../code-quality/codesnippet/CSharp/ca1014-mark-assemblies-with-clscompliantattribute_1.cs)]
- [!code-cpp[FxCop.Design.AssembliesCls#1](../code-quality/codesnippet/CPP/ca1014-mark-assemblies-with-clscompliantattribute_1.cpp)]
- [!code-vb[FxCop.Design.AssembliesCls#1](../code-quality/codesnippet/VisualBasic/ca1014-mark-assemblies-with-clscompliantattribute_1.vb)]  
+ [!code-csharp[FxCop.Design.AssembliesCls#1](../code-quality/codesnippet/CSharp/ca1014-mark-assemblies-with-clscompliantattribute_1.cs)] [!code-cpp[FxCop.Design.AssembliesCls#1](../code-quality/codesnippet/CPP/ca1014-mark-assemblies-with-clscompliantattribute_1.cpp)] [!code-vb[FxCop.Design.AssembliesCls#1](../code-quality/codesnippet/VisualBasic/ca1014-mark-assemblies-with-clscompliantattribute_1.vb)]  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  <xref:System.CLSCompliantAttribute?displayProperty=fullName>   
- [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md)
+ [Language Independence and Language-Independent Components](http://msdn.microsoft.com/Library/4f0b77d0-4844-464f-af73-6e06bedeafc6)

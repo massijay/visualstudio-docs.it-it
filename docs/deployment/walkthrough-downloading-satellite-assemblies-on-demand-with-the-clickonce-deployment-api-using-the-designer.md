@@ -1,86 +1,103 @@
 ---
-title: "Walkthrough: Downloading Satellite Assemblies on Demand with the ClickOnce Deployment API Using the Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-deployment"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "Windows Forms, globalization"
-  - "ClickOnce deployment, globalization"
-  - "localization, Windows Forms"
-  - "ClickOnce, on-demand download"
-  - "Windows Forms, localization"
-  - "ClickOnce deployment, localization"
-  - "walkthroughs, localization"
+title: 'Walkthrough: Downloading Satellite Assemblies on Demand with the ClickOnce Deployment API Using the Designer | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-deployment
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+helpviewer_keywords:
+- Windows Forms, globalization
+- ClickOnce deployment, globalization
+- localization, Windows Forms
+- ClickOnce, on-demand download
+- Windows Forms, localization
+- ClickOnce deployment, localization
+- walkthroughs, localization
 ms.assetid: 82b85a47-b223-4221-a17c-38a52c3fb6e2
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# Walkthrough: Downloading Satellite Assemblies on Demand with the ClickOnce Deployment API Using the Designer
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 653240e8bb782a99a1f58d16fff0748edea5cab2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
-Le applicazioni Windows Form possono essere configurate per più impostazioni cultura con l'uso di assembly satellite.  Un *assembly satellite* è un assembly in cui sono contenute risorse dell'applicazione per impostazioni cultura diverse da quelle predefinite dell'applicazione.  
+---
+# <a name="walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>Walkthrough: Downloading Satellite Assemblies on Demand with the ClickOnce Deployment API Using the Designer
+Windows Forms applications can be configured for multiple cultures through the use of satellite assemblies. A *satellite assembly* is an assembly that contains application resources for a culture other than the application's default culture.  
   
- Come descritto in [Localizing ClickOnce Applications](../deployment/localizing-clickonce-applications.md), è possibile includere più assembly satellite per più impostazioni cultura all'interno della stessa distribuzione [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)].  Per impostazione predefinita, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] scaricherà tutti gli assembly satellite nella distribuzione nel computer client, anche se probabilmente un singolo client richiederà un solo assembly satellite.  
+ As discussed in [Localizing ClickOnce Applications](../deployment/localizing-clickonce-applications.md), you can include multiple satellite assemblies for multiple cultures within the same [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] deployment. By default, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] will download all of the satellite assemblies in your deployment to the client machine, although a single client will probably require only one satellite assembly.  
   
- Questa procedura dettagliata descrive come contrassegnare gli assembly satellite come facoltativi e scaricare solo l'assembly di cui un computer client ha bisogno per le impostazioni cultura correnti.  
+ This walkthrough demonstrates how to mark your satellite assemblies as optional, and download only the assembly a client machine needs for its current culture settings.  
   
 > [!NOTE]
->  Ai fini dell'esecuzione del test, nei seguenti esempi di codice viene specificato `ja-JP` a livello di codice per le impostazioni cultura.  Per informazioni su come modificare il codice per un ambiente di produzione, vedere la sezione "Passaggi successivi" più avanti in questo argomento.  
+>  For testing purposes, the following code examples programmatically set the culture to `ja-JP`. See the "Next Steps" section later in this topic for information on how to adjust this code for a production environment.  
   
-### Per contrassegnare gli assembly satellite come facoltativi  
+### <a name="to-mark-satellite-assemblies-as-optional"></a>To mark satellite assemblies as optional  
   
-1.  Compilazione del progetto.  In questo modo verranno generati gli assembly satellite per tutte le impostazioni cultura in cui si sta eseguendo la localizzazione.  
+1.  Build your project. This will generate satellite assemblies for all of the cultures you are localizing to.  
   
-2.  Fare clic con il pulsante destro del mouse sul nome del progetto in Esplora soluzioni, quindi scegliere **Proprietà**.  
+2.  Right-click on your project name in Solution Explorer, and click **Properties**.  
   
-3.  Fare clic sulla scheda **Pubblica**, quindi su **File applicazione**.  
+3.  Click the **Publish** tab, and then click **Application Files**.  
   
-4.  Selezionare la casella di controllo **Mostra tutti i file** per visualizzare gli assembly satellite.  Per impostazione predefinita, tutti gli assembly satellite verranno inclusi nella distribuzione e saranno visibili in questa finestra di dialogo.  
+4.  Select the **Show all files** check box to display satellite assemblies. By default, all satellite assemblies will be included in your deployment and will be visible in this dialog box.  
   
-     I nomi degli assembly satellite sono strutturati come segue: *CodiceIso*\\NomeApplicazione.resources.dll, dove *CodiceIso* è un'identificatore del linguaggio in formato RFC 1766.  
+     A satellite assembly will have a name in the form *isoCode*\ApplicationName.resources.dll, where *isoCode* is a language identifier in RFC 1766 format.  
   
-5.  Scegliere **Nuovo...** nell'elenco **Gruppo di download** per ogni identificatore del linguaggio.  Quando viene richiesto di specificare un nome per il gruppo di download, immettere l'identificatore del linguaggio.  Per un assembly satellite giapponese, ad esempio, specificare `ja-JP`.  
+5.  Click **New...** in the **Download Group** list for each language identifier. When prompted for a download group name, enter the language identifier. For example, for a Japanese satellite assembly, you would specify the download group name `ja-JP`.  
   
-6.  Chiudere la finestra di dialogo **File applicazione**.  
+6.  Close the **Application Files** dialog box.  
   
-### Per scaricare assembly satellite su richiesta in C\#  
+### <a name="to-download-satellite-assemblies-on-demand-in-c"></a>To download satellite assemblies on demand in C# #
   
-1.  Aprire il file Program.cs.  Se questo file non è visualizzato in Esplora soluzioni, selezionare il progetto e scegliere **Mostra tutti i file** dal menu **Progetto**.  
+1.  Open the Program.cs file. If you do not see this file in Solution Explorer, select your project, and on the **Project** menu, click **Show All Files**.  
   
-2.  Usare il codice seguente per scaricare l'assembly satellite appropriato e avviare l'applicazione.  
+2.  Use the following code to download the appropriate satellite assembly and start your application.  
   
-     [!code-cs[ClickOnce.SatelliteAssemblies#1](../deployment/codesnippet/CSharp/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_1.cs)]  
+     [!code-csharp[ClickOnce.SatelliteAssemblies#1](../deployment/codesnippet/CSharp/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_1.cs)]  
   
-### Per scaricare assembly satellite su richiesta in Visual Basic  
+### <a name="to-download-satellite-assemblies-on-demand-in-visual-basic"></a>To download satellite assemblies on demand in Visual Basic  
   
-1.  Fare clic sulla scheda **Applicazione** nella finestra **Proprietà** dell'applicazione.  
+1.  In the **Properties** window for the application, click the **Application** tab.  
   
-2.  Nella parte inferiore della pagina della scheda, scegliere **Visualizza eventi di applicazioni**.  
+2.  At the bottom of the tab page, click **View Application Events**.  
   
-3.  Nella parte iniziale del file ApplicationEvents.VB, aggiungere i seguenti riferimenti importati.  
+3.  Add the following imports to the beginning of the ApplicationEvents.VB file.  
   
      [!code-vb[ClickOnce.SatelliteAssembliesVB#1](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_2.vb)]  
   
-4.  Aggiungere il codice seguente alla classe `MyApplication`.  
+4.  Add the following code to the `MyApplication` class.  
   
      [!code-vb[ClickOnce.SatelliteAssembliesVB#2](../deployment/codesnippet/VisualBasic/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer_3.vb)]  
   
-## Passaggi successivi  
- In un ambiente di produzione sarà probabilmente necessario rimuovere la riga degli esempi di codice usata per impostare la proprietà <xref:System.Threading.Thread.CurrentUICulture%2A> su un valore specifico, perché il valore predefinito per i computer client è quello corretto.  Quando l'applicazione è in esecuzione su un computer client giapponese, ad esempio, la proprietà predefinita <xref:System.Threading.Thread.CurrentUICulture%2A> sarà `ja-JP`.  L'impostazione di tale proprietà a livello di codice è un buon metodo per procedere alla verifica degli assembly satellite prima di distribuire l'applicazione.  
+## <a name="next-steps"></a>Next Steps  
+ In a production environment, you will likely need to remove the line in the code examples that sets <xref:System.Threading.Thread.CurrentUICulture%2A> to a specific value, because client machines will have the correct value set by default. When your application runs on a Japanese client machine, for example, <xref:System.Threading.Thread.CurrentUICulture%2A> will be `ja-JP` by default. Setting it programmatically is a good way to test your satellite assemblies before you deploy your application.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [Walkthrough: Downloading Satellite Assemblies on Demand with the ClickOnce Deployment API](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md)   
  [Localizing ClickOnce Applications](../deployment/localizing-clickonce-applications.md)
+

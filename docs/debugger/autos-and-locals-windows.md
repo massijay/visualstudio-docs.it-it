@@ -1,117 +1,159 @@
 ---
-title: "Finestre Auto e Variabili locali | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "hero-article"
-f1_keywords: 
-  - "vs.debug.autos"
-  - "vs.debug.locals"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-helpviewer_keywords: 
-  - "debugger, finestra delle variabili"
-  - "debug [Visual Studio], finestra delle variabili"
+title: Inspect Variables in the Autos and Locals Windows | Microsoft Docs
+ms.custom: H1Hack27Feb2017
+ms.date: 04/17/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.autos
+- vs.debug.locals
+helpviewer_keywords:
+- debugger, variable windows
+- debugging [Visual Studio], variable windows
 ms.assetid: bb6291e1-596d-4af0-9f22-5fd713d6b84b
 caps.latest.revision: 24
-caps.handback.revision: 24
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Finestre Auto e Variabili locali
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 3cd705d703b3d745c502290422e29b3c6da39ee5
+ms.openlocfilehash: f681301201a4f39e0ad83c6724e0b38d82653b84
+ms.contentlocale: it-it
+ms.lasthandoff: 08/22/2017
 
-La finestra **Auto** \(durante il debug,  **CTRL\+ALT\+V, A** oppure **Debug \/ Finestre \/ Auto**\) e la finestra **Variabili locali** \(durante il debug, **CTRL\+ALT\+V, L** oppure **Debug \/ Finestre \/ Variabili locali**\) sono molto utili quando è necessario vedere i valori variabili durante le operazioni di debug. La finestra **Variabili locali** mostra le variabili definite nell'ambito locale, che corrisponde in genere alla funzione o al metodo attualmente in esecuzione. La finestra **Auto** mostra le variabili usate attorno alla riga corrente \(il punto in cui il debugger viene arrestato\). Le variabili effettivamente visualizzate variano in base al linguaggio. Vedere la sezione "Quali variabili vengono visualizzate nella finestra Auto?" più avanti.  
+---
+# <a name="inspect-variables-in-the-autos-and-locals-windows-in-visual-studio"></a>Inspect Variables in the Autos and Locals Windows in Visual Studio
+The **Autos** window (while debugging, **CTRL+ALT+V, A**, or **Debug > Windows > Autos**) and the **Locals** window (while debugging, **CTRL+ALT+V, L**, or **Debug > Windows > Locals**) are quite useful when you want to see variable values while you are debugging. The **Locals** window displays variables that are defined in the local  scope, which is generally the function or method that is currently being executed. The **Autos** window displays variables used around the current line (the place where the debugger is stopped). Exactly which variables display in this window is different in different languages. See [What variables appear in the Autos Window?](#bkmk_whatvariables) below.  
   
- Per altre informazioni sul debug di base, vedere [Introduzione al Debugger](../debugger/getting-started-with-the-debugger.md).  
+If you need more information about basic debugging, see [Getting Started with the Debugger](../debugger/getting-started-with-the-debugger.md).  
   
-## Oggetti nelle finestre Variabili locali e Auto  
- Le matrici e gli oggetti vengono visualizzati nelle finestre Variabili locali e Auto come controlli ad albero. Fare clic sulla freccia a sinistra del nome della variabile per espandere la visualizzazione e mostrare i campi e le proprietà. Ecco un esempio di oggetto [FileStream](../Topic/FileStream%20Class.md) nella finestra **Variabili locali**:  
+## <a name="looking-at-objects-in-the-autos-and-locals-windows"></a>Looking at objects in the Autos and Locals windows  
+Arrays and objects are displayed in the Autos and Locals windows as tree controls. Click on the arrow to the left of the variable name to expand the view to show fields and properties. Here is an example of a [FileStream](http://msdn.microsoft.com/Library/a8737776-e545-4867-91ed-51c7f031fa19) object in the **Locals** window:  
   
- ![Locals&#45;FileStream](../debugger/media/locals-filestream.png "Locals\-FileStream")  
+![Locals&#45;FileStream](../debugger/media/locals-filestream.png "Locals-FileStream")  
   
-## Quali variabili vengono visualizzate nella finestra Auto?  
- È possibile usare la finestra **Auto** nel codice C\#, Visual Basic e C\+\+. La finestra **Auto** non supporta JavaScript o F\#.  
+## <a name="bkmk_whatvariables"></a> What variables appear in the Autos window?  
+ You can use the **Autos** window in C#, Visual Basic, and C++ code. The **Autos** window does not support JavaScript or F#.  
   
- In C\# e Visual Basic la finestra **Auto** mostra tutte le variabili usate nella riga corrente o precedente. Se ad esempio si dichiarano quattro variabili impostate nel modo seguente:  
+ In C# and Visual Basic, the **Autos** window displays any  variable used on the current or preceding line. For example, if you declare four variables and set them as follows:
+
+```CSharp
+    public static void Main()
+    {
+       int a, b, c, d;
+       a = 1;
+       b = 2;
+       c = 3;
+       d = 4;
+    }
+```
+
+ If you set a breakpoint on the line `c = 3`; and run the debugger, when execution stops the **Autos** window will look like this:  
+
+ ![Autos&#45;CSharp](../debugger/media/autos-csharp.png "Autos-CSharp")  
+
+ Note that the value of `c` is 0, because the line `c = 3` has not yet been executed.  
+
+ In C++ the **Autos** window displays the variables used at least three lines before the current line (the line at which execution is stopped). If you declare six variables:
+
+```C++
+    void main() {
+        int a, b, c, d, e, f;
+        a = 1;
+        b = 2;
+        c = 3;
+        d = 4;
+        e = 5;
+        f = 6;
+    }
+```
+
+ If you set a breakpoint on the line `e = 5;` and run the debugger, when execution stops the **Autos** window will look like this:  
   
-```c#  
-public static void Main() { int a, b, c, d; a = 1; b = 2; c = 3; d = 4; }  
-```  
+ ![Autos&#45;Cplus](../debugger/media/autos-cplus.png "Autos-Cplus")  
   
- Se si imposta un punto di interruzione nella riga `c = 3` e si esegue il debugger, quando l'esecuzione si arresta la finestra **Auto** risulterà analoga alla seguente:  
+ Note that the variable e is uninitialized because the code on the line `e = 5;` has not yet been executed.  
   
- ![Autos&#45;CSharp](../debugger/media/autos-csharp.png "Autos\-CSharp")  
+ You can also see the return values of functions and methods in certain circumstances. See [View return values of method calls](#bkmk_returnValue) below.  
   
- Si noti che il valore di `c` è 0 perché la riga `c = 3` non è ancora stata eseguita.  
+##  <a name="bkmk_returnValue"></a> View return values of method calls  
+ In .NET and C++ code you can examine return values when you step over or out of a method call. This functionality is useful when the result of a method call is not stored in a local variable, for example when a method is used as a parameter or as a return value of another    method.  
   
- In C\+\+ la finestra **Auto** mostra le variabili usate almeno tre righe prima della riga corrente \(la riga in cui viene arrestata l'esecuzione\). Se si dichiarano sei variabili:  
+ The following C# code adds the return values of two functions:  
+
+```CSharp
+static void Main(string[] args)  
+{  
+    int a, b, c, d;  
+    a = 1;  
+    b = 2;  
+    c = 3;  
+    d = 4;  
+    int x = sumVars(a, b) + subtractVars(c, d);  
+}  
   
-```cpp  
-void main() { int a, b, c, d, e, f; a = 1; b = 2; c = 3; d = 4; e = 5; f = 6; }  
-```  
+private static int sumVars(int i, int j)  
+{  
+    return i + j;  
+}  
   
- Se si imposta un punto di interruzione nella riga `e = 5;` e si esegue il debugger, quando l'esecuzione si arresta la finestra **Auto** risulterà analoga alla seguente:  
+private static int subtractVars(int i, int j)  
+{  
+    return j - i;  
+}  
+```
+
+ Set a breakpoint on the `int x = sumVars(a, b) + subtractVars(c, d);` line.  
   
- ![Autos&#45;Cplus](../debugger/media/autos-cplus.png "Autos\-Cplus")  
-  
- Si noti che la variabile e non è inizializzata perché il codice nella riga  `e = 5;`  non è ancora stato eseguito.  
-  
- In alcune circostanze è anche possibile visualizzare i valori restituiti di funzioni e metodi. Vedere [Visualizzare i valori restituiti dalle chiamate di metodo](#bkmk_returnValue) più avanti.  
-  
-##  <a name="bkmk_returnValue"></a> Visualizzare i valori restituiti dalle chiamate di metodo  
- Nel codice .NET e C\+\+ è possibile esaminare i valori restituiti quando si eseguono istruzioni\/routine di una chiamata di metodo o si esce dalla chiamata. Questa funzionalità è utile quando il risultato di una chiamata di metodo non è archiviata in una variabile locale, ad esempio quando un metodo viene usato come parametro o valore restituito di un altro metodo.  
-  
- Il codice C\# seguente aggiunge i valori restituiti di due funzioni:  
-  
-```c#  
-static void Main(string[] args) { int a, b, c, d; a = 1; b = 2; c = 3; d = 4; int x = sumVars(a, b) + subtractVars(c, d); } private static int sumVars(int i, int j) { return i + j; } private static int subtractVars(int i, int j) { return j - i; }  
-  
-```  
-  
- Impostare un punto di interruzione nella riga int `x = sumVars(a, b) + subtractVars(c, d);`  
-  
- Avviare il debug e, quando l'esecuzione si interrompe al primo punto di interruzione, premere **F10 \(Esegui istruzione\/routine\)**. Verrà visualizzato quanto segue nella finestra **Auto**:  
+ Start debugging, and when execution breaks at the first breakpoint, press **F10 (Step Over)**. You should see the following in the **Autos** window:  
   
  ![AutosReturnValueCSharp2](../debugger/media/autosreturnvaluecsharp2.png "AutosReturnValueCSharp2")  
   
-## Perché i valori delle variabili a volte sono visualizzati in rosso nelle finestre Variabili locali e Auto?  
- In alcuni casi il valore di una variabile è visualizzato in rosso nelle finestre **Variabili locali** e **Auto**. Si tratta di valori variabili che sono stati modificati dopo l'ultima valutazione. La modifica può derivare da una precedente sessione di debug o dalla variazione del valore nella finestra.  
+## <a name="why-are-variable-values-sometimes-red-in-locals-and-autos-windows"></a>Why are variable values sometimes red in Locals and Autos windows?  
+You may notice that the value of a variable is sometimes red in the **Locals** and **Autos** windows. These are variable values that have been changed since the last evaluation. The change could be from a previous debugging session, or because the value was changed in the window.  
   
-## Modifica del formato numerico di una finestra di variabili  
- Il formato numerico predefinito è decimale, ma è possibile cambiarlo in esadecimale. Fare clic con il pulsante destro del mouse all'interno di una finestra **Variabili locali** o **Auto** e scegliere **Visualizzazione esadecimale**. La modifica interessa tutte le finestre del debugger.  
+## <a name="changing-the-numeric-format-of-a-variable-window"></a>Changing the numeric format of a variable window  
+The default numeric format is decimal, but you can change it to hexadecimal. Right-click inside a **Locals** or **Autos** window and select **Hexadecimal Display**. The change affects all debugger windows.  
   
-## Modifica di un valore in una finestra delle variabili  
- È possibile modificare i valori della maggior parte delle variabili visualizzate nelle finestre **Auto**, **Variabili locali**, **Espressioni di controllo** e **Controllo immediato**. Per informazioni sulle finestre **Espressioni di controllo** e **Controllo immediato**, vedere [Finestre Espressioni di controllo e Controllo immediato](../debugger/watch-and-quickwatch-windows.md). È sufficiente fare doppio clic sul valore che si vuole modificare e aggiungere il nuovo valore.  
+## <a name="editing-a-value-in-a-variable-window"></a>Editing a value in a Variable window  
+You can edit the values of most variables that appear in the **Autos**, **Locals**, **Watch**, and **QuickWatch** windows. For information about **Watch** and **QuickWatch** windows, see [Watch and QuickWatch Windows](../debugger/watch-and-quickwatch-windows.md). Just double-click the value you want to change and add the new the value.  
   
- Si può immettere un'espressione al posto di un valore, ad esempio `a + b`. Il debugger accetta la maggior parte delle espressioni di linguaggio valide.  
+You can enter an expression for a value, for example `a + b`. The debugger accepts most valid language expressions.  
   
- Nel codice C\+\+ nativo potrebbe essere necessario qualificare il contesto di un nome di variabile. Per altre informazioni, vedere [Operatore di contesto \(C\+\+\)](../debugger/context-operator-cpp.md).  
+In native C++ code, you might have to qualify the context of a variable name. For more information, see [Context Operator (C++)](../debugger/context-operator-cpp.md).  
+ 
+However, you should exercise caution when changing values. Here are some possible issues:  
   
- Prestare comunque attenzione quando si modificano i valori. Di seguito vengono indicati alcuni dei problemi possibili:  
+-   Evaluating some expressions can change the value of a variable or otherwise affect the state of your program. For example, evaluating `var1 = ++var2` changes the value of `var1` and `var2`.  
   
--   La valutazione di alcune espressioni può comportare la modifica del valore di una variabile o altri effetti sullo stato del programma. Ad esempio, la valutazione `var1 = ++var2` modifica il valore di `var1` e `var2`.  
+     Expressions that change data are said to have [side effects](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)), which can produce unexpected results if you are not aware of them. Make sure you understand the consequences of such a change before you make it.  
   
-     Le espressioni che modificano i dati possono avere [effetti collaterali](https://en.wikipedia.org/wiki/Side_effect_\(computer_science\)) che è necessario tenere in considerazione per evitare risultati imprevisti. Prima di apportare tali modifiche, è importante essere consapevoli delle conseguenze.  
+-   Editing floating-point values can result in minor inaccuracies because of decimal-to-binary conversion of fractional components. Even a seemingly harmless edit can result in changes to some of the least significant bits in the floating-point variable.  
   
--   La modifica di valori a virgola mobile può causare lievi inesattezze dovute alla conversione dei componenti frazionari da decimali a binari. Anche una modifica apparentemente innocua può generare modifiche in alcuni dei bit meno significativi in una variabile a virgola mobile.  
+## <a name="changing-the-window-context"></a>Changing the window context  
+You can use the **Debug Location** toolbar to select the desired function, thread, or process, which changes the context for the variable windows. Set a breakpoint and start debugging. (If you do not see this toolbar, you can enable it by clicking in an empty part of the toolbar area. You should see a list of toolbars; select **Debug Location**). When the breakpoint is hit, execution stops and you can see the Debug Location toolbar, which is the bottom row of the following illustration.
   
-## Barra degli strumenti Posizione di debug  
- La barra degli strumenti **Posizione di debug** può essere usata per selezionare la funzione, il thread o il processo desiderato. Impostare un punto di interruzione e avviare il debug \(se questa barra degli strumenti non è visualizzata, è possibile abilitarla facendo clic in una parte vuota dell'area della barra degli strumenti; quando viene visualizzato un elenco delle barre degli strumenti, selezionare **Posizione di debug**\). Quando viene raggiunto il punto di interruzione, l'esecuzione si interrompe e viene visualizzata la barra degli strumenti Posizione di debug, ovvero la riga inferiore nella figura seguente:  
+![DebugLocationToolbar](../debugger/media/debuglocationtoolbar.png "DebugLocationToolbar")   
   
- ![DebugLocationToolbar](~/debugger/media/debuglocationtoolbar.png "DebugLocationToolbar")  
-  
- È anche possibile cambiare il contesto specificando chiamate di funzioni, thread o processi diversi facendo doppio clic sull'elemento nella finestra **Stack di chiamate**, **Thread** o **Processi**.  
-  
-## Vedere anche  
- [Finestre del debugger](../debugger/debugger-windows.md)
+## <a name="see-also"></a>See Also  
+ [Debugger Windows](../debugger/debugger-windows.md)
+

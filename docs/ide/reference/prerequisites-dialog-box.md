@@ -43,14 +43,12 @@ ms.contentlocale: it-it
 ms.lasthandoff: 05/26/2017
 
 ---
-# Prerequisites Dialog Box
-<a id="prerequisites-dialog-box" class="xliff"></a>
+# <a name="prerequisites-dialog-box"></a>Prerequisites Dialog Box
 In questa finestra di dialogo vengono indicati i componenti dei prerequisiti installati, la modalità di installazione e l'ordine di installazione dei pacchetti.  
   
  Per accedere a questa finestra di dialogo, selezionare un nodo di progetto in **Esplora soluzioni**, quindi scegliere **Proprietà** dal menu **Progetto**. In **Progettazione progetti** fare clic sulla scheda **Pubblica** . Nella pagina **Pubblica** fare clic su **Prerequisiti**. Per i progetti di installazione, scegliere **Proprietà** dal menu **Progetto**. Quando viene visualizzata la finestra di dialogo **Pagine delle proprietà** fare clic su **Prerequisiti**.  
   
-## Elenco UIElement
-<a id="uielement-list" class="xliff"></a>  
+## <a name="uielement-list"></a>Elenco UIElement  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
@@ -61,8 +59,7 @@ In questa finestra di dialogo vengono indicati i componenti dei prerequisiti ins
 |**Scarica prerequisiti dallo stesso percorso dell'applicazione**|Specifica che i componenti dei prerequisiti devono essere installati dallo stesso percorso dell'applicazione. In questo modo vengono copiati tutti i pacchetti di prerequisiti nel percorso di pubblicazione. Per il corretto funzionamento di questa opzione, i pacchetti di prerequisiti devono essere presenti nel computer di sviluppo.|  
 |**Scarica prerequisiti dal seguente percorso**|Specifica che i componenti dei prerequisiti devono essere installati dal percorso selezionato. Per selezionare un percorso usare il pulsante **Sfoglia**.|  
   
-## Informazioni sui prerequisiti
-<a id="prerequisites-information" class="xliff"></a>  
+## <a name="prerequisites-information"></a>Informazioni sui prerequisiti  
  I componenti dei prerequisiti che sono visualizzati nella finestra di dialogo **Prerequisiti** potrebbero differire da quelli presenti nell'elenco seguente. I pacchetti dei prerequisiti elencati nella **finestra di dialogo Prerequisiti** vengono impostati automaticamente alla prima apertura della finestra di dialogo. In caso di modifiche successive al framework di destinazione del progetto, sarà necessario selezionare manualmente i prerequisiti in modo che vi sia corrispondenza.  
   
 |Elemento|Descrizione|  
@@ -85,8 +82,7 @@ In questa finestra di dialogo vengono indicati i componenti dei prerequisiti ins
 |**Windows Installer 3.1**|Con questo pacchetto viene installato Microsoft Windows Installer Redistributable versione 3.1 che consente l'installazione di progetti di installazione di Windows Installer. È preinstallato in Windows Server 2003 con SP1 e versioni successive.<br /><br /> Questo elemento è selezionato per impostazione predefinita.|  
 |**Windows Installer 4.5**|Con questo pacchetto viene installato Microsoft Windows Installer Redistributable versione 4.5 che consente l'installazione di progetti di installazione di Windows Installer.|  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Pagina Pubblica, Creazione progetti](../../ide/reference/publish-page-project-designer.md)   
  [Prerequisiti per la distribuzione dell'applicazione](../../deployment/application-deployment-prerequisites.md)   
  [Ridistribuzione di .NET Framework](http://msdn.microsoft.com/en-us/a18d0456-fd89-493e-97f4-756505bfe287)   

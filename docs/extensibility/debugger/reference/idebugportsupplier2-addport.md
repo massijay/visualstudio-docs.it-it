@@ -1,58 +1,75 @@
 ---
-title: "IDebugPortSupplier2::AddPort | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPortSupplier2::AddPort"
-helpviewer_keywords: 
-  - "IDebugPortSupplier2::AddPort"
+title: IDebugPortSupplier2::AddPort | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPortSupplier2::AddPort
+helpviewer_keywords:
+- IDebugPortSupplier2::AddPort
 ms.assetid: df491161-6bf3-4fcc-b478-b9ec88ec995f
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugPortSupplier2::AddPort
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2845b7c3d10b62c268843f934cf3730019afd657
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-aggiunge una porta.  
+---
+# <a name="idebugportsupplier2addport"></a>IDebugPortSupplier2::AddPort
+Adds a port.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT AddPort(   
-   IDebugPortRequest2* pRequest,  
-   IDebugPort2**       ppPort  
+```cpp  
+HRESULT AddPort(   
+   IDebugPortRequest2* pRequest,  
+   IDebugPort2**       ppPort  
 );  
 ```  
   
-```c#  
-int AddPort(   
-   IDebugPortRequest2 pRequest,  
-   out IDebugPort2    ppPort  
+```csharp  
+int AddPort(   
+   IDebugPortRequest2 pRequest,  
+   out IDebugPort2    ppPort  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pRequest`  
- \[in\]  [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) Un oggetto che descrive la porta da aggiungere.  
+ [in] An [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) object that describes the port to be added.  
   
  `ppPort`  
- \[out\]  restituisce [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) un oggetto che rappresenta la porta.  
+ [out] Returns an [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) object that represents the port.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## Note  
- Questo metodo la creazione della porta richiesta e aggiungerla all'interno del fornitore di porte delle porte attive.  [CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) Il metodo può essere chiamato prima per evitare ritardi parecchio tempo possibile.  
+## <a name="remarks"></a>Remarks  
+ This method actually creates the requested port as well as adding it to the port supplier's internal list of active ports. The [CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) method can be called first to avoid possible time-consuming delays.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   
  [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md)   
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   

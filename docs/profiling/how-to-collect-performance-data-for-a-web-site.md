@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Raccogliere dati sulle prestazioni per un sito Web | Microsoft Docs'
+title: 'How to: Collect Performance Data for a Web Site | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,88 +38,90 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: 9f0e4f1541de074e02c2a74e3ba2605232a53a09
-ms.lasthandoff: 03/07/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
+ms.openlocfilehash: 7fe6230d86e79b6540b35d358ac9af2a3b4760a7
+ms.contentlocale: it-it
+ms.lasthandoff: 08/22/2017
 
 ---
-# <a name="how-to-collect-performance-data-for-a-web-site"></a>Procedura: Raccogliere dati sulle prestazioni per un sito Web
-Per raccogliere dati sulle prestazioni per un'applicazione Web di **, è possibile usare la**Creazione guidata sessione di prestazioni[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]. È possibile profilare un'applicazione Web aperta in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oppure un sito Web di [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] disponibile nel computer locale e non aperto nell'IDE di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+# <a name="how-to-collect-performance-data-for-a-web-site"></a>How to: Collect Performance Data for a Web Site
+You can use the **Performance Wizard** to collect performance data for an [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web application. You can profile a Web application that is open in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], or you can profile an [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web site that is located on your local computer and not open in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE.  
   
 > [!NOTE]
->  La **Creazione guidata sessione di prestazioni** consente di aggiungere dati di interazione tra livelli (TIP), dati relativi alle prestazioni di JScript o entrambi ai dati di profilatura raccolti. L'opzione TIP raccoglie dati dai processi sul lato server. L'opzione di profilatura JScript raccoglie dati da script in esecuzione in un sito Web locale o remoto. Nella maggior parte dei casi, è consigliabile scegliere solo una delle opzioni.  
+>  The **Performance Wizard** enables you to add tier interaction (TIP) data, JScript performance data, or both to the collected profiling data. The TIP option collects data from server-side processes. The JScript profiling collects data from scripts that are running on a local or  remote Web site. In most cases, you should choose only one of the options.  
   
- In base alle autorizzazioni di accesso a livello utente che un amministratore ha reso disponibili, un singolo utente può avere o meno le autorizzazioni di sicurezza necessarie per creare una sessione del profiler sul computer che ospita il processo ASP.NET. Gli esempi seguenti illustrano le possibili differenze tra i diversi tipi di utenti:  
+ Depending on User Access Permissions settings that an administrator has made available, an individual user might or might not have security permission to create a profiler session on the computer that hosts the ASP.NET process. The following examples illustrate possible differences among users:  
   
--   Se l'amministratore ha impostato l'avvio del driver e del servizio, alcuni utenti possono accedere a funzionalità di profilatura avanzate.  
+-   Some users might access advanced profiling features when the Administrator has set the driver and service to start.  
   
--   Gli utenti di dominio possono accedere soltanto ad esempi di profilatura.  
+-   Domain users might access sample profiling only.  
   
--   Alcuni utenti possono negare l'accesso alle funzionalità di profilatura a tutti gli altri utenti.  
+-   Some users might deny access to profiling to all other users.  
   
- Per altre informazioni, vedere [Profilatura e sicurezza in Windows Vista](../profiling/profiling-and-windows-vista-security.md) e le opzioni ADMIN in [VSPerfCmd](../profiling/vsperfcmd.md).  
+ For more information, see [Profiling and Windows Vista Security](../profiling/profiling-and-windows-vista-security.md) and the ADMIN options in [VSPerfCmd](../profiling/vsperfcmd.md).  
   
-### <a name="to-profile-a-web-site-project"></a>Per profilare un progetto di sito Web  
+### <a name="to-profile-a-web-site-project"></a>To profile a Web site project  
   
-1.  Aprire il progetto Web di [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] in [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] o [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)].  
+1.  Open the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Web project in [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] or [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)].  
   
-2.  Dal menu **Analizza** scegliere **Profiler prestazioni**, **Esplora prestazioni** e quindi selezionare **Avvia**.  
+2.  On the **Analyze** menu, select **Performance Profiler**, select **Performance Explorer**, and then select **Start**.  
   
-3.  Nella prima pagina della procedura guidata selezionare un metodo di profilatura e quindi fare clic su **Avanti**. Per altre informazioni sui metodi di profilatura, vedere [Informazioni sui metodi di raccolta delle prestazioni](../profiling/understanding-performance-collection-methods.md). Tenere presente che il metodo di profilatura del visualizzatore di concorrenza non è disponibile per le applicazioni Web.  
+3.  On the first page of the wizard, select a profiling method, and then click **Next**. For more information about profiling methods, see [Understanding Performance Collection Methods](../profiling/understanding-performance-collection-methods.md). Note that the concurrency visualizer profiling method is not available for web applications.  
   
-4.  Nell'elenco a discesa **Specificare l'applicazione di destinazione per la profilatura** verificare che il progetto corrente sia selezionato e quindi fare clic su **Avanti**.  
+4.  In the **Which application would you like to target for profiling?** drop-down list, make sure that the current project is selected, and then click **Next**.  
   
-5.  Nella terza pagina della procedura guidata è possibile scegliere di aggiungere dati di profilatura dell'interazione tra livelli (TIP), dati da JavaScript in esecuzione nelle pagine Web o entrambi.  
+5.  On the third page of the wizard, you can choose to add tier interaction profiling (TIP) data, data from the JavaScript running in the Web pages, or both.  
   
-    -   Per raccogliere dati di interazione tra livelli, selezionare la casella di controllo **Abilita profilatura interazione tra livelli** .  
+    -   To collect tier interaction, select the **Enable Tier Interaction Profiling** check box.  
   
-    -   Per raccogliere dati da JavaScript in esecuzione nelle pagine Web, selezionare la casella di controllo **Profila JavaScript** .  
+    -   To collect data from the JavaScript running in the Web pages, select the **Profile JavaScript** check box.  
   
-6.  Scegliere **Avanti**.  
+6.  Click **Next**.  
   
-7.  Nella quarta pagina della procedura guidata fare clic su **Fine**.  
+7.  On the fourth page of the wizard, click **Finish**.  
   
-8.  Verrà creata una sessione di prestazioni per l'applicazione di [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] e il sito Web verrà avviato nel browser. Verificare la funzionalità che si vuole profilare e quindi chiudere il browser.  
+8.  A performance session is created for the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] application, and the Web site is started in the browser. Exercise the functionality that you want to profile, and then close the browser.  
   
-     Il profiler genera il file di dati e apre la visualizzazione Riepilogo dei dati nella finestra principale di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+     The profiler generates the data file and displays the Summary view of the data in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] main window.  
   
-### <a name="to-profile-a-web-site-without-opening-a-project-in-visual-studio"></a>Per profilare un sito Web senza aprire un progetto in Visual Studio  
+### <a name="to-profile-a-web-site-without-opening-a-project-in-visual-studio"></a>To profile a Web site without opening a project in Visual Studio  
   
-1.  Aprire [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] o [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)].  
+1.  Open [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] or [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)].  
   
-2.  Dal menu **Analizza** scegliere **Profiler prestazioni**, **Esplora prestazioni** e quindi selezionare **Avvia**.  
+2.  On the **Analyze** menu, select **Performance Profiler**, select **Performance Explorer**, and then select **Start**.  
   
-3.  Nella prima pagina della procedura guidata selezionare un metodo di profilatura e quindi fare clic su **Avanti**. Per altre informazioni, vedere [Informazioni sui metodi di raccolta delle prestazioni](../profiling/understanding-performance-collection-methods.md).  
+3.  On the first page of the wizard, select a profiling method, and then click **Next**. For more information, see [Understanding Performance Collection Methods](../profiling/understanding-performance-collection-methods.md).  
   
-4.  Nella seconda pagina della procedura guidata, selezionare l'opzione **Profilatura di un'applicazione ASP.NET o JavaScript** e quindi fare clic su **Avanti**.  
+4.  On the second page of the wizard, select the **Profile an ASP.NET or JavaScript application** option, and then click **Next**.  
   
-5.  Nella terza pagina della procedura guidata digitare l'URL della home page dell'applicazione nella casella **Specificare l'URL o il percorso che esegue l'applicazione Web** e quindi fare clic su **Avanti**.  
+5.  In the **What URL or Path will run your web application** box on the third page of the wizard, enter the URL to the application home page, and then click **Next**.  
   
-    -   Per un sito Web basato su server (IIS), digitare un URL, ad esempio **http://localhost/MySite/default.aspx**. In questo modo verrà profilata l'applicazione [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] presente nel computer locale nella radice dell'applicazione di MySite e in Internet Explorer verrà aperta la pagina default.aspx del sito per avviare la sessione.  
+    -   For a server (IIS) based Web site, type a URL such as **http://localhost/MySite/default.aspx**. This causes the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] application on the local computer at the application root of MySite to be profiled, and the page default.aspx on that site to be started in Internet Explorer to start the session.  
   
-    -   Per un sito Web basato su file, digitare un percorso, ad esempio file///**c:\WebSites\MySite\default.aspx**. In questo modo verrà profilata l'applicazione [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] presente in c:\webSites\MySite e in Internet Explorer verrà aperta la pagina http://localhost:nnnn/MySite/default.aspx per avviare la sessione.  
+    -   For a file based Web site, type a path such as file///**c:\WebSites\MySite\default.aspx**. This causes the [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] application located at c:\webSites\MySite to be profiled and the page http://localhost:nnnn/MySite/default.aspx to be started in Internet Explorer to start the session.  
   
-    -   Per i siti esterni sui quali si vuole raccogliere dati JavaScript, digitare l'URL, ad esempio http://www.contoso.com.  
+    -   For external sites that you wish to collect JavaScript data on, type the URL, for example http://www.contoso.com.  
   
-     Per altre informazioni, visualizzare le pagine delle proprietà per un file binario di destinazione [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)].  
+     For more information, view the property pages for an [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] target binary.  
   
-6.  Nella terza pagina della procedura guidata è possibile scegliere di aggiungere dati di profilatura dell'interazione tra livelli (TIP), dati da JavaScript in esecuzione nelle pagine Web o entrambi.  
+6.  On the third page of the wizard, you can choose to add tier interaction profiling (TIP) data, data from the JavaScript running in the Web pages, or both.  
   
-    -   Per raccogliere dati di interazione tra livelli, selezionare la casella di controllo **Abilita profilatura interazione tra livelli** .  
+    -   To collect tier interaction, select the **Enable Tier Interaction Profiling** check box.  
   
-    -   Per raccogliere dati da JavaScript in esecuzione nelle pagine Web, selezionare la casella di controllo **Profila JavaScript** .  
+    -   To collect data from the JavaScript running in the Web pages, select the **Profile JavaScript** check box.  
   
-7.  Scegliere **Avanti**.  
+7.  Click **Next**.  
   
-8.  Nella quarta pagina della procedura guidata fare clic su **Fine**.  
+8.  On the fourth page of the wizard, click **Finish**.  
   
-9. Verrà creata una sessione di prestazioni per l'applicazione ASP.NET e il sito Web verrà avviato nel browser. Verificare la funzionalità che si vuole profilare e quindi chiudere il browser.  
+9. A performance session is created for the ASP.NET application, and the Web site is started in the browser. Exercise the functionality that you want to profile, and then close the browser.  
   
-     Il profiler genera il file di dati e apre la visualizzazione Riepilogo dei dati nella finestra principale di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+     The profiler generates the data file and displays the Summary view of the data in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] main window.  
   
-## <a name="see-also"></a>Vedere anche  
- [Panoramiche](../profiling/overviews-performance-tools.md)   
- [Configuring Performance Sessions](../profiling/configuring-performance-sessions.md)  (Configurazione di sessioni di prestazioni)  
- [Informazioni sui valori dei dati di strumentazione](../profiling/understanding-instrumentation-data-values.md)   
- [Informazioni sui valori dei dati di campionamento](../profiling/understanding-sampling-data-values.md)
+## <a name="see-also"></a>See Also  
+ [Overviews](../profiling/overviews-performance-tools.md)   
+ [Configuring Performance Sessions](../profiling/configuring-performance-sessions.md)   
+ [Understanding Instrumentation Data Values](../profiling/understanding-instrumentation-data-values.md)   
+ [Understanding Sampling Data Values](../profiling/understanding-sampling-data-values.md)
+

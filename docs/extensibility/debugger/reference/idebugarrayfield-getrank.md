@@ -1,51 +1,68 @@
 ---
-title: "IDebugArrayField::GetRank | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugArrayField::GetRank"
-helpviewer_keywords: 
-  - "Metodo IDebugArrayField::GetRank"
+title: IDebugArrayField::GetRank | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugArrayField::GetRank
+helpviewer_keywords:
+- IDebugArrayField::GetRank method
 ms.assetid: 2364b876-5be1-4bab-9b8f-3b6121da35c6
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugArrayField::GetRank
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: b410db9d146397242ffbafd0ca7314c0fcea30bc
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Ottiene il numero di dimensioni o il numero di dimensioni della matrice.  
+---
+# <a name="idebugarrayfieldgetrank"></a>IDebugArrayField::GetRank
+Gets the rank or number of dimensions of the array.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetRank(   
-   DWORD* pdwRank  
+```cpp  
+HRESULT GetRank(   
+   DWORD* pdwRank  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetRank(  
-   out uint pdwRank  
+   out uint pdwRank  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pdwRank`  
- \[out\]  Restituisce il numero di dimensioni.  
+ [out] Returns the rank.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce S\_OK, in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## Note  
- Il numero di dimensioni di una matrice corrisponde al numero di dimensioni.  In C\+\+ e c\#, le matrici multidimensionali sono effettivamente matrici di matrici e possono quindi essere considerate solo una matrice unidimensionale e di `GetRank` il metodo restituisca sempre 1\).  In [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)], di altra parte, le matrici multidimensionali sono gestite in modo diverso e il numero di dimensioni di una matrice riflette il numero di dimensioni \(e il metodo di `GetRank` restituisce sempre il numero di dimensioni.  
+## <a name="remarks"></a>Remarks  
+ The rank of an array corresponds to the number of dimensions. In C++ and C#, multi-dimensional arrays are really arrays of arrays and can therefore be considered just a one-dimensional array (and the `GetRank` method always returns 1). In [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)], on the other hand, multi-dimensional arrays are handled differently and the rank of such an array reflects the number of dimensions (and the `GetRank` method always returns the number of dimensions).  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)

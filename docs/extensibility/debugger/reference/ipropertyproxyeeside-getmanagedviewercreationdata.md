@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::GetManagedViewerCreationData | Documenti di Microsoft
+title: IPropertyProxyEESide::GetManagedViewerCreationData | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 221d26b43f57c5519747ef04e9ccc17fc9fad10e
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: a20a02b948bb1ee15011f99fe7071ae6af7df6b5
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="ipropertyproxyeesidegetmanagedviewercreationdata"></a>IPropertyProxyEESide::GetManagedViewerCreationData
-Recupera informazioni sul Visualizzatore per questo tipo di proprietà per creare un'istanza di tale visualizzatore.  
+Retrieves information about the viewer for this property type in order to instantiate that viewer.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetManagedViewerCreationData(  
    BSTR*                  assemName,  
    IEEDataStorage**       assemBytes,  
@@ -52,7 +53,7 @@ HRESULT GetManagedViewerCreationData(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetManagedViewerCreationData(  
    out string                     assemName,  
    out IEEDataStorage             assemBytes,  
@@ -63,32 +64,32 @@ int GetManagedViewerCreationData(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `assemName`  
- [out] Restituisce il nome dell'assembly che contiene questo oggetto.  
+ [out] Returns the name of the assembly holding this object.  
   
  `assemBytes`  
- [out] Restituisce un [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) oggetto contenente i byte dell'assembly di questo oggetto (questo è un valore null se nessun byte disponibili).  
+ [out] Returns an [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) object containing the assembly bytes of this object (this is a null value if no bytes are available).  
   
  `assemPdb`  
- [out] Restituisce un `IEEDataStorage` oggetto contenente il simbolo di archiviazione le informazioni per questo oggetto (questo è un valore null se è disponibile alcun archivio dei simboli).  
+ [out] Returns an `IEEDataStorage` object containing the symbol store information for this object (this is a null value if no symbol store is available).  
   
  `className`  
- [out] Restituisce il nome della classe che contiene questo oggetto.  
+ [out] Returns the class name containing this object.  
   
  `alr`  
- [out] Restituisce un valore di [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) enumerazione che indica la posizione dell'assembly.  
+ [out] Returns a value from the [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) enumeration indicating the location of the assembly.  
   
  `replacementOk`  
- [out] Restituisce zero (`TRUE`) se il valore dell'oggetto può essere modificato; zero (`FALSE`) se l'oggetto è di sola lettura.  
+ [out] Returns nonzero (`TRUE`) if this object's value can be changed; zero (`FALSE`) if the object is read-only.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Note  
- Questo metodo viene utilizzato per i visualizzatori di tipo per creare un'istanza di un visualizzatore gestito.  
+## <a name="remarks"></a>Remarks  
+ This method is used by type visualizers to instantiate a managed viewer.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   
  [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md)   
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)

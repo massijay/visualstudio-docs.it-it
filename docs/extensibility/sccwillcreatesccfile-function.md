@@ -1,64 +1,81 @@
 ---
-title: "Funzione SccWillCreateSccFile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SccWillCreateSccFile"
-helpviewer_keywords: 
-  - "Funzione SccWillCreateSccFile"
+title: SccWillCreateSccFile Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SccWillCreateSccFile
+helpviewer_keywords:
+- SccWillCreateSccFile function
 ms.assetid: 0d7542f0-4351-41b3-b24c-960ab99c05a1
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Funzione SccWillCreateSccFile
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: d4b84f25d02710584913e7ade1fb673d1118fc4f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Questa funzione determina se il controllo del codice sorgente del plug\-in supporta la creazione di MSSCCPRJ. File SCC per ogni file specificati.  
+---
+# <a name="sccwillcreatesccfile-function"></a>SccWillCreateSccFile Function
+This function determines whether the source control plug-in supports the creation of the MSSCCPRJ.SCC file for each of the given files.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 SCCRTN SccWillCreateSccFile(  
-   LPVOID  pContext,  
-   LONG    nFiles,  
-   LPCSTR* lpFileNames,  
-   LPBOOL  pbSccFiles  
+   LPVOID  pContext,  
+   LONG    nFiles,  
+   LPCSTR* lpFileNames,  
+   LPBOOL  pbSccFiles  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  pContext  
- \[in\] Il puntatore di contesto plug\-in del controllo di origine.  
+ [in] The source control plug-in context pointer.  
   
  nFiles  
- \[in\] Il numero di nomi di file nel `lpFileNames` oltre la lunghezza della matrice di `pbSccFiles` matrice.  
+ [in] The number of file names included in the `lpFileNames` array as well as the length of the `pbSccFiles` array.  
   
  lpFileNames  
- \[in\] Una matrice di nomi di file completo per controllare \(matrice deve essere allocata dal chiamante\).  
+ [in] An array of fully qualified file names to check (array must be allocated by caller).  
   
  pbSccFiles  
- \[in, out\] Matrice in cui archiviare i risultati.  
+ [in, out] Array in which to store the results.  
   
-## Valore restituito  
- Implementazione di plug\-in controllo dell'origine di questa funzione deve restituire uno dei valori seguenti:  
+## <a name="return-value"></a>Return Value  
+ The source control plug-in implementation of this function is expected to return one of the following values:  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|SCC\_OK|Operazione completata.|  
-|SCC\_E\_INVALIDFILEPATH|Uno dei percorsi nella matrice non è valido.|  
-|SCC\_E\_NONSPECIFICERROR|Errore non specificato.|  
+|Value|Description|  
+|-----------|-----------------|  
+|SCC_OK|Success.|  
+|SCC_E_INVALIDFILEPATH|One of the paths in the array is invalid.|  
+|SCC_E_NONSPECIFICERROR|Nonspecific failure.|  
   
-## Note  
- Questa funzione viene chiamata con un elenco di file per determinare se il plug\-in del controllo del codice sorgente fornisce il supporto nel MSSCCPRJ. File SCC per ogni file specificati \(per ulteriori informazioni sul MSSCCPRJ. File di controllo del codice sorgente, vedere [MSSCCPRJ. File SCC](../extensibility/mssccprj-scc-file.md)\). Plug\-in del controllo codice sorgente è possibile dichiarare se hanno la possibilità di creare MSSCCPRJ. File SCC dichiarando `SCC_CAP_SCCFILE` durante l'inizializzazione. Il plug\-in restituisce `TRUE` o `FALSE` per ogni file nel `pbSccFiles` matrice per indicare che il file specificato hanno MSSCCPRJ. Supporto di controllo del codice sorgente. Se il plug\-in restituisce un codice di riuscita tramite la funzione, vengono accettati i valori nella matrice restituita. In caso di errore, la matrice viene ignorata.  
+## <a name="remarks"></a>Remarks  
+ This function is called with a list of files to determine if the source control plug-in provides support in the MSSCCPRJ.SCC file for each of the given files (for more information on the MSSCCPRJ.SCC file, see [MSSCCPRJ.SCC File](../extensibility/mssccprj-scc-file.md)). Source control plug-ins can declare whether they have the capability of creating MSSCCPRJ.SCC files by declaring `SCC_CAP_SCCFILE` during initialization. The plug-in returns `TRUE` or `FALSE` per file in the `pbSccFiles` array to indicate which of the given files have MSSCCPRJ.SCC support. If the plug-in returns a success code from the function, the values in the return array are honored. On failure, the array is ignored.  
   
-## Vedere anche  
- [Funzioni API plug\-in del controllo sorgente](../extensibility/source-control-plug-in-api-functions.md)   
- [MSSCCPRJ. File SCC](../extensibility/mssccprj-scc-file.md)
+## <a name="see-also"></a>See Also  
+ [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+ [MSSCCPRJ.SCC File](../extensibility/mssccprj-scc-file.md)

@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
-ms.openlocfilehash: ddd52c1af0a164235de2e5055896e020dc8715c3
+ms.translationtype: HT
+ms.sourcegitcommit: 5c28e68b89f6583dc35a91b275693c11e0259dfd
+ms.openlocfilehash: 251b00c479c3853ba4fc00521f3e4cac74a93d27
 ms.contentlocale: it-it
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 07/13/2017
 
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>Guida per principianti al campionamento CPU
@@ -90,7 +90,7 @@ ms.lasthandoff: 03/07/2017
   
  Ogni area numerata nella figura si riferisce a un passaggio della procedura.  
   
- ![Visualizzazione del rapporto di riepilogo per il campionamento](~/profiling/media/summary_sampling.png "Summary_Sampling")  
+ ![Visualizzazione del rapporto di riepilogo per il campionamento](../profiling/media/summary_sampling.png "Summary_Sampling")  
   
 #### <a name="to-analyze-sampling-data"></a>Analizzare i dati di campionamento  
   
@@ -139,9 +139,9 @@ ms.lasthandoff: 03/07/2017
   
 4.  Dopo che la sessione è stata rieseguita, viene aggiunto un altro file di dati alla cartella **Report** per la sessione in **Esplora prestazioni**. Selezionare i dati di profilatura, sia nuovi che originali, fare clic con il pulsante destro del mouse sulla selezione e quindi fare clic su **Confronta rapporto di prestazioni**.  
   
-     Verrà visualizzata una nuova finestra del report, visualizzare i risultati del confronto. Per altre informazioni sull'uso della visualizzazione di confronto, vedere [Procedura: Confrontare i file di dati delle prestazioni](../profiling/how-to-compare-performance-data-files.md).  
+     Verrà visualizzata una nuova finestra del report, visualizzare i risultati del confronto. Per altre informazioni sull'uso della visualizzazione di confronto, vedere [Procedura: Confrontare i file di dati delle prestazioni](../profiling/how-to-compare-performance-data-files.md).
   
 ## <a name="see-also"></a>Vedere anche  
  [Esplora prestazioni](../profiling/performance-explorer.md)   
  [Introduzione](../profiling/getting-started-with-performance-tools.md)   
- [Panoramiche](../profiling/overviews-performance-tools.md)
+ [Panoramiche](../profiling/overviews-performance-tools.md) [Profilatura in Visual Studio](../profiling/index.md) [Panoramica delle funzionalità di profilatura](../profiling/profiling-feature-tour.md)

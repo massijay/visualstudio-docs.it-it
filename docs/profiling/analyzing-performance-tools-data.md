@@ -1,45 +1,63 @@
 ---
-title: "Analisi dei dati degli strumenti per la profilatura | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "prestazioni, visualizzazione dei dati"
-  - "report di prestazioni, dati relativi alle prestazioni"
-  - "strumenti per la profilatura, dati sulle prestazioni"
-  - "prestazioni, analisi"
-  - "strumenti per le prestazioni, report"
-  - "strumenti per la profilatura, visualizzazioni dati"
-  - "strumenti per la profilatura, report"
+title: Analisi dei dati degli strumenti per le prestazioni | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- performance, viewing data
+- performance reports, performance data
+- profiling tools, performance data
+- performance, analyzing
+- performance tools, reports
+- Profiling Tools,data views
+- Profiling Tools,reports
 ms.assetid: ae3e198a-b994-4ecb-a633-dec98bd4fd45
 caps.latest.revision: 41
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 41
----
-# Analisi dei dati degli strumenti per la profilatura
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 669bc5894727c207691a7e37937f432d98fee8b1
+ms.openlocfilehash: f67e927ad2fdaa934027507441222af4bbde3394
+ms.contentlocale: it-it
+ms.lasthandoff: 06/30/2017
 
-I rapporti sulle prestazioni degli strumenti di profilatura di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] consentono di visualizzare e analizzare i problemi correlati alle prestazioni delle applicazioni.  In questa sezione vengono forniti cenni preliminari relativi a rapporti e alle visualizzazioni delle prestazioni che è possibile utilizzare per esaminare i dati sulle prestazioni.  
+---
+# <a name="analyzing-performance-tools-data"></a>Analisi dei dati degli strumenti per le prestazioni
+I report sulle prestazioni degli strumenti di profilatura di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] consentono di visualizzare e analizzare i problemi di prestazioni delle applicazioni. Questa sezione offre una panoramica dei report sulle prestazioni e delle visualizzazioni che è possibile usare per esaminare i dati sulle prestazioni.  
   
-## Attività comuni  
+## <a name="common-tasks"></a>Attività comuni  
   
-|Task|Contenuto correlato|  
-|----------|-------------------------|  
-|**Utilizzare regole di prestazioni per identificare rapidamente problemi:** le regole di prestazioni degli strumenti di profilatura identificano problemi comuni e agevolano l'esplorazione del codice sorgente contenente il problema.  Argomenti della Guida dettagliati spesso possono suggerire una soluzione.|-   [Utilizzo di regole per le prestazioni per analizzare dati](../profiling/using-performance-rules-to-analyze-data.md)|  
-|**Informazioni sui dettagli della visualizzazione dei rapporti:** le visualizzazioni dei rapporti degli strumenti di prestazioni offrono dati aggregati sulle prestazioni relativi a processi, thread, moduli e funzioni dell'esecuzione di una profilatura.  I dati visualizzati dipendono dal metodo di profilatura utilizzato per raccogliere i dati.|-   [Visualizzazioni dei report degli strumenti per la profilatura](../profiling/performance-report-views.md)|  
-|**Configurare, ordinare e filtrare visualizzazioni di rapporti:** è possibile specificare e ordinare le colonne di dati da visualizzare in un rapporto, ordinare le righe del rapporto e filtrare i dati per includere solo un segmento della cronologia specificato.|-   [Personalizzazione delle visualizzazioni dei rapporti sugli strumenti di profilatura](../profiling/customizing-performance-tools-report-views.md)|  
+|Attività|Contenuto correlato|  
+|----------|---------------------|  
+|**Usare le regole di prestazioni per identificare rapidamente i problemi:** le regole di prestazioni degli strumenti di profilatura identificano i problemi comuni e consentono di passare facilmente al codice di origine contenente il problema. Gli argomenti della Guida dettagliati offrono spesso una soluzione.|-   [Uso di regole per le prestazioni per analizzare dati](../profiling/using-performance-rules-to-analyze-data.md)|  
+|**Comprendere i dettagli della visualizzazione dei report:** le visualizzazioni dei report degli strumenti di profilatura offrono dati sulle prestazioni aggregati relativi a processi, thread, moduli e funzioni dell'esecuzione di una profilatura. I dati visualizzati variano a seconda del metodo di profilatura usato per raccogliere i dati.|-   [Visualizzazioni dei report di prestazioni](../profiling/performance-report-views.md)|  
+|**Configurare, ordinare e filtrare le visualizzazioni dei report:** è possibile specificare e ordinare le colonne di dati da visualizzare in un report, ordinare le righe del report e filtrare i dati in modo da includere solo un intervallo di tempo specificato.|-   [Personalizzazione delle visualizzazioni dei report degli strumenti per le prestazioni](../profiling/customizing-performance-tools-report-views.md)|  
   
-## Sezioni correlate  
- [Confronto di file di dati degli strumenti per la profilatura](../profiling/comparing-performance-data-files.md)  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Confronto tra file di dati delle prestazioni](../profiling/comparing-performance-data-files.md)  
   
  [Salvataggio ed esportazione dei dati degli strumenti per le prestazioni](../profiling/saving-and-exporting-performance-tools-data.md)  
   
-## Vedere anche  
- [Utilizzo degli strumenti di profilatura](../profiling/performance-explorer.md)
+## <a name="see-also"></a>Vedere anche  
+ [Esplora prestazioni](../profiling/performance-explorer.md) [Profilatura in Visual Studio](../profiling/index.md) [Panoramica delle funzionalità di profilatura](../profiling/profiling-feature-tour.md)

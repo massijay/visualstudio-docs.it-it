@@ -1,67 +1,72 @@
 ---
-title: "Procedura dettagliata: creazione e debug di una soluzione flusso di lavoro SharePoint"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.SharePointTools.Workflow.WorkflowConditions"
-  - "VS.SharePointTools.Workflow.WorkflowList"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "sviluppo per SharePoint in Visual Studio, flussi di lavoro"
-  - "flussi di lavoro [sviluppo per SharePoint in Visual Studio]"
+title: 'Walkthrough: Creating and Debugging a SharePoint Workflow Solution | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.SharePointTools.Workflow.WorkflowConditions
+- VS.SharePointTools.Workflow.WorkflowList
+dev_langs:
+- VB
+- CSharp
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint development in Visual Studio, workflows
+- workflows [SharePoint development in Visual Studio]
 ms.assetid: 81756490-ab5a-4fa4-96c6-eed2cfbf8374
 caps.latest.revision: 28
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 27
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 7ee27378034bd9c4c8d7cc2700583d22210e4c70
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
+
 ---
-# Procedura dettagliata: creazione e debug di una soluzione flusso di lavoro SharePoint
-  In questa procedura dettagliata viene illustrato come creare un modello di base di flusso di lavoro sequenziale.  Il flusso di lavoro controlla una proprietà di una raccolta documenti condivisa per determinare se un documento è stato rivisto.  In caso positivo, il flusso di lavoro viene terminato.  
+# <a name="walkthrough-creating-and-debugging-a-sharepoint-workflow-solution"></a>Walkthrough: Creating and Debugging a SharePoint Workflow Solution
+  This walkthrough demonstrates how to create a basic sequential workflow template. The workflow checks a property of a shared document library to determine whether a document has been reviewed. If the document has been reviewed, the workflow finishes.  
   
- In questa procedura dettagliata vengono illustrate le attività seguenti:  
+ This walkthrough illustrates the following tasks:  
   
--   Creazione di un progetto flusso di lavoro sequenziale per la definizione dell'elenco di SharePoint in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+-   Creating a SharePoint list definition sequential workflow project in [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
--   Creazione di attività del flusso di lavoro.  
+-   Creating workflow activities.  
   
--   Gestione degli eventi di attività del flusso di lavoro.  
+-   Handling workflow activity events.  
   
 > [!NOTE]  
->  Sebbene in questa procedura dettagliata venga utilizzato un progetto flusso di lavoro sequenziale, il processo è identico per un progetto flusso di lavoro macchina a stati.  
+>  Although this walkthrough uses a sequential workflow project, the process is identical for a state machine workflow project.  
 >   
->  Inoltre, sul computer potrebbero essere visualizzati nomi o percorsi diversi per alcuni elementi dell'interfaccia utente di Visual Studio nelle istruzioni seguenti.  Questi elementi sono determinati dall'edizione di Visual Studio in uso e dalle impostazioni utilizzate.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Also, your computer might show different names or locations for some of the Visual Studio user interface elements in the following instructions. The Visual Studio edition that you have and the settings that you use determine these elements. For more information, see [Personalize the Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## Prerequisiti  
- Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
+## <a name="prerequisites"></a>Prerequisites  
+ You need the following components to complete this walkthrough:  
   
--   Edizioni supportate di Microsoft Windows e SharePoint.  Per ulteriori informazioni, vedere [Requisiti per lo sviluppo di soluzioni SharePoint](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   Supported editions of Microsoft Windows and SharePoint. For more information, see [Requirements for Developing SharePoint Solutions](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
   
 -   Visual Studio.  
   
-## Aggiunta di proprietà alla raccolta Documenti condivisi di SharePoint  
- Per tenere traccia dello stato di revisione dei documenti nella raccolta **Documenti condivisi**, saranno create tre nuove proprietà per i documenti condivisi nel sito di SharePoint: `Status`, `Assignee` e `Review Comments`.  Tali proprietà sono definite nella raccolta **Documenti condivisi**.  
+## <a name="adding-properties-to-the-sharepoint-shared-documents-library"></a>Adding Properties to the SharePoint Shared Documents Library  
+ To track the review status of documents in the **Shared Documents** library, we will create three new properties for shared documents on our SharePoint site: `Status`, `Assignee`, and `Review Comments`. We define these properties in the **Shared Documents** library.  
   
-#### Per aggiungere proprietà alla raccolta Documenti condivisi di SharePoint  
+#### <a name="to-add-properties-to-the-sharepoint-shared-documents-library"></a>To add properties to the SharePoint shared documents library  
   
-1.  Aprire un sito SharePoint, ad esempio http:\/\/\<nome del sistema\>\/SitePages\/Home.aspx, in un browser.  
+1.  Open a SharePoint site, such as http://\<system name>/SitePages/Home.aspx, in a Web browser.  
   
-2.  Nella barra Avvio veloce, scegliere **CondivisiDocumenti**.  
+2.  On the QuickLaunch bar, choose **SharedDocuments**.  
   
-3.  Selezionare **Raccolta** sulla barra multifunzione **Strumenti raccolta**, quindi selezionare il pulsante **Crea colonna** sulla barra multifunzione per creare una nuova colonna.  
+3.  Choose **Library** on the **Library Tools** ribbon and then choose the **Create Column** button on the ribbon to create a new column.  
   
-4.  Assegnare un nome alla colonna Stato documento, impostarne il tipo su **Scelta \(menu in cui eseguire una selezione\)**, specificare le tre scelte seguenti, quindi selezionare il pulsante **OK**:  
+4.  Name the column **Document Status**, set its type to **Choice (menu to choose from)**, specify the following three choices, and then choose the **OK** button:  
   
     -   **Review Needed**  
   
@@ -69,114 +74,114 @@ caps.handback.revision: 27
   
     -   **Changes Requested**  
   
-5.  Creare altre due colonne e denominarle Assignee e Review Comments.  Impostare il tipo della colonna Assignee come singola riga di testo e il tipo della colonna Review Comments come più righe di testo.  
+5.  Create two more columns and name them **Assignee** and **Review Comments**. Set the Assignee column type as a single line of text, and the Review Comments column type as multiple lines of text.  
   
-## Possibilità di modifica dei documenti senza necessità di estrazione  
- Il test del modello di flusso di lavoro risulta più facile quando è possibile modificare i documenti senza doverli estrarre.  Nella procedura descritta di seguito, viene configurato il sito di SharePoint per consentirne l'attivazione.  
+## <a name="enabling-documents-to-be-edited-without-requiring-a-check-out"></a>Enabling Documents to be Edited without Requiring a Check Out  
+ It is easier to test the workflow template when you can edit the documents without having to check them out. In the next procedure, you configure the SharePoint site to enable that.  
   
-#### Per consentire la modifica dei documenti senza estrazione  
+#### <a name="to-enable-documents-to-be-edited-without-checking-them-out"></a>To enable documents to be edited without checking them out  
   
-1.  Sulla barra Avvio veloce, selezionare il collegamento **Documenti condivisi**.  
+1.  On the QuickLaunch bar, choose the **Shared Documents** link.  
   
-2.  Sulla barra multifunzione **Raccolta**, scegliere la scheda **Strumenti raccolta**, quindi selezionare il pulsante **Impostazioni raccolta** per visualizzare la pagina **Impostazioni raccolta documenti**.  
+2.  On the **Library Tools** ribbon, choose the **Library** tab, and then choose the **Library Settings** button to display the **Document Library Settings** page.  
   
-3.  Nella sezione **Impostazioni generali**, scegliere il collegamento **Impostazioni controllo versioni** per visualizzare la pagina **Impostazioni controllo versioni**.  
+3.  In the **General Settings** section, choose the **Versioning Settings** link to display the **Versioning Settings** page.  
   
-4.  Verificare che l'impostazione per **Estrazione obbligatoria dei documenti prima della modifica** sia **No**.  Se non lo è, modificarlo su **No** e quindi selezionare il pulsante **OK**.  
+4.  Verify that the setting for **Require documents to be checked out before they can be edited** is **No**. If it is not, change it to **No** and then choose the **OK** button.  
   
-5.  Chiudere il browser.  
+5.  Close the browser.  
   
-## Creazione di un progetto Flusso di lavoro sequenziale SharePoint  
- Un flusso di lavoro sequenziale è un set di passaggi eseguiti in ordine fino al completamento dell'ultima attività.  In questa procedura si crea un flusso di lavoro sequenziale che verrà applicato all'elenco Documenti condivisi.  La procedura guidata del flusso di lavoro consente di associare quest'ultimo alla definizione di sito o alla definizione di elenco, nonché di determinare quando verrà avviato.  
+## <a name="creating-a-sharepoint-sequential-workflow-project"></a>Creating a SharePoint Sequential Workflow Project  
+ A sequential workflow is a set of steps that executes in order until the last activity finishes. In this procedure, we create a sequential workflow that will apply to our Shared Documents list. The workflow wizard lets you associate the workflow with either the site definition or the list definition and lets you determine when the workflow will start.  
   
-#### Per creare un progetto Flusso di lavoro sequenziale SharePoint  
+#### <a name="to-create-a-sharepoint-sequential-workflow-project"></a>To create a SharePoint sequential workflow project  
   
-1.  Avviare [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+1.  Start [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  Sulla barra dei menu scegliere **File**, **Nuovo**, **Progetto** per visualizzare la finestra di dialogo **Nuovo progetto**.  
+2.  On the menu bar, choose **File**, **New**, **Project** to display the **New Project** dialog box.  
   
-3.  Espandere il nodo **SharePoint** sotto **Visual C\#** o **Visual Basic**, quindi scegliere il nodo **2010**.  
+3.  Expand the **SharePoint** node under either **Visual C#** or **Visual Basic**, and then choose the **2010** node.  
   
-4.  Nel riquadro **Modelli**, scegliere il modello **Progetto SharePoint 2010**.  
+4.  In the **Templates** pane, choose the **SharePoint 2010 Project** template.  
   
-5.  Nella casella di testo **Nome**, inserire MySharePointWorkflow e selezionare il pulsante **OK**.  
+5.  In the **Name** box, enter **MySharePointWorkflow** and then choose the **OK** button.  
   
-     Viene visualizzata la **Personalizzazione guidata SharePoint**.  
+     The **SharePoint Customization Wizard** appears.  
   
-6.  Nella pagina **Specificare il sito e il livello di sicurezza per il debug**, scegliere il pulsante di opzione **Distribuisci come soluzione farm**, quindi selezionare il pulsante **Fine** per accettare il livello di affidabilità e il sito predefinito.  
+6.  In the **Specify the site and security level for debugging** page, choose the **Deploy as a farm solution** option button, and then choose the **Finish** button to accept the trust level and default site.  
   
-     Questo passaggio consente di impostare il livello di attendibilità per la soluzione come soluzione della farm, ovvero l'unica opzione disponibile per i progetti flusso di lavoro.  Per ulteriori informazioni, vedere [Considerazioni sulle soluzioni create mediante sandbox](../sharepoint/sandboxed-solution-considerations.md).  
+     This step sets the trust level for the solution as farm solution, the only available option for workflow projects. For more information, see [Sandboxed Solution Considerations](../sharepoint/sandboxed-solution-considerations.md).  
   
-7.  In **Esplora soluzioni** scegliere il nodo del progetto, quindi, nella barra dei menu scegliere **Progetto**, **Aggiungi nuovo elemento**.  
+7.  In **Solution Explorer**, choose the project node, and then, on the menu bar, choose **Project**, **Add New Item**.  
   
-8.  Sotto **Visual C\#** o **Visual Basic**, espandere il nodo **SharePoint**, quindi scegliere il nodo **2010**.  
+8.  Under either **Visual C#** or **Visual Basic**, expand the **SharePoint** node, and then choose the **2010** node.  
   
-9. Nel riquadro **Modelli**, scegliere il modello **Flusso di lavoro sequenziale \(solo soluzione farm\)** quindi scegliere il pulsante **Aggiungi**.  
+9. In the **Templates** pane, choose the **Sequential Workflow (Farm Solution only)** template, and then choose the **Add** button.  
   
-     Viene visualizzata la **Personalizzazione guidata SharePoint**.  
+     The **SharePoint Customization Wizard** appears.  
   
-10. Nella pagina **Specificare il nome del flusso di lavoro per il debug** accettare il nome predefinito \(**MySharePointWorkflow \- Workflow1**\).  Mantenere il valore predefinito **Flusso di lavoro elenco** del tipo di modello di flusso di lavoro, quindi selezionare il pulsante **Avanti**.  
+10. In the **Specify the workflow name for debugging** page, accept the default name (**MySharePointWorkflow - Workflow1**). Keep the default workflow template type value, **List Workflow**, and then choose the **Next** button.  
   
-11. Nella pagina **Associare automaticamente il flusso di lavoro in una sessione di debug** selezionare il pulsante **Avanti** per accettare tutte le impostazioni predefinite.  
+11. In the **Would you like Visual Studio to automatically associate the workflow in a debug session?** page, choose the **Next** button to accept all of the default settings.  
   
-     Questo passaggio consente di associare automaticamente il flusso di lavoro alla raccolta Documenti condivisi.  
+     This step automatically associates the workflow with the Shared Documents library.  
   
-12. Nella pagina **Specificare le condizioni relative alle modalità di avvio del flusso di lavoro** lasciare le opzioni predefinite selezionate nella sezione **Selezionare la modalità di avvio del flusso di lavoro** e selezionare il pulsante **Fine**.  
+12. In the **Specify the conditions for how your workflow is started** page, leave the default options selected in the **How do you want the workflow to start?** section and choose the **Finish** button.  
   
-     Questa pagina consente di specificare quando viene avviato il flusso di lavoro.  Per impostazione predefinita, il flusso di lavoro si avvia quando un utente lo avvia manualmente in SharePoint o quando viene creato un elemento al quale è associato il flusso di lavoro.  
+     This page enables you to specify when your workflow starts. By default, the workflow starts either when a user manually starts it in SharePoint or when an item to which the workflow is associated is created.  
   
-## Creazione di attività del flusso di lavoro  
- Nei flussi di lavoro sono contenute una o più *attività* che rappresentano le azioni da effettuare.  Utilizzare Progettazione flussi di lavoro per organizzare le attività per un flusso di lavoro.  In questa procedura verranno aggiunte due attività al flusso di lavoro: HandleExternalEventActivity e OnWorkFlowItemChanged.  Queste attività consentono di monitorare lo stato di revisione dei documenti nell'elenco **Documenti condivisi**  
+## <a name="creating-workflow-activities"></a>Creating Workflow Activities  
+ Workflows contain one or more *activities* that represent actions to perform. Use the workflow designer to arrange activities for a workflow. In this procedure, we will add two activities to the workflow: HandleExternalEventActivity and OnWorkFlowItemChanged. These activities monitor the review status of documents in the **Shared Documents** list  
   
-#### Per creare attività del flusso di lavoro  
+#### <a name="to-create-workflow-activities"></a>To create workflow activities  
   
-1.  Il flusso di lavoro deve essere visualizzato in Progettazione flussi di lavoro.  In caso contrario, allora aprire **Workflow1.cs** o **Workflow1.vb** in **Esplora soluzioni**.  
+1.  The workflow should be displayed in the workflow designer. If it is not, then open either **Workflow1.cs** or **Workflow1.vb** in **Solution Explorer**.  
   
-2.  Nella finestra di progettazione, selezionare l'attività **OnWorkflowActivated1**.  
+2.  In the designer, choose the **OnWorkflowActivated1** activity.  
   
-3.  Nella finestra **Proprietà** inserire onWorkflowActivated accanto alla proprietà **Invoked**, quindi premere il tasto Invio.  
+3.  In the **Properties** window, enter **onWorkflowActivated** next to the **Invoked** property, and then choose the Enter key.  
   
-     Viene aperto l'editor del codice e un metodo per la gestione eventi denominato onWorkflowActivated viene aggiunto al file di codice Workflow1.  
+     The Code Editor opens, and an event handler method named onWorkflowActivated is added to the Workflow1 code file.  
   
-4.  Tornare a Progettazione flussi di lavoro, aprire la casella degli strumenti, quindi espandere il nodo **Windows Workflow v3.0**.  
+4.  Switch back to the workflow designer, open the toolbox, and then expand the **Windows Workflow v3.0** node.  
   
-5.  Nel nodo **Windows Workflow v3.0** della **Casella degli strumenti**, eseguire una delle seguenti procedure:  
+5.  In the **Windows Workflow v3.0** node of the **Toolbox**, perform one of the following sets of steps:  
   
-    1.  Aprire il menu di scelta rapida per l'attività **While**, quindi scegliere **Copia**.  In Progettazione flussi di lavoro, aprire il menu di scelta rapida per la riga sottostante l'attività **onWorkflowActivated1** quindi scegliere **Incolla**.  
+    1.  Open the shortcut menu for the **While** activity, and then choose **Copy**. In the workflow designer, open the shortcut menu for the line under the **onWorkflowActivated1** activity, and then choose **Paste**.  
   
-    2.  Trascinare l'attività **While** dalla **Casella degli strumenti** alla Progettazione flussi di lavoro e connetterla con la riga sottostante l'attività **onWorkflowActivated1**.  
+    2.  Drag the **While** activity from the **Toolbox** to the workflow designer, and connect the activity to the line under the **onWorkflowActivated1** activity.  
   
-6.  Scegliere l'attività **WhileActivity1**.  
+6.  Choose the **WhileActivity1** activity.  
   
-7.  Nella finestra **Proprietà** impostare **Condition** sulla condizione relativa al codice.  
+7.  In the **Properties** window, set **Condition** to Code Condition.  
   
-8.  Espandere la proprietà **Condition** inserire isWorkflowPending accanto alla proprietà figlia **Condition**, quindi premere il tasto Invio.  
+8.  Expand the **Condition** property, enter **isWorkflowPending** next to the child **Condition** property, and then choose the Enter key.  
   
-     Viene aperto l'editor di codice e un metodo denominato isWorkflowPending viene aggiunto al file di codice Workflow1.  
+     The Code Editor opens, and a method named isWorkflowPending is added to the Workflow1 code file.  
   
-9. Tornare a Progettazione flussi di lavoro, aprire la casella degli strumenti, quindi espandere il nodo **Flusso di lavoro di SharePoint**.  
+9. Switch back to the workflow designer, open the toolbox, and then expand the **SharePoint Workflow** node.  
   
-10. Nel nodo **SharePoint Workflow** della **Casella degli strumenti**, eseguire una delle seguenti procedure:  
+10. In the **SharePoint Workflow** node of the **Toolbox**, perform one of the following sets of steps:  
   
-    -   Aprire il menu di scelta rapida per l'attività **OnWorkflowItemChanged** quindi scegliere **Copia**.  In Progettazione flussi di lavoro, aprire il menu di scelta rapida per la riga interna all'attività **onWorkflowActivated1** quindi scegliere **Incolla**.  
+    -   Open the shortcut menu for the **OnWorkflowItemChanged** activity, and then choose **Copy**. In the workflow designer, open the shortcut menu for the line inside the **whileActivity1** activity, and then choose **Paste**.  
   
-    -   Trascinare un'attività **OnWorkflowItemChanged** dalla **Casella degli strumenti** alla Progettazione flussi di lavoro e connetterla con la riga interna all'attività **whileActivity1**.  
+    -   Drag the **OnWorkflowItemChanged** activity from the **Toolbox** to the workflow designer, and connect the activity to the line inside the **whileActivity1** activity.  
   
-11. Scegliere l'attività **onWorkflowItemChanged1**.  
+11. Choose the **onWorkflowItemChanged1** activity.  
   
-12. Nella finestra **Proprietà** impostare le proprietà come mostrato nella tabella riportata di seguito.  
+12. In the **Properties** window, set the properties as shown in the following table.  
   
-    |Proprietà|Valore|  
-    |---------------|------------|  
+    |Property|Value|  
+    |--------------|-----------|  
     |**CorrelationToken**|**workflowToken**|  
     |**Invoked**|**onWorkflowItemChanged**|  
   
-## Gestione degli eventi di attività  
- Infine, controllare lo stato del documento di ogni attività.  Se il documento è stato rivisto, il flusso di lavoro è terminato.  
+## <a name="handling-activity-events"></a>Handling Activity Events  
+ Finally, check the status of the document from each activity. If the document has been reviewed, then the workflow is finished.  
   
-#### Per gestire gli eventi di attività  
+#### <a name="to-handle-activity-events"></a>To handle activity events  
   
-1.  In Workflow1.cs o Workflow1.vb aggiungere il campo seguente nella parte superiore della classe `Workflow1`.  Questo campo viene utilizzato in un'attività per determinare se il flusso di lavoro è terminato.  
+1.  In Workflow1.cs or Workflow1.vb, add the following field to the top of the `Workflow1` class. This field is used in an activity to determine whether the workflow is finished.  
   
     ```vb  
     Dim workflowPending As Boolean = True  
@@ -186,7 +191,7 @@ caps.handback.revision: 27
     Boolean workflowPending = true;  
     ```  
   
-2.  Aggiungere il seguente metodo alla classe `Workflow1`.  Questo metodo controlla il valore della proprietà `Document Status` dell'elenco Documenti per determinare se il documento è stato rivisto.  Se la proprietà `Document Status` è impostata su `Review Complete`, il metodo `checkStatus` imposta il campo `workflowPending` su **false** per indicare che il flusso di lavoro è pronto per essere terminato.  
+2.  Add the following method to the `Workflow1` class. This method checks the value of the `Document Status` property of the Documents list to determine whether the document has been reviewed. If the `Document Status` property is set to `Review Complete`, then the `checkStatus` method sets the `workflowPending` field to **false** to indicate that the workflow is ready to finish.  
   
     ```vb  
     Private Sub checkStatus()  
@@ -204,7 +209,7 @@ caps.handback.revision: 27
     }  
     ```  
   
-3.  Aggiungere il codice riportato di seguito ai metodi `onWorkflowActivated` e `onWorkflowItemChanged` per chiamare il metodo `checkStatus`.  Quando viene avviato il flusso di lavoro, il metodo `onWorkflowActivated` chiama il metodo `checkStatus` per determinare se il documento è già stato rivisto.  In caso negativo, il flusso di lavoro continua.  Quando il documento viene salvato, il metodo `onWorkflowItemChanged` chiama nuovamente il metodo `checkStatus` per determinare se il documento è stato rivisto.  Finché il campo `workflowPending` è impostato su **true**, l'esecuzione del flusso di lavoro continua.  
+3.  Add the following code to the `onWorkflowActivated` and `onWorkflowItemChanged` methods to call the `checkStatus` method. When the workflow starts, the `onWorkflowActivated` method calls the `checkStatus` method to determine whether the document has already been reviewed. If it has not been reviewed, the workflow continues. When the document is saved, the `onWorkflowItemChanged` method calls the `checkStatus` method again to determine whether the document has been reviewed. While the `workflowPending` field is set to **true**, the workflow continues to run.  
   
     ```vb  
     Private Sub onWorkflowActivated(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ExternalDataEventArgs)  
@@ -230,7 +235,7 @@ caps.handback.revision: 27
     }  
     ```  
   
-4.  Aggiungere il codice riportato di seguito al metodo `isWorkflowPending` per controllare lo stato della proprietà `workflowPending`.  Ogni volta che il documento viene salvato, l'attività **whileActivity1** chiama il metodo `isWorkflowPending`.  Questo metodo esamina la proprietà <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> dell'oggetto <xref:System.Workflow.Activities.ConditionalEventArgs> per determinare se l'attività **WhileActivity1** deve continuare o essere terminata.  Se la proprietà è impostata su **true**, l'attività continua.  In caso contrario, l'attività e il flusso di lavoro vengono terminati.  
+4.  Add the following code to the `isWorkflowPending` method to check the status of the `workflowPending` property. Each time the document is saved, the **whileActivity1** activity calls the `isWorkflowPending` method. This method examines the <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> property of the <xref:System.Workflow.Activities.ConditionalEventArgs> object to determine whether the **WhileActivity1** activity should continue or finish. If the property is set to **true**, the activity continues. Otherwise, the activity finishes and the workflow finishes.  
   
     ```vb  
     Private Sub isWorkflowPending(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ConditionalEventArgs)  
@@ -245,55 +250,55 @@ caps.handback.revision: 27
     }  
     ```  
   
-5.  Salvare il progetto.  
+5.  Save the project.  
   
-## Test del modello di flusso di lavoro SharePoint  
- Quando si avvia il debugger, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] consente la distribuzione del modello di flusso di lavoro al server SharePoint e di associare il flusso di lavoro all'elenco **Documenti condivisi**.  Per testare il flusso di lavoro, avviare una relativa istanza da un documento dell'elenco **Documenti condivisi**.  
+## <a name="testing-the-sharepoint-workflow-template"></a>Testing the SharePoint Workflow Template  
+ When you start the debugger, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] deploys the workflow template to the SharePoint server and associates the workflow with the **Shared Documents** list. To test the workflow, start an instance of the workflow from a document in the **Shared Documents** list.  
   
-#### Per testare il modello di flusso di lavoro SharePoint  
+#### <a name="to-test-the-sharepoint-workflow-template"></a>To test the SharePoint workflow template  
   
-1.  In Workflow1.cs o Workflow1.vb impostare un punto di interruzione accanto al metodo **onWorkflowActivated**.  
+1.  In Workflow1.cs or Workflow1.vb, set a breakpoint next to the **onWorkflowActivated** method.  
   
-2.  Premere il tasto F5 per compilare ed eseguire la soluzione.  
+2.  Choose the F5 key to build and run the solution.  
   
-     Verrà aperto il sito di SharePoint.  
+     The SharePoint site appears.  
   
-3.  Nel riquadro di navigazione di SharePoint selezionare il collegamento **Documenti**.  
+3.  In the navigation pane in SharePoint, choose the **Shared Documents** link.  
   
-4.  Nella pagina **Documenti condivisi** selezionare il collegamento **Documenti** nella scheda **Strumenti raccolta**, quindi selezionare il pulsante **Carica documento**.  
+4.  In the **Shared Documents** page, choose the **Documents** link on the **Library Tools** tab, and then choose the **Upload Document** button.  
   
-5.  Nella finestra di dialogo **Carica documento**, scegliere il pulsante **Sfoglia**, scegliere qualsiasi file di documento, scegliere il pulsante **Apri** quindi scegliere il pulsante **OK**.  
+5.  In the **Upload Document** dialog box, choose the **Browse** button, choose any document file, choose the **Open** button, and then choose the **OK** button.  
   
-     In questo modo viene caricato il documento selezionato nell'elenco **Documenti condivisi** e avviato il flusso di lavoro.  
+     This uploads the selected document into the **Shared Documents** list and starts the workflow.  
   
-6.  In [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] verificare che l'esecuzione del debugger venga interrotta in corrispondenza del punto di interruzione accanto al metodo `onWorkflowActivated`.  
+6.  In [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], verify that the debugger stops at the breakpoint next to the `onWorkflowActivated` method.  
   
-7.  Premere il tasto F5 per continuare l'esecuzione.  
+7.  Choose the F5 key to continue execution.  
   
-8.  In questa fase è possibile modificare le impostazioni per il documento, tuttavia per il momento mantenere i valori predefiniti selezionando il pulsante **Salva**.  
+8.  You can change the settings for the document here, but leave them at the default values for now by choosing the **Save** button.  
   
-     In questo modo si torna alla pagina **Documenti condivisi** del sito Web predefinito di SharePoint.  
+     This returns you to the **Shared Documents** page of the default SharePoint Web site.  
   
-9. Nella pagina **Documenti condivisi** verificare che il valore sottostante la colonna **MySharePointWorkflow – Workflow1** sia impostato su **In corso**.  Questa impostazione indica che il flusso di lavoro è in corso e che il documento è in attesa di revisione.  
+9. In the **Shared Documents** page, verify that the value underneath the **MySharePointWorkflow - Workflow1** column is set to **In Progress**. This indicates that the workflow is in progress and that the document is awaiting review.  
   
-10. Nella pagina **Documenti condivisi**, scegliere il documento, scegliere la freccia visualizzata quindi selezionare la voce del menu **Modifica proprietà**.  
+10. In the **Shared Documents** page, choose the document, choose the arrow that appears, and then choose the **Edit Properties** menu item.  
   
-11. Impostare **Stato documento** su **Revisione completata**, quindi selezionare il pulsante **Salva**.  
+11. Set **Document Status** to **Review Complete**, and then choose the **Save** button.  
   
-     In questo modo si torna alla pagina **Documenti condivisi** del sito Web predefinito di SharePoint.  
+     This returns you to the **Shared Documents** page of the default SharePoint Web site.  
   
-12. Nella pagina **Documenti condivisi** verificare che il valore sottostante la colonna **Document Status** sia impostato su **Revisione completata**.  Aggiornare la pagina **Documenti condivisi** e verificare che il valore sottostante la colonna **MySharePointWorkflow – Workflow1** sia impostato su **Completato**.  Questa impostazione indica che il flusso di lavoro è stato completato e che il documento è stato rivisto.  
+12. In the **Shared Documents** page, verify that the value underneath the **Document Status** column is set to **Review Complete**. Refresh the **Shared Documents** page and verify that the value underneath the **MySharePointWorkflow - Workflow1** column is set to **Completed**. This indicates that workflow is finished and that the document has been reviewed.  
   
-## Passaggi successivi  
- Per ulteriori informazioni su come creare modelli di flusso di lavoro, vedere i seguenti argomenti:  
+## <a name="next-steps"></a>Next Steps  
+ You can learn more about how to create workflow templates from these topics:  
   
--   Per ulteriori informazioni sulle attività del flusso di lavoro SharePoint, vedere l'argomento relativo alle [Attività di flusso di lavoro per SharePoint Foundation](http://go.microsoft.com/fwlink/?LinkId=178992).  
+-   To learn more about SharePoint workflow activities, see [Workflow Activities for SharePoint Foundation](http://go.microsoft.com/fwlink/?LinkId=178992).  
   
--   Per ulteriori informazioni sulle attività di Windows Workflow Foundation, vedere l'argomento relativo allo [System.Workflow.Activities Namespace](http://go.microsoft.com/fwlink/?LinkId=178993).  
+-   To learn more about Windows Workflow Foundation activities, see [System.Workflow.Activities Namespace](http://go.microsoft.com/fwlink/?LinkId=178993).  
   
-## Vedere anche  
- [Creazione di soluzioni flusso di lavoro SharePoint](../sharepoint/creating-sharepoint-workflow-solutions.md)   
- [Modelli di progetto e di elementi di progetto SharePoint](../sharepoint/sharepoint-project-and-project-item-templates.md)   
- [Compilazione e debug delle soluzioni SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
+## <a name="see-also"></a>See Also  
+ [Creating SharePoint Workflow Solutions](../sharepoint/creating-sharepoint-workflow-solutions.md)   
+ [SharePoint Project and Project Item Templates](../sharepoint/sharepoint-project-and-project-item-templates.md)   
+ [Building and Debugging SharePoint Solutions](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetMethodFieldsByName | Documenti di Microsoft
+title: IDebugSymbolProvider::GetMethodFieldsByName | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: d04fc7cb5142fe8c7dc9b966466ae35ac015e355
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 3bf359535d5b11edb95910afe5a81ca048ab9c21
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugsymbolprovidergetmethodfieldsbyname"></a>IDebugSymbolProvider::GetMethodFieldsByName
-Questo metodo ottiene il campo che rappresenta un nome di metodo completo.  
+This method gets the field representing a fully qualified method name.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetMethodFieldsByName(   
    LPCOLESTR          pszFullName,  
    NAME_MATCH         nameMatch,  
@@ -49,7 +50,7 @@ HRESULT GetMethodFieldsByName(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetMethodFieldsByName(  
    string               pszFullName,   
    NAME_MATCH           nameMatch,   
@@ -57,22 +58,22 @@ int GetMethodFieldsByName(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `pszFullName`  
- [in] Il nome del metodo.  
+ [in] The method name.  
   
  `nameMatch`  
- [in] Seleziona il tipo di corrispondenza, ad esempio, distinzione maiuscole/minuscole.  
+ [in] Selects the type of match, for example, case-sensitive.  
   
  `ppEnum`  
- [out] Restituisce un [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumeratore per i campi associati a questo metodo.  
+ [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumerator for the fields associated with this method.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Note  
- Se è in overload, ad esempio, un metodo può essere associato a più campi.  
+## <a name="remarks"></a>Remarks  
+ A method can be associated with multiple fields if it is overloaded, for example.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

@@ -33,10 +33,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 17fd26b26e25c31772adf4b8629852256317968c
+ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
+ms.openlocfilehash: 6a45db14ee055c4fbdf738cf36df503a4a1fffd0
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="msbuild-toolset-toolsversion"></a>Set di strumenti di MSBuild (ToolsVersion)
@@ -68,9 +68,9 @@ Per lo sviluppo di un'applicazione, MSBuild usa un set di strumenti che comprend
   
  L'attributo `ToolsVersion` viene usato anche per la migrazione del progetto. Ad esempio, se si apre un progetto di Visual Studio 2008 in Visual Studio 2010, il file di progetto viene aggiornato per includere ToolsVersion="4.0". Se in seguito si tenta di aprire tale progetto in Visual Studio 2008, l'attributo `ToolsVersion` aggiornato non verrà riconosciuto e pertanto il progetto verrà compilato come se l'attributo fosse ancora impostato su 3.5.  
   
- Sia Visual Studio 2010 che Visual Studio 2012 usano l'attributo ToolsVersion impostato su 4.0. Visual Studio 2013 usa l'attributo ToolsVersion impostato su 12.0. In molti casi è possibile aprire il progetto in tutte e tre le versioni di Visual Studio senza modifiche. Visual Studio usa sempre il set di strumenti corretto, ma si riceverà una notifica se la versione usata non corrisponde alla versione del file di progetto. In quasi tutti i casi, questo avviso non è grave perché i set di strumenti sono compatibili nella maggior parte dei casi.  
+ Sia Visual Studio 2010 che Visual Studio 2012 usano l'attributo ToolsVersion impostato su 4.0. Visual Studio 2013 usa l'attributo ToolsVersion impostato su 12.0. Visual Studio 2015 usa ToolsVersion 14.0 e Visual Studio 2017 usa ToolsVersion 15.0. In molti casi è possibile aprire il progetto in più versioni di Visual Studio senza modifiche. Visual Studio usa sempre il set di strumenti corretto, ma si riceverà una notifica se la versione usata non corrisponde alla versione del file di progetto. In quasi tutti i casi, questo avviso non è grave perché i set di strumenti sono compatibili nella maggior parte dei casi.  
   
- I subset di strumenti, che saranno descritti più avanti in questo argomento, consentono a MSBuild di cambiare automaticamente il set di strumenti da usare in base al contesto in cui viene eseguita la compilazione. Ad esempio, MSBuild usa un set di strumenti più recente quando viene eseguito in Visual Studio 2012 rispetto a quando viene eseguito in Visual Studio 2010, senza che sia necessario modificare in modo esplicito il file di progetto. Per altre informazioni, vedere [Impostazione del riconoscimento della versione per i progetti personalizzati](../misc/making-custom-projects-version-aware.md).  
+ I subset di strumenti, che saranno descritti più avanti in questo argomento, consentono a MSBuild di cambiare automaticamente il set di strumenti da usare in base al contesto in cui viene eseguita la compilazione. Ad esempio, MSBuild usa un set di strumenti più recente quando viene eseguito in Visual Studio 2012 rispetto a quando viene eseguito in Visual Studio 2010, senza che sia necessario modificare in modo esplicito il file di progetto.  
   
 ## <a name="toolset-implementation"></a>Implementazione del set di strumenti  
  Per implementare un set di strumenti, selezionare i percorsi dei vari strumenti, destinazioni e attività che costituiscono il set di strumenti. Gli strumenti del set definito da MSBuild provengono dalle seguenti origini:  
@@ -134,3 +134,4 @@ Per lo sviluppo di un'applicazione, MSBuild usa un set di strumenti che comprend
 ## <a name="see-also"></a>Vedere anche  
  [Configurazioni standard e personalizzate del set di strumenti](../msbuild/standard-and-custom-toolset-configurations.md)   
  [Multitargeting](../msbuild/msbuild-multitargeting-overview.md)
+

@@ -1,49 +1,54 @@
 ---
-title: "Procedura: inviare messaggi di posta elettronica a livello di codice"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "posta elettronica [sviluppo per Office in Visual Studio], invio"
-  - "elementi di posta elettronica [sviluppo per Office in Visual Studio], invio di posta elettronica"
-  - "Outlook [sviluppo per Office in Visual Studio], creazione di posta elettronica"
-  - "Outlook [sviluppo per Office in Visual Studio], invio di posta elettronica"
+title: 'How to: Programmatically Send E-Mail | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- mail items [Office development in Visual Studio], sending e-mail
+- Outlook [Office development in Visual Studio], creating e-mail
+- Outlook [Office development in Visual Studio], sending e-mail
+- e-mail [Office development in Visual Studio], sending
 ms.assetid: 4fa0e1b5-2caf-4a11-8626-df643b23f5f0
 caps.latest.revision: 18
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 17
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: f8cb1afe7e496514ce8ceae60f705bb801a3d3ec
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# Procedura: inviare messaggi di posta elettronica a livello di codice
-  In questo esempio viene inviato un messaggio di posta elettronica ai contatti i cui indirizzi di posta elettronica contengono il nome di dominio **example.com**.  
+# <a name="how-to-programmatically-send-e-mail"></a>How to: Programmatically Send E-Mail  
+  This example sends an e-mail message to contacts that have the domain name **example.com** in their e-mail addresses.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## Esempio  
- [!code-csharp[Trin_OL_ProgramEmail#1](../snippets/csharp/VS_Snippets_OfficeSP/Trin_OL_ProgramEMail/CS/thisaddin.cs#1)]  
+## <a name="example"></a>Example  
+ [!code-csharp[Trin_OL_ProgramEmail#1](../vsto/codesnippet/CSharp/Trin_OL_ProgramEMail/thisaddin.cs#1)]  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a>Compiling the Code  
+ This example requires:  
   
--   Contatti i cui indirizzi di posta elettronica contengano il nome di dominio **example.com**.  
+-   Contacts that have the domain name **example.com** in their e-mail addresses.  
   
-## Programmazione efficiente  
- Non rimuovere il codice di filtro che ricerca il nome di dominio **example.com**.  Se si rimuove il filtro, la soluzione invierà messaggi di posta elettronica a tutti i contatti.  
+## <a name="robust-programming"></a>Robust Programming  
+ Do not remove the filter code that searches for the domain name **example.com**. Your solution will send e-mail messages to all of your contacts if you remove the filter.  
   
-## Vedere anche  
- [Utilizzo degli elementi di posta](../vsto/working-with-mail-items.md)   
- [Procedura: Creare un elemento di posta elettronica a livello di codice](../vsto/how-to-programmatically-create-an-e-mail-item.md)   
- [Procedura: accedere ai contatti di Outlook a livello di codice](../vsto/how-to-programmatically-access-outlook-contacts.md)   
- [Procedura: Eseguire azioni quando viene ricevuto un messaggio di posta elettronica a livello di codice](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)  
+## <a name="see-also"></a>See Also  
+ [Working with Mail Items](../vsto/working-with-mail-items.md)   
+ [How to: Programmatically Create an E-Mail Item](../vsto/how-to-programmatically-create-an-e-mail-item.md)   
+ [How to: Programmatically Access Outlook Contacts](../vsto/how-to-programmatically-access-outlook-contacts.md)   
+ [How to: Programmatically Perform Actions When an E-Mail Message Is Received](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)  
   
   

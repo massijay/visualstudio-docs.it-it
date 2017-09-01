@@ -1,79 +1,96 @@
 ---
-title: "IDebugMemoryBytes2::ReadAt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugMemoryBytes2::ReadAt"
-helpviewer_keywords: 
-  - "Metodo IDebugMemoryBytes2::ReadAt"
-  - "Metodo ReadAt"
+title: IDebugMemoryBytes2::ReadAt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugMemoryBytes2::ReadAt
+helpviewer_keywords:
+- IDebugMemoryBytes2::ReadAt method
+- ReadAt method
 ms.assetid: b413684d-4155-4bd4-ae30-ffa512243b5f
 caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# IDebugMemoryBytes2::ReadAt
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 2c92d1be776d3d8e9db23a3871f0f3775dd84397
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Legge una sequenza di byte, a partire dalla posizione specificata.  
+---
+# <a name="idebugmemorybytes2readat"></a>IDebugMemoryBytes2::ReadAt
+Reads a sequence of bytes, starting at a given location.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT ReadAt(   
-   IDebugMemoryContext2* pStartContext,  
-   DWORD                 dwCount,  
-   BYTE*                 rgbMemory,  
-   DWORD*                pdwRead,  
-   DWORD*                pdwUnreadable  
+```cpp  
+HRESULT ReadAt(   
+   IDebugMemoryContext2* pStartContext,  
+   DWORD                 dwCount,  
+   BYTE*                 rgbMemory,  
+   DWORD*                pdwRead,  
+   DWORD*                pdwUnreadable  
 );  
 ```  
   
-```c#  
+```csharp  
 int ReadAt(  
-   IDebugMemoryContext2 pStartContext,  
-   uint                 dwCount,  
-   byte[]               rgbMemory,  
-   out uint             pdwRead,  
-   ref uint             pdwUnreadable  
+   IDebugMemoryContext2 pStartContext,  
+   uint                 dwCount,  
+   byte[]               rgbMemory,  
+   out uint             pdwRead,  
+   ref uint             pdwUnreadable  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `pStartContext`  
- \[in\]  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) L'oggetto che specifica il percorso di avviare i byte di lettura.  
+ [in] The [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object that specifies where to start reading bytes.  
   
  `dwCount`  
- \[in\]  Numero di byte da leggere.  Specifica inoltre la lunghezza della matrice di `rgbMemory` .  
+ [in] The number of bytes to read. Also specifies the length of the `rgbMemory` array.  
   
  `rgbMemory`  
- \[in, out\]  Matrice riempita con il numero di byte letti effettivamente da.  
+ [in, out] Array filled in with the bytes actually read.  
   
  `pdwRead`  
- \[out\]  Restituisce il numero di byte contigui letti effettivamente da.  
+ [out] Returns the number of contiguous bytes actually read.  
   
  `pdwUnreadable`  
- \[in, out\]  Restituisce il numero di byte impedire.  Può essere un valore null se il client è disinteressato il numero dei byte impedire.  
+ [in, out] Returns the number of unreadable bytes. May be a null value if the client is uninterested in the number of unreadable bytes.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce S\_OK, in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## Note  
- Se 100 byte necessari e i primi 50 leggibili, i 20 seguenti sono impedire e i 30 rimanenti leggibili, questo metodo restituisce:  
+## <a name="remarks"></a>Remarks  
+ If 100 bytes are requested and the first 50 are readable, the next 20 are unreadable, and the remaining 30 are readable, this method returns:  
   
- \*`pdwRead` \= 50  
+ *`pdwRead` = 50  
   
- \*`pdwUnreadable` \= 20  
+ *`pdwUnreadable` = 20  
   
- In questo caso, poiché `*pdwRead + *pdwUnreadable < dwCount`, il chiamante devono effettuare una chiamata a per leggere i 30 byte rimanenti di 100 originali richiesti e [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) l'oggetto passato nel parametro di `pStartContext` devono essere avanzati da 70.  
+ In this case, because `*pdwRead + *pdwUnreadable < dwCount`, the caller must make an additional call to read the remaining 30 bytes of the original 100 requested and the [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object passed in the `pStartContext` parameter must be advanced by 70.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

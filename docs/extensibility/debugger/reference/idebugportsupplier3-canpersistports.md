@@ -1,46 +1,63 @@
 ---
-title: "IDebugPortSupplier3::CanPersistPorts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPortSupplier3::CanPersistPorts"
-helpviewer_keywords: 
-  - "IDebugPortSupplier3::CanPersistPorts"
+title: IDebugPortSupplier3::CanPersistPorts | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPortSupplier3::CanPersistPorts
+helpviewer_keywords:
+- IDebugPortSupplier3::CanPersistPorts
 ms.assetid: 4127760c-e602-4e86-9232-457e382a52c7
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugPortSupplier3::CanPersistPorts
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 9c61891876f3e27753283042b0b24dd7d7d60dfd
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Questo metodo determina se il fornitore di porte può mantenere le porte \(scrivendole su disco\) tra il debugger chiama.  
+---
+# <a name="idebugportsupplier3canpersistports"></a>IDebugPortSupplier3::CanPersistPorts
+This method determines whether the port supplier can persist ports (by writing them to disk) between invocations of the debugger.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT CanPersistPorts();  
+HRESULT CanPersistPorts();  
 ```  
   
-```c#  
-int CanPersistPorts();  
+```csharp  
+int CanPersistPorts();  
 ```  
   
-#### Parametri  
- Nessuno.  
+#### <a name="parameters"></a>Parameters  
+ None.  
   
-## Valore restituito  
- `S_OK` se le porte possono essere salvate in modo permanente, o `S_FALSE` per indicare che le porte non possono essere mantenute.  
+## <a name="return-value"></a>Return Value  
+ `S_OK` if ports can be persisted, or `S_FALSE` to indicate that ports cannot be persisted.  
   
-## Note  
- Se il fornitore di porte può mantenere le porte, deve farlo quando viene eliminato e quindi ricaricarle quando viene creata un'istanza nuovamente.  
+## <a name="remarks"></a>Remarks  
+ If the port supplier can persist ports, it should do so when it is destroyed and then reload them when it is instantiated once again.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugPortSupplier3](../../../extensibility/debugger/reference/idebugportsupplier3.md)

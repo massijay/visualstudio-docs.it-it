@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetAddressesFromPosition | Documenti di Microsoft
+title: IDebugSymbolProvider::GetAddressesFromPosition | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,18 +30,19 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 28c913ca924274c946b3ce52a964a3efbae6dc5c
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 957e917870e4482721b0c32e4551072fb9092044
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="idebugsymbolprovidergetaddressesfromposition"></a>IDebugSymbolProvider::GetAddressesFromPosition
-Questo metodo esegue il mapping di una posizione di documento in una matrice di indirizzi di debug.  
+This method maps a document position into an array of debug addresses.  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
+```cpp  
 HRESULT GetAddressesFromPosition(   
    IDebugDocumentPosition2* pDocPos,  
    BOOL                     fStatmentOnly,  
@@ -50,7 +51,7 @@ HRESULT GetAddressesFromPosition(
 );  
 ```  
   
-```c#  
+```csharp  
 int GetAddressesFromPosition(   
    IDebugDocumentPosition2  pDocPos,  
    bool                     fStatmentOnly,  
@@ -59,28 +60,28 @@ int GetAddressesFromPosition(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a>Parameters  
  `pDocPos`  
- [in] Posizione del documento.  
+ [in] The document position.  
   
  `fStatmentOnly`  
- [in] Se TRUE, limita gli indirizzi di debug per una singola istruzione.  
+ [in] If TRUE, limits the debug addresses to a single statement.  
   
  `ppEnumBegAddresses`  
- [out] Restituisce un enumeratore per gli indirizzi iniziali di debug associata a questa informativa o riga.  
+ [out] Returns an enumerator for the starting debug addresses associated with this statement or line.  
   
  `ppEnumEndAddresses`  
- [out] Restituisce un [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) enumeratore per gli indirizzi di debug finale associata a questa informativa o riga.  
+ [out] Returns an [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) enumerator for the ending debug addresses associated with this statement or line.  
   
-## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns `S_OK`; otherwise, returns an error code.  
   
-## <a name="remarks"></a>Note  
- Una posizione di documento in genere indica un intervallo di righe di origine. Questo metodo fornisce l'avvio e quello finale debug associato con le righe. Alcuni linguaggi viene consentita istruzioni che si estendono su più righe o le righe che contiene più di un'istruzione. Questo metodo fornisce un flag per limitare gli indirizzi di debug per una singola istruzione.  
+## <a name="remarks"></a>Remarks  
+ A document position typically indicates a range of source lines. This method provides the starting and ending debug addresses associated with these lines. Some languages allow statements that span multiple lines, or lines that contains more than one statement. This method provides a flag to limit the debug addresses to a single statement.  
   
- È possibile che una singola istruzione per disporre di più indirizzi di debug, come nel caso di modelli.  
+ It is possible for a single statement to have multiple debug addresses, as in the case of templates.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [GetAddressesFromContext](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromcontext.md)   
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)

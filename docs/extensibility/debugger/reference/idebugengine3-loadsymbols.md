@@ -1,47 +1,64 @@
 ---
-title: "IDebugEngine3::LoadSymbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugEngine3::LoadSymbols"
-helpviewer_keywords: 
-  - "IDebugEngine3::LoadSymbols"
+title: IDebugEngine3::LoadSymbols | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugEngine3::LoadSymbols
+helpviewer_keywords:
+- IDebugEngine3::LoadSymbols
 ms.assetid: c846a440-1d91-4d48-b8f1-82e902ae152b
 caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# IDebugEngine3::LoadSymbols
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5f2804506fa68972062c53d8aca72bf9f3138099
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Carica \(a seconda delle esigenze\) i simboli per tutti i moduli di cui viene eseguito il debug di questo modulo di gestione del debug.  
+---
+# <a name="idebugengine3loadsymbols"></a>IDebugEngine3::LoadSymbols
+Loads (as necessary) symbols for all modules being debugged by this debugging engine.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT LoadSymbols();  
 ```  
   
-```c#  
+```csharp  
 int LoadSymbols();  
 ```  
   
-#### Parametri  
- Nessuno.  
+#### <a name="parameters"></a>Parameters  
+ None.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce S\_OK, in caso contrario restituisce il codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise returns error code.  
   
-## Note  
- Verranno caricati i simboli di debug per tutti i moduli a cui si fa riferimento nel modulo di gestione del debug.  I simboli vengono caricati solo se non sono già stati caricati.  I simboli vengono trovati i percorsi impostati da una chiamata a [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md).  
+## <a name="remarks"></a>Remarks  
+ This loads debugging symbols for all modules referenced by this debugging engine. The symbols are loaded only if they have not already been loaded. Symbols are searched on the paths set by a call to [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)   
  [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)

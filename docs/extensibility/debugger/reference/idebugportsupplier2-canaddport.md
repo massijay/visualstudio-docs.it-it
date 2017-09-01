@@ -1,46 +1,63 @@
 ---
-title: "IDebugPortSupplier2::CanAddPort | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugPortSupplier2::CanAddPort"
-helpviewer_keywords: 
-  - "IDebugPortSupplier2::CanAddPort"
+title: IDebugPortSupplier2::CanAddPort | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugPortSupplier2::CanAddPort
+helpviewer_keywords:
+- IDebugPortSupplier2::CanAddPort
 ms.assetid: 41f69e0a-e82c-473d-8b7a-0c40fc5730fc
 caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# IDebugPortSupplier2::CanAddPort
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 0616c22b758edae77521f40933fcb940f9d1437c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Verifica che un fornitore di porte possibile aggiungere nuove porte.  
+---
+# <a name="idebugportsupplier2canaddport"></a>IDebugPortSupplier2::CanAddPort
+Verifies that a port supplier can add new ports.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT CanAddPort(   
-   void   
+```cpp  
+HRESULT CanAddPort(   
+   void   
 );  
 ```  
   
-```c#  
+```csharp  
 int CanAddPort();  
 ```  
   
-## Valore restituito  
- Se la porta è possibile aggiungere, restituisce `S_OK`; in caso contrario, restituisce `S_FALSE` per non indicare porte possono essere aggiunti al fornitore di porte.  
+## <a name="return-value"></a>Return Value  
+ If the port can be added, returns `S_OK`; otherwise, returns `S_FALSE` to indicate no ports can be added to this port supplier.  
   
-## Note  
- Chiamare questo metodo prima di chiamare [Aggiungi porta](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) il metodo poiché il metodo indietro crea la porta e aggiungendolo, in grado di eseguire un'operazione che richiede molto tempo.  
+## <a name="remarks"></a>Remarks  
+ Call this method before calling the [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) method since the latter method creates the port as well as adding it, which could be a time-consuming operation.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   
- [Aggiungi porta](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)
+ [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)

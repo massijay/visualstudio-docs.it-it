@@ -38,11 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: e4abacb0286de16c148076572e73043daed4d567
+ms.translationtype: HT
+ms.sourcegitcommit: a3c0f4d3bde8bb03d3766383eba01665e58458be
+ms.openlocfilehash: 4ec9e4acb1cd859ca96498db42c1cab4473c4c83
 ms.contentlocale: it-it
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="signing-page-project-designer"></a>Pagina Firma, Progettazione progetti
@@ -82,7 +82,7 @@ Usare la pagina **Firma** di **Creazione progetti** per firmare i manifesti dell
   
 ## <a name="assembly-signing"></a>Firma degli assembly  
  Casella di controllo **Firma assembly**  
- Selezionare questa casella di controllo per firmare l'assembly e creare un file di chiave con nome sicuro. Per altre informazioni sulla firma dell'assembly tramite **Creazione progetti**, vedere [Procedura: firmare un assembly (Visual Studio)](http://msdn.microsoft.com/en-us/f468a7d3-234c-4353-924d-8e0ae5896564).  
+ Selezionare questa casella di controllo per firmare l'assembly e creare un file di chiave con nome sicuro. Per altre informazioni sulla firma dell'assembly tramite **Creazione progetti**, vedere [Procedura: firmare un assembly (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio).  
   
  Questa opzione usa lo strumento Al.exe fornito da [!INCLUDE[winsdklong](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name).  
   
@@ -109,6 +109,6 @@ Usare la pagina **Firma** di **Creazione progetti** per firmare i manifesti dell
  [Gestione delle firme di assembly e manifesti](../../ide/managing-assembly-and-manifest-signing.md)   
  [Firma con nome sicuro per applicazioni gestite](http://msdn.microsoft.com/en-us/5fef3490-c519-4363-94fd-8b1ad260dab5)   
  [Procedura: firmare manifesti dell'applicazione e di distribuzione](../../ide/how-to-sign-application-and-deployment-manifests.md)   
- [Procedura: firmare un assembly (Visual Studio)](http://msdn.microsoft.com/en-us/f468a7d3-234c-4353-924d-8e0ae5896564)   
+ [Procedura: firmare un assembly (Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)   
  [Procedura: firmare un assembly con un nome sicuro](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)   
- [Assembly con nomi sicuri](http://msdn.microsoft.com/Library/d4a80263-f3e0-4d81-9b61-f0cbeae3797b)
+ [Assembly con nomi sicuri](/dotnet/framework/app-domains/strong-named-assemblies)   

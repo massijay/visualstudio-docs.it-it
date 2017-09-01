@@ -1,56 +1,73 @@
 ---
-title: "CA1301: Evitare tasti di scelta rapida duplicati | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1301"
-  - "AvoidDuplicateAccelerators"
-helpviewer_keywords: 
-  - "CA1301"
-  - "AvoidDuplicateAccelerators"
+title: 'CA1301: Avoid duplicate accelerators | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1301
+- AvoidDuplicateAccelerators
+helpviewer_keywords:
+- CA1301
+- AvoidDuplicateAccelerators
 ms.assetid: 20570a00-864b-459c-a1fa-a6e9db5f1001
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
----
-# CA1301: Evitare tasti di scelta rapida duplicati
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 0e48aa6fd82a218e0184f80b1c4ec90736c46e66
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1301-avoid-duplicate-accelerators"></a>CA1301: Avoid duplicate accelerators
 |||  
 |-|-|  
 |TypeName|AvoidDuplicateAccelerators|  
 |CheckId|CA1301|  
 |Category|Microsoft.Globalization|  
-|Breaking Change|Non sostanziale|  
+|Breaking Change|Non-breaking|  
   
-## Causa  
- Un tipo estende <xref:System.Windows.Forms.Control?displayProperty=fullName> e contiene due o più controlli di primo livello con tasti di scelta identici archiviati in un file di risorse.  
+## <a name="cause"></a>Cause  
+ A type extends <xref:System.Windows.Forms.Control?displayProperty=fullName> and contains two or more top level controls that have identical access keys that are stored in a resource file.  
   
-## Descrizione della regola  
- Un tasto di scelta o tasto di scelta rapida consente l'accesso da tastiera a un controllo mediante ALT.  Quando più controlli presentano tasti di scelta duplicati, il comportamento del tasto di scelta non è ben definito.  È possibile che l'utente non sia in grado di accedere al controllo desiderato utilizzando il tasto di scelta e che attivi un controllo diverso.  
+## <a name="rule-description"></a>Rule Description  
+ An access key, also known as an accelerator, enables keyboard access to a control by using the ALT key. When multiple controls have duplicate access keys, the behavior of the access key is not well defined. The user might not be able to access the intended control by using the access key and a control other than the one that is intended might be enabled.  
   
- L'implementazione attuale di questa regola ignora le voci di menu.  Le voci di menu presenti nello stesso sottomenu non devono, tuttavia, presentare tasti di scelta identici.  
+ The current implementation of this rule ignores menu items. However, menu items in the same submenu should not have identical access keys.  
   
-## Come correggere le violazioni  
- Per correggere una violazione di questa regola, definire tasti di scelta univoci per tutti i controlli.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, define unique access keys for all controls.  
   
-## Esclusione di avvisi  
- Non escludere un avviso da questa regola.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ Do not suppress a warning from this rule.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato un form minimo contenente due controlli con tasti di scelta identici.  I tasti sono archiviati in un file di risorse che non è indicato; i relativi valori, tuttavia, sono contenuti nelle righe impostate come commento di `checkBox.Text`.  Il comportamento dei tasti di scelta rapida duplicati può essere esaminato scambiando le righe di `checkBox.Text` con le parti corrispondenti impostate come commenti.  In questo caso, non verrà generato un avviso dalla regola.  
+## <a name="example"></a>Example  
+ The following example shows a minimal form that contains two controls that have identical access keys. The keys are stored in a resource file, which is not shown; however, their values appear in the commented out `checkBox.Text` lines. The behavior of duplicate accelerators can be examined by exchanging the `checkBox.Text` lines with their commented out counterparts. However, in this case, the example will not generate a warning from the rule.  
   
- [!code-cs[FxCop.Globalization.AvoidDuplicateAccels#1](../code-quality/codesnippet/CSharp/ca1301-avoid-duplicate-accelerators_1.cs)]  
+ [!code-csharp[FxCop.Globalization.AvoidDuplicateAccels#1](../code-quality/codesnippet/CSharp/ca1301-avoid-duplicate-accelerators_1.cs)]  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  <xref:System.Resources.ResourceManager?displayProperty=fullName>   
- [Risorse nelle applicazioni desktop](../Topic/Resources%20in%20Desktop%20Apps.md)
+ [Resources in Desktop Apps](/dotnet/framework/resources/index)

@@ -1,26 +1,46 @@
 ---
-title: "Procedura: Trovare argomenti nell&#39;indice | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Scheda dell'indice [Help Viewer 2.0]"
-  - "Help Viewer 2.0, uso dell'indice"
-  - "Help Viewer 2.0, scheda Indice"
-  - "uso dell'indice [Help Viewer 2.0]"
-  - "applicazione di filtri all'indice [Help Viewer 2.0]"
-  - "Help Viewer 2.0, applicazione di filtri all'indice"
+title: 'Procedura: Trovare argomenti nell''indice | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Index tab [Help Viewer 2.0]
+- Help Viewer 2.0, using the index
+- Help Viewer 2.0, Index tab
+- using the index [Help Viewer 2.0]
+- index filtering [Help Viewer 2.0]
+- Help Viewer 2.0, index filtering
 ms.assetid: cb071e93-f297-459c-a6fa-8ae0dabc42a4
 caps.latest.revision: 15
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 15
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 884530b6c2ebc44f935dd814a39bbf0495764303
+ms.contentlocale: it-it
+ms.lasthandoff: 08/08/2017
+
 ---
 # <a name="how-to-find-topics-in-the-index"></a>Procedura: Trovare argomenti nell'indice
 L'indice contiene un elenco di parole chiave associate agli argomenti del contenuto installato. È possibile che a ogni argomento sia associata più di una parola chiave e che ogni parola chiave sia associata a più di un argomento. Usare questo indice nello stesso modo in cui si consulta l'indice di un libro.  
@@ -42,8 +62,3 @@ L'indice contiene un elenco di parole chiave associate agli argomenti del conten
   
 ## <a name="see-also"></a>Vedere anche  
  [Index Search Tips](../ide/index-search-tips.md) (Suggerimenti per la ricerca nell'indice)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

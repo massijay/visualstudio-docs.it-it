@@ -1,51 +1,68 @@
 ---
-title: "BP_LOCATION_CODE_CONTEXT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BP_LOCATION_CODE_CONTEXT"
-helpviewer_keywords: 
-  - "Struttura BP_LOCATION_CODE_CONTEXT"
+title: BP_LOCATION_CODE_CONTEXT | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- BP_LOCATION_CODE_CONTEXT
+helpviewer_keywords:
+- BP_LOCATION_CODE_CONTEXT structure
 ms.assetid: 37412896-021a-4f73-9bb7-4125502c2e18
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# BP_LOCATION_CODE_CONTEXT
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 7bcbede029ec0bb8cd7a736afab356f63a71536e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Viene descritta la posizione di un punto di interruzione associato direttamente a un indirizzo nel programma sottoposto a debug.  
+---
+# <a name="bplocationcodecontext"></a>BP_LOCATION_CODE_CONTEXT
+Describes the location of a breakpoint that is bound directly to an address in the program being debugged.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-typedef struct _BP_LOCATION_CODE_CONTEXT {   
-   IDebugCodeContext2* pCodeContext;  
+```cpp  
+typedef struct _BP_LOCATION_CODE_CONTEXT {   
+   IDebugCodeContext2* pCodeContext;  
 } BP_LOCATION_CODE_CONTEXT;  
 ```  
   
-## Membri  
+## <a name="members"></a>Members  
  pCodeContext  
- [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) L'oggetto che identifica la posizione del punto di interruzione nel codice.  
+ The [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) object that identifies the position of the breakpoint in the code.  
   
-## Note  
- Questa struttura è un membro [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md) della struttura come parte di unione.  
+## <a name="remarks"></a>Remarks  
+ This structure is a member of the [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) structure as part of a union.  
   
-## Requisiti  
- intestazione: msdbg.h  
+## <a name="requirements"></a>Requirements  
+ Header: msdbg.h  
   
- Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## Vedere anche  
- [Strutture e unioni](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
+## <a name="see-also"></a>See Also  
+ [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+ [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
  [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

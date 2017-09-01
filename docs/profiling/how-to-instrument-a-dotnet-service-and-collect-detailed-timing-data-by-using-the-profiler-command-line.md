@@ -1,117 +1,133 @@
 ---
-title: "Procedura: instrumentare un servizio .NET e raccogliere dati di intervallo dettagliati tramite la riga di comando del profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'How to: Instrument a .NET Service and Collect Detailed Timing Data by Using the Profiler Command Line | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9f73593a-69a7-41b7-a21c-81d3ab0eb8fe
 caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
----
-# Procedura: instrumentare un servizio .NET e raccogliere dati di intervallo dettagliati tramite la riga di comando del profiler
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 7c87490f8e4ad01df8761ebb2afee0b2d3744fe2
+ms.openlocfilehash: c77988c7c443b79211d3183946dfe8382b6cbb1e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/31/2017
 
-In questo argomento viene illustrato come utilizzare gli strumenti da riga di comando disponibili negli strumenti di profilatura di [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] per instrumentare un servizio [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] e raccogliere dati di intervallo dettagliati.  
+---
+# <a name="how-to-instrument-a-net-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line"></a>How to: Instrument a .NET Service and Collect Detailed Timing Data by Using the Profiler Command Line
+This topic describes how to use [!INCLUDE[vsPreShort](../code-quality/includes/vspreshort_md.md)] Profiling Tools command-line tools to instrument a [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] service and collect detailed timing data.  
   
 > [!NOTE]
->  Non è possibile profilare un servizio con il metodo di strumentazione se il servizio non può essere riavviato dopo l'avvio del computer, ad esempio un servizio che viene avviato solo all'avvio del sistema operativo.  
+>  You cannot profile a service with the instrumentation method if the service cannot be restarted after the computer starts, such a service that starts only when the operating system starts.  
 >   
->  Gli strumenti da riga di comando degli strumenti di profilatura sono contenuti nella sottodirectory \\Team Tools\\Performance Tools della directory di installazione di [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)].  Nei computer a 64 bit gli strumenti sono disponibili nelle versioni a 32 e 64 bit.  Per utilizzare gli strumenti da riga di comando del profiler, è necessario aggiungere il percorso degli strumenti alla variabile di ambiente PATH della finestra del prompt dei comandi oppure aggiungerlo al comando stesso.  Per ulteriori informazioni, vedere [Specifica del percorso degli strumenti da riga di comando](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
+>  Command-line tools of the Profiling Tools are located in the \Team Tools\Performance Tools subdirectory of the [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] installation directory. On 64 bit computers, both 64 bit and 32 bit versions of the tools are available. To use the profiler command-line tools, you must add the tools path to the PATH environment variable of the command prompt window or add it to the command itself. For more information, see [Specifying the Path to Command Line Tools](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
 >   
->  Aggiungere dati di interazione a livelli a un'esecuzione del profilo richiede procedure specifiche con gli strumenti di profilatura della riga di comando.  Vedere [Raccolta di dati di interazione tra livelli](../profiling/adding-tier-interaction-data-from-the-command-line.md).  
+>  Adding tier interaction data to a profiling run requires specific procedures with the command line profiling tools. See [Collecting tier interaction data](../profiling/adding-tier-interaction-data-from-the-command-line.md).  
   
- Per raccogliere dati di intervallo dettagliati da un servizio [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] tramite il metodo di strumentazione, utilizzare lo strumento [VSInstr.exe](../profiling/vsinstr.md) per generare una versione instrumentata del componente.  Sostituire quindi la versione non instrumentata del servizio con la versione instrumentata, accertandosi che il servizio sia configurato per l'avvio manuale.  Utilizzare lo strumento [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) per inizializzare le variabili di ambiente di profiling globali e quindi riavviare il computer.  Avviare il profiler.  
+ To collect detailed timing data from a [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] service by using the instrumentation method, you use the [VSInstr.exe](../profiling/vsinstr.md) tool to generate an instrumented version of the component. You then replace the non-instrumented version of the service with the instrumented version, making sure that the service is configured to start manually. You use the [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) tool to initialize the global profiling environment variables and then restart the host computer. You then start the profiler.  
   
- Quando viene avviato il servizio, i dati di intervallo vengono raccolti automaticamente in un file di dati.  È possibile sospendere e riprendere la raccolta dei dati durante la sessione di profilo.  
+ When the service is started, timing data is automatically collected to a data file. You can pause and resume data collection during the profiling session.  
   
- Per terminare una sessione di profilo, disattivare il servizio, quindi arrestare in modo esplicito il profiler.  Nella maggior parte dei casi, è consigliabile cancellare le variabili di ambiente di profilo alla fine di una sessione.  
+ To end a profiling session, you turn off the service and then explicitly shut down the profiler. In most cases, we recommend clearing the profiling environment variables at the end of a session.  
   
-## Avvio dell'applicazione con il profiler  
+## <a name="starting-the-application-with-the-profiler"></a>Starting the Application with the Profiler  
   
-#### Per avviare il profilo di un servizio .NET Framework  
+#### <a name="to-start-profiling-a-net-framework-service"></a>To start profiling a .NET Framework service  
   
-1.  Aprire una finestra del prompt dei comandi.  
+1.  Open a command prompt window.  
   
-2.  Utilizzare lo strumento **VSInstr** per generare una versione instrumentata del file binario del servizio.  
+2.  Use the **VSInstr** tool to generate an instrumented version of the service binary.  
   
-3.  Sostituire il binario originale con la versione instrumentata.  In Gestione controllo servizi di Windows, assicurarsi che il tipo di avvio del servizio sia impostato su Manuale.  
+3.  Replace the original binary with the instrumented version. In the Windows Service Control Manager, make sure that the service Startup Type is set to Manual.  
   
-4.  Inizializzare le variabili di ambiente di profilo [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  Tipo:  
+4.  Initialize the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] profiling environment variables. Type:  
   
-     **VSPerfClrEnv \/globaltraceon**  
+     **VSPerfClrEnv /globaltraceon**  
   
-5.  Riavviare il computer.  
+5.  Restart the computer.  
   
-6.  Aprire una finestra del prompt dei comandi.  
+6.  Open a command prompt window.  
   
-7.  Avviare il profiler.  Tipo:  
+7.  Start the profiler. Type:  
   
-     **VSPerfCmd \/start:trace \/output:** `OutputFile` \[`Options`\]  
+     **VSPerfCmd /start:trace /output:** `OutputFile` [`Options`]  
   
-    -   L'opzione [\/start](../profiling/start.md)**:trace** consente di inizializzare il profiler.  
+    -   The [/start](../profiling/start.md)**:trace** option initializes the profiler.  
   
-    -   L'opzione [\/output](../profiling/output.md)**:**`OutputFile` è obbligatoria con **\/start**.  `OutputFile` specifica il nome e il percorso del file dei dati di profilo \(vsp\).  
+    -   The [/output](../profiling/output.md)**:**`OutputFile` option is required with **/start**. `OutputFile` specifies the name and location of the profiling data (.vsp) file.  
   
-     È possibile utilizzare qualsiasi opzione riportata di seguito con l'opzione **\/start:trace**.  
+     You can use any one of the following options with the **/start:trace** option.  
   
     > [!NOTE]
-    >  Le opzioni **\/user** e **\/crosssession** sono in genere obbligatorie per i servizi di profilo.  
+    >  The **/user** and **/crosssession** options are usually required for profiling services.  
   
-    |Opzione|Descrizione|  
-    |-------------|-----------------|  
-    |[\/user](../profiling/user-vsperfcmd.md) **:**\[`Domain`**\\**\]`UserName`|Specifica il dominio e il nome utente dell'account proprietario del processo profilato.  Questa opzione è obbligatoria solo se il processo è in esecuzione come utente diverso dall'utente connesso.  Il proprietario del processo è elencato nella colonna Nome utente della scheda Processi di Gestione attività di Windows.|  
-    |[\/crosssession](../profiling/crosssession.md)|Abilita il profilo dei processi in altre sessioni.  Questa opzione è obbligatoria se l'applicazione è in esecuzione in una sessione diversa.  L'ID di sessione è elencato nella colonna ID sessione della scheda Processi di Gestione attività di Windows.  È possibile specificare **\/CS** come abbreviazione per **\/crosssession**.|  
-    |[\/waitstart](../profiling/waitstart.md)\[**:**`Interval`\]|Specifica il numero di secondi di attesa prima che il profiler venga inizializzato prima che venga restituito un errore.  Se `Interval` non è specificato, il profiler attenderà un periodo di tempo indefinito.  Per impostazione predefinita, **\/start** viene immediatamente restituito.|  
-    |[\/globaloff](../profiling/globalon-and-globaloff.md)|Per avviare il profiler con la raccolta dei dati in pausa, aggiungere l'opzione **\/globaloff** alla riga di comando **\/start**.  Utilizzare **\/globalon** per riprendere il profilo.|  
-    |[\/counter](../profiling/counter.md) **:** `Config`|Raccoglie informazioni dal contatore delle prestazioni del processore specificato in Config.  Le informazioni del contatore vengono aggiunte ai dati raccolti a ogni evento di profilo.|  
-    |[\/wincounter](../profiling/wincounter.md) **:** `WinCounterPath`|Specifica un contatore delle prestazioni Windows di cui raccogliere i dati durante il profilo.|  
-    |[\/automark](../profiling/automark.md) **:** `Interval`|Utilizzare unicamente con **\/wincounter**.  Specifica il numero di millisecondi tra gli eventi di raccolta dati del contatore delle prestazioni Windows.  Il valore predefinito è 500 ms.|  
-    |[\/events](../profiling/events-vsperfcmd.md) **:** `Config`|Specifica un evento Traccia eventi per Windows \(ETW\) di cui raccogliere i dati durante il profilo.  Gli eventi ETW vengono raccolti in un file separato con estensione etl.|  
+    |Option|Description|  
+    |------------|-----------------|  
+    |[/user](../profiling/user-vsperfcmd.md) **:**[`Domain`**\\**]`UserName`|Specifies the domain and user name of the account that owns the profiled process. This option is required only if the process is running as a user other than the logged on user. The process owner is listed in the User Name column on the Processes tab of Windows Task Manager.|  
+    |[/crosssession](../profiling/crosssession.md)|Enables profiling of processes in other sessions. This option is required if the application is running in a different session. The session id is listed in the Session ID column on the Processes tab of Windows Task Manager. **/CS** can be specified as an abbreviation for **/crosssession**.|  
+    |[/waitstart](../profiling/waitstart.md)[**:**`Interval`]|Specifies the number of seconds to wait for the profiler to initialize before it returns an error. If `Interval` is not specified, the profiler waits indefinitely. By default, **/start** returns immediately.|  
+    |[/globaloff](../profiling/globalon-and-globaloff.md)|To start the profiler with data collection paused, add the **/globaloff** option to the **/start** command line. Use **/globalon** to resume profiling.|  
+    |[/counter](../profiling/counter.md) **:** `Config`|Collects information from the processor performance counter specified in Config. Counter information is added to the data collected at each profiling event.|  
+    |[/wincounter](../profiling/wincounter.md) **:** `WinCounterPath`|Specifies a Windows performance counter to be collected during profiling.|  
+    |[/automark](../profiling/automark.md) **:** `Interval`|Use with **/wincounter** only. Specifies the number of milliseconds between Windows performance counter collection events. Default is 500 ms.|  
+    |[/events](../profiling/events-vsperfcmd.md) **:** `Config`|Specifies an Event Tracing for Windows (ETW) event to be collected during profiling. ETW events are collected in a separate (.etl) file.|  
   
-8.  Avviare il servizio da Gestione controllo servizi di Windows.  
+8.  Start the service from Windows Service Control Manager.  
   
-## Controllo della raccolta di dati  
- Quando il servizio è in esecuzione, è possibile utilizzare le opzioni di **VSPerfCmd.exe** per avviare e interrompere la scrittura dei dati nel file di dati del profiler.  Controllando la raccolta dei dati, è possibile raccogliere dati per una parte specifica dell'esecuzione del programma, ad esempio l'avvio o l'arresto del servizio.  
+## <a name="controlling-data-collection"></a>Controlling Data Collection  
+ When the service is running, you can use **VSPerfCmd.exe** options to start and stop the writing of data to the profiler data file. Controlling data collection enables you to collect data for a specific part of program execution, such as starting or shutting down the service.  
   
-#### Per avviare e interrompere la raccolta dei dati  
+#### <a name="to-start-and-stop-data-collection"></a>To start and stop data collection  
   
--   Le coppie seguenti di opzioni di **VSPerfCmd** avviano e interrompono la raccolta dei dati.  Specificare ogni opzione in una riga di comando separata.  È possibile attivare e disattivare più volte la raccolta dei dati.  
+-   The following pairs of **VSPerfCmd** options start and stop data collection. Specify each option on a separate command line. You can turn data collection on and off multiple times.  
   
-    |Opzione|Descrizione|  
-    |-------------|-----------------|  
-    |[\/globalon \/globaloff](../profiling/globalon-and-globaloff.md)|Avvia \(**\/globalon**\) o interrompe \(**\/globaloff**\) la raccolta dei dati per tutti i processi.|  
-    |[\/processon](../profiling/processon-and-processoff.md) **:** `PID` [\/processoff](../profiling/processon-and-processoff.md)**:**`PID`|Avvia \(**\/processon**\) o interrompe \(**\/processoff**\) la raccolta dei dati per il processo specificato dall'ID processo \(`PID`\).|  
-    |[\/threadon](../profiling/threadon-and-threadoff.md) **:** `TID` [\/threadoff](../profiling/threadon-and-threadoff.md)**:**`TID`|Avvia \(**\/threadon**\) o interrompe \(**\/threadoff**\) la raccolta dei dati per il thread specificato dall'ID thread \(`TID`\).|  
+    |Option|Description|  
+    |------------|-----------------|  
+    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Starts (**/globalon**) or stops (**/globaloff**) data collection for all processes.|  
+    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|Starts (**/processon**) or stops (**/processoff**) data collection for the process specified by the process ID (`PID`).|  
+    |[/threadon](../profiling/threadon-and-threadoff.md) **:** `TID` [/threadoff](../profiling/threadon-and-threadoff.md) **:** `TID`|Starts (**/threadon**) or stops (**/threadoff**) data collection for the thread specified by the thread ID (`TID`).|  
   
-## Fine della sessione di profilo  
- Per terminare una sessione di profilo, interrompere il servizio che esegue il componente instrumentato, quindi chiamare l'opzione **VSPerfCmd** [\/shutdown](../profiling/shutdown.md) per disattivare il profiler e chiudere il file dei dati di profilo.  Il comando **VSPerfClrEnv \/globaloff** cancella le variabili di ambiente di profilo.  
+## <a name="ending-the-profiling-session"></a>Ending the Profiling Session  
+ To end a profiling session, stop the service that is running the instrumented component, and then call the **VSPerfCmd** [/shutdown](../profiling/shutdown.md) option to turn the profiler off and close the profiling data file. The **VSPerfClrEnv /globaloff** command clears the profiling environment variables.  
   
- È necessario riavviare il computer per applicare le nuove impostazioni di ambiente.  
+ You must restart the computer for the new environment settings to be applied.  
   
-#### Per terminare una sessione di profilo  
+#### <a name="to-end-a-profiling-session"></a>To end a profiling session  
   
-1.  Arrestare il servizio da Gestione controllo servizi.  
+1.  Stop the service from Service Control Manager.  
   
-2.  Arrestare il profiler.  Tipo:  
+2.  Shut down the profiler. Type:  
   
-     **VSPerfCmd \/shutdown**  
+     **VSPerfCmd /shutdown**  
   
-3.  Dopo avere completato tutte le attività di profilo, cancellare le variabili di ambiente di profilo.  Tipo:  
+3.  When you have completed all profiling, clear the profiling environment variables. Type:  
   
-     **VSPerfClrEnv \/globaloff**  
+     **VSPerfClrEnv /globaloff**  
   
-4.  Sostituire il modulo instrumentato con l'originale.  Se necessario, riconfigurare il tipo di avvio del servizio.  
+4.  Replace the instrumented module with the original. If necessary, reconfigure the Startup Type of the service.  
   
-5.  Riavviare il computer.  
+5.  Restart the computer.  
   
-## Vedere anche  
- [Profilatura di servizi](../profiling/command-line-profiling-of-services.md)   
- [Visualizzazioni dei dati del metodo di strumentazione](../profiling/instrumentation-method-data-views.md)
+## <a name="see-also"></a>See Also  
+ [Profiling Services](../profiling/command-line-profiling-of-services.md)   
+ [Instrumentation Method Data Views](../profiling/instrumentation-method-data-views.md)

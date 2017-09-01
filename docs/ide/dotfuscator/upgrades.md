@@ -47,22 +47,19 @@ ms.lasthandoff: 06/23/2017
 
 ---
 
-# Aggiornare Dotfuscator Community Edition (CE)
-<a id="upgrade-dotfuscator-community-edition-ce" class="xliff"></a>
+# <a name="upgrade-dotfuscator-community-edition-ce"></a>Aggiornare Dotfuscator Community Edition (CE)
 
 Dotfuscator Community Edition (Dotfuscator CE) mette numerose funzionalità di protezione delle applicazioni e protezione avanzata a disposizione immediata di tutti gli sviluppatori che usano Microsoft Visual Studio.
 Gli utenti che eseguono l'aggiornamento della loro versione di Dotfuscator possono tuttavia sfruttare anche altre funzionalità.
 
-## Registrazione di Dotfuscator CE
-<a id="registering-dotfuscator-ce" class="xliff"></a>
+## <a name="registering-dotfuscator-ce"></a>Registrazione di Dotfuscator CE
 
 Gli utenti registrati di Dotfuscator CE ottengono l'accesso a funzionalità aggiuntive, ad esempio il [supporto della riga di comando][cli], che rendono più facile l'integrazione di Dotfuscator CE nel processo di compilazione automatico.
 
 La registrazione è veloce, semplice e gratuita.
 Per registrare Dotfuscator CE, vedere [la sezione relativa alla registrazione di Dotfuscator CE nella pagina introduttiva del manuale dell'utente completo di Dotfuscator CE][register-ce].
 
-## Dotfuscator Professional
-<a id="dotfuscator-professional" class="xliff"></a>
+## <a name="dotfuscator-professional"></a>Dotfuscator Professional
 
 Mentre Dotfuscator Community Edition offre un livello base di protezione, **_PreEmptive Protection - Dotfuscator_ Professional Edition** include trasformazioni di offuscamento e funzionalità di protezione avanzate.
 Sono inclusi:
@@ -95,8 +92,7 @@ Dotfuscator Professional offre anche una migliore integrazione con Visual Studio
 Per altre informazioni sulle funzionalità di protezione avanzata delle applicazioni di Dotfuscator Professional, visitare la [pagina della panoramica di Dotfuscator] [ product-about] e [il confronto con Community Edition][product-compare].
 [Le versioni di valutazione completamente supportate sono disponibili su richiesta sul sito preemptive.com][eval].
 
-## Vedere anche
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Vedere anche
 
 [Dotfuscator Community Edition User Guide][full] (Guida dell'utente di Dotfuscator CE)
 
@@ -108,8 +104,8 @@ Per altre informazioni sulle funzionalità di protezione avanzata delle applicaz
 [linking]: https://www.preemptive.com/products/dotfuscator/features#linking
 [pruning]: https://www.preemptive.com/products/dotfuscator/features#pruning
 
-[check-actions]: https://www.preemptive.com/images/stories/Dotfuscator/webframe.html#Check%20Actions.html
-[features]: https://www.preemptive.com/images/stories/Dotfuscator/webframe.html#Feature_Usage_Tracking_and_the_Feature_Attribute.html
+[check-actions]: https://www.preemptive.com/dotfuscator/pro/userguide/en/protection_checks_overview.html#actions
+[features]: https://www.preemptive.com/dotfuscator/pro/userguide/en/instrumentation_features.html
 
 [net-obfuscator]: https://www.preemptive.com/products/dotfuscator/overview
 [eval]: https://www.preemptive.com/eval-request

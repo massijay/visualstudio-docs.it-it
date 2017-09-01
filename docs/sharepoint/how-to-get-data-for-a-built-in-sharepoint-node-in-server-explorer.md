@@ -1,42 +1,46 @@
 ---
-title: "How to: Get Data for a Built-In SharePoint Node in Server Explorer"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "SharePoint Connections [SharePoint development in Visual Studio], extending a node"
-  - "SharePoint development in Visual Studio, extending SharePoint Connections node in Server Explorer"
+title: 'How to: Get Data for a Built-In SharePoint Node in Server Explorer | Microsoft Docs'
+ms.custom: 
+ms.date: 02/02/2017
+ms.prod: visual-studio-dev14
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- SharePoint Connections [SharePoint development in Visual Studio], extending a node
+- SharePoint development in Visual Studio, extending SharePoint Connections node in Server Explorer
 ms.assetid: 86d04e0a-c114-427e-9945-da5fa339fda4
 caps.latest.revision: 7
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 6
+author: kempb
+ms.author: kempb
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 962250192868c710cfbe40e69b44eeb348a696f9
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
+
 ---
-# How to: Get Data for a Built-In SharePoint Node in Server Explorer
-  Per ogni nodo SharePoint incorporato in **Esplora server**, è possibile ottenere dati per il componente SharePoint sottostante rappresentato dal nodo.  Per ulteriori informazioni, vedere [Extending the SharePoint Connections Node in Server Explorer](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).  
+# <a name="how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer"></a>How to: Get Data for a Built-In SharePoint Node in Server Explorer
+  For each built-in SharePoint node in **Server Explorer**, you can get data for the underlying SharePoint component that the node represents. For more information, see [Extending the SharePoint Connections Node in Server Explorer](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).  
   
-## Esempio  
- Nell'esempio di codice seguente viene illustrato come ottenere dati per l'elenco SharePoint sottostante rappresentato da un nodo di elenco in **Esplora server**.  Per impostazione predefinita, i nodi di elenco presentano la voce di menu di scelta rapida **Visualizza nel browser** che è possibile selezionare per aprire gli elenchi in un browser Web.  In questo esempio vengono estesi nodi di elenco mediante l'aggiunta della voce di menu di scelta rapida **Visualizza in Visual Studio** che consente di aprire gli elenchi direttamente in Visual Studio.  Il codice accede ai dati di elenco per il nodo in modo da ottenere l'URL dell'elenco da aprire in Visual Studio.  
+## <a name="example"></a>Example  
+ The following code example demonstrates how to get data for the underlying SharePoint list that a list node represents in **Server Explorer**. By default, list nodes have a **View in Browser** context menu item that you can click to open the lists in a Web browser. This example extends list nodes by adding a **View in Visual Studio** context menu item that opens the lists directly in Visual Studio. The code accesses the list data for the node to get the URL of the list to open in Visual Studio.  
   
- [!code-csharp[SPExtensibility.ProjectSystemExtension.General#10](../snippets/csharp/VS_Snippets_OfficeSP/spextensibility.projectsystemextension.general/cs/extension/serverexplorerextensionnodeinfo.cs#10)]
- [!code-vb[SPExtensibility.ProjectSystemExtension.General#10](../snippets/visualbasic/VS_Snippets_OfficeSP/spextensibility.projectsystemextension.general/vb/extension/serverexplorerextensionnodeinfo.vb#10)]  
+ [!code-vb[SPExtensibility.ProjectSystemExtension.General#10](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextensionnodeinfo.vb#10)] [!code-csharp[SPExtensibility.ProjectSystemExtension.General#10](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextensionnodeinfo.cs#10)]  
   
- In questo esempio viene utilizzato il servizio del progetto SharePoint per ottenere l'oggetto <xref:EnvDTE.DTE> utilizzato per aprire gli elenchi in Visual Studio.  Per ulteriori informazioni sul servizio del progetto SharePoint, vedere [Using the SharePoint Project Service](../sharepoint/using-the-sharepoint-project-service.md).  
+ This example uses the SharePoint project service to obtain the <xref:EnvDTE.DTE> object that is used to open lists in Visual Studio. For more information about the SharePoint project service, see [Using the SharePoint Project Service](../sharepoint/using-the-sharepoint-project-service.md).  
   
- Per ulteriori informazioni sulle attività di base per creare un'estensione per un nodo SharePoint, vedere [How to: Extend a SharePoint Node in Server Explorer](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).  
+ For more information about the basic tasks to create an extension for a SharePoint node, see [How to: Extend a SharePoint Node in Server Explorer](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).  
   
-## Compilazione del codice  
- In questo esempio sono richiesti riferimenti agli assembly seguenti:  
+## <a name="compiling-the-code"></a>Compiling the Code  
+ This example requires references to the following assemblies:  
   
 -   EnvDTE  
   
@@ -46,10 +50,10 @@ caps.handback.revision: 6
   
 -   System.ComponentModel.Composition  
   
-## Distribuzione dell'estensione  
- Per distribuire l'estensione di **Esplora server**, creare un pacchetto [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Extension \(VSIX\) per l'assembly e qualsiasi altro file che si desidera distribuire con l'estensione.  Per ulteriori informazioni, vedere [Deploying Extensions for the SharePoint Tools in Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).  
+## <a name="deploying-the-extension"></a>Deploying the Extension  
+ To deploy the **Server Explorer** extension, create a [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] extension (VSIX) package for the assembly and any other files that you want to distribute with the extension. For more information, see [Deploying Extensions for the SharePoint Tools in Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [Extending the SharePoint Connections Node in Server Explorer](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [How to: Extend a SharePoint Node in Server Explorer](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)   
  [Using the SharePoint Project Service](../sharepoint/using-the-sharepoint-project-service.md)   

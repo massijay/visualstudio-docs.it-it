@@ -1,12 +1,13 @@
 ---
 title: Modifica del codice con R Tools per Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 4/28/2017
+ms.date: 6/29/2017
 ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-r
+ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a198ccc3-5506-48e7-b3b2-9399661b80d5
@@ -14,25 +15,11 @@ caps.latest.revision: 1
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a873df77756e5a957d327049566c8e0db1f3a8a
-ms.openlocfilehash: e8b42484d471d4deac0eabcd4c55e09297d0873f
+ms.translationtype: HT
+ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
+ms.openlocfilehash: 261cced8583b751d74701a8903a10a4584928940
 ms.contentlocale: it-it
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 
@@ -57,15 +44,15 @@ Vedere anche gli argomenti su [IntelliSense](code-intellisense.md), sui [frammen
 
 Oltre ad applicare un colore alle diverse parti del codice, ad esempio stringhe, commenti e parole chiave, RTVS evidenzia e abilita anche i collegamenti nei commenti:
 
-![Colorazione della sintassi per il codice R](~/rtvs/media/editing-syntax-colors.png)
+![Colorazione della sintassi per il codice R](media/editing-syntax-colors.png)
 
 Per personalizzare i tipi di carattere e alcuni colori di evidenziazione, selezionare il comando **Strumenti > Opzioni**, passare ad **Ambiente > Tipi di carattere e colori** e modificare le impostazioni per gli elementi correlati a R nella casella **Elementi visualizzati:**:
 
-![Tipi di carattere e opzioni di colore per il codice R](~/rtvs/media/editing-syntax-colors-options.png)
+![Tipi di carattere e opzioni di colore per il codice R](media/editing-syntax-colors-options.png)
 
 Visual Studio sottolinea anche gli errori di sintassi nell'editor:
 
-![Evidenziazione degli errori di sintassi nel codice R](~/rtvs/media/editing-syntax-error.png)
+![Evidenziazione degli errori di sintassi nel codice R](media/editing-syntax-error.png)
 
 Per modificare questo comportamento, vedere l'impostazione **Avanzate > Controllo della sintassi** nelle [opzioni dell'editor](#editor-options).
 
@@ -73,37 +60,37 @@ Per modificare questo comportamento, vedere l'impostazione **Avanzate > Controll
 
 Durante la digitazione del codice, RTVS offre il completamento automatico come descritto nella pagina su [IntelliSense](code-intellisense.md). Esegue anche la formattazione automatica, completando ad esempio il codice con graffe e parentesi: 
 
-![Animazione della formattazione inline](~/rtvs/media/editing-inline-formatting.gif)
+![Animazione della formattazione inline](media/editing-inline-formatting.gif)
 
 Durante la digitazione di chiamate a funzioni con molti parametri, è spesso utile poter allineare i parametri per rendere il codice più leggibile. RTVS ricorda il rientro impostato per i parametri e lo applica automaticamente alle righe successive:
 
-![Animazione del rientro automatico](~/rtvs/media/editing-auto-indentation.gif)
+![Animazione del rientro automatico](media/editing-auto-indentation.gif)
 
-Per modificare questo comportamento, vedere le [opzioni dell'editor](#editor-options) descritte di seguito per il gruppo **Tabulazioni**.
+Per modificare questo comportamento, vedere le [opzioni dell'editor](#editor-options) per il gruppo **Tabulazioni**.
 
 Le aree di codice comprimibili consentono di nascondere temporaneamente parte del codice nell'editor. Visual Studio crea automaticamente diverse aree in caso di istruzioni su più righe, a meno che l'opzione **Avanzate > Struttura > Struttura del codice**  sia disattivata.
 
 Per creare un'area personalizzata, racchiudere il codice interessato con commenti che terminano con `---`. Il piccolo controllo + /- a sinistra del codice consente di espandere e comprimere le aree:
 
-![Creazione di un'area comprimibile con commenti](~/rtvs/media/editing-collapsible-regions.gif)
+![Creazione di un'area comprimibile con commenti](media/editing-collapsible-regions.gif)
  
 Per impostazione predefinita, Visual Studio inserisce gli spazi quando si preme TAB. Anche in questo caso è possibile modificare tale comportamento, seguendo le istruzioni descritte in [Opzioni, Editor di testo, Tutti i linguaggi](../ide/reference/options-text-editor-all-languages.md).
 
 ## <a name="code-navigation"></a>Esplorazione del codice
 
-Grazie all'esplorazione del codice è possibile accedere rapidamente al codice sorgente del programma R e alle sue librerie. Queste funzionalità di esplorazione consentono di restare nel codice che si sta elaborando anziché dovere cercare ed esplorare manualmente il codice interessato.
+Grazie all'esplorazione del codice è possibile accedere rapidamente al codice sorgente del programma R e alle sue librerie. Queste funzionalità consentono di restare nel flusso di lavoro senza dover eseguire manualmente ricerche nel codice.
 
-**Vai a definizione** consente di passare rapidamente alla definizione di funzione o visualizzare un editor inline ridotto per leggere il codice sorgente di una funzione di libreria. Fare clic con il tasto destro del mouse sulla funzione interessata e selezionare **Vai a definizione** oppure posizionare il cursore nella funzione e premere F12.
+**Vai a definizione** consente di passare rapidamente a una definizione di funzione o di visualizzare un editor inline ridotto per leggere il codice sorgente di una funzione di libreria. Fare clic con il tasto destro del mouse sulla funzione interessata e selezionare **Vai a definizione** oppure posizionare il cursore nella funzione e premere F12.
 
-Si aprirà una nuova finestra dell'editor contenente il codice sorgente per la funzione e il cursore sarà posizionato in modo appropriato all'inizio della definizione di funzione.
+Questo comando apre una nuova finestra dell'editor contenente il codice sorgente per la funzione. Per praticità, il cursore viene posizionato all'inizio della definizione della funzione.
 
 **Visualizza definizione**, se richiamata dal menu di scelta rapida o con ALT+F12, inserisce un'area scorrevole di sola lettura contenente il codice sorgente della funzione sotto la chiamata di funzione:
 
-![Animazione per Visualizza definizione](~/rtvs/media/editing-peek-definition.gif)
+![Animazione per Visualizza definizione](media/editing-peek-definition.gif)
 
 ## <a name="sending-code-to-the-interactive-window"></a>Invio di codice alla finestra interattiva
 
-Molti sviluppatori preferiscono scrivere il codice nell'editor e inviarlo alla [finestra interattiva](interactive-repl.md) per eseguire immediatamente il test, noto anche come ciclo Read–Eval–Print o REPL. Questa operazione viene eseguita nell'editor di R premendo CTRL+INVIO per la riga di codice. Il cursore passa poi alla riga successiva. Con CTRL+INVIO è quindi possibile esplorare il codice dall'editor.
+Molti sviluppatori preferiscono scrivere il codice nell'editor e inviarlo alla [finestra interattiva](interactive-repl.md) per eseguire immediatamente il test, noto anche come ciclo Read–Eval–Print o REPL. Premendo CTRL+INVIO nell'editor di R, la riga di codice corrente viene inviata alla finestra interattiva e il cursore passa poi alla riga successiva. Con CTRL+INVIO è quindi possibile esplorare il codice dall'editor.
 
 È anche possibile selezionare il codice e premere CTRL+INVIO per applicare tale comportamento all'intera selezione. In alternativa, fare clic con il pulsante destro del mouse sul codice selezionato e scegliere **Esegui in interattivo**.
 
@@ -115,7 +102,7 @@ La formattazione automatica di Visual Studio consente di usare la formattazione 
 f<-function  (a){  return(a + 1) }
 ```
 
-Applicando la formattazione, il codice sarà pulito:
+Applicando la formattazione, il codice viene pulito:
 
 ```R
 f <- function(a) { return(a + 1) }
@@ -123,15 +110,15 @@ f <- function(a) { return(a + 1) }
 
 Per modificare la formattazione dell'intero file, selezionare **Modifica > Avanzate > Formatta documento** (CTRL+E,D).
 
-La formattazione automatica è un'operazione distinta che può essere annullata. Ad esempio, se si incolla il codice nell'editor e si applica la formattazione, selezionando **Modifica > Annulla** o premendo CTRL+Z una volta la formattazione viene annullata. Selezionando di nuovo Annulla, viene invertita l'operazione d'incollamento.
+La formattazione automatica è un'operazione distinta che può essere annullata. Ad esempio, se si incolla il codice nell'editor e si applica la formattazione, selezionando **Modifica > Annulla** o premendo CTRL+Z una volta, la formattazione viene annullata. Selezionando di nuovo Annulla, viene invertita l'operazione d'incollamento.
  
-Le opzioni di formattazione, tra cui la disabilitazione della formattazione, vengono impostate selezionando **Strumenti > Opzioni** nella scheda **Editor di testo > R > Avanzate**, alla quale si accede direttamente dal comando **R Tools > Opzioni editor...** oppure facendo clic con il pulsante destro del mouse nell'editor e selezionano **Opzioni di formattazione...**. Vedere le [opzioni dell'editor](#editor-options) riportate di seguito per informazioni dettagliate.
+Le opzioni di formattazione, inclusa la disattivazione della formattazione, vengono impostate usando **Strumenti > Opzioni** nella scheda **Editor di testo > R > Avanzate**. È possibile passare direttamente a questa pagina usando il comando **R Tools > Opzioni editor** o facendo clic nell'editor e selezionando **Opzioni di formattazione**. Vedere la sezione relativa alle [opzioni dell'editor](#editor-options) per informazioni dettagliate.
  
 ## <a name="inserting-roxygen-comments"></a>Inserimento di commenti Roxygen
 
 RTVS offre un collegamento per la generazione di commenti [Roxygen](http://roxygen.org/) che usa i nomi dei parametri di una funzione. È sufficiente digitare `###` in una riga vuota sopra la definizione della funzione:
 
-![Animazione dell'inserimento di un commento Roxygen](~/rtvs/media/editing-roxygen-comments.gif)
+![Animazione dell'inserimento di un commento Roxygen](media/editing-roxygen-comments.gif)
 
 ## <a name="editor-options"></a>Opzioni dell'editor
 

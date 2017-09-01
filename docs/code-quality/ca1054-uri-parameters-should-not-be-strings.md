@@ -1,29 +1,46 @@
 ---
-title: "CA1054: I parametri URI non devono essere stringhe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA1054"
-  - "UriParametersShouldNotBeStrings"
-helpviewer_keywords: 
-  - "CA1054"
-  - "UriParametersShouldNotBeStrings"
+title: 'CA1054: URI parameters should not be strings | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-devops-test
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA1054
+- UriParametersShouldNotBeStrings
+helpviewer_keywords:
+- CA1054
+- UriParametersShouldNotBeStrings
 ms.assetid: 8e99d72b-a658-47a7-8dd5-9784ce2c30b8
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 14
----
-# CA1054: I parametri URI non devono essere stringhe
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+manager: wpickett
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 25d3c92f117d86193dad1230950f308ec5d2394b
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
+---
+# <a name="ca1054-uri-parameters-should-not-be-strings"></a>CA1054: URI parameters should not be strings
 |||  
 |-|-|  
 |TypeName|UriParametersShouldNotBeStrings|  
@@ -31,30 +48,28 @@ caps.handback.revision: 14
 |Category|Microsoft.Design|  
 |Breaking Change|Breaking|  
   
-## Causa  
- Un tipo dichiara un metodo con un parametro di stringa il cui nome contiene "uri", "Uri", "urn", "Urn", "url" o "Url" e tale tipo non dichiara un overload corrispondente che accetta un parametro <xref:System.Uri?displayProperty=fullName>.  
+## <a name="cause"></a>Cause  
+ A type declares a method with a string parameter whose name contains "uri", "Uri", "urn", "Urn", "url", or "Url" and the type does not declare a corresponding overload that takes a <xref:System.Uri?displayProperty=fullName> parameter.  
   
-## Descrizione della regola  
- La regola suddivide il nome del parametro in token in base alla convenzione di denominazione Camel e controlla che ogni token sia uguale a "uri", "Uri", "urn", "Urn", "url" o "Url".  Se è presente una corrispondenza, la regola presuppone che il parametro rappresenti un URI \(Uniform Resource Identifier\).  Una rappresentazione in forma di stringa di un URI è soggetta a errori di analisi e codifica e può creare vulnerabilità nella sicurezza.  Se un metodo accetta una rappresentazione di stringa di un URI, deve essere fornito un overload corrispondente che accetti un'istanza della classe <xref:System.Uri>, la quale fornisce questi servizi in modo sicuro e protetto.  
+## <a name="rule-description"></a>Rule Description  
+ This rule splits the parameter name into tokens based on the camel casing convention and checks whether each token equals "uri", "Uri", "urn", "Urn", "url", or "Url". If there is a match, the rule assumes that the parameter represents a uniform resource identifier (URI). A string representation of a URI is prone to parsing and encoding errors, and can lead to security vulnerabilities. If a method takes a string representation of a URI, a corresponding overload should be provided that takes an instance of the <xref:System.Uri> class, which provides these services in a safe and secure manner.  
   
-## Come correggere le violazioni  
- Per correggere una violazione di questa regola, modificare il parametro in un tipo <xref:System.Uri>. Si tratta di una modifica sostanziale.  In alternativa, fornire un overload del metodo che accetta un parametro <xref:System.Uri>. Si tratta di una modifica non sostanziale.  
+## <a name="how-to-fix-violations"></a>How to Fix Violations  
+ To fix a violation of this rule, change the parameter to a <xref:System.Uri> type; this is a breaking change. Alternately, provide an overload of the method which takes a <xref:System.Uri> parameter; this is a nonbreaking change.  
   
-## Esclusione di avvisi  
- L'esclusione di un avviso da questa regola è sicura se il parametro non rappresenta un URI.  
+## <a name="when-to-suppress-warnings"></a>When to Suppress Warnings  
+ It is safe to suppress a warning from this rule if the parameter does not represent a URI.  
   
-## Esempio  
- Nell'esempio riportato di seguito vengono illustrati un tipo `ErrorProne` che viola la regola e un tipo `SaferWay` che la soddisfa.  
+## <a name="example"></a>Example  
+ The following example shows a type, `ErrorProne`, that violates this rule, and a type, `SaferWay`, that satisfies the rule.  
   
- [!code-cs[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CSharp/ca1054-uri-parameters-should-not-be-strings_1.cs)]
- [!code-vb[FxCop.Design.UriNotString#1](../code-quality/codesnippet/VisualBasic/ca1054-uri-parameters-should-not-be-strings_1.vb)]
- [!code-cpp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CPP/ca1054-uri-parameters-should-not-be-strings_1.cpp)]  
+ [!code-csharp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CSharp/ca1054-uri-parameters-should-not-be-strings_1.cs)] [!code-vb[FxCop.Design.UriNotString#1](../code-quality/codesnippet/VisualBasic/ca1054-uri-parameters-should-not-be-strings_1.vb)] [!code-cpp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CPP/ca1054-uri-parameters-should-not-be-strings_1.cpp)]  
   
-## Regole correlate  
- [CA1056: Le proprietà URI non devono essere stringhe](../code-quality/ca1056-uri-properties-should-not-be-strings.md)  
+## <a name="related-rules"></a>Related Rules  
+ [CA1056: URI properties should not be strings](../code-quality/ca1056-uri-properties-should-not-be-strings.md)  
   
- [CA1055: I valori restituiti URI non devono essere stringhe](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)  
+ [CA1055: URI return values should not be strings](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)  
   
- [CA2234: Passare oggetti System.Uri invece di stringhe](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md)  
+ [CA2234: Pass System.Uri objects instead of strings](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md)  
   
- [CA1057: Gli overload URI dei valori di stringa chiamano gli overload System.Uri](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)
+ [CA1057: String URI overloads call System.Uri overloads](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)

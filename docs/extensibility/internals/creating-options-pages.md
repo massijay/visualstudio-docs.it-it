@@ -1,5 +1,5 @@
 ---
-title: Creare le pagine delle opzioni | Documenti di Microsoft
+title: Creating Options Pages | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,76 +29,74 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 56a51aa0a2232ff149e1959842fced1dc26e7c1b
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
+ms.openlocfilehash: 6ed61dbc745b00f5f6f0beeba5aa38c3d316f98f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="creating-options-pages"></a>Creazione di pagine di opzioni
-Nel [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] framework pacchetto gestito, le classi derivate da <xref:Microsoft.VisualStudio.Shell.DialogPage>estendere il [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE aggiungendo **opzioni** pagine sotto il **strumenti** menu.</xref:Microsoft.VisualStudio.Shell.DialogPage>  
+# <a name="creating-options-pages"></a>Creating Options Pages
+In the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] managed package framework, classes derived from <xref:Microsoft.VisualStudio.Shell.DialogPage> extend the [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE by adding **Options** pages under the **Tools** menu.  
   
- Un oggetto che implementa un determinato **opzione strumenti** pagina è associata a VSPackage specifico per il <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>oggetto.</xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>  
+ An object implementing a given **Tools Option** page is associated with specific VSPackages by the <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> object.  
   
- Poiché l'ambiente di un'istanza dell'oggetto che implementa un particolare **ToolsOptions** pagina quando è visualizzata la pagina specifica dall'IDE:  
+ Because the environment instantiates the object implementing a particular **Tools Options** page when that particular page is displayed by the IDE:  
   
--   Oggetto **opzione strumenti** pagina deve essere implementata nel proprio oggetto e non per l'oggetto che implementa un VSPackage.  
+-   A **Tools Option** page should be implemented on its own object, and not on the object implementing a VSPackage.  
   
--   Un oggetto non può implementare più **ToolsOptions** pagine.  
+-   An object cannot implement multiple **Tools Options** pages.  
   
-## <a name="registering-as-a-tools-options-page-provider"></a>Registrazione di un provider di pagina di opzioni strumenti  
- Una configurazione utente supporto VSPackage tramite **Strumenti opzioni** pagine indica gli oggetti che li fornisce **opzioni degli strumenti** pagine applicando le istanze di <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>applicato per il <xref:Microsoft.VisualStudio.Shell.Package>implementazione.</xref:Microsoft.VisualStudio.Shell.Package> </xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>  
+## <a name="registering-as-a-tools-options-page-provider"></a>Registering as a Tools Options Page Provider  
+ A VSPackage supporting user configuration through **Tools Options** pages indicates the objects providing these **Tools Options** pages by applying instances of <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> applied to the <xref:Microsoft.VisualStudio.Shell.Package> implementation.  
   
- Deve esistere un'istanza di <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>per ogni <xref:Microsoft.VisualStudio.Shell.DialogPage>-tipo che implementa derivato un **ToolsOptions** pagina.</xref:Microsoft.VisualStudio.Shell.DialogPage> </xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>  
+ There must be one instance of <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> for every <xref:Microsoft.VisualStudio.Shell.DialogPage>-derived type that implements a **Tools Options** page.  
   
- Ogni istanza di <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>utilizza il tipo che implementa il **opzioni degli strumenti** pagina, le stringhe che contengono la categoria e sottocategoria utilizzato per identificare un **Strumenti opzioni** pagina e informazioni per registrare il tipo come fornire un **opzioni degli strumenti** pagina.</xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>  
+ Each instance of <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> uses the type that implements the **Tools Options** page, strings that contain the category and sub-category used to identify a **Tools Options** page, and resource information to register the type as providing a **Tools Options** page.  
   
-## <a name="persisting-tools-options-page-state"></a>Persistente lo stato di pagina di opzioni strumenti  
- Se un **Strumenti opzioni** di implementazione della pagina è registrato con il supporto di automazione abilitato, l'IDE mantiene lo stato della pagina insieme a tutti gli altri **ToolsOptions** pagine.  
+## <a name="persisting-tools-options-page-state"></a>Persisting Tools Options Page State  
+ If a **Tools Options** page implementation is registered with automation support enabled, the IDE persists the page's state along with all other **Tools Options** pages.  
   
- Un VSPackage è possibile gestire il proprio persistenza tramite <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>.</xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> Deve essere utilizzato solo uno o l'altro metodo di persistenza.  
+ A VSPackage can manage its own persistence by using <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>. Only one or the other method of persistence should be used.  
   
-## <a name="implementing-dialogpage-class"></a>Implementazione della classe DialogPage  
- Oggetto che fornisce l'implementazione di un pacchetto di un <xref:Microsoft.VisualStudio.Shell.DialogPage>-tipo derivato può sfruttare le funzionalità seguenti ereditate:</xref:Microsoft.VisualStudio.Shell.DialogPage>  
+## <a name="implementing-dialogpage-class"></a>Implementing DialogPage Class  
+ An object providing a VSPackage's implementation of a <xref:Microsoft.VisualStudio.Shell.DialogPage>-derived type can take advantage of the following inherited features:  
   
--   Una finestra dell'interfaccia utente predefinita.  
+-   A default user interface window.  
   
--   Oggetto predefinito disponibile il meccanismo di persistenza se <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>viene applicato alla classe, o se il <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A>è impostata su `true` per <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>cui viene applicato alla classe.</xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> </xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A> </xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>  
+-   A default persistence mechanism available either if <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> is applied to the class, or if the <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A> property is set to `true` for the <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> that is applied to the class.  
   
--   Supporto di automazione.  
+-   Automation support.  
   
- Il requisito minimo per un oggetto che implementa un **Strumenti opzioni** pagina utilizzando <xref:Microsoft.VisualStudio.Shell.DialogPage>è l'aggiunta di proprietà pubbliche.</xref:Microsoft.VisualStudio.Shell.DialogPage>  
+ The minimum requirement for an object implementing a **Tools Options** page using <xref:Microsoft.VisualStudio.Shell.DialogPage> is the addition of public properties.  
   
- Se la classe registrata correttamente come un **Strumenti opzioni** pagina provider, quindi le proprietà pubbliche sono disponibili nel **opzioni** sezione il **strumenti** menu sotto forma di una griglia delle proprietà.  
+ If the class properly registered as a **Tools Options** page provider, then its public properties are available on the **Options** section of the **Tools** menu in the form of a property grid.  
   
- Tutte queste funzionalità predefinito possono essere sottoposto a override. Ad esempio, per creare più sofisticata interfaccia utente richiede solo l'override dell'implementazione predefinita di <xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>.</xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>  
+ All these default features can be overridden. For example, to create a more sophisticated user interface requires only overriding the default implementation of <xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>.  
   
-## <a name="example"></a>Esempio  
- Di seguito è un'implementazione semplice "hello world" di una pagina di opzioni. Aggiungere il codice seguente a un progetto predefinito creato dal modello di pacchetto di Visual Studio con il **comando di Menu** opzione selezionata in modo adeguato illustra le funzionalità della pagina opzione.  
+## <a name="example"></a>Example  
+ What follows is a simple "hello world" implementation of an options page. Adding the following code to a default project created by the Visual Studio Package Template with the **Menu Command** option selected will adequately demonstrate option page functionality.  
   
-### <a name="description"></a>Descrizione  
- La classe seguente definisce una pagina di opzioni minimo "hello world". All'apertura, l'utente può impostare pubblico `HelloWorld` proprietà in una griglia delle proprietà.  
+### <a name="description"></a>Description  
+ The following class defines a minimal "hello world" options page. When opened, the user can set the public `HelloWorld` property in a property grid.  
   
-### <a name="code"></a>Codice  
- [!code-cs[UI_UserSettings_ToolsOptionPages&#11;](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_1.cs) ] 
- [!code-vb [UI_UserSettings_ToolsOptionPages&#11;](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_1.vb)]  
+### <a name="code"></a>Code  
+ [!code-csharp[UI_UserSettings_ToolsOptionPages#11](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_1.cs)] [!code-vb[UI_UserSettings_ToolsOptionPages#11](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_1.vb)]  
   
-### <a name="description"></a>Descrizione  
- Applicando l'attributo seguente alla classe del pacchetto rende disponibili le opzioni pagina quando viene caricato il pacchetto. I numeri sono arbitrari ID di risorsa per la categoria e la pagina e il valore booleano alla fine specifica se la pagina supporta l'automazione.  
+### <a name="description"></a>Description  
+ Applying the following attribute to the package class makes the options page available when the package loads. The numbers are arbitrary resource IDs for the category and the page, and the Boolean value at the end specifies whether the page supports automation.  
   
-### <a name="code"></a>Codice  
- [!code-cs[UI_UserSettings_ToolsOptionPages &#07;](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_2.cs) ] 
- [!code-vb [UI_UserSettings_ToolsOptionPages&#07;](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_2.vb)]  
+### <a name="code"></a>Code  
+ [!code-csharp[UI_UserSettings_ToolsOptionPages#07](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_2.cs)] [!code-vb[UI_UserSettings_ToolsOptionPages#07](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_2.vb)]  
   
-### <a name="description"></a>Descrizione  
- Il seguente gestore eventi visualizza un risultato in base al valore della proprietà impostata nella pagina Opzioni. Usa il <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A>metodo con il risultato in modo esplicito il cast nel tipo di pagina opzione personalizzata per accedere alle proprietà esposte dalla pagina.</xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A>  
+### <a name="description"></a>Description  
+ The following event handler displays a result depending on the value of the property set in the options page. It uses the <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> method with the result explicitly cast into the custom option page type to access the properties exposed by the page.  
   
- Nel caso di un progetto generato dal modello di pacchetto, chiamare questa funzione dal `MenuItemCallback` funzione di collegarlo al comando predefinito viene aggiunto il **strumenti** menu.  
+ In the case of a project generated by the package template, call this function from the `MenuItemCallback` function to attach it to the default command added to the **Tools** menu.  
   
-### <a name="code"></a>Codice  
- [!code-cs[UI_UserSettings_ToolsOptionPages &#08;](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_3.cs) ] 
- [!code-vb [UI_UserSettings_ToolsOptionPages &#08;](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_3.vb)]  
+### <a name="code"></a>Code  
+ [!code-csharp[UI_UserSettings_ToolsOptionPages#08](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_3.cs)] [!code-vb[UI_UserSettings_ToolsOptionPages#08](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_3.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Opzioni e impostazioni utente estensione](../../extensibility/extending-user-settings-and-options.md)   
- [Supporto di automazione per le pagine di opzioni](../../extensibility/internals/automation-support-for-options-pages.md)
+## <a name="see-also"></a>See Also  
+ [Extending User Settings and Options](../../extensibility/extending-user-settings-and-options.md)   
+ [Automation Support for Options Pages](../../extensibility/internals/automation-support-for-options-pages.md)

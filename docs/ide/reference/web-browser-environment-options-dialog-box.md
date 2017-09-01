@@ -49,8 +49,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 05/24/2017
 
 ---
-# Web Browser, Ambiente, finestra di dialogo Opzioni
-<a id="web-browser-environment-options-dialog-box" class="xliff"></a>
+# <a name="web-browser-environment-options-dialog-box"></a>Web Browser, Ambiente, finestra di dialogo Opzioni
 Consente di impostare le opzioni per il Web browser interno e per Internet Explorer. Per accedere a questa finestra di dialogo, selezionare **Opzioni** dal menu **Strumenti**, espandere la cartella **Ambiente** e selezionare **Web browser**.  
   
 > [!NOTE]
@@ -80,8 +79,7 @@ Consente di impostare le opzioni per il Web browser interno e per Internet Explo
 > [!NOTE]
 >  Usare la finestra di dialogo Esplora con per sostituire il Web browser interno di Visual Studio, vale a dire una versione di Internet Explorer, con un altro Web browser esterno.  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Environment Options Dialog Box](../../ide/reference/environment-options-dialog-box.md)  (Ambiente, finestra di dialogo Opzioni)  
  [General, Environment, Options Dialog Box](../../ide/reference/general-environment-options-dialog-box.md)  (Generale, Ambiente, finestra di dialogo Opzioni)  
  [Finestra di progettazione HTML](http://msdn.microsoft.com/Library/640043cc-3657-4677-a091-bc315e636477)

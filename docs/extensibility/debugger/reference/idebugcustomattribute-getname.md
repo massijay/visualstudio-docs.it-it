@@ -1,51 +1,68 @@
 ---
-title: "IDebugCustomAttribute::GetName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugCustomAttribute::GetName"
-helpviewer_keywords: 
-  - "IDebugCustomAttribute::GetName"
+title: IDebugCustomAttribute::GetName | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugCustomAttribute::GetName
+helpviewer_keywords:
+- IDebugCustomAttribute::GetName
 ms.assetid: ba509cc5-5816-4925-a094-4c72d88c360c
 caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# IDebugCustomAttribute::GetName
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: cd2356c36509eb1f3e6945a0a64f5add67df387c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
-Ottiene il nome dell'attributo personalizzato.  
+---
+# <a name="idebugcustomattributegetname"></a>IDebugCustomAttribute::GetName
+Gets the name of the custom attribute.  
   
-## Sintassi  
+## <a name="syntax"></a>Syntax  
   
-```cpp#  
-HRESULT GetName(   
-   BSTR* bstrName  
+```cpp  
+HRESULT GetName(   
+   BSTR* bstrName  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetName(  
-   out string bstrName  
+   out string bstrName  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parameters  
  `bstrName`  
- \[out\]  Restituisce una stringa contenente il nome dell'attributo personalizzato.  
+ [out] Returns a string containing the name of the custom attribute.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce S\_OK, in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Return Value  
+ If successful, returns S_OK; otherwise, returns an error code.  
   
-## Note  
- L'oggetto denominato restituito da questo metodo corrisponde al nome della classe utilizzata per dichiarare l'attributo.  Questa può non corrispondere esattamente al nome della classe di attributi personalizzati stesso mentre in c\# consente il suffisso “attributo„ da rilasciare da un nome di attributo personalizzato quando viene utilizzato in una dichiarazione.  
+## <a name="remarks"></a>Remarks  
+ The named returned by this method corresponds to the name of the class used to declare the attribute. This may not exactly correspond to the name of the custom attribute class itself as C# allows the "Attribute" suffix to be dropped from a custom attribute name when it is used in a declaration.  
   
-## Vedere anche  
+## <a name="see-also"></a>See Also  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)
