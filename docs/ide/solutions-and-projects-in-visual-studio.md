@@ -91,7 +91,7 @@ Quando si crea un’app, un’applicazione, un sito Web, uno script, un plug-in 
 
  Nel diagramma seguente viene illustrata la relazione tra progetti e soluzioni e gli elementi in essi contenuti dal punto di vista logico.  
 
- ![Progetti e soluzioni di Visual Studio](~/ide/media/vside-project-diagram.png)  
+ ![Progetti e soluzioni di Visual Studio](../ide/media/vside-project-diagram.png)  
 
  È inoltre possibile creare modelli di progetto e modelli di elemento personalizzati. Per altre informazioni, vedere [Creazione di modelli di progetti e di elementi](../ide/creating-project-and-item-templates.md).  
 
@@ -101,7 +101,7 @@ Quando si crea un’app, un’applicazione, un sito Web, uno script, un plug-in 
 ## <a name="managing-projects-in-solution-explorer"></a>Gestione di progetti in Esplora soluzioni  
  Dopo aver creato un nuovo progetto, viene utilizzato **Esplora soluzioni** per visualizzare e gestire progetti e soluzioni e i relativi articoli associati. La figura seguente illustra Esplora soluzioni con una soluzione C# contenente due progetti.  
 
- ![Esplora soluzioni](~/ide/media/vs2015_solution_explorer.png "vs2015_solution_explorer")  
+ ![Esplora soluzioni](../ide/media/vs2015_solution_explorer.png "vs2015_solution_explorer")  
 
 ## <a name="in-this-section"></a>Contenuto della sezione  
 

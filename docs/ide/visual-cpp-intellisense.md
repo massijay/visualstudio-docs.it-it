@@ -40,37 +40,37 @@ In Visual Studio 2015 IntelliSense è disponibile per singoli file del codice e 
 ## <a name="intellisense-features-in-c"></a>Funzionalità IntelliSense in C++  
  IntelliSense è un nome assegnato a un set di funzionalità che semplificano la scrittura di codice. Per una maggiore flessibilità, tutte le funzionalità di IntelliSense possono essere abilitate o disabilitate nella pagina delle proprietà accessibile tramite **Editor di testo, C/C++, Avanzate**.  
   
- ![Strumenti,Opzioni, Editor di testo, C&#47;C&#43;&#43;, Avanzate](~/ide/media/sintellisensecpptoolsoptions.PNG "sIntelliSenseCppToolsOptions")  
+ ![Strumenti,Opzioni, Editor di testo, C&#47;C&#43;&#43;, Avanzate](../ide/media/sintellisensecpptoolsoptions.PNG "sIntelliSenseCppToolsOptions")  
   
  Per accedere a IntelliSense, è possibile utilizzare le voci di menu e i tasti di scelta rapida illustrati nella figura seguente.  
   
- ![Menu IntelliSense di Visual C&#43;&#43;](~/ide/media/vs2015_cpp_intellisense_menu.png "vs2015_cpp_intellisense_menu")  
+ ![Menu IntelliSense di Visual C&#43;&#43;](../ide/media/vs2015_cpp_intellisense_menu.png "vs2015_cpp_intellisense_menu")  
   
 ### <a name="statement-completion-and-member-list"></a>Elenco di completamento istruzioni e dei membri  
  Quando si inizia a digitare una parola chiave, un tipo, una funzione, un nome di variabile o un altro elemento del programma che viene riconosciuto dal compilatore, l'editor visualizza un elenco di suggerimenti per completare la parola.  
   
  Per un elenco delle icone e dei relativi significati, vedere [Icone di Visualizzazione classi e Visualizzatore oggetti](../ide/class-view-and-object-browser-icons.md).  
   
- ![Finestra Completa parola di Visual C&#43;&#43;](~/ide/media/vs2015_cpp_complete_word.png "vs2015_cpp_complete_word")  
+ ![Finestra Completa parola di Visual C&#43;&#43;](../ide/media/vs2015_cpp_complete_word.png "vs2015_cpp_complete_word")  
   
  La prima volta che viene richiamato, l'elenco dei membri mostra solo i membri accessibili per il contesto corrente. Se successivamente si usa **CTRL+J**, vengono visualizzati tutti i membri indipendentemente dall'accessibilità. Se viene richiamato per la terza volta, viene visualizzato un elenco di elementi del programma ancora più ampio. È possibile disattivare il completamento delle istruzioni nella pagina **Opzioni generali di C/C++**.  
   
- ![Elenco di membri di Visual C&#43;&#43;](~/ide/media/vs2015_cpp_list_members.png "vs2015_cpp_list_members")  
+ ![Elenco di membri di Visual C&#43;&#43;](../ide/media/vs2015_cpp_list_members.png "vs2015_cpp_list_members")  
   
 ### <a name="parameter-help"></a>Guida per i parametri  
  Quando si digita una parentesi graffa di apertura di una chiamata di funzione o una parentesi angolare in una dichiarazione di variabile del modello di classe, l'editor visualizza una piccola finestra con i tipi di parametro per ogni overload del costruttore o della funzione. Il parametro corrente, sulla base della posizione del cursore, è visualizzato in grassetto. È possibile disattivare il completamento delle istruzioni nella pagina **Opzioni generali di C/C++**.  
   
- ![Guida ai parametri di Visual C&#43;&#43;](~/ide/media/vs_2015_cpp_param_help.png "vs_2015_cpp_param_help")  
+ ![Guida ai parametri di Visual C&#43;&#43;](../ide/media/vs_2015_cpp_param_help.png "vs_2015_cpp_param_help")  
   
 ### <a name="quick-info"></a>Informazioni rapide  
  Quando si passa con il cursore del mouse su una variabile, viene visualizzata una piccola finestra inline che mostra le informazioni sul tipo e l'intestazione in cui è definito il tipo. Passare con il puntatore del mouse su una chiamata di funzione per visualizzare la firma della funzione. È possibile disattivare la funzionalità Informazioni rapide nella pagina **Editor di testo, C/C++, Avanzate**.  
   
- ![QuickInfo di Visual C&#43;&#43;](~/ide/media/vs2015_cpp_quickinfo.png "vs2015_cpp_quickInfo")  
+ ![QuickInfo di Visual C&#43;&#43;](../ide/media/vs2015_cpp_quickinfo.png "vs2015_cpp_quickInfo")  
   
 ## <a name="error-squiggles"></a>Sottolineatura a zigzag per gli errori  
  La presenza di una sottolineatura a zigzag sotto un elemento di programma (variabile, parola chiave, parentesi, nome di tipo e così via) serve a richiamare l'attenzione su un errore effettivo o potenziale nel codice. La sottolineatura a zigzag di colore verde appare quando si scrive una dichiarazione con prototipo per ricordare che non è ancora stata scritta l'implementazione. La sottolineatura a zigzag di colore viola appare in un progetto condiviso quando è presente un errore in codice attualmente non attivo, ad esempio quando si lavora nel contesto Windows ma si scrive codice errato in un contesto Android. La sottolineatura a zigzag di colore rosso indica che nel codice attivo è presente un errore o un avviso che è necessario risolvere.  
   
- ![Controllo ortografia durante la digitazione di Visual C&#43;&#43;](~/ide/media/vs2015_cpp_error_quiggles.png "vs2015_cpp_error_quiggles")  
+ ![Controllo ortografia durante la digitazione di Visual C&#43;&#43;](../ide/media/vs2015_cpp_error_quiggles.png "vs2015_cpp_error_quiggles")  
   
 ## <a name="code-colorization-and-fonts"></a>Tipi di carattere e colori del codice  
  I colori e i tipi di carattere predefiniti possono essere modificati nella pagina delle proprietà **Ambiente, Tipi di carattere e colori**. In questa pagina è possibile modificare i tipi di carattere per molte finestre dell'interfaccia utente, non solo per l'editor. Le impostazioni specifiche di C++ iniziano con "C++", mentre le altre impostazioni sono valide per tutti i linguaggi.  
@@ -80,7 +80,7 @@ In Visual Studio 2015 IntelliSense è disponibile per singoli file del codice e 
   
  Di seguito un'applicazione OpenGLES configurata per la compilazione per Android e iOS. Nell’illustrazione viene mostrato il codice condiviso modificato. Nella prima immagine, Android è il progetto attivo:  
   
- ![Il progetto Android è il progetto attivo.](~/ide/media/intellisensecppcrossplatform.png "IntelliSenseCppCrossPlatform")  
+ ![Il progetto Android è il progetto attivo.](../ide/media/intellisensecppcrossplatform.png "IntelliSenseCppCrossPlatform")  
   
  Tenere presente quanto segue:  
   
@@ -92,7 +92,7 @@ In Visual Studio 2015 IntelliSense è disponibile per singoli file del codice e 
   
  A questo punto, impostare il progetto attivo su iOS.StaticLibrary e osservare come cambiano le sottolineature a zig-zag.  
   
- ![iOS è selezionato come progetto attivo.](~/ide/media/intellisensecppcrossplatform2.png "IntelliSenseCppCrossPlatform2")  
+ ![iOS è selezionato come progetto attivo.](../ide/media/intellisensecppcrossplatform2.png "IntelliSenseCppCrossPlatform2")  
   
  Tenere presente quanto segue:  
   
@@ -105,7 +105,7 @@ In Visual Studio 2015 IntelliSense è disponibile per singoli file del codice e 
 ## <a name="single-file-intellisense"></a>IntelliSense con singolo file  
  IntelliSense è disponibile anche quando si apre un singolo file all'esterno di qualsiasi progetto. Per abilitare o disabilitare particolari funzionalità, passare a **Editor di testo, C/C++, Avanzate** e attivare o disattivare le funzionalità IntelliSense. Per configurare IntelliSense per singoli file che non fanno parte di un progetto, cercare l’argomento relativo all'**uso di IntelliSense ed esplorazione dei file non di progetto** nella sezione **Avanzate**. Vedere [Presentazione guidata di Visual C++](http://msdn.microsoft.com/en-us/499cb66f-7df1-45d6-8b6b-33d94fd1f17c).  
   
- ![Intellisense per singolo file Visual C&#43;&#43;](~/ide/media/vs2015_cpp_single_file_intellisense.png "vs2015_cpp_single_file_intellisense")  
+ ![Intellisense per singolo file Visual C&#43;&#43;](../ide/media/vs2015_cpp_single_file_intellisense.png "vs2015_cpp_single_file_intellisense")  
   
  Per impostazione predefinita, IntelliSense con singolo file utilizza solo directory di inclusione per trovare i file di intestazione. Per aggiungere ulteriori directory, aprire il menu di scelta rapida del nodo della soluzione e aggiungere la directory all’elenco relativo al **codice sorgente di debug**, come illustrato nella figura seguente:  
   

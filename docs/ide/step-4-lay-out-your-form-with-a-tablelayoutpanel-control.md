@@ -37,7 +37,7 @@ ms.lasthandoff: 05/13/2017
 # <a name="step-4-lay-out-your-form-with-a-tablelayoutpanel-control"></a>Passaggio 4: creare il layout del form con un controllo TableLayoutPanel
 In questo passaggio si aggiunge un controllo `TableLayoutPanel` al form. TableLayoutPanel consente di allineare in modo corretto i controlli nel form che si aggiungerà successivamente.  
   
- ![link to video](~/data-tools/media/playvideo.gif "PlayVideo")Per una versione video di questo argomento, vedere [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 2](http://go.microsoft.com/fwlink/?LinkId=205211) (Esercitazione 1: creare un visualizzatore di immagini in Visual Basic - Video 2) o [Tutorial 1: Create a Picture Viewer in C# - Video 2](http://go.microsoft.com/fwlink/?LinkId=205200) (Esercitazione 1: creare un visualizzatore di immagini in C# - Video 2). In questi video viene usata una versione precedente di Visual Studio, pertanto vi sono piccole differenze in alcuni comandi di menu e altri elementi dell'interfaccia utente. Tuttavia, i concetti e le procedure funzionano in modo analogo nella versione corrente di Visual Studio.  
+ ![link to video](../data-tools/media/playvideo.gif "PlayVideo")Per una versione video di questo argomento, vedere [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 2](http://go.microsoft.com/fwlink/?LinkId=205211) (Esercitazione 1: creare un visualizzatore di immagini in Visual Basic - Video 2) o [Tutorial 1: Create a Picture Viewer in C# - Video 2](http://go.microsoft.com/fwlink/?LinkId=205200) (Esercitazione 1: creare un visualizzatore di immagini in C# - Video 2). In questi video viene usata una versione precedente di Visual Studio, pertanto vi sono piccole differenze in alcuni comandi di menu e altri elementi dell'interfaccia utente. Tuttavia, i concetti e le procedure funzionano in modo analogo nella versione corrente di Visual Studio.  
   
 ### <a name="to-lay-out-your-form-with-a-tablelayoutpanel-control"></a>Per creare il layout del form con un controllo TableLayoutPanel  
   
@@ -58,7 +58,7 @@ Controllo TableLayoutPanel
   
      Si noti come la Casella degli strumenti si espanda per includere il form quando si fa clic sulla scheda e come si chiuda quando si fa clic in un punto esterno. Si tratta della funzionalità Nascondi automaticamente dell'IDE. È possibile attivarla o disattivarla e bloccare in posizione qualsiasi finestra facendo clic sull'icona a forma di puntina da disegno nell'angolo superiore destro della finestra. L'icona a forma di puntina da disegno ha l'aspetto seguente.  
   
-     ![Icona della puntina da disegno](~/ide/media/express_pushpintoolbox.png "Express_PushpinToolbox")  
+     ![Icona della puntina da disegno](../ide/media/express_pushpintoolbox.png "Express_PushpinToolbox")  
 Icona della puntina da disegno  
   
 4.  Verificare che **TableLayoutPanel** sia selezionato facendo clic su di esso. È possibile verificare il controllo selezionato osservando l'elenco a discesa nella parte superiore della finestra **Proprietà**, come mostrato nell'immagine seguente.  
@@ -82,14 +82,14 @@ Finestra Proprietà con Fill selezionato
   
 8.  Attualmente, TableLayoutPanel dispone di due righe delle stesse dimensioni e di due colonne delle stesse dimensioni. È necessario ridimensionarle in modo che la riga superiore e la colonna a destra siano entrambe molto più grandi. In Progettazione Windows Form selezionare il controllo TableLayoutPanel. Nell'angolo superiore destro si trova un piccolo pulsante a forma di triangolo nero, illustrato di seguito.  
   
-     ![Pulsante triangolare](~/ide/media/express_iconblacktriangle.gif "Express_IconBlackTriangle")  
+     ![Pulsante triangolare](../ide/media/express_iconblacktriangle.gif "Express_IconBlackTriangle")  
 Pulsante triangolare  
   
      Questo pulsante indica che il controllo dispone di attività che consentono di impostare automaticamente le proprietà.  
   
 9. Scegliere il triangolo per visualizzare l'elenco attività del controllo, come mostrato nell'immagine seguente.  
   
-     ![Attività di TableLayoutPanel](~/ide/media/express_tablepanel.png "Express_TablePanel")  
+     ![Attività di TableLayoutPanel](../ide/media/express_tablepanel.png "Express_TablePanel")  
 Attività di TableLayoutPanel  
   
 10. Scegliere l'attività **Modifica righe e colonne** per visualizzare la finestra **Stili di riga e colonna**. Fare clic su **Column1** e impostare le dimensioni su 15% verificando che il pulsante **%** sia selezionato e immettendo `15` nella casella **%**. Si tratta di un controllo `NumericUpDown` che verrà usato in un'esercitazione successiva. Scegliere **Column2** e impostarla su 85%. Non scegliere ancora il pulsante **OK** per non chiudere la finestra. Se tuttavia si fa clic su OK, è possibile riaprire la finestra utilizzando l'elenco attività.  
