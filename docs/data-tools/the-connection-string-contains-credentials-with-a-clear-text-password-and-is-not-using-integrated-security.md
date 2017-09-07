@@ -1,39 +1,57 @@
 ---
-title: "La stringa di connessione contiene credenziali con una password in testo non crittografato e non utilizza la sicurezza integrata | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/24/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: The connection string contains credentials with a clear text password and is not using integrated security | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 501d85af-92e0-4471-b280-8a59c0688575
 caps.latest.revision: 3
-caps.handback.revision: 1
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
+ms.openlocfilehash: f4981240d341aa1f2b8c0753b95d1f34e69cb031
+ms.contentlocale: it-it
+ms.lasthandoff: 09/07/2017
+
 ---
-# La stringa di connessione contiene credenziali con una password in testo non crittografato e non utilizza la sicurezza integrata
-Salvare la stringa di connessione nel file DBML corrente e i file di configurazione dell'applicazione con queste informazioni riservate?Fare clic su No per salvare la stringa di connessione senza le informazioni riservate.  
+# <a name="the-connection-string-contains-credentials-with-a-clear-text-password-and-is-not-using-integrated-security"></a>The connection string contains credentials with a clear text password and is not using integrated security
+Do you want to save the connection string to the current DBML file and application configuration files with this sensitive information?  Click No to save the connection string without the sensitive information.  
   
- Quando si utilizzano connessioni dati in cui sono contenute informazioni riservate, ad esempio le password incluse nella stringa di connessione, è possibile salvare la stringa di connessione nel file DBML di un progetto e il file di configurazione dell'applicazione con o senza le informazioni riservate.  
+ When working with data connections that include sensitive information (passwords that are included in the connection string), you are given the option of saving the connection string into a project's DBML file and application configuration file with or without the sensitive information.  
   
 > [!WARNING]
->  Se si imposta in modo esplicito la proprietà **Impostazioni applicazione** presente nelle proprietà **Connessione** su **False**, la password verrà aggiunta nel file DBML.  
+>  Explicitly setting the **Connection** properties **Application Settings** property to **False** will add the password to the DBML file.  
   
-### Per salvare la stringa di connessione con le informazioni riservate nelle impostazioni dell'applicazione del progetto  
+### <a name="to-save-the-connection-string-with-the-sensitive-information-in-the-projects-application-settings"></a>To save the connection string with the sensitive information in the project's application settings  
   
--   Scegliere **Sì**.  
+-   Click **Yes**.  
   
-     La stringa di connessione viene archiviata come impostazione dell'applicazionee include le informazioni riservate in testo normale.Il file DBML non contiene le informazioni riservate.  
+     The connection string is stored as an application setting. The connection string includes the sensitive information in plain text. The DBML file does not contain the sensitive information.  
   
-### Per salvare la stringa di connessione senza le informazioni riservate nelle impostazioni dell'applicazione del progetto  
+### <a name="to-save-the-connection-string-without-the-sensitive-information-in-the-projects-application-settings"></a>To save the connection string without the sensitive information in the project's application settings  
   
--   Scegliere **No**.  
+-   Click **No**.  
   
-     La stringa di connessione viene archiviata come impostazione dell'applicazione, ma non viene inclusa la password.  
+     The connection string is stored as an application setting, but the password is not included.  
   
-## Vedere anche  
- [Progettazione relazionale oggetti](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [Connessione ai dati in Visual Studio](../data-tools/connecting-to-data-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+ [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

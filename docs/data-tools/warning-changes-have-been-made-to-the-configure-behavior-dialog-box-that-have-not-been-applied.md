@@ -1,34 +1,53 @@
 ---
-title: "Avviso. Nella finestra di dialogo Configura comportamento ci sono modifiche non applicate | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Warning. Changes have been made to the Configure Behavior dialog box that have not been applied | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ce5822dd-4f10-4c86-b707-7766837be216
 caps.latest.revision: 3
-caps.handback.revision: 1
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
+ms.openlocfilehash: e9ba86170bf9e35258da7c39a8e5f1a980da774d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/07/2017
+
 ---
-# Avviso. Nella finestra di dialogo Configura comportamento ci sono modifiche non applicate
-Avviso.Nella finestra di dialogo Configura comportamento ci sono modifiche non applicate.Applicarle?  
+# <a name="warning-changes-have-been-made-to-the-configure-behavior-dialog-box-that-have-not-been-applied"></a>Warning. Changes have been made to the Configure Behavior dialog box that have not been applied
+Warning. Changes have been made to the Configure Behavior dialog box that have not been applied. Do you want to apply your changes?  
   
- La finestra di dialogo **Configura comportamento** consente di configurare il comportamento di Insert, Update e Delete per tutte le classi disponibili.Questo messaggio viene visualizzato quando si seleziona una nuova combinazione di **Classe** e **Comportamento** e la modifica precedente non è stata ancora applicata.  
+ The **Configure Behavior** dialog box enables you to configure Insert, Update, and Delete behavior for all classes available. This message appears when you select a new **Class** and **Behavior** combination and the previous change has not yet been applied.  
   
-### Per applicare la modifica e continuare  
+### <a name="to-apply-the-change-and-continue"></a>To apply the change and continue  
   
--   Fare clic su **Sì** per applicare la modifica apportata alla **Classe** e al **Comportamento** selezionati.  
+-   Click **Yes** to apply the change to the selected **Class** and **Behavior**.  
   
-### Per annullare la modifica precedente e continuare  
+### <a name="to-cancel-the-previous-change-and-continue"></a>To cancel the previous change and continue  
   
--   Fare clic su **No** per annullare la modifica apportata alla **Classe** e al **Comportamento** selezionati.  
+-   Click **No** to cancel the change to the selected **Class** and **Behavior**.  
   
-## Vedere anche  
- [Progettazione relazionale oggetti](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [Procedura: assegnare stored procedure per l'esecuzione dei comandi di aggiornamento, inserimento ed eliminazione \(Progettazione relazionale oggetti\)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)   
- [Procedura dettagliata: creazione di classi LINQ to SQL \(Progettazione relazionale oggetti\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)
+## <a name="see-also"></a>See Also  
+ [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [How to: Assign stored procedures to perform updates, inserts, and deletes (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)   
+ [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
+ [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)

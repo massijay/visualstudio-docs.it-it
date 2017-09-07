@@ -1,5 +1,5 @@
 ---
-title: Culture-Specific Classes for Global Windows Forms and Web Forms | Microsoft Docs
+title: Classi specifiche delle impostazioni cultura per Windows Form e Web Form globali | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,16 +48,16 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 7eae24ec725509b2a2a6a276ad7f474a079bd952
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="culture-specific-classes-for-global-windows-forms-and-web-forms"></a>Culture-Specific Classes for Global Windows Forms and Web Forms
-Each culture has different conventions for displaying dates, time, numbers, currency, and other information. The <xref:System.Globalization> namespace contains classes that can be used to modify how culture-specific values are displayed, such as <xref:System.Globalization.DateTimeFormatInfo>, **Calendar**, and <xref:System.Globalization.NumberFormatInfo>.  
+# <a name="culture-specific-classes-for-global-windows-forms-and-web-forms"></a>Classi specifiche delle impostazioni cultura per Windows Form e Web Form globali
+Le impostazioni cultura hanno diverse convenzioni per la visualizzazione di date, ore, numeri, valute e altre informazioni. Lo spazio dei nomi <xref:System.Globalization> contiene classi che possono essere usate per modificare il modo in cui i valori specifici delle impostazioni cultura vengono visualizzati, ad esempio <xref:System.Globalization.DateTimeFormatInfo>, **Calendar** e <xref:System.Globalization.NumberFormatInfo>.  
   
-## <a name="using-the-culture-setting"></a>Using the Culture Setting  
- But most of the time you will use the culture setting, stored either in the application or in the **Regional Options** control panel, to automatically determine the conventions at run time and format the information accordingly. For more information on setting the culture, see [How to: Set the Culture and UI Culture for Windows Forms Globalization](http://msdn.microsoft.com/en-us/694e049f-0b91-474a-9789-d35124f248f0) or [How to: Set the Culture and UI Culture for ASP.NET Web Page Globalization](http://msdn.microsoft.com/Library/76091f86-f967-4687-a40f-de87bd8cc9a0). Classes that automatically format information according to the culture setting are called culture-specific. Some culture-specific methods are <xref:System.IFormattable.ToString%2A?displayProperty=fullName>, <xref:System.Console.WriteLine%2A?displayProperty=fullName>, and <xref:System.String.Format%2A?displayProperty=fullName>. Some culture-specific functions (in the Visual Basic language) are `MonthName` and `WeekDayName`.  
+## <a name="using-the-culture-setting"></a>Uso delle impostazioni cultura  
+ Nella maggior parte dei casi si useranno le impostazioni cultura, memorizzate nell'applicazione o nel pannello di controllo **Opzioni internazionali**, per determinare automaticamente le convenzioni in fase di runtime e formattare le informazioni di conseguenza. Per altre informazioni sulla definizione delle impostazioni cultura, vedere [How to: Set the Culture and UI Culture for Windows Forms Globalization](http://msdn.microsoft.com/en-us/694e049f-0b91-474a-9789-d35124f248f0) (Procedura: Impostare le impostazioni cultura e le impostazioni cultura dell'interfaccia utente per la globalizzazione di Windows Forms) o [Procedura: Impostare le impostazioni cultura e le impostazioni cultura dell'interfaccia utente per la globalizzazione della pagina Web ASP.NET](http://msdn.microsoft.com/Library/76091f86-f967-4687-a40f-de87bd8cc9a0). Le classi che formattano automaticamente le informazioni in base alle impostazioni cultura sono denominate specifiche delle impostazioni cultura. Alcuni metodi specifici delle impostazioni cultura sono <xref:System.IFormattable.ToString%2A?displayProperty=fullName>, <xref:System.Console.WriteLine%2A?displayProperty=fullName> e <xref:System.String.Format%2A?displayProperty=fullName>. Alcune funzioni specifiche delle impostazioni cultura (nel linguaggio Visual Basic) sono `MonthName` e `WeekDayName`.  
   
- For example, the following code shows how you can use the <xref:System.IFormattable.ToString%2A> method to format currency for the current culture:  
+ Ad esempio, il codice seguente illustra come poter usare il metodo <xref:System.IFormattable.ToString%2A> per la formattazione della valuta per le impostazioni cultura correnti:  
   
 ```vb  
 ' Put the Imports statements at the beginning of the code module  
@@ -78,19 +78,19 @@ int myInt = 100;
 Console.WriteLine(myInt.ToString("C", Thread.CurrentThread.CurrentCulture));  
 ```  
   
- If the culture is set to "fr-FR", you will see this in the output window:  
+ Se le impostazioni cultura sono impostate su "fr-FR", nella finestra di output verrà visualizzato quanto segue:  
   
  `100,00`  
   
- If the culture is set to "en-US", you will see this in the output window:  
+ Se le impostazioni cultura sono impostate su "en-US", nella finestra di output verrà visualizzato quanto segue:  
   
  `$100.00`  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.IFormattable.ToString%2A?displayProperty=fullName>   
  <xref:System.Globalization.DateTimeFormatInfo>   
  <xref:System.Globalization.NumberFormatInfo>   
  <xref:System.Globalization.Calendar>   
  <xref:System.Console.WriteLine%2A?displayProperty=fullName>   
  <xref:System.String.Format%2A?displayProperty=fullName>   
- [Globalizing and Localizing Applications](../ide/globalizing-and-localizing-applications.md)
+ [Globalizzazione e localizzazione di applicazioni](../ide/globalizing-and-localizing-applications.md)
