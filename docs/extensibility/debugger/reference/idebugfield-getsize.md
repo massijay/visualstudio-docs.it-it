@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetSize | Microsoft Docs
+title: IDebugField::GetSize | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5f025b96c3a37cd55d8bc148d04196a862f7e7bc
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugfieldgetsize"></a>IDebugField::GetSize
-This method gets the size of a field, in bytes.  
+Questo metodo ottiene le dimensioni di un campo, in byte.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetSize(   
@@ -54,15 +54,15 @@ int GetSize(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `pdwSize`  
- [out] Returns the size.  
+ [out] Restituisce le dimensioni.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- All fields have a type and all types have a size. For example, a field with a type of byte has a size of 1 byte.  
+## <a name="remarks"></a>Note  
+ Tutti i campi sono un tipo e tutti i tipi hanno una dimensione. Ad esempio, un campo con un tipo di byte ha una dimensione di 1 byte.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

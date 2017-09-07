@@ -1,45 +1,64 @@
 ---
-title: "Ereditariet&#224; delle classi di dati (Progettazione relazionale oggetti) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Data class inheritance (O-R Designer) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: af32653c-f4e6-4217-8c5a-e32b322b4918
 caps.latest.revision: 3
-caps.handback.revision: 1
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
+ms.openlocfilehash: e42797421cc864425c18deb9407646b25e108354
+ms.contentlocale: it-it
+ms.lasthandoff: 09/07/2017
+
 ---
-# Ereditariet&#224; delle classi di dati (Progettazione relazionale oggetti)
-Analogamente ad altri oggetti, le classi [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] possono utilizzare l'ereditarietà ed essere derivate da altre classi.Nel codice è possibile specificare le relazioni di ereditarietà tra oggetti dichiarando che una classe eredita da un'altra.In un database le relazioni di ereditarietà vengono create in diversi modi.[!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] \([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]\) supporta il concetto di ereditarietà a tabella singola in quanto viene spesso implementato nei sistemi relazionali.  
+# <a name="data-class-inheritance-or-designer"></a>Data class inheritance (O/R Designer)
+Like other objects, [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] classes can use inheritance and be derived from other classes. In code, you can specify inheritance relationships between objects by declaring that one class inherits from another. In a database, inheritance relationships are created in several ways. The [!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] ([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]) supports the concept of single-table inheritance as it is often implemented in relational systems.  
   
- Nell'ereditarietà a tabella singola è presente una singola tabella di database che contiene colonne per le classi base e derivate.Insieme ai dati relazionali, una colonna discriminante contiene il valore che determina la classe a cui appartiene uno specifico record.Ad esempio, si consideri una tabella Persons che contiene tutte le persone impiegate in una società,alcune delle quali sono dipendenti mentre altre sono manager.La tabella Persons contiene una colonna denominata Type, che presenta un valore 1 per i manager e un valore 2 per i dipendenti,e che costituisce la colonna discriminante.In questo scenario, è possibile creare una sottoclasse di dipendenti e popolare la classe solo con i record che hanno un valore 2 nella colonna Type.  
+ In single-table inheritance, there is a single database table that contains columns for both base and derived classes. With relational data, a discriminator column contains the value that determines which class any given record belongs to. For example, consider a Persons table that contains everyone employed by a company. Some people are employees and some people are managers. The Persons table contains a column named Type that has a value of 1 for managers and a value of 2 for employees. The Type column is the discriminator column. In this scenario, you can create a subclass of employees and populate the class with only records that have a Type value of 2.  
   
- Quando si configura l'ereditarietà nelle classi dell'entità utilizzando [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], trascinare due volte la singola tabella che contiene i dati di ereditarietà sulla finestra di progettazione: una volta per ogni classe nella gerarchia di ereditarietà.Dopo avere aggiunto le tabelle alla finestra di progettazione, connetterle con un elemento di ereditarietà della casella degli strumenti **Progettazione relazionale oggetti**, quindi impostare le quattro proprietà di ereditarietà nella finestra **Proprietà**.  
+ When you configure inheritance in entity classes by using the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], drag the single table that contains the inheritance data onto the designer two times: one time for each class in the inheritance hierarchy. After you add the tables to the designer, connect them with an Inheritance item from the **Object Relational Designer** toolbox and then set the four inheritance properties in the **Properties** window.  
   
-## Proprietà di ereditarietà  
- Nella tabella riportata di seguito sono elencate le proprietà di ereditarietà e le rispettive descrizioni:  
+## <a name="inheritance-properties"></a>Inheritance Properties  
+ The following table lists the inheritance properties and their descriptions:  
   
-|Proprietà|Descrizione|  
-|---------------|-----------------|  
-|Proprietà Discriminator|Proprietà \(mappata alla colonna\) che determina a quale classe appartiene il record corrente.|  
-|Valore discriminante classe base|Valore \(nella colonna definita come proprietà Discriminator\) che determina che un record fa parte della classe base.|  
-|Valore discriminante classe derivata|Valore \(nella proprietà definita come proprietà Discriminator\) che determina che un record fa parte della classe derivata.|  
-|Valore predefinito di ereditarietà|Classe da popolare quando il valore nella proprietà definita come **Proprietà Discriminator** non corrisponde a **Valore discriminante classe base** o a **Valore discriminante classe derivata**.|  
+|Property|Description|  
+|--------------|-----------------|  
+|Discriminator Property|The property (mapped to the column) that determines which class the current record belongs to.|  
+|Base Class Discriminator Value|The value (in the column designated as the Discriminator Property) that determines that a record is of the base class.|  
+|Derived Class Discriminator Value|The value (in the property designated as the Discriminator Property) that determines that a record is of the derived class.|  
+|Inheritance Default|The class that should be populated when the value in the property designated as the **Discriminator Property** does not match either the **Base Class Discriminator Value** or the **Derived Class Discriminator Value**.|  
   
- La creazione di un modello a oggetti che utilizza l'ereditarietà e corrisponde ai dati relazionali può generare una certa confusione.Questo argomento fornisce informazioni sui concetti di base e sulle proprietà singole richieste per la configurazione dell'ereditarietà.Negli argomenti seguenti viene fornita una spiegazione più chiara di come configurare l'ereditarietà con [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].  
+ Creating an object model that uses inheritance and corresponds to relational data can be somewhat confusing. This topic provides information about the basic concepts and individual properties that are required for configuring inheritance. The following topics provide a clearer explanation of how to configure inheritance with the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].  
   
-|Argomento|Descrizione|  
-|---------------|-----------------|  
-|[Procedura: configurare l'ereditarietà utilizzando Progettazione relazionale oggetti](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)|Viene descritto come configurare le classi di entità che utilizzano l'ereditarietà mediante [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].|  
-|[Procedura dettagliata: creazione di classi LINQ to SQL utilizzando l'ereditarietà a tabella singola \(Progettazione relazionale oggetti\)](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)|Vengono fornite istruzioni dettagliate per la configurazione delle classi di entità che utilizzano l'ereditarietà a tabella singola con [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].|  
+|Topic|Description|  
+|-----------|-----------------|  
+|[How to: Configure inheritance by using the O/R Designer](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md)|Describes how to configure entity classes that use single-table inheritance by using the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].|  
+|[Walkthrough: Creating LINQ to SQL Classes by Using Single-Table Inheritance (O/R Designer)](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)|Provides step-by-step instructions about how to configure entity classes that use single-table inheritance by using the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)].|  
   
-## Vedere anche  
- [Cenni preliminari su Progettazione relazionale oggetti](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio1.md)   
- [Procedura dettagliata: creazione di classi LINQ to SQL \(Progettazione relazionale oggetti\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
- [Procedura dettagliata: creazione di classi LINQ to SQL utilizzando l'ereditarietà a tabella singola \(Progettazione relazionale oggetti\)](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)   
- [Introduzione](../Topic/Getting%20Started.md)
+## <a name="see-also"></a>See Also  
+ [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
+ [Walkthrough: Creating LINQ to SQL Classes by Using Single-Table Inheritance (O/R Designer)](../data-tools/walkthrough-creating-linq-to-sql-classes-by-using-single-table-inheritance-o-r-designer.md)   
+ [Getting Started](/dotnet/framework/data/adonet/sql/linq/getting-started)

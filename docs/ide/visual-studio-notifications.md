@@ -44,7 +44,7 @@ Visual Studio presenta un sistema di notifiche che segnala vari eventi, ad esemp
   
  È possibile scegliere di ignorare sempre una notifica, che quindi non verrà più visualizzata da Visual Studio. È possibile reimpostare l'elenco delle notifiche ignorate in [Notifiche, Ambiente, finestra di dialogo Opzioni](../ide/reference/notifications-environment-options-dialog-box.md).  
   
- ![Icona di notifica di Visual Studio](~/ide/media/vs2015_notificationicon.png "vs2015_NotificationIcon")  
+ ![Icona di notifica di Visual Studio](../ide/media/vs2015_notificationicon.png "vs2015_NotificationIcon")  
   
 ## <a name="see-also"></a>Vedere anche  
  [IDE di Visual Studio](../ide/visual-studio-ide.md)

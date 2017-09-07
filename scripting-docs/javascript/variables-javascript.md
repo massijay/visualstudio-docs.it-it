@@ -1,37 +1,42 @@
 ---
-title: "Variabili (JavaScript) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2017"
-ms.prod: "windows-client-threshold"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-javascript"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "JavaScript"
-  - "TypeScript"
-  - "DHTML"
-helpviewer_keywords: 
-  - "distinzione tra maiuscole e minuscole, nome di variabili JavaScript"
-  - "coercizione"
+title: Variabili, JavaScript | Microsoft Docs
+ms.custom: 
+ms.date: 01/18/2017
+ms.prod: windows-client-threshold
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- JavaScript
+- TypeScript
+- DHTML
+helpviewer_keywords:
+- coercion
+- case sensitivity, JavaScript variable name
 ms.assetid: 12a450e5-4818-4a09-9878-cd7c6cd2a248
 caps.latest.revision: 20
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 20
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.translationtype: HT
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: f30946899ad35286dfb1e786cf903d58f5c98cb6
+ms.contentlocale: it-it
+ms.lasthandoff: 08/11/2017
+
 ---
-# Variabili (JavaScript)
-In [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] una variabile contiene un valore, ad esempio "hello" o 5.  Quando si utilizza la variabile, si fa riferimento ai dati che rappresenta, ad esempio `NumberOfDaysLeft = EndDate – TodaysDate`.  
+# <a name="variables-javascript"></a>Variabili (JavaScript)
+In [!INCLUDE[javascript](../javascript/includes/javascript-md.md)], una variabile contiene un valore, ad esempio "hello" o 5. Quando si usa la variabile, si fa riferimento ai dati che rappresenta, ad esempio `NumberOfDaysLeft = EndDate - TodaysDate`.  
   
- Le variabili vengono utilizzate per archiviare, recuperare e modificare i valori inseriti nel codice.  Per semplificare la comprensione del codice, provare ad assegnare alle variabili nomi significativi.  
+ Si usano le variabili per archiviare, recuperare e modificare i valori visualizzati nel codice. Tentare di assegnare alle variabili dei nomi significativi per semplificare agli altri utenti la comprensione del funzionamento del codice.  
   
-## Dichiarazione di variabili  
- Una dichiarazione rappresenta la prima visualizzazione della variabile nello script.  La prima volta in cui viene citata, la variabile viene impostata in memoria, in modo da farvi riferimento in un secondo momento nello script.  È necessario dichiarare le variabili prima di utilizzarle.  A tale scopo, utilizzare la parola chiave `var`.  
+## <a name="declaring-variables"></a>Dichiarazione di variabili  
+ La prima volta che una variabile viene visualizzata nello script è in occasione della sua dichiarazione. La prima indicazione della variabile la configura nella memoria, pertanto è possibile farvi riferimento in un secondo momento nello script. È necessario dichiarare le variabili prima di usarle. Eseguire questa operazione usando la parola chiave `var`.  
   
-```javascript  
+```JavaScript  
 // A single declaration.  
 var count;    
 // Multiple declarations with a single var keyword.  
@@ -40,18 +45,18 @@ var count, amount, level;
 var count = 0, amount = 100;   
 ```  
   
- Se non viene inizializzata, la variabile nell'istruzione `var` assume automaticamente il valore `undefined`.  
+ Se non si inizializza la variabile nell'istruzione `var`,prende automaticamente il valore `undefined`.  
   
-## Denominazione di variabili  
- Nel linguaggio [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] viene fatta distinzione tra maiuscole e minuscole,  ovvero un nome di variabile come myCounter è diverso dal nome di variabile MYCounter.  La lunghezza dei nomi di variabile non è soggetta a limitazioni.  Le regole per la creazione di nomi di variabile validi sono le seguenti:  
+## <a name="naming-variables"></a>Denominazione delle variabili  
+ [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] effettua la distinzione tra maiuscole e minuscole. Ciò significa che un nome della variabile, come ad esempio **myCounter** è diverso dal nome della variabile **MYCounter**. I nomi delle variabili possono essere di qualsiasi lunghezza. Le regole per la creazione di nomi delle variabili validi sono riportate di seguito:  
   
--   Il primo carattere deve essere una lettera ASCII maiuscola o minuscola o un carattere di sottolineatura \(\_\).  Non è possibile utilizzare un numero come primo carattere.  
+-   Il primo carattere deve essere una lettera ASCII (maiuscolo o minuscola), oppure un carattere di sottolineatura (_). Si noti che non è possibile usare un numero come primo carattere.  
   
--   I caratteri successivi devono essere lettere, numeri o caratteri di sottolineatura \(\_\).  
+-   I caratteri successivi devono essere lettere, numeri o caratteri di sottolineatura (_).  
   
--   Il nome di una variabile non deve essere una [parola riservata](../javascript/reference/javascript-reserved-words.md).  
+-   Il nome della variabile non deve essere una [parola riservata](../javascript/reference/javascript-reserved-words.md).  
   
- Di seguito sono riportati alcuni esempi di nomi di variabile validi:  
+ Ecco alcuni esempi di nomi di variabile validi:  
   
 ```  
 _pagecount   
@@ -59,60 +64,60 @@ Part9
 Number_Items   
 ```  
   
- Di seguito sono riportati alcuni esempi di nomi di variabile non validi:  
+ Ecco alcuni esempi di nomi di variabile non validi:  
   
-```javascript  
+```JavaScript  
 // Cannot begin with a number.   
 99Balloons     
 // The ampersand (&) character is not a valid character for variable names.   
 Alpha&Beta   
 ```  
   
- Per dichiarare e inizializzare una variabile senza fornire un valore specifico, assegnarle il valore `null`.  Di seguito è riportato un esempio.  
+ Quando si desidera dichiarare una variabile e inizializzarla, ma non si desidera assegnare un valore particolare, assegnare il valore `null`. Di seguito è riportato un esempio.  
   
-```javascript  
+```JavaScript  
 var bestAge = null;  
 var muchTooOld = 3 * bestAge; // muchTooOld has the value 0.  
 ```  
   
- Se si dichiara una variabile senza assegnarle un valore, la variabile presenterà il valore `undefined`.  Di seguito è riportato un esempio.  
+ Se si dichiara una variabile senza assegnarle un valore, ha il valore `undefined`. Di seguito è riportato un esempio.  
   
-```javascript  
+```JavaScript  
 var currentCount;  
 // finalCount has the value NaN because currentCount is undefined.  
 var finalCount = 1 * currentCount;   
 ```  
   
- Il valore `null` equivale al numero 0, mentre `undefined` equivale al valore speciale `NaN` \(non numerico\).  Se confrontati, un valore `null` e un valore `undefined` sono uguali.  
+ Il valore `null` si comporta come il numero 0, mentre `undefined` si comporta come il valore speciale `NaN` (non un numero). Se si confronta un valore `null` e un valore `undefined`, essi risultano essere uguali.  
   
- È possibile dichiarare una variabile senza utilizzare la parola chiave `var` nella dichiarazione e assegnarle un valore.  Si tratta di una dichiarazione implicita.  
+ È possibile dichiarare una variabile senza usare la parola chiave `var` nella dichiarazione, e assegnarle un valore. Questa è una dichiarazione esplicita.  
   
-```javascript  
+```JavaScript  
 // The variable noStringAtAll is declared implicitly.  
 noStringAtAll = "";   
 ```  
   
- Non si può utilizzare una variabile che non è mai stata dichiarata.  
+ Non e possibile usare una variabile che non è mai stata dichiarata.  
   
-```javascript  
+```JavaScript  
 // Error. Length and width do not yet exist.  
 var area = length * width;   
 ```  
   
-## Coercizione  
- [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] non è un linguaggio fortemente tipizzato, contrariamente a linguaggi come C\+\+.  Ciò significa che le variabili JavaScript non dispongono di alcun tipo predeterminato.  Al contrario, il tipo di una variabile corrisponde al tipo del relativo valore.  Questo comportamento consente di considerare un valore come se fosse un valore di tipo diverso.  
+## <a name="coercion"></a>Coercizione  
+ [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] è un linguaggio debolmente tipizzato, in opposizione a linguaggi fortemente tipizzati come C++. Ciò significa che le variabili di JavaScript non dispongono di alcun tipo predeterminato. Al contrario, il tipo di una variabile è il tipo del suo valore. Questo comportamento consente di trattare un valore come se fosse di tipo diverso.  
   
- In [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] è possibile eseguire operazioni su valori di tipi diversi senza generare eccezioni.  L'interprete [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] esegue la conversione in modo implicito, o l'*assegnazione forzata*, del tipo di dati di un valore in un altro ed esegue l'operazione.  Le regole per la coercizione di valori stringa, numerici e booleani sono le seguenti:  
+ In [!INCLUDE[javascript](../javascript/includes/javascript-md.md)], è possibile eseguire operazioni su valori di diversi tipi senza generare un'eccezione. L'interprete [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] converte in modo implicito, o *assegna*, uno dei tipi di dati a quello degli altri, quindi esegue l'operazione. Le regole per l'assegnazione forzata della stringa, del numero e dei valori booleani sono i seguenti:  
   
 -   Se si aggiunge un numero e una stringa, il numero viene assegnato a una stringa.  
   
--   Se si aggiunge un valore booleano e una stringa, il valore booleano viene assegnato a una stringa.  
+-   Se si aggiunge un booleano e una stringa, il booleano viene assegnato a una stringa.  
   
--   Se si aggiunge un numero e un valore booleano, il valore booleano viene assegnato a un numero.  
+-   Se si aggiunge un numero e un booleano, il booleano viene assegnato a un numero.  
   
- Nell'esempio seguente un numero aggiunto a una stringa genera una stringa.  
+ Nell'esempio seguente, un numero aggiunto a una stringa produce una stringa.  
   
-```javascript  
+```JavaScript  
 var x = 2000;  
 var y = "Hello";  
 // The number is coerced to a string.  
@@ -123,4 +128,4 @@ document.write(x);
 // 2000Hello  
 ```  
   
- Le stringhe vengono convertite automaticamente in numeri equivalenti a scopo di confronto.  Per convertire esplicitamente una stringa in un Integer, utilizzare la [funzione parseInt](../javascript/reference/parseint-function-javascript.md).  Per convertire esplicitamente una stringa in un numero, utilizzare la [funzione parseFloat](../javascript/reference/parsefloat-function-javascript.md).
+ Le stringhe vengono automaticamente convertite in numeri equivalenti per il confronto. Per convertire esplicitamente una stringa in un intero, usare la [funzione parseInt](../javascript/reference/parseint-function-javascript.md). Per convertire esplicitamente una stringa in un numero, usare la [funzione parseFloat](../javascript/reference/parsefloat-function-javascript.md).

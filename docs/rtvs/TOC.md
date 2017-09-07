@@ -1,4 +1,5 @@
 # [R Tools per Visual Studio](index.md)
+## [Carico di lavoro relativo alle applicazioni analitiche e di analisi scientifica dei dati](data-science-workload.md)
 ## [Installazione](installation.md)
 ## [Introduzione a R](getting-started-with-r.md)
 ### [Esempi](getting-started-samples.md)

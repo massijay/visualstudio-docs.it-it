@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessQueryProperties::QueryProperty | Microsoft Docs
+title: IDebugProcessQueryProperties::QueryProperty | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,13 +32,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 8fc463cddeb679d0b5212178b98f91bc7deb57e3
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugprocessquerypropertiesqueryproperty"></a>IDebugProcessQueryProperties::QueryProperty
-This method queries for a specified property value of the debugging process.  
+Query di questo metodo per un valore della proprietà specificata del processo di debug.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT QueryProperty(  
@@ -52,9 +52,9 @@ int QueryProperty(
    out object                 pvarPropValue);  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `dwPropType`  
- [in] Definition of the property queried. The values are:  
+ [in] Definizione della proprietà eseguire una query. Possibili valori:  
   
 -   PROCESS_PROPERTY_COMMAND_LINE = 1  
   
@@ -63,13 +63,13 @@ int QueryProperty(
 -   PROCESS_PROPERTY_ENVIRONMENT_VARIABLES = 3  
   
  `pvarPropValue`  
- [out] The value of the property.  
+ [out] Il valore della proprietà.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- This method is seldom used.  
+## <a name="remarks"></a>Note  
+ Questo metodo viene utilizzato raramente.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugProcessQueryProperties](../../../extensibility/debugger/reference/idebugprocessqueryproperties.md)

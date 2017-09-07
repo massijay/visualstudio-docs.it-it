@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: My First WPF Desktop Application2 | Microsoft Docs'
+title: 'Procedura dettagliata: Prima applicazione desktop WPF | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,53 +32,53 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: d823714b04af8afc7c8b7d988ab746f41dc4ba68
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>Walkthrough: My First WPF Desktop Application
-<a name="introduction"></a> This walkthrough provides an introduction to Windows Presentation Foundation (WPF) development. You'll create a basic application that includes the elements that are common to most WPF desktop applications: XAML markup, code-behind, application definitions, controls, layout, data binding, and styles.  
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>Procedura dettagliata: Applicazione desktop WPF
+<a name="introduction"></a> Questa procedura dettagliata fornisce un'introduzione allo sviluppo di Windows Presentation Foundation (WPF). Verrà creata un'applicazione di base che include gli elementi comuni alla maggior parte delle applicazioni desktop WPF: markup XAML, code-behind, definizioni delle applicazioni, controlli, layout, data binding e stili.  
   
-##  <a name="Create_The_Application_Code_Files"></a> Creating the Application Project  
- In this section, you'll create the application infrastructure, which includes the project and a main window or form.  
+##  <a name="Create_The_Application_Code_Files"></a> Creazione del progetto di applicazione  
+ In questa sezione verrà creata l'infrastruttura dell'applicazione, che include il progetto e una finestra principale o un modulo.  
   
-#### <a name="to-create-the-project"></a>To create the project  
+#### <a name="to-create-the-project"></a>Per creare il progetto  
   
-1.  On the menu bar, choose **File**, **New**, **Project**.  
+1.  Nella barra dei menu scegliere **File**, **Nuovo**, **Progetto**.  
   
-2.  In the **New Project** dialog, expand either the **Visual C#** or **Visual Basic** node and choose the **Windows** node, and then expand the **Windows** node and choose the **Classic Desktop** node.  
+2.  Nella finestra di dialogo **Nuovo progetto** espandere il nodo **Visual C#** o **Visual Basic** e scegliere il nodo **Windows** , quindi espandere il nodo **Windows** e scegliere il nodo **Desktop classico** .  
   
-3.  In the template list, choose the **WPF Application** template.  
+3.  Nell'elenco dei modelli scegliere il modello **Applicazione WPF** .  
   
-4.  In the **Name** textbox enter `ExpenseIt`, and then choose the **OK** button.  
+4.  Nella finestra di dialogo **Nome** immettere `ExpenseIt`, quindi scegliere il pulsante **OK** .  
   
-     The project is created and the project files are added to **Solution Explorer**, and the designer for the default application window named **MainWindow.xaml** is displayed.  
+     Il progetto viene creato, i file del progetto vengono aggiunti a **Esplora soluzioni**e viene visualizzata la finestra di progettazione per la finestra dell'applicazione predefinita denominata **MainWindow.xaml** .  
   
-#### <a name="to-modify-the-main-window"></a>To modify the main window  
+#### <a name="to-modify-the-main-window"></a>Per modificare la finestra principale  
   
-1.  In the designer, choose the **MainWindow.xaml** tab if it isn't already the active designer tab.  
+1.  Nella finestra di progettazione scegliere la scheda **MainWindow.xaml** se non è già la scheda della finestra di progettazione attiva.  
   
-2.  If you're using C#, find the line `<Window x:Class="ExpenseIt.MainWindow"` and replace it with `<NavigationWindow x:Class="ExpenseIt.MainWindow"`.  
+2.  Se si usa C#, trovare la riga `<Window x:Class="ExpenseIt.MainWindow"` e sostituirla con `<NavigationWindow x:Class="ExpenseIt.MainWindow"`.  
   
-     If you're using Visual Basic, find the line `<Window x:Class=" MainWindow"` and replace it with `<NavigationWindow x:Class="MainWindow"`.  
+     Se si usa Visual Basic, trovare la riga `<Window x:Class=" MainWindow"` e sostituirla con `<NavigationWindow x:Class="MainWindow"`.  
   
-     Notice that when you change the `<Window` tag to `<NavigationWindow`, Intellisense automatically changes the closing tag to `</NavigationWindow>` as well.  
+     Quando si modifica il tag `<Window` in `<NavigationWindow`, Intellisense modifica automaticamente anche il tag di chiusura in `</NavigationWindow>` .  
   
     > [!NOTE]
-    >  After changing the tag, if the **Error List** window is open you may notice several errors. Don't worry, the changes you make in the next few steps will make these go away.  
+    >  Dopo aver modificato il tag, potrebbero essere visualizzati diversi errori se è aperta la finestra **Elenco errori** . Le modifiche che verranno apportate nei passaggi successivi elimineranno gli errori visualizzati.  
   
-3.  Choose the `<Grid>` and `</Grid>` tags and delete them.  
+3.  Scegliere i tag `<Grid>` e `</Grid>` ed eliminarli.  
   
-     A **NavigationWindow** can't contain other UI elements such as a **Grid**.  
+     **NavigationWindow** non può contenere altri elementi dell'interfaccia utente come il pannello **Grid**.  
   
-4.  In the **Properties** window, expand the **Common** category node and choose the **Title** property, and then enter `ExpenseIt` and press the **Enter** key.  
+4.  Nella finestra di dialogo **Proprietà** espandere il nodo della categoria **Common** e scegliere la proprietà **Title** , quindi immettere `ExpenseIt` e premere **INVIO** .  
   
-     Notice that the **Title** element in the XAML window changes to match the new value. You can modify XAML properties in either the XAML window or the **Properties** window, and the changes are synchronized.  
+     L'elemento **Title** nella finestra XAML viene modificato per corrispondere al nuovo valore. È possibile modificare le proprietà XAML nella finestra XAML o **Proprietà** e le modifiche risulteranno sincronizzate.  
   
-5.  In the XAML window, set the value of the **Height** element to `375`, and set the value of the **Width** property to `500`.  
+5.  Nella finestra XAML impostare il valore dell'elemento **Height** su `375`e il valore della proprietà **Width** su `500`.  
   
-     These elements correspond to the **Height** and **Width** properties, found in the **Layout** category in the **Properties** window.  
+     Questi elementi corrispondono alle proprietà **Height** e **Width** della categoria **Layout** nella finestra **Proprietà** .  
   
-     Your **MainWindow.xaml** file should now look like this in C#:  
+     Il file **MainWindow.xaml** dovrebbe essere simile a questo in C#:  
   
     ```xaml  
     <NavigationWindow x:Class="ExpenseIt.MainWindow"  
@@ -93,7 +93,7 @@ ms.lasthandoff: 08/28/2017
     </NavigationWindow>  
     ```  
   
-     Or like this in Visual Basic:  
+     O a questo in Visual Basic:  
   
     ```xaml  
     <NavigationWindow x:Class="MainWindow"  
@@ -108,30 +108,30 @@ ms.lasthandoff: 08/28/2017
     </NavigationWindow>  
     ```  
   
-#### <a name="to-modify-the-code-behind-file-c"></a>To modify the code-behind file (C#)  
+#### <a name="to-modify-the-code-behind-file-c"></a>Per modificare il file code-behind (C#)  
   
-1.  In **Solution Explorer**, expand the **MainWindow.xaml** node and open the **MainWindow.xaml.cs** file.  
+1.  In **Esplora soluzioni**espandere il nodo **MainWindow.xaml** e aprire il file **MainWindow.xaml.cs** .  
   
-2.  Find the line `public partial class MainWindow : Window` and replace it with `public partial class MainWindow : NavigationWindow`.  
+2.  Trovare la riga `public partial class MainWindow : Window` e sostituirla con `public partial class MainWindow : NavigationWindow`.  
   
-     This changes the `MainWindow` class to derive from `NavigationWindow`. In Visual Basic, this happens automatically when you change the window in XAML, so no code changes are necessary.  
+     La classe `MainWindow` che deve essere derivata da `NavigationWindow`viene modificata. In Visual Basic questa modifica viene eseguita automaticamente quando si modifica la finestra in XAML, quindi non sono necessarie modifiche al codice.  
   
-##  <a name="add_files_to_the_application"></a> Adding Files to the Application  
- In this section, you'll add two pages and an image to the application.  
+##  <a name="add_files_to_the_application"></a> Aggiunta di file all'applicazione  
+ In questa sezione si aggiungeranno due pagine e un'immagine all'applicazione.  
   
-#### <a name="to-add-a-home-screen"></a>To add a home screen  
+#### <a name="to-add-a-home-screen"></a>Per aggiungere una schermata iniziale  
   
-1.  In **Solution Explorer**, open the shortcut menu for the **ExpenseIt** node and choose **Add**, **Page**.  
+1.  In **Esplora soluzioni**aprire il menu di scelta rapida per il nodo **ExpenseIt** e scegliere **Aggiungi**, **Pagina**.  
   
-2.  In the **Add New Item** dialog, choose the **Name** text box and enter `ExpenseItHome`, and then choose the **Add** button.  
+2.  Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere la casella di testo **Nome** e immettere `ExpenseItHome`, quindi scegliere il pulsante **Aggiungi** .  
   
-     This page is the first window that is displayed when the application is launched.  
+     Questa pagina è la prima finestra visualizzata quando viene avviata l'applicazione.  
   
-3.  In the designer, choose the **ExpenseItHome.xaml** tab if it isn't already the active designer tab.  
+3.  Nella finestra di progettazione scegliere la scheda **ExpenseItHome.xaml** se non è già la scheda della finestra di progettazione attiva.  
   
-4.  Choose the `<Title>` element and change the title to **ExpenseIt - Home**.  
+4.  Scegliere l'elemento `<Title>` e modificare il titolo in **ExpenseIt – Home**.  
   
-     Your **ExpenseItHome.xaml** file should now look like this in C#:  
+     Il file **ExpenseItHome.xaml** dovrebbe essere simile a questo in C#:  
   
     ```xaml  
     <Page x:Class="ExpenseIt.ExpenseItHome"  
@@ -150,7 +150,7 @@ ms.lasthandoff: 08/28/2017
     </Page>  
     ```  
   
-     Or like this in Visual Basic:  
+     O a questo in Visual Basic:  
   
     ```xaml  
     <Page x:Class="ExpenseItHome"  
@@ -168,11 +168,11 @@ ms.lasthandoff: 08/28/2017
     </Page>  
     ```  
   
-5.  In the designer, choose the **MainWindow.xaml** tab.  
+5.  Nella finestra di progettazione scegliere la scheda **MainWindow.xaml** .  
   
-6.  Find the line `Title="ExpenseIt" Height="375" Width="500">` element and add a `Source="ExpenseItHome.xaml"` property.  
+6.  Trovare l'elemento `Title="ExpenseIt" Height="375" Width="500">` della riga e aggiungere una proprietà `Source="ExpenseItHome.xaml"` .  
   
-     This sets **ExpenseItHome.xaml** to be the first page opened when the application starts. Your **MainWindow.xaml** file should now look like this in C#:  
+     **ExpenseItHome.xaml** viene impostata come la prima pagina aperta all'avvio dell'applicazione. Il file **MainWindow.xaml** dovrebbe essere simile a questo in C#:  
   
     ```xaml  
     <NavigationWindow x:Class="ExpenseIt.MainWindow"  
@@ -187,7 +187,7 @@ ms.lasthandoff: 08/28/2017
     </NavigationWindow>  
     ```  
   
-     Or like this in Visual Basic:  
+     O a questo in Visual Basic:  
   
     ```xaml  
     NavigationWindow x:Class="MainWindow"  
@@ -202,21 +202,21 @@ ms.lasthandoff: 08/28/2017
     </NavigationWindow>  
     ```  
   
-     As with the properties that you set earlier, you could have set the `Source` property in the **Miscellaneous** category of the **Properties** window.  
+     Come per le proprietà impostate precedentemente, la proprietà `Source` potrebbe essere stata impostata nella categoria **Varie** della finestra **Proprietà** .  
   
-#### <a name="to-add-a-details-window"></a>To add a details window  
+#### <a name="to-add-a-details-window"></a>Per aggiungere una finestra dei dettagli  
   
-1.  In **Solution Explorer**, open the shortcut menu for the **ExpenseIt** node and choose **Add**, **Page**.  
+1.  In **Esplora soluzioni**aprire il menu di scelta rapida per il nodo **ExpenseIt** e scegliere **Aggiungi**, **Pagina**.  
   
-2.  In the **Add New Item** dialog, choose the **Name** text box and enter `ExpenseReportPage`, and then choose the **Add** button.  
+2.  Nella finestra di dialogo **Aggiungi nuovo elemento** scegliere la casella di testo **Nome** e immettere `ExpenseReportPage`, quindi scegliere il pulsante **Aggiungi** .  
   
-     This window will display an individual expense report.  
+     Questa finestra visualizzerà una singola nota spese.  
   
-3.  In the designer, choose the **ExpenseReportPage.xaml** tab if it isn't already the active designer tab.  
+3.  Nella finestra di progettazione scegliere la scheda **ExpenseReportPage.xaml** se non è già la scheda della finestra di progettazione attiva.  
   
-4.  Choose the `<Title>` element and change the title to **ExpenseIt - View Expense**.  
+4.  Scegliere l'elemento `<Title>` e modificare il titolo in **ExpenseIt – View Expense**.  
   
-     Your ExpenseReportPage.xaml file should now look like this in C#:  
+     Il file ExpenseReportPage.xaml dovrebbe essere simile a questo in C#:  
   
     ```xaml  
     Page x:Class="ExpenseIt.ExpenseReportPage"  
@@ -235,7 +235,7 @@ ms.lasthandoff: 08/28/2017
     </Page>  
     ```  
   
-     Or like this in Visual Basic:  
+     O a questo in Visual Basic:  
   
     ```xaml  
     <Page x:Class="ExpenseReportPage"  
@@ -253,26 +253,26 @@ ms.lasthandoff: 08/28/2017
     </Page>  
     ```  
   
-5.  On the menu bar, choose **Debug**, **Start Debugging** (or press F5) to run the application.  
+5.  Nella barra dei menu scegliere **Debug**, **Avvia debug** (o premere F5) per eseguire l'applicazione.  
   
-     The following illustration shows the application with the navigation window buttons.  
+     La figura seguente mostra l'applicazione con i pulsanti della finestra di navigazione.  
   
-     ![ExpenseIt sample screen shot](../designers/media/gettingstartedfigure1.png "GettingStartedFigure1")  
+     ![Schermata dell'esempio ExpenseIt](../designers/media/gettingstartedfigure1.png "GettingStartedFigure1")  
   
-6.  Close the application to return to design mode.  
+6.  Chiudere l'applicazione per tornare alla modalità di progettazione.  
   
-##  <a name="Add_Layout"></a> Creating the User Interface  
- Layout provides an ordered way to place elements, and also manages the size and position of those elements when a form is resized. In this section, you'll create a single-column grid with three rows. You'll add controls to the two pages, add some code, and finally define reusable styles for the controls.  
+##  <a name="Add_Layout"></a> Creazione dell'interfaccia utente  
+ Il layout consente di posizionare gli elementi in modo ordinato e di gestire le dimensioni e la posizione degli elementi quando un modulo viene ridimensionato. In questa sezione viene creata una griglia con una sola colonna e tre righe. Vengono aggiunti i controlli alle due pagine, viene aggiunto il codice e vengono definiti gli stili riutilizzabili per i controlli.  
   
-#### <a name="to-create-the-layout"></a>To create the layout  
+#### <a name="to-create-the-layout"></a>Per creare il layout  
   
-1.  Open **ExpenseItHome.xaml** and choose the `<Grid>` element.  
+1.  Aprire **ExpenseItHome.xaml** e scegliere l'elemento `<Grid>` .  
   
-2.  In the **Properties** window, expand the **Layout** category node and set the **Margin** values to `10`, `10`, `0`, and `10`, which corresponds to left, right, top and bottom margins.  
+2.  Nella finestra di dialogo **Proprietà** espandere il nodo della categoria **Layout** e impostare i valori **Margin** su `10`, `10`, `0`e `10`, che corrispondono ai margini sinistro, destro, superiore e inferiore.  
   
-     The element `Margin="10,0,10,10"` is added to the `<Grid>` element in the XAML. Once again, you could have entered these values directly in the XAML code instead of in the **Properties** window with the same result.  
+     L'elemento `Margin="10,0,10,10"` viene aggiunto all'elemento `<Grid>` in XAML. Anche in questo caso è possibile che i valori siano stati immessi direttamente nel codice XAML invece che nella finestra **Proprietà** con lo stesso risultato.  
   
-3.  Add the following XAML code to the `Grid` element to create the row and column definitions:  
+3.  Aggiungere il codice code XAML seguente all'elemento `Grid` per creare le definizioni di righe e colonne:  
   
     ```xaml  
     <Grid.ColumnDefinitions>  
@@ -285,11 +285,11 @@ ms.lasthandoff: 08/28/2017
     </Grid.RowDefinitions>  
     ```  
   
-#### <a name="to-add-controls"></a>To add controls  
+#### <a name="to-add-controls"></a>Per aggiungere controlli  
   
-1.  Open **ExpenseItHome.xaml**.  
+1.  Aprire **ExpenseItHome.xaml**.  
   
-2.  Add the following XAML code just above the `</Grid>` tag to create the `Border`, `ListBox` and `Button` controls.  
+2.  Aggiungere il codice XAML seguente subito sopra il tag `</Grid>` per creare i controlli `Border`, `ListBox` e `Button` .  
   
     ```xaml  
     <!-- People list -->  
@@ -309,31 +309,31 @@ ms.lasthandoff: 08/28/2017
   
     ```  
   
-     Notice that the controls appear in the design window. You could also have created the controls by dragging them from the **Toolbox** window onto the design window and setting their properties in the **Properties** window.  
+     I controlli vengono visualizzati nella finestra di progettazione. I controlli possono essere stati creati anche usando il trascinamento dalla finestra **Casella degli strumenti** alla finestra di progettazione e impostando le proprietà nella finestra **Proprietà** .  
   
-3.  Build and run the application. The following illustration shows the run time appearance of the controls that are created by the XAML in this procedure.  
+3.  Compilare ed eseguire l'applicazione. La figura seguente mostra l'aspetto in fase di esecuzione dei controlli creati da XAML in questa procedura.  
   
-     ![ExpenseIt sample screen shot](../designers/media/gettingstartedfigure2.png "GettingStartedFigure2")  
+     ![Schermata dell'esempio ExpenseIt](../designers/media/gettingstartedfigure2.png "GettingStartedFigure2")  
   
-4.  Close the application to return to design mode.  
+4.  Chiudere l'applicazione per tornare alla modalità di progettazione.  
   
-#### <a name="to-add-a-background-image"></a>To add a background image  
+#### <a name="to-add-a-background-image"></a>Per aggiungere un'immagine di sfondo  
   
-1.  Choose the following image and save it as `watermark.png`.  
+1.  Scegliere l'immagine seguente e salvarla come `watermark.png`.  
   
-     ![Watermark image for walkthrough](../designers/media/wpf_watermark.png "WPF_watermark")  
-  
-    > [!NOTE]
-    >  Alternatively you can create your own image and save it as `watermark.png`.  
-  
-2.  In **Solution Explorer**, open the shortcut menu for the **ExpenseIt** node and choose **Add**, **Existing Item**.  
-  
-3.  In the **Add Existing Item** dialog, find the **watermark.png** image that you just added, choose it and then choose the **Add** button.  
+     ![Immagine filigrana per la procedura dettagliata](../designers/media/wpf_watermark.png "WPF_watermark")  
   
     > [!NOTE]
-    >  You may need to expand the **File Types** list and choose **Image Files**.  
+    >  In alternativa, è possibile creare una propria immagine e salvarla come `watermark.png`.  
   
-4.  Open the **ExpenseItHome.xaml** file and add the following XAML code just above the `</Grid>` tag to create a background image:  
+2.  In **Esplora soluzioni**aprire il menu di scelta rapida per il nodo **ExpenseIt** e scegliere **Aggiungi**, **Elemento esistente**.  
+  
+3.  Nella finestra di dialogo **Aggiungi elemento esistente** trovare l'immagine **watermark.png** appena aggiunta, selezionarla e scegliere il pulsante **Aggiungi** .  
+  
+    > [!NOTE]
+    >  Potrebbe essere necessario espandere l'elenco **Tipi di file** e scegliere **File di immagine**.  
+  
+4.  Aprire il file **ExpenseItHome.xaml** e aggiungere il codice XAML seguente subito sopra il tag `</Grid>` per creare un'immagine di sfondo:  
   
     ```xaml  
     <Grid.Background>  
@@ -342,37 +342,37 @@ ms.lasthandoff: 08/28/2017
   
     ```  
   
-#### <a name="to-add-a-title"></a>To add a title  
+#### <a name="to-add-a-title"></a>Per aggiungere un titolo  
   
-1.  Open **ExpenseItHome.xaml**.  
+1.  Aprire **ExpenseItHome.xaml**.  
   
-2.  Find the line `<Grid.ColumnDefinitions>` and add the following just below it:  
+2.  Trovare la riga `<Grid.ColumnDefinitions>` e aggiungere quanto segue sotto di essa:  
   
     ```xaml  
     <ColumnDefinition Width="230" />  
   
     ```  
   
-     This creates an additional column to the left of the other columns with a fixed width of 230 pixels.  
+     Viene creata una colonna aggiuntiva a sinistra delle altre colonne, con una larghezza fissa di 230 pixel.  
   
-3.  Find the line `<Grid.RowDefinitions>` and add the following just below it:  
+3.  Trovare la riga `<Grid.RowDefinitions>` e aggiungere quanto segue sotto di essa:  
   
     ```xaml  
     <RowDefinition />  
   
     ```  
   
-     This adds a row to the top of the grid.  
+     Viene aggiunta una riga nella parte superiore della griglia.  
   
-4.  Move the controls to the second column by setting the `Grid.Column` value to 1. Move each control down a row, by increasing each `Grid.Row` value by 1.  
+4.  Spostare i controlli nella seconda colonna impostando il valore `Grid.Column` su 1. Spostare ogni controllo verso il basso di una riga, aumentando ogni valore `Grid.Row` di 1.  
   
-    1.  Find the line `<Border Grid.Column="0" Grid.Row="0" Height="35" Padding="5" Background="#4E87D4">`. Change `Grid.Column="0"` to `Grid.Column="1"` and change `Grid.Row="0"` to `Grid.Row="1"`.  
+    1.  Trovare la riga `<Border Grid.Column="0" Grid.Row="0" Height="35" Padding="5" Background="#4E87D4">`. Modificare `Grid.Column="0"` in `Grid.Column="1"` e `Grid.Row="0"` in `Grid.Row="1"`.  
   
-    2.  Find the line `<ListBox Name="peopleListBox" Grid.Column="0" Grid.Row="1"`. Change `Grid.Column="0"` to `Grid.Column="1"` and change `Grid.Row="1"` to `Grid.Row="2"`.  
+    2.  Trovare la riga `<ListBox Name="peopleListBox" Grid.Column="0" Grid.Row="1"`. Modificare `Grid.Column="0"` in `Grid.Column="1"` e `Grid.Row="1"` in `Grid.Row="2"`.  
   
-    3.  Find the line `<Button Grid.Column="0" Grid.Row="2" Margin="0,10,0,0" Width="125"`. Change `Grid.Column="0"` to `Grid.Column="1"` and change `Grid.Row="2"` to `Grid.Row="3"`.  
+    3.  Trovare la riga `<Button Grid.Column="0" Grid.Row="2" Margin="0,10,0,0" Width="125"`. Modificare `Grid.Column="0"` in `Grid.Column="1"` e `Grid.Row="2"` in `Grid.Row="3"`.  
   
-5.  Just before the `<Border` element add the following XAML code to display the title:  
+5.  Subito prima dell'elemento `<Border` , aggiungere il codice XAML seguente per visualizzare il titolo:  
   
     ```xaml  
     <Label Grid.Column="1" VerticalAlignment="Center" FontFamily="Trebuchet MS"   
@@ -382,7 +382,7 @@ ms.lasthandoff: 08/28/2017
   
     ```  
   
-     The contents of **ExpenseItHome.xaml** should now look like this in C#:  
+     Il contenuto di **ExpenseItHome.xaml** dovrebbe essere simile a questo in C#:  
   
     ```xaml  
     <Page x:Class="ExpenseIt.ExpenseItHome"  
@@ -430,7 +430,7 @@ ms.lasthandoff: 08/28/2017
     </Page>  
     ```  
   
-     Or like this in Visual Basic:  
+     O a questo in Visual Basic:  
   
     ```xaml  
     <Page x:Class="ExpenseItHome"  
@@ -478,17 +478,17 @@ ms.lasthandoff: 08/28/2017
     </Page>  
     ```  
   
-6.  If you build and run the application at this point, it should look like the following illustration:  
+6.  Se a questo punto si compila e si esegue l'applicazione, dovrebbe risultare simile alla figura seguente:  
   
-     ![ExpenseIt sample screen shot](../designers/media/gettingstartedfigure3.png "GettingStartedFigure3")  
+     ![Schermata dell'esempio ExpenseIt](../designers/media/gettingstartedfigure3.png "GettingStartedFigure3")  
   
-#### <a name="to-add-code-to-the-button"></a>To add code to the button  
+#### <a name="to-add-code-to-the-button"></a>Per aggiungere il codice al pulsante  
   
-1.  Open **ExpenseItHome.xaml**.  
+1.  Aprire **ExpenseItHome.xaml**.  
   
-2.  Chose the `<Button` element and add the following XAML code immediately after the **HorizontalAlignment="Right"** element: `Click="Button_Click"`.  
+2.  Scegliere l'elemento `<Button` e aggiungere il codice XAML seguente subito dopo l'elemento **HorizontalAlignment="Right"** : `Click="Button_Click"`.  
   
-     This adds an event handler for the button's `Click` event. The **<Button** element code should now look like this:  
+     Viene aggiunto un gestore eventi per l'evento `Click` di Button. Il codice dell'elemento **<Button** dovrebbe essere simile al seguente:  
   
     ```  
     <!-- View report button -->  
@@ -496,9 +496,9 @@ ms.lasthandoff: 08/28/2017
     Height="25" HorizontalAlignment="Right" Click="Button_Click">View</Button>  
     ```  
   
-3.  Open the **ExpenseItHome.xaml.cs** or **ExpenseItHome.xaml.vb** file.  
+3.  Aprire il file **ExpenseItHome.xaml.cs** o **ExpenseItHome.xaml.vb** .  
   
-4.  Add the following code to the `ExpenseItHome` class:  
+4.  Aggiungere il codice seguente alla classe `ExpenseItHome` :  
   
     ```csharp  
     private void Button_Click(object sender, RoutedEventArgs e)  
@@ -518,15 +518,15 @@ ms.lasthandoff: 08/28/2017
     End Sub  
     ```  
   
-     This event handler opens the Expense Report Page when the button is clicked.  
+     Questo gestore eventi apre la pagina della nota spese quando viene premuto il pulsante.  
   
-#### <a name="to-create-the-ui-for-the-report-page"></a>To create the UI for the report page  
+#### <a name="to-create-the-ui-for-the-report-page"></a>Per creare l'interfaccia utente per la pagina del report  
   
-1.  Open **ExpenseReportPage.xaml**.  
+1.  Aprire **ExpenseReportPage.xaml**.  
   
-     This page will display the expense report for the person that is selected on the Home page.  
+     Questa pagina visualizzerà la nota spese per la persona selezionata nella home page.  
   
-2.  Add the following XAML code between the `<Grid>` and `</Grid>` tags:  
+2.  Aggiungere il codice code XAML seguente tra i tag `<Grid>` e `</Grid>` :  
   
     ```xaml  
     <Grid.Background>  
@@ -590,23 +590,23 @@ ms.lasthandoff: 08/28/2017
     </Grid>  
     ```  
   
-     This UI is similar to the UI created for the home page, but the report data is displayed in a **DataGrid** control.  
+     Questa interfaccia utente è simile a quella creata per la home page, ma i dati del report vengono visualizzati in un controllo **DataGrid** .  
   
-3.  Build and run the application.  
+3.  Compilare ed eseguire l'applicazione.  
   
-4.  Choose the **View** button.  
+4.  Scegliere il pulsante **Visualizza** .  
   
-     The expense report page appears.  
+     Viene visualizzata la pagina della nota spese.  
   
-     The following illustration shows the Expense Report Page. Notice that the back navigation button is enabled.  
+     La figura seguente mostra la pagina della nota spese. Notare che il pulsante di navigazione all'indietro è abilitato.  
   
-     ![ExpenseIt sample screen shot](../designers/media/gettingstartedfigure4.png "GettingStartedFigure4")  
+     ![Schermata dell'esempio ExpenseIt](../designers/media/gettingstartedfigure4.png "GettingStartedFigure4")  
   
-#### <a name="to-style-controls"></a>To style controls  
+#### <a name="to-style-controls"></a>Controlli di stile  
   
-1.  Open the **App.xaml** file (C#) or **Application.xaml** file (Visual Basic).  
+1.  Aprire il file **App.xaml** (C#) o **Application.xaml** (Visual Basic).  
   
-2.  Add the following XAML between the `<Application.Resources>` and `</Application.Resources>` tags:  
+2.  Aggiungere il codice XAML seguente tra i tag `<Application.Resources>` e `</Application.Resources>` :  
   
     ```xaml  
     <!-- Header text style -->  
@@ -657,21 +657,21 @@ ms.lasthandoff: 08/28/2017
     </Style>  
     ```  
   
-     This XAML adds the following styles:  
+     Questo codice XAML aggiunge gli stili seguenti:  
   
-    -   `headerTextStyle`: To format the page title `Label`.  
+    -   `headerTextStyle`: per formattare il titolo della pagina `Label`.  
   
-    -   `labelStyle`: To format the `Label` controls.  
+    -   `labelStyle`: per formattare i controlli `Label` .  
   
-    -   `columnHeaderStyle`: To format the `DataGridColumnHeader`.  
+    -   `columnHeaderStyle`: per formattare `DataGridColumnHeader`.  
   
-    -   `listHeaderStyle`: To format the list header `Border` controls.  
+    -   `listHeaderStyle`: per formattare i controlli `Border` dell'intestazione dell'elenco.  
   
-    -   `listHeaderTextStyle`: To format the list header **Label**.  
+    -   `listHeaderTextStyle`: per formattare **Label**dell'intestazione dell'elenco.  
   
-    -   `buttonStyle`: To format the `Button` on the **ExpenseItHome.xaml** pppage.  
+    -   `buttonStyle`: per formattare `Button` nella pagina **ExpenseItHome.xaml** .  
   
-3.  Open **ExpenseItHome.xaml** and replace everything between the `<Grid>` and `</Grid>` elements with the following XAML  
+3.  Aprire **ExpenseItHome.xaml** e sostituire tutto il contenuto tra gli elementi `<Grid>` e `</Grid>` con il codice XAML seguente  
   
     ```xaml  
     <Grid.ColumnDefinitions>  
@@ -706,9 +706,9 @@ ms.lasthandoff: 08/28/2017
             </Grid.Background>  
     ```  
   
-     The properties such as `VerticalAlignment` and `FontFamily` that define the look of each control are removed and replaced by applying the styles.  
+     Le proprietà come `VerticalAlignment` e `FontFamily` che definiscono l'aspetto di ciascun controllo vengono rimosse e sostituite mediante l'applicazione degli stili.  
   
-4.  Open **ExpenseReportPage.xaml** and replace everything between the `<Grid>` and final `</Grid>` elements with the following XAML  
+4.  Aprire **ExpenseReportPage.xaml** e sostituire tutto il contenuto tra gli elementi `<Grid>` e gli elementi finali `</Grid>` con il codice XAML seguente  
   
     ```xaml  
     <Grid.Background>  
@@ -764,16 +764,16 @@ ms.lasthandoff: 08/28/2017
   
     ```  
   
-     This adds styles to the `<Label>` and `<Border>` elements.  
+     Vengono aggiunti gli stili agli elementi `<Label>` e `<Border>` .  
   
-## <a name="connecting-to-data"></a>Connecting to Data  
- In this section, you'll create a data provider and a data template, and then connect the controls to display the data.  
+## <a name="connecting-to-data"></a>Connessione ai dati  
+ In questa sezione verrà creato un provider di dati e un modello di dati e verranno connessi i controlli per visualizzare i dati.  
   
-#### <a name="to-bind-data-to-a-control"></a>To bind data to a control  
+#### <a name="to-bind-data-to-a-control"></a>Per associare i dati a un controllo  
   
-1.  Open **ExpenseItHome.xaml** and choose the `<Grid>` element..  
+1.  Aprire **ExpenseItHome.xaml** e scegliere l'elemento `<Grid>` .  
   
-2.  Add the following XAML code:  
+2.  Aggiungere il codice code XAML seguente:  
   
     ```xaml  
   
@@ -806,9 +806,9 @@ ms.lasthandoff: 08/28/2017
     </Grid.Resources>  
     ```  
   
-     This code creates an `XmlDataProvider` class that contains the data for each person. Normally this would be loaded as a file, but for simplicity the data is added inline.  
+     Questo codice crea una classe `XmlDataProvider` che contiene i dati per ogni persona. In genere questi dati vengono caricati sotto forma di file, ma in questo caso, per semplicità, verranno aggiunti inline.  
   
-3.  Inside the `<Grid.Resources>` element, add the following XAML code:  
+3.  Nell'elemento `<Grid.Resources>` aggiungere il codice XAML seguente:  
   
     ```xaml  
     <!-- Name item template -->  
@@ -817,9 +817,9 @@ ms.lasthandoff: 08/28/2017
     </DataTemplate>  
     ```  
   
-     This adds a `Data Template` which defines how to display the data in the **ListBox**.  
+     Viene aggiunto un `Data Template` che definisce come visualizzare i dati in **ListBox**.  
   
-4.  Replace the existing `<ListBox>` element with the following XAML.  
+4.  Sostituire l'elemento `<ListBox>` esistente con il codice XAML seguente.  
   
     ```xaml  
     <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2"   
@@ -828,13 +828,13 @@ ms.lasthandoff: 08/28/2017
     </ListBox>  
     ```  
   
-     This code binds the `ItemsSource` property of the `ListBox` to the data source and applies the data template as the `ItemTemplate`.  
+     Questo codice associa la proprietà `ItemsSource` di `ListBox` all'origine dati e applica il modello di dati come `ItemTemplate`.  
   
-#### <a name="to-connect-data-to-controls"></a>To connect data to controls  
+#### <a name="to-connect-data-to-controls"></a>Per connettere i dati ai controlli  
   
-1.  Open **ExpenseReportPage.xaml.vb** or **ExpenseReportPage.xaml.cs**.  
+1.  Aprire **ExpenseReportPage.xaml.vb** o **ExpenseReportPage.xaml.cs**.  
   
-2.  In C#, add the following constructor to the **ExpenseReportPage** class, or in Visual Basic replace the existing class with the following:  
+2.  In C# aggiungere il costruttore seguente alla classe **ExpenseReportPage** oppure sostituire la classe esistente in Visual Basic con quanto segue:  
   
     ```csharp  
     // Custom constructor to pass expense report data  
@@ -862,11 +862,11 @@ ms.lasthandoff: 08/28/2017
     End Class  
     ```  
   
-     This constructor takes a data object as a parameter. In this case the data object will contain the name of the selected person.  
+     Questo costruttore accetta un oggetto dati come parametro. In questo caso l'oggetto dati conterrà il nome della persona selezionata.  
   
-3.  Open **ExpenseItHome.xaml.vb** or **ExpenseItHome.xaml.cs**.  
+3.  Aprire **ExpenseItHome.xaml.vb** o **ExpenseItHome.xaml.cs**.  
   
-4.  Replace the `Click` event handler code with the following:  
+4.  Sostituire il codice `Click` del gestore eventi con quanto segue:  
   
     ```csharp  
     private void Button_Click(object sender, RoutedEventArgs e)  
@@ -886,13 +886,13 @@ ms.lasthandoff: 08/28/2017
     End Sub  
     ```  
   
-     This code calls the new constructor.  
+     Questo codice chiama il nuovo costruttore.  
   
-#### <a name="to-update-the-ui-with-data-templates"></a>To update the UI with data templates  
+#### <a name="to-update-the-ui-with-data-templates"></a>Per aggiornare l'interfaccia utente con i modelli di dati  
   
-1.  Open **ExpenseReportPage.xaml**.  
+1.  Aprire **ExpenseReportPage.xaml**.  
   
-2.  Replace the XAML code for the **Name** and **Department**`<StackPanel` elements with the following:  
+2.  Sostituire il codice XAML per gli elementi **Nome** e **Department**`<StackPanel` con quanto segue:  
   
     ```xaml  
     <!-- Name -->  
@@ -909,9 +909,9 @@ ms.lasthandoff: 08/28/2017
   
     ```  
   
-     This binds the **Label** controls to the appropriate data source properties.  
+     Associa i controlli **Label** alle proprietà dell'origine dati appropriate.  
   
-3.  Add the following XAML code inside the `<Grid>` element:  
+3.  Aggiungere il codice code XAML seguente nell'elemento `<Grid>` :  
   
     ```xaml  
     <!--Templates to display expense report data-->  
@@ -928,9 +928,9 @@ ms.lasthandoff: 08/28/2017
   
     ```  
   
-     This defines how to display the expense report data.  
+     Definisce come visualizzare i dati della nota spese.  
   
-4.  Replace the `<DataGrid>` element with the following:  
+4.  Sostituire l'elemento `<DataGrid>` con quanto segue:  
   
     ```xaml  
     <!-- Expense type and Amount table -->  
@@ -944,54 +944,54 @@ ms.lasthandoff: 08/28/2017
     </DataGrid>  
     ```  
   
-     This adds an **ItemSource** and defines the bindings for the expense items.  
+     Viene aggiunto **ItemSource** e vengono definite le associazioni per gli elementi di spesa.  
   
-5.  Build and run the application.  
+5.  Compilare ed eseguire l'applicazione.  
   
-6.  Choose a person and then choose the **View** button.  
+6.  Scegliere una persona, quindi fare clic sul pulsante **Visualizza** .  
   
-     The following illustration shows both pages of the ExpenseIt application with controls, layout, styles, data binding, and data templates applied.  
+     La figura seguente mostra le due pagine dell'applicazione ExpenseIt con i controlli, il layout, gli stili, il data binding e i modelli di dati applicati.  
   
-     ![ExpenseIt sample screen shots](../designers/media/gettingstartedfigure5.png "GettingStartedFigure5")  
+     ![Schermate dell'esempio ExpenseIt](../designers/media/gettingstartedfigure5.png "GettingStartedFigure5")  
   
-##  <a name="Best_Practices"></a> Best Practices  
- This sample demonstrates the basics of WPF and, consequently, does not follow application development best practices. For comprehensive coverage of WPF and .NET Framework application development best practices, see the following topics as appropriate:  
+##  <a name="Best_Practices"></a> Procedure consigliate  
+ Questo esempio illustra le nozioni di base di WPF e, di conseguenza, non segue le procedure consigliate per lo sviluppo di applicazioni. Per una descrizione completa delle procedure guidate di sviluppo di applicazioni di WPF e .NET Framework, vedere gli argomenti seguenti:  
   
--   Accessibility - [Accessibility Best Practices](https://msdn.microsoft.com/en-us/library/aa350483\(v=vs.100\).aspx)  
+-   Accessibilità: [Procedure consigliate per l'accesso facilitato](https://msdn.microsoft.com/en-us/library/aa350483\(v=vs.100\).aspx)  
   
--   Security - [Windows Presentation Foundation Security](https://msdn.microsoft.com/en-us/library/aa970906\(v=vs.100\).aspx)  
+-   Sicurezza: [Sicurezza di Windows Presentation Foundation](https://msdn.microsoft.com/en-us/library/aa970906\(v=vs.100\).aspx)  
   
--   Localization - [WPF Globalization and Localization Overview](https://msdn.microsoft.com/en-us/library/ms788718\(v=vs.100\).aspx)  
+-   Localizzazione: [Panoramica della globalizzazione e localizzazione WPF](https://msdn.microsoft.com/en-us/library/ms788718\(v=vs.100\).aspx)  
   
--   Performance - [Optimizing WPF Application Performance](https://msdn.microsoft.com/en-us/library/aa970683\(v=vs.100\).aspx)  
+-   Prestazioni: [Ottimizzazione delle prestazioni di applicazioni WPF](https://msdn.microsoft.com/en-us/library/aa970683\(v=vs.100\).aspx)  
   
-##  <a name="Whats_Next"></a> What's Next  
- You now have a number of techniques at your disposal for creating a desktop application by using WPF. You should now have a basic understanding of the building blocks of a data-bound WPF application. This topic is by no means exhaustive, but hopefully you also now have a sense of some of the possibilities you might discover on your own beyond the techniques in this topic.  
+##  <a name="Whats_Next"></a> Argomenti successivi  
+ A questo punto si hanno diverse tecniche a disposizione per creare un'applicazione desktop con WPF. Dovrebbe essere stata acquisita una conoscenza di base dei componenti fondamentali di un'applicazione WPF con associazione ai dati. Questo argomento non è esaustivo, ma intende fornire all'utente le informazioni e gli strumenti per approfondire autonomamente le numerose opzioni di cui dispone, che vanno oltre le tecniche descritte nell'argomento.  
   
- For more information about the WPF architecture and programming models, see the following topics:  
+ Per altre informazioni sull'architettura WPF e i modelli di programmazione, vedere gli argomenti seguenti:  
   
--   [WPF Architecture](https://msdn.microsoft.com/en-us/library/ms750441\(v=vs.100\).aspx)  
+-   [Architettura WPF](https://msdn.microsoft.com/en-us/library/ms750441\(v=vs.100\).aspx)  
   
--   [XAML Overview](https://msdn.microsoft.com/en-us/library/ms752059\(v=vs.100\).aspx)  
+-   [Panoramica di XAML](https://msdn.microsoft.com/en-us/library/ms752059\(v=vs.100\).aspx)  
   
--   [Dependency Properties Overview](https://msdn.microsoft.com/en-us/library/ms752914\(v=vs.100\).aspx)  
+-   [Panoramica sulle proprietà di dipendenza](https://msdn.microsoft.com/en-us/library/ms752914\(v=vs.100\).aspx)  
   
--   [Layout System](https://msdn.microsoft.com/en-us/library/ms745058\(v=vs.100\).aspx)  
+-   [Sistema di layout](https://msdn.microsoft.com/en-us/library/ms745058\(v=vs.100\).aspx)  
   
--   [Styles and Templates](https://msdn.microsoft.com/en-us/library/bb613570\(v=vs.100\).aspx)  
+-   [Stili e modelli](https://msdn.microsoft.com/en-us/library/bb613570\(v=vs.100\).aspx)  
   
- For more information about creating applications, see the following topics:  
+ Per altre informazioni sulla creazione di applicazioni, vedere gli argomenti seguenti:  
   
--   [Application Development Overview](https://msdn.microsoft.com/en-us/library/bb613549\(v=vs.100\).aspx)  
+-   [Panoramica sullo sviluppo di applicazioni](https://msdn.microsoft.com/en-us/library/bb613549\(v=vs.100\).aspx)  
   
--   [Controls Overview](https://msdn.microsoft.com/en-us/library/bb613551\(v=vs.100\).aspx)  
+-   [Panoramica sui controlli](https://msdn.microsoft.com/en-us/library/bb613551\(v=vs.100\).aspx)  
   
--   [Data Binding Overview](https://msdn.microsoft.com/en-us/library/ms752347\(v=vs.100\).aspx)  
+-   [Panoramica sul data binding](https://msdn.microsoft.com/en-us/library/ms752347\(v=vs.100\).aspx)  
   
--   [WPF Graphics, Animation, and Media Overview](https://msdn.microsoft.com/en-us/library/ms742562\(v=vs.100\).aspx)  
+-   [Panoramica sui grafici, l'animazione e gli elementi multimediali di WPF](https://msdn.microsoft.com/en-us/library/ms742562\(v=vs.100\).aspx)  
   
--   [Documents in WPF](https://msdn.microsoft.com/en-us/library/ms748388\(v=vs.100\).aspx)  
+-   [Documenti in WPF](https://msdn.microsoft.com/en-us/library/ms748388\(v=vs.100\).aspx)  
   
-## <a name="see-also"></a>See Also  
- [Walkthrough: Create a WPF Desktop Application connected to an Azure Mobile Service](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)   
- [Create Modern Desktop Applications with Windows Presentation Foundation](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)
+## <a name="see-also"></a>Vedere anche  
+ [Procedura dettagliata: Creare un'applicazione desktop WPF connessa a un servizio mobile di Azure](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)   
+ [Creare applicazioni desktop moderne con Windows Presentation Foundation](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md)

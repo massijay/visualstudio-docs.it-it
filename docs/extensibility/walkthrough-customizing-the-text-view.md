@@ -1,5 +1,5 @@
 ---
-title: 'Walkthrough: Customizing the Text View | Microsoft Docs'
+title: 'Procedura dettagliata: Personalizzazione della visualizzazione di testo | Documenti Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,78 +32,78 @@ ms.translationtype: MT
 ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
 ms.openlocfilehash: 3e70313d662d54b48823500a054b5aaa2a9401ae
 ms.contentlocale: it-it
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-customizing-the-text-view"></a>Walkthrough: Customizing the Text View
-You can customize a text view by modifying any of the following properties in its editor-format map:  
+# <a name="walkthrough-customizing-the-text-view"></a>Procedura dettagliata: Personalizzazione della visualizzazione di testo
+Modificando le proprietà seguenti nella mappa formato dell'editor, è possibile personalizzare una visualizzazione di testo:  
   
--   Indicator margin  
+-   Margine indicatore  
   
--   Insertion caret  
+-   Punto di inserimento  
   
--   Overwrite caret  
+-   Sovrascrittura del punto di inserimento  
   
--   Selected text  
+-   Testo selezionato  
   
--   Inactive selected text (that is, selected text that has lost focus)  
+-   Testo selezionato inattivo (vale a dire testo selezionato che perde lo stato attivo)  
   
--   Visible whitespace  
+-   Lo spazio vuoto  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Prerequisiti  
+ A partire da Visual Studio 2015, non installare Visual Studio SDK dall'area download. È incluso come funzionalità facoltativa nel programma di installazione di Visual Studio. È anche possibile installare il SDK di Visual Studio in un secondo momento. Per ulteriori informazioni, vedere [l'installazione di Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-mef-project"></a>Creating a MEF Project  
+## <a name="creating-a-mef-project"></a>Creazione di un progetto MEF  
   
-1.  Create a C# VSIX project. (In the **New Project** dialog, select **Visual C# / Extensibility**, then **VSIX Project**.) Name the solution `ViewPropertyTest`.  
+1.  Creare un progetto VSIX in c#. (Nel **nuovo progetto** finestra di dialogo Seleziona **Visual c# / Extensibility**, quindi **progetto VSIX**.) Denominare la soluzione `ViewPropertyTest`.  
   
-2.  Add an Editor Classifier item template to the project. For more information, see [Creating an Extension with an Editor Item Template](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2.  Aggiungere un modello di elemento di classificatore Editor al progetto. Per ulteriori informazioni, vedere [creazione di un'estensione con un modello di elemento Editor](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
   
-3.  Delete the existing class files.  
+3.  Eliminare i file di classe esistenti.  
   
-## <a name="defining-the-content-type"></a>Defining the Content Type  
+## <a name="defining-the-content-type"></a>Definizione del tipo di contenuto  
   
-1.  Add a class file and name it `ViewPropertyModifier`.  
+1.  Aggiungere un file di classe e assegnargli il nome `ViewPropertyModifier`.  
   
-2.  Add the following `using` directives:  
+2.  Aggiungere il seguente `using` direttive:  
   
-     [!code-csharp[VSSDKViewPropertyTest#1](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_1.cs)]  [!code-vb[VSSDKViewPropertyTest#1](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_1.vb)]  
+     [!code-csharp[N. 1 VSSDKViewPropertyTest](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_1.cs)][!code-vb[VSSDKViewPropertyTest n. 1  ](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_1.vb)]  
   
-3.  Declare a class named `TestViewCreationListener` that inherits from <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>. Export this class with the following attributes:  
+3.  Dichiarare una classe denominata `TestViewCreationListener` che eredita da <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>. Esportazione di questa classe con gli attributi seguenti:  
   
-    -   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> to specify the type of content to which this listener applies.  
+    -   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>Per specificare il tipo di contenuto a cui si applica questo listener.  
   
-    -   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> to specify the role of this listener.  
+    -   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>Per specificare il ruolo del listener.  
   
-     [!code-csharp[VSSDKViewPropertyTest#2](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_2.cs)] [!code-vb[VSSDKViewPropertyTest#2](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_2.vb)]  
+     [!code-csharp[N. 2 VSSDKViewPropertyTest](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_2.cs) ] [!code-vb [VSSDKViewPropertyTest n. 2](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_2.vb)]  
   
-4.  In this class, import the <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>.  
+4.  Questa classe, importare il <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>.  
   
-     [!code-csharp[VSSDKViewPropertyTest#3](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_3.cs)]  [!code-vb[VSSDKViewPropertyTest#3](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_3.vb)]  
+     [!code-csharp[N. 3 VSSDKViewPropertyTest](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_3.cs)][!code-vb[VSSDKViewPropertyTest n. 3  ](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_3.vb)]  
   
-## <a name="changing-the-view-properties"></a>Changing the View Properties  
+## <a name="changing-the-view-properties"></a>Modifica delle proprietà di visualizzazione  
   
-1.  Implement the <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> method so that the view properties are changed when the view is opened. To make the change, first find the <xref:System.Windows.ResourceDictionary> that corresponds to the aspect of the view you want to find. Then change the appropriate property in the resource dictionary and set the properties. Batch the calls to the <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.SetProperties%2A> method by calling the <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.BeginBatchUpdate%2A> method before you set the properties and then the <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.EndBatchUpdate%2A> after you set the properties.  
+1.  Implementare il <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> metodo in modo che le proprietà della vista vengono modificate quando viene aperta la visualizzazione. Per apportare la modifica, trovare il <xref:System.Windows.ResourceDictionary> che corrisponde all'aspetto della vista a cui si desidera trovare. Quindi, modificare la proprietà appropriata nel dizionario risorse e impostare le proprietà. Le chiamate a batch il <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.SetProperties%2A> metodo chiamando il <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.BeginBatchUpdate%2A> metodo prima di impostare le proprietà e quindi la <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMap.EndBatchUpdate%2A> dopo aver impostato le proprietà.  
   
-     [!code-csharp[VSSDKViewPropertyTest#4](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_4.cs)]  [!code-vb[VSSDKViewPropertyTest#4](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_4.vb)]  
+     [!code-csharp[N. 4 VSSDKViewPropertyTest](../extensibility/codesnippet/CSharp/walkthrough-customizing-the-text-view_4.cs)][!code-vb[VSSDKViewPropertyTest n. 4  ](../extensibility/codesnippet/VisualBasic/walkthrough-customizing-the-text-view_4.vb)]  
   
-## <a name="building-and-testing-the-code"></a>Building and Testing the Code  
+## <a name="building-and-testing-the-code"></a>Compilazione e testing del codice  
   
-1.  Build the solution.  
+1.  Compilare la soluzione.  
   
-     When you run this project in the debugger, a second instance of Visual Studio is instantiated.  
+     Quando si esegue questo progetto nel debugger, viene creata una seconda istanza di Visual Studio.  
   
-2.  Create a text file and type some text.  
+2.  Creare un file di testo e digitare alcune parole.  
   
-    -   The insertion caret should be magenta and the overwrite caret should be turquoise.  
+    -   Il punto di inserimento deve essere magenta e il punto di inserimento di sovrascrittura deve essere turchese.  
   
-    -   The indicator margin (to the left of the text view) should be light green.  
+    -   Il margine indicatore (a sinistra della visualizzazione di testo) deve essere una luce verde.  
   
-3.  Select the text you just typed. The color of the selected text should be light pink.  
+3.  Selezionare il testo digitato. Il colore del testo selezionato deve essere chiaro rosa.  
   
-4.  While the text is selected, click anywhere outside the text window. The color of the selected text should be dark pink.  
+4.  Mentre il testo è selezionato, fare clic all'esterno dell'intervallo di testo. Il colore del testo selezionato deve essere Rosa scuro.  
   
-5.  Turn on visible whitespace. (On the **Edit** menu, point to **Advanced** and then click **View White Space**). Type some tabs in the text. Red arrows that represent the tabs should be displayed.  
+5.  Attivare lo spazio vuoto. (Nel **modifica** dal menu **avanzate** e quindi fare clic su **Mostra/Nascondi spazi**). Digitare il testo alcune schede. Le frecce rosse indicano che rappresentano le schede devono essere visualizzate.  
   
-## <a name="see-also"></a>See Also  
- [Language Service and Editor Extension Points](../extensibility/language-service-and-editor-extension-points.md)
+## <a name="see-also"></a>Vedere anche  
+ [Punti di estensione dei servizi di linguaggio e dell'editor](../extensibility/language-service-and-editor-extension-points.md)

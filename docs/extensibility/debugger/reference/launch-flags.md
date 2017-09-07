@@ -1,5 +1,5 @@
 ---
-title: LAUNCH_FLAGS | Microsoft Docs
+title: LAUNCH_FLAGS | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 2f838e559d4c33a7bb807d5b0360a51ea7ff0d74
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="launchflags"></a>LAUNCH_FLAGS
-Specifies the debug launch flags.  
+Specifica i flag di avvio del debug.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 enum enum_LAUNCH_FLAGS {   
@@ -61,31 +61,31 @@ public enum enum_LAUNCH_FLAGS {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
  LAUNCH_DEBUG  
- Launches the process for debugging.  
+ Avvia il processo per il debug.  
   
  LAUNCH_NODEBUG  
- Launches the process without debugging it.  
+ Avvia il processo senza eseguirne il debug.  
   
  LAUNCH_ENABLE_ENC  
- DEPRECATED, DO NOT USE.  
+ DEPRECATO, NON USARE.  
   
  LAUNCH_MERGE_ENV  
- Launches the process and merges the environment with the launching host.  
+ Avvia il processo e unisce l'ambiente con l'host di avvio.  
   
-## <a name="remarks"></a>Remarks  
- These values are passed as an argument to the [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) method.  
+## <a name="remarks"></a>Note  
+ Questi valori vengono passati come argomento per il [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) metodo.  
   
- These flags may be combined with a bitwise `OR`.  
+ Questi flag possono essere combinati con un bit per bit `OR`.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisiti  
+ Intestazione: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)

@@ -1,5 +1,5 @@
 ---
-title: CONSTRUCTOR_ENUM | Microsoft Docs
+title: CONSTRUCTOR_ENUM | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 22447cd6eadf1e4c094815112218bbd64877e9a3
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="constructorenum"></a>CONSTRUCTOR_ENUM
-Selects different types of constructors.  
+Seleziona i diversi tipi di costruttori.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 typedef enum ConstructorMatchOptions {   
@@ -58,26 +58,26 @@ public enum ConstructorMatchOptions {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
  crAll  
- Selects all constructors.  
+ Seleziona tutti i costruttori.  
   
  crNonStatic  
- Selects non-static constructors.  
+ Seleziona i costruttori non statico.  
   
  crStatic  
- Selects static constructors.  
+ Seleziona i costruttori statici.  
   
-## <a name="remarks"></a>Remarks  
- Passed as an argument to the [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md) method.  
+## <a name="remarks"></a>Note  
+ Passata come argomento per il [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md) metodo.  
   
-## <a name="requirements"></a>Requirements  
- Header: sh.h  
+## <a name="requirements"></a>Requisiti  
+ Intestazione: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md)
