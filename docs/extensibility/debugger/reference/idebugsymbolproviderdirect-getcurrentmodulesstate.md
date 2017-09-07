@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProviderDirect::GetCurrentModulesState | Microsoft Docs
+title: IDebugSymbolProviderDirect::GetCurrentModulesState | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: ce289cb350dfe285d8f2f28d0cd16ed7444fd166
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesstate"></a>IDebugSymbolProviderDirect::GetCurrentModulesState
-Retrieves information about the symbol group of which the symbol provider is a member.  
+Recupera informazioni sul gruppo di simbolo di cui il provider di simbolo è un membro.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetCurrentModulesState(  
@@ -55,18 +55,18 @@ int GetCurrentModulesState(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `pState`  
- [out] The state of the symbol provider group.  
+ [out] Lo stato del gruppo di provider di simboli.  
   
  `count`  
- [out] Number of modules in the group.  
+ [out] Numero di moduli del gruppo.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- The state is changed whenever a module is added to, or removed from, the symbol group. Therefore, this method can be used to detect if a symbol group has been modified.  
+## <a name="remarks"></a>Note  
+ Lo stato viene modificato ogni volta che un modulo viene aggiunto o rimosso dal gruppo di simboli. Pertanto, questo metodo può essere utilizzato per rilevare se un gruppo di simbolo è stato modificato.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

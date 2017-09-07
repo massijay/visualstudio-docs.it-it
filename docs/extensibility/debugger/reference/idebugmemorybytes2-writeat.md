@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryBytes2::WriteAt | Microsoft Docs
+title: IDebugMemoryBytes2::WriteAt | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,13 +35,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 14d5aa4fa026f27f6b083d656cd5df3f8b7d7f41
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
-Writes the specified number of bytes of memory, starting at the specified address.  
+Scrive il numero specificato di byte di memoria, a partire dall'indirizzo specificato.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT WriteAt(   
@@ -59,22 +59,22 @@ int WriteAt(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `pStartContext`  
- [in] The [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) object that specifies where to start writing bytes.  
+ [in] Il [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) oggetto che specifica in cui iniziare la scrittura di byte.  
   
  `dwCount`  
- [in] The number of bytes to write.  
+ [in] Il numero di byte da scrivere.  
   
  `rgbMemory`  
- [in] The bytes to write. This array is assumed to be at least `dwCount` bytes in size.  
+ [in] Byte da scrivere. Questa matrice viene considerata almeno `dwCount` byte.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns `S_FALSE` if not all bytes could be written or returns an error code (typically `E_FAIL`).  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce `S_FALSE` se non tutti i byte può essere scritta o restituisce un codice di errore (in genere `E_FAIL`).  
   
-## <a name="remarks"></a>Remarks  
- If the starting address is not within the memory window represented by this [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) object, no writing occurs and an error code of `E_FAIL` is returned — even if the amount to write overlaps into the memory space.  
+## <a name="remarks"></a>Note  
+ Se l'indirizzo iniziale non è presente all'interno della finestra memoria rappresentata da questo [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) dell'oggetto, si verifica alcun la scrittura e un codice di errore `E_FAIL` viene restituito, anche se la quantità di scrivere si sovrappone nello spazio di memoria.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

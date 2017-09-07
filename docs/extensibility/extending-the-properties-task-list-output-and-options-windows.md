@@ -1,5 +1,5 @@
 ---
-title: Extending the Properties, Task List, Output, and Options Windows | Microsoft Docs
+title: "Estensione di proprietà, elenco attività, Output e opzioni Windows | Documenti Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,37 +37,37 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5f16658320df87a479d9669fadf269856f80a67a
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="extending-the-properties-task-list-output-and-options-windows"></a>Extending the Properties, Task List, Output, and Options Windows
-You can access any tool window in Visual Studio. This walkthrough shows how to integrate information about your tool window into a new **Options** page and a new setting on the **Properties** page, and also how to write to the **Task List** and **Output** windows.  
+# <a name="extending-the-properties-task-list-output-and-options-windows"></a>Estensione di proprietà, elenco attività, Output e opzioni Windows
+È possibile accedere a qualsiasi finestra degli strumenti in Visual Studio. Questa procedura dettagliata viene illustrato come integrare informazioni sulla finestra di strumento in un nuovo **opzioni** pagina e una nuova impostazione nel **proprietà** pagina, nonché su come scrivere il **elenco attività** e **Output** windows.  
   
-## <a name="prerequisites"></a>Prerequisites  
- Starting in Visual Studio 2015, you do not install the Visual Studio SDK from the download center. It is included as an optional feature in Visual Studio setup. You can also install the VS SDK later on. For more information, see [Installing the Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Prerequisiti  
+ A partire da Visual Studio 2015, non installare Visual Studio SDK dall'area download. È incluso come funzionalità facoltativa nel programma di installazione di Visual Studio. È anche possibile installare il SDK di Visual Studio in un secondo momento. Per ulteriori informazioni, vedere [l'installazione di Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="create-an-extension-with-a-tool-window"></a>Create an Extension with a Tool Window  
+## <a name="create-an-extension-with-a-tool-window"></a>Creare un'estensione con una finestra degli strumenti  
   
-1.  Create a project named **TodoList** using the VSIX template, and add a custom tool window item template named **TodoWindow**.  
-  
-    > [!NOTE]
-    >  For more information about creating an extension with a tool window, see [Creating an Extension with a Tool Window](../extensibility/creating-an-extension-with-a-tool-window.md).  
-  
-## <a name="set-up-the-tool-window"></a>Set Up the Tool Window  
- Add a TextBox in which to type a new ToDo item, a Button to add the new item to the list, and a ListBox to display the items on the list.  
-  
-1.  In TodoWindow.xaml, delete the Button, TextBox, and StackPanel controls from the UserControl.  
+1.  Creare un progetto denominato **TodoList** utilizzando il modello di progetto VSIX e aggiungere un modello di elemento della finestra dello strumento personalizzato denominato **TodoWindow**.  
   
     > [!NOTE]
-    >  This does not delete the **button1_Click** event handler, which you will reuse in a later step.  
+    >  Per ulteriori informazioni sulla creazione di un'estensione con una finestra degli strumenti, vedere [creazione di un'estensione con una finestra degli strumenti](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-2.  From the **All WPF Controls** section of the **Toolbox**, drag a **Canvas** control to the grid.  
+## <a name="set-up-the-tool-window"></a>Impostare la finestra degli strumenti  
+ Aggiungere una casella di testo in cui digitare un nuovo elemento di attività, un pulsante per aggiungere il nuovo elemento all'elenco e una casella di riepilogo per visualizzare gli elementi nell'elenco.  
   
-3.  Drag a **TextBox**, a **Button**, and a **ListBox** to the Canvas. Arrange the elements so that the TextBox and the Button are on the same level, and the ListBox fills the rest of the window below them, as in the picture below.  
+1.  In TodoWindow.xaml, eliminare i controlli pulsante e casella di testo StackPanel dalla UserControl.  
   
-     ![Finished Tool Window](../extensibility/media/t5-toolwindow.png "T5-ToolWindow")  
+    > [!NOTE]
+    >  Questa operazione non elimina il **button1_Click** gestore eventi, che verrà riutilizzata in un passaggio successivo.  
   
-4.  In the XAML pane, find the Button and set its Content property to **Add**. Reconnect the button event handler to the Button control by adding a `Click="button1_Click"` attribute. The Canvas block should look like this:  
+2.  Dal **tutti i controlli WPF** sezione il **della casella degli strumenti**, trascinare un **area di disegno** controllo alla griglia.  
+  
+3.  Trascinare un **TextBox**, **pulsante**e un **ListBox** all'area di disegno. Disporre gli elementi in modo che la casella di testo e il pulsante allo stesso livello, la casella di riepilogo riempie il resto della finestra di sotto di essi, come illustrato nell'immagine seguente.  
+  
+     ![Finestra degli strumenti completato](../extensibility/media/t5-toolwindow.png "T5 ToolWindow")  
+  
+4.  Nel riquadro di XAML, trovare il pulsante e impostarne la proprietà di contenuto su **Aggiungi**. Riconnettere il gestore dell'evento pulsante al controllo Button aggiungendo un `Click="button1_Click"` attributo. Il blocco dell'area di disegno dovrebbe essere simile al seguente:  
   
     ```xml  
     <Canvas HorizontalAlignment="Left" Width="306">  
@@ -77,15 +77,15 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     </Canvas>  
     ```  
   
-#### <a name="customize-the-constructor"></a>Customize the constructor  
+#### <a name="customize-the-constructor"></a>Personalizzare il costruttore  
   
-1.  In the TodoWindowControl.xaml.cs file, add the following using statement:  
+1.  Nel file TodoWindowControl.xaml.cs, aggiungere la seguente istruzione using:  
   
     ```csharp  
     using System;  
     ```  
   
-2.  Add a public reference to the TodoWindow and have the TodoWindowControl constructor take a TodoWindow parameter. The code should look like this:  
+2.  Aggiungere un riferimento di TodoWindow pubblico in modo che il costruttore TodoWindowControl accettano un parametro TodoWindow. Il codice dovrebbe essere simile al seguente:  
   
     ```csharp  
     public TodoWindow parent;  
@@ -97,7 +97,7 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-3.  In TodoWindow.cs, change TodoWindowControl constructor to include the TodoWindow parameter. The code should look like this:  
+3.  In TodoWindow.cs, modificare il costruttore TodoWindowControl per includere il parametro TodoWindow. Il codice dovrebbe essere simile al seguente:  
   
     ```csharp  
     public TodoWindow() : base(null)  
@@ -110,10 +110,10 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-## <a name="create-an-options-page"></a>Create an Options Page  
- You can provide a page in the **Options** dialog box so that users can change settings for the tool window. Creating an Options page requires both a class that describes the options and an entry in the TodoListPackage.cs or TodoListPackage.vb file.  
+## <a name="create-an-options-page"></a>Creare una pagina di opzioni  
+ È possibile fornire una pagina di **opzioni** nella finestra di dialogo in modo che gli utenti possono modificare le impostazioni per la finestra degli strumenti. La creazione di una pagina di opzioni richiede sia una classe che descrive le opzioni e una voce nel file TodoListPackage.cs o TodoListPackage.vb.  
   
-1.  Add a class named `ToolsOptions.cs`. Make the ToolsOptions class inherit from <xref:Microsoft.VisualStudio.Shell.DialogPage>.  
+1.  Aggiungere una classe denominata `ToolsOptions.cs`. Assicurarsi che la classe Options erediti dal <xref:Microsoft.VisualStudio.Shell.DialogPage>.  
   
     ```csharp  
     class ToolsOptions : DialogPage  
@@ -121,13 +121,13 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-2.  Add the following using statement:  
+2.  Aggiungere la seguente istruzione using:  
   
     ```csharp  
     using Microsoft.VisualStudio.Shell;  
     ```  
   
-3.  The Options page in this walkthrough provides only one option named DaysAhead. Add a private field named **daysAhead** and a property named **DaysAhead** to the ToolsOptions class:  
+3.  La pagina di opzioni in questa procedura dettagliata fornisce solo un'opzione denominata DaysAhead. Aggiungere un campo privato denominato **daysAhead** e una proprietà denominata **DaysAhead** alla classe Options:  
   
     ```csharp  
     private double daysAhead;  
@@ -139,36 +139,36 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
- Now you must make the project aware of this Options page.  
+ A questo punto è necessario compilare il progetto conoscenza di questa pagina di opzioni.  
   
-#### <a name="make-the-options-page-available-to-users"></a>Make the Options page available to users  
+#### <a name="make-the-options-page-available-to-users"></a>Rendere disponibile la pagina di opzioni per gli utenti  
   
-1.  In TodoWindowPackage.cs, add a <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> to the TodoWindowPackage class:  
+1.  In TodoWindowPackage.cs, aggiungere un <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> alla classe TodoWindowPackage:  
   
     ```csharp  
     [ProvideOptionPage(typeof(ToolsOptions), "ToDo", "General", 101, 106, true)]  
     ```  
   
-2.  The first parameter to the ProvideOptionPage constructor is the type of the class ToolsOptions, which you created earlier. The second parameter, "ToDo", is the name of the category in the **Options** dialog box. The third parameter, "General", is the name of the subcategory of the **Options** dialog box where the Options page will be available. The next two parameters are resource IDs for strings; the first is the name of the category, and the second is the name of the subcategory. The final parameter determines whether this page can be accessed by using automation.  
+2.  Il primo parametro al costruttore ProvideOptionPage è il tipo di classe Options, creato in precedenza. Il secondo parametro, l'attività"", è il nome della categoria nella finestra di **opzioni** la finestra di dialogo. Il terzo parametro, "Generale", è il nome della sottocategoria del **opzioni** la finestra di dialogo in cui sarà disponibile la pagina di opzioni. I due parametri successivi sono ID di risorsa per le stringhe; il primo è il nome della categoria e il secondo è il nome della sottocategoria. L'ultimo parametro determina se questa pagina è possibile accedere utilizzando l'automazione.  
   
-     When a user opens your Options page, it should resemble the following picture.  
+     Quando un utente apre la pagina delle opzioni, il risultato sarà simile nell'immagine seguente.  
   
-     ![Options Page](../extensibility/media/t5optionspage.gif "T5OptionsPage")  
+     ![Pagina Opzioni](../extensibility/media/t5optionspage.gif "T5OptionsPage")  
   
-     Notice the category **ToDo** and the subcategory **General**.  
+     Si noti la categoria **ToDo** e la sottocategoria **generale**.  
   
-## <a name="make-data-available-to-the-properties-window"></a>Make Data Available to the Properties Window  
- You can make To Do list information available by creating a class named TodoItem that stores information about the individual items in the ToDo list.  
+## <a name="make-data-available-to-the-properties-window"></a>Rendere disponibili i dati alla finestra proprietà  
+ È possibile rendere disponibile per eseguire l'elenco di informazioni tramite la creazione di una classe denominata TodoItem che archivia informazioni sui singoli elementi nell'elenco attività.  
   
-1.  Add a class named `TodoItem.cs`.  
+1.  Aggiungere una classe denominata `TodoItem.cs`.  
   
-     When the tool window is available to users, the items in the ListBox will be represented by TodoItems. When the user selects one of these items in the ListBox, the **Properties** window will display information about the item.  
+     Quando la finestra degli strumenti è disponibile per gli utenti, gli elementi nella casella di riepilogo saranno rappresentati da TodoItems. Quando l'utente seleziona una di queste voci nella casella di riepilogo, il **proprietà** finestra vengono visualizzate informazioni sull'elemento.  
   
-     To make data available in the **Properties** window, you turn the data into public properties that have two special attributes, `Description` and `Category`. `Description` is the text that appears at the bottom of the **Properties** window. `Category` determines where the property should appear when the **Properties** window is displayed in the **Categorized** view. In the following picture, the **Properties** window is in **Categorized** view, the **Name** property in the **ToDo Fields** category is selected, and the description of the **Name** property is displayed at the bottom of the window.  
+     Per rendere disponibili in dati di **proprietà** finestra, di trasformare i dati in proprietà pubbliche che dispongono di due attributi speciali, `Description` e `Category`. `Description`è il testo visualizzato in fondo il **proprietà** finestra. `Category`Determina dove dovrebbe essere visualizzata quando la proprietà di **proprietà** verrà visualizzata la finestra nel **categoria** visualizzazione. Nell'immagine seguente, il **proprietà** finestra è in **categoria** visualizzazione, il **nome** proprietà nel **ToDo Fields** categoria selezionata e la descrizione di **nome** proprietà viene visualizzata nella parte inferiore della finestra.  
   
-     ![Properties Window](../extensibility/media/t5properties.png "T5Properties")  
+     ![Finestra proprietà](../extensibility/media/t5properties.png "T5Properties")  
   
-2.  Add the following using statements the TodoItem.cs file.  
+2.  Aggiungere le seguenti istruzioni using il file todoitem. cs.  
   
     ```csharp  
     using System.ComponentModel;  
@@ -176,7 +176,7 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     using Microsoft.VisualStudio.Shell.Interop;  
     ```  
   
-3.  Add the `public` access modifier to the class declaration.  
+3.  Aggiungere il `public` modificatore di accesso alla dichiarazione di classe.  
   
     ```csharp  
     public class TodoItem  
@@ -184,7 +184,7 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-     Add the two properties, Name and DueDate. We'll do the UpdateList() and CheckForErrors() later.  
+     Aggiungere le due proprietà, nome e DueDate. Faremo il UpdateList() e CheckForErrors() in un secondo momento.  
   
     ```csharp  
     public class TodoItem  
@@ -219,7 +219,7 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-4.  Add a private reference to the user control. Add a constructor that takes the user control and the name for this ToDo item. To find the value for daysAhead, it gets the Options page property.  
+4.  Aggiungere un riferimento privato per il controllo utente. Aggiungere un costruttore che accetta il controllo utente e il nome per questo elemento di attività. Per trovare il valore di daysAhead, ottiene la proprietà di pagina di opzioni.  
   
     ```csharp  
     private TodoWindowControl parent;  
@@ -248,7 +248,7 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-5.  Because instances of the `TodoItem` class will be stored in the ListBox and the ListBox will call the `ToString` function, you must overload the `ToString` function. Add the following code to TodoItem.cs, after the constructor and before the end of the class.  
+5.  Perché le istanze del `TodoItem` classe verrà archiviata nella casella di riepilogo e la casella di riepilogo chiamerà il `ToString` funzione, è necessario eseguire l'overload di `ToString` (funzione). Todoitem. cs, aggiungere il codice seguente dopo il costruttore e prima della fine della classe.  
   
     ```csharp  
     public override string ToString()  
@@ -257,7 +257,7 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-6.  In TodoWindowControl.xaml.cs, add stub methods to the TodoWindowControl class for the `CheckForError` and `UpdateList` methods. Put them after the ProcessDialogChar and before the end of the file.  
+6.  In TodoWindowControl.xaml.cs, aggiungere i metodi stub per la classe TodoWindowControl per il `CheckForError` e `UpdateList` metodi. Inserirli dopo il ProcessDialogChar e prima della fine del file.  
   
     ```csharp  
     public void CheckForErrors()  
@@ -268,14 +268,14 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-     The `CheckForError` method will call a method that has the same name in the parent object, and that method will check whether any errors have occurred and handle them correctly. The `UpdateList` method will update the ListBox in the parent control; the method is called when the `Name` and `DueDate` properties in this class change. They will be implemented later.  
+     Il `CheckForError` metodo verrà chiamato un metodo che ha lo stesso nome nell'oggetto padre e il metodo controllerà se tutti gli errori si sono verificati e gestiscono in modo corretto. Il `UpdateList` metodo aggiornerà la casella di riepilogo del controllo padre, il metodo viene chiamato quando il `Name` e `DueDate` proprietà in questa modifica di classe. Vengono implementati in un secondo momento.  
   
-## <a name="integrate-into-the-properties-window"></a>Integrate into the Properties Window  
- Now write the code that manages the ListBox, which will be tied to the **Properties** window.  
+## <a name="integrate-into-the-properties-window"></a>Integrazione nella finestra proprietà  
+ Ora scrivere il codice che gestisce una casella di riepilogo, che verrà collegato per il **proprietà** finestra.  
   
- You must change the button click handler to read the TextBox, create a TodoItem, and adds it to the ListBox.  
+ È necessario modificare il pulsante, fare clic sul gestore di leggere la casella di testo, creare un oggetto TodoItem e lo aggiunge alla casella di riepilogo.  
   
-1.  Replace the existing `button1_Click` function with code that creates a new TodoItem and adds it to the ListBox. It calls TrackSelection(), which will be defined later.  
+1.  Sostituire `button1_Click` funzione con il codice che crea un nuovo TodoItem e lo aggiunge alla casella di riepilogo. Chiama TrackSelection(), che verranno definiti in un secondo momento.  
   
     ```csharp  
     private void button1_Click(object sender, RoutedEventArgs e)  
@@ -290,9 +290,9 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-2.  In the Design view select the ListBox control. In the **Properties** window click the **Event handlers** button and find the SelectionChanged event. Fill in the text box with **listBox_SelectionChanged**. Doing this adds a stub for a SelectionChanged handler and assigns it to the event.  
+2.  Nella visualizzazione Progettazione selezionare il controllo casella di riepilogo. Nel **proprietà** fare clic su finestra il **gestori eventi** pulsante e trovare l'evento SelectionChanged. Compilare la casella di testo con **listBox_SelectionChanged**. Questa operazione aggiunge uno stub per un gestore SelectionChanged e lo assegna all'evento.  
   
-3.  Implement the TrackSelection() method. Since you will need to get the <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell><xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> services, you need make the <xref:Microsoft.VisualStudio.Shell.WindowPane.GetService%2A> accessible by the TodoWindowControl. Add the following method to the TodoWindow class:  
+3.  Implementare il metodo TrackSelection(). Poiché è necessario ottenere il <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> services, è necessario apportare la <xref:Microsoft.VisualStudio.Shell.WindowPane.GetService%2A> il TodoWindowControl possono accedervi. Aggiungere il metodo seguente alla classe TodoWindow:  
   
     ```  
     internal object GetVsService(Type service)  
@@ -301,7 +301,7 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-4.  Add the following using statements to TodoWindowControl.xaml.cs:  
+4.  Aggiungere le seguenti istruzioni using a TodoWindowControl.xaml.cs:  
   
     ```csharp  
     using System.Runtime.InteropServices;  
@@ -310,7 +310,7 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     using Microsoft.VisualStudio.Shell;  
     ```  
   
-5.  Fill in the SelectionChanged handler as follows:  
+5.  Compilare il gestore SelectionChanged come segue:  
   
     ```  
     private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)  
@@ -319,7 +319,7 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-6.  Now, fill in the TrackSelection function, which will provide integration with the **Properties** window. This function is called when the user adds an item to the ListBox or clicks an item in the ListBox. It adds the contents of the ListBox to a SelectionContainer and passes the SelectionContainer to the **Properties** window's <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> event handler. The TrackSelection service tracks selected objects in the user interface (UI) and displays their properties  
+6.  A questo punto, compilare la funzione TrackSelection, che fornirà l'integrazione con il **proprietà** finestra. Questa funzione viene chiamata quando l'utente aggiunge un elemento alla casella di riepilogo o fa clic su un elemento nella casella di riepilogo. Aggiunge il contenuto della casella di riepilogo per un SelectionContainer e passa SelectionContainer per il **proprietà** della finestra <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> gestore dell'evento. Il servizio TrackSelection tiene traccia degli oggetti selezionati nell'interfaccia utente (UI) e le relative proprietà  
   
     ```csharp  
     private SelectionContainer mySelContainer;  
@@ -367,9 +367,9 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-     Now that you have a class that the **Properties** window can use, you can integrate the **Properties** window with the tool window. When the user clicks an item in the ListBox in the tool window, the **Properties** window should be updated accordingly. Similarly, when the user changes a ToDo item in the **Properties** window, the associated item should be updated.  
+     Dopo aver creato una classe che il **proprietà** finestra è possibile utilizzare, è possibile integrare il **proprietà** finestra con la finestra degli strumenti. Quando l'utente fa clic su un elemento nella casella di riepilogo nella finestra degli strumenti, la **proprietà** finestra deve essere aggiornata di conseguenza. Analogamente, quando l'utente modifica un elemento di attività nel **proprietà** finestra, l'elemento associato deve essere aggiornato.  
   
-7.  Now, add the rest of the UpdateList function code in TodoWindowControl.xaml.cs. It should drop and re-add the modified TodoItem from the ListBox.  
+7.  A questo punto, aggiungere il resto del codice della funzione UpdateList in TodoWindowControl.xaml.cs. Dovrebbe eliminare e aggiungere nuovamente il TodoItem modificato dalla casella di riepilogo.  
   
     ```csharp  
     public void UpdateList(TodoItem item)  
@@ -381,20 +381,20 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-8.  Test your code. Build the project and start debugging. The experimental instance should appear.  
+8.  Testare il codice. Compilare il progetto e avviare il debug. L'istanza sperimentale dovrebbe essere visualizzato.  
   
-9. Open the **Tools / Options** pages. You should see the ToDo category in the left pane. Categories are listed in alphabetical, so look under the Ts.  
+9. Aprire il **Strumenti / opzioni** pagine. Verrà visualizzata la categoria di attività nel riquadro a sinistra. Categorie sono elencate in ordine alfabetico, quindi cercare in di Servizi terminal.  
   
-10. On the Todo options page, you should see the DaysAhead property set to **0**. Change it to **2**.  
+10. Nella pagina di opzioni di attività, si dovrebbe vedere la proprietà DaysAhead impostata su **0**. Modificarla in modo che **2**.  
   
-11. On the View / Other Windows menu, open **TodoWindow**. Type **EndDate** in the text box and click **Add**.  
+11. Nella vista o altre finestre dal menu aprirlo **TodoWindow**. Tipo **EndDate** nella casella di testo e fare clic su **Aggiungi**.  
   
-12. In the list box you should see a date two days later than today.  
+12. Nella casella di riepilogo dovrebbe essere una data di due giorni successivi alla data odierna.  
   
-## <a name="add-text-to-the-output-window-and-items-to-the-task-list"></a>Add Text to the Output Window and Items to the Task List  
- For the **Task List**, you create a new object of type Task, and then add that Task object to the **Task List** by calling its Add method. To write to the **Output** window, you call its GetPane method to obtain a pane object, and then you call the OutputString method of the pane object.  
+## <a name="add-text-to-the-output-window-and-items-to-the-task-list"></a>Aggiungere testo nella finestra di Output e gli elementi all'elenco attività  
+ Per il **elenco attività**, creare un nuovo oggetto di tipo attività e quindi aggiungere tale oggetto attività per il **elenco attività** chiamando il metodo Add. Per scrivere il **Output** finestra, si chiama il metodo GetPane per ottenere un oggetto del riquadro e quindi si chiama il metodo OutputString dell'oggetto riquadro.  
   
-1.  In TodoWindowControl.xaml.cs, in the `button1_Click` method, add code to get the **General** pane of the **Output** window (which is the default), and write to it. The method should look like this:  
+1.  In TodoWindowControl.xaml.cs, nel `button1_Click` metodo, aggiungere codice per ottenere il **generale** riquadro del **Output** finestra (ovvero l'impostazione predefinita) e in scrittura. Il metodo dovrebbe essere simile al seguente:  
   
     ```csharp  
     private void button1_Click(object sender, EventArgs e)  
@@ -421,7 +421,7 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-2.  In order to add items to the Task List, you need a to add a nested class to the TodoWindowControl class. The nested class needs to derive from <xref:Microsoft.VisualStudio.Shell.TaskProvider>. Add the following code to the end of the TodoWindowControl class.  
+2.  Per aggiungere elementi all'elenco attività, è necessario un per aggiungere una classe annidata nella classe TodoWindowControl. La classe annidata deve derivare da <xref:Microsoft.VisualStudio.Shell.TaskProvider>. Aggiungere il codice seguente alla fine della classe TodoWindowControl.  
   
     ```csharp  
     [Guid("72de1eAD-a00c-4f57-bff7-57edb162d0be")]  
@@ -434,7 +434,7 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-3.  Next add a private reference to TodoTaskProvider and a CreateProvider() method to the TodoWindowControl class. The code should look like this:  
+3.  Aggiungere un riferimento a TodoTaskProvider privato e un metodo CreateProvider() alla classe TodoWindowControl. Il codice dovrebbe essere simile al seguente:  
   
     ```csharp  
     private TodoWindowTaskProvider taskProvider;  
@@ -448,7 +448,7 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-4.  Add ClearError(), which clears the Task List, and ReportError(), which adds an entry to the Task List, to the TodoWindowControl class.  
+4.  Aggiungere la classe TodoWindowControl ClearError(), che svuota l'elenco di attività, e ReportError(), che aggiunge una voce all'elenco attività.  
   
     ```csharp  
     private void ClearError()  
@@ -480,7 +480,7 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-5.  Now implement the CheckForErrors method, as follows.  
+5.  Ora di implementare il metodo CheckForErrors, come indicato di seguito.  
   
     ```csharp  
     public void CheckForErrors()  
@@ -496,30 +496,30 @@ You can access any tool window in Visual Studio. This walkthrough shows how to i
     }  
     ```  
   
-## <a name="trying-it-out"></a>Trying It Out  
+## <a name="trying-it-out"></a>Durante il tentativo e  
   
-1.  Build the project and start debugging. The experimental instance appears.  
+1.  Compilare il progetto e avviare il debug. Viene visualizzata l'istanza sperimentale.  
   
-2.  Open the TodoWindow (**View / Other Windows / TodoWindow**).  
+2.  Aprire il TodoWindow (**visualizzazione / finestre / TodoWindow**).  
   
-3.  Type something in the text box and then click **Add**.  
+3.  Digitare una domanda nella casella di testo e quindi fare clic su **Aggiungi**.  
   
-     A due date 2 days after today is added to the list box. No errors are generated, and the **Task List** (**View / Task List**) should have no entries.  
+     Data di scadenza 2 giorni dalla data odierna viene aggiunto alla casella di riepilogo. Non vengono generati errori e **elenco attività** (**visualizzare / attività elenco**) non deve avere alcuna voce.  
   
-4.  Now change the setting on the **Tools / Options / ToDo** page from **2** back to **0**.  
+4.  Modificare ora l'impostazione sul **Strumenti / opzioni / ToDo** pagina da **2** al **0**.  
   
-5.  Type something else in the **TodoWindow** and then click **Add** again. This triggers an error and also an entry in the **Task List**.  
+5.  Digitare un'altra caratteristica di **TodoWindow** e quindi fare clic su **Aggiungi** nuovamente. Questo genera un errore e anche una voce di **elenco attività**.  
   
-     As you add items, the initial date is set to now plus 2 days.  
+     Quando si aggiungono elementi, la data iniziale è ora più di 2 giorni.  
   
-6.  On the **View** menu, click **Output** to open the **Output** window.  
+6.  Nel **vista** menu, fare clic su **Output** per aprire la **Output** finestra.  
   
-     Notice that every time that you add an item, a message is displayed in the **Task List** pane.  
+     Si noti che ogni volta che si aggiunge un elemento, in cui viene visualizzato un messaggio di **elenco attività** riquadro.  
   
-7.  Click one of the items in the ListBox.  
+7.  Fare clic su uno degli elementi nella casella di riepilogo.  
   
-     The **Properties** window displays the two properties for the item.  
+     Il **proprietà** finestra Visualizza due proprietà per l'elemento.  
   
-8.  Change one of the properties and then press ENTER.  
+8.  Modificare una delle proprietà e quindi premere INVIO.  
   
-     The item is updated in the ListBox.
+     L'elemento viene aggiornato nella casella di riepilogo.

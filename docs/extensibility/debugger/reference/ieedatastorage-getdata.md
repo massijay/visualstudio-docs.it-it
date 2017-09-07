@@ -1,5 +1,5 @@
 ---
-title: IEEDataStorage::GetData | Microsoft Docs
+title: IEEDataStorage::GetData | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: f9642911606d9bbd72382fa1209484cded9bdf74
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ieedatastoragegetdata"></a>IEEDataStorage::GetData
-Retrieves the specified number of bytes from the object.  
+Recupera il numero specificato di byte dall'oggetto.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetData(  
@@ -58,22 +58,22 @@ int GetData(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `dataSize`  
- [in] The number of bytes to retrieve (the `data` array must hold at least this number of bytes).  
+ [in] Il numero di byte da recuperare (il `data` matrice deve contenere almeno questo numero di byte).  
   
  `sizeGotten`  
- [out] Returns the number of bytes actually retrieved.  
+ [out] Restituisce il numero di byte effettivamente recuperati.  
   
  `data`  
- [in, out] Array to be filled in with the requested data.  
+ [in, out] Matrice da riempire con i dati richiesti.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- The recommended use of this method is to retrieve all the data bytes into a local array, since there is no way to skip over bytes in the retrieval process. In this case, the parameter `dataSize` should be the value returned by the [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md) method.  
+## <a name="remarks"></a>Note  
+ L'utilizzo di questo metodo consigliato consiste nel recuperare tutti i byte di dati in una matrice locale, poiché non esiste alcun modo per ignorare i byte nel processo di recupero. In questo caso, il parametro `dataSize` dovrebbe essere il valore restituito dal [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md) metodo.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   
  [GetSize](../../../extensibility/debugger/reference/ieedatastorage-getsize.md)

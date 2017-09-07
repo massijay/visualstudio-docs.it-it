@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::GetCustomViewerCount | Microsoft Docs
+title: IDebugProperty3::GetCustomViewerCount | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 0f12ca75de3c06be7d3c362cc1dc91c16932c8a2
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugproperty3getcustomviewercount"></a>IDebugProperty3::GetCustomViewerCount
-Gets the number of custom viewers that might be available for this property.  
+Ottiene il numero di visualizzatori personalizzati che potrebbero essere disponibili per questa proprietà.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetCustomViewerCount(  
@@ -54,20 +54,20 @@ int GetCustomViewerCount(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `pcelt`  
- [out] The number of custom viewers available for this property.  
+ [out] Il numero di visualizzatori personalizzati disponibili per questa proprietà.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- In order to support type visualizers, this method forwards the call to the [GetCustomViewerCount](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md) method. If the expression evaluator also supports custom viewers for this property's type, this method adds the number of custom viewers to the returned value.  
+## <a name="remarks"></a>Note  
+ Per supportare i visualizzatori di tipo, questo metodo inoltra la chiamata al [GetCustomViewerCount](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md) metodo. Se l'analizzatore di espressioni supporta anche i visualizzatori personalizzati per questo tipo di proprietà, questo metodo aggiunge il numero di visualizzatori personalizzati per il valore restituito.  
   
- For detailed information about the differences between type visualizers and custom viewers, see [Type Visualizer and Custom Viewer](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md).  
+ Per informazioni dettagliate sulle differenze tra i visualizzatori di tipo e i visualizzatori personalizzati, vedere [Visualizzatore di tipo e il visualizzatore personalizzato](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md).  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CProperty** object that exposes the [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) interface.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un **CProperty** oggetto che espone il [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) interfaccia.  
   
 ```cpp  
 STDMETHODIMP CProperty::GetCustomViewerCount(ULONG* pcelt)  
@@ -88,7 +88,7 @@ STDMETHODIMP CProperty::GetCustomViewerCount(ULONG* pcelt)
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   
  [GetCustomViewerCount](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewercount.md)   
- [Type Visualizer and Custom Viewer](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)
+ [Visualizzatore di tipi e visualizzatore personalizzato](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md)

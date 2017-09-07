@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::GetMetricString | Microsoft Docs
+title: IDebugSettingsCallback2::GetMetricString | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: f45e062029f7cb7045b71c61cc122bd8f2cdb864
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugsettingscallback2getmetricstring"></a>IDebugSettingsCallback2::GetMetricString
-Retrieves the value string of the metric given its name.  
+Recupera la stringa del valore della metrica in base al nome.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetMetricString(  
@@ -59,21 +59,21 @@ private int GetMetricString(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `pszType`  
- [in] Type of the metric.  
+ [in] Tipo di metrica.  
   
  `guidSection`  
- [in] Unique identifier of the section.  
+ [in] Identificatore univoco della sezione.  
   
  `pszMetric`  
- [in] Name of the metric.  
+ [in] Nome della metrica.  
   
  `pbstrValue`  
- [out] Returns the value string of the metric.  
+ [out] Restituisce la stringa del valore della metrica.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

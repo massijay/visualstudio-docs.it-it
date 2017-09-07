@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetMethodFieldsByName | Microsoft Docs
+title: IDebugSymbolProvider::GetMethodFieldsByName | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 3bf359535d5b11edb95910afe5a81ca048ab9c21
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugsymbolprovidergetmethodfieldsbyname"></a>IDebugSymbolProvider::GetMethodFieldsByName
-This method gets the field representing a fully qualified method name.  
+Questo metodo ottiene il campo che rappresenta un nome di metodo completo.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetMethodFieldsByName(   
@@ -58,22 +58,22 @@ int GetMethodFieldsByName(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `pszFullName`  
- [in] The method name.  
+ [in] Il nome del metodo.  
   
  `nameMatch`  
- [in] Selects the type of match, for example, case-sensitive.  
+ [in] Seleziona il tipo di corrispondenza, ad esempio distinzione maiuscole/minuscole.  
   
  `ppEnum`  
- [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumerator for the fields associated with this method.  
+ [out] Restituisce un [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumeratore per i campi associati a questo metodo.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- A method can be associated with multiple fields if it is overloaded, for example.  
+## <a name="remarks"></a>Note  
+ Se è in overload, ad esempio, un metodo può essere associato a più campi.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

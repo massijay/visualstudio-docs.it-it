@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::GetAlias | Microsoft Docs
+title: IDebugObject2::GetAlias | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 3dea81100ee3b6d8a7ee8f1024f87784aadbe181
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugobject2getalias"></a>IDebugObject2::GetAlias
-Gets the alias associated with this object, if any.  
+Ottiene l'alias associato all'oggetto, se presente.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetAlias(  
@@ -54,16 +54,16 @@ int GetAlias(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `ppAlias`  
- [out] Returns an [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) object representing the alias for this object; otherwise, returns a null value.  
+ [out] Restituisce un [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) l'oggetto che rappresenta l'alias per questo oggetto; in caso contrario, restituisce un valore null.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce S_OK; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- An alias for an object is created with a call to the [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) method.  
+## <a name="remarks"></a>Note  
+ Viene creato un alias per un oggetto con una chiamata al [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) metodo.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)   
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

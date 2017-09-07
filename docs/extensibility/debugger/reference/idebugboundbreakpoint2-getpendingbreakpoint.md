@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::GetPendingBreakpoint | Microsoft Docs
+title: IDebugBoundBreakpoint2::GetPendingBreakpoint | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,13 +35,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 85c6f7650cedc9fe6136ff84a9ff7acfd82ac96a
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugboundbreakpoint2getpendingbreakpoint"></a>IDebugBoundBreakpoint2::GetPendingBreakpoint
-Gets the pending breakpoint from which the specified bound breakpoint was created.  
+Ottiene il punto di interruzione in sospeso da cui è stato creato il punto di interruzione associato specificato.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetPendingBreakpoint(   
@@ -55,18 +55,18 @@ int GetPendingBreakpoint(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `ppPendingBreakpoint`  
- [out] Returns the [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) object that represents the pending breakpoint that was used to create this bound breakpoint.  
+ [out] Restituisce il [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) associato di oggetto che rappresenta il punto di interruzione in sospeso che è stata utilizzata per creare il punto di interruzione.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- A pending breakpoint can be thought of as a collection of all the necessary information needed to bind a breakpoint to code that can be applied to one or many programs.  
+## <a name="remarks"></a>Note  
+ Un punto di interruzione in sospeso può essere considerato come una raccolta di tutte le necessarie informazioni necessarie per associare un punto di interruzione al codice che può essere applicato a uno o più programmi.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CBoundBreakpoint` object that exposes the [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) interface.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per una semplice `CBoundBreakpoint` oggetto che espone il [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) interfaccia.  
   
 ```  
 HRESULT CBoundBreakpoint::GetPendingBreakpoint(  
@@ -99,6 +99,6 @@ HRESULT CBoundBreakpoint::GetPendingBreakpoint(
 }    
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

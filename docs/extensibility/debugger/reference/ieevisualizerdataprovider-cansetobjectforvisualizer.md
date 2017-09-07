@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::CanSetObjectForVisualizer | Microsoft Docs
+title: IEEVisualizerDataProvider::CanSetObjectForVisualizer | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 424cdb45f91c59a3a72474fc6c7a0e41a4dc9e17
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="ieevisualizerdataprovidercansetobjectforvisualizer"></a>IEEVisualizerDataProvider::CanSetObjectForVisualizer
-This method determines whether the visualizer can have the data object it represents updated.  
+Questo metodo determina se il visualizzatore può avere l'oggetto dati rappresenta aggiornato.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT CanSetObjectForVisualizer(  
@@ -54,15 +54,15 @@ int CanSetObjectForVisualizer(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `b`  
- [out] Nonzero (`TRUE`) if the object on the visualizer can be updated, zero (`FALSE`) if it cannot.  
+ [out] Diverso da zero (`TRUE`) se è possibile aggiornare l'oggetto del visualizzatore, zero (`FALSE`) se non è possibile.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- An object might not be changeable if it is bound to read-only memory, for example.  
+## <a name="remarks"></a>Note  
+ Un oggetto potrebbe non essere modificabile se è associato alla memoria di sola lettura, ad esempio.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

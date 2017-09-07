@@ -1,5 +1,5 @@
 ---
-title: NAME_MATCH | Microsoft Docs
+title: NAME_MATCH | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 0b978feb1b38c87c2ca7e0616953856556144f21
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="namematch"></a>NAME_MATCH
-Selects the case option for matching names.  
+Seleziona l'opzione maiuscole per i nomi corrispondenti.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 typedef enum {   
@@ -58,18 +58,18 @@ public enum NameMatchOptions {
 }  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
  nmNone  
- No options are specified.  
+ Non è stata specificata alcuna opzione.  
   
  nmCaseSensitive  
- Indicates that names to be matched are case-sensitive.  
+ Indica che i nomi per la corrispondenza tra maiuscole e minuscole.  
   
  nmCaseInsensitive  
- Indicates that names to be matched are not case-sensitive.  
+ Indica che i nomi per la corrispondenza non sono tra maiuscole e minuscole.  
   
-## <a name="remarks"></a>Remarks  
- Passed as an argument to the following methods:  
+## <a name="remarks"></a>Note  
+ Passata come argomento per i metodi seguenti:  
   
 -   [GetTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-gettypebyname.md)  
   
@@ -79,15 +79,15 @@ public enum NameMatchOptions {
   
 -   [GetMethodFieldsByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getmethodfieldsbyname.md)  
   
-## <a name="requirements"></a>Requirements  
- Header: sh.h  
+## <a name="requirements"></a>Requisiti  
+ Intestazione: sh.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-gettypebyname.md)   
  [GetClassTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getclasstypebyname.md)   
  [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)   

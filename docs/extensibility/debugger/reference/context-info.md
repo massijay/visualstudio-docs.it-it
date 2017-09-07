@@ -1,5 +1,5 @@
 ---
-title: CONTEXT_INFO | Microsoft Docs
+title: CONTEXT_INFO | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5cee396c4659807ca4dcded60f4d1f1fbbcc3f82
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="contextinfo"></a>CONTEXT_INFO
-This structure describes a memory context or code context.  
+Questa struttura viene descritto un contesto di memoria o il contesto di codice.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 typedef struct _tagCONTEXT_INFO {   
@@ -66,42 +66,42 @@ public struct CONTEXT_INFO {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
  dwFields  
- A combination of flags from he [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) enumeration that specifies which fields are filled out**.**  
+ Una combinazione di flag da egli [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) enumerazione che specifica quali campi vengono compilati**.**  
   
  bstrModuleUrl  
- The name of the module where the context is located.  
+ Il nome del modulo in cui si trova il contesto.  
   
  bstrFunction  
- The function name where the context is located.  
+ Il nome della funzione in cui si trova il contesto.  
   
  posFunctionOffset  
- A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) structure that identifies the line and column offset of the function associated with the code context.  
+ Oggetto [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struttura che identifica l'offset di riga e colonna della funzione associata al contesto di codice.  
   
  bstrAddress  
- The address in code where the given context is located.  
+ L'indirizzo nel codice in cui si trova il contesto specificato.  
   
  bstrAddressOffset  
- The offset of the address in code where the given context is located.  
+ L'offset dell'indirizzo nel codice in cui si trova il contesto specificato.  
   
  bstrAddressAbsolute  
- The absolute address in memory where the given context is located.  
+ L'indirizzo assoluto in memoria in cui si trova il contesto specificato.  
   
-## <a name="remarks"></a>Remarks  
- This structure is returned from a call to the [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) method.  
+## <a name="remarks"></a>Note  
+ Questa struttura viene restituita da una chiamata al [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) metodo.  
   
- A typical use for this structure is in support of a **Memory** debug window.  
+ Un tipico utilizzo di questa struttura è supportano un **memoria** finestra di debug.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisiti  
+ Intestazione: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Strutture e unioni](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)   
  [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md)   
  [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

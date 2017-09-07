@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject2::GetBaseIndices | Microsoft Docs
+title: IDebugArrayObject2::GetBaseIndices | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 3aa9ad51de0f929083457eed86d69cf23f99d10d
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugarrayobject2getbaseindices"></a>IDebugArrayObject2::GetBaseIndices
-Retrieves the base indices (lower bounds) for each index given the number of dimensions in the array.  
+Recupera gli indici di base (inferiore) per ogni indice dato il numero di dimensioni della matrice.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetBaseIndices (  
@@ -55,18 +55,18 @@ int GetBaseIndices (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `dwRank`  
- [in] The number of dimensions (rank) of the array.  
+ [in] Il numero di dimensioni (rank) della matrice.  
   
  `dwIndices`  
- [out] The base indices (lower bounds) for the array.  
+ [out] Gli indici base (inferiore) per la matrice.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- As an example, this function would return '5' for the array created by the following C# code:  
+## <a name="remarks"></a>Note  
+ Ad esempio, questa funzione restituisce '5' per la matrice creata dal codice c# seguente:  
   
 ```  
 int[] lengths = { 12 };  
@@ -74,5 +74,5 @@ int[] lowerbounds = { 5 };
 Array.CreateInstance(typeof(int), lengths, lowerbounds);  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugArrayObject2](../../../extensibility/debugger/reference/idebugarrayobject2.md)

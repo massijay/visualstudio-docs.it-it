@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetScope | Microsoft Docs
+title: IDebugDisassemblyStream2::GetScope | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: a978b214b62ea5bdf3ee5b7109abe289c88f0efa
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugdisassemblystream2getscope"></a>IDebugDisassemblyStream2::GetScope
-Gets the scope of the disassembly stream.  
+Ottiene l'ambito del flusso di disassembly.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetScope(   
@@ -54,16 +54,16 @@ int GetScope(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `pdwScope`  
- [out] Returns a value from the [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) enumeration that describes the scope of this disassembly stream.  
+ [out] Restituisce un valore di [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) enumerazione che descrive l'ambito di questo flusso disassembly.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- The scope of a disassembly could be a function or the whole module, for example.  
+## <a name="remarks"></a>Note  
+ L'ambito di un disassembly potrebbe essere ad esempio una funzione o dell'intero modulo.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   
  [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md)

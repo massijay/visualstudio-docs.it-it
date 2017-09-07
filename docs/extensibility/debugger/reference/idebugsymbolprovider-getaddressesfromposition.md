@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetAddressesFromPosition | Microsoft Docs
+title: IDebugSymbolProvider::GetAddressesFromPosition | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 957e917870e4482721b0c32e4551072fb9092044
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugsymbolprovidergetaddressesfromposition"></a>IDebugSymbolProvider::GetAddressesFromPosition
-This method maps a document position into an array of debug addresses.  
+Questo metodo esegue il mapping di una posizione del documento in una matrice di indirizzi di debug.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetAddressesFromPosition(   
@@ -60,28 +60,28 @@ int GetAddressesFromPosition(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `pDocPos`  
- [in] The document position.  
+ [in] Posizione del documento.  
   
  `fStatmentOnly`  
- [in] If TRUE, limits the debug addresses to a single statement.  
+ [in] Se TRUE, limita gli indirizzi di debug per una singola istruzione.  
   
  `ppEnumBegAddresses`  
- [out] Returns an enumerator for the starting debug addresses associated with this statement or line.  
+ [out] Restituisce un enumeratore per gli indirizzi iniziali di debug associata a questa istruzione o la riga.  
   
  `ppEnumEndAddresses`  
- [out] Returns an [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) enumerator for the ending debug addresses associated with this statement or line.  
+ [out] Restituisce un [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md) enumeratore per gli indirizzi di debug finale associata a questa istruzione o la riga.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- A document position typically indicates a range of source lines. This method provides the starting and ending debug addresses associated with these lines. Some languages allow statements that span multiple lines, or lines that contains more than one statement. This method provides a flag to limit the debug addresses to a single statement.  
+## <a name="remarks"></a>Note  
+ Una posizione del documento in genere indica un intervallo di righe di origine. Questo metodo fornisce iniziale e quello finale debug associata a queste righe. Alcuni linguaggi consentono istruzioni che si estendono su più righe o le righe che contiene più di un'istruzione. Questo metodo fornisce un flag per limitare gli indirizzi di debug per una singola istruzione.  
   
- It is possible for a single statement to have multiple debug addresses, as in the case of templates.  
+ È possibile per una singola istruzione per disporre di più indirizzi di debug, come nel caso di modelli.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   
  [GetAddressesFromContext](../../../extensibility/debugger/reference/idebugsymbolprovider-getaddressesfromcontext.md)   
  [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)

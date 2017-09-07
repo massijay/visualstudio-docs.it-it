@@ -1,5 +1,5 @@
 ---
-title: IDebugOutputStringEvent2::GetString | Microsoft Docs
+title: IDebugOutputStringEvent2::GetString | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: e9ec7bb7fcb63e613a3a0e45e37f101390ba3d75
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugoutputstringevent2getstring"></a>IDebugOutputStringEvent2::GetString
-Gets the displayable message.  
+Ottiene il messaggio visualizzabile.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetString(   
@@ -54,12 +54,12 @@ int GetString(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `pbstrString`  
- [out] Returns the displayable message.  
+ [out] Restituisce il messaggio visualizzabile.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugOutputStringEvent2](../../../extensibility/debugger/reference/idebugoutputstringevent2.md)

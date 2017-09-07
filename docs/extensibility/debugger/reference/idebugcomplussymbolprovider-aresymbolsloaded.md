@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::AreSymbolsLoaded | Microsoft Docs
+title: IDebugComPlusSymbolProvider::AreSymbolsLoaded | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 065a32112c65e9730c5c492e954de5c1415ad3b5
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcomplussymbolprovideraresymbolsloaded"></a>IDebugComPlusSymbolProvider::AreSymbolsLoaded
-Determines if the debug symbols are loaded for the specified module given the application domain identifier.  
+Determina se i simboli di debug vengono caricati per il modulo specificato dato l'identificatore del dominio applicazione.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT AreSymbolsLoaded (  
@@ -55,18 +55,18 @@ int AreSymbolsLoaded (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `ulAppDomainID`  
- [in] Identifier for the application domain.  
+ [in] Identificatore per il dominio applicazione.  
   
  `guidModule`  
- [in] Unique identifier for the module.  
+ [in] Identificatore univoco per il modulo.  
   
-## <a name="return-value"></a>Return Value  
- If the debug symbols are loaded, returns `S_OK`; otherwise, returns `S_FALSE`.  
+## <a name="return-value"></a>Valore restituito  
+ Se vengono caricati i simboli di debug, restituisce `S_OK`; in caso contrario, restituisce `S_FALSE`.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un **CDebugSymbolProvider** oggetto che espone il [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interfaccia.  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::AreSymbolsLoaded(  
@@ -88,5 +88,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

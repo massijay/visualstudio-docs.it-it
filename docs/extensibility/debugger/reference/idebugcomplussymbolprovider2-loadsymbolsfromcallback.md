@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider2::LoadSymbolsFromCallback | Microsoft Docs
+title: IDebugComPlusSymbolProvider2::LoadSymbolsFromCallback | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,13 +33,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5c6e016d3c3bbd11bf57974dc0afe0c8df8f5d21
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromcallback"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromCallback
-Loads debug symbols using the specified callback method.  
+Carica i simboli utilizzando il metodo di callback specificato di debug.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT LoadSymbolsFromCallback(  
@@ -65,33 +65,33 @@ int LoadSymbolsFromCallback(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `ulAppDomainID`  
- [in] Identifier of the application domain.  
+ [in] Identificatore del dominio dell'applicazione.  
   
  `guidModule`  
- [in] Unique identifier of the module.  
+ [in] Identificatore univoco del modulo.  
   
  `pUnkMetadataImport`  
- [in] Object that contains the symbol metadata.  
+ [in] Oggetto che contiene i metadati del simbolo.  
   
  `pUnkCorDebugModule`  
- [in] Object that implements the [ICorDebugModule Interface](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).  
+ [in] Oggetto che implementa il [interfaccia ICorDebugModule](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).  
   
  `bstrModuleName`  
- [in] Name of the module.  
+ [in] Nome del modulo.  
   
  `bstrSymSearchPath`  
- [in] Path to search for the symbol file.  
+ [in] Percorso per cercare il file di simboli.  
   
  `pCallback`  
- [in] Object that represents the callback method.  
+ [in] Oggetto che rappresenta il metodo di callback.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interface.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un **CDebugSymbolProvider** oggetto che espone il [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interfaccia.  
   
 ```cpp  
 HRESULT CDebugSymbolProvider::LoadSymbolsFromCallback(  
@@ -184,5 +184,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md)

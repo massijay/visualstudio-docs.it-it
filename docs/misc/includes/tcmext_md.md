@@ -15,8 +15,8 @@ translation.priority.ht:
 - zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: b121b7d4e34a886df015b7f019639abfbd872dec
+ms.openlocfilehash: 249c2de091056b0278cc1c8ea54044f6b693e664
 ms.contentlocale: it-it
 
 ---
-Visual Basic
+Microsoft Test Manager

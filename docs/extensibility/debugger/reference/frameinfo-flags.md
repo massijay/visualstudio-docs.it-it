@@ -1,5 +1,5 @@
 ---
-title: FRAMEINFO_FLAGS | Microsoft Docs
+title: FRAMEINFO_FLAGS | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: d0b9ae5b6b9139715cd28b40dd8eae2294c507a7
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="frameinfoflags"></a>FRAMEINFO_FLAGS
-Specifies the information to retrieve about a stack frame object.  
+Specifica le informazioni da recuperare su un oggetto stack frame.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 enum enum_FRAMEINFO_FLAGS {  
@@ -115,114 +115,114 @@ public enum enum_FRAMEINFO_FLAGS {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
  FIF_FUNCNAME  
- Initialize/use the `m_bstrFuncName` field.  
+ Inizializzazione/Usa il `m_bstrFuncName` campo.  
   
  FIF_RETURNTYPE  
- Initialize/use the `m_bstrReturnType` field.  
+ Inizializzazione/Usa il `m_bstrReturnType` campo.  
   
  FIF_ARGS  
- Initialize/use the `m_bstrArgs` field.  
+ Inizializzazione/Usa il `m_bstrArgs` campo.  
   
  FIF_LANGUAGE  
- Initialize/use the `m_bstrLanguage` field.  
+ Inizializzazione/Usa il `m_bstrLanguage` campo.  
   
  FIF_MODULE  
- Initialize/use the `m_bstrModule` field.  
+ Inizializzazione/Usa il `m_bstrModule` campo.  
   
  FIF_STACKRANGE  
- Initialize/use the `m_addrMin` and `m_addrMax` (stack range) fields.  
+ Inizializzazione/Usa il `m_addrMin` e `m_addrMax` campi (intervallo di stack).  
   
  FIF_FRAME  
- Initialize/use the `m_pFrame` field.  
+ Inizializzazione/Usa il `m_pFrame` campo.  
   
  FIF_DEBUGINFO  
- Initialize/use the `m_fHasDebugInfo` field.  
+ Inizializzazione/Usa il `m_fHasDebugInfo` campo.  
   
  FIF_STALECODE  
- Initialize/use the `m_fStaleCode` field.  
+ Inizializzazione/Usa il `m_fStaleCode` campo.  
   
  FIF_ANNOTATEDFRAME  
- Initialize/use the `m_fAnnotatedFrame` field.  
+ Inizializzazione/Usa il `m_fAnnotatedFrame` campo.  
   
  FIF_DEBUG_MODULEP  
- Initialize/use the `m_pModule` field.  
+ Inizializzazione/Usa il `m_pModule` campo.  
   
  FIF_FUNCNAME_FORMAT  
- Formats the function name. The result is returned in the `m_bstrFunName` field and no other fields are filled out.  
+ Formatta il nome della funzione. Il risultato viene restituito nel `m_bstrFunName` campo e non altri campi vengono compilati.  
   
  FIF_FUNCNAME_RETURNTYPE  
- Adds the return type to the `m_bstrFuncName` field.  
+ Aggiunge il tipo restituito per il `m_bstrFuncName` campo.  
   
  FIF_FUNCNAME_ARGS  
- Adds the arguments to the `m_bstrFuncName` field.  
+ Aggiunge gli argomenti per il `m_bstrFuncName` campo.  
   
  FIF_FUNCNAME_LANGUAGE  
- Adds the language to the `m_bstrFuncName` field.  
+ Aggiunge la lingua per il `m_bstrFuncName` campo.  
   
  FIF_FUNCNAME_MODULE  
- Adds the module name to the `m_bstrFuncName` field.  
+ Aggiunge il nome del modulo per il `m_bstrFuncName` campo.  
   
  FIF_FUNCNAME_LINES  
- Adds the number of lines to the `m_bstrFuncName` field.  
+ Aggiunge il numero di righe per il `m_bstrFuncName` campo.  
   
  FIF_FUNCNAME_OFFSET  
- Adds to the `m_bstrFuncName` field the offset in bytes from the start of the line if `FIF_FUNCNAME_LINES` is specified. If `FIF_FUNCNAME_LINES` is not specified, or if line numbers are not available, adds the offset in bytes from the start of the function.  
+ Aggiunge il `m_bstrFuncName` campo offset in byte dall'inizio della riga se `FIF_FUNCNAME_LINES` è specificato. Se `FIF_FUNCNAME_LINES` non viene specificato, o se i numeri di riga non sono disponibili, aggiunge l'offset in byte dall'inizio della funzione.  
   
  FIF_FUNCNAME_ARGS_TYPES  
- Adds the type of each function argument to the `m_bstrFuncName` field.  
+ Aggiunge il tipo di ogni argomento di funzione per il `m_bstrFuncName` campo.  
   
  FIF_FUNCNAME_ARGS_NAMES  
- Adds the name of each function argument to the `m_bstrFuncName` field.  
+ Aggiunge il nome di ogni argomento di funzione per il `m_bstrFuncName` campo.  
   
  FIF_FUNCNAME_ARGS_VALUES  
- Adds the value of each function argument to the `m_bstrFuncName` field.  
+ Aggiunge il valore di ogni argomento di funzione per il `m_bstrFuncName` campo.  
   
  FIF_FUNCNAME_ARGS_ALL  
- Adds the type, name, and value of all arguments to the `m_bstrFuncName` field.  
+ Aggiunge il valore di tutti gli argomenti, un nome e un tipo di `m_bstrFuncName` campo.  
   
  FIF_ARGS_TYPES  
- The argument types are retrieved and formatted.  
+ I tipi di argomenti vengono recuperati e formattati.  
   
  FIF_ARGS_NAMES  
- The argument names are retrieved and formatted.  
+ I nomi degli argomenti vengono recuperati e formattati.  
   
  FIF_ARGS_VALUES  
- The argument values are retrieved and formatted.  
+ I valori degli argomenti vengono recuperati e formattati.  
   
  FIF_ARGS_ALL  
- Retrieve and format the type, name, and value of all arguments.  
+ Recuperare e formattare il tipo, nome e valore di tutti gli argomenti.  
   
  FIF_ARGS_NOFORMAT  
- Specifies that the arguments are not be formatted (for example, do not add opening and closing parentheses around the argument list nor add a separator between arguments).  
+ Specifica che gli argomenti non sono formattato (ad esempio, non aggiungere apertura e chiusura di parentesi per racchiudere l'elenco di argomenti né aggiungere un separatore tra gli argomenti).  
   
  FIF_ARGS_NO_FUNC_EVAL  
- Specifies that function (property) evaluation should not be used when retrieving argument values.  
+ Specifica che la valutazione della funzione (proprietà) non deve essere utilizzata durante il recupero dei valori dell'argomento.  
   
  FIF_FILTER_NON_USER_CODE  
- The debug engine is to filter non-user code frames so they are not included.  
+ Il motore di debug consiste nel filtrare i frame di codice non utente in modo che non sono inclusi.  
   
  FIF_ARGS_NO_TOSTRING  
- Do not allow `ToString()` function evaluation or formatting when returning function arguments.  
+ Non consentire `ToString()` funzione valutazione o la formattazione per la restituzione di argomenti della funzione.  
   
  FIF_DESIGN_TIME_EXPR_EVAL  
- Frame information should be gotten from the hosted app-domain rather than the hosting process.  
+ Le informazioni sul frame deve essere ricevuti dal dominio dell'applicazione ospitato anziché il processo di hosting.  
   
-## <a name="remarks"></a>Remarks  
- These flags are passed to the [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) and [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) methods to indicate which fields are to be initialized in the [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) structure or structures.  
+## <a name="remarks"></a>Note  
+ Questi flag vengono passati al [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) e [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) metodi per indicare quali campi devono essere inizializzati nel [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) o strutture.  
   
- These flags are also used to indicate which fields of the [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) structure are used and valid when the structure is returned. These values may be combined with a bitwise `OR`.  
+ Questi flag sono utilizzati anche per indicare quali campi del [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) struttura sono validi e utilizzate quando viene restituita la struttura. Questi valori possono essere combinati con un bit per bit `OR`.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisiti  
+ Intestazione: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md)   
  [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md)

@@ -1,5 +1,5 @@
 ---
-title: Add custom architecture validation to dependency diagrams | Microsoft Docs
+title: Aggiunta di convalida dell'architettura personalizzati a diagrammi dipendenza | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,114 +32,114 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 25261e06fc2d5ef1d2850b8ecdf159b1085d8d83
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Add custom architecture validation to dependency diagrams
-In Visual Studio, users can validate the source code in a project against a layer model so that they can verify that the source code conforms to the dependencies on a dependency diagram. There is a standard validation algorithm, but you can define your own validation extensions.  
+# <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Aggiunta di convalida dell'architettura personalizzati a diagrammi di dipendenza
+In Visual Studio, gli utenti possono convalidare il codice sorgente in un progetto rispetto a un modello di livello in modo da poter verificare che il codice sorgente sia conforme alla dipendenze in un diagramma di dipendenze. Benché sia disponibile un algoritmo di convalida standard, è possibile definire estensioni di convalida personalizzate.  
   
- When the user selects the **Validate Architecture** command on a dependency diagram, the standard validation method is invoked, followed by any validation extensions that have been installed.  
+ Quando l'utente seleziona il **Convalida architettura** comando in un diagramma di dipendenza, viene richiamato il metodo di convalida standard, seguito dalle eventuali estensioni di convalida che sono stati installati.  
   
 > [!NOTE]
->  In a dependency diagram, the main purpose of validation is to compare the diagram with the program code in other parts of the solution.  
+>  In un diagramma di dipendenze, lo scopo principale di convalida consiste nel confrontare il diagramma con il codice programma in altre parti della soluzione.  
   
- You can package your layer validation extension into a Visual Studio Integration Extension (VSIX), which you can distribute to other Visual Studio users. You can either place your validator in a VSIX by itself, or you can combine it in the same VSIX as other extensions. You should write the code of the validator in its own Visual Studio project, not in the same project as other extensions.  
+ È possibile creare un pacchetto dell'estensione di convalida dei livelli in un progetto VSIX (Visual Studio Integration Extension), che è possibile distribuire ad altri utenti di Visual Studio. È possibile inserire solo il validator in un progetto VSIX oppure combinarlo con altre estensioni nello stesso progetto VSIX. È consigliabile scrivere il codice del validator in un progetto di Visual Studio a se stante anziché nello stesso progetto di altre estensioni.  
   
 > [!WARNING]
->  After you have created a validation project, copy the [example code](#example) at the end of this topic and then edit that to your own needs.  
+>  Dopo aver creato un progetto di convalida, copiare il [codice di esempio](#example) disponibile alla fine di questo argomento e quindi modificarlo in base alle esigenze.  
   
-## <a name="requirements"></a>Requirements  
- See [Requirements](../modeling/extend-layer-diagrams.md#prereqs).  
+## <a name="requirements"></a>Requisiti  
+ Vedere [Requisiti](../modeling/extend-layer-diagrams.md#prereqs).  
   
-## <a name="defining-a-layer-validator-in-a-new-vsix"></a>Defining a Layer Validator in a New VSIX  
- The quickest method of creating a validator is to use the project template. This places the code and the VSIX manifest into the same project.  
+## <a name="defining-a-layer-validator-in-a-new-vsix"></a>Definizione di un validator dei livelli in un nuovo progetto VSIX  
+ Il modo più rapido per creare un validator è usare il modello di progetto. In questo modo il codice e il manifesto VSIX vengono inseriti nello stesso progetto.  
   
-#### <a name="to-define-an-extension-by-using-a-project-template"></a>To define an extension by using a project template  
+#### <a name="to-define-an-extension-by-using-a-project-template"></a>Per definire un'estensione tramite un modello di progetto  
   
-1.  Create a project in a new solution, by using the **New Project** command on the **File** menu.  
+1.  Creare un progetto in una nuova soluzione usando il comando **Nuovo progetto** del menu **File** .  
   
-2.  In the **New Project** dialog box, under **Modeling Projects**, select **Layer Designer Validation Extension**.  
+2.  Nella finestra di dialogo **Nuovo progetto** selezionare **Estensione di convalida progettazione livelli**in **Progetti di modellazione**.  
   
-     The template creates a project that contains a small example.  
+     Il modello crea un progetto che contiene un piccolo esempio.  
   
     > [!WARNING]
-    >  To makethe template work properly:  
+    >  Al modello makethe funzionamento:  
     >   
-    >  -   Edit calls to `LogValidationError` to remove the optional arguments `errorSourceNodes` and `errorTargetNodes`.  
-    > -   If you use custom properties, apply the update mentioned in [Add custom properties to dependency diagrams](../modeling/add-custom-properties-to-layer-diagrams.md).  
+    >  -   Modificare le chiamate a `LogValidationError` in modo da rimuovere gli argomenti facoltativi `errorSourceNodes` e `errorTargetNodes`.  
+    > -   Se si utilizzano le proprietà personalizzate, applicare l'aggiornamento indicato in [aggiungere proprietà personalizzate ai diagrammi dipendenza](../modeling/add-custom-properties-to-layer-diagrams.md).  
   
-3.  Edit the code to define your validation. For more information, see [Programming Validation](#programming).  
+3.  Modificare il codice per definire la convalida. Per altre informazioni, vedere [Programmazione della convalida](#programming).  
   
-4.  To test the extension, see [Debugging Layer Validation](#debugging).  
+4.  Per testare l'estensione, vedere [Debug della convalida dei livelli](#debugging).  
   
     > [!NOTE]
-    >  Your method will be called only in specific circumstances, and breakpoints will not work automatically. For more information, see [Debugging Layer Validation](#debugging).  
+    >  Il metodo verrà chiamato solo in casi specifici e i punti di interruzione non funzioneranno automaticamente. Per altre informazioni, vedere [Debug della convalida dei livelli](#debugging).  
   
-5.  To install the extension in the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], or on another computer, find the **.vsix** file in **bin\\\***. Copy it to the computer where you want to install it, and then double-click it. To uninstall it, use **Extensions and Updates** on the **Tools** menu.  
+5.  Per installare l'estensione nell'istanza principale di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]o in un altro computer, trovare il file **.vsix** in **bin\\\***. Copiare il file nel computer in cui si vuole installare l'estensione e fare doppio clic sul file stesso. Per disinstallare l'estensione, usare l'opzione **Estensioni e aggiornamenti** del menu **Strumenti** .  
   
-## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>Adding a Layer Validator to a Separate VSIX  
- If you want to create one VSIX that contains layer validators, commands, and other extensions, we recommend that you create one project to define the VSIX, and separate projects for the handlers. 
+## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>Aggiunta di validator dei livelli a un progetto VSIX separato  
+ Se si vuole creare un progetto VSIX contenente validator dei livelli, comandi e altre estensioni, è consigliabile creare un unico progetto per definire l'estensione VSIX e progetti separati per i gestori. 
   
-#### <a name="to-add-layer-validation-to-a-separate-vsix"></a>To add layer validation to a separate VSIX  
+#### <a name="to-add-layer-validation-to-a-separate-vsix"></a>Per aggiungere la convalida dei livelli a un progetto VSIX separato  
   
-1.  Create a Class Library project in a new or existing Visual Studio solution. In the **New Project** dialog box, click **Visual C#** and then click **Class Library**. This project will contain the layer validation class.  
+1.  Creare un progetto di libreria di classi in una soluzione di Visual Studio nuova o esistente. Nella finestra di dialogo **Nuovo progetto** fare clic su **Visual C#** e quindi su **Libreria di classi**. Questo progetto conterrà la classe di convalida dei livelli.  
   
-2.  Identify or create a VSIX project in your solution. A VSIX project contains a file that is named **source.extension.vsixmanifest**. If you have to add a VSIX project, follow these steps:  
+2.  Identificare o creare un progetto VSIX nella soluzione. Un progetto VSIX contiene un file denominato **source.extension.vsixmanifest**. Se è necessario aggiungere un progetto VSIX, eseguire le operazioni seguenti:  
   
-    1.  In the **New Project** dialog box, choose **Visual C#**, **Extensibility**, **VSIX Project**.  
+    1.  Nella finestra di dialogo **Nuovo progetto** scegliere **Visual C#**, **Extensibility**e **Progetto VSIX**.  
   
-    2.  In **Solution Explorer**, on the shortcut menu of the VSIX project, **Set as Startup Project**.  
+    2.  In **Esplora soluzioni**scegliere **Imposta come progetto di avvio**dal menu di scelta rapida del progetto VSIX.  
   
-3.  In **source.extension.vsixmanifest**, under **Assets**, add the layer validation project as a MEF component:  
+3.  In **source.extension.vsixmanifest**aggiungere il progetto di convalida dei livelli come componente MEF in **Asset**.  
   
-    1.  Choose **New**.  
+    1.  Scegliere **Nuovo**.  
   
-    2.  In the **Add New Asset** dialog box, set:  
+    2.  Nella finestra di dialogo **Aggiungi nuovo asset** impostare:  
   
-         **Type** = **Microsoft.VisualStudio.MefComponent**  
+         **Tipo** = **Microsoft.VisualStudio.MefComponent**  
   
-         **Source** = **A project in current solution**  
+         **Origine** = **Progetto nella soluzione corrente**  
   
-         **Project** = *your validator project*  
+         **Progetto** = *Progetto di convalida*  
   
-4.  You must also add it as a layer validation:  
+4.  È anche necessario aggiungere il progetto come convalida dei livelli:  
   
-    1.  Choose **New**.  
+    1.  Scegliere **Nuovo**.  
   
-    2.  In the **Add New Asset** dialog box, set:  
+    2.  Nella finestra di dialogo **Aggiungi nuovo asset** impostare:  
   
-         **Type** = **Microsoft.VisualStudio.ArchitectureTools.Layer.Validator**. This is not one of the options in the drop-down list. You must enter it from the keyboard.  
+         **Tipo** = **Microsoft.VisualStudio.ArchitectureTools.Layer.Validator**. Questa opzione non è inclusa nell'elenco a discesa. È necessario immetterla usando la tastiera.  
   
-         **Source** = **A project in current solution**  
+         **Origine** = **Progetto nella soluzione corrente**  
   
-         **Project** = *your validator project*  
+         **Progetto** = *Progetto di convalida*  
   
-5.  Return to the layer validation project, and add the following project references:  
+5.  Tornare al progetto di convalida dei livelli e aggiungere i riferimenti al progetto seguenti:  
   
-    |**Reference**|**What this allows you to do**|  
+    |**Riferimento**|**Operazioni consentite**|  
     |-------------------|------------------------------------|  
-    |Microsoft.VisualStudio.GraphModel.dll|Read the architecture graph|  
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|Read the code DOM associated with layers|  
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Read the Layer model|  
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility|Read and update shapes and diagrams.|  
-    |System.ComponentModel.Composition|Define the validation component using Managed Extensibility Framework (MEF)|  
-    |Microsoft.VisualStudio.Modeling.Sdk.[version]|Define modeling extensions|  
+    |Microsoft.VisualStudio.GraphModel.dll|Leggere il grafico dell'architettura|  
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|Leggere il code DOM associato ai livelli|  
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Leggere il modello di livello|  
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility|Leggere e aggiornare forme e diagrammi|  
+    |System.ComponentModel.Composition|Definire il componente di convalida mediante Managed Extensibility Framework (MEF)|  
+    |Microsoft.VisualStudio.Modeling.Sdk.[versione]|Definire le estensioni di modellazione|  
   
-6.  Copy the example code at the end of this topic into the class file in the validator library project to contain the code for your validation. For more information, see [Programming Validation](#programming).  
+6.  Copiare il codice di esempio disponibile alla fine di questo argomento nel file di classe nel progetto della libreria del validator in modo che contenga il codice per la convalida. Per altre informazioni, vedere [Programmazione della convalida](#programming).  
   
-7.  To test the extension, see [Debugging Layer Validation](#debugging).  
+7.  Per testare l'estensione, vedere [Debug della convalida dei livelli](#debugging).  
   
     > [!NOTE]
-    >  Your method will be called only in specific circumstances, and breakpoints will not work automatically. For more information, see [Debugging Layer Validation](#debugging).  
+    >  Il metodo verrà chiamato solo in casi specifici e i punti di interruzione non funzioneranno automaticamente. Per altre informazioni, vedere [Debug della convalida dei livelli](#debugging).  
   
-8.  To install the VSIX in the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], or on another computer, find the **.vsix** file in the **bin** directory of the VSIX project. Copy it to the computer where you want to install the VSIX. Double-click the VSIX file in Windows Explorer. (File Explorer in Windows 8.)  
+8.  Per installare il progetto VSIX nell'istanza principale di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]o in un altro computer, trovare il file **.vsix** nella directory **bin** del progetto VSIX. Copiare il file nel computer in cui si vuole installare il progetto VSIX. Fare doppio clic sul file VSIX in Esplora risorse (Esplora file in Windows 8).  
   
-     To uninstall it, use **Extensions and Updates** on the **Tools** menu.  
+     Per disinstallare l'estensione, usare l'opzione **Estensioni e aggiornamenti** del menu **Strumenti** .  
   
-##  <a name="programming"></a> Programming Validation  
- To define a layer validation extension, you define a class that has the following characteristics:  
+##  <a name="programming"></a> Programmazione della convalida  
+ Per definire un'estensione di convalida dei livelli, è necessario definire una classe con le caratteristiche seguenti:  
   
--   The overall form of the declaration is as follows:  
+-   Il formato complessivo della dichiarazione è il seguente:  
   
     ```  
   
@@ -159,31 +159,31 @@ In Visual Studio, users can validate the source code in a project against a laye
       } }  
     ```  
   
--   When you discover an error, you can report it by using `LogValidationError()`.  
+-   Quando si individua un errore, è possibile segnalarlo usando `LogValidationError()`.  
   
     > [!WARNING]
-    >  Do not use the optional parameters of `LogValidationError`.  
+    >  Non usare i parametri facoltativi di `LogValidationError`.  
   
- When the user invokes the **Validate Architecture** menu command, the layer runtime system analyses the layers and their artifacts to produce a graph. The graph has four parts:  
+ Quando l'utente richiama il comando di menu **Convalida architettura** , il sistema di runtime dei livelli analizza i livelli e i rispettivi elementi per generare un grafico. Il grafico è costituito da quattro parti:  
   
--   The layer models of the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution that are represented as nodes and links in the graph.  
+-   I modelli di livello della soluzione di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] che sono rappresentati come nodi e collegamenti nel grafico.  
   
--   The code, project items, and other artifacts that are defined in the solution and represented as nodes, and links that represent the dependencies discovered by the analysis process.  
+-   Il codice, gli elementi di progetto e altri elementi definiti nella soluzione e rappresentati come nodi, insieme ai collegamenti che rappresentano le dipendenze individuate dal processo di analisi.  
   
--   Links from the layer nodes to the code artifact nodes.  
+-   I collegamenti dai nodi di livello ai nodi elemento del codice.  
   
--   Nodes that represent errors discovered by the validator.  
+-   I nodi che rappresentano gli errori individuati dal validator.  
   
- When the graph has been constructed, the standard validation method is called. When this is complete, any installed extension validation methods are called in unspecified order. The graph is passed to each `ValidateArchitecture` method, which can scan the graph and report any errors that it finds.  
+ Una volta creato il grafico, viene chiamato il metodo di convalida standard. Al termine, tutti i metodi di convalida delle eventuali estensioni installate vengono chiamati in base a un ordine non specificato. Il grafico viene passato a ogni metodo `ValidateArchitecture` , che può analizzarlo e segnalare gli eventuali errori trovati.  
   
 > [!NOTE]
->  This is not the same as the validation process that can be used in domain-specific languages.  
+>  Questo non è lo stesso processo di convalida che può essere usato in linguaggi specifici del dominio.  
   
- Validation methods should not change the layer model or the code that is being validated.  
+ I metodi di convalida non devono modificare il modello di livello o il codice convalidato.  
   
- The graph model is defined in <xref:Microsoft.VisualStudio.GraphModel>. Its principal classes are <xref:Microsoft.VisualStudio.GraphModel.GraphNode> and <xref:Microsoft.VisualStudio.GraphModel.GraphLink>.  
+ Il modello di grafico è definito in <xref:Microsoft.VisualStudio.GraphModel>. Le classi principali sono <xref:Microsoft.VisualStudio.GraphModel.GraphNode> e <xref:Microsoft.VisualStudio.GraphModel.GraphLink>.  
   
- Each Node and each Link has one or more Categories which specify the type of element or relationship that it represents. The nodes of a typical graph have the following categories:  
+ Ogni nodo e ogni collegamento hanno una o più categorie che specificano il tipo di elemento o la relazione che rappresenta. I nodi di un grafico tipico hanno le categorie seguenti:  
   
 -   Dsl.LayerModel  
   
@@ -203,34 +203,34 @@ In Visual Studio, users can validate the source code in a project against a laye
   
 -   CodeSchema_Property  
   
- Links from layers to elements in the code have the category "Represents".  
+ I collegamenti dai livelli agli elementi nel codice sono associati alla categoria "Rappresenta".  
   
-##  <a name="debugging"></a> Debugging Validation  
- To debug your layer validation extension, press CTRL+F5. An experimental instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] opens. In this instance, open or create a layer model. This model must be associated with code, and must have at least one dependency.  
+##  <a name="debugging"></a> Debug della convalida  
+ Per eseguire il debug dell'estensione di convalida dei livelli, premere CTRL+F5. Viene aperta un'istanza sperimentale di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . In questa istanza aprire o creare un modello di livello. Questo modello deve essere associato al codice e deve avere almeno una dipendenza.  
   
-### <a name="test-with-a-solution-that-contains-dependencies"></a>Test with a Solution that contains Dependencies  
- Validation is not executed unless the following characteristics are present:  
+### <a name="test-with-a-solution-that-contains-dependencies"></a>Eseguire il test con una soluzione che contiene dipendenze  
+ La convalida non viene eseguita se non sono presenti le caratteristiche seguenti:  
   
--   There is at least one dependency link on the dependency diagram.  
+-   È presente almeno un collegamento di dipendenza nel diagramma di dipendenza.  
   
--   There are layers in the model that are associated with code elements.  
+-   Alcuni livelli nel modello sono associati a elementi del codice.  
   
- The first time that you start an experimental instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] to test your validation extension, open or create a solution that has these characteristics.  
+ Quando si avvia un'istanza sperimentale di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] per la prima volta per testare l'estensione di convalida, aprire o creare una soluzione che abbia queste caratteristiche.  
   
-### <a name="run-clean-solution-before-validate-architecture"></a>Run Clean Solution before Validate Architecture  
- Whenever you update your validation code, use the **Clean Solution** command on the **Build** menu in the experimental solution, before you test the Validate command. This is necessary because the results of validation are cached. If you have not updated the test dependency diagram or its code, the validation methods will not be executed.  
+### <a name="run-clean-solution-before-validate-architecture"></a>Eseguire Pulisci soluzione prima di Convalida architettura  
+ Ogni volta che si aggiorna il codice di convalida, usare il comando **Pulisci soluzione** del menu **Compila** nella soluzione sperimentale prima di testare il comando Convalida. Questa operazione è necessaria perché i risultati della convalida vengono memorizzati nella cache. Se il diagramma di dipendenze di test o il relativo codice di avere non aggiornato, i metodi di convalida non essere eseguiti.  
   
-### <a name="launch-the-debugger-explicitly"></a>Launch the Debugger Explicitly  
- Validation runs in a separate process. Therefore, the breakpoints in your validation method will not be triggered. You must attach the debugger to the process explicitly when validation has started.  
+### <a name="launch-the-debugger-explicitly"></a>Avviare il debugger in modo esplicito  
+ La convalida viene eseguita in un processo separato. Di conseguenza, i punti di interruzione nel metodo di convalida non verranno attivati. È necessario connettere il debugger al processo in modo esplicito all'avvio della convalida.  
   
- To attach the debugger to the validation process, insert a call to `System.Diagnostics.Debugger.Launch()` at the start of your validation method. When the debugging dialog box appears, select the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+ Per connettere il debugger al processo di convalida, inserire una chiamata a `System.Diagnostics.Debugger.Launch()` all'avvio del metodo di convalida. Quando viene visualizzata la finestra di dialogo di debug, selezionare l'istanza principale di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
- Alternatively, you can insert a call to `System.Windows.Forms.MessageBox.Show()`. When the message box appears, go to the main instance of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] and on the **Debug** menu click **Attach to Process**. Select the process that is named **Graphcmd.exe**.  
+ In alternativa, è possibile inserire una chiamata a `System.Windows.Forms.MessageBox.Show()`. Quando viene visualizzata la finestra di messaggio, passare all'istanza principale di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] e scegliere **Connetti a processo** dal menu **Debug**. Selezionare il processo denominato **Graphcmd.exe**.  
   
- Always start the experimental instance by pressing CTRL+F5 (**Start without Debugging**).  
+ Avviare sempre l'istanza sperimentale premendo CTRL+F5 (**Avvia senza eseguire debug**).  
   
-### <a name="deploying-a-validation-extension"></a>Deploying a Validation Extension  
- To install your validation extension on a computer on which a suitable version of Visual Studio is installed, open the VSIX file on the target computer. To install on a computer on which [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] is installed, you must manually extract the VSIX contents into an Extensions folder. For more information, see [Deploy a layer model extension](../modeling/deploy-a-layer-model-extension.md).  
+### <a name="deploying-a-validation-extension"></a>Distribuzione di un'estensione di convalida  
+ Per installare l'estensione di convalida in un computer in cui è installata una versione appropriata di Visual Studio, aprire il file VSIX nel computer di destinazione. Per eseguire l'installazione in un computer in cui è installato [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] , è necessario estrarre manualmente il contenuto VSIX in una cartella Extensions. Per ulteriori informazioni, vedere [distribuire un'estensione del modello di livello](../modeling/deploy-a-layer-model-extension.md).  
   
 ##  <a name="example"></a> Example code  
   
@@ -293,6 +293,6 @@ namespace Validator3
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Extend dependency diagrams](../modeling/extend-layer-diagrams.md)
+## <a name="see-also"></a>Vedere anche  
+ [Estendere i diagrammi delle dipendenze](../modeling/extend-layer-diagrams.md)
 

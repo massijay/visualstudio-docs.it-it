@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::EnumErrorBreakpoints | Microsoft Docs
+title: IDebugPendingBreakpoint2::EnumErrorBreakpoints | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,13 +35,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 0d6601d9c6bd6e3ad269bd3f6d902033b1682385
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugpendingbreakpoint2enumerrorbreakpoints"></a>IDebugPendingBreakpoint2::EnumErrorBreakpoints
-Gets a list of all error breakpoints that resulted from this pending breakpoint.  
+Ottiene un elenco di tutti i punti di interruzione di errore che ha generato da questo punto di interruzione in sospeso.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT EnumErrorBreakpoints(   
@@ -57,18 +57,18 @@ int EnumErrorBreakpoints(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `bpErrorType`  
- [in] A combination of values from the [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) enumeration that selects the type of errors to enumerate.  
+ [in] Una combinazione dei valori di [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) enumerazione che consente di selezionare il tipo di errori da enumerare.  
   
  `ppEnum`  
- [out] Returns an [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) object that contains a list of [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) objects.  
+ [out] Restituisce un [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) oggetto che contiene un elenco di [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) oggetti.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_BP_DELETED` if the breakpoint has been deleted.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore. Restituisce `E_BP_DELETED` se il punto di interruzione è stato eliminato.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CPendingBreakpoint` object that exposes the [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) interface.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per una semplice `CPendingBreakpoint` oggetto che espone il [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) interfaccia.  
   
 ```cpp  
 HRESULT CPendingBreakpoint::EnumErrorBreakpoints(  
@@ -142,7 +142,7 @@ HRESULT CPendingBreakpoint::EnumErrorBreakpoints(
 }    
 ```  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
  [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md)   
  [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)   

@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetParentField | Microsoft Docs
+title: IDebugCustomAttribute::GetParentField | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 1f30a03099c4b8464f64737d706486d07c42a537
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugcustomattributegetparentfield"></a>IDebugCustomAttribute::GetParentField
-Gets the field to which the custom attribute is attached.  
+Ottiene il campo a cui è associato l'attributo personalizzato.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetParentField(   
@@ -54,16 +54,16 @@ int GetParentField(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `ppField`  
- [out] Returns the [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object that represents the field to which the custom attribute is attached.  
+ [out] Restituisce il [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) oggetto che rappresenta il campo a cui è associato l'attributo personalizzato.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce S_OK; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- Call the [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) method on the returned [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object to determine what kind of field the parent is.  
+## <a name="remarks"></a>Note  
+ Chiamare il [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) metodo sull'oggetto restituito [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) oggetto per determinare quali tipo di campo padre.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

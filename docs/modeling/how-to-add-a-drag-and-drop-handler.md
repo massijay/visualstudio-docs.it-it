@@ -1,5 +1,5 @@
 ---
-title: 'How to: Add a Drag-and-Drop Handler | Microsoft Docs'
+title: 'Procedura: aggiungere un gestore di trascinamento e rilascio | Documenti Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,30 +20,30 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: b773c9339949066c7d1837b7bc687403731e2bb8
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="how-to-add-a-drag-and-drop-handler"></a>How to: Add a Drag-and-Drop Handler
-You can add handlers for drag-and-drop events to your DSL, so that users can drag items onto your diagram from other diagrams or from other parts of [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. You can also add handlers for events such as double-clicks. Together, drag-and-drop and double-click handlers are known as *gesture handlers*.  
+# <a name="how-to-add-a-drag-and-drop-handler"></a>Procedura: aggiungere un gestore di trascinamento della selezione
+È possibile aggiungere al linguaggio DSL gestori per gli eventi di trascinamento della selezione, in modo che gli utenti possano trascinare gli elementi sul diagramma da altri diagrammi o da altre parti di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. È possibile aggiungere gestori anche per eventi come il doppio clic. Insieme, i gestori di trascinamento e rilascio e fare doppio clic sono note come *gestori di movimento*.  
   
- This topic discusses drag-and-drop gestures that originate on other diagrams. For move and copy events within a single diagram, consider the alternative of defining a subclass of `ElementOperations`. For more information, see [Customizing Copy Behavior](../modeling/customizing-copy-behavior.md). You might also be able to customize the DSL definition.  
+ Questo argomento illustra i movimenti di trascinamento della selezione originati in altri diagrammi. Per gli eventi di spostamento e copia in uno stesso diagramma, considerare come alternativa la possibilità di definire una sottoclasse di `ElementOperations`. Per ulteriori informazioni, vedere [personalizzazione copia comportamento](../modeling/customizing-copy-behavior.md). È anche possibile personalizzare la definizione DSL.  
   
-## <a name="in-this-topic"></a>In this topic  
+## <a name="in-this-topic"></a>In questo argomento  
   
--   The first two sections describe alternative methods of defining a gesture handler:  
+-   Le prime due sezioni descrivono i metodi alternativi per definire un gestore movimenti:  
   
-    -   [Defining Gesture Handlers by Overriding ShapeElement methods](#overrideShapeElement). `OnDragDrop`, `OnDoubleClick`, `OnDragOver`, and other methods can be overridden.  
+    -   [La definizione di gestori di movimento dai metodi di override ShapeElement](#overrideShapeElement). È possibile eseguire l'override di `OnDragDrop`, `OnDoubleClick`, `OnDragOver` e di altri metodi.  
   
-    -   [Defining Gesture Handlers by using MEF](#MEF). Use this method if you want third-party developers to be able to define their own handlers to your DSL. Users can choose to install the third-party extensions after they have installed your DSL.  
+    -   [La definizione di gestori di movimento tramite MEF](#MEF). Usare questo metodo se si vuole che gli sviluppatori di terze parti possano definire i propri gestori per il linguaggio DSL. Gli utenti possono scegliere di installare le estensioni di terze parti dopo aver installato il linguaggio DSL.  
   
--   [How to Decode the Dragged Item](#extracting). Elements can be dragged from any window or from the desktop, as well as from a DSL.  
+-   [Come decodificare l'elemento trascinato](#extracting). Gli elementi possono essere trascinati da una finestra o dal desktop, oltre che da un linguaggio DSL.  
   
--   [How to Get the Original Dragged Item](#getOriginal). If the dragged item is a DSL element, you can open the source model and access the element.  
+-   [Come ottenere originale trascinato l'elemento](#getOriginal). Se l'elemento trascinato è un elemento DSL, è possibile aprire il modello di origine e accedere all'elemento.  
   
--   [Using Mouse Actions: Dragging Compartment Items](#mouseActions). This sample demonstrates a lower-level handler that intercepts mouse actions on a shape's fields. The example lets the user re-order the items in a compartment by dragging with the mouse.  
+-   [Utilizzo di azioni del Mouse: Il trascinamento di elementi di raggruppamento](#mouseActions). Questo esempio viene illustrato un gestore di livello inferiore che intercetta le azioni del mouse sui campi di una forma. L'esempio consente all'utente di riordinare gli elementi in un raggruppamento trascinando con il mouse.  
   
-##  <a name="overrideShapeElement"></a> Defining Gesture Handlers by Overriding ShapeElement Methods  
- Add a new code file to your DSL project. For a gesture handler, you usually must have at least the following `using` statements:  
+##  <a name="overrideShapeElement"></a>La definizione di gestori di movimento eseguendo l'override di metodi ShapeElement  
+ Aggiungere un nuovo file di codice al progetto DSL. Per un gestore movimenti, in genere è necessario avere almeno le istruzioni `using` seguenti:  
   
 ```csharp  
 using Microsoft.VisualStudio.Modeling;  
@@ -51,9 +51,9 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 using System.Linq;  
 ```  
   
- In the new file, define a partial class for the shape or diagram class that should respond to the drag operation. Override the following methods:  
+ Nel nuovo file definire una classe parziale per la forma o la classe del diagramma che deve rispondere all'operazione di trascinamento. Eseguire l'override dei metodi seguenti:  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A>- This method is called when the mouse pointer enters the shape during a drag operation. Your method should inspect the item that the user is dragging, and set the Effect property to indicate whether the user can drop the item on this shape. The Effect property determines the appearance of the cursor while it is over this shape, and also determines whether `OnDragDrop()` will be called when the user releases the mouse button.  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A> - Questo metodo viene chiamato quando il puntatore del mouse viene immesso nella forma durante un'operazione di trascinamento. Il metodo deve esaminare l'elemento che l'utente sta trascinando e impostare la proprietà Effect per indicare se l'utente può rilasciare l'elemento su questa forma. La proprietà Effect determina l'aspetto del cursore mentre è sopra la forma e determina anche se verrà chiamato `OnDragDrop()` quando l'utente rilascerà il pulsante del mouse.  
   
     ```csharp  
     partial class MyShape // MyShape generated from DSL Definition.  
@@ -70,7 +70,7 @@ using System.Linq;
   
     ```  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> - This method is called if the user releases the mouse button while the mouse pointer rests over this shape or diagram, if `OnDragOver(DiagramDragEventArgs e)` previously set `e.Effect` to a value other than `None`.  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A>-Questo metodo viene chiamato se l'utente rilascia il pulsante del mouse mentre il puntatore del mouse si sofferma su questa forma o diagramma, se `OnDragOver(DiagramDragEventArgs e)` impostata in precedenza `e.Effect` su un valore diverso da `None`.  
   
     ```csharp  
     public override void OnDragDrop(DiagramDragEventArgs e)  
@@ -87,20 +87,20 @@ using System.Linq;
   
     ```  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> - This method is called when the user double-clicks the shape or diagram.  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A>-Questo metodo viene chiamato quando l'utente fa doppio clic sulla forma o diagramma.  
   
-     For more information, see [How to: Intercept a Click on a Shape or Decorator](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md).  
+     Per ulteriori informazioni, vedere [procedura: intercettare un clic su una forma o un elemento Decorator](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md).  
   
- Define `IsAcceptableDropItem(e)` to determine whether the dragged item is acceptable, and ProcessDragDropItem(e) to update your model when the item is dropped. These methods must first extract the item from the event arguments. For information about how to do that, see [How to get a reference to the dragged item](#extracting).  
+ Definire `IsAcceptableDropItem(e)` per determinare se l'elemento trascinato sia accettabile e ProcessDragDropItem(e) per aggiornare il modello quando l'elemento viene rilasciato. Questi metodi devono prima estrarre l'elemento dagli argomenti dell'evento. Per informazioni su come eseguire questa operazione, vedere [come ottenere un riferimento all'elemento trascinato](#extracting).  
   
-##  <a name="MEF"></a> Defining Gesture Handlers by using MEF  
- MEF (Managed Extensibility Framework) lets you define components that can be installed with minimal configuration. For more information, see [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).  
+##  <a name="MEF"></a>La definizione di gestori di movimento tramite MEF  
+ MEF (Managed Extensibility Framework) consente di definire i componenti che possono essere installati con la configurazione minima. Per altre informazioni, vedere [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).  
   
-#### <a name="to-define-a-mef-gesture-handler"></a>To define a MEF gesture handler  
+#### <a name="to-define-a-mef-gesture-handler"></a>Per definire un gestore movimenti MEF  
   
-1.  Add to your **Dsl** and **DslPackage** projects the **MefExtension** files that are described in [Extend your DSL by using MEF](../modeling/extend-your-dsl-by-using-mef.md).  
+1.  Aggiungere il **Dsl** e **DslPackage** progetti il **MefExtension** file descritti in [estendere il modello DSL tramite MEF](../modeling/extend-your-dsl-by-using-mef.md).  
   
-2.  You can now define a gesture handler as a MEF component:  
+2.  Ora è possibile definire un gestore movimenti come componente MEF:  
   
     ```  
   
@@ -132,26 +132,26 @@ using System.Linq;
   
     ```  
   
-     You can create more than one gesture handler component, such as when you have different types of dragged objects.  
+     È possibile creare più di un componente gestore movimenti, ad esempio quando si hanno tipi diversi di oggetti trascinati.  
   
-3.  Add partial class definitions for the target shape, connector or diagram classes, and define the methods `IsAcceptableDropItem()` and `ProcessDragDropItem()`. These methods must begin by extracting the dragged item from the event arguments. For more information, see [How to get a reference to the dragged item](#extracting).  
+3.  Aggiungere le definizioni di classe parziale per le classi forma, connettore o diagramma di destinazione e definire i metodi `IsAcceptableDropItem()` e `ProcessDragDropItem()`. Questi metodi devono iniziare estraendo gli elementi trascinati dagli argomenti dell'evento. Per ulteriori informazioni, vedere [come ottenere un riferimento all'elemento trascinato](#extracting).  
   
-##  <a name="extracting"></a> How to decode the dragged item  
- When the user drags an item onto your diagram, or from one part of your diagram to another, information about the item that is being dragged is available in `DiagramDragEventArgs`. Because the drag operation could have started at any object on the screen, the data can be available in any one of a variety of formats. Your code must recognize the formats with which it is capable of dealing.  
+##  <a name="extracting"></a>Come decodificare l'elemento trascinato  
+ Quando l'utente trascina un elemento sul diagramma o da una parte del diagramma a un'altra, le informazioni sull'elemento trascinato sono disponibili in `DiagramDragEventArgs`. I dati possono essere disponibili in svariati formati, perché l'operazione di trascinamento potrebbe essere stata iniziata da qualsiasi oggetto. Il codice deve riconoscere i formati che riesce a gestire.  
   
- To discover the formats in which your drag source information is available, run your code in debugging mode, setting a breakpoint at the entry to `OnDragOver()` or `CanDragDrop()`. Inspect the values of the `DiagramDragEventArgs` parameter. The information is provided in two forms:  
+ Per individuare i formati in cui sono disponibili le informazioni sull'origine del trascinamento, eseguire il codice in modalità di debug, impostando un punto di interruzione all'inizio su `OnDragOver()` o `CanDragDrop()`. Esaminare i valori del parametro `DiagramDragEventArgs`. Le informazioni sono disponibili in due formati:  
   
--   <xref:System.Windows.Forms.IDataObject>  `Data` - This property carries serialized versions of the source objects, usually in more than one format. Its most useful functions are:  
+-   <xref:System.Windows.Forms.IDataObject>  `Data`-Questa proprietà esegue serializzatore versioni degli oggetti di origine, in genere in più formati. Le funzioni più utili sono:  
   
-    -   diagramEventArgs.Data.GetDataFormats() - Lists the formats in which you can decode the dragged object. For example, if the user drags a file from the desktop, the available formats include the file name ("`FileNameW`").  
+    -   diagramEventArgs.Data.GetDataFormats() - Elenca i formati in cui è possibile decodificare l'oggetto trascinato. Se, ad esempio, l'utente trascina un file dal desktop, i formati disponibili includono il nome file ("`FileNameW`").  
   
-    -   `diagramEventArgs.Data.GetData(format)` - Decodes the dragged object in the specified format. Cast the object to the appropriate type. For example:  
+    -   `diagramEventArgs.Data.GetData(format)`-Consente di decodificare l'oggetto trascinato nel formato specificato. Eseguire il cast dell'oggetto al tipo appropriato. Ad esempio:  
   
          `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`  
   
-         You can also transmit objects such as model bus references from the source in your own custom format. For more information, see [How to Send Model Bus References in a Drag and Drop](#mbr).  
+         È anche possibile trasmettere oggetti, quali i riferimenti ModelBus, dall'origine nel formato personalizzato. Per ulteriori informazioni, vedere [come inviare modello Bus riferimenti in un'operazione di trascinamento](#mbr).  
   
--   <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> `Prototype` - Use this property if you want users to drag items from a DSL or a UML model. An element group prototype contains one or more objects, links, and their property values. It is also used in paste operations and when you are adding an element from the toolbox. In a prototype, objects and their types are identified by Guid. For example, this code allows the user to drag class elements from a UML diagram or UML Model Explorer:  
+-   <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>`Prototype` -Utilizzare questa proprietà se si desidera che gli utenti di trascinare elementi da un modello UML o da un linguaggio DSL. Un prototipo di gruppo di elementi contiene uno o più oggetti, collegamenti e i valori delle proprietà. Viene usato anche nelle operazioni Incolla e quando si aggiunge un elemento dalla casella degli strumenti. In un prototipo, gli oggetti e i tipi vengono identificati dal GUID. Ad esempio, questo codice consente all'utente di trascinare gli elementi della classe da un diagramma UML o da Esplora modelli UML:  
   
     ```csharp  
     private bool IsAcceptableDropItem(DiagramDragEventArgs e)  
@@ -164,26 +164,26 @@ using System.Linq;
   
     ```  
   
-     To accept UML shapes, determine the Guids of the UML shape classes by experiment. Remember that there is usually more than one type of element on any diagram. Remember also that an object dragged from a DSL or UML diagram is the shape, not the model element.  
+     Per accettare le forme UML, determinare i GUID delle classi di forme UML facendo delle prove. Tenere presente che in genere in ogni diagramma ci sono più tipi di elemento. Tenere anche presente che un oggetto trascinato da un diagramma DSL o UML è la forma, non l'elemento del modello.  
   
- `DiagramDragEventArgs` also has properties that indicate the current mouse pointer position and whether the user is pressing the CTRL, ALT, or SHIFT keys.  
+ `DiagramDragEventArgs` ha anche proprietà che indicano la posizione corrente del puntatore del mouse e se l'utente sta premendo CTRL, ALT o MAIUSC.  
   
-##  <a name="getOriginal"></a> How to get the original of a dragged element  
- The `Data` and `Prototype` properties of the event arguments contain only a reference to the dragged shape. Usually, if you want to create an object in the target DSL that is derived from the prototype in some way, you need to obtain access to the original, for example, reading the file contents, or navigating to the model element represented by a shape.  You can use Visual Studio Model Bus to help with this.  
+##  <a name="getOriginal"></a>Come ottenere originale di un elemento trascinato  
+ Le proprietà `Data` e `Prototype` degli argomenti dell'evento contengono solo un riferimento alla forma trascinata. In genere, se si vuole creare nel linguaggio DSL di destinazione un oggetto derivato in qualche modo dal prototipo, è necessario ottenere l'accesso all'originale, ad esempio, leggendo i contenuti del file o passando all'elemento del modello rappresentato da una forma.  A questo scopo è possibile usare ModelBus di Visual Studio.  
   
-### <a name="to-prepare-a-dsl-project-for-model-bus"></a>To prepare a DSL project for Model Bus  
+### <a name="to-prepare-a-dsl-project-for-model-bus"></a>Per preparare un progetto DSL per ModelBus  
   
-1.  Make the source DSL accessible by [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Model Bus:  
+1.  Rendere il linguaggio DSL di origine accessibile da ModelBus di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]:  
   
-    1.  Download and install the Visual Studio Model Bus extension, if it is not already installed. For more information, see [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579).  
+    1.  Scaricare e installare l'estensione di ModelBus di Visual Studio, se non è già installata. Per ulteriori informazioni, vedere [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579).  
   
-    2.  Open the DSL definition file of the source DSL in DSL Designer. Right-click the design surface and then click **Enable Modelbus**. In the dialog box, choose one or both of the options.  Click **OK**. A new project "ModelBus" is added to the DSL solution.  
+    2.  Aprire il file di definizione DSL del linguaggio DSL di origine in Progettazione DSL. Fare doppio clic nell'area di progettazione e quindi fare clic su **abilitare Modelbus**. Nella finestra di dialogo scegliere una o entrambe le opzioni.  Fare clic su **OK**. Un nuovo progetto "ModelBus" viene aggiunto alla soluzione DSL.  
   
-    3.  Click **Transform All Templates** and rebuild the solution.  
+    3.  Fare clic su **Trasforma tutti i modelli** e ricompilare la soluzione.  
   
-###  <a name="mbr"></a> To send an object from a source DSL  
+###  <a name="mbr"></a>Per inviare un oggetto da un'origine DSL  
   
-1.  In your ElementOperations subclass, override `Copy()` so that it encodes a Model Bus Reference (MBR) into the IDataObject. This method will be called when the user starts to drag from the source diagram. The encoded MBR will then be available in the IDataObject when the user drops in the target diagram.  
+1.  Nella sottoclasse ElementOperations eseguire l'override di `Copy()` in modo che codifichi un riferimento ModelBus (MBR, Model Bus Reference) in IDataObject. Questo metodo verrà chiamato quando l'utente inizierà a trascinare dal diagramma di origine. Il riferimento MBR codificato sarà quindi disponibile in IDataObject quando l'utente rilascerà nel diagramma di destinazione.  
   
     ```  
   
@@ -223,15 +223,15 @@ using System.Linq;
   
     ```  
   
-### <a name="to-receive-a-model-bus-reference-from-a-dsl-in-a-target-dsl-or-uml-project"></a>To receive a Model Bus Reference from a DSL in a target DSL or UML project  
+### <a name="to-receive-a-model-bus-reference-from-a-dsl-in-a-target-dsl-or-uml-project"></a>Per ricevere un riferimento ModelBus da un linguaggio DSL in un progetto DSL o UML di destinazione  
   
-1.  In the target DSL project, add project references to:  
+1.  Nel progetto DSL di destinazione aggiungere i riferimenti al progetto a:  
   
-    -   The source Dsl project.  
+    -   Progetto Dsl di origine.  
   
-    -   The source ModelBus project.  
+    -   Progetto ModelBus di origine.  
   
-2.  In the gesture handler code file, add the following namespace references:  
+2.  Nel file di codice del gestore movimenti aggiungere i riferimenti allo spazio dei nomi seguenti:  
   
     ```csharp  
     using Microsoft.VisualStudio.Modeling;  
@@ -244,7 +244,7 @@ using System.Linq;
   
     ```  
   
-3.  The following sample illustrates how to get access to the source model element:  
+3.  L'esempio seguente illustra come ottenere l'accesso all'elemento del modello di origine:  
   
     ```  
     partial class MyTargetShape // or diagram or connector   
@@ -290,9 +290,9 @@ using System.Linq;
   
     ```  
   
-### <a name="to-accept-an-element-sourced-from-a-uml-model"></a>To accept an element sourced from a UML model  
+### <a name="to-accept-an-element-sourced-from-a-uml-model"></a>Per accettare un elemento originato da un modello UML  
   
--   The following code sample accepts an object dropped from a UML diagram.  
+-   L'esempio di codice seguente accetta un oggetto rilasciato da un diagramma UML.  
   
     ```csharp  
   
@@ -341,10 +341,10 @@ using System.Linq;
   
     ```  
   
-##  <a name="mouseActions"></a> Using Mouse Actions: Dragging Compartment Items  
- You can write a handler that intercepts mouse actions on a shape's fields. The following example lets the user re-order the items in a compartment by dragging with the mouse.  
+##  <a name="mouseActions"></a>Utilizzo di azioni del Mouse: Il trascinamento di elementi di raggruppamento  
+ È possibile scrivere un gestore che intercetta le azioni del mouse sui campi di una forma. L'esempio seguente consente all'utente di riordinare gli elementi in un raggruppamento trascinando con il mouse.  
   
- To build this example, create a solution by using the **Class Diagrams** solution template. Add a code file and add the following code. Adjust the namespace to be the same as your own.  
+ Per compilare questo esempio, creare una soluzione utilizzando la **diagrammi classi** modello di soluzione. Aggiungere un file di codice e aggiungere il codice seguente. Modificare lo spazio dei nomi in modo che sia uguale al proprio.  
   
 ```csharp  
 using Microsoft.VisualStudio.Modeling;  
@@ -592,9 +592,9 @@ namespace Company.CompartmentDrag  // EDIT.
   
 ```  
   
-## <a name="see-also"></a>See Also  
- [Customizing Copy Behavior](../modeling/customizing-copy-behavior.md)   
- [Deploying Domain-Specific Language Solutions](../modeling/deploying-domain-specific-language-solutions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Personalizzazione del comportamento di copia](../modeling/customizing-copy-behavior.md)   
+ [Distribuzione di soluzioni per un linguaggio specifico di dominio](../modeling/deploying-domain-specific-language-solutions.md)
  
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
  

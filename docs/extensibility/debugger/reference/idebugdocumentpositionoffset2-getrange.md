@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentPositionOffset2::GetRange | Microsoft Docs
+title: IDebugDocumentPositionOffset2::GetRange | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,13 +32,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 501acf49bec28092c7a41fee83f6dfd9fe9d11c9
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugdocumentpositionoffset2getrange"></a>IDebugDocumentPositionOffset2::GetRange
-Retrieves the range for the current document position.  
+Recupera l'intervallo per la posizione del documento corrente.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT GetRange(  
@@ -54,26 +54,26 @@ public int GetRange(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `pdwBegOffset`  
- [in, out] Offset for the start position of the range. Set this parameter to a null value if this information is not needed.  
+ [in, out] Offset per la posizione iniziale dell'intervallo. Impostare questo parametro su un valore null se tali informazioni non sono necessarie.  
   
  `pdwEndOffset`  
- [in, out] Offset for the end position of the range. Set this parameter to a null value if this information is not needed.  
+ [in, out] Offset per la posizione finale dell'intervallo. Impostare questo parametro su un valore null se tali informazioni non sono necessarie.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- The range specified in a document position for a location breakpoint is used by the debug engine (DE) to search ahead for a statement that actually contributes code. For example, consider the following code:  
+## <a name="remarks"></a>Note  
+ L'intervallo specificato in una posizione di documento per un punto di interruzione del percorso viene utilizzato dal motore di debug (DE) per la ricerca con un'istruzione che effettivamente fornisce codice. Si consideri il codice di esempio seguente:  
   
 ```  
 Line 5: // comment  
 Line 6: x = 1;  
 ```  
   
- Line 5 contributes no code to the program being debugged. If the debugger that sets the breakpoint on line 5 wants the DE to search forward a certain amount for the first line that contributes code, the debugger would specify a range that includes additional candidate lines where a breakpoint might be correctly placed. The DE would then search forward through those lines until it found a line that could accept a breakpoint.  
+ Riga 5 non contribuisce a nessun codice di programma sottoposto a debug. Se il debugger che imposta il punto di interruzione nella riga 5 desidera DE per eseguire la ricerca di una determinata quantità per la prima riga di codice, il debugger specificare un intervallo che include righe candidato aggiuntivo in un punto di interruzione potrebbe essere posizionato in modo corretto. La Germania viene quindi eseguita la ricerca in avanti tramite le righe fino a quando non trovata una riga in grado di accettare un punto di interruzione.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugDocumentPositionOffset2](../../../extensibility/debugger/reference/idebugdocumentpositionoffset2.md)   
  [GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)

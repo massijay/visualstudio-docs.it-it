@@ -1,5 +1,5 @@
 ---
-title: DEBUGPROP_INFO_FLAGS | Microsoft Docs
+title: DEBUGPROP_INFO_FLAGS | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: f4633730a3dbe09f356c3731cd48c9428b9e8890
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="debugpropinfoflags"></a>DEBUGPROP_INFO_FLAGS
-Specifies what information to retrieve about a debug property object.  
+Specifica le informazioni da recuperare su un oggetto di proprietà di debug.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 enum enum_DEBUGPROP_INFO_FLAGS {   
@@ -85,62 +85,62 @@ public enum enum_DEBUGPROP_INFO_FLAGS {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Membri  
  DEBUGPROP_INFO_FULLNAME  
- Initialize/use the `bstrFullName` field.  
+ Inizializzazione/Usa il `bstrFullName` campo.  
   
  DEBUGPROP_INFO_NAME  
- Initialize/use the `bstrName` field.  
+ Inizializzazione/Usa il `bstrName` campo.  
   
  DEBUGPROP_INFO_TYPE  
- Initialize/use the `bstrType` field.  
+ Inizializzazione/Usa il `bstrType` campo.  
   
  DEBUGPROP_INFO_VALUE  
- Initialize/use the `bstrValue` field.  
+ Inizializzazione/Usa il `bstrValue` campo.  
   
  DEBUGPROP_INFO_ATTRIB  
- Initialize/use the `dwAttrib` field.  
+ Inizializzazione/Usa il `dwAttrib` campo.  
   
  DEBUGPROP_INFO_PROP,  
- Initialize/use the `pProperty` field that contains an [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) interface.  
+ Inizializzazione/Usa il `pProperty` campo contenente un [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) interfaccia.  
   
  DEBUGPROP_INFO_VALUE_AUTOEXPAND  
- Specifies that the value field should contain the auto-expanded value, if available, for this type of object.  
+ Specifica che il campo del valore deve contenere il valore di espansione automatica, se disponibile, per questo tipo di oggetto.  
   
  DEBUGPROP_INFO_VALUE_NOFUNCEVAL  
- Deprecated.  
+ Deprecato.  
   
  DEBUGPROP_INFO_VALUE_RAW  
- Do not return any beautified values or members (that is, do not format the values).  
+ Non restituiscono i valori beautified o i membri (vale a dire non formattare i valori).  
   
  DEBUGPROP_INFO_VALUE_NO_TOSTRING  
- Do not return any special synthesized values (for example, do not call `ToString()` on an object to produce a value).  
+ Non restituiscono valori sintetizzati speciali (ad esempio, non chiamare `ToString()` su un oggetto per produrre un valore).  
   
  DEBUGPROP_INFO_NONE  
- Specifies that no flags are set.  
+ Specifica che nessun flag impostato.  
   
  DEBUGPROP_INFO_STANDARD  
- Initialize/use the `dwAttrib`, `bstrName`, `bstrType`, and `bstrValue` fields.  
+ Inizializzazione/Usa il `dwAttrib`, `bstrName`, `bstrType`, e `bstrValue` campi.  
   
  DEBUGPROP_INFO_All  
- Indicates a mask of all flags.  
+ Indica una maschera di tutti i flag.  
   
-## <a name="remarks"></a>Remarks  
- These values are passed to the [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md), [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md), and [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) methods to indicate which fields are to be initialized the [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) structure.  
+## <a name="remarks"></a>Note  
+ Questi valori vengono passati per la [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md), [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md), e [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) metodi per indicare i campi da inizializzare il [ DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struttura.  
   
- These values are also used for the `dwFields` member of the `DEBUG_PROPERTY_INFO` structure to indicate which fields of the structure are used and valid when the structure is returned.  
+ Questi valori vengono utilizzati anche per il `dwFields` appartenente il `DEBUG_PROPERTY_INFO` struttura per indicare quali campi della struttura sono validi e utilizzate quando viene restituita la struttura.  
   
- These values may be combined with a bitwise `OR`.  
+ Questi valori possono essere combinati con un bit per bit `OR`.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisiti  
+ Intestazione: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)   
  [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)   

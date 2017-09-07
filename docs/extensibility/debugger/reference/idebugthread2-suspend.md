@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::Suspend | Microsoft Docs
+title: IDebugThread2::Suspend | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 3926456c8b625102dfc5df4d8818f3cacc3a2ce3
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="idebugthread2suspend"></a>IDebugThread2::Suspend
-Suspends a thread.  
+Sospende un thread.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT Suspend (   
@@ -54,18 +54,18 @@ HRESULT Suspend (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `pdwSuspendCount`  
- [out] Returns the suspend count after the suspend operation.  
+ [out] Restituisce il conteggio di sospensione dopo l'operazione di sospensione.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- Each call to this method increments the suspend count above 0. This suspend count is displayed in the **Threads** debug window.  
+## <a name="remarks"></a>Note  
+ Ogni chiamata a questo metodo incrementa il conteggio di sospensione maggiore di 0. Questo conteggio di sospensione viene visualizzato nel **thread** finestra di debug.  
   
- For each call to this method, there must be a later call to the [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md) method.  
+ Per ogni chiamata a questo metodo, deve essere una chiamata successiva al [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md) metodo.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)

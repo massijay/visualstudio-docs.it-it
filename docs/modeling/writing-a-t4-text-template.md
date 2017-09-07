@@ -1,5 +1,5 @@
 ---
-title: Writing a T4 Text Template | Microsoft Docs
+title: Scrittura di un modello di testo T4 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,59 +33,59 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 97a9b5ce0237d9a06289e52e6db86ca33b901fc6
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="writing-a-t4-text-template"></a>Writing a T4 Text Template
-A text template contains the text that will be generated from it. For example, a template that creates a web page will contain "\<html>..." and all the other standard parts of an HTML page. Inserted into the template are *control blocks*, which are fragments of program code. Control blocks provide varying values and allow parts of the text to be conditional and repeated.  
+# <a name="writing-a-t4-text-template"></a>Scrittura di un modello di testo T4
+Un modello di testo contiene il testo che verrà generato dal modello stesso. Ad esempio, un modello che crea una pagina web conterrà "\<html > …" e tutte le altre parti standard di una pagina HTML. Inserito nel modello sono *blocchi di controllo*, che sono frammenti di codice programma. forniscono i valori variabili e consentono ad alcune parti del testo di essere ripetute e usate in modo condizionale.  
   
- This structure makes a template easy to develop, because you can start with a prototype of the generated file, and incrementally insert control blocks that vary the result.  
+ Questa struttura facilita lo sviluppo di un modello, perché consente di partire da un prototipo del file generato inserendo in modo incrementale i blocchi di controllo che variano il risultato.  
   
- Text templates are composed of the following parts:  
+ I modelli di testo sono costituiti dalle parti seguenti:  
   
--   **Directives** - elements that control how the template is processed.  
+-   **Direttive** -elementi che controllano la modalità di elaborazione al modello.  
   
--   **Text blocks** - content that is copied directly to the output.  
+-   **Blocchi di testo** : contenuto che viene copiato direttamente l'output.  
   
--   **Control blocks** - program code that inserts variable values into the text, and controls conditional or repeated parts of the text.  
+-   **Blocchi di controllo** -codice programma che inserisce i valori delle variabili nel testo e controlla le parti del testo condizionali o ripetute.  
   
- To try the examples in this topic, copy them into a template file as described in [Design-Time Code Generation by using T4 Text Templates](../modeling/design-time-code-generation-by-using-t4-text-templates.md). After editing the template file, save it, and then inspect the output **.txt** file.  
+ Per provare gli esempi in questo argomento, copiarli in un file di modello, come descritto in [generazione codice in fase di progettazione tramite modelli di testo T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Dopo avere modificato il file di modello, salvarlo e quindi esaminare l'output **. txt** file.  
   
-## <a name="directives"></a>Directives  
- Text template directives provide general instructions to the text templating engine about how to generate the transformation code and the output file.  
+## <a name="directives"></a>Direttive  
+ Le direttive del modello di testo forniscono al motore del modello di testo le istruzioni generali che stabiliscono come generare il codice di trasformazione e il file di output.  
   
- For example, the following directive specifies that the output file should have a .txt extension:  
+ Ad esempio, la direttiva seguente specifica che il file di output deve avere l'estensione .txt:  
   
 ```  
   
 <#@ output extension=".txt" #>  
 ```  
   
- For more information about directives, see [T4 Text Template Directives](../modeling/t4-text-template-directives.md).  
+ Per ulteriori informazioni sulle direttive, vedere [direttive di modello di testo T4](../modeling/t4-text-template-directives.md).  
   
-## <a name="text-blocks"></a>Text blocks  
- A text block inserts text directly into the output file. There is no special formatting for text blocks. For example, the following text template will produce a text file that contains the word "Hello":  
+## <a name="text-blocks"></a>Blocchi di testo  
+ Un blocco di testo inserisce del testo direttamente nel file di output. Non esiste una formattazione speciale per i blocchi di testo. Ad esempio, il modello di testo seguente produrrà un file di testo contenente la parola "Hello":  
   
 ```  
 <#@ output extension=".txt" #>  
 Hello  
 ```  
   
-## <a name="control-blocks"></a>Control blocks  
- Control blocks are sections of program code that are used to transform the templates. The default language is C#, but to use [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], you can write this directive at the beginning of the file:  
+## <a name="control-blocks"></a>Blocchi di controllo  
+ I blocchi di controllo sono sezioni del codice programma usate per trasformare i modelli. Il linguaggio predefinito è C#, ma è possibile usare [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] scrivendo la seguente direttiva all'inizio del file:  
   
 ```  
 <#@ template language="VB" #>  
 ```  
   
- The language in which you write the code in the control blocks is unrelated to the language of the text that is generated.  
+ Il linguaggio nel quale si scrive il codice nei blocchi di controllo non è correlato al linguaggio del testo generato.  
   
-### <a name="standard-control-blocks"></a>Standard control blocks  
- A standard control block is a section of program code that generates part of the output file.  
+### <a name="standard-control-blocks"></a>Blocchi di controllo standard  
+ Un blocco di controllo standard è una sezione del codice programma che genera una parte del file di output.  
   
- You can mix any number of text blocks and standard control blocks in a template file. However, you cannot place one control block inside another. Each standard control block is delimited by the symbols `<# ... #>`.  
+ In un file di modello è possibile usare insieme blocchi di testo e blocchi di controllo standard ma non è possibile inserire un blocco di controllo all'interno di un altro. Ciascun blocco di controllo standard è delimitato dai simboli `<# ... #>`.  
   
- For example, the following control block and text block cause the output file to contain the line "0, 1, 2, 3, 4 Hello!":  
+ Ad esempio, il blocco di controllo e il blocco di testo seguenti inseriscono nel file di output la riga "0, 1, 2, 3, 4 Hello!":  
   
 ```  
   
@@ -98,7 +98,7 @@ Hello
 #> Hello!  
 ```  
   
- Instead of using explicit `Write()` statements, you can interleave text and code. The following example prints "Hello!" four times:  
+ Anziché utilizzare le istruzioni `Write()` esplicite, è possibile alternare testo e codice. Nell'esempio seguente visualizza "Hello!" quattro volte:  
   
 ```  
 <#  
@@ -111,25 +111,25 @@ Hello!
 #>  
 ```  
   
- You can insert a text block wherever a `Write();` statement would be allowed in the code.  
+ Un blocco di testo può essere inserito ovunque sia possibile usare nel codice un'istruzione `Write();`.  
   
 > [!NOTE]
->  When you embed a text block within a compound statement such as a loop or conditional, always use braces {...} to contain the text block.  
+>  Quando si incorpora un blocco di testo all'interno di un'istruzione composta, ad esempio un ciclo o condizionali, utilizzare sempre le parentesi graffe {...} Per includere il blocco di testo.  
   
-### <a name="expression-control-blocks"></a>Expression control blocks  
- An expression control block evaluates an expression and converts it to a string. This is inserted into the output file.  
+### <a name="expression-control-blocks"></a>Blocchi di controllo dell'espressione  
+ Un blocco di controllo dell'espressione valuta un'espressione e la converte in una stringa, che verrà quindi inserita nel file di output.  
   
- Expression control blocks are delimited by the symbols `<#= ... #>`  
+ I blocchi di controllo dell'espressione sono delimitati dai simboli `<#= ... #>`.  
   
- For example, the following control block causes the output file to contain "5":  
+ Ad esempio, il blocco di controllo seguente inserisce nel file di output "5":  
   
 ```  
 <#= 2 + 3 #>  
 ```  
   
- Notice that the opening symbol has three characters "<#=".  
+ Si noti che il simbolo di apertura contiene tre caratteri "<#=".  
   
- The expression can include any variable that is in scope. For example, this block prints lines with numbers:  
+ L'espressione può includere qualsiasi variabile che fa parte dell'ambito. Ad esempio, il blocco seguente visualizza righe con numeri:  
   
 ```  
 <#@ output extension=".txt" #>  
@@ -143,12 +143,12 @@ This is hello number <#= i+1 #>: Hello!
 #>  
 ```  
   
-### <a name="class-feature-control-blocks"></a>Class feature control blocks  
- A class feature control block defines properties, methods, or any other code that should not be included in the main transform. Class feature blocks are frequently used for helper functions.  Typically, class feature blocks are placed in separate files so that they can be [included](#Include) by more than one text template.  
+### <a name="class-feature-control-blocks"></a>Blocchi di controllo della funzionalità di classe  
+ Un blocco di controllo della funzionalità di classe definisce le proprietà, i metodi o qualsiasi altro codice che non deve essere incluso nella trasformazione principale. I blocchi della funzionalità di classe vengono spesso usati per le funzioni di supporto.  In genere blocchi della funzionalità di classe vengono inseriti in file distinti in modo che possano essere [inclusi](#Include) da più di un modello di testo.  
   
- Class feature control blocks are delimited by the symbols `<#+ ... #>`  
+ I blocchi di controllo della funzionalità di classe sono delimitati dai simboli `<#+ ... #>`.  
   
- For example, the following template file declares and uses a method:  
+ Ad esempio, nel file di modello seguente viene dichiarato e usato un metodo:  
   
 ```  
 <#@ output extension=".txt" #>  
@@ -170,12 +170,12 @@ private int Square(int i)
 #>  
 ```  
   
- Class features must be placed at the end of the file in which they are written. However, you can `<#@include#>` a file that contains a class feature, even if the `include` directive is followed by standard blocks and text.  
+ Le funzionalità di classe devono essere inserite alla fine del file nel quale vengono scritte. Tuttavia, è possibile usare un file con `<#@include#>` che contiene una funzionalità di classe anche se la direttiva `include` è seguita da testo e blocchi standard.  
   
- For more information about control blocks, see [Text Template Control Blocks](../modeling/text-template-control-blocks.md).  
+ Per ulteriori informazioni sui blocchi di controllo, vedere [blocchi di controllo del modello di testo](../modeling/text-template-control-blocks.md).  
   
-### <a name="class-feature-blocks-can-contain-text-blocks"></a>Class feature blocks can contain text blocks  
- You can write a method that generates text. For example:  
+### <a name="class-feature-blocks-can-contain-text-blocks"></a>I blocchi della funzionalità di classe possono contenere blocchi di testo  
+ È possibile scrivere un metodo che generi il testo. Ad esempio:  
   
 ```  
 List of Squares:  
@@ -194,72 +194,72 @@ private void WriteSquareLine(int i)
 #>  
 ```  
   
- It is particularly useful to place a method that generates text in a separate file that can be included by more than one template.  
+ È particolarmente utile inserire un metodo che generi il testo in un file separato che possa essere incluso da più modelli.  
   
-## <a name="using-external-definitions"></a>Using external definitions  
+## <a name="using-external-definitions"></a>Uso di definizioni esterne  
   
-### <a name="assemblies"></a>Assemblies  
- The code blocks of your template can use types that are defined the most frequently used .NET assemblies such as System.dll. In addition, you can reference other .NET assemblies or your own assemblies. You can provide a pathname, or the strong name of an assembly:  
+### <a name="assemblies"></a>Assembly  
+ I blocchi di codice del modello possono usare i tipi definiti negli assembly .NET usati più di frequente come ad esempio System.dll. Inoltre, è possibile fare riferimento ad altri assembly .NET o ad assembly personalizzati. È possibile fornire un percorso o il nome sicuro di un assembly:  
   
 ```  
 <#@ assembly name="System.Xml" #>  
 ```  
   
- You should use absolute path names, or use standard macro names in the path name. For example:  
+ Nel nome del percorso è consigliabile usare nomi di percorso assoluto o nomi di macro standard. Ad esempio:  
   
 ```  
 <#@ assembly name="$(SolutionDir)library\MyAssembly.dll" #>  
 ```  
   
- The assembly directive has no effect in a [preprocessed text template](../modeling/run-time-text-generation-with-t4-text-templates.md).  
+ La direttiva dell'assembly non ha effetto in un [modello di testo pre-elaborato](../modeling/run-time-text-generation-with-t4-text-templates.md).  
   
- For more information, see [T4 Assembly Directive](../modeling/t4-assembly-directive.md).  
+ Per ulteriori informazioni, vedere [direttiva Assembly T4](../modeling/t4-assembly-directive.md).  
   
-### <a name="namespaces"></a>Namespaces  
- The import directive is the same as the `using` clause in C# or the `imports` clause in Visual Basic. It allows you to refer to types in your code without using a fully qualified name:  
+### <a name="namespaces"></a>Spazi dei nomi  
+ La direttiva import è uguale alla clausola `using` in C# o alla clausola `imports` in Visual Basic. Consente di fare riferimento ai tipi nel codice senza usare un nome completo:  
   
 ```  
 <#@ import namespace="System.Xml" #>  
 ```  
   
- You can use as many `assembly` and `import` directives as you want. You must place them before text and control blocks.  
+ È possibile usare il numero di direttive `assembly` e `import` desiderato. È necessario posizionarle prima dei blocchi di testo e di controllo.  
   
- For more information, see [T4 Import Directive](../modeling/t4-import-directive.md).  
+ Per ulteriori informazioni, vedere [direttiva Import T4](../modeling/t4-import-directive.md).  
   
-###  <a name="Include"></a> Including code and text  
- The `include` directive inserts text from another template file. For example, this directive inserts the content of `test.txt`.  
+###  <a name="Include"></a>Includere codice e testo  
+ La direttiva `include` inserisce il testo da un altro file di modello. Ad esempio, questa direttiva inserisce il contenuto del file `test.txt`.  
   
  `<#@ include file="c:\test.txt" #>`  
   
- The included content is processed almost as if it were part of the including text template. However, you can include a file that contains a class feature block `<#+...#>` even if the include directive is followed by ordinary text and standard control blocks.  
+ Il contenuto incluso viene elaborato più o meno come se facesse parte del modello di testo che include. Tuttavia, è possibile includere un file che contiene un blocco della funzionalità di classe `<#+...#>` anche se la direttiva include è seguita da testo ordinario e blocchi di controllo standard.  
   
- For more information, see [T4 Include Directive](../modeling/t4-include-directive.md).  
+ Per ulteriori informazioni, vedere [direttiva Include T4](../modeling/t4-include-directive.md).  
   
-### <a name="utility-methods"></a>Utility methods  
- There are several methods such as `Write()` that are always available to you in a control block. They include methods for helping you indent the output, and for reporting errors.  
+### <a name="utility-methods"></a>Metodi di utilità  
+ In un blocco di controllo esistono diversi metodi come ad esempio `Write()` che sono sempre disponibili. Tra questi ci sono i metodi che consentono di impostare un rientro nell'output e di segnalare errori.  
   
- You can also write your own set of utility methods.  
+ È anche possibile scrivere un set di metodi di utilità personalizzato.  
   
- For more information, see [Text Template Utility Methods](../modeling/text-template-utility-methods.md).  
+ Per ulteriori informazioni, vedere [metodi di utilità di modelli di testo](../modeling/text-template-utility-methods.md).  
   
-## <a name="transforming-data-and-models"></a>Transforming Data and Models  
- The most useful application for a text template is to generate material based on the content of a source such as a model, database, or data file. Your template extracts and reformats the data. A collection of templates can transform such a source into multiple files.  
+## <a name="transforming-data-and-models"></a>Trasformazioni di dati e modelli  
+ L'applicazione più utile per un modello di testo è generare materiale in base al contenuto di un'origine, ad esempio un modello, un database o un file di dati. Il modello estrae e riformatta i dati. Una raccolta di modelli può trasformare tale origine in più file.  
   
- There are several approaches to reading the source file.  
+ Esistono diversi approcci alla lettura del file di origine.  
   
- **Read a file in the text template**. This is simplest way to get data into the template:  
+ **Leggere un file nel modello di testo**. Si tratta del modo più semplice per ottenere i dati nel modello:  
   
 ```  
 <#@ import namespace="System.IO" #>  
 <# string fileContent = File.ReadAllText(@"C:\myData.txt"); ...  
 ```  
   
- **Load a file as a navigable model**. A more powerful method is to read the data as a model, which your text template code can navigate. For example, you can load an XML file and navigate it with XPath expressions. You could also use [xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765) to create a set of classes with which you can read the XML data.  
+ **Caricare un file come modello navigabile**. Un metodo più efficace è leggere i dati come un modello, in cui è possibile spostarsi con il codice del modello di testo. Ad esempio, è possibile caricare un file XML e spostarsi al suo interno con espressioni XPath. È anche possibile usare [xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765) per creare un set di classi con cui è possibile leggere i dati XML.  
   
- **Edit the model file in a diagram or form.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] provides tools that let you edit a model as a diagram or Windows form. This makes it easier to discuss the model with users of the generated application. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] also creates a set of strongly-typed classes that reflect the structure of the model. For more information, see [Generating Code from a Domain-Specific Language](../modeling/generating-code-from-a-domain-specific-language.md).  
+ **Modificare il file di modello in un diagramma o form.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]fornisce strumenti che consentono di modificare un modello come un diagramma o un Windows form. In questo modo diventa più semplice illustrare il modello agli utenti dell'applicazione generata. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] crea anche un set di classi fortemente tipizzate che riflettono la struttura del modello. Per ulteriori informazioni, vedere [la generazione di codice da un linguaggio specifico di dominio](../modeling/generating-code-from-a-domain-specific-language.md).  
   
-### <a name="relative-file-paths-in-design-time-templates"></a>Relative file paths in design-time templates  
- In a [design-time text template](../modeling/design-time-code-generation-by-using-t4-text-templates.md), if you want to reference a file in a location relative to the text template, use `this.Host.ResolvePath()`. You must also set `hostspecific="true"` in the `template` directive:  
+### <a name="relative-file-paths-in-design-time-templates"></a>Percorsi di file relativi in modelli della fase di progettazione  
+ In un [modello di testo della fase di progettazione](../modeling/design-time-code-generation-by-using-t4-text-templates.md), se si desidera fare riferimento a un file in un percorso relativo al modello di testo, usare `this.Host.ResolvePath()`. È inoltre necessario impostare `hostspecific="true"` nella direttiva `template`:  
   
 ```csharp  
 <#@ template hostspecific="true" language="C#" #>  
@@ -274,24 +274,24 @@ Content of MyFile.txt is:
   
 ```  
   
- You can also obtain other services that are provided by the host. For more information, see [Accessing Visual Studio or other Hosts from a Template](http://msdn.microsoft.com/en-us/0556f20c-fef4-41a9-9597-53afab4ab9e4).  
+ È anche possibile ottenere altri servizi forniti dall'host. Per ulteriori informazioni, vedere [l'accesso a Visual Studio o altri host da un modello](http://msdn.microsoft.com/en-us/0556f20c-fef4-41a9-9597-53afab4ab9e4).  
   
-### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>Design-time Text Templates run in a separate AppDomain  
- You should be aware that a [design-time text template](../modeling/design-time-code-generation-by-using-t4-text-templates.md) runs in an AppDomain that is separate from the main application. In most cases this is not important, but you might discover restrictions in certain complex cases. For example, if you want to pass data in or out of the template from a separate service, then the service must provide a serializable API.  
+### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>Modelli di testo della fase di progettazione eseguiti in un AppDomain separato  
+ Tenere presente che un [modello di testo della fase di progettazione](../modeling/design-time-code-generation-by-using-t4-text-templates.md) viene eseguito in un AppDomain separato dall'applicazione principale. Nella maggior parte dei casi tale aspetto non è importante, ma in determinati casi complessi potrebbero verificarsi delle restrizioni. Se ad esempio si desidera passare i dati all'intero o all'esterno del modello da un servizio separato, il servizio deve fornire un'API serializzabile.  
   
- (This isn't true of a [run-time text template](../modeling/run-time-text-generation-with-t4-text-templates.md), which provides code that is compiled along with the rest of your code.)  
+ (Ciò non accade una [modello di testo in fase di esecuzione](../modeling/run-time-text-generation-with-t4-text-templates.md), che fornisce il codice compilato insieme al resto del codice.)  
   
-## <a name="editing-templates"></a>Editing Templates  
- Specialized text template editors can be downloaded from the Extension Manager Online Gallery. On the **Tools** menu, click **Extension Manager**. Click **Online Gallery**, and then use the search tool.  
+## <a name="editing-templates"></a>Modifica dei modelli  
+ È possibile scaricare editor di modelli di testo specializzati dalla Raccolta online di Gestione estensioni. Nel **strumenti** menu, fare clic su **Extension Manager**. Fare clic su **raccolta Online**e quindi utilizzare lo strumento di ricerca.  
   
-## <a name="related-topics"></a>Related topics  
+## <a name="related-topics"></a>Argomenti correlati  
   
-|Task|Topic|  
+|Attività|Argomento|  
 |----------|-----------|  
-|Writing a template.|[Guidelines for Writing T4 Text Templates](../modeling/guidelines-for-writing-t4-text-templates.md)|  
-|Generate text by using program code.|[Text Template Structure](../modeling/writing-a-t4-text-template.md)|  
-|Generate files in a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] solution.|[Design-Time Code Generation by using T4 Text Templates](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|  
-|Run text generation outside [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|[Generating Files with the TextTransform Utility](../modeling/generating-files-with-the-texttransform-utility.md)|  
-|Transform your data in the form of a domain-specific language.|[Generating Code from a Domain-Specific Language](../modeling/generating-code-from-a-domain-specific-language.md)|  
-|Write directive processors to transform your own data sources.|[Customizing T4 Text Transformation](../modeling/customizing-t4-text-transformation.md)|
+|Scrivere un modello.|[Linee guida per la scrittura di modelli di testo T4](../modeling/guidelines-for-writing-t4-text-templates.md)|  
+|Generare testo usando il codice programma.|[Struttura del modello di testo](../modeling/writing-a-t4-text-template.md)|  
+|Generare file in una soluzione di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|[Generazione di codice in fase di progettazione tramite modelli di testo T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|  
+|Eseguire la generazione di testo all'esterno di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|[Generazione di file con l'utilità TextTransform](../modeling/generating-files-with-the-texttransform-utility.md)|  
+|Trasformare i dati nel formato di un linguaggio specifico di dominio.|[Generazione di codice da un linguaggio specifico di dominio](../modeling/generating-code-from-a-domain-specific-language.md)|  
+|Scrivere processori di direttive per trasformare le origini dati.|[Personalizzazione della trasformazione del testo T4](../modeling/customizing-t4-text-transformation.md)|
 

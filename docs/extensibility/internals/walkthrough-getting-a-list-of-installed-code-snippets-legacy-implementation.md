@@ -1,5 +1,5 @@
 ---
-title: Getting a List of Installed Code Snippets (Legacy) | Microsoft Docs
+title: Come ottenere un elenco di installato frammenti di codice (Legacy) | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,19 +34,19 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 50d5343d98bba8df79628d9bfdfa838aea9e27d8
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation"></a>Walkthrough: Getting a List of Installed Code Snippets (Legacy Implementation)
-A code snippet is a piece of code that can be inserted into the source buffer either with a menu command (which allows choosing among a list of installed code snippets) or by selecting a snippet shortcut from an IntelliSense completion list.  
+# <a name="walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation"></a>Procedura dettagliata: Ottenere un elenco di frammenti di codice installato (implementazione Legacy)
+Un frammento di codice è un frammento di codice che può essere inserito nel buffer di origine con un comando di menu (che consente di scegliere tra un elenco di frammenti di codice installata) o per la selezione di un collegamento al frammento da un elenco di completamento IntelliSense.  
   
- The <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.EnumerateExpansions%2A> method gets all code snippets for a specific language GUID. The shortcuts for those snippets can be inserted into an IntelliSense completion list.  
+ Il <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.EnumerateExpansions%2A> metodo ottiene tutti i frammenti di codice per una lingua specifica GUID. I collegamenti di tali frammenti possono essere inseriti in un elenco di completamento IntelliSense.  
   
- See [Support for Code Snippets in a Legacy Language Service](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md) for details about implementing code snippets in a managed package framework (MPF) language service.  
+ Vedere [il supporto per i frammenti di codice in un servizio di linguaggio Legacy](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md) per informazioni dettagliate sull'implementazione di frammenti di codice in un servizio di linguaggio di pacchetto gestito (MPF) framework.  
   
-### <a name="to-retrieve-a-list-of-code-snippets"></a>To retrieve a list of code snippets  
+### <a name="to-retrieve-a-list-of-code-snippets"></a>Per recuperare un elenco di frammenti di codice  
   
-1.  The following code shows how to get a list of code snippets for a given language. The results are stored in an array of <xref:Microsoft.VisualStudio.TextManager.Interop.VsExpansion> structures. This method uses the static <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> method to get the <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> interface from the <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> service. However, you can also use the service provider given to your VSPackage and call the <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> method.  
+1.  Il codice seguente viene illustrato come ottenere un elenco di frammenti di codice per una lingua specifica. I risultati vengono archiviati in una matrice di <xref:Microsoft.VisualStudio.TextManager.Interop.VsExpansion> strutture. Questo metodo utilizza il metodo statico <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> metodo per ottenere il <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> interfaccia dal <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> servizio. Tuttavia, è possibile utilizzare anche il provider del servizio specificato per il pacchetto VSPackage e chiamare il <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> metodo.  
   
     ```csharp  
     using System;  
@@ -119,12 +119,12 @@ A code snippet is a piece of code that can be inserted into the source buffer ei
     }  
     ```  
   
-### <a name="to-call-the-getsnippets-method"></a>To call the GetSnippets method  
+### <a name="to-call-the-getsnippets-method"></a>Chiamare il metodo GetSnippets  
   
-1.  The following method shows how to call the `GetSnippets` method at the completion of a parsing operation. The <xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A> method is called after a parsing operation that was started with the reason <xref:Microsoft.VisualStudio.Package.ParseReason>.  
+1.  Il metodo seguente viene illustrato come chiamare il `GetSnippets` metodo al completamento di un'operazione di analisi. Il <xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A> metodo viene chiamato dopo un'operazione di analisi che è stata avviata con il motivo <xref:Microsoft.VisualStudio.Package.ParseReason>.  
   
 > [!NOTE]
->  The `expansionsList` array listis cached for performance reasons. Changes to the snippets are not reflected in the list until the language service is stopped and reloaded (for example, by stopping and restarting [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]).  
+>  Il `expansionsList` listis memorizzato nella cache per motivi di prestazioni della matrice. Per i frammenti di codice non vengono riflesse nell'elenco fino a quando il servizio di linguaggio viene arrestato e ricaricato (ad esempio, per arrestare e riavviare [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]).  
   
 ```csharp  
 class TestLanguageService : LanguageService  
@@ -143,13 +143,13 @@ class TestLanguageService : LanguageService
 }  
 ```  
   
-### <a name="to-use-the-snippet-information"></a>To use the snippet information  
+### <a name="to-use-the-snippet-information"></a>Utilizzare le informazioni del frammento di codice  
   
-1.  The following code shows how to use the snippet information returned by the `GetSnippets` method. The `AddSnippets` method is called from the parser in response to any parse reason that is used to populate a list of code snippets. This should take place after the full parse has been done for the first time.  
+1.  Il codice seguente viene illustrato come utilizzare le informazioni di frammento restituite dal `GetSnippets` metodo. Il `AddSnippets` metodo viene chiamato dal parser in risposta a qualsiasi motivo di analisi utilizzato per popolare un elenco di frammenti di codice. Questa operazione deve essere eseguita dopo l'analisi completa è stato eseguito per la prima volta.  
   
-     The `AddDeclaration` method builds a list of declarations that is later displayed in a completion list.  
+     Il `AddDeclaration` metodo compila un elenco di dichiarazioni che in un secondo momento viene visualizzato in un elenco di completamento.  
   
-     The `TestDeclaration` class contains all the information that can be displayed in a completion list as well as the type of declaration.  
+     La `TestDeclaration` classe contiene tutte le informazioni che possono essere visualizzate in un elenco di completamento, nonché il tipo di dichiarazione.  
   
     ```csharp  
     class TestAuthoringScope : AuthoringScope  
@@ -194,5 +194,5 @@ class TestLanguageService : LanguageService
   
     ```  
   
-## <a name="see-also"></a>See Also  
- [Support for Code Snippets in a Legacy Language Service](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md)
+## <a name="see-also"></a>Vedere anche  
+ [Supporto per i frammenti di codice in un servizio di linguaggio legacy](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md)
