@@ -1,5 +1,5 @@
 ---
-title: Share the Unity Log Callback with VSTU | Microsoft Docs
+title: Condividere il callback di log di Unity con VSTU | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,16 +31,16 @@ ms.translationtype: HT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 138cd3c911d9e97e16c5fbe64a3526101cece0b2
 ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="share-the-unity-log-callback-with-vstu"></a>Share the Unity Log Callback with VSTU
-Visual Studio Tools for Unity registers a log callback with Unity to be able to stream its console to Visual Studio. If your editor scripts also register a log callback with Unity, the VSTU callback might interfere with your callback. To prevent this possibility, use the `VisualStudioIntegration.LogCallback` event to cooperate with VSTU.  
+# <a name="share-the-unity-log-callback-with-vstu"></a>Condividere il callback di log di Unity con VSTU
+Visual Studio Tools per Unity registra un callback di log con Unity in modo da poter eseguire la console di Unity in Visual Studio. Se anche gli script di editor registrano un callback di log con Unity, il callback di VSTU potrebbe interferire con questo. Per evitare questa eventualità, usare l'evento `VisualStudioIntegration.LogCallback` per cooperare con VSTU.  
   
-## <a name="demonstrates"></a>Demonstrates  
- How to share the Unity Log Callback created by Visual Studio Tools for Unity.  
+## <a name="demonstrates"></a>Dimostrazione  
+ Viene illustrato come condividere il callback di log Unity creato da Visual Studio Tools per Unity.  
   
-## <a name="example"></a>Example  
+## <a name="example"></a>Esempio  
   
 ```csharp  
 using System;  
@@ -63,5 +63,5 @@ public class LogCallbackHook
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
- [Example: Project File Generation](../cross-platform/customize-project-files-created-by-vstu.md)
+## <a name="see-also"></a>Vedere anche  
+ [Esempio: generazione di file di progetto](../cross-platform/customize-project-files-created-by-vstu.md)
