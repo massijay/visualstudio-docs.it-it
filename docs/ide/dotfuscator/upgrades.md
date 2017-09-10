@@ -86,10 +86,10 @@ Sono inclusi:
   * La possibilità di tenere traccia delle eccezioni negli assembly `.dll`.
   * Crittografia dei dati di telemetria.
 
-Dotfuscator Professional è l'[obfuscator .NET] [ net-obfuscator] di riferimento del settore ed è adatto per gli sviluppatori aziendali che richiedono supporto, manutenzione e aggiornamenti di prodotto continui.
+Dotfuscator Professional è l'[obfuscator .NET][net-obfuscator] di riferimento del settore ed è adatto per gli sviluppatori aziendali che richiedono supporto, manutenzione e aggiornamenti di prodotto continui.
 Dotfuscator Professional offre anche una migliore integrazione con Visual Studio e viene concesso in licenza per uso commerciale.
 
-Per altre informazioni sulle funzionalità di protezione avanzata delle applicazioni di Dotfuscator Professional, visitare la [pagina della panoramica di Dotfuscator] [ product-about] e [il confronto con Community Edition][product-compare].
+Per altre informazioni sulle funzionalità di protezione avanzata delle applicazioni di Dotfuscator Professional, visitare la [pagina della panoramica di Dotfuscator][ product-about] e [il confronto con Community Edition][product-compare].
 [Le versioni di valutazione completamente supportate sono disponibili su richiesta sul sito preemptive.com][eval].
 
 ## <a name="see-also"></a>Vedere anche
