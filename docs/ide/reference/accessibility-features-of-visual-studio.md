@@ -1,5 +1,5 @@
 ---
-title: Accessibility Features of Visual Studio | Microsoft Docs
+title: "Funzionalità di accessibilità di Visual Studio | Microsoft Docs"
 ms.custom: 
 ms.date: 08/22/2017
 ms.reviewer: 
@@ -19,40 +19,40 @@ ms.translationtype: HT
 ms.sourcegitcommit: 17defdd0b96ec1c3273fc6b845af844b031a4a17
 ms.openlocfilehash: 2f74439a5814d9939d9a4a3cd76cb430194375a6
 ms.contentlocale: it-it
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="accessibility-features-of-visual-studio"></a>Accessibility Features of Visual Studio
+# <a name="accessibility-features-of-visual-studio"></a>Funzionalità di accessibilità di Visual Studio
 > [!TIP]
-> To learn more about recent accessibility updates, see the [Accessibility improvements in Visual Studio 2017 version 15.3](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/accessibility-improvements-in-visual-studio-2017-version-15-3/) blog post.
+> Per altre informazioni sugli aggiornamenti di accessibilità recenti, visitare il post di blog sui [miglioramenti dell'accessibilità di Visual Studio 2017 (versione 15.3)](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/accessibility-improvements-in-visual-studio-2017-version-15-3/).
 
-In addition to accessibility features and utilities in Windows, the following features make Visual Studio more accessible for people with disabilities:  
+Oltre alle utilità e alle funzionalità di accessibilità di Windows, sono disponibili le seguenti funzionalità che rendono Visual Studio più accessibile per gli utenti con disabilità:  
 
--   Toolbar button and text enlargement  
+-   Ingrandimento del testo e dei pulsanti della barra degli strumenti  
 
--   Text size options in the editors  
+-   Opzioni per la dimensione del testo negli editor  
 
--   Color customization in the editors  
+-   Personalizzazione dei colori negli editor  
 
--   Keyboard shortcut customization  
+-   Personalizzazione dei tasti di scelta rapida  
 
--   Auto-completion for methods and parameters  
+-   Completamento automatico per metodi e parametri  
 
 > [!IMPORTANT]
->  The information in this section applies only to users who license Microsoft products in the United States. If you obtained this product outside of the United States, you can use the subsidiary-information card that came with your software package, or you can visit the [Contact Us page for Microsoft Support](http://support.microsoft.com/ContactUs) and click the **Locate Microsoft Offices Worldwide** link (near the bottom of the page). This page provides a list of telephone numbers and addresses for Microsoft support services. You can contact your subsidiary to find out whether the types of products and services that are described in this section are available in your area. Information about accessibility is available in other languages, including Japanese and French.  
+>  Le informazioni contenute in questa sezione sono valide solo per gli utenti che acquistano licenze di prodotti Microsoft negli Stati Uniti. Se il prodotto è stato acquistato al di fuori degli Stati Uniti, è possibile usare la scheda informativa complementare acclusa al pacchetto software oppure visitare la pagina [Contattaci del Supporto Tecnico Microsoft](http://support.microsoft.com/ContactUs) e fare clic sul collegamento **Individua le sedi Microsoft in tutto il mondo** nella parte inferiore della pagina. Questa pagina fornisce un elenco di numeri di telefono e di indirizzi dei servizi di supporto tecnico Microsoft. È possibile contattare la filiale Microsoft per scoprire se i tipi di prodotti e servizi descritti in questa sezione sono disponibili nella propria zona. Le informazioni sull'accessibilità sono disponibili in altre lingue, tra cui giapponese e francese.  
 
- For more information, see the following topics:  
+ Per altre informazioni, vedere gli argomenti seguenti:  
 
--   [How to: Set IDE Accessibility Options](../../ide/reference/how-to-set-ide-accessibility-options.md)  
+-   [Procedura: Impostare le opzioni di accessibilità IDE](../../ide/reference/how-to-set-ide-accessibility-options.md)  
 
--   [How to: Use the Keyboard Exclusively](../../ide/reference/how-to-use-the-keyboard-exclusively.md)  
+-   [Procedura: Usare esclusivamente la tastiera](../../ide/reference/how-to-use-the-keyboard-exclusively.md)  
 
--   [Default Keyboard Shortcuts](../../ide/default-keyboard-shortcuts-in-visual-studio.md)  
+-   [Tasti di scelta rapida predefiniti](../../ide/default-keyboard-shortcuts-in-visual-studio.md)  
 
--   [Accessibility Tips and Tricks](../../ide/reference/accessibility-tips-and-tricks.md)  
+-   [Suggerimenti sull'accessibilità](../../ide/reference/accessibility-tips-and-tricks.md)  
 
--   [How to: Change Fonts and Colors](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)  
+-   [Procedura: Modificare i tipi di carattere e colori](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)  
 
-## <a name="see-also"></a>See Also  
- [Accessibility Products and Services from Microsoft](../../ide/reference/accessibility-products-and-services-from-microsoft.md)
+## <a name="see-also"></a>Vedere anche  
+ [Prodotti e servizi Microsoft per l'accessibilità](../../ide/reference/accessibility-products-and-services-from-microsoft.md)
 
