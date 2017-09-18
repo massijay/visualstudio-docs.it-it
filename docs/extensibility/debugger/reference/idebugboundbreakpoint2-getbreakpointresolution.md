@@ -1,76 +1,59 @@
 ---
-title: IDebugBoundBreakpoint2::GetBreakpointResolution | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugBoundBreakpoint2::GetBreakpointResolution
-helpviewer_keywords:
-- GetBreakpointResolution method
-- IDebugBoundBreakpoint2::GetBreakpointResolution method
+title: "IDebugBoundBreakpoint2::GetBreakpointResolution | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugBoundBreakpoint2::GetBreakpointResolution"
+helpviewer_keywords: 
+  - "Metodo GetBreakpointResolution"
+  - "Metodo IDebugBoundBreakpoint2::GetBreakpointResolution"
 ms.assetid: 4479ac61-18a9-4a30-b213-9921c5af9a26
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e4e4edb5a36241423466cacbc7baed5711249655
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugboundbreakpoint2getbreakpointresolution"></a>IDebugBoundBreakpoint2::GetBreakpointResolution
-Gets the breakpoint resolution that describes this breakpoint.  
+# IDebugBoundBreakpoint2::GetBreakpointResolution
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Ottiene la risoluzione del punto di interruzione che descrive il punto di interruzione.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-HRESULT GetBreakpointResolution(   
-   IDebugBreakpointResolution2** ppBPResolution  
+```cpp#  
+HRESULT GetBreakpointResolution(   
+   IDebugBreakpointResolution2** ppBPResolution  
 );  
 ```  
   
-```csharp  
-int GetBreakpointResolution(   
-   out IDebugBreakpointResolution2 ppBPResolution  
+```c#  
+int GetBreakpointResolution(   
+   out IDebugBreakpointResolution2 ppBPResolution  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `ppBPResolution`  
- [out] Returns the [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) interface that represents one of the following:  
+ \[out\]  Restituisce [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) l'interfaccia che rappresenta uno dei seguenti elementi:  
   
--   The breakpoint resolution object that describes the location in code where a code breakpoint has been bound.  
+-   L'oggetto di risoluzione del punto di interruzione che specifica la posizione del codice in cui un punto di interruzione di codice è stato associato.  
   
--   The data location where a data breakpoint has bound.  
+-   La posizione di dati in cui un punto di interruzione dei dati è associato.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code. Returns `E_BP_DELETED` if the state of the bound breakpoint object is set to `BPS_DELETED` (part of the [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) enumeration).  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  Restituisce `E_BP_DELETED` se lo stato dell'oggetto punto di interruzione associato è impostato su `BPS_DELETED` \(parte [BP\_STATE](../../../extensibility/debugger/reference/bp-state.md) dell'enumerazione\).  
   
-## <a name="remarks"></a>Remarks  
- Call the [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md) method to determine if the breakpoint resolution is for code or data.  
+## Note  
+ Chiamare [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md) il metodo per determinare se la risoluzione del punto di interruzione al codice o i dati.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CBoundBreakpoint` object that exposes the [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) interface.  
+## Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto semplice di `CBoundBreakpoint` che espone [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) l'interfaccia.  
   
 ```  
 HRESULT CBoundBreakpoint::GetBreakpointResolution(  
@@ -103,7 +86,7 @@ HRESULT CBoundBreakpoint::GetBreakpointResolution(
 }    
 ```  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   
  [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)   
  [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)

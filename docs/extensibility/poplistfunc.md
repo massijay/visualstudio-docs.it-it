@@ -1,87 +1,65 @@
 ---
-title: POPLISTFUNC | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- POPDIRLISTFUNC
-helpviewer_keywords:
-- POPLISTFUNC callback function
+title: "POPLISTFUNC | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "POPDIRLISTFUNC"
+helpviewer_keywords: 
+  - "Funzione di callback POPLISTFUNC"
 ms.assetid: b2199fd5-d707-4628-92dd-e2a01e2f507a
 caps.latest.revision: 16
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 034bf39f44d8e3684e553ea5e60c68c041cefafe
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 16
 ---
-# <a name="poplistfunc"></a>POPLISTFUNC
-This callback is supplied to the [SccPopulateList](../extensibility/sccpopulatelist-function.md) by the IDE and is used by the source control plug-in to update a list of files or directories (also supplied to the `SccPopulateList` function).  
+# POPLISTFUNC
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+Questo callback viene fornito per il [SccPopulateList](../extensibility/sccpopulatelist-function.md) dall'IDE e viene utilizzato il plug\-in del controllo del codice sorgente per aggiornare un elenco di file o directory \(anche fornito per il `SccPopulateList` funzione\).  
   
- When a user chooses the **Get** command in the IDE, the IDE displays a list box of all files that the user can get. Unfortunately, the IDE does not know the exact list of all the files that the user might get; only the plug-in has this list. If other users have added files to the source code control project, these files should appear in the list, but the IDE does not know about them. The IDE builds a list of the files that it thinks the user can get. Before it displays this list to the user, it calls the [SccPopulateList](../extensibility/sccpopulatelist-function.md)`,` giving the source control plug-in a chance to add and delete files from the list.  
+ Quando un utente sceglie il **ottenere** comando nell'IDE, l'IDE visualizza una casella di riepilogo di tutti i file che l'utente può ottenere. Sfortunatamente, l'IDE non conosce l'esatto elenco di tutti i file che è possibile che venga visualizzato all'utente; solo il plug\-in dispone di questo elenco. Se altri utenti aggiungere file al progetto di controllo del codice sorgente, dovrebbero essere visualizzati nell'elenco di questi file, ma l'IDE non sa su di essi. L'IDE compila un elenco dei file che ritiene che l'utente può ottenere. Prima di questo elenco viene visualizzato all'utente, viene chiamato il [SccPopulateList](../extensibility/sccpopulatelist-function.md)`,` fornendo il controllo del codice sorgente del plug\-nella possibilità di aggiungere ed eliminare file dall'elenco.  
   
-## <a name="signature"></a>Signature  
- The source control plug-in modifies the list by calling an IDE-implemented function with the following prototype:  
+## Signature  
+ Il plug\-in del controllo del codice sorgente consente di modificare l'elenco chiama una funzione con il seguente prototipo implementato IDE:  
   
-```cpp  
-typedef BOOL (*POPLISTFUNC) (  
-   LPVOID pvCallerData,  
-   BOOL fAddRemove,  
-   LONG nStatus,  
-   LPSTR lpFileName  
-);  
+```cpp#  
+typedef BOOL (*POPLISTFUNC) ( LPVOID pvCallerData, BOOL fAddRemove, LONG nStatus, LPSTR lpFileName );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## Parametri  
  pvCallerData  
- The `pvCallerData` parameter passed by the caller (the IDE) to the [SccPopulateList](../extensibility/sccpopulatelist-function.md). The source control plug-in should assume nothing about the contents of this parameter.  
+ Il `pvCallerData` parametro passato dal chiamante \(IDE\) per il [SccPopulateList](../extensibility/sccpopulatelist-function.md). Il plug\-in del controllo del codice sorgente deve presupporre alcuna informazione sul contenuto di questo parametro.  
   
  fAddRemove  
- If `TRUE`, `lpFileName` is a file that should be added to the file list. If `FALSE`, `lpFileName` is a file that should be deleted from the file list.  
+ Se `TRUE`, `lpFileName` è un file che deve essere aggiunti all'elenco di file. Se `FALSE`, `lpFileName` è un file che deve essere eliminato dall'elenco di file.  
   
  nStatus  
- Status of `lpFileName` (a combination of the `SCC_STATUS` bits; see [File Status Code](../extensibility/file-status-code-enumerator.md) for details).  
+ Stato di `lpFileName` \(una combinazione del `SCC_STATUS` bits, vedere [Codice di stato file](../extensibility/file-status-code-enumerator.md) per informazioni dettagliate\).  
   
  lpFileName  
- Full directory path of the file name to add or delete from the list.  
+ Percorso completo della directory il nome del file per aggiungere o eliminare dall'elenco.  
   
-## <a name="return-value"></a>Return Value  
+## Valore restituito  
   
-|Value|Description|  
-|-----------|-----------------|  
-|`TRUE`|The plug-in can continue calling this function.|  
-|`FALSE`|There has been a problem on the IDE side (such as an out of memory situation). The plug-in should stop operation.|  
+|Valore|Descrizione|  
+|------------|-----------------|  
+|`TRUE`|Il plug\-in possono continuare a chiamare questa funzione.|  
+|`FALSE`|Si è verificato un problema sul lato di IDE \(ad esempio, un timeout della situazione di memoria\). Il plug\-in deve interrompere l'operazione.|  
   
-## <a name="remarks"></a>Remarks  
- For each file that the source control plug-in wants to add to or delete from the file list, it calls this function, passing in the `lpFileName`. The `fAddRemove` flag indicates a new file to add to the list or an old file to delete. The `nStatus` parameter gives the status of the file. When the SCC plug-in has finished adding and deleting files, it returns from the [SccPopulateList](../extensibility/sccpopulatelist-function.md) call.  
+## Note  
+ Per ogni file che il plug\-in del controllo del codice sorgente per aggiungere o eliminare dall'elenco dei file, viene chiamata questa funzione, passando il `lpFileName`. Il `fAddRemove` flag indica un nuovo file da aggiungere all'elenco o un vecchio file da eliminare. Il `nStatus` parametro fornisce lo stato del file. Quando il plug\-in del controllo del codice sorgente ha terminato di aggiunta ed eliminazione di file, viene restituito dal [SccPopulateList](../extensibility/sccpopulatelist-function.md) chiamare.  
   
 > [!NOTE]
->  The `SCC_CAP_POPULATELIST` capability bit is required for Visual Studio.  
+>  Il `SCC_CAP_POPULATELIST` bit funzionalità è necessaria per Visual Studio.  
   
-## <a name="see-also"></a>See Also  
- [Callback Functions Implemented by the IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
- [Source Control Plug-ins](../extensibility/source-control-plug-ins.md)   
+## Vedere anche  
+ [Funzioni di callback implementate dall'IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
+ [Plug\-in del controllo codice sorgente](../extensibility/source-control-plug-ins.md)   
  [SccPopulateList](../extensibility/sccpopulatelist-function.md)   
- [File Status Code](../extensibility/file-status-code-enumerator.md)
+ [Codice di stato file](../extensibility/file-status-code-enumerator.md)

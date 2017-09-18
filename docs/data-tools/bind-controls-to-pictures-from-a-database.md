@@ -1,67 +1,65 @@
 ---
-title: Bind controls to pictures from a database | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- images [Visual Basic], displaying on Windows Forms
-- data binding [Windows Forms], pictures
-- images [Visual Basic], data binding
-- pictures, data binding
-- pictures, dragging from Data Sources window
-- Data Sources Window, setting controls to display images
-- PictureBox control [Windows Forms], data binding
-- images [Visual Basic], dragging from Data Sources window
+title: "Procedura: associare controlli alle immagini di un database | Microsoft Docs"
+ms.custom: ""
+ms.date: "09/21/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "aspx"
+helpviewer_keywords: 
+  - "associazione dati [Windows Form], immagini"
+  - "Origini dati (finestra), impostazione di controlli per la visualizzazione di immagini"
+  - "immagini [Visual Basic], associazione dati"
+  - "immagini [Visual Basic], visualizzazione su Windows Form"
+  - "immagini [Visual Basic], trascinamento dalla finestra Origini dati"
+  - "PictureBox (controllo) [Windows Form], associazione dati"
+  - "immagini, associazione dati"
+  - "immagini, trascinamento dalla finestra Origini dati"
 ms.assetid: 9748815e-3556-49e8-86b1-c6aa593c6163
 caps.latest.revision: 15
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: 229f149641ce21ff2660258dcf58951cb742bf04
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 12
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="bind-controls-to-pictures-from-a-database"></a>Bind controls to pictures from a database
-You can use the **Data Sources** window to bind an image in a database to a control in your application. For example, you can bind an image to an <xref:System.Windows.Controls.Image> control in a WPF application, or to a <xref:System.Windows.Forms.PictureBox> control in a Windows Forms application.  
+# Procedura: associare controlli alle immagini di un database
+È possibile utilizzare la finestra **Origini dati** per associare un'immagine in un database a un controllo nell'applicazione.  È ad esempio possibile associare un'immagine a un controllo <xref:System.Windows.Controls.Image> in un'applicazione WPF o a un controllo <xref:System.Windows.Forms.PictureBox> in un'applicazione Windows Form.  
   
- Pictures in a database are typically stored as byte arrays. Items in the **Data Sources** window that are stored as byte arrays have their control type set to **None** by default, because byte arrays can contain anything from a simple array of bytes to the executable file of a large application. To create a data-bound control for a byte array item in the **Data Sources** window that represents an image, you must select the control to create.  
+ Le immagini di un database vengono generalmente archiviate come matrici di byte.  I tipi di controllo degli elementi della finestra **Origini dati** archiviati come matrici di byte sono impostati su **Nessuno** per impostazione predefinita, in quanto le matrici di byte possono contenere qualsiasi tipo di elemento, da una matrice di byte semplice al file eseguibile di un'applicazione di grandi dimensioni.  Per creare un controllo associato a dati per un elemento della matrice di byte nella finestra **Origini dati** che rappresenta un'immagine, è necessario selezionare il controllo da creare.  
   
- The following procedure assumes that the **Data Sources** window is already populated with an item that is bound to your image. 
+ Nella procedura riportata di seguito si suppone che la finestra **Origini dati** sia stata già compilata con un elemento associato all'immagine in uso.  Per ulteriori informazioni, vedere [Procedura: connettersi ai dati di un database](../data-tools/how-to-connect-to-data-in-a-database.md).  
   
-### <a name="to-bind-a-picture-in-a-database-to-a-control"></a>To bind a picture in a database to a control  
+### Per associare un'immagine di un database a un controllo  
   
-1.  Make sure that the design surface you want to add the control to is open in the WPF Designer or the Windows Forms Designer.  
+1.  Verificare che l'area di progettazione alla quale si desidera aggiungere il controllo sia aperta in Progettazione WPF o in Progettazione Windows Form.  
   
-2.  In the **Data Sources** window, expand the desired table or object to display its columns or properties.  
+2.  Nella finestra **Origini dati** espandere la tabella o l'oggetto desiderato per visualizzare le rispettive colonne o proprietà.  
   
-3.  Select the column or property that contains your image data, and select one of the following controls from its drop-down control list:  
+3.  Selezionare la colonna o la proprietà che include i dati di immagine e selezionare uno dei controlli seguenti dal relativo elenco:  
   
-    -   If the WPF designer is open, select **Image**.  
+    -   Se Progettazione WPF è aperto, selezionare **Immagine**.  
   
-    -   If the Windows Forms designer is open, select **PictureBox**.  
+    -   Se Progettazione di Windows Form è aperto, selezionare **PictureBox**.  
   
-    -   Alternatively, you can select a different control that supports data binding and that can display images. If the control that you want to use is not in the list of available controls, you can add it to the list and then select it. For more information, see [Add custom controls to the Data Sources window](../data-tools/add-custom-controls-to-the-data-sources-window.md).  
+    -   In alternativa, è possibile selezionare un controllo diverso che supporta l'associazione a dati ed è in grado di visualizzare immagini.  Se il controllo che si desidera utilizzare non è presente nell'elenco dei controlli disponibili, è necessario aggiungerlo all'elenco e selezionarlo.  Per ulteriori informazioni, vedere [Aggiungere controlli personalizzati alla finestra Origini dati](../data-tools/add-custom-controls-to-the-data-sources-window.md).  
   
-## <a name="see-also"></a>See Also  
- [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)
+## Vedere anche  
+ [Origini dati \(finestra\)](../Topic/Data%20Sources%20Window.md)   
+ [Impostare il controllo da creare durante il trascinamento dalla finestra Origini dati](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)   
+ [Aggiungere controlli personalizzati alla finestra Origini dati](../data-tools/add-custom-controls-to-the-data-sources-window.md)   
+ [Procedure dettagliate relative ai dati](../Topic/Data%20Walkthroughs.md)   
+ [Associazione di controlli Windows Form ai dati in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
+ [Cenni preliminari sulle applicazioni dati in Visual Studio](../data-tools/overview-of-data-applications-in-visual-studio.md)   
+ [Connessione ai dati in Visual Studio](../data-tools/connecting-to-data-in-visual-studio.md)   
+ [Preparazione dell'applicazione al ricevimento di dati](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
+ [Recupero di dati nell'applicazione](../data-tools/fetching-data-into-your-application.md)   
+ [Associazione di controlli ai dati in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)   
+ [Modifica di dati nell'applicazione](../data-tools/editing-data-in-your-application.md)   
+ [Convalida dei dati](../Topic/Validating%20Data.md)   
+ [Salvataggio di dati](../data-tools/saving-data.md)

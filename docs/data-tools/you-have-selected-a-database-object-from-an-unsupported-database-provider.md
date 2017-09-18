@@ -1,56 +1,37 @@
 ---
-title: You have selected a database object from an unsupported database provider | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "&#200; stato selezionato un oggetto di database da un provider del database non supportato | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: c0f1298e-31aa-471e-ae19-1bafffd2ae40
 caps.latest.revision: 3
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: 80fa49a711987b4f5c8f7542a5eeb8771de77f2c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 1
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="you-have-selected-a-database-object-from-an-unsupported-database-provider"></a>You have selected a database object from an unsupported database provider
-The [!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] ([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]) supports only the .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>). Although you can click **OK** and continue to work with objects from unsupported database providers, you may experience unexpected behavior at run time.  
+# &#200; stato selezionato un oggetto di database da un provider del database non supportato
+[!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] \([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]\) supporta solo il provider di dati .NET Framework per SQL Server \(<xref:System.Data.SqlClient>\).Anche se è possibile fare clic su **OK** e continuare a utilizzare gli oggetti di provider del database non supportati, potrebbe verificarsi un comportamento imprevisto in fase di esecuzione.  
   
 > [!NOTE]
->  Only data connections that use the .NET Framework Data Provider for SQL Server are supported.  
+>  Sono supportate solo connessioni dati che utilizzano il provider di dati .NET Framework per SQL Server.  
   
-### <a name="to-correct-this-error"></a>To correct this error  
+### Per correggere l'errore  
   
--   Click **OK** to continue designing the entity classes that map to the connection that uses the unsupported database provider. You might experience unexpected behavior when you use unsupported database providers.  
+-   Fare clic su **OK** per continuare a progettare le classi di entità con mapping alla connessione che utilizza il provider del database non supportato.Quando si utilizzano provider del database non supportati, potrebbe verificarsi un comportamento imprevisto.  
   
-     -or-  
+     \-oppure\-  
   
--   Click **Cancel**.  
+-   Fare clic su **Annulla**.  
   
-     The action is stopped. Create or use a data connection that uses the .NET Framework Provider for SQL Server.  
+     L'azione viene interrotta.Creare o utilizzare una connessione dati che si avvale del provider .NET Framework per SQL Server.  
   
-## <a name="see-also"></a>See Also  
- [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
- [.NET Framework Data Providers](/dotnet/framework/data/adonet/data-providers)   
- [Accessing data in Visual Studio](../data-tools/accessing-data-in-visual-studio.md)
+## Vedere anche  
+ [Progettazione relazionale oggetti](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
+ [Provider di dati .NET Framework](../Topic/.NET%20Framework%20Data%20Providers.md)   
+ [Connessione ai dati in Visual Studio](../data-tools/connecting-to-data-in-visual-studio.md)

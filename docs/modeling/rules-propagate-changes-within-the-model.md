@@ -1,48 +1,31 @@
 ---
-title: Rules Propagate Changes Within the Model | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Domain-Specific Language, programming domain models
-- Domain-Specific Language, rules
+title: "Le regole propagano le modifiche all&#39;interno del modello | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Linguaggio specifico di dominio, i modelli di dominio di programmazione"
+  - "Linguaggio specifico di dominio, le regole"
 ms.assetid: 1690a38a-c8f5-4bc6-aab9-015771ec6647
 caps.latest.revision: 30
-author: alancameronwills
-ms.author: awills
-manager: douge
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: cbdf006fecb00139eda95cf3e9f2726430888ce7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+author: "alancameronwills"
+ms.author: "awills"
+manager: "douge"
+caps.handback.revision: 30
 ---
-# <a name="rules-propagate-changes-within-the-model"></a>Rules Propagate Changes Within the Model
-You can create a store rule to propagate a change from one element to another in Visualization and Modeling SDK (VMSDK). When a change occurs to any element in the Store, rules are scheduled to be executed, usually when the outermost transaction is committed. There are different types of rules for different kinds of events, such as adding an element, or deleting it. You can attach rules to specific types of elements, shapes, or diagrams. Many built-in features are defined by rules: for example, rules ensure that a diagram is updated when the model changes. You can customize your domain-specific language by adding your own rules.  
+# Le regole propagano le modifiche all&#39;interno del modello
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+È possibile creare una regola di archivio per propagare una modifica da un elemento a un altro in Visualization and Modeling SDK \(VMSDK\). Quando si verifica una modifica a qualsiasi elemento nell'archivio, le regole vengono pianificate da eseguire, in genere, quando viene eseguito il commit della transazione più esterna. Esistono diversi tipi di regole per diversi tipi di eventi, ad esempio l'aggiunta di un elemento o l'eliminazione. È possibile collegare regole a tipi specifici di elementi, forme o diagrammi. Molte funzioni incorporate sono definiti da regole: ad esempio, regole, verificare che un diagramma viene aggiornato quando cambia il modello. È possibile personalizzare il linguaggio specifico di dominio mediante l'aggiunta di regole personalizzate.  
   
- Store rules are particularly useful for propagating changes inside the store - that is, changes to model elements, relationships, shapes or connectors, and their domain properties. Rules do not run when the user invokes the Undo or Redo commands. Instead, the transaction manager makes sure that the store contents are restored to the correct state. If you want to propagate changes to resources outside the store, use Store Events. For more information, see [Event Handlers Propagate Changes Outside the Model](../modeling/event-handlers-propagate-changes-outside-the-model.md).  
+ Archivio regole sono particolarmente utili per la propagazione delle modifiche all'interno dell'archivio, vale a dire le modifiche a elementi del modello, relazioni, forme o connettori e relativo dominio di proprietà. Le regole non vengono eseguiti quando l'utente richiama i comandi di annullamento o ripristino. Al contrario, il gestore delle transazioni garantisce che il contenuto dell'archivio viene ripristinato allo stato corretto. Se si desidera propagare le modifiche alle risorse all'esterno dell'archivio, utilizzare gli eventi di archiviazione. Per altre informazioni, vedere [I gestori eventi propagano le modifiche al di fuori del modello](../modeling/event-handlers-propagate-changes-outside-the-model.md).  
   
- For example, suppose that you want to specify that whenever the user (or your code) creates a new element of type ExampleDomainClass, an additional element of another type is created in another part of the model. You could write an AddRule and associate it with ExampleDomainClass. You would write code in the rule to create the additional element.  
+ Ad esempio, si supponga che si desidera specificare che ogni volta che l'utente \(o il codice\) crea un nuovo elemento di tipo ExampleDomainClass, viene creato un ulteriore elemento di un altro tipo in un'altra parte del modello. È possibile scrivere un AddRule e associarlo a ExampleDomainClass. Scrivere il codice nella regola per creare l'elemento aggiuntiva.  
   
-```csharp  
+```c#  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -65,7 +48,7 @@ namespace ExampleNamespace
     if (store.TransactionManager.CurrentTransaction.IsSerializing)   
        return;  
   
-    // Code here propagates change as required - for example:  
+    // Code here propagates change as required – for example:  
       AnotherDomainClass echo = new AnotherDomainClass(element.Partition);  
       echo.Name = element.Name;  
       echo.Parent = element.Parent;    
@@ -87,43 +70,43 @@ namespace ExampleNamespace
 ```  
   
 > [!NOTE]
->  The code of a rule should change the state only of elements inside the Store; that is, the rule should change only model elements, relationships, shapes, connectors, diagrams, or their properties. If you want to propagate changes to resources outside the store, define Store Events. For more information, see [Event Handlers Propagate Changes Outside the Model](../modeling/event-handlers-propagate-changes-outside-the-model.md)  
+>  Il codice di una regola deve modificare lo stato solo degli elementi all'interno dell'archivio; vale a dire, la regola cambiano solo gli elementi del modello, relazioni, forme, connettori, diagrammi o le relative proprietà. Se si desidera propagare le modifiche alle risorse all'esterno dell'archivio, definire archiviare gli eventi. Per altre informazioni, vedere [I gestori eventi propagano le modifiche al di fuori del modello](../modeling/event-handlers-propagate-changes-outside-the-model.md).  
   
-### <a name="to-define-a-rule"></a>To define a rule  
+### Per definire una regola  
   
-1.  Define the rule as a class prefixed with the `RuleOn` attribute. The attribute associates the rule with one of your domain classes, relationships, or diagram elements. The rule will be applied to every instance of this class, which may be abstract.  
+1.  Definire la regola come prefisso di una classe con il `RuleOn` attributo. L'attributo associa la regola a una delle classi di dominio o relazioni, elementi del diagramma. La regola verrà applicata a ogni istanza di questa classe, che può essere astratta.  
   
-2.  Register the rule by adding it to the set returned by `GetCustomDomainModelTypes()` in your domain model class.  
+2.  Registrare la regola aggiungendolo al set restituito da `GetCustomDomainModelTypes()` nella classe del modello di dominio.  
   
-3.  Derive the rule class from one of the abstract Rule classes, and write the code of the execution method.  
+3.  Derivare la classe di regola da una delle classi astratte di regola e scrivere il codice del metodo di esecuzione.  
   
- The following sections describe these steps in more detail.  
+ Nelle sezioni seguenti vengono descritti più dettagliatamente questi passaggi.  
   
-### <a name="to-define-a-rule-on-a-domain-class"></a>To define a rule on a domain class  
+### Per definire una regola in una classe di dominio  
   
--   In a custom code file, define a class and prefix it with the <xref:Microsoft.VisualStudio.Modeling.RuleOnAttribute> attribute:  
+-   In un file di codice personalizzato, definire una classe e prefisso di <xref:Microsoft.VisualStudio.Modeling.RuleOnAttribute> attributo:  
   
     ```  
     [RuleOn(typeof(ExampleElement),   
-         // Usual value - but required, because it is not the default:  
+         // Usual value – but required, because it is not the default:  
          FireTime = TimeToFire.TopLevelCommit)]   
     class MyRule ...  
   
     ```  
   
--   The subject type in the first parameter can be a domain class, domain relationship, shape, connector, or diagram. Usually, you apply rules to domain classes and relationships.  
+-   Il tipo di oggetto nel primo parametro può essere una classe di dominio, relazione di dominio, forma, connettore o diagramma. In genere, applicare regole a relazioni e le classi di dominio.  
   
-     The `FireTime` is usually `TopLevelCommit`. This ensures that the rule is executed only after all the primary changes of the transaction have been made. The alternatives are Inline, which executes the rule soon after the change; and LocalCommit, which executes the rule at the end of the current transaction (which might not be the outermost). You can also set the priority of a rule to affect its ordering in the queue, but this is an unreliable method of achieving the result you require.  
+     Il `FireTime` è in genere `TopLevelCommit`. Ciò garantisce che la regola viene eseguita solo dopo avere apportate tutte le modifiche principali della transazione. Le alternative sono Inline, che esegue la regola subito dopo la modifica. e LocalCommit, che esegue la regola alla fine della transazione corrente \(che potrebbe non essere quello più esterno\). È inoltre possibile impostare la priorità di una regola per influire sul relativo ordine nella coda, ma si tratta di un metodo affidabile per ottenere il risultato desiderato.  
   
--   You can specify an abstract class as the subject type.  
+-   È possibile specificare una classe astratta come tipo di oggetto.  
   
--   The rule applies to all instances of the subject class.  
+-   La regola si applica a tutte le istanze della classe dell'oggetto.  
   
--   The default value for `FireTime` is TimeToFire.TopLevelCommit. This causes the rule to be executed when the outermost transaction is committed. An alternative is TimeToFire.Inline. This causes the rule to be executed soon after the triggering event.  
+-   Il valore predefinito per `FireTime` è TimeToFire.TopLevelCommit. In questo modo la regola da eseguire quando viene eseguito il commit della transazione più esterna. In alternativa, è TimeToFire.Inline. In questo modo la regola deve essere eseguito subito dopo l'evento di attivazione.  
   
-### <a name="to-register-the-rule"></a>To register the rule  
+### Per registrare la regola  
   
--   Add your rule class to the list of types returned by `GetCustomDomainModelTypes` in your domain model:  
+-   Aggiungere l'elenco di tipi restituiti dalla classe di regola `GetCustomDomainModelTypes` nel modello di dominio:  
   
     ```  
     public partial class ExampleDomainModel  
@@ -139,51 +122,51 @@ namespace ExampleNamespace
   
     ```  
   
--   If you are not sure of the name of your domain model class, look inside the file **Dsl\GeneratedCode\DomainModel.cs**  
+-   Se non si è certi del nome della classe del modello di dominio, cercare all'interno del file **Dsl\\GeneratedCode\\DomainModel.cs**  
   
--   Write this code in a custom code file in your DSL project.  
+-   Scrivere il codice in un file di codice personalizzato nel progetto DSL.  
   
-### <a name="to-write-the-code-of-the-rule"></a>To write the code of the rule  
+### Per scrivere il codice della regola  
   
--   Derive the rule class from one of the following base classes:  
+-   Derivare la classe di regola da una delle classi di base seguenti:  
   
-    |Base class|Trigger|  
-    |----------------|-------------|  
-    |<xref:Microsoft.VisualStudio.Modeling.AddRule>|An element, link, or shape is added.<br /><br /> Use this to detect new relationships, in addition to new elements.|  
-    |<xref:Microsoft.VisualStudio.Modeling.ChangeRule>|A domain property value is changed. The method argument provides the old and new values.<br /><br /> For shapes, this rule is triggered when the built-in `AbsoluteBounds` property changes, if the shape is moved.<br /><br /> In many cases, it is more convenient to override `OnValueChanged` or `OnValueChanging` in the property handler. These methods are called immediately before and after the change. By contrast, the rule usually runs at the end of the transaction. For more information, see [Domain Property Value Change Handlers](../modeling/domain-property-value-change-handlers.md). **Note:**  This rule is not triggered when a link is created or deleted. Instead, write an `AddRule` and a `DeleteRule` for the domain relationship.|  
-    |<xref:Microsoft.VisualStudio.Modeling.DeletingRule>|Triggered when an element or link is about to be deleted. The property ModelElement.IsDeleting is true until the end of the transaction.|  
-    |<xref:Microsoft.VisualStudio.Modeling.DeleteRule>|Performed when an element or link has been deleted. The rule is executed after all other rules have been executed, including DeletingRules. ModelElement.IsDeleting is false, and ModelElement.IsDeleted is true. To allow for a subsequent Undo, the element is not actually removed from the memory, but it is removed from Store.ElementDirectory.|  
-    |<xref:Microsoft.VisualStudio.Modeling.MoveRule>|An element is moved from one store partition to another.<br /><br /> (Notice that this is not related to the graphical position of a shape.)|  
-    |<xref:Microsoft.VisualStudio.Modeling.RolePlayerChangeRule>|This rule applies only to domain relationships. It is triggered if you explicitly assign a model element to either end of a link.|  
-    |<xref:Microsoft.VisualStudio.Modeling.RolePlayerPositionChangeRule>|Triggered when the ordering of links to or from an element is changed using the MoveBefore or MoveToIndex methods on a link.|  
-    |<xref:Microsoft.VisualStudio.Modeling.TransactionBeginningRule>|Executed when a transaction is created.|  
-    |<xref:Microsoft.VisualStudio.Modeling.TransactionCommittingRule>|Executed when the transaction is about to be committed.|  
-    |<xref:Microsoft.VisualStudio.Modeling.TransactionRollingBackRule>|Executed when the transaction is about to be rolled back.|  
+    |Classe base|Trigger|  
+    |-----------------|-------------|  
+    |<xref:Microsoft.VisualStudio.Modeling.AddRule>|Viene aggiunto un elemento, un collegamento o una forma.<br /><br /> Consente di rilevare nuove relazioni, oltre a nuovi elementi.|  
+    |<xref:Microsoft.VisualStudio.Modeling.ChangeRule>|Un valore di proprietà di dominio viene modificato. L'argomento del metodo fornisce i valori vecchi e nuovi.<br /><br /> Per le forme, questa regola viene attivata quando l'oggetto incorporato `AbsoluteBounds` le modifiche alle proprietà, se la forma viene spostata.<br /><br /> In molti casi, è più pratico eseguire l'override `OnValueChanged` o `OnValueChanging` nel gestore di proprietà. Questi metodi vengono chiamati immediatamente prima e dopo la modifica. Al contrario, la regola viene eseguita in genere alla fine della transazione. Per altre informazioni, vedere [Gestori di modifica del valore delle proprietà del dominio](../modeling/domain-property-value-change-handlers.md). **Note:**  Questa regola non viene generata quando viene creato o eliminato un collegamento. Invece di scrivere un `AddRule` e `DeleteRule` per la relazione di dominio.|  
+    |<xref:Microsoft.VisualStudio.Modeling.DeletingRule>|Generato quando un elemento o un collegamento sta per essere eliminata. La proprietà ModelElement.IsDeleting vale fino alla fine della transazione.|  
+    |<xref:Microsoft.VisualStudio.Modeling.DeleteRule>|Eseguito quando un elemento o un collegamento è stato eliminato. La regola viene eseguita dopo che sono state eseguite tutte le altre regole, tra cui DeletingRules. ModelElement.IsDeleting è false, e ModelElement.IsDeleted è true. Per consentire un annullamento successive, l'elemento non viene effettivamente rimosso dalla memoria, ma viene rimosso da Store.ElementDirectory.|  
+    |<xref:Microsoft.VisualStudio.Modeling.MoveRule>|Un elemento viene spostato dalla partizione di un archivio a un altro.<br /><br /> Si noti che questo non è correlato alla posizione di una forma grafica.|  
+    |<xref:Microsoft.VisualStudio.Modeling.RolePlayerChangeRule>|Questa regola si applica solo alle relazioni di dominio. Viene attivata se si assegna in modo esplicito un elemento del modello a delle estremità di un collegamento.|  
+    |<xref:Microsoft.VisualStudio.Modeling.RolePlayerPositionChangeRule>|Generato quando l'ordine dei collegamenti a o da un elemento viene modificato utilizzando i metodi MoveBefore o MoveToIndex su un collegamento.|  
+    |<xref:Microsoft.VisualStudio.Modeling.TransactionBeginningRule>|Eseguito quando viene creata una transazione.|  
+    |<xref:Microsoft.VisualStudio.Modeling.TransactionCommittingRule>|Eseguito quando la transazione sta per essere eseguito il commit.|  
+    |<xref:Microsoft.VisualStudio.Modeling.TransactionRollingBackRule>|Eseguito quando sta per eseguire il rollback della transazione.|  
   
--   Each class has a method that you override. Type `override` in your class to discover it. The parameter of this method identifies the element that is being changed.  
+-   Ogni classe dispone di un metodo che si esegue l'override. Tipo `override` nella classe per individuarlo. Il parametro di questo metodo identifica l'elemento che viene modificato.  
   
- Notice the following points about rules:  
+ Tenere presente i punti seguenti regole:  
   
-1.  The set of changes in a transaction might trigger many rules. Usually, the rules are executed when the outermost transaction is committed. They are executed in an unspecified order.  
+1.  Il set di modifiche in una transazione possa generare molte regole. In genere, le regole vengono eseguite quando viene eseguito il commit della transazione più esterna. Vengono eseguiti in un ordine non specificato.  
   
-2.  A rule is always executed inside a transaction. Therefore, you do not have to create a new transaction to make changes.  
+2.  Una regola viene sempre eseguita all'interno di una transazione. Pertanto, non è necessario creare una nuova transazione per apportare modifiche.  
   
-3.  Rules are not executed when a transaction is rolled back, or when the Undo or Redo operations are performed. These operations reset all the content of the Store to its previous state. Therefore, if your rule changes the state of anything outside the Store, it might not keep in synchronism with the Store content. To update state outside the Store, it is better to use Events. For more information, see [Event Handlers Propagate Changes Outside the Model](../modeling/event-handlers-propagate-changes-outside-the-model.md).  
+3.  Le regole non vengono eseguite quando viene eseguito il rollback di una transazione, o quando vengono eseguite le operazioni di annullamento o ripristino. Queste operazioni di ripristinare lo stato precedente di tutto il contenuto dell'archivio. Pertanto, se la regola viene modificato lo stato di tutti gli elementi all'esterno dell'archivio, potrebbe non tenere synchronism con l'archivio contenuto. Per aggiornare lo stato all'esterno dell'archivio, è preferibile utilizzare gli eventi. Per altre informazioni, vedere [I gestori eventi propagano le modifiche al di fuori del modello](../modeling/event-handlers-propagate-changes-outside-the-model.md).  
   
-4.  Some rules are executed when a model is loaded from file. To determine whether loading or saving is in progress, use `store.TransactionManager.CurrentTransaction.IsSerializing`.  
+4.  Alcune regole vengono eseguite quando un modello viene caricato dal file. Per determinare se è in corso il caricamento o salvataggio, utilizzare `store.TransactionManager.CurrentTransaction.IsSerializing`.  
   
-5.  If the code of your rule creates more rule triggers, they will be added to the end of the firing list, and will be executed before the transaction completes. DeletedRules are executed after all other rules. One rule can run many times in a transaction, one time for each change.  
+5.  Se il codice della regola crea più trigger di regola, verrà aggiunto alla fine dell'elenco di generazione dell'evento e verrà eseguiti prima del completamento della transazione. DeletedRules vengono eseguiti dopo tutte le altre regole. Una regola è possibile eseguire più volte in una transazione, una volta per ogni modifica.  
   
-6.  To pass information to and from rules, you can store information in the `TransactionContext`. This is just a dictionary that is maintained during the transaction. It is disposed when the transaction ends. The event arguments in each rule provide access to it. Remember that rules are not executed in a predictable order.  
+6.  Per passare informazioni da e verso le regole, è possibile archiviare informazioni di `TransactionContext`. Questo è solo un dizionario che viene mantenuto durante la transazione. Viene eliminato al termine della transazione. Gli argomenti dell'evento in ogni regola di accesso a esso. Tenere presente che le regole non vengono eseguite in un ordine prestabilito.  
   
-7.  Use rules after considering other alternatives. For example, if you want to update a property when a value changes, consider using a calculated property. If you want to constrain the size or location of a shape, use a `BoundsRule`. If you want to respond to a change in a property value, add an `OnValueChanged` handler to the property. For more information, see [Responding to and Propagating Changes](../modeling/responding-to-and-propagating-changes.md).  
+7.  Utilizzare le regole tenendo conto di altre alternative. Ad esempio, se si desidera aggiornare una proprietà quando viene modificato un valore, utilizzare una proprietà calcolata. Se si desidera vincolare le dimensioni o il percorso di una forma, utilizzare un `BoundsRule`. Se si desidera rispondere a una modifica nel valore della proprietà, aggiungere un `OnValueChanged` gestore per la proprietà. Per altre informazioni, vedere [Risposta alle modifiche e propagazione delle modifiche](../modeling/responding-to-and-propagating-changes.md).  
   
-## <a name="example"></a>Example  
- The following example updates a property when a domain relationship is instantiated to link two elements. The rule will be triggered not only when the user creates a link on a diagram, but also if program code creates a link.  
+## Esempio  
+ Nell'esempio seguente aggiorna una proprietà quando viene creata un'istanza di una relazione di dominio per collegare due elementi. Verrà attivata la regola non solo quando l'utente crea un collegamento in un diagramma, ma anche se il codice del programma crea un collegamento.  
   
- To test this example, create a DSL using the Task Flow solution template, and insert the following code in a file in the Dsl project. Build and run the solution, and open the Sample file in the Debugging project. Draw a Comment Link between a Comment shape and a flow element. The text in the comment changes to report on the most recent element that you have connected it to.  
+ Per testare questo esempio, creare un linguaggio DSL utilizzando il modello di soluzione flusso attività, inserire il codice seguente in un file nel progetto Dsl. Compilare ed eseguire la soluzione e aprire il file di esempio nel progetto di debug. Creare un collegamento commento tra una forma di commento e un elemento del flusso. Report sull'elemento più recente è stata connessa a modifiche del testo del commento.  
   
- In practice, you would usually write a DeleteRule for every AddRule.  
+ In pratica, si scriverebbe in genere un DeleteRule per ogni AddRule.  
   
 ```  
 using System;  
@@ -227,6 +210,6 @@ namespace Company.TaskRuleExample
   
 ```  
   
-## <a name="see-also"></a>See Also  
- [Event Handlers Propagate Changes Outside the Model](../modeling/event-handlers-propagate-changes-outside-the-model.md)   
- [BoundsRules Constrain Shape Location and Size](../modeling/boundsrules-constrain-shape-location-and-size.md)
+## Vedere anche  
+ [I gestori eventi propagano le modifiche al di fuori del modello](../modeling/event-handlers-propagate-changes-outside-the-model.md)   
+ [Le regole associate \(BoundsRules\) vincolano posizione e dimensione delle forme](../modeling/boundsrules-constrain-shape-location-and-size.md)

@@ -1,84 +1,67 @@
 ---
-title: IDebugBinder3::GetTypeArguments | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugBinder3::GetTypeArguments
-helpviewer_keywords:
-- IDebugBinder3::GetTypeArguments method
+title: "IDebugBinder3::GetTypeArguments | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugBinder3::GetTypeArguments"
+helpviewer_keywords: 
+  - "Metodo IDebugBinder3::GetTypeArguments"
 ms.assetid: fa0c37a7-327f-463e-9a9d-bb3f534584cb
 caps.latest.revision: 7
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0abbea4c880f3cec8969a4ece484d5b333bc8638
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 7
 ---
-# <a name="idebugbinder3gettypearguments"></a>IDebugBinder3::GetTypeArguments
-This method retrieves a list of argument types associated with this object.  
+# IDebugBinder3::GetTypeArguments
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Questo metodo recupera un elenco di tipi di argomento associati all'oggetto.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
 ```cpp  
-HRESULT GetTypeArguments(  
-   UINT          skip,  
-   UINT          count,  
-   IDebugField** ppFields,  
-   UINT*         pFetched  
+HRESULT GetTypeArguments(  
+   UINT          skip,  
+   UINT          count,  
+   IDebugField** ppFields,  
+   UINT*         pFetched  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetTypeArguments(  
-   uint          skip,  
-   uint          count,  
-   IDebugField[] ppFields,  
-   out uint      pFetched  
+   uint          skip,  
+   uint          count,  
+   IDebugField[] ppFields,  
+   out uint      pFetched  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `skip`  
- [in]Number of fields to skip before getting argument types.  
+ \[in\]Numero di campi da ignorare prima di ottenere i tipi di argomento.  
   
  `count`  
- [in] The number of argument fields to return (also specifies the size of the `ppFields` array).  
+ \[in\]  Il numero di sistema per restituire \(anche specifica la dimensione della matrice di `ppFields` \).  
   
  `ppFields`  
- [in, out] An array of fields that will be filled in on return of this method.  
+ \[in, out\]  Una matrice di campi che verranno riempiti da restituire di questo metodo.  
   
  `pFetched`  
- [out] \(optional) The number of argument type fields actually returned.  
+ \[out\]  \(facoltativo\) il numero di campi del tipo di argomento effettivamente restituiti.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- The number of argument types can be obtained beforehand with [GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md).  
+## Note  
+ Il numero di tipi di argomento può essere ottenuto in anticipo con [GetTypeArgumentCount](../Topic/IDebugBinder3::GetTypeArgumentCount.md).  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   
- [GetTypeArgumentCount](../../../extensibility/debugger/reference/idebugbinder3-gettypeargumentcount.md)
+ [GetTypeArgumentCount](../Topic/IDebugBinder3::GetTypeArgumentCount.md)

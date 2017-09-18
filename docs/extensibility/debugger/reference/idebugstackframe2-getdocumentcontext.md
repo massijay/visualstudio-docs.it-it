@@ -1,71 +1,54 @@
 ---
-title: IDebugStackFrame2::GetDocumentContext | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugStackFrame2::GetDocumentContext
-helpviewer_keywords:
-- IDebugStackFrame2::GetDocumentContext
+title: "IDebugStackFrame2::GetDocumentContext | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugStackFrame2::GetDocumentContext"
+helpviewer_keywords: 
+  - "IDebugStackFrame2::GetDocumentContext"
 ms.assetid: 69e81439-1238-4f18-9028-6fd1c1ba5e4a
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 4e9e6ae94f046a54c778e39dfa5ddd3aa68b0092
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugstackframe2getdocumentcontext"></a>IDebugStackFrame2::GetDocumentContext
-Gets the document context for this stack frame.  
+# IDebugStackFrame2::GetDocumentContext
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Ottiene il contesto del documento per questo stack frame.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-HRESULT GetDocumentContext (   
-   IDebugDocumentContext2** ppCxt  
+```cpp#  
+HRESULT GetDocumentContext (   
+   IDebugDocumentContext2** ppCxt  
 );  
 ```  
   
-```csharp  
-int GetDocumentContext (   
-   out IDebugDocumentContext2 ppCxt  
+```c#  
+int GetDocumentContext (   
+   out IDebugDocumentContext2 ppCxt  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `ppCxt`  
- [out] Returns an [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) object that represents the current position in a source document.  
+ \[out\]  Restituisce [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) un oggetto che rappresenta la posizione corrente in un documento di origine.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- This method is faster than calling the [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md) method and then calling the [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md) method on the code context. However, it is not guaranteed that every debug engine (DE) will implement this method.  
+## Note  
+ Questo metodo è più veloce rispetto a chiamando [GetCodeContext](../Topic/IDebugStackFrame2::GetCodeContext.md) il metodo e quindi di chiamando [GetDocumentContext](../Topic/IDebugCodeContext2::GetDocumentContext.md) il metodo sul contesto di codice.  Tuttavia, non è garantito che ogni modulo \(DE\) di debug implementerà questo metodo.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   
  [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)   
- [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md)   
- [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md)
+ [GetDocumentContext](../Topic/IDebugCodeContext2::GetDocumentContext.md)   
+ [GetCodeContext](../Topic/IDebugStackFrame2::GetCodeContext.md)

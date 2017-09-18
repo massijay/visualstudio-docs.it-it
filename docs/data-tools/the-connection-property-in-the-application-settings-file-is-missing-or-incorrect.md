@@ -1,49 +1,30 @@
 ---
-title: The connection property in the Application Settings file is missing or incorrect | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "Nel file di impostazioni dell&#39;applicazione la propriet&#224; di connessione manca o &#232; errata | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 77724510-ff59-4d43-b933-a0434e1ac597
 caps.latest.revision: 4
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: fbea461f4e27969406585b0f3e61532a4c7790ea
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 2
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="the-connection-property-in-the-application-settings-file-is-missing-or-incorrect"></a>The connection property in the Application Settings file is missing or incorrect
-The connection property in the Application Settings file is missing or incorrect. The connection string from the .dbml file has been used in its place.  
+# Nel file di impostazioni dell&#39;applicazione la propriet&#224; di connessione manca o &#232; errata
+Nel file di impostazioni dell'applicazione la proprietà di connessione manca o è errata.È stata invece utilizzata la stringa di connessione del file .dbml.  
   
- The .dbml file contains a reference to a connection string in the application settings file that cannot be found. This message is informational; the connection string setting will be created when **OK** is clicked.  
+ Il file .dbml contiene un riferimento a una stringa di connessione nel file di impostazioni dell'applicazione che non è possibile trovare.Questo messaggio è puramente informativo: l'impostazione della stringa di connessione verrà creata quando si fa clic su **OK**.  
   
-### <a name="to-respond-to-this-message"></a>To respond to this message  
+### Per rispondere a questo messaggio  
   
--   Click **OK**. The connection information that is contained in the .dbml file is added to application settings.  
+-   Scegliere **OK**.Le informazioni di connessione contenute nel file .dbml vengono aggiunte alle impostazioni dell'applicazione.  
   
-## <a name="see-also"></a>See Also  
- [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
- [NIB: How to: Add or Remove Application Settings](http://msdn.microsoft.com/en-us/a233965c-126d-46ab-add4-efb758f576f4)   
- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
+## Vedere anche  
+ [Progettazione relazionale oggetti](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [Procedura dettagliata: creazione di classi LINQ to SQL \(Progettazione relazionale oggetti\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
+ [NIB: How to: Add or Remove Application Settings](http://msdn.microsoft.com/it-it/a233965c-126d-46ab-add4-efb758f576f4)   
+ [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)

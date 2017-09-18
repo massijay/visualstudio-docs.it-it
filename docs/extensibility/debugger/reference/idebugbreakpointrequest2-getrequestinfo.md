@@ -1,73 +1,56 @@
 ---
-title: IDebugBreakpointRequest2::GetRequestInfo | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugBreakpointRequest2::GetRequestInfo
-helpviewer_keywords:
-- IDebugBreakpointRequest2::GetRequestInfo
+title: "IDebugBreakpointRequest2::GetRequestInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugBreakpointRequest2::GetRequestInfo"
+helpviewer_keywords: 
+  - "IDebugBreakpointRequest2::GetRequestInfo"
 ms.assetid: 5defd8d7-6daa-479b-8909-fcc4ae0b357a
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: bebd841ee5f96fcfd19aedfac6765987607cc94a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugbreakpointrequest2getrequestinfo"></a>IDebugBreakpointRequest2::GetRequestInfo
-Gets the breakpoint request information that describes this breakpoint request.  
+# IDebugBreakpointRequest2::GetRequestInfo
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Ottiene le informazioni di richiesta del punto di interruzione che descrivono la richiesta di un punto di interruzione.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-HRESULT GetRequestInfo(   
-   BPREQI_FIELDS    dwFields,  
-   BP_REQUEST_INFO* pBPRequestInfo  
+```cpp#  
+HRESULT GetRequestInfo(   
+   BPREQI_FIELDS    dwFields,  
+   BP_REQUEST_INFO* pBPRequestInfo  
 );  
 ```  
   
-```csharp  
-int GetRequestInfo(   
-   eunm_BPREQI_FIELDS  dwFields,  
-   BP_REQUEST_INFO[]   pBPRequestInfo  
+```c#  
+int GetRequestInfo(   
+   eunm_BPREQI_FIELDS  dwFields,  
+   BP_REQUEST_INFO[]   pBPRequestInfo  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `dwFields`  
- [in] A combination of flags from the [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) enumeration that determines which fields in the `pBPRequestInfo` parameter are to be filled out.  
+ \[in\]  Una combinazione di flag [BPREQI\_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) dall'enumerazione che determina quali campi del parametro di `pBPRequestInfo` devono essere compilati.  
   
  `pBPRequestInfo`  
- [out] Specifies the [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) structure to be filled in with the description of the breakpoint request.  
+ \[out\]  Specifica [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md) la struttura per riempire di descrizione della richiesta del punto di interruzione.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CDebugBreakpointRequest` object that exposes the [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) interface.  
+## Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto semplice di `CDebugBreakpointRequest` che espone [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) l'interfaccia.  
   
 ```  
 HRESULT CDebugBreakpointRequest::GetRequestInfo(  
@@ -231,7 +214,7 @@ HRESULT CDebugBreakpointRequest::CopyBP_REQUEST_INFO(
 }    
 ```  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)   
- [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
- [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)
+ [BPREQI\_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md)   
+ [BP\_REQUEST\_INFO](../../../extensibility/debugger/reference/bp-request-info.md)

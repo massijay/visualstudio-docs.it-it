@@ -1,86 +1,75 @@
 ---
-title: Work with datasets in n-tier applications | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- datasets [Visual Basic], n-tier applications
-- multi-tier database applications
-- DataSet project [VS n-tier applications]
-- distributed applications [VS n-tier applications]
-- data [Visual Basic], n-tier applications
-- TableAdapters, n-tier applications
-- n-tier applications
-- tiers, n-tier applications
-- typed datasets, n-tier applications
-- multiple tier applications
+title: "Utilizzo dei dataset nelle applicazioni a pi&#249; livelli | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "aspx"
+helpviewer_keywords: 
+  - "dati [Visual Basic], applicazioni a più livelli"
+  - "DataSet (progetto) [applicazioni a più livelli VS]"
+  - "dataset [Visual Basic], applicazioni a più livelli"
+  - "applicazioni distribuite [applicazioni a più livelli VS]"
+  - "applicazioni a più livelli"
+  - "applicazioni database a più livelli"
+  - "applicazioni a più livelli"
+  - "TableAdapters, applicazioni a più livelli"
+  - "livelli, applicazioni a più livelli"
+  - "dataset tipizzati, applicazioni a più livelli"
 ms.assetid: f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20
 caps.latest.revision: 22
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: 05ef23ca65f777c09f87b67454c64f9dbee9e4f4
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 20
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="work-with-datasets-in-n-tier-applications"></a>Work with datasets in n-tier applications
-*N-tier data applications* are data-centric applications that are separated into multiple logical layers (or *tiers*). In other words, an n-tier data application is an application that is separated into multiple projects, with the data access tier, the business logic tier, and the presentation tier each in its own project. For more information, see [N-Tier Data Applications Overview](../data-tools/n-tier-data-applications-overview.md).  
+# Utilizzo dei dataset nelle applicazioni a pi&#249; livelli
+Le *applicazioni dati a più livelli* sono applicazioni mirate ai dati separate in più *livelli* logici.  In altre parole, un'applicazione dati a più livelli è un'applicazione separata in più progetti, con il livello di accesso ai dati, il livello di logica di business e il livello di presentazione, ciascuno in un progetto distinto.  Per altre informazioni, vedere [Cenni preliminari sull'applicazione dati a più livelli](../data-tools/n-tier-data-applications-overview.md).  
   
- Typed datasets have been enhanced so that the TableAdapters and dataset classes can be generated into discrete projects. This provides the ability to quickly separate application layers and generate n-tier data applications.  
+ I dataset tipizzati sono stati migliorati in modo da poter generare classi TableAdapter e di dataset in progetti discreti,  consentendo di separare rapidamente i livelli dell'applicazione e generare applicazioni dati a più livelli.  
   
- N-tier support in typed datasets enables iterative development of the application architecture to an n-tier design.It also removes the requirement to manually separate the code into more than one project. Start out designing the data layer by using the **Dataset Designer**. When you're ready to take the application architecture to an n-tiered design, set the **DataSet Project** property of a dataset to generate the dataset class into a separate project.  
+ Il supporto di più livelli nei dataset tipizzati consente lo sviluppo iterativo dell'architettura dell'applicazione in una progettazione a più livelli ed elimina la necessità di separare manualmente il codice in più progetti.  Iniziare la progettazione del livello dati usando [Creazione e modifica di dataset tipizzati](../data-tools/creating-and-editing-typed-datasets.md).  Prima di applicare l'architettura dell'applicazione in una progettazione a più livelli, impostare la proprietà **DataSet Project** di un dataset per generare la classe di dataset in un progetto separato.  
   
-## <a name="in-this-section"></a>In This Section  
- [Separate datasets and TableAdapters into different projects](../data-tools/separate-datasets-and-tableadapters-into-different-projects.md)  
- Describes how to move the generated dataset class out of the project that contains the generated TableAdapter classes and into a new project.  
+## In questa sezione  
+ [Procedura: separare dataset e TableAdapter in progetti diversi](../data-tools/separate-datasets-and-tableadapters-into-different-projects.md)  
+ Descrive come spostare la classe di dataset generata dal progetto contenente le classi TableAdapter generate in un nuovo progetto.  
   
- [Add code to TableAdapters in n-tier applications](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)  
- Describes how to generate a partial class in which code can be added for an n-tier TableAdapter.  
+ [Procedura: aggiungere il codice nei TableAdapter di applicazioni a più livelli](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)  
+ Descrive come generare una classe parziale in cui aggiungere il codice per una classe TableAdapter a più livelli.  
   
- [Add code to datasets in n-tier applications](../data-tools/add-code-to-datasets-in-n-tier-applications.md)  
- Describes how to generate a partial class in which code can be added for an n-tier dataset.  
+ [Procedura: aggiungere il codice nei dataset di applicazioni a più livelli](../data-tools/add-code-to-datasets-in-n-tier-applications.md)  
+ Descrive come generare una classe parziale in cui aggiungere il codice per un dataset a più livelli.  
   
- [Add validation to an n-tier dataset](../data-tools/add-validation-to-an-n-tier-dataset.md)  
- Describes where to add code to perform validation on changing data.  
+ [Procedura: aggiungere la convalida a un dataset a più livelli](../data-tools/add-validation-to-an-n-tier-dataset.md)  
+ Descrive dove aggiungere il codice per eseguire la convalida sulla modifica dei dati.  
   
- [Walkthrough: Creating an N-Tier Data Application](../data-tools/walkthrough-creating-an-n-tier-data-application.md)  
- Provides step-by-step instructions for creating a typed dataset and separating the TableAdapter and dataset code into multiple projects.  
+ [Procedura dettagliata: creazione di un'applicazione dati a più livelli](../data-tools/walkthrough-creating-an-n-tier-data-application.md)  
+ Fornisce istruzioni dettagliate per la creazione di un dataset tipizzato e la separazione del codice degli elementi TableAdapter e dataset in più progetti.  
   
-## <a name="reference"></a>Reference  
+ [Procedura dettagliata: aggiunta della convalida a un'applicazione dati a più livelli](../Topic/Walkthrough:%20Adding%20Validation%20to%20an%20N-Tier%20Data%20Application.md)  
+ Fornisce istruzioni dettagliate per l'aggiunta della convalida all'applicazione creata nella procedura dettagliata relativa all'applicazione dati a più livelli.  
+  
+## Riferimenti  
  <xref:System.Data.DataSet>  
   
  <xref:System.Data.TypedTableBase%601>  
   
-## <a name="related-sections"></a>Related Sections  
- [N-Tier Data Applications Overview](../data-tools/n-tier-data-applications-overview.md)  
+## Sezioni correlate  
+ [Cenni preliminari sull'applicazione dati a più livelli](../data-tools/n-tier-data-applications-overview.md)  
   
- [Hierarchical update](../data-tools/hierarchical-update.md)  
+ [Aggiornamento gerarchico](../data-tools/hierarchical-update.md)  
   
- [Dataset tools in Visual Studio](../data-tools/dataset-tools-in-visual-studio.md)  
+ [Utilizzo di dataset in Visual Studio](../data-tools/dataset-tools-in-visual-studio.md)  
   
- [Accessing data in Visual Studio](../data-tools/accessing-data-in-visual-studio.md)  
+ [Accesso ai dati in Visual Studio](../data-tools/accessing-data-in-visual-studio.md)  
   
- [Create and Configure TableAdapters](create-and-configure-tableadapters.md)   
+ [Cenni preliminari sugli oggetti TableAdapter](../data-tools/tableadapter-overview.md)  
   
- [N-Tier and Remote Applications with LINQ to SQL](http://msdn.microsoft.com/Library/854a1cdd-53cb-45f5-83ca-63962a9b3598)
+ [Applicazioni a più livelli e remote con LINQ to SQL](../Topic/N-Tier%20and%20Remote%20Applications%20with%20LINQ%20to%20SQL.md)

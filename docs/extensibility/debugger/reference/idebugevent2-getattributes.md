@@ -1,69 +1,52 @@
 ---
-title: IDebugEvent2::GetAttributes | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugEvent2::GetAttributes
-helpviewer_keywords:
-- IDebugEvent2::GetAttributes
+title: "IDebugEvent2::GetAttributes | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugEvent2::GetAttributes"
+helpviewer_keywords: 
+  - "IDebugEvent2::GetAttributes"
 ms.assetid: 2ac5b5fb-da17-43f7-811a-313f677e60d7
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 3e1d742354a9d972cf0bba336cea78beb7d4fad2
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugevent2getattributes"></a>IDebugEvent2::GetAttributes
-Gets the attributes for this debug event.  
+# IDebugEvent2::GetAttributes
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+ottiene gli attributi per questo evento di debug.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-HRESULT GetAttribute(   
-   DWORD* pdwAttrib  
+```cpp#  
+HRESULT GetAttribute(   
+   DWORD* pdwAttrib  
 );  
 ```  
   
-```csharp  
-int GetAttribute(   
-   out uint pdwAttrib  
+```c#  
+int GetAttribute(   
+   out uint pdwAttrib  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `pdwAttrib`  
- [out] A combination of flags from the [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md) enumeration.  
+ \[out\]  Una combinazione di flag [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md) dall'enumerazione.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- The [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) interface is common to all events. This method describes the type of event; for example, is the event synchronous or asynchronous and is it a stopping event.  
+## Note  
+ [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) l'interfaccia è comune a tutti gli eventi.  Questo metodo viene descritto il tipo di evento; ad esempio, è l'evento sincrono o asincrono ed è un evento bloccato.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   
  [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md)

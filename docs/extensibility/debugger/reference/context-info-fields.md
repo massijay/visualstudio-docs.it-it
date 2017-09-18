@@ -1,106 +1,89 @@
 ---
-title: CONTEXT_INFO_FIELDS | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- CONTEXT_INFO_FIELDS
-helpviewer_keywords:
-- CONTEXT_INFO_FIELDS enumeration
+title: "CONTEXT_INFO_FIELDS | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "CONTEXT_INFO_FIELDS"
+helpviewer_keywords: 
+  - "Enumerazione CONTEXT_INFO_FIELDS"
 ms.assetid: ef436bd3-738e-47e8-828c-8febce752439
 caps.latest.revision: 13
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 92b8a9e4fa544018e6cfa2baa5e57a9c978dde25
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 13
 ---
-# <a name="contextinfofields"></a>CONTEXT_INFO_FIELDS
-Specifies what information to retrieve about a memory context.  
+# CONTEXT_INFO_FIELDS
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Specifica le informazioni da recuperare su un contesto di memoria.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-enum enum_CONTEXT_INFO_FIELDS {   
-   CIF_MODULEURL =       0x00000001,  
-   CIF_FUNCTION =        0x00000002,  
-   CIF_FUNCTIONOFFSET =  0x00000004,  
-   CIF_ADDRESS =         0x00000008,  
-   CIF_ADDRESSOFFSET =   0x00000010,  
-   CIF_ADDRESSABSOLUTE = 0x00000020,  
-   CIF_ALLFIELDS =       0x0000003f  
+```cpp#  
+enum enum_CONTEXT_INFO_FIELDS {   
+   CIF_MODULEURL =       0x00000001,  
+   CIF_FUNCTION =        0x00000002,  
+   CIF_FUNCTIONOFFSET =  0x00000004,  
+   CIF_ADDRESS =         0x00000008,  
+   CIF_ADDRESSOFFSET =   0x00000010,  
+   CIF_ADDRESSABSOLUTE = 0x00000020,  
+   CIF_ALLFIELDS =       0x0000003f  
 };  
 typedef DWORD CONTEXT_INFO_FIELDS;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_CONTEXT_INFO_FIELDS {  
-   CIF_MODULEURL =       0x00000001,  
-   CIF_FUNCTION =        0x00000002,  
-   CIF_FUNCTIONOFFSET =  0x00000004,  
-   CIF_ADDRESS =         0x00000008,  
-   CIF_ADDRESSOFFSET =   0x00000010,  
-   CIF_ADDRESSABSOLUTE = 0x00000020,  
-   CIF_ALLFIELDS =       0x0000003f  
+   CIF_MODULEURL =       0x00000001,  
+   CIF_FUNCTION =        0x00000002,  
+   CIF_FUNCTIONOFFSET =  0x00000004,  
+   CIF_ADDRESS =         0x00000008,  
+   CIF_ADDRESSOFFSET =   0x00000010,  
+   CIF_ADDRESSABSOLUTE = 0x00000020,  
+   CIF_ALLFIELDS =       0x0000003f  
 };  
 ```  
   
-## <a name="members"></a>Members  
- CIF_MODULEURL  
- Initialize/use the `bstrModuleUrl` field of the [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) structure.  
+## Membri  
+ CIF\_MODULEURL  
+ Inizializzare\/utilizzare il campo di `bstrModuleUrl` [CONTEXT\_INFO](../../../extensibility/debugger/reference/context-info.md) della struttura.  
   
- CIF_FUNCTION  
- Initialize/use the `bstrFunction` field of the `CONTEXT_INFO` structure.  
+ CIF\_FUNCTION  
+ Inizializzare\/utilizzare il campo di `bstrFunction` della struttura di `CONTEXT_INFO` .  
   
- CIF_FUNCTIONOFFSET  
- Initialize/use the `posFunctionOffset` field of the `CONTEXT_INFO` structure.  
+ CIF\_FUNCTIONOFFSET  
+ Inizializzare\/utilizzare il campo di `posFunctionOffset` della struttura di `CONTEXT_INFO` .  
   
- CIF_ADDRESS  
- Initialize/use the `bstrAddress` field of the `CONTEXT_INFO` structure.  
+ CIF\_ADDRESS  
+ Inizializzare\/utilizzare il campo di `bstrAddress` della struttura di `CONTEXT_INFO` .  
   
- CIF_ADDRESSOFFSET  
- Initialize/use the `bstrAddressOffset` field of the `CONTEXT_INFO` structure.  
+ CIF\_ADDRESSOFFSET  
+ Inizializzare\/utilizzare il campo di `bstrAddressOffset` della struttura di `CONTEXT_INFO` .  
   
- CIF_ALLFIELDS  
- Initialize/use all fields of the `CONTEXT_INFO` structure.  
+ CIF\_ALLFIELDS  
+ Inizializzare\/utilizza tutti i campi della struttura di `CONTEXT_INFO` .  
   
-## <a name="remarks"></a>Remarks  
- These values are passed a parameter to the [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) method to indicate which fields of the [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) structure are to be initialized.  
+## Note  
+ Questi valori vengono passati a un parametro [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) al metodo per indicare i campi [CONTEXT\_INFO](../../../extensibility/debugger/reference/context-info.md) della struttura devono essere inizializzati.  
   
- These flags are also used to indicate which fields of the `CONTEXT_INFO` structure are used and valid when the structure is returned.  
+ Questi flag vengono inoltre utilizzati per indicare i campi della struttura di `CONTEXT_INFO` vengono utilizzati e validi quando la struttura viene restituita.  
   
- These values may be combined with a bitwise OR.  
+ Questi valori possono essere combinati con un OR bit per bit.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## Requisiti  
+ intestazione: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)   
+## Vedere anche  
+ [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [CONTEXT\_INFO](../../../extensibility/debugger/reference/context-info.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)

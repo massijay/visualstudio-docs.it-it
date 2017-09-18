@@ -1,138 +1,121 @@
 ---
-title: IDebugExpression2::EvaluateSync | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugExpression2::EvaluateSync
-helpviewer_keywords:
-- IDebugExpression2::EvaluateSync
+title: "IDebugExpression2::EvaluateSync | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugExpression2::EvaluateSync"
+helpviewer_keywords: 
+  - "IDebugExpression2::EvaluateSync"
 ms.assetid: 88964915-dce3-4005-b4f3-9f37415e41e4
 caps.latest.revision: 15
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 9bed4781641156603e0624b4b8635faaa5d82e06
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 15
 ---
-# <a name="idebugexpression2evaluatesync"></a>IDebugExpression2::EvaluateSync
-This method evaluates the expression synchronously.  
+# IDebugExpression2::EvaluateSync
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Questo metodo restituisce l'espressione in modo sincrono.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-HRESULT EvaluateSync(   
-   EVALFLAGS             dwFlags,  
-   DWORD                 dwTimeout,  
-   IDebugEventCallback2* pExprCallback,  
-   IDebugProperty2**     ppResult  
+```cpp#  
+HRESULT EvaluateSync(   
+   EVALFLAGS             dwFlags,  
+   DWORD                 dwTimeout,  
+   IDebugEventCallback2* pExprCallback,  
+   IDebugProperty2**     ppResult  
 );  
 ```  
   
-```csharp  
+```c#  
 int EvaluateSync(  
-   enum_EVALFLAGS       dwFlags,   
-   uint                 dwTimeout,   
-   IDebugEventCallback2 pExprCallback,   
-   out IDebugProperty2  ppResult  
+   enum_EVALFLAGS       dwFlags,   
+   uint                 dwTimeout,   
+   IDebugEventCallback2 pExprCallback,   
+   out IDebugProperty2  ppResult  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `dwFlags`  
- [in] A combination of flags from the [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) enumeration that control expression evaluation.  
+ \[in\]  Una combinazione di flag [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) dall'enumerazione che controllano la valutazione di espressioni.  
   
  `dwTimeout`  
- [in] Maximum time, in milliseconds, to wait before returning from this method. Use `INFINITE` to wait indefinitely.  
+ \[in\]  Tempo massimo, in millisecondi, di attendere prima di uscire da questo metodo.  Utilizzo `INFINITE` attendere infinito.  
   
  `pExprCallback`  
- [in]This parameter is always a null value.  
+ \[in\]questo parametro è sempre un valore null.  
   
  `ppResult`  
- [out] Returns the [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) object that contains the result of the expression evaluation.  
+ \[out\]  Restituisce [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) l'oggetto che contiene il risultato della valutazione di un'espressione.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise returns an error code. Some typical error codes are:  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario restituisce un codice di errore.  Alcuni codici di errore tipici comprendono:  
   
-|Error|Description|  
-|-----------|-----------------|  
-|E_EVALUATE_BUSY_WITH_EVALUATION|Another expression is currently being evaluated, and simultaneous expression evaluation is not supported.|  
-|E_EVALUATE_TIMEOUT|Evaluation timed out.|  
+|delle modifiche a..."|Descrizione|  
+|---------------------------|-----------------|  
+|E\_EVALUATE\_BUSY\_WITH\_EVALUATION|Un'altra espressione viene attualmente valutazione e la valutazione simultanea dell'espressione non è supportata.|  
+|E\_EVALUATE\_TIMEOUT|Valutazione timeout.|  
   
-## <a name="remarks"></a>Remarks  
- For synchronous evaluation, it is not necessary to send an event back to Visual Studio upon completion of the evaluation.  
+## Note  
+ Per la valutazione sincrona, non è necessario inviare un evento di tornare a Visual Studio al completamento della valutazione.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CExpression` object that implements the [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) interface.  
+## Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto semplice di `CExpression` che implementa [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) l'interfaccia.  
   
-```cpp  
+```cpp#  
 HRESULT CExpression::EvaluateSync(EVALFLAGS dwFlags,  
-                                  DWORD dwTimeout,  
-                                  IDebugEventCallback2* pExprCallback,  
-                                  IDebugProperty2** ppResult)  
+                                  DWORD dwTimeout,  
+                                  IDebugEventCallback2* pExprCallback,  
+                                  IDebugProperty2** ppResult)  
 {  
-    // Set the aborted state to FALSE.    
-    m_bAborted = FALSE;    
-    // Delegate the evaluation to EvalExpression.    
-    return EvalExpression(TRUE, ppResult);    
+    // Set the aborted state to FALSE.    
+    m_bAborted = FALSE;    
+    // Delegate the evaluation to EvalExpression.    
+    return EvalExpression(TRUE, ppResult);    
 }  
   
 HRESULT CExpression::EvalExpression(BOOL bSynchronous,  
-                                    IDebugProperty2** ppResult)  
+                                    IDebugProperty2** ppResult)  
 {  
-    HRESULT hr;  
+    HRESULT hr;  
   
-    // Get the value of an environment variable.  
-    PCSTR pszVal = m_pEnvBlock->GetEnv(m_pszVarName);  
-    // Create and initialize a CEnvVar object with the retrieved value.  
-    // CEnvVar implements the IDebugProperty2 interface.  
-    CComObject<CEnvVar> *pEnvVar;  
-    CComObject<CEnvVar>::CreateInstance(&pEnvVar);  
-    pEnvVar->Init(m_pszVarName, pszVal, m_pDoc);  
+    // Get the value of an environment variable.  
+    PCSTR pszVal = m_pEnvBlock->GetEnv(m_pszVarName);  
+    // Create and initialize a CEnvVar object with the retrieved value.  
+    // CEnvVar implements the IDebugProperty2 interface.  
+    CComObject<CEnvVar> *pEnvVar;  
+    CComObject<CEnvVar>::CreateInstance(&pEnvVar);  
+    pEnvVar->Init(m_pszVarName, pszVal, m_pDoc);  
   
-    if (pszVal) {  
-        // Check for synchronous evaluation.  
-        if (bSynchronous) {  
-            // Set and AddRef the result, IDebugProperty2 interface.  
-            *ppResult = pEnvVar;  
-            (*ppResult)->AddRef();  
-            hr = S_OK;  
-        } else {  
-            //For asynchronous evaluation, send an evaluation complete event.  
-            CExprEvalEvent *pExprEvent = new CExprEvalEvent(this, pEnvVar);  
-            pExprEvent->SendEvent(m_pExprCallback, NULL, NULL, NULL);  
-        }  
-    } else {  
-        // If a valid value is not retrieved, return E_FAIL.  
-        hr = E_FAIL;  
-    }  
-    return hr;  
+    if (pszVal) {  
+        // Check for synchronous evaluation.  
+        if (bSynchronous) {  
+            // Set and AddRef the result, IDebugProperty2 interface.  
+            *ppResult = pEnvVar;  
+            (*ppResult)->AddRef();  
+            hr = S_OK;  
+        } else {  
+            //For asynchronous evaluation, send an evaluation complete event.  
+            CExprEvalEvent *pExprEvent = new CExprEvalEvent(this, pEnvVar);  
+            pExprEvent->SendEvent(m_pExprCallback, NULL, NULL, NULL);  
+        }  
+    } else {  
+        // If a valid value is not retrieved, return E_FAIL.  
+        hr = E_FAIL;  
+    }  
+    return hr;  
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)   
  [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md)   
  [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md)   

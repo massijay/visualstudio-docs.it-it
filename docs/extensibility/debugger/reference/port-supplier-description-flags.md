@@ -1,74 +1,57 @@
 ---
-title: PORT_SUPPLIER_DESCRIPTION_FLAGS | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- PORT_SUPPLIER_DESCRIPTION_FLAGS enumeration
+title: "PORT_SUPPLIER_DESCRIPTION_FLAGS | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Enumerazione PORT_SUPPLIER_DESCRIPTION_FLAGS"
 ms.assetid: 5acee0ee-3a20-41c9-a7dc-0dadae6a5ba5
 caps.latest.revision: 7
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 05130a66c268dfe9e36304c3ab3a71918564ea89
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 7
 ---
-# <a name="portsupplierdescriptionflags"></a>PORT_SUPPLIER_DESCRIPTION_FLAGS
-Defines the metadata that can be retrieved about a port supplier.  
+# PORT_SUPPLIER_DESCRIPTION_FLAGS
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Definisce i metadati che possono essere recuperati su un fornitore di porte.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
+```cpp#  
 enum enum_PORT_SUPPLIER_DESCRIPTION_FLAGS  
 {  
-   PSDFLAG_SHOW_WARNING_ICON = 0x1  
+   PSDFLAG_SHOW_WARNING_ICON = 0x1  
 };  
 typedef DWORD PORT_SUPPLIER_DESCRIPTION_FLAGS;  
 ```  
   
-```csharp  
+```c#  
 public enum enum_PORT_SUPPLIER_DESCRIPTION_FLAGS  
 {  
-   PSDFLAG_SHOW_WARNING_ICON = 0x1  
+   PSDFLAG_SHOW_WARNING_ICON = 0x1  
 };  
 ```  
   
-## <a name="terms"></a>Terms  
- PSDFLAG_SHOW_WARNING_ICON  
- If selected, the warning icon will be displayed in the UI.  
+## termini  
+ PSDFLAG\_SHOW\_WARNING\_ICON  
+ Se selezionata, l'icona di avviso viene visualizzato nell'interfaccia utente.  
   
-## <a name="remarks"></a>Remarks  
- This enumeration is returned by the [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md) method.  
+## Note  
+ Questa enumerazione viene restituito dal [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md) metodo.  
   
-## <a name="requirements"></a>Requirements  
- Header: Msdbg.h  
+## Requisiti  
+ intestazione: Msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## Vedere anche  
+ [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md)

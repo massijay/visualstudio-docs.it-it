@@ -1,54 +1,36 @@
 ---
-title: Utilization Navigator | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- vs.cv.performance.utilizationnavigator
+title: "Strumento di spostamento di utilizzo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-debug"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vs.cv.performance.utilizationnavigator"
 ms.assetid: 522a981a-37ef-4cdd-a04c-f1e7525a2aab
 caps.latest.revision: 9
-author: mikejo5000
-ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 7c87490f8e4ad01df8761ebb2afee0b2d3744fe2
-ms.openlocfilehash: 49fde5b95e12d40af4778d182058f0ae3204e3b8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/31/2017
-
+author: "mikejo5000"
+ms.author: "mikejo"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="utilization-navigator"></a>Utilization Navigator
-You can use the Utilization Navigator in the Concurrency Visualizer to select an interval of time in a trace. The Concurrency Visualizer shows the utilization of CPU cores by the target process over time. This makes it easier to examine CPU utilization patterns and also enables comparison between the utilization data and the data in other views. The Utilization Navigator appears at the top of every view in the Concurrency Visualizer. The following illustration shows the Utilization Navigator.  
+# Strumento di spostamento di utilizzo
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+È possibile utilizzare l'Utilization Navigator nel Visualizzatore di concorrenza per selezionare un intervallo di tempo in una traccia.  Il Visualizzatore di concorrenza illustra l'utilizzo dei core della CPU da un processo di destinazione nel tempo.  Ciò rende più semplice analizzare i modelli di utilizzo della CPU e consente inoltre il confronto tra l'utilizzo dei dati e dei dati in altre visualizzazioni.  L'Utilization Navigator viene visualizzato nella parte superiore di ogni visualizzazione nel Visualizzatore di concorrenza.  Nella figura seguente viene illustrato l'Utilization Navigator.  
   
- ![Utilization Navigator showing selected timeframe](../profiling/media/cvutilizationnavigator.png "CVUtilizationNavigator")  
-Utilization Navigator and a selected time frame  
+ ![Utilization Navigator con intervallo di tempo selezionato](~/profiling/media/cvutilizationnavigator.png "CVUtilizationNavigator")  
+Utilization Navigator e intervallo di tempo selezionato  
   
- In the illustration, the selected interval is defined by a red rectangle, known as the *thumb*.  
+ Nell'illustrazione, l'intervallo selezionato viene indicato da un rettangolo rosso, noto come *cursore*.  
   
- Here's how you can use the Utilization Navigator to manipulate the displayed time range:  
+ Di seguito viene illustrato come utilizzare l'Utilization Navigator per modificare l'intervallo di tempo visualizzato:  
   
--   You can pan by dragging the thumb left or right. (Keyboard: Move the focus to the thumb and then press the left or right arrow key.)  
+-   È possibile visualizzare una panoramica di lavoro trascinando il cursore a sinistra o a destra. \(Tastiera: Spostare il puntatore sul cursore e premere il tasto freccia sinistra o freccia destra\).  
   
--   You can change the extent of the interval by dragging one of the handles. (Keyboard: Move the focus to a handle and then press the right or left arrow key.)  
+-   È possibile modificare l'estensione dell'intervallo trascinando uno degli handle. \(Tastiera: Spostare il puntatore su un handle e quindi premere il tasto freccia destra o freccia sinistra\).  
   
- If you change the interval by using a different Concurrency Visualizer zoom control, the Utilization Navigator updates to reflect the change.
+ Se si modifica l'intervallo mediante un controllo zoom differente del Visualizzatore di concorrenza, l'Utilization Navigator viene aggiornato per riflettere la modifica.

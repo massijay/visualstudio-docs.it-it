@@ -1,85 +1,84 @@
 ---
-title: Bind controls to data in Visual Studio | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- data, displaying
-- data sources, displaying data
-- Data Sources window
-- dislaying data
+title: "Associazione di controlli ai dati in Visual Studio | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "aspx"
+helpviewer_keywords: 
+  - "Origini dati (finestra)"
+  - "origini dati, visualizzazione di dati"
+  - "dati, visualizzazione"
+  - "visualizzazione di dati"
 ms.assetid: be8b6623-86a6-493e-ab7a-050de4661fd6
 caps.latest.revision: 40
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: 9224ff42defaf4af0a2b0d6434e0673accae987f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 29
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="bind-controls-to-data-in-visual-studio"></a>Bind controls to data in Visual Studio
-You can display data to users of your application by binding data to controls. You can create these data-bound controls by dragging items from the **Data Sources** window onto a design surface or controls on a surface  in Visual Studio.  
+# Associazione di controlli ai dati in Visual Studio
+È possibile visualizzare i dati per gli utenti dell'applicazione mediante l'associazione dei dati ai controlli.  È possibile creare i controlli con associazione a dati mediante il trascinamento degli elementi dalla finestra **Origini dati** a Visual Studio.  
   
- This topic describes the data sources you can use to create data-bound controls. It also describes some of the general tasks involved in data binding. For more specific details about how to create data-bound controls, see [Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) and [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).  
+ In questo argomento vengono descritte le origini dati che è possibile utilizzare per creare controlli associati a dati.  Vengono inoltre descritte alcune delle attività generali coinvolte nell'associazione ai dati.  Per informazioni più dettagliate su come creare controlli con associazione a dati, vedere [Associazione di controlli Windows Form ai dati in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md), [Associazione di controlli WPF ai dati in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md) e [Associazione di controlli Silverlight ai dati in Visual Studio](../Topic/Binding%20Silverlight%20Controls%20to%20Data%20in%20Visual%20Studio.md).  
   
-## <a name="data-sources"></a>Data sources  
- In the context of data binding, a data source represents the data in memory that can be bound to your user interface. In practical terms, a data source can be an Entity Framework class, a dataset, a service endpoint that is encapsulated in a .NET proxy object, a LINQ to SQL class, or any .NET object or collection. Some data sources enable you to create data-bound controls by dragging items from the **Data Sources** window, while other data sources do not. The following table shows which data sources are supported.  
+## Origini dati  
+ Un'origine dati rappresenta i dati disponibili per l'applicazione.  È possibile creare origini dati da database, servizi o oggetti.  Per ulteriori informazioni, vedere [Cenni preliminari sulle origini dati](../data-tools/add-new-data-sources.md).  
   
-|Data source|Drag-and-drop support in **the Windows Forms Designer**|Drag-and-drop support in **the WPF Designer**|Drag-and-drop support in **the Silverlight Designer**|  
-|-----------------|---------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------|  
-|Dataset|Yes|Yes|No|  
-|Entity Data Model|Yes<sup>1</sup>|Yes|Yes|  
-|LINQ to SQL classes|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|  
-|Services (including [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], WCF services, and web services)|Yes|Yes|Yes|  
-|Object|Yes|Yes|Yes|  
-|SharePoint|Yes|Yes|Yes|  
+ Solo per alcune origini dati è possibile creare controlli associati a dati mediante il trascinamento di elementi dalla finestra **Origini dati**.  Nella tabella seguente vengono indicate le origini dati supportate.  
   
- 1. Generate the model using the **Entity Data Model** wizard, then drag those objects to the designer.  
+|Origine dati|Supporto del trascinamento in **Progettazione Windows Form**|Supporto del trascinamento in **WPF Designer**|Supporto del trascinamento in **Silverlight Designer**|  
+|------------------|------------------------------------------------------------------|----------------------------------------------------|------------------------------------------------------------|  
+|Dataset|Sì|Sì|No|  
+|Entity Data Model|No<sup>1</sup>|Sì|Sì|  
+|Classi LINQ to SQL|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|  
+|Servizi \(inclusi [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], servizi WCF e servizi Web\)|Sì|Sì|Sì|  
+|Oggetto|Sì|Sì|Sì|  
+|SharePoint|Sì|Sì|Sì|  
   
- 2. LINQ to SQL classes do not appear in the **Data Sources** window. However, you can add a new object data source that is based on LINQ to SQL classes, and then drag those objects to the designer to create data-bound controls. For more information, see [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md).  
+ 1.  Quando **Progettazione Windows Form** è aperto, le entità nella finestra **Origini dati** sono di sola lettura e non possono essere trascinate alla finestra di progettazione.  È comunque possibile creare controlli associati a dati aggiungendo una nuova origine dati dell'oggetto basata sull'Entity Data Model, quindi trascinare tali oggetti nella finestra di progettazione.  
   
-## <a name="data-sources-window"></a>Data Sources window  
- Data sources are available to your project as items in the **Data Sources** window. This window is visible, or is accessible from the **View** menu, when a form design surface is the active window in your project. You can drag items from this window to create controls that are bound to the underlying data, and you can also configure the data sources by right-clicking.  
+ 2.  Le classi LINQ to SQL non sono visualizzate nella finestra **Origini dati**.  È comunque possibile aggiungere una nuova origine dati dell'oggetto basata sulle classi LINQ to SQL, quindi trascinare tali oggetti nella finestra di progettazione per creare controlli con associazione a dati.  Per ulteriori informazioni, vedere [Procedura dettagliata: creazione di classi LINQ to SQL \(Progettazione relazionale oggetti\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md).  
   
- ![Data Sources window](../data-tools/media/raddata-data-sources-window.png "raddata Data Sources window")  
+## Finestra Origini dati  
+ Nella finestra **Origini dati** sono visualizzate le voci relative alle origini dati disponibili per il progetto.  È possibile trascinare gli elementi da questa finestra per creare controlli associati ai dati sottostanti.  Per ulteriori informazioni, vedere [Origini dati \(finestra\)](../Topic/Data%20Sources%20Window.md).  
   
- For each data type that appears in the **Data Sources** window, a default control is created when you drag the item to the designer. Before you drag an item from the **Data Sources** window, you can change the control that will be created. For more information, see [Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).  
+ Per ogni tipo di dati visualizzato nella finestra **Origini dati** viene creato un controllo predefinito quando si trascina l'elemento nella finestra di progettazione.  Prima di trascinare un elemento dalla finestra **Origini dati**, è possibile modificare il controllo che verrà creato.  Per ulteriori informazioni, vedere [Impostare il controllo da creare durante il trascinamento dalla finestra Origini dati](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).  
   
-## <a name="tasks-involved-in-binding-controls-to-data"></a>Tasks involved in binding controls to data  
- The following table lists some of the most common tasks you perform to bind controls to data.  
+## Attività coinvolte nell'associazione di controlli a dati  
+ Nella tabella seguente vengono elencate alcune delle attività più comuni eseguite per associare i controlli ai dati.  
   
-|Task|More information|  
-|----------|----------------------|  
-|Open the **Data Sources** window.|Open a design surface in the editor and choose **View** > **Data Sources**.|  
-|Add a data source to your project.|[Add new data sources](../data-tools/add-new-data-sources.md)|  
-|Set the control that is created when you drag an item from the **Data Sources** window to the designer.|[Set the control to be created when dragging from the Data Sources window](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)|  
-|Modify the list of controls that are associated with items in the **Data Sources** window.|[Add custom controls to the Data Sources window](../data-tools/add-custom-controls-to-the-data-sources-window.md)|  
-|Create data-bound controls.|[Bind Windows Forms controls to data in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)<br /><br /> [Bind WPF controls to data in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)|  
-|Bind to an object or collection.|[Bind objects in Visual Studio](../data-tools/bind-objects-in-visual-studio.md)|  
-|Filter data that appears in the UI.|[Filter and sort data in a Windows Forms application](../data-tools/filter-and-sort-data-in-a-windows-forms-application.md)|  
-|Customize captions for controls.|[Customize how Visual Studio creates captions for data-bound controls](../data-tools/customize-how-visual-studio-creates-captions-for-data-bound-controls.md)|  
+|Attività|Ulteriori informazioni|  
+|--------------|----------------------------|  
+|Aprire la finestra **Origini dati**|[Procedura: Aprire la finestra Origini dati](../data-tools/how-to-open-the-data-sources-window.md)|  
+|Aggiungere un'origine dati al progetto.|[Procedura: connettersi ai dati di un database](../data-tools/how-to-connect-to-data-in-a-database.md)<br /><br /> [Procedura: connettersi ai dati negli oggetti](../Topic/How%20to:%20Connect%20to%20Data%20in%20Objects.md)<br /><br /> [Procedura: connettersi ai dati di un servizio](../data-tools/how-to-connect-to-data-in-a-service.md)|  
+|Impostare il controllo che viene creato quando si trascina un elemento dalla finestra **Origini dati** alla finestra di progettazione.|[Impostare il controllo da creare durante il trascinamento dalla finestra Origini dati](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)|  
+|Modificare l'elenco dei controlli associati agli elementi nella finestra **Origini dati**.|[Aggiungere controlli personalizzati alla finestra Origini dati](../data-tools/add-custom-controls-to-the-data-sources-window.md)|  
+|Creare controlli associati a dati.|[Associazione di controlli Windows Form ai dati in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)<br /><br /> [Associazione di controlli WPF ai dati in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)<br /><br /> [Associazione di controlli Silverlight ai dati in Visual Studio](../Topic/Binding%20Silverlight%20Controls%20to%20Data%20in%20Visual%20Studio.md)|  
   
-## <a name="see-also"></a>See Also  
- [Visual Studio data tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)   
- [Windows Forms Data Binding](/dotnet/framework/winforms/windows-forms-data-binding)
+ Dopo avere creato controlli associati ai dati, potrebbe essere necessario eseguire una delle attività seguenti.  
+  
+|Attività|Ulteriori informazioni|  
+|--------------|----------------------------|  
+|Modificare i dati nell'origine dati sottostante|[Modifica di dati nell'applicazione](../data-tools/editing-data-in-your-application.md)|  
+|Convalidare le modifiche apportate ai dati|[Convalida dei dati](../Topic/Validating%20Data.md)|  
+|Salvare i dati aggiornati nel database|[Salvataggio di dati](../data-tools/saving-data.md)|  
+  
+## Vedere anche  
+ [Associazione di controlli Windows Form ai dati in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)   
+ [Associazione di controlli WPF ai dati in Visual Studio](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md)   
+ [Associazione di controlli Silverlight ai dati in Visual Studio](../Topic/Binding%20Silverlight%20Controls%20to%20Data%20in%20Visual%20Studio.md)   
+ [Procedura: associare controlli alle immagini di un database](../data-tools/bind-controls-to-pictures-from-a-database.md)   
+ [Cenni preliminari sulle applicazioni dati in Visual Studio](../data-tools/overview-of-data-applications-in-visual-studio.md)   
+ [Connessione ai dati in Visual Studio](../data-tools/connecting-to-data-in-visual-studio.md)   
+ [Modifica di dati nell'applicazione](../data-tools/editing-data-in-your-application.md)   
+ [Convalida dei dati](../Topic/Validating%20Data.md)   
+ [Salvataggio di dati](../data-tools/saving-data.md)   
+ [Strumenti per l'utilizzo delle origini dati in Visual Studio](../Topic/Tools%20for%20Working%20with%20Data%20Sources%20in%20Visual%20Studio.md)

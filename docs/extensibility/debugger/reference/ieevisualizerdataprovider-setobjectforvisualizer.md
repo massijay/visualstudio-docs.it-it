@@ -1,79 +1,62 @@
 ---
-title: IEEVisualizerDataProvider::SetObjectForVisualizer | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IEEVisualizerDataProvider::SetObjectForVisualizer
-helpviewer_keywords:
-- IEEVisualizerDataProvider::SetObjectForVisualizer method
+title: "IEEVisualizerDataProvider::SetObjectForVisualizer | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IEEVisualizerDataProvider::SetObjectForVisualizer"
+helpviewer_keywords: 
+  - "Metodo IEEVisualizerDataProvider::SetObjectForVisualizer"
 ms.assetid: 40dad2be-57ff-4f74-9d82-c48039c125c4
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 235fe7aa4f21068f3b218a4286d457a02940a335
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="ieevisualizerdataprovidersetobjectforvisualizer"></a>IEEVisualizerDataProvider::SetObjectForVisualizer
-This method changes the object that the visualizer represents.  
+# IEEVisualizerDataProvider::SetObjectForVisualizer
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Questo metodo converte l'oggetto che il visualizzatore rappresenta.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
 ```cpp  
-HRESULT SetObjectForVisualizer(  
-   IDebugObject*  pNewObject,  
-   BSTR*          error,  
-   IDebugObject** pException  
+HRESULT SetObjectForVisualizer(  
+   IDebugObject*  pNewObject,  
+   BSTR*          error,  
+   IDebugObject** pException  
 );  
 ```  
   
-```csharp  
-int SetObjectForVisualizer(  
-   IDebugObject     pNewObject,  
-   out string       error,  
-   out IDebugObject pException  
+```c#  
+int SetObjectForVisualizer(  
+   IDebugObject     pNewObject,  
+   out string       error,  
+   out IDebugObject pException  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `pNewObject`  
- [in] The object to set.  
+ \[in\]  L'oggetto da impostare.  
   
  `error`  
- [out] If there was an error setting the object, this string holds the error message.  
+ \[out\]  Se si è verificato un errore che imposta l'oggetto, l'oggetto di questa stringa il messaggio di errore.  
   
  `pException`  
- [out] If there was an error, this object holds the exception information.  
+ \[out\]  Se si è verificato un errore, l'oggetto di questo oggetto le informazioni sull'eccezione.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- It is up to the implementer to determine how error information is returned. However, it is possible that some callers may only look to see if an exception object was returned to know there was an error, so this method should always return an exception object if there was an error. The error string should also be supplied in case the caller wants to make use of it.  
+## Note  
+ Spetta al l'implementatore per determinare quali le informazioni sugli errori vengono restituite.  Tuttavia, è possibile che alcuni chiamante possono apparire solo per verificare se un oggetto eccezione è stato restituito per sapere che si è verificato un errore, pertanto questo metodo deve sempre restituire un oggetto eccezione se si è verificato un errore.  La stringa di errore deve essere fornita nel caso il chiamante desidera usarlo.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

@@ -1,73 +1,56 @@
 ---
-title: IDebugPointerObject::Dereference | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugPointerObject::Dereference
-helpviewer_keywords:
-- IDebugPointerObject::Dereference method
+title: "IDebugPointerObject::Dereference | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugPointerObject::Dereference"
+helpviewer_keywords: 
+  - "Metodo IDebugPointerObject::Dereference"
 ms.assetid: 196ec2cc-8569-4780-b217-23b24e7f50ca
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d69fbe6a4f3c5453053f81cffd1753dca0470438
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugpointerobjectdereference"></a>IDebugPointerObject::Dereference
-Gets the object pointed to.  
+# IDebugPointerObject::Dereference
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Ottiene l'oggetto fa riferimento a.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-HRESULT DeReference(   
-   DWORD          dwIndex,  
-   IDebugObject** ppObject  
+```cpp#  
+HRESULT DeReference(   
+   DWORD          dwIndex,  
+   IDebugObject** ppObject  
 );  
 ```  
   
-```csharp  
+```c#  
 int Dereference(  
-   uint             dwIndex,   
-   out IDebugObject ppObject  
+   uint             dwIndex,   
+   out IDebugObject ppObject  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `dwIndex`  
- [in] A simple byte offset from the beginning of the object pointed to.  
+ \[in\]  Un offset di byte semplice dall'inizio dell'oggetto a cui fa riferimento a.  
   
  `ppObject`  
- [out] Returns an [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) object representing the object pointed to, plus offset, if any.  
+ \[out\]  Restituisce [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) un oggetto che rappresenta l'oggetto fa riferimento a, più offset, se disponibile.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code. Returns E_FAIL if this object does not point to another object.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce S\_OK, in caso contrario, restituisce un codice di errore.  restituisce E\_FAIL se questo oggetto non indica un altro oggetto.  
   
-## <a name="remarks"></a>Remarks  
- The object pointed to can be a primitive or a more complex type such as a class or structure.  
+## Note  
+ L'oggetto fa riferimento a può essere una primitiva o un tipo più complesso come classe o struttura.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugPointerObject](../../../extensibility/debugger/reference/idebugpointerobject.md)

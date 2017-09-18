@@ -1,80 +1,63 @@
 ---
-title: BP_LOCATION_DATA_STRING | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- BP_LOCATION_DATA_STRING
-helpviewer_keywords:
-- BP_LOCATION_DATA_STRING structure
+title: "BP_LOCATION_DATA_STRING | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "BP_LOCATION_DATA_STRING"
+helpviewer_keywords: 
+  - "Struttura BP_LOCATION_DATA_STRING"
 ms.assetid: 445d6f3f-95b0-47ac-85e2-51b778240687
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 639ba9c6a51b1d6803f2ab83336d1ce098e70440
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="bplocationdatastring"></a>BP_LOCATION_DATA_STRING
-Used for setting data breakpoints that are based on a string that the user can enter from the integrated development environment (IDE).  
+# BP_LOCATION_DATA_STRING
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Utilizzato per impostare i punti di interruzione di dati basati su una stringa che l'utente può immettere dall'ambiente di sviluppo integrato \(IDE\).  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-typedef struct _BP_LOCATION_DATA_STRING {   
-   IDebugThread2* pThread;  
-   BSTR           bstrContext;  
-   BSTR           bstrDataExpr;  
-   DWORD          dwNumElements;  
+```cpp#  
+typedef struct _BP_LOCATION_DATA_STRING {   
+   IDebugThread2* pThread;  
+   BSTR           bstrContext;  
+   BSTR           bstrDataExpr;  
+   DWORD          dwNumElements;  
 } BP_LOCATION_DATA_STRING;  
 ```  
   
-## <a name="members"></a>Members  
+## Membri  
  `pThread`  
- The [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object that represents the thread on which the breakpoint occurs.  
+ [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) L'oggetto che rappresenta il thread in cui il punto di interruzione si verifica.  
   
  `bstrContext`  
- The context of the breakpoint within the code, typically a method or function name as seen on a call stack.  
+ Il contesto del punto di interruzione nel codice, in genere un nome di funzione o di metodo come indicato in uno stack di chiamate.  
   
  `bstrDataExpr`  
- The data string the user enters to set the breakpoint.  
+ I dati supporti l'utente INVIO per impostare il punto di interruzione.  
   
  `dwNumElements`  
- The number of elements in the data string in which the breakpoint occurs.  
+ Il numero di elementi nella stringa di dati in cui il punto di interruzione si verifica.  
   
-## <a name="remarks"></a>Remarks  
- This structure is a member of the [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) structure as part of a union.  
+## Note  
+ Questa struttura è un membro [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md) della struttura come parte di unione.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## Requisiti  
+ intestazione: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
+## Vedere anche  
+ [Strutture e unioni](../../../extensibility/debugger/reference/structures-and-unions.md)   
+ [BP\_LOCATION](../../../extensibility/debugger/reference/bp-location.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

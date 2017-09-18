@@ -1,48 +1,29 @@
 ---
-title: The designer cannot be modified while debugging | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "Impossibile modificare la finestra di progettazione durante il debug | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 487dafe4-d57c-4be1-9e3a-bb0a8699b2fa
 caps.latest.revision: 3
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: f108a7917558e182a784ca933a615c9c64476e5b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 1
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="the-designer-cannot-be-modified-while-debugging"></a>The designer cannot be modified while debugging
-This message appears when an attempt is made to modify items on the O/R Designer when the application is running in debug mode. When the application is running in debug mode, the O/R Designer is read-only.  
+# Impossibile modificare la finestra di progettazione durante il debug
+Questo messaggio viene visualizzato quando si tenta di modificare elementi in Progettazione relazionale oggetti durante l'esecuzione dell'applicazione in modalità di debug.Quando l'applicazione è in esecuzione in tale modalità, Progettazione relazionale oggetti è di sola lettura.  
   
-### <a name="to-correct-this-error"></a>To correct this error  
+### Per correggere l'errore  
   
--   Click **Stop Debugging** on the **Debug** menu.  
+-   Scegliere **Termina debug** dal menu **Debug**.  
   
-     The application stops debugging, and items in the O/R Designer can be modified.  
+     Il debug viene interrotto e sarà quindi possibile modificare gli elementi in Progettazione relazionale oggetti.  
   
-## <a name="see-also"></a>See Also  
- [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
+## Vedere anche  
+ [Cenni preliminari su Progettazione relazionale oggetti](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio1.md)   
+ [Procedura dettagliata: creazione di classi LINQ to SQL \(Progettazione relazionale oggetti\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
+ [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)
