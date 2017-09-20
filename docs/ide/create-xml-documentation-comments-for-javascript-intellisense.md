@@ -87,7 +87,7 @@ manager: "ghogen"
   
 ### Per creare i commenti di documentazione XML per una funzione in overload  
   
-1.  Nella funzione, aggiungere una [\<signature\>](../Topic/%3Csignature%3E%20\(JavaScript\).md) \(elemento\) per ogni overload.  Questi elementi, aggiungere altri elementi, ad esempio `<summary>`, `<param>`, e `<returns>`, precede ogni elemento con tre barre \(\/ \/ \/\).  
+1.  Nella funzione, aggiungere una [\<signature\>](../ide/signature-javascript.md) \(elemento\) per ogni overload.  Questi elementi, aggiungere altri elementi, ad esempio `<summary>`, `<param>`, e `<returns>`, precede ogni elemento con tre barre \(\/ \/ \/\).  
   
      Nell'esempio riportato di seguito viene illustrata una funzione JavaScript in overload.  In questo esempio, gli overload differiscono dal tipo di parametro.  
   
