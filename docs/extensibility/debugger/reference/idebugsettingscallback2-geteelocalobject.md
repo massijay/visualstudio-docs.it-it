@@ -1,78 +1,61 @@
 ---
-title: IDebugSettingsCallback2::GetEELocalObject | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugSettingsCallback2::GetEELocalObject
+title: "IDebugSettingsCallback2::GetEELocalObject | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugSettingsCallback2::GetEELocalObject"
 ms.assetid: e69a3469-a049-420c-b918-c48a1e7b9baf
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 0a1e7f1f257a8bed2d11d5ebf819cdf45b3612c6
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugsettingscallback2geteelocalobject"></a>IDebugSettingsCallback2::GetEELocalObject
-Retrieves a expression evaluator local object given the metric name.  
+# IDebugSettingsCallback2::GetEELocalObject
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Recupera un oggetto locale dell'analizzatore di espressioni fornito il nome ".  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
+```cpp#  
 HRESULT GetEELocalObject(  
-   REFGUID     guidLang,  
-   REFGUID     guidVendor,  
-   LPCWSTR     pszMetric,  
-   IUnknown ** ppUnk  
+   REFGUID     guidLang,  
+   REFGUID     guidVendor,  
+   LPCWSTR     pszMetric,  
+   IUnknown ** ppUnk  
 );  
 ```  
   
-```csharp  
+```c#  
 private int GetEELocalObject(  
-   ref Guid          guidLang,  
-   ref Guid          guidVendor,  
-   string            pszMetric,  
-   out System.Object ppUnk  
+   ref Guid          guidLang,  
+   ref Guid          guidVendor,  
+   string            pszMetric,  
+   out System.Object ppUnk  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `guidLang`  
- [in] Unique identifier of the programming language.  
+ \[in\]  Identificatore univoco del linguaggio di programmazione.  
   
  `guidVendor`  
- [in] Unique identifier of the vendor.  
+ \[in\]  Identificatore univoco del fornitore.  
   
  `pszMetric`  
- [in] Name of the metric.  
+ \[in\]  Nome della metrica.  
   
  `ppUnk`  
- [out] Returns the expression evaluator local object.  
+ \[out\]  Restituisce l'oggetto locale dell'analizzatore di espressioni.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

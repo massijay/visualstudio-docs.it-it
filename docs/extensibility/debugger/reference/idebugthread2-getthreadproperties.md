@@ -1,78 +1,61 @@
 ---
-title: IDebugThread2::GetThreadProperties | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugThread2::GetThreadProperties
-helpviewer_keywords:
-- IDebugThread2::GetThreadProperties
+title: "IDebugThread2::GetThreadProperties | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugThread2::GetThreadProperties"
+helpviewer_keywords: 
+  - "IDebugThread2::GetThreadProperties"
 ms.assetid: 304403fd-f4f8-4096-ac2c-bd3b59663aad
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 232ab20a60f9638bc7f629ff21e30432dbc83410
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugthread2getthreadproperties"></a>IDebugThread2::GetThreadProperties
-Gets the properties that describe this thread.  
+# IDebugThread2::GetThreadProperties
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Ottiene le proprietà che descrivono il thread.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-HRESULT GetThreadProperties (   
-   THREADPROPERTY_FIELDS dwFields,  
-   THREADPROPERTIES*     ptp  
+```cpp#  
+HRESULT GetThreadProperties (   
+   THREADPROPERTY_FIELDS dwFields,  
+   THREADPROPERTIES*     ptp  
 );  
 ```  
   
-```csharp  
-int GetThreadProperties (   
-   enum_THREADPROPERTY_FIELDS dwFields,  
-   THREADPROPERTIES[]         ptp  
+```c#  
+int GetThreadProperties (   
+   enum_THREADPROPERTY_FIELDS dwFields,  
+   THREADPROPERTIES[]         ptp  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `dwFields`  
- [in] A combination of flags from the [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) enumeration that determines which fields of `ptp` are to be filled in.  
+ \[in\]  Una combinazione di flag [THREADPROPERTY\_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) dall'enumerazione che determina i campi di `ptp` devono essere riempiti.  
   
  `ptp`  
- [in, out] A [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) structure that that is filled in with the properties of the thread.  
+ \[in, out\]  [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) Una struttura che viene inserito proprietà del thread.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- The information returned from this method is typically shown in the **Threads** debug window.  
+## Note  
+ Le informazioni restituite dal metodo in genere vengono visualizzate nella finestra di debug di **thread** .  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a simple `CProgram` object that implements the [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) interface.  
+## Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto semplice di `CProgram` che implementa [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) l'interfaccia.  
   
-```cpp  
+```cpp#  
 HRESULT CProgram::GetThreadProperties(THREADPROPERTY_FIELDS dwFields,  
                                       THREADPROPERTIES *ptp)  
 {  
@@ -108,7 +91,7 @@ HRESULT CProgram::GetThreadProperties(THREADPROPERTY_FIELDS dwFields,
 }    
 ```  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)   
+ [THREADPROPERTY\_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md)   
  [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md)

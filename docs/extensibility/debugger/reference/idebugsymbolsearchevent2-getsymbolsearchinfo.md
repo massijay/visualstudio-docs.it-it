@@ -1,84 +1,67 @@
 ---
-title: IDebugSymbolSearchEvent2::GetSymbolSearchInfo | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugSymbolSearchEvent2::GetSymbolSearchInfo
-helpviewer_keywords:
-- IDebugSymbolSearchEvent2::GetSymbolSearchInfo
+title: "IDebugSymbolSearchEvent2::GetSymbolSearchInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugSymbolSearchEvent2::GetSymbolSearchInfo"
+helpviewer_keywords: 
+  - "IDebugSymbolSearchEvent2::GetSymbolSearchInfo"
 ms.assetid: ae9eb72b-f2aa-43b8-87ca-da19d2e78d17
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 923693683194b452881a562e5957ccc036deda45
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="idebugsymbolsearchevent2getsymbolsearchinfo"></a>IDebugSymbolSearchEvent2::GetSymbolSearchInfo
-Called by an event handler to retrieve results about a symbol load process.  
+# IDebugSymbolSearchEvent2::GetSymbolSearchInfo
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Chiamato da un gestore eventi per recuperare i risultati su un processo di caricamento dei simboli.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
 ```cpp  
 HRESULT GetSymbolSearchInfo(  
-   IDebugModule3**    pModule,  
-   BSTR*              pbstrDebugMessage,  
-   MODULE_INFO_FLAGS* pdwModuleInfoFlags  
+   IDebugModule3**    pModule,  
+   BSTR*              pbstrDebugMessage,  
+   MODULE_INFO_FLAGS* pdwModuleInfoFlags  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetSymbolSearchInfo(  
-   IDebugModule3              pModule,   
-   ref string                 pbstrDebugMessage,   
-   out enum_MODULE_INFO_FLAGS pdwModuleInfoFlags  
+   IDebugModule3              pModule,   
+   ref string                 pbstrDebugMessage,   
+   out enum_MODULE_INFO_FLAGS pdwModuleInfoFlags  
 );  
   
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `pModule`  
- [out] An IDebugModule3 object representing the module for which the symbols were loaded.  
+ \[out\]  un oggetto IDebugModule3 che rappresenta il modulo per il quale i simboli è stato caricato.  
   
  `pbstrDebugMessage`  
- [in, out] Returns a string containing any error messages from the module. If there is no error, then this string will just contain the module's name but it is never empty.  
+ \[in, out\]  Restituisce una stringa contenente tutti i messaggi di errore dal modulo.  Se non c " è errore, questa stringa conterrà solo il nome del modulo ma non viene mai vuota.  
   
 > [!NOTE]
->  [C++] `pbstrDebugMessage` cannot be `NULL` and must be freed with `SysFreeString`.  
+>  \[C\+\+\] `pbstrDebugMessage` non può essere `NULL` e deve essere è stata liberata con `SysFreeString`.  
   
  `pdwModuleInfoFlags`  
- [out] A combination of flags from the [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) enumeration indicating whether any symbols were loaded.  
+ \[out\]  Una combinazione di flag [MODULE\_INFO\_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) dall'enumerazione che indica se i simboli sono stati caricati.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- When a handler receives the [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) event after an attempt is made to load debugging symbols for a module, the handler can call thismethod to determine the results of that load.  
+## Note  
+ Quando un gestore riceve [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) l'evento dopo viene effettuato un tentativo di caricare i simboli di debug per un modulo, il gestore può chiamare il thismethod per determinare i risultati del caricamento.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)   
- [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md)   
+ [MODULE\_INFO\_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md)   
  [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md)

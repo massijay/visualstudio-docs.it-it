@@ -1,120 +1,103 @@
 ---
-title: DEBUGREF_INFO_FLAGS | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- DEBUGREF_INFO_FLAGS
-helpviewer_keywords:
-- DEBUGREF_INFO_FLAGS enumeration
+title: "DEBUGREF_INFO_FLAGS | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "DEBUGREF_INFO_FLAGS"
+helpviewer_keywords: 
+  - "Enumerazione DEBUGREF_INFO_FLAGS"
 ms.assetid: 1b043327-302a-4f6d-b51d-f94f9d7c7f9d
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e1efd63a837ae86d26b4eebd4851bbfa8d89c4a7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="debugrefinfoflags"></a>DEBUGREF_INFO_FLAGS
-Specifies what information to retrieve about a debug reference object.  
+# DEBUGREF_INFO_FLAGS
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Specifica le informazioni da recuperare su un oggetto di riferimento di debug.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-enum enum_DEBUGREF_INFO_FLAGS {   
-   DEBUGREF_INFO_NAME             = 0x00000001,  
-   DEBUGREF_INFO_TYPE             = 0x00000002,  
-   DEBUGREF_INFO_VALUE            = 0x00000004,  
-   DEBUGREF_INFO_ATTRIB           = 0x00000008,  
-   DEBUGREF_INFO_REFTYPE          = 0x00000010,  
-   DEBUGREF_INFO_REF              = 0x00000020,  
-   DEBUGREF_INFO_VALUE_AUTOEXPAND = 0x00010000,  
-   DEBUGREF_INFO_NONE             = 0x00000000,  
-   DEBUGREF_INFO_ALL              = 0xffffffff  
+```cpp#  
+enum enum_DEBUGREF_INFO_FLAGS {   
+   DEBUGREF_INFO_NAME             = 0x00000001,  
+   DEBUGREF_INFO_TYPE             = 0x00000002,  
+   DEBUGREF_INFO_VALUE            = 0x00000004,  
+   DEBUGREF_INFO_ATTRIB           = 0x00000008,  
+   DEBUGREF_INFO_REFTYPE          = 0x00000010,  
+   DEBUGREF_INFO_REF              = 0x00000020,  
+   DEBUGREF_INFO_VALUE_AUTOEXPAND = 0x00010000,  
+   DEBUGREF_INFO_NONE             = 0x00000000,  
+   DEBUGREF_INFO_ALL              = 0xffffffff  
 };  
 typedef DWORD DEBUGREF_INFO_FLAGS;  
 ```  
   
-```csharp  
-public enum enum_DEBUGREF_INFO_FLAGS {   
-   DEBUGREF_INFO_NAME             = 0x00000001,  
-   DEBUGREF_INFO_TYPE             = 0x00000002,  
-   DEBUGREF_INFO_VALUE            = 0x00000004,  
-   DEBUGREF_INFO_ATTRIB           = 0x00000008,  
-   DEBUGREF_INFO_REFTYPE          = 0x00000010,  
-   DEBUGREF_INFO_REF              = 0x00000020,  
-   DEBUGREF_INFO_VALUE_AUTOEXPAND = 0x00010000,  
-   DEBUGREF_INFO_NONE             = 0x00000000,  
-   DEBUGREF_INFO_ALL              = 0xffffffff  
+```c#  
+public enum enum_DEBUGREF_INFO_FLAGS {   
+   DEBUGREF_INFO_NAME             = 0x00000001,  
+   DEBUGREF_INFO_TYPE             = 0x00000002,  
+   DEBUGREF_INFO_VALUE            = 0x00000004,  
+   DEBUGREF_INFO_ATTRIB           = 0x00000008,  
+   DEBUGREF_INFO_REFTYPE          = 0x00000010,  
+   DEBUGREF_INFO_REF              = 0x00000020,  
+   DEBUGREF_INFO_VALUE_AUTOEXPAND = 0x00010000,  
+   DEBUGREF_INFO_NONE             = 0x00000000,  
+   DEBUGREF_INFO_ALL              = 0xffffffff  
 };  
 ```  
   
-## <a name="members"></a>Members  
- DEBUGREF_INFO_NAME  
- Initialize/use the `bstrName` field in the structure.  
+## Membri  
+ DEBUGREF\_INFORMATION\_NAME  
+ Inizializzare\/utilizzare il campo di `bstrName` nella struttura.  
   
- DEBUGREF_INFO_TYPE  
- Initialize/use the `bstrType` field in the structure.  
+ DEBUGREF\_INFORMATION\_TYPE  
+ Inizializzare\/utilizzare il campo di `bstrType` nella struttura.  
   
- DEBUGREF_INFO_VALUE  
- Initialize/use the `bstrValue` field in the structure.  
+ DEBUGREF\_INFORMATION\_VALUE  
+ Inizializzare\/utilizzare il campo di `bstrValue` nella struttura.  
   
- DEBUGREF_INFO_ATTRIB  
- Initialize/use the `dwAttrib` field in the structure.  
+ DEBUGREF\_INFORMATION\_ATTRIB  
+ Inizializzare\/utilizzare il campo di`dwAttrib` nella struttura.  
   
- DEBUGREF_INFO_REFTYPE  
- Initialize/use the `dwRefType` field in the structure.  
+ DEBUGREF\_INFORMATION\_REFTYPE  
+ Inizializzare\/utilizzare il campo di `dwRefType` nella struttura.  
   
- DEBUGREF_INFO_REF  
- Initialize/use the `pReference` field in the structure.  
+ DEBUGREF\_INFORMATION\_REF  
+ Inizializzare\/utilizzare il campo di `pReference` nella struttura.  
   
- DEBUGREF_INFO_VALUE_AUTOEXPAND  
- The value field should contain the auto-expanded value, if available, for this type of object.  
+ DEBUGREF\_INFORMATION\_VALUE\_AUTOEXPAND  
+ Il campo di valore deve contenere il valore auto\-espanso, se disponibile, per questo tipo di oggetto.  
   
- DEBUGREF_INFO_NONE  
- Indicates that no flags are set.  
+ DEBUGREF\_INFORMATION\_NONE  
+ indica che nessun flag è impostato.  
   
- DEBUGREF_INFO_ALL  
- Indicates a mask of the flags.  
+ DEBUGREF\_INFORMATION\_ALL  
+ Indica una maschera di flag.  
   
-## <a name="remarks"></a>Remarks  
- These flags are passed to the [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) and [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) methods to indicate which fields of the [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) structure are to be initialized.  
+## Note  
+ Questi flag vengono passati [EnumChildren](../Topic/IDebugReference2::EnumChildren.md) [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) ai metodi e per indicare i campi [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) della struttura devono essere inizializzati.  
   
- Used for the `dwFields` member of the `DEBUG_REFERENCE_INFO` structure to indicate which fields are used and valid when the structure is returned.  
+ Utilizzato per il membro di `dwFields` della struttura di `DEBUG_REFERENCE_INFO` per indicare quali campi vengono utilizzati e valido quando la struttura viene restituita.  
   
- These values may be combined with a bitwise `OR`.  
+ Questi valori possono essere combinate con `OR`bit per bit.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## Requisiti  
+ intestazione: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)   
- [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md)   
+## Vedere anche  
+ [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [DEBUG\_REFERENCE\_INFO](../../../extensibility/debugger/reference/debug-reference-info.md)   
+ [EnumChildren](../Topic/IDebugReference2::EnumChildren.md)   
  [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md)

@@ -1,86 +1,67 @@
 ---
-title: 'How to: Create a PolicyActivity Rule Set (Legacy) | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-helpviewer_keywords:
-- PolicyActivity activity, creating rule sets
-- Rule Set Editor dialog box
-- PolicyActivity activity, selecting rule sets
-- Select Rule Set dialog box
-- rule sets, creating for PolicyActivity
+title: "Procedura: creare un set di regole per l&#39;attivit&#224; PolicyActivity (legacy) | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+helpviewer_keywords: 
+  - "Attività PolicyActivity, creazione set di regole"
+  - "attività PolicyActivity, selezione set di regole"
+  - "Finestra di dialogo Editore set di regole"
+  - "set di regole, creazione per PolicyActivity"
+  - "Finestra di dialogo Seleziona set di regole"
 ms.assetid: f272489d-3342-4511-8b59-6a0fd7a42d70
 caps.latest.revision: 4
-author: ErikRe
-ms.author: erikre
-manager: erikre
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
-ms.openlocfilehash: 42d94d625e2ad7db23dbd4917107b8da4f24009b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/30/2017
-
+author: "ErikRe"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 4
 ---
-# <a name="how-to-create-a-policyactivity-rule-set-legacy"></a>How to: Create a PolicyActivity Rule Set (Legacy)
-This topic describes how to create a policy activity rule set using the legacy [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] that targets the [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] or the [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)].  
+# Procedura: creare un set di regole per l&#39;attivit&#224; PolicyActivity (legacy)
+In questo argomento viene descritto come creare un set di regole per PolicyActivity utilizzando la [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] legacy che fa riferimento a [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] o [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)].  
   
- After you have dragged a **Policy** activity item from the **Toolbox** to the workflow design surface, you will want to select an existing rule or create a new rule set for the [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019) activity. You select an existing rule set by using the [Select Rule Set Dialog Box (Legacy)](../workflow-designer/select-rule-set-dialog-box-legacy.md) and you create rule sets by using the [Rule Set Editor Dialog Box (Legacy)](../workflow-designer/rule-set-editor-dialog-box-legacy.md).  
+ Dopo avere trascinato un elemento dell'attività **Policy** dalla **Casella degli strumenti** all'area di progettazione del flusso di lavoro, sarà necessario selezionare un set di regole esistente o crearne uno nuovo per l'attività [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019).Selezionare un insieme di regole esistente utilizzando [Finestra di dialogo Seleziona set di regole \(legacy\)](../workflow-designer/select-rule-set-dialog-box-legacy.md) e creare insieme di regole utilizzando [Finestra di dialogo Editor set di regole \(legacy\)](../workflow-designer/rule-set-editor-dialog-box-legacy.md).  
   
 > [!NOTE]
->  You can open the [Rule Set Editor Dialog Box (Legacy)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) dialog box directly by double-clicking on a [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019) activity that is on the workflow design surface.  
+>  È possibile aprire direttamente la finestra di dialogo [Finestra di dialogo Editor set di regole \(legacy\)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) facendo doppio clic su un'attività [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019) sull'area di progettazione del flusso di lavoro.  
   
-### <a name="to-select-or-create-a-rule-set-for-a-policyactivity-activity"></a>To select or create a rule set for a PolicyActivity activity  
+### Per selezionare o creare un insieme di regole per un'attività di Policy  
   
-1.  Right-click the [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019), and then click **Properties** to open the **Properties** window.  
+1.  Fare clic con il pulsante destro del mouse sull'attività [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019), quindi scegliere **Proprietà** per aprire la finestra **Proprietà**.  
   
-2.  Click the **RuleSetReference** property.  
+2.  Fare clic sulla proprietà **RuleSetReference**.  
   
-3.  Do one of the following:  
+3.  Eseguire una delle operazioni seguenti:  
   
-    -   Click the **RuleSetReference** ellipsis **[...]**, and then select an existing rule set in the [Select Rule Set Dialog Box (Legacy)](../workflow-designer/select-rule-set-dialog-box-legacy.md). Then go to step 10.  
+    -   Fare clic sui puntini di sospensione **\[…\]** di **RuleSetReference** e selezionare un set di regole esistente in [Finestra di dialogo Seleziona set di regole \(legacy\)](../workflow-designer/select-rule-set-dialog-box-legacy.md).Andare al passaggio 10.  
   
-         -or-  
+         \-oppure\-  
   
-    -   Type a name for a rule set. Click the **RuleSetReference** ellipsis **[...]**, and then select **Edit** in the [Select Rule Set Dialog Box (Legacy)](../workflow-designer/select-rule-set-dialog-box-legacy.md).  
+    -   Digitare il nome da assegnare al set di regole.Fare clic sui puntini di sospensione **\[.\]** di **RuleSetReference** e selezionare **Modifica** in [Finestra di dialogo Seleziona set di regole \(legacy\)](../workflow-designer/select-rule-set-dialog-box-legacy.md).  
   
-         -or-  
+         \-oppure\-  
   
-    -   Type a name for a rule set. Expand the **RuleSetReference** property and select the ellipsis **[...]** in the **RuleSet Definition** property.  
+    -   Digitare il nome da assegnare al set di regole.Espandere la proprietà **RuleSetReference** e selezionare i puntini di sospensione **\[.\]** nella proprietà **RuleSet Definition**.  
   
-         The [Rule Set Editor Dialog Box (Legacy)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) opens.  
+         Viene aperta la [Finestra di dialogo Editor set di regole \(legacy\)](../workflow-designer/rule-set-editor-dialog-box-legacy.md).  
   
-4.  In the [Rule Set Editor Dialog Box (Legacy)](../workflow-designer/rule-set-editor-dialog-box-legacy.md), click **Add Rule** to add a new rule to the rule set.  
+4.  Nella [Finestra di dialogo Editor set di regole \(legacy\)](../workflow-designer/rule-set-editor-dialog-box-legacy.md), fare clic su **Aggiungi regola** per aggiungere una regola nuova al set di regole.  
   
-5.  Enter the **Name**, **Priority**, and **Reevaluation** properties, or keep the default values.  
+5.  Immettere **Nome**, **Priorità** e proprietà **Nuova valutazione** oppure mantenere i valori predefiniti.  
   
-6.  Enter the text for the **Condition**.  
+6.  Immettere il testo per la **Condizione**.  
   
-7.  Enter the text for the **Then Actions** and the **Else Actions**.  
+7.  Immettere il testo per **Azioni THEN** e **Azioni ELSE**.  
   
-8.  Click **Add Rule** again to add another rule.  
+8.  Fare clic nuovamente su **Aggiungi regola** per aggiungere un'altra regola.  
   
-9. When you are finished, click **OK**.  
+9. Al termine, scegliere **OK**.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)   
- [Select Rule Set Dialog Box (Legacy)](../workflow-designer/select-rule-set-dialog-box-legacy.md)   
- [Rule Set Editor Dialog Box (Legacy)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)   
- [Using the Policy Activity](http://go.microsoft.com/fwlink?LinkID=65004)   
- [Legacy Workflow Activities](../workflow-designer/legacy-workflow-activities.md)
+ [Finestra di dialogo Seleziona set di regole \(legacy\)](../workflow-designer/select-rule-set-dialog-box-legacy.md)   
+ [Finestra di dialogo Editor set di regole \(legacy\)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)   
+ [Utilizzo dell'attività PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65004)   
+ [Attività del flusso di lavoro legacy](../workflow-designer/legacy-workflow-activities.md)

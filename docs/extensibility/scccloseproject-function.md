@@ -1,71 +1,54 @@
 ---
-title: SccCloseProject Function | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- SccCloseProject
-helpviewer_keywords:
-- SccCloseProject function
+title: "Funzione SccCloseProject | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "SccCloseProject"
+helpviewer_keywords: 
+  - "Funzione SccCloseProject"
 ms.assetid: 259c2069-d349-4814-810f-1c3151b7fb84
 caps.latest.revision: 15
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: bcdc0cbc2916c9efa6224a26abae94b75832c33a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 15
 ---
-# <a name="scccloseproject-function"></a>SccCloseProject Function
-This function closes a project, marking the end of a particular session.  
+# Funzione SccCloseProject
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+Questa funzione chiude un progetto, contrassegna la fine di una determinata sessione.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
+```cpp#  
 SCCRTN SccCloseProject (  
-   LPVOID pvContext  
+   LPVOID pvContext  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  pvContext  
- The source control plug-in context structure.  
+ La struttura di contesto plug\-in del controllo di origine.  
   
-## <a name="return-value"></a>Return Value  
- The source control plug-in implementation of this function is expected to return one of the following values:  
+## Valore restituito  
+ Implementazione di plug\-in controllo dell'origine di questa funzione deve restituire uno dei valori seguenti:  
   
-|Value|Description|  
-|-----------|-----------------|  
-|SCC_OK|The project was successfully closed.|  
-|SCC_E_PROJNOTOPEN|No project is currently open.|  
-|SCC_E_NOTAUTHORIZED|The user is not allowed to perform this operation.|  
-|SCC_E_NONSPECIFICERROR|Nonspecific failure.|  
+|Valore|Descrizione|  
+|------------|-----------------|  
+|SCC\_OK|Il progetto è stato chiuso.|  
+|SCC\_E\_PROJNOTOPEN|Non è aperto alcun progetto.|  
+|SCC\_E\_NOTAUTHORIZED|L'utente non è possibile eseguire questa operazione.|  
+|SCC\_E\_NONSPECIFICERROR|Errore non specificato.|  
   
-## <a name="remarks"></a>Remarks  
- The [SccOpenProject](../extensibility/sccopenproject-function.md) is always called before this function. A call to this function is then followed by a call to either the `SccOpenProject` function or the [SccUninitialize](../extensibility/sccuninitialize-function.md), which ends the connection to the source control system completely.  
+## Note  
+ Il [SccOpenProject](../extensibility/sccopenproject-function.md) viene sempre chiamato prima che questa funzione. Seguita da una chiamata a una chiamata a questa funzione il `SccOpenProject` funzione o [SccUninitialize](../extensibility/sccuninitialize-function.md), che termina la connessione per il controllo del codice sorgente completamente.  
   
-## <a name="see-also"></a>See Also  
- [Source Control Plug-in API Functions](../extensibility/source-control-plug-in-api-functions.md)   
+## Vedere anche  
+ [Funzioni API plug\-in del controllo sorgente](../extensibility/source-control-plug-in-api-functions.md)   
  [SccOpenProject](../extensibility/sccopenproject-function.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)

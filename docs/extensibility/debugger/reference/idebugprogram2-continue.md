@@ -1,75 +1,58 @@
 ---
-title: IDebugProgram2::Continue | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgram2::Continue
-helpviewer_keywords:
-- IDebugProgram2::Continue
+title: "IDebugProgram2::Continue | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgram2::Continue"
+helpviewer_keywords: 
+  - "IDebugProgram2::Continue"
 ms.assetid: e5a6e02a-d21b-4a03-a034-e8de1f71ce2e
 caps.latest.revision: 12
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 6bc347ef3b8362b90765f6eefdb6551aed78d4a5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 12
 ---
-# <a name="idebugprogram2continue"></a>IDebugProgram2::Continue
-Continues running this program from a stopped state. Any previous execution state (such as a step) is preserved, and the program starts executing again.  
+# IDebugProgram2::Continue
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Continua a eseguire il programma da uno stato interrotto.  Tutto lo stato precedente di esecuzione \(ad esempio un passaggio\) viene mantenuto e l'avvio del programma che esegue nuovamente.  
   
 > [!NOTE]
->  This method is deprecated. Use the [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md) method instead.  
+>  Il metodo è deprecato.  In alternativa, utilizzare il metodo [Continua](../../../extensibility/debugger/reference/idebugprocess3-continue.md).  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-HRESULT Continue(   
-   IDebugThread2* pThread  
+```cpp#  
+HRESULT Continue(   
+   IDebugThread2* pThread  
 );  
 ```  
   
-```csharp  
-int Continue(   
-   IDebugThread2 pThread  
+```c#  
+int Continue(   
+   IDebugThread2 pThread  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `pThread`  
- [in] An [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) object that represents the thread.  
+ \[in\]  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) un oggetto che rappresenta il thread.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- This method is called on this program regardless of how many programs are being debugged, or which program generated the stopping event. The implementation must retain the previous execution state (such as a step) and continue execution as though it had never stopped before completing its prior execution. That is, if a thread in this program was doing a step-over operation and was stopped because some other program stopped, and then this method was called, the program must complete the original step-over operation.  
+## Note  
+ Questo metodo viene chiamato in questo programma indipendentemente dal numero di programmi nel debug, o quali programma ha generato l'evento bloccato.  L'implementazione di deve mantenere lo stato precedente di esecuzione \(ad esempio un passaggio\) e continuare l'esecuzione come se non fosse stata interrotta mai prima del completamento dell'esecuzione precedente.  Ovvero se un thread in questo programma stesse tramite un'operazione di esegui istruzione\/routine e è stato arrestato perché un altro programma interrotto e quindi questo metodo sono stati chiamati, il programma deve completare originale esegue l'operazione.  
   
 > [!WARNING]
->  Do not send a stopping event or an immediate (synchronous) event to [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) while handling this call; otherwise the debugger may hang.  
+>  Non inviare un evento bloccato o un evento \(sincrono\) immediato su [Evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) come gestire questa chiamata, in caso contrario il debugger può bloccare.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   
- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [Evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

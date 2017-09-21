@@ -1,63 +1,46 @@
 ---
-title: IDebugAlias::Dispose | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugAlias::Dispose
-helpviewer_keywords:
-- IDebugAlias::Dispose method
+title: "IDebugAlias::Dispose | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugAlias::Dispose"
+helpviewer_keywords: 
+  - "Metodo IDebugAlias::Dispose"
 ms.assetid: e84909a4-d378-4f48-bf25-2c014c77c8e3
 caps.latest.revision: 7
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 42be2874aeee7c1299f7e48ece58eef5c9493f9c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 7
 ---
-# <a name="idebugaliasdispose"></a>IDebugAlias::Dispose
-Marks this alias for removal.  
+# IDebugAlias::Dispose
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Contrassegna tale alias per la rimozione.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
 ```cpp  
-HRESULT Dispose();  
+HRESULT Dispose();  
 ```  
   
-```csharp  
-int Dispose();  
+```c#  
+int Dispose();  
 ```  
   
-#### <a name="parameters"></a>Parameters  
- None.  
+#### Parametri  
+ Nessuno.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce S\_OK, in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- Once this method is called, the alias is no longer available.  
+## Note  
+ Una volta che questo metodo viene chiamato, alias non è più disponibile.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

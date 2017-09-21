@@ -1,68 +1,51 @@
 ---
-title: IDebugObject::IsReadOnly | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugObject::IsReadOnly
-helpviewer_keywords:
-- IDebugObject::IsReadOnly method
+title: "IDebugObject::IsReadOnly | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugObject::IsReadOnly"
+helpviewer_keywords: 
+  - "Metodo IDebugObject::IsReadOnly"
 ms.assetid: c460f772-d08a-4b36-81f3-dff6a51a93fd
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 13ede24192408b7b5a68c13d37a4535ccf352fed
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugobjectisreadonly"></a>IDebugObject::IsReadOnly
-Determines if this object is read-only.  
+# IDebugObject::IsReadOnly
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Determina se l'oggetto è di sola lettura.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-HRESULT IsReadOnly(   
-   BOOL* pfIsReadOnly  
+```cpp#  
+HRESULT IsReadOnly(   
+   BOOL* pfIsReadOnly  
 );  
 ```  
   
-```csharp  
+```c#  
 int IsReadOnly(  
-   out int pfIsReadOnly  
+   out int pfIsReadOnly  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `pfIsReadOnly`  
- [out] Returns non-zero (`TRUE`) if this object is read-only; otherwise, returns zero (`FALSE`).  
+ \[out\]  Restituisce diverso da zero \(`TRUE`\) se l'oggetto è di sola lettura; in caso contrario, restituisce zero \(`FALSE`\).  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce S\_OK, in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- A read-only object cannot have its value changed after it is created.  
+## Note  
+ Un oggetto di sola lettura non può avere il valore modificato dopo averlo creato.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

@@ -1,58 +1,41 @@
 ---
-title: Task Writing | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- MSBuild, writing tasks
-- tasks, creating for MSBuild
-- MSBuild, creating tasks
+title: "Task Writing | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "MSBuild, writing tasks"
+  - "tasks, creating for MSBuild"
+  - "MSBuild, creating tasks"
 ms.assetid: 3ebc5f87-8f00-46fc-82a1-228f35a6823b
 caps.latest.revision: 19
-author: kempb
-ms.author: kempb
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: e9757d10249e3a8d6b06804623a06ab971e86d89
-ms.contentlocale: it-it
-ms.lasthandoff: 08/30/2017
-
+author: "kempb"
+ms.author: "kempb"
+manager: "ghogen"
+caps.handback.revision: 19
 ---
-# <a name="task-writing"></a>Task Writing
-Tasks provide the code that runs during the build process. Tasks are contained in targets. A library of typical tasks is included with [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], and you can also create your own tasks. For more information about the library of tasks that are included with [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], see [Task Reference](../msbuild/msbuild-task-reference.md).  
+# Task Writing
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+Le attività forniscono il codice che viene eseguito durante il processo di compilazione.  Le attività sono contenute nelle destinazioni  Con [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] viene fornita una libreria di attività più comuni, ma è possibile creare attività personalizzate.  Per ulteriori informazioni sulla libreria di attività fornita con [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], vedere [Task Reference](../msbuild/msbuild-task-reference.md).  
   
-## <a name="tasks"></a>Tasks  
- Examples of tasks include [Copy](../msbuild/copy-task.md), which copies one or more files, [MakeDir](../msbuild/makedir-task.md), which creates a directory, and [Csc](../msbuild/csc-task.md), which compiles [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] source code files. Each task is implemented as a .NET class that implements the <xref:Microsoft.Build.Framework.ITask> interface, which is defined in the Microsoft.Build.Framework.dll assembly.  
+## Attività  
+ Alcuni esempi di attività sono [Copy](../msbuild/copy-task.md), che consente di copiare uno o più file, [MakeDir](../msbuild/makedir-task.md), che consente di creare una directory e [Csc](../msbuild/csc-task.md), che consente di compilare il file con i codici sorgente in [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)].  Ogni attività viene implementata come classe .NET che implementa l'interfaccia <xref:Microsoft.Build.Framework.ITask>, definita nell'assembly Microsoft.Build.Framework.dll.  
   
- There are two approaches you can use when implementing a task:  
+ Per implementare un'attività, è possibile utilizzare due approcci diversi:  
   
--   Implement the <xref:Microsoft.Build.Framework.ITask> interface directly.  
+-   Implementare direttamente l'interfaccia <xref:Microsoft.Build.Framework.ITask>.  
   
--   Derive your class from the helper class, <xref:Microsoft.Build.Utilities.Task>, which is defined in the Microsoft.Build.Utilities.dll assembly. Task implements ITask and provides default implementations of some ITask members. Additionally, logging is easier.  
+-   Derivare la classe dalla classe di supporto <xref:Microsoft.Build.Utilities.Task>, definita nell'assembly Microsoft.Build.Utilities.dll.  L'attività implementa ITask e fornisce le implementazioni predefinite di alcuni membri di ITask.  Inoltre, la registrazione è più semplice.  
   
- In both cases, you must add to your class a method named `Execute`, which is the method that is called when the task runs. This method takes no parameters and returns a `Boolean` value: `true` if the task succeeded or `false` if it failed. The following example shows a task that performs no action and returns `true`.  
+ In entrambi i casi è necessario aggiungere alla propria classe un metodo denominato `Execute`, ossia il metodo che viene richiamato quando viene eseguita l'attività.  Questo metodo non assume alcun parametro e restituisce un valore `Boolean`: `true` se l'attività ha esito positivo oppure `false` se ha esito negativo.  Nell'esempio seguente è illustrata un'attività che non esegue alcuna azione e restituisce `true`.  
   
-```csharp
+```  
 using System;  
 using Microsoft.Build.Framework;  
 using Microsoft.Build.Utilities;  
@@ -69,9 +52,9 @@ namespace MyTasks
 }  
 ```  
   
- The following project file runs this task:  
+ Il seguente file di progetto esegue questa attività:  
   
-```xml  
+```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <Target Name="MyTarget">  
         <SimpleTask />  
@@ -79,9 +62,9 @@ namespace MyTasks
 </Project>  
 ```  
   
- When tasks run, they can also receive inputs from the project file if you create .NET properties on the task class. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] sets these properties immediately before calling the task's `Execute` method. To create a string property, use task code such as:  
+ Quando le attività vengono eseguite, possono ricevere anche input dal file di progetto se si creano proprietà .NET nella classe dell'attività.  In [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] queste proprietà vengono impostate immediatamente prima di chiamare il metodo `Execute` dell'attività.  Per creare una proprietà stringa utilizzare il codice attività, ad esempio:  
   
-```csharp
+```  
 using System;  
 using Microsoft.Build.Framework;  
 using Microsoft.Build.Utilities;  
@@ -105,9 +88,9 @@ namespace MyTasks
 }  
 ```  
   
- The following project file runs this task and sets `MyProperty` to the given value:  
+ Il seguente file di progetto esegue questa attività e imposta `MyProperty` con un determinato valore:  
   
-```xml  
+```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
    <Target Name="MyTarget">  
       <SimpleTask MyProperty="Value for MyProperty" />  
@@ -115,18 +98,18 @@ namespace MyTasks
 </Project>  
 ```  
   
-## <a name="registering-tasks"></a>Registering Tasks  
- If a project is going to run a task, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] must know how to locate the assembly that contains the task class. Tasks are registered using the [UsingTask Element (MSBuild)](../msbuild/usingtask-element-msbuild.md).  
+## Registrazione delle attività  
+ Se il progetto dovrà essere in grado di eseguire un'attività, è necessario specificare in [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] come individuare l'assembly che contiene la classe dell'attività.  Le attività vengono registrate tramite [UsingTask Element \(MSBuild\)](../msbuild/usingtask-element-msbuild.md).  
   
- The [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] file Microsoft.Common.Tasks is a project file that contains a list of `UsingTask` elements that register all the tasks that are supplied with [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. This file is automatically included when building every project. If a task that is registered in Microsoft.Common.Tasks is also registered in the current project file, the current project file takes precedence; that is, you can override a default task with your own task that has the same name.  
+ Il file Microsoft.Common.Tasks di [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] è un file di progetto che contiene un elenco di elementi `UsingTask` che registrano tutte le attività fornite con [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].  Questo file viene incluso automaticamente ogni volta che si compila un progetto.  Se l'attività registrata in Microsoft.Common.Tasks è anche registrata nel file di progetto corrente, il file di progetto corrente ha la precedenza, ossia è possibile sostituire un'attività predefinita con la propria attività avente lo stesso nome.  
   
 > [!TIP]
->  You can see a list of the tasks that are supplied with [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] by viewing the contents of Microsoft.Common.Tasks.  
+>  Per visualizzare un elenco di attività fornite con [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], visualizzare il contenuto di Microsoft.Common.Tasks.  
   
-## <a name="raising-events-from-a-task"></a>Raising Events from a Task  
- If your task derives from the <xref:Microsoft.Build.Utilities.Task> helper class, you can use any of the following helper methods on the <xref:Microsoft.Build.Utilities.Task> class to raise events that will be caught and displayed by any registered loggers:  
+## Generazione di eventi da un'attività  
+ Se l'attività deriva dalla classe di supporto <xref:Microsoft.Build.Utilities.Task>, è possibile utilizzare un metodo di supporto qualsiasi nella classe <xref:Microsoft.Build.Utilities.Task> per generare gli eventi che verranno intercettati e visualizzati da tutti i logger registrati:  
   
-```csharp
+```  
 public override bool Execute()  
 {  
     Log.LogError("messageResource1", "1", "2", "3");  
@@ -136,9 +119,9 @@ public override bool Execute()
 }  
 ```  
   
- If your task implements <xref:Microsoft.Build.Framework.ITask> directly, you can still raise such events but you must use the IBuildEngine interface. The following example shows a task that implements ITask and raises a custom event:  
+ Se l'attività implementa direttamente <xref:Microsoft.Build.Framework.ITask>, è comunque possibile generare tali eventi ma occorre utilizzare l'interfaccia IBuildEngine.  Nell'esempio riportato di seguito viene descritta un'attività che implementa ITask e genera un evento personalizzato:  
   
-```csharp
+```  
 public class SimpleTask : ITask  
 {  
     private IBuildEngine buildEngine;  
@@ -160,10 +143,10 @@ public class SimpleTask : ITask
 }  
 ```  
   
-## <a name="requiring-task-parameters-to-be-set"></a>Requiring Task Parameters to be Set  
- You can mark certain task properties as "required" so that any project file that runs the task must set values for these properties or the build fails. Apply the `[Required]` attribute to the .NET property in your task as follows:  
+## Impostazione di parametri di attività obbligatori  
+ È possibile contrassegnare determinate proprietà dell'attività come "obbligatorie", in modo che tutti i file di progetto che eseguono l'attività debbano impostare i valori per tali proprietà, altrimenti la compilazione avrà esito negativo.  Applicare nel modo seguente l'attributo `[Required]` alla proprietà .NET nell'attività:  
   
-```csharp
+```  
 private string requiredProperty;  
   
 [Required]  
@@ -174,16 +157,16 @@ public string RequiredProperty
 }  
 ```  
   
- The `[Required]` attribute is defined by <xref:Microsoft.Build.Framework.RequiredAttribute> in the <xref:Microsoft.Build.Framework> namespace.  
+ L'attributo `[Required]` è definito da <xref:Microsoft.Build.Framework.RequiredAttribute> nello spazio dei nomi <xref:Microsoft.Build.Framework>.  
   
-## <a name="example"></a>Example  
+## Esempio  
   
-### <a name="description"></a>Description  
- This following [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] class demonstrates a task deriving from the <xref:Microsoft.Build.Utilities.Task> helper class. This task returns `true`, indicating that it succeeded.  
+### Descrizione  
+ La seguente classe di [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] illustra un'attività che deriva dalla classe di supporto <xref:Microsoft.Build.Utilities.Task>.  Questa attività restituisce `true`, ad indicare che ha avuto esito positivo.  
   
-### <a name="code"></a>Code  
+### Codice  
   
-```csharp
+```  
 using System;  
 using Microsoft.Build.Utilities;  
   
@@ -200,14 +183,14 @@ namespace SimpleTask1
 }  
 ```  
   
-## <a name="example"></a>Example  
+## Esempio  
   
-### <a name="description"></a>Description  
- This following [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] class demonstrates a task implementing the <xref:Microsoft.Build.Framework.ITask> interface. This task returns `true`, indicating that it succeeded.  
+### Descrizione  
+ La seguente classe di [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] illustra un'attività che implementa l'interfaccia <xref:Microsoft.Build.Framework.ITask>.  Questa attività restituisce `true`, ad indicare che ha avuto esito positivo.  
   
-### <a name="code"></a>Code  
+### Codice  
   
-```csharp
+```  
 using System;  
 using Microsoft.Build.Framework;  
   
@@ -258,22 +241,22 @@ namespace SimpleTask2
 }  
 ```  
   
-## <a name="example"></a>Example  
+## Esempio  
   
-### <a name="description"></a>Description  
- This [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] class demonstrates a task that derives from the <xref:Microsoft.Build.Utilities.Task> helper class. It has a required string property, and raises an event that is displayed by all registered loggers.  
+### Descrizione  
+ La seguente classe di [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] illustra un'attività che deriva dalla classe di supporto <xref:Microsoft.Build.Utilities.Task>.  Ha una proprietà stringa obbligatoria e genera un evento che viene visualizzato da tutti i logger registrati.  
   
-### <a name="code"></a>Code  
- [!code-csharp[msbuild_SimpleTask3#1](../msbuild/codesnippet/CSharp/task-writing_1.cs)]  
+### Codice  
+ [!code-cs[msbuild_SimpleTask3#1](../msbuild/codesnippet/CSharp/task-writing_1.cs)]  
   
-## <a name="example"></a>Example  
+## Esempio  
   
-### <a name="description"></a>Description  
- The following example shows a project file invoking the previous example task, SimpleTask3.  
+### Descrizione  
+ Nell'esempio riportato di seguito viene illustrato un file di progetto che richiama l'attività dell'esempio precedente, SimpleTask3.  
   
-### <a name="code"></a>Code  
+### Codice  
   
-```xml  
+```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <UsingTask TaskName="SimpleTask3.SimpleTask3"   
         AssemblyFile="SimpleTask3\bin\debug\simpletask3.dll"/>  
@@ -284,6 +267,6 @@ namespace SimpleTask2
 </Project>  
 ```  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [Task Reference](../msbuild/msbuild-task-reference.md)   
  [Task Reference](../msbuild/msbuild-task-reference.md)

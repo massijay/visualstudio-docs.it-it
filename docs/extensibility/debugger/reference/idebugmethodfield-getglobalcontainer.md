@@ -1,69 +1,52 @@
 ---
-title: IDebugMethodField::GetGlobalContainer | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugMethodField::GetGlobalContainer
-helpviewer_keywords:
-- IDebugMethodField::GetGlobalContainer method
+title: "IDebugMethodField::GetGlobalContainer | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugMethodField::GetGlobalContainer"
+helpviewer_keywords: 
+  - "Metodo IDebugMethodField::GetGlobalContainer"
 ms.assetid: 041ac5aa-0b80-4310-b9ae-b88f8e7e0e5f
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5399a96b003a8f41d180e180c59eb76ccd53cd0b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugmethodfieldgetglobalcontainer"></a>IDebugMethodField::GetGlobalContainer
-Gets the global container of the method.  
+# IDebugMethodField::GetGlobalContainer
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Ottiene il contenitore globale del metodo.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
+```cpp#  
 HRESULT GetGlobalContainer(  
-   IDebugClassField** ppClass  
+   IDebugClassField** ppClass  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetGlobalContainer(  
-   out IDebugClassField ppClass  
+   out IDebugClassField ppClass  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `ppClass`  
- [out] Returns an [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) representing the module in which this method is defined.  
+ \[out\]  Restituisce [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) una rappresentazione del modulo in cui questo metodo è definito.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce S\_OK, in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- The returned [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) object represents the entire module and is an artificial object, that is, the module itself does not have an actual class but it can be represented by an `IDebugClassField` object, allowing the various elements of the module to be enumerated and discovered.  
+## Note  
+ L'oggetto restituito [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) rappresenta l'intero modulo ed è un oggetto artificiale, ovvero, il modulo stesso non dispone della classe effettiva ma può essere rappresentato da un oggetto di `IDebugClassField` , consentendo i diversi elementi del modulo da enumerare e individuare.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

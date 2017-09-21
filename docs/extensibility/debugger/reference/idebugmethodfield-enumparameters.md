@@ -1,74 +1,57 @@
 ---
-title: IDebugMethodField::EnumParameters | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugMethodField::EnumParameters
-helpviewer_keywords:
-- IDebugMethodField::EnumParameters method
+title: "IDebugMethodField::EnumParameters | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugMethodField::EnumParameters"
+helpviewer_keywords: 
+  - "Metodo IDebugMethodField::EnumParameters"
 ms.assetid: d77b1197-deb6-4144-8d1b-8b09949ccfac
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 14ba9e70c2caf4073a594fe657348ef10b70191d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugmethodfieldenumparameters"></a>IDebugMethodField::EnumParameters
-Creates an enumerator for the parameters of the method.  
+# IDebugMethodField::EnumParameters
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Crea un enumeratore per i parametri del metodo.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-HRESULT EnumParameters(   
-   IEnumDebugFields** ppParams  
+```cpp#  
+HRESULT EnumParameters(   
+   IEnumDebugFields** ppParams  
 );  
 ```  
   
-```csharp  
+```c#  
 int EnumParameters(  
-   out IEnumDebugFields ppParams  
+   out IEnumDebugFields ppParams  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `ppParams`  
- [out] Returns an [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) object representing the list of parameters to the method; otherwise, returns a null value if there are no parameters.  
+ \[out\]  Restituisce [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) un oggetto che rappresenta l'elenco dei parametri al metodo; in caso contrario, restituisce un valore null se non vi sono parametri.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK or returns S_FALSE if there are no parameters. Otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce S\_OK o restituisce S\_FALSE se non vi sono parametri.  In caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- Each element is an [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) object representing different types of parameters. Call the [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) method on each object to determine exactly what kind of parameter the object represents.  
+## Note  
+ Ogni elemento è [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) un oggetto che rappresenta i diversi tipi di parametri.  Chiamare [GetKind](../Topic/IDebugField::GetKind.md) il metodo su ciascun oggetto per determinare esattamente il tipo di parametro l'oggetto rappresenta.  
   
- A parameter includes both its variable name and its type. The first parameter to a class method is typically the "this" pointer.  
+ Un parametro include sia il nome della variabile del tipo.  Il primo parametro al metodo della classe è in genere “this„ puntatore.  
   
- If only the types of the parameters is needed, call the [EnumArguments](../../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) method.  
+ Se solo i tipi dei parametri è necessari, chiamare [EnumArguments](../../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md) il metodo.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   

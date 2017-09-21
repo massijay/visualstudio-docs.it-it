@@ -1,88 +1,71 @@
 ---
-title: IDebugProperty2::SetValueAsReference | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProperty2::SetValueAsReference
-helpviewer_keywords:
-- IDebugProperty2::SetValueAsReference method
+title: "IDebugProperty2::SetValueAsReference | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProperty2::SetValueAsReference"
+helpviewer_keywords: 
+  - "Metodo IDebugProperty2::SetValueAsReference"
 ms.assetid: 341b1b89-4ab8-4e1c-abe2-fb955df5c6b0
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 58cc520d773d65cc3eba0588c2b8763079019018
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugproperty2setvalueasreference"></a>IDebugProperty2::SetValueAsReference
-Sets the value of this property to the value of the given reference.  
+# IDebugProperty2::SetValueAsReference
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Imposta il valore di questa proprietà sul valore del riferimento specificato.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
+```cpp#  
 HRESULT SetValueAsReference(  
-   IDebugReference2** rgpArgs,  
-   DWORD              dwArgCount,  
-   IDebugReference2*  pValue,  
-   DWORD              dwTimeout  
+   IDebugReference2** rgpArgs,  
+   DWORD              dwArgCount,  
+   IDebugReference2*  pValue,  
+   DWORD              dwTimeout  
 );  
 ```  
   
-```csharp  
+```c#  
 int SetValueAsReference(  
-   IDebugReference2[] rgpArgs,  
-   uint               dwArgCount,  
-   IDebugReference2   pValue,  
-   uint               dwTimeout  
+   IDebugReference2[] rgpArgs,  
+   uint               dwArgCount,  
+   IDebugReference2   pValue,  
+   uint               dwTimeout  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `rgpArgs`  
- [in] An array of arguments to pass to the managed code property setter. If the property setter does not take arguments or if this [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) object does not refer to such a property setter, `rgpArgs` should be a null value. This parameter is typically a null value.  
+ \[in\]  Una matrice di argomenti da passare al metodo di impostazione delle proprietà di codice gestito.  Se il metodo di impostazione della proprietà non accetta argomenti e se questo [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) oggetto non fa riferimento a tale metodo di impostazione della proprietà, `rgpArgs` deve essere un valore null.  questo parametro è in genere un valore null.  
   
  `dwArgCount`  
- [in] The number of arguments in the `rgpArgs` array.  
+ \[in\]  Il numero di argomenti nella matrice di `rgpArgs` .  
   
  `pValue`  
- [in] A reference, in the form of an [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) object, to the value to use to set this property.  
+ \[in\]  Un riferimento, sotto forma [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) di oggetto, al valore da utilizzare l'impostazione di questa proprietà.  
   
  `dwTimeout`  
- [in] How long to take to set the value, in milliseconds. A typical value is `INFINITE`. This affects the length of time that any possible evaluation can take.  
+ \[in\]  Il tempo impiegato da eseguire per impostare il valore, in millisecondi.  Un valore che è `INFINITE`.  Ciò influisce sulla durata che qualsiasi valutazione possibile utilizzare.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise returns an error code, typically one of the following:  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario restituisce un codice di errore, in genere uno dei seguenti elementi:  
   
-|Error|Description|  
-|-----------|-----------------|  
-|`E_SETVALUEASREFERENCE_NOTSUPPORTED`|Setting the value from a reference is not supported.|  
-|`E_SETVALUE_VALUE_CANNOT_BE_SET`|The value cannot be set, as this property refers to a method.|  
-|`E_SETVALUE_VALUE_IS_READONLY`|The value is read-only and cannot be set.|  
-|`E_NOTIMPL`|The method is not implemented.|  
+|delle modifiche a..."|Descrizione|  
+|---------------------------|-----------------|  
+|`E_SETVALUEASREFERENCE_NOTSUPPORTED`|impostare il valore da un riferimento non è supportato.|  
+|`E_SETVALUE_VALUE_CANNOT_BE_SET`|Il valore non può essere impostato, poiché questa proprietà fa riferimento a un metodo.|  
+|`E_SETVALUE_VALUE_IS_READONLY`|Il valore è di sola lettura e non può essere impostato.|  
+|`E_NOTIMPL`|Il metodo non è implementato.|  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

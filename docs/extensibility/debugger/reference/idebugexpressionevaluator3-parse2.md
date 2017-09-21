@@ -1,106 +1,89 @@
 ---
-title: IDebugExpressionEvaluator3::Parse2 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugExpressionEvaluator3::Parse2
+title: "IDebugExpressionEvaluator3::Parse2 | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugExpressionEvaluator3::Parse2"
 ms.assetid: 78099628-d600-4f76-b7c8-ee07c864af1e
 caps.latest.revision: 11
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5dec9c5ee5e58a7e9c4d4264a93597794c5beedc
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 11
 ---
-# <a name="idebugexpressionevaluator3parse2"></a>IDebugExpressionEvaluator3::Parse2
-Converts an expression string to a parsed expression given the symbol provider and the address of the evaluating frame.  
+# IDebugExpressionEvaluator3::Parse2
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Converte una stringa dell'espressione in un'espressione analizzata al provider del simbolo e l'indirizzo del frame di valutazione.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
+```cpp#  
 HRESULT Parse2 (  
-   LPCOLESTR                upstrExpression,  
-   PARSEFLAGS               dwFlags,  
-   UINT                     nRadix,  
-   IDebugSymbolProvider*    pSymbolProvider,  
-   IDebugAddress*           pAddress,  
-   BSTR*                    pbstrError,  
-   UINT*                    pichError,  
-   IDebugParsedExpression** ppParsedExpression  
+   LPCOLESTR                upstrExpression,  
+   PARSEFLAGS               dwFlags,  
+   UINT                     nRadix,  
+   IDebugSymbolProvider*    pSymbolProvider,  
+   IDebugAddress*           pAddress,  
+   BSTR*                    pbstrError,  
+   UINT*                    pichError,  
+   IDebugParsedExpression** ppParsedExpression  
 );  
 ```  
   
-```csharp  
+```c#  
 HRESULT Parse2 (  
-   string                     upstrExpression,  
-   enum_PARSEFLAGS            dwFlags,  
-   uint                       nRadix,  
-   IDebugSymbolProvider       pSymbolProvider,  
-   IDebugAddress              pAddress,  
-   out string                 pbstrError,  
-   out uint                   pichError,  
-   out IDebugParsedExpression ppParsedExpression  
+   string                     upstrExpression,  
+   enum_PARSEFLAGS            dwFlags,  
+   uint                       nRadix,  
+   IDebugSymbolProvider       pSymbolProvider,  
+   IDebugAddress              pAddress,  
+   out string                 pbstrError,  
+   out uint                   pichError,  
+   out IDebugParsedExpression ppParsedExpression  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `upstrExpression`  
- [in] The expression string to be parsed.  
+ \[in\]  La stringa di un'espressione da analizzare.  
   
  `dwFlags`  
- [in] A collection of [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) constants that determine how the expression is to be parsed.  
+ \[in\]  Una raccolta [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) di costanti che determinano quali l'espressione deve essere analizzata.  
   
  `nRadix`  
- [in] Radix to be used to interpret any numerical information.  
+ \[in\]  Base da utilizzare per interpretare le informazioni numerica.  
   
  `pSymbolProvider`  
- [in] Interface of the symbol provider.  
+ \[in\]  Interfaccia provider del simbolo.  
   
  `pAddress`  
- [in] Address of the evaluating frame.  
+ \[in\]  L'indirizzo del frame di valutazione.  
   
  `pbstrError`  
- [out] Returns the error as human-readable text.  
+ \[out\]  restituisce l'errore come testo leggibile.  
   
  `pichError`  
- [out] Returns the character position of the start of the error in the expression string.  
+ \[out\]  Restituisce la posizione del carattere dell'inizio dell'errore nella stringa dell'espressione.  
   
  `ppParsedExpression`  
- [out] Returns the parsed expression in an [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) object.  
+ \[out\]  restituisce l'espressione analizzata [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) in un oggetto.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- This method produces a parsed expression, not an actual value. A parsed expression is ready to be evaluated, that is, converted to a value.  
+## Note  
+ Questo metodo produce un'espressione analizzata, non un valore effettivo.  Un'espressione analizzata è pronta per essere valutato, ovvero, viene convertito in un valore.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CEE** object that exposes the [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md) interface.  
+## Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto **di ad** che espone [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md) l'interfaccia.  
   
-```cpp  
+```cpp#  
 HRESULT CEE::Parse2 ( LPCOLESTR in_szExprText,  
   PARSEFLAGS in_FLAGS,  
   UINT in_RADIX,  
@@ -152,5 +135,5 @@ HRESULT CEE::Parse2 ( LPCOLESTR in_szExprText,
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md)

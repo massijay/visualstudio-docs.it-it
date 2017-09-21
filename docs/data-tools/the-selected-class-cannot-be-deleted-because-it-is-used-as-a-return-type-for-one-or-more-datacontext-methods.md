@@ -1,51 +1,32 @@
 ---
-title: The selected class cannot be deleted because it is used as a return type for one or more DataContext methods | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "Impossibile eliminare la classe selezionata perch&#233; &#232; utilizzata come tipo restituito per uno o pi&#249; metodi DataContext | Microsoft Docs"
+ms.custom: ""
+ms.date: "09/21/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: d68254a0-f3a1-47e2-aed3-a83471e1d711
 caps.latest.revision: 3
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: 1acfd88861d468449cfbf90a86963a3da8beedcb
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 1
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="the-selected-class-cannot-be-deleted-because-it-is-used-as-a-return-type-for-one-or-more-datacontext-methods"></a>The selected class cannot be deleted because it is used as a return type for one or more DataContext methods
-The return type of one or more <xref:System.Data.Linq.DataContext> methods is the selected entity class. Deleting an entity class that is used as the return type for a <xref:System.Data.Linq.DataContext> method will cause the compilation of the project to fail. To delete the selected entity class, identify the <xref:System.Data.Linq.DataContext> methods that use it and set their return types to a different entity class.  
+# Impossibile eliminare la classe selezionata perch&#233; &#232; utilizzata come tipo restituito per uno o pi&#249; metodi DataContext
+Il tipo restituito di uno o più metodi <xref:System.Data.Linq.DataContext> rappresenta la classe di entità selezionata.L'eliminazione di una classe di entità utilizzata come tipo restituito di un metodo <xref:System.Data.Linq.DataContext> determinerà l'esito negativo della compilazione del progetto.Per eliminare la classe di entità selezionata, identificare i metodi <xref:System.Data.Linq.DataContext> che l'utilizzano e impostare i relativi tipi restituiti su una classe di entità diversa.  
   
- To revert the return types of <xref:System.Data.Linq.DataContext> methods to their original auto-generated types, first delete the <xref:System.Data.Linq.DataContext> method from the methods pane and then drag the object from **Server Explorer**/**Database Explorer** onto the O/R Designer again.  
+ Per ripristinare i tipi generati automaticamente originali dei tipi restituiti dei metodi <xref:System.Data.Linq.DataContext>, eliminare innanzitutto il metodo <xref:System.Data.Linq.DataContext> dal riquadro dei metodi e quindi trascinare nuovamente l'oggetto da **Esplora server**\/**Esplora database** in Progettazione relazionale oggetti.  
   
-### <a name="to-correct-this-error"></a>To correct this error  
+### Per correggere l'errore  
   
-1.  Identify <xref:System.Data.Linq.DataContext> methods that use the entity class as a return type by selecting a <xref:System.Data.Linq.DataContext> method in the methods pane and inspecting the **Return Type** property in the **Properties** window.  
+1.  Identificare i metodi <xref:System.Data.Linq.DataContext> che utilizzano la classe di entità come tipo restituito selezionando un metodo <xref:System.Data.Linq.DataContext> nel riquadro dei metodi e controllando la proprietà **Return Type** nella finestra **Proprietà**.  
   
-2.  Set the **Return Type** to a different entity class or delete the <xref:System.Data.Linq.DataContext> method from the methods pane.  
+2.  Impostare **Return Type** su una classe di entità diversa oppure eliminare il metodo <xref:System.Data.Linq.DataContext> dal riquadro dei metodi.  
   
-## <a name="see-also"></a>See Also  
- [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [Walkthrough: Creating LINQ to SQL Classes (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)   
- [DataContext Methods (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md)   
- [How to: Change the return type of a DataContext method (O/R Designer)](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md)
+## Vedere anche  
+ [Cenni preliminari su Progettazione relazionale oggetti](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio1.md)   
+ [Procedura dettagliata: creazione di classi LINQ to SQL \(Progettazione relazionale oggetti\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)   
+ [Metodi DataContext \(Progettazione relazionale oggetti\)](../data-tools/datacontext-methods-o-r-designer.md)   
+ [Procedura: modificare il tipo restituito di un metodo DataContext \(Progettazione relazionale oggetti\)](../data-tools/how-to-change-the-return-type-of-a-datacontext-method-o-r-designer.md)

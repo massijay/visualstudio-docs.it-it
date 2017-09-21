@@ -1,65 +1,48 @@
 ---
-title: Saving Data | Microsoft Docs
-ms.custom: 
-ms.date: 10/19/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- DataRow.RowState
-- DataSet.GetChanges
-helpviewer_keywords:
-- DBDirect methods
-- updating data
-- data [Visual Studio], saving
-- TableAdapter DBDirect methods
-- databases, updating
-- TableAdapter.Update method
-- data [Visual Studio], updating
-- saving data
-- updating databases
+title: "Salvataggio di dati | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "DataRow.RowState"
+  - "DataSet.GetChanges"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "aspx"
+helpviewer_keywords: 
+  - "dati [Visual Studio], salvataggio"
+  - "dati [Visual Studio], aggiornamento"
+  - "database, aggiornamento"
+  - "DBDirect (metodi)"
+  - "salvataggio di dati"
+  - "metodi DBDirect di TableAdapter"
+  - "TableAdapter.Update (metodo)"
+  - "aggiornamento di dati"
+  - "aggiornamento di database"
 ms.assetid: 21d2b115-62e4-4ac9-a873-dcbb535b8af8
 caps.latest.revision: 13
-author: gewarren
-ms.author: gewarren
-manager: ghogen
+caps.handback.revision: 13
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 robots: noindex,nofollow
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: be46f7044ca55841ae2fbbfed2e9ea334e263134
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
 ---
-# <a name="saving-data"></a>Saving Data
-Saving data is the process of persisting changed data in an application's data model back to the original data store, typically a relational database such as SQL Server.  
+# Salvataggio di dati
+Il salvataggio dei dati è il processo mediante il quale i dati modificati in un modello dati di un'applicazione vengono salvati in modo permanente nell'archivio dati originale, in genere un database relazionale come SQL Server.  
   
- Updating a data source by means of a data model is typically a two-step process. The first step is to update the data model with new information — new records, changed records, or deleted records. The second step is to save the changes in your data model back to the database.  
+ L'aggiornamento di un'origine dati mediante un modello dati è in genere un processo in due fasi.  La prima fase consiste nell'aggiornare il modello dati con nuove informazioni, ovvero nuovi record, record modificati o record eliminati.  La seconda consiste nel salvare le modifiche apportate al modello dati nel database.  
   
- The following topics describe the concepts and tasks associated with saving data.  
+ Negli argomenti seguenti vengono illustrati concetti e attività relativi al salvataggio dei dati.  
   
-## <a name="related-topics"></a>Related Topics  
-[Save data back to the database](../data-tools/save-data-back-to-the-database.md)  
- Provides an overview of how changes are made in a dataset and how the dataset tracks information about changes in order to save those changes to a database.  
+## Argomenti correlati  
+ [Salvataggio dei dati nei dataset](../data-tools/save-data-back-to-the-database.md)  
+ Vengono fornite indicazioni generali sulle modalità con cui vengono apportate modifiche a un dataset e su come il dataset tiene traccia delle informazioni relative alle modifiche per salvarle in un database.  
   
-[How to: Add, Modify, and Delete Entities (WCF Data Services)](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)  
-Shows how to create, update, and delete entity data in a data service.  
-  
-[How to: Execute Data Service Queries (WCF Data Services)](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services)  
-Shows how to query a data service from a data service application.  
-
+ [Salvataggio di dati di entità](../data-tools/saving-entity-data.md)  
+ Viene descritto come salvare le modifiche nelle applicazioni [ADO.NET Entity Framework](../Topic/ADO.NET%20Entity%20Framework.md) e [WCF Data Services 4.5](../Topic/WCF%20Data%20Services%204.5.md).

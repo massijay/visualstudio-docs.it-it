@@ -1,94 +1,77 @@
 ---
-title: IDebugComPlusSymbolProvider::LoadSymbols | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- LoadSymbols
-- IDebugComPlusSymbolProvider::LoadSymbols
+title: "IDebugComPlusSymbolProvider::LoadSymbols | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "LoadSymbols"
+  - "IDebugComPlusSymbolProvider::LoadSymbols"
 ms.assetid: 3499680d-0b9a-4f20-8432-c89a41b29b87
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: ff0bef4429c39dfc1847774dd7f9cc4c3858f9b6
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugcomplussymbolproviderloadsymbols"></a>IDebugComPlusSymbolProvider::LoadSymbols
-Loads the specified debug symbols in memory.  
+# IDebugComPlusSymbolProvider::LoadSymbols
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Carica simboli di debug specificati in memoria.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
+```cpp#  
 HRESULT LoadSymbols(  
-   ULONG32   ulAppDomainID,  
-   GUID      guidModule,  
-   ULONGLONG baseAddress,  
-   IUnknown* pUnkMetadataImport,  
-   BSTR      bstrModuleName,  
-   BSTR      bstrSymSearchPath  
+   ULONG32   ulAppDomainID,  
+   GUID      guidModule,  
+   ULONGLONG baseAddress,  
+   IUnknown* pUnkMetadataImport,  
+   BSTR      bstrModuleName,  
+   BSTR      bstrSymSearchPath  
 );  
 ```  
   
-```csharp  
+```c#  
 int LoadSymbols(  
-   uint   ulAppDomainID,  
-   Guid   guidModule,  
-   ulong  baseAddress,  
-   object pUnkMetadataImport,  
-   string bstrModuleName,  
-   string bstrSymSearchPath  
+   uint   ulAppDomainID,  
+   Guid   guidModule,  
+   ulong  baseAddress,  
+   object pUnkMetadataImport,  
+   string bstrModuleName,  
+   string bstrSymSearchPath  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `ulAppDomainID`  
- [in] Identifier of the application domain.  
+ \[in\]  Identificatore del dominio applicazione.  
   
  `guidModule`  
- [in] Unique identifier of the mondule.  
+ \[in\]  Identificatore univoco del mondule.  
   
  `baseAddress`  
- [in] Base memory address.  
+ \[in\]  indirizzo di memoria di base.  
   
  `pUnkMetadataImport`  
- [in] Object that contains the symbol metadata.  
+ \[in\]  Oggetto che contiene i metadati del simbolo.  
   
  `bstrModuleName`  
- [in] Name of the module.  
+ \[in\]  Nome del modulo.  
   
  `bstrSymSearchPath`  
- [in] Path to search for the symbol file.  
+ \[in\]  Percorso in cui cercare il file di simboli.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto **di CDebugSymbolProvider** che espone [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) l'interfaccia.  
   
-```cpp  
+```cpp#  
 HRESULT CDebugSymbolProvider::LoadSymbols(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
@@ -101,5 +84,5 @@ HRESULT CDebugSymbolProvider::LoadSymbols(
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

@@ -1,72 +1,55 @@
 ---
-title: IDebugExpressionEvaluator2::PreloadModules | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugExpressionEvaluator2::PreloadModules
-- PreloadModules
+title: "IDebugExpressionEvaluator2::PreloadModules | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugExpressionEvaluator2::PreloadModules"
+  - "PreloadModules"
 ms.assetid: bcf9b968-ee14-4a92-88ad-926268a44e03
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 1a827160e5c211bb7b87d7ea3620a72d53f48986
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugexpressionevaluator2preloadmodules"></a>IDebugExpressionEvaluator2::PreloadModules
-Preloads the modules designated by the specified symbol provider.  
+# IDebugExpressionEvaluator2::PreloadModules
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Precarica i moduli indicati dal provider specificato del simbolo.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
+```cpp#  
 HRESULT PreloadModules (  
-   IDebugSymbolProvider* pSym  
+   IDebugSymbolProvider* pSym  
 );  
 ```  
   
-```csharp  
+```c#  
 int PreloadModules (  
-   IDebugSymbolProvider pSym  
+   IDebugSymbolProvider pSym  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `pSym`  
- [in] Symbol provider for which the modules will be preloaded.  
+ \[in\]  Il provider dei simboli per il quale i moduli viene precaricato.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- This optional method is used when you do a hosting-process attach. It gives the EE a chance to 'warm up' as part of the attach.  
+## Note  
+ Questo metodo facoltativo viene utilizzato durante la disconnessione del processo di hosting.  Fornisce all'EE una probabilità “scaldarsi„ come parte della connessione.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **ExpressionEvaluatorPackage** object that exposes the [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) interface.  
+## Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto **di ExpressionEvaluatorPackage** che espone [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) l'interfaccia.  
   
-```cpp  
+```cpp#  
 STDMETHODIMP ExpressionEvaluatorPackage::PreloadModules  
 (  
     IDebugSymbolProvider *pSym  
@@ -92,5 +75,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

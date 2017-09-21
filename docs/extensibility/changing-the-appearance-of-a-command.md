@@ -1,74 +1,57 @@
 ---
-title: Changing the Appearance of a Command | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- commands, changing appearance
-- menu commands, changing appearance
-- menus, changing command appearance
+title: "Modifica dell&#39;aspetto di un comando | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "comandi, modifica dell'aspetto"
+  - "comandi di menu, modifica dell'aspetto"
+  - "menu, modifica dell'aspetto di comando"
 ms.assetid: da2474fa-f92d-4e9e-b8bf-67c61bf249c2
 caps.latest.revision: 23
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: d7a69bd22d3c8dbf93a3da67f6a2b4fd89fec0b0
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 23
 ---
-# <a name="changing-the-appearance-of-a-command"></a>Changing the Appearance of a Command
-You can provide feedback to your user by changing the appearance of a command. For example, you may want a command to look different when it is unavailable. You can make commands available or unavailable, hide or show them, or check or uncheck them on the menu.  
+# Modifica dell&#39;aspetto di un comando
+[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+
+È possibile fornire feedback all'utente tramite la modifica dell'aspetto di un comando. Ad esempio, si consiglia un comando per un aspetto diverso quando non è disponibile. È possibile rendere i comandi disponibili o non è disponibile, nascondere o visualizzarli, o verificare o deselezionarle dal menu.  
   
- To change the appearance of a command, perform one of these actions:  
+ Per modificare l'aspetto di un comando, eseguire una delle azioni seguenti:  
   
--   Specify the appropriate flags in the command definition in the command table file.  
+-   Specifica i flag appropriati nella definizione di comando nel file tabella di comando.  
   
--   Use the <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService> service.  
+-   Utilizzare il <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService> servizio.  
   
--   Implement the <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> interface and modify the raw command objects.  
+-   Implementare il <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> l'interfaccia e modificare gli oggetti comando non elaborati.  
   
- The following steps show how to find and update the appearance of a command by using the Managed Package Framework (MPF).  
+ La procedura seguente viene illustrato come trovare e aggiornare l'aspetto di un comando tramite il Framework di pacchetto gestito \(MPF\).  
   
-### <a name="to-change-the-appearance-of-a-menu-command"></a>To change the appearance of a menu command  
+### Per modificare l'aspetto di un comando di menu  
   
-1.  Follow the instructions in [Changing the Text of a Menu Command](../extensibility/changing-the-text-of-a-menu-command.md) to create a menu item named `New Text`.  
+1.  Seguire le istruzioni in [Modifica del testo di un comando di Menu](../extensibility/changing-the-text-of-a-menu-command.md) per creare una voce di menu denominato `New Text`.  
   
-2.  In the ChangeMenuText.cs file, add the following using statement:  
+2.  Nel file ChangeMenuText.cs, aggiungere la seguente istruzione using:  
   
-    ```csharp  
+    ```c#  
     using System.Security.Permissions;  
     ```  
   
-3.  In the ChangeMenuTextPackageGuids.cs file, add the following line:  
+3.  Nel file ChangeMenuTextPackageGuids.cs, aggiungere la riga seguente:  
   
-    ```csharp  
+    ```c#  
     public const string guidChangeMenuTextPackageCmdSet= "00000000-0000-0000-0000-00000000";  // get the GUID from the .vsct file  
     ```  
   
-4.  In the ChangeMenuText.cs file, replace the code in the ShowMessageBox method with the following:  
+4.  Nel file ChangeMenuText.cs, sostituire il codice nel metodo ShowMessageBox con il codice seguente:  
   
-    ```csharp  
+    ```c#  
     private void ShowMessageBox(object sender, EventArgs e)  
     {  
         var command = sender as OleMenuCommand;  
@@ -77,9 +60,9 @@ You can provide feedback to your user by changing the appearance of a command. F
     }  
     ```  
   
-5.  Obtain the command that you want to update from the <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService> object and then set the appropriate properties on the command object. For example, the following method makes the specified command from a VSPackage command set available or unavailable. The following code makes the menu item named `New Text` unavailable after it has been clicked.  
+5.  Il comando che si desidera aggiornare da ottenere il <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService> dell'oggetto e quindi impostare le proprietà appropriate sull'oggetto command. Il metodo seguente, ad esempio, rende il comando specificato da un comando VSPackage impostare disponibile o non disponibile. Il codice seguente effettua il voce di menu denominata `New Text` disponibile dopo che è stato fatto clic.  
   
-    ```csharp  
+    ```c#  
     public bool ChangeMyCommand(int cmdID, bool enableCmd)  
     {  
         bool cmdUpdated = false;  
@@ -96,14 +79,14 @@ You can provide feedback to your user by changing the appearance of a command. F
     }  
     ```  
   
-6.  Build the project and start debugging. The experimental instance of Visual Studio should appear.  
+6.  Compilare il progetto e avviare il debug. L'istanza sperimentale di Visual Studio dovrebbe apparire.  
   
-7.  On the **Tools** menu, click the **Invoke ChangeMenuText** command. At this point the command name is **Invoke ChangeMenuText**, so the command handler doesn't call ChangeMyCommand().  
+7.  Nel **strumenti** menu, fare clic su di **richiamare ChangeMenuText** comando. A questo punto è il nome del comando **richiamare ChangeMenuText**, in modo che il gestore del comando non chiama ChangeMyCommand\(\).  
   
-8.  On the **Tools** menu you should now see **New Text**. Click **New Text**. The command should now be grayed out.  
+8.  Nel **strumenti** menu dovrebbe **nuovo testo**. Fare clic su **nuovo testo**. Il comando dovrebbe ora essere disabilitato.  
   
-## <a name="see-also"></a>See Also  
- [Commands, Menus, and Toolbars](../extensibility/internals/commands-menus-and-toolbars.md)   
- [How VSPackages Add User Interface Elements](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
- [Extending Menus and Commands](../extensibility/extending-menus-and-commands.md)   
- [Visual Studio Command Table (.Vsct) Files](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## Vedere anche  
+ [I comandi, menu e barre degli strumenti](../extensibility/internals/commands-menus-and-toolbars.md)   
+ [Come package VS aggiungere elementi dell'interfaccia utente](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
+ [Estensione menu e comandi](../extensibility/extending-menus-and-commands.md)   
+ [Tabella di comandi di Visual Studio \(. File Vsct\)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

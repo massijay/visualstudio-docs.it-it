@@ -1,70 +1,53 @@
 ---
-title: IDebugClassField::GetDefaultIndexer | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugClassField::GetDefaultIndexer
-helpviewer_keywords:
-- IDebugClassField::GetDefaultIndexer method
+title: "IDebugClassField::GetDefaultIndexer | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugClassField::GetDefaultIndexer"
+helpviewer_keywords: 
+  - "Metodo IDebugClassField::GetDefaultIndexer"
 ms.assetid: 47ce4f45-3816-4b40-909c-5032d0692d75
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 7fe0008e38175254d9ac0eb4146d31d9866d9c69
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugclassfieldgetdefaultindexer"></a>IDebugClassField::GetDefaultIndexer
-Gets the name of the default indexer.  
+# IDebugClassField::GetDefaultIndexer
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Ottiene il nome dell'indicizzatore predefinito.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-HRESULT GetDefaultIndexer(   
-   BSTR* pbstrIndexer  
+```cpp#  
+HRESULT GetDefaultIndexer(   
+   BSTR* pbstrIndexer  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetDefaultIndexer(  
-   out string pbstrIndexer  
+   out string pbstrIndexer  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `pbstrIndexer`  
- [out] Returns a string containing the name of the default indexer.  
+ \[out\]  Restituisce una stringa contenente il nome dell'indicizzatore predefinito.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns S_OK or returns S_FALSE if there is no default indexer. Otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce S\_OK o restituisce S\_FALSE se non c " è indicizzatore predefinito.  In caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- The default indexer of a class is the property that is marked as the `Default` property for array accesses. This is specific to [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]. Here is an example of a default indexer declared in [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] and how it is used.  
+## Note  
+ L'indicizzatore predefinito di una classe è la proprietà contrassegnata come la proprietà di `Default` per matrice accede.  Ciò è specifica di [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)].  Di seguito è riportato un esempio di un indicizzatore predefinito dichiarato in [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] e le modalità per utilizzarla.  
   
-```vb  
+```vb#  
 Imports System.Collections;  
   
 Public Class Class1  
@@ -94,5 +77,5 @@ Function GetItem(Index as Integer) as Integer
 End Function  
 ```  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

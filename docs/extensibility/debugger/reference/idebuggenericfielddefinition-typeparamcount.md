@@ -1,67 +1,50 @@
 ---
-title: IDebugGenericFieldDefinition::TypeParamCount | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- TypeParamCount
-- IDebugGenericFieldDefinition::TypeParamCount
+title: "IDebugGenericFieldDefinition::TypeParamCount | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "TypeParamCount"
+  - "IDebugGenericFieldDefinition::TypeParamCount"
 ms.assetid: d41dd5ea-aa25-4bf3-bcfd-e0bf451ead49
 caps.latest.revision: 8
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 9dbcabaab49dcdba6c42c3eaf222d22800aaf05f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 8
 ---
-# <a name="idebuggenericfielddefinitiontypeparamcount"></a>IDebugGenericFieldDefinition::TypeParamCount
-Retrieves the number of type parameters that are associated with the generic field.  
+# IDebugGenericFieldDefinition::TypeParamCount
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Recupera il numero di parametri associati con il campo generica.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
-```cpp  
+```cpp#  
 HRESULT TypeParamCount(  
    ULONG32* pcParams  
 );  
 ```  
   
-```csharp  
+```c#  
 int TypeParamCount(  
    ref uint pcParams  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `pcParams`  
- [in, out] Number of type parameters.  
+ [in, out] Numero di parametri di tipo.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- If List\<T>, this method returns 1, and, if List\<T1,T2>, this method returns 2. This method returns 0 if there are no type parameters.  
+## <a name="remarks"></a>Note  
+ Se elenco \< T>, questo metodo restituisce 1 e, se elenco \< T1, T2 >, questo metodo restituisce 2. Questo metodo restituisce 0 se non sono presenti parametri di tipo.  
   
-## <a name="see-also"></a>See Also  
+## <a name="see-also"></a>Vedere anche  
  [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

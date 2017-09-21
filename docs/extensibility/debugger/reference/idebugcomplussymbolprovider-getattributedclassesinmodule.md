@@ -1,86 +1,69 @@
 ---
-title: IDebugComPlusSymbolProvider::GetAttributedClassesinModule | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugComPlusSymbolProvider::GetAttributedClassesinModule
-- GetAttributedClassesinModule
+title: "IDebugComPlusSymbolProvider::GetAttributedClassesinModule | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugComPlusSymbolProvider::GetAttributedClassesinModule"
+  - "GetAttributedClassesinModule"
 ms.assetid: d8b087f3-1d32-4570-9eb0-7e0f7b051bc8
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 3dddd25c62033999e0a41b98870bae2cb69ed224
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugcomplussymbolprovidergetattributedclassesinmodule"></a>IDebugComPlusSymbolProvider::GetAttributedClassesinModule
-Retrieves the classes with the specified attribute in a given module.  
+# IDebugComPlusSymbolProvider::GetAttributedClassesinModule
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+recupera le classi con l'attributo specificato in un modulo specificato.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
 ```  
 [C++]  
 HRESULT GetAttributedClassesinModule (  
-   ULONG32            ulAppDomainID,  
-   GUID               guidModule,  
-   LPOLESTR           pstrAttribute,  
-   IEnumDebugFields** ppEnum  
+   ULONG32            ulAppDomainID,  
+   GUID               guidModule,  
+   LPOLESTR           pstrAttribute,  
+   IEnumDebugFields** ppEnum  
 );  
 ```  
   
 ```  
 [C#]  
 int GetAttributedClassesinModule (  
-   uint                 ulAppDomainID,  
-   Guid                 guidModule,  
-   string               pstrAttribute,  
-   out IEnumDebugFields ppEnum  
+   uint                 ulAppDomainID,  
+   Guid                 guidModule,  
+   string               pstrAttribute,  
+   out IEnumDebugFields ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `ulAppDomainID`  
- [in] Identifier of the application domain.  
+ \[in\]  Identificatore del dominio applicazione.  
   
  `guidModule`  
- [in] Unique identifier of the module.  
+ \[in\]  Identificatore univoco del modulo.  
   
  `pstrAttribute`  
- [in] The attribute string.  
+ \[in\]  la stringa di attributo.  
   
  `ppEnum`  
- [out] Returns an enumeration of the attributed classes.  
+ \[out\]  Restituisce un'enumerazione delle classi gli attributi.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto **di CDebugSymbolProvider** che espone [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) l'interfaccia.  
   
-```cpp  
+```cpp#  
 HRESULT CDebugSymbolProvider::GetAttributedClassesinModule(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
@@ -168,5 +151,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

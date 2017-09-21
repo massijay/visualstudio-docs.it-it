@@ -1,8 +1,8 @@
 ---
-title: Install on low bandwidth or unreliable network environments | Microsoft Docs
-description: Describes how the Visual Studio installer works in unreliable network conditions, and explains how to download install files before beginning the installation.
-ms.date: 08/30/2017
-ms.reviewer: tims
+title: Eseguire l&quot;installazione in ambienti di rete con larghezza di banda ridotta o non affidabili | Microsoft Docs
+description: Descrive il funzionamento del programma di installazione di Visual Studio in condizioni di rete non affidabili e illustra come scaricare i file di installazione prima di iniziare la procedura di installazione.
+ms.date: 04/14/2017
+ms.reviewer: 
 ms.suite: 
 ms.technology:
 - vs-ide-install
@@ -15,98 +15,109 @@ ms.assetid: 44DB1998-68CD-4560-870A-EE5B993DCF6E
 author: timsneath
 ms.author: tims
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 13659103061c6054698f4579b4b71d2669d2356d
-ms.openlocfilehash: 3113b25b90cf7a7cf4c67a01eeaeedd15f0793b2
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 85576806818a6ed289c2f660f87b5c419016c600
+ms.openlocfilehash: 9dbe70bce6c246416df64de304b06cd211320f2a
 ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 05/09/2017
 
 ---
 
-# <a name="install-visual-studio-2017-on-low-bandwidth-or-unreliable-network-environments"></a>Install Visual Studio 2017 on low bandwidth or unreliable network environments
+# <a name="install-visual-studio-2017-on-low-bandwidth-or-unreliable-network-environments"></a>Installare Visual Studio 2017 in ambienti di rete con larghezza di banda ridotta o non affidabili
+Il nuovo programma di installazione di Visual Studio 2017 è stato progettato per funzionare correttamente in computer e reti in condizioni di qualsiasi tipo.
 
-We recommend that you try the Visual Studio web installer&mdash;we think you'll find it a good experience for most situations. 
+- I file necessari per installare Visual Studio vengono distribuiti in una rete di distribuzione globale e possono essere quindi recuperati da un server locale;
+- Durante il processo di installazione, vengono provate tre diverse tecnologie di download (WebClient, BITS e WinInet) per ridurre al minimo le interferenze con software proxy e anti-virus;
+- Il nuovo modello basato sul carico di lavoro consente di installare un minor numero di componenti rispetto alle precedenti versioni di Visual Studio.
 
- > [!div class="button"]
- > [Download Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocsOL)
-<br/>
+È consigliabile quindi provare il nuovo programma di installazione Web, che assicura risultati molto soddisfacenti. Se, tuttavia, prima di iniziare il processo di installazione di Visual Studio si vuole avere la certezza che i file di installazione siano stati correttamente scaricati, è possibile soddisfare questa esigenza usando la riga di comando per creare una cache locale dei file necessari prima dell'inizio dell'installazione.
 
-However, if your internet connection is unavailable or unreliable, you can use the command line to create a local cache of the files you need to complete an offline install. Here's how.
+Ecco come fare.
 
-> [!NOTE]
-> If you are an enterprise administrator who wants to perform a deployment of Visual Studio 2017 to a network of client workstations that are firewalled from the internet, see our [Create a network installation of Visual Studio 2017](../install/create-a-network-installation-of-visual-studio.md) and [Special considerations for installing Visual Studio in an offline environment](../install/install-visual-studio-in-offline-environment.md) pages.
+## <a name="download-the-visual-studio-bootstrapper"></a>Scaricare il programma di bootstrap di Visual Studio
+Iniziare scaricando il programma di bootstrap relativo all'edizione di Visual Studio selezionata.
 
-## <a name="step-1---download-the-visual-studio-bootstrapper"></a>Step 1 - Download the Visual Studio bootstrapper
+Il file di installazione o, per essere più specifici, il file di un programma di bootstrap, corrisponderà o sarà simile a uno dei file seguenti.
 
-Start by downloading the Visual Studio bootstrapper for your chosen edition of Visual Studio.
-
-Your setup file&mdash;or to be more specific, a bootstrapper file&mdash;will match or be similar to one of the following.
-
-| Edition                    | File                                                                    |
+| Edizione                    | File                                                                    |
 |----------------------------|-------------------------------------------------------------------------|
-| Visual Studio Community    | [vs_community.exe](https://aka.ms/vs/15/release/vs_community.exe)       |
+| Community di Visual Studio    | [vs_community.exe](https://aka.ms/vs/15/release/vs_community.exe)       |
 | Visual Studio Professional | [vs_professional.exe](https://aka.ms/vs/15/release/vs_professional.exe) |
 | Visual Studio Enterprise   | [vs_enterprise.exe](https://aka.ms/vs/15/release/vs_enterprise.exe)     |
 
-## <a name="step-2---create-a-local-install-cache"></a>Step 2 - Create a local install cache
+## <a name="create-a-local-install-cache"></a>Creare una cache di installazione locale
+Per creare un layout locale, aprire un prompt dei comandi e usare uno dei comandi presenti negli esempi seguenti. Negli esempi seguenti si presuppone che sia stato scaricato il bootstrapper della community di Visual Studio: modificare il comando per adattarlo all'edizione in uso.
 
-To create a local layout, open a command prompt and use one of the commands from the following examples: The examples here assume that you're using the Community edition of Visual Studio; adjust the command as appropriate for your edition.
+- Per lo sviluppo per Web .NET e desktop .NET, eseguire:
+  ```
+  vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US
+  ```
+- Per lo sviluppo per desktop .NET e Office, eseguire:
+  ```
+  vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.Office --includeOptional --lang en-US
+  ```
+- Per lo sviluppo per desktop C++, eseguire:
+  ```
+  vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
+  ```
 
-- For .NET web and .NET desktop development, run:
+- Per creare un layout locale completo con tutte le funzionalità (dato l'_elevato_ numero di funzionalità, questa operazione richiederà molto tempo), eseguire:
+  ```
+  vs_community.exe --layout c:\vs2017layout --lang en-US
+  ```
 
-   ```vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US```
+Se si vuole installare una lingua diversa dall'inglese, nell'elenco in fondo alla pagina modificare `en-US` con impostazioni locali diverse. Usare l'[elenco di componenti e carichi di lavoro disponibili](workload-and-component-ids.md) per personalizzare ulteriormente la cache di installazione in base alle proprie esigenze.
 
-- For .NET desktop and Office development, run:
+## <a name="install-from-the-local-cache"></a>Eseguire l'installazione dalla cache locale
+Quando si esegue l'installazione da una cache locale, si usano le versioni locali di ogni file. Se, tuttavia, durante l'installazione si selezionano componenti non contenuti nella cache, si tenterà di scaricarli da Internet.
 
-   ```vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.Office --includeOptional --lang en-US```
+Per assicurarsi che vengano installati solo i file scaricati, usare le stesse opzioni della riga di comando usate per creare la cache di layout. Ad esempio, se è stata creata una cache di layout con il comando seguente:
 
-- For C++ desktop development, run:
+```
+vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US
+```
 
-   ```vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US```
+Usare questo comando per eseguire l'installazione:
 
-- To create a complete local layout with all features (this will take a long time&mdash;we have _lots_ of features!), run:
+```
+c:\vs2017layout\vs_community.exe --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional
+```
 
-   ```vs_community.exe --layout c:\vs2017layout --lang en-US```
+## <a name="list-of-language-locales"></a>Elenco delle impostazioni locali delle lingue
+| **Impostazioni locali** | **Lingua** |
+| ----------------------- | --------------- |  
+| cs-CZ | Ceco |
+| de-DE | Tedesco |
+| it-IT | Inglese |
+| es-ES | Spagnolo |
+| fr-FR | Francese |
+| it-IT | Italiano |
+| ja-JP | Giapponese |
+| ko-KR | Coreano |
+| pl-PL | Polacco |
+| pt-BR | Portoghese (Brasile) |
+| ru-RU | Russo |
+| tr-TR | Turco |
+| zh-CN | Cinese semplificato |
+| zh-TW | Cinese tradizionale |
 
-If you want to install a language other than English, change `en-US` to a locale from the list at the bottom of this page. Use this [list of the components and workloads available](workload-and-component-ids.md) to further customize your installation cache as necessary.
-
-## <a name="step-3---install-visual-studio-from-the-local-cache"></a>Step 3 - Install Visual Studio from the local cache
-
-> [!TIP]
-> When you run from a local install cache, setup uses the local versions of each of these files. But if you select components during installation that aren't in the cache, we attempt to download them from the internet.
-
-To ensure that you only install the files you've downloaded, use the same command-line options that you used to create the layout cache. For example, if you created a layout cache with the following command:
-
-```vs_community.exe --layout c:\vs2017layout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US```
-
-use this command to run the installation:
-
-```c:\vs2017layout\vs_community.exe --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional```
-
-> [!NOTE]
-> If you get an error that a signature is invalid, you must install updated certificates. Open the Certificates folder in your offline cache. Double-click each of the certificate files, and then click through the Certificate Manager wizard. If asked for a password, leave it blank.
-
-## <a name="list-of-language-locales"></a>List of language locales
-
-| **Language-locale** | **Language** |
-| ----------------------- | --------------- |
-| cs-CZ | Czech |
-| de-DE | German |
-| en-US | English |
-| es-ES | Spanish |
-| fr-FR | French |
-| it-IT | Italian |
-| ja-JP | Japanese |
-| ko-KR | Korean |
-| pl-PL | Polish |
-| pt-BR | Portuguese - Brazil |
-| ru-RU | Russian |
-| tr-TR | Turkish |
-| zh-CN | Chinese - Simplified |
-| zh-TW | Chinese - Traditional |
-
-## <a name="see-also"></a>See also
-* [Install Visual Studio](install-visual-studio.md)
-* [Visual Studio administrator guide](visual-studio-administrator-guide.md)
-* [Use command-line parameters to install Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
+## <a name="see-also"></a>Vedere anche
+* [Installare Visual Studio](install-visual-studio.md)
+* [Guida dell'amministratore di Visual Studio](visual-studio-administrator-guide.md)
+* [Usare i parametri della riga di comando per installare Visual Studio](use-command-line-parameters-to-install-visual-studio.md)
 

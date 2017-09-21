@@ -1,79 +1,62 @@
 ---
-title: IDebugComPlusSymbolProvider::GetEntryPoint | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IDebugComPlusSymbolProvider::GetEntryPoint
-- GetEntryPoint
+title: "IDebugComPlusSymbolProvider::GetEntryPoint | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IDebugComPlusSymbolProvider::GetEntryPoint"
+  - "GetEntryPoint"
 ms.assetid: 9640e121-1da1-41f9-8e66-76efca36baf2
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 91979ec4af172bba37ab3e7630790e68ec2c73dc
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugcomplussymbolprovidergetentrypoint"></a>IDebugComPlusSymbolProvider::GetEntryPoint
-Retrieves the application entry point.  
+# IDebugComPlusSymbolProvider::GetEntryPoint
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Recupera il punto di ingresso dell'applicazione.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
+```cpp#  
 HRESULT GetEntryPoint(  
-   ULONG32         ulAppDomainID,  
-   GUID            guidModule,  
-   IDebugAddress** ppAddress  
+   ULONG32         ulAppDomainID,  
+   GUID            guidModule,  
+   IDebugAddress** ppAddress  
 );  
 ```  
   
-```csharp  
+```c#  
 int GetEntryPoint(  
-   uint              ulAppDomainID,  
-   Guid              guidModule,  
-   out IDebugAddress ppAddress  
+   uint              ulAppDomainID,  
+   Guid              guidModule,  
+   out IDebugAddress ppAddress  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `ulAppDomainID`  
- [in] Identifier for the application domain.  
+ \[in\]  Identificatore del dominio applicazione.  
   
  `guidModule`  
- [in] Unique identifier for the module.  
+ \[in\]  Identificatore univoco del modulo.  
   
  `ppAddress`  
- [out] Returns the entry point represented by an [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) interface.  
+ \[out\]  restituisce il punto di ingresso rappresentato [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) da un'interfaccia.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="example"></a>Example  
- The following example shows how to implement this method for a **CDebugSymbolProvider** object that exposes the [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) interface.  
+## Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto **di CDebugSymbolProvider** che espone [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) l'interfaccia.  
   
-```cpp  
+```cpp#  
 HRESULT CDebugSymbolProvider::GetEntryPoint(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
@@ -105,5 +88,5 @@ Error:
 }  
 ```  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

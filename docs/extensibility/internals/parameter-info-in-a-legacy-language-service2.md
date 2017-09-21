@@ -1,69 +1,52 @@
 ---
-title: Parameter Info in a Legacy Language Service2 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- IntelliSense, Parameter Info tool tip
-- language services [managed package framework], IntelliSense Parameter Info
-- Parameter Info (IntelliSense), supporting in language services [managed package framework]
+title: "Informazioni sui parametri in un Service2 Language Legacy | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "IntelliSense, descrizione comandi per informazioni di parametro"
+  - "servizi di linguaggio [framework gestito pacchetto], informazioni sul parametro di IntelliSense"
+  - "Informazioni parametri (IntelliSense), supporto in servizi di linguaggio [framework pacchetto gestito]"
 ms.assetid: a117365d-320d-4bb5-b61d-3e6457b8f6bc
 caps.latest.revision: 23
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 59ed0eea716cd64718093825503e491a12659dd7
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 23
 ---
-# <a name="parameter-info-in-a-legacy-language-service"></a>Parameter Info in a Legacy Language Service
-IntelliSense Parameter Info is a tooltip that displays the signature of a method when the user types the parameter list start character (typically an open parenthesis) for the method parameter list. As each parameter is entered and the parameter separator (typically a comma) is typed, the tooltip is updated to show the next parameter in bold.  
+# Informazioni sui parametri in un servizio di linguaggio Legacy
+[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+
+Informazioni sul parametro IntelliSense è una descrizione comando che consente di visualizzare la firma di un metodo quando l'utente digita l'elenco dei parametri start carattere \(in genere una parentesi di apertura\) per l'elenco di parametri di metodo. Quando viene immesso ogni parametro e il separatore di parametro \(in genere una virgola\) è tipizzato, la descrizione comando viene aggiornata per mostrare il parametro successivo in grassetto.  
   
- The managed package framework (MPF) classes provide support for managing the Parameter Info tooltip. The parser must detect parameter start, parameter next, and parameter end characters, and it must supply a list of the method signatures and their associated parameters.  
+ Le classi di framework \(MPF\) pacchetto gestito forniscono il supporto per la gestione della descrizione comando informazioni sul parametro. Il parser deve rilevare parametro start parametro successivo, e caratteri di fine dei parametri e deve fornire un elenco di firme del metodo e i relativi parametri.  
   
- Legacy language services are implemented as part of a VSPackage, but the newer way to implement language service features is to use MEF extensions. To find out more, see [Extending the Editor and Language Services](../../extensibility/extending-the-editor-and-language-services.md).  
-  
-> [!NOTE]
->  We recommend that you begin to use the new editor API as soon as possible. This will improve the performance of your language service and let you take advantage of new editor features.  
-  
-## <a name="implementation"></a>Implementation  
- The parser should set the trigger value <xref:Microsoft.VisualStudio.Package.TokenTriggers> is set when it finds a parameter list start character (often an open parenthesis). It should set a <xref:Microsoft.VisualStudio.Package.TokenTriggers> trigger when it finds a parameter separator (often a comma). This causes a Parameter Info tooltip to be updated and show the next parameter in bold. The parser should set the trigger value <xref:Microsoft.VisualStudio.Package.TokenTriggers> when if finds the parameter list end character (often a close parenthesis).  
-  
- The <xref:Microsoft.VisualStudio.Package.TokenTriggers> trigger value initiates a call to the <xref:Microsoft.VisualStudio.Package.Source.MethodTip%2A> method, which in turn calls the <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> method parser with a parse reason of <xref:Microsoft.VisualStudio.Package.ParseReason>. If the parser determines that the identifier before the parameter list start character is a recognized method name, it returns a list of matching method signatures in the <xref:Microsoft.VisualStudio.Package.AuthoringScope> object. If any method signatures were found, the Parameter Info tooltip is displayed with the first signature in the list. This tooltip is then updated as more of the signature is typed. When the parameter list end character is typed, the Parameter Info tooltip is removed from view.  
+ Servizi di linguaggio legacy vengono implementati come parte di un package VS, ma il modo più recente per implementare le funzionalità del servizio del linguaggio è l'utilizzo delle estensioni MEF. Per ulteriori informazioni, vedere [Estensione dell'Editor e servizi di linguaggio](../../extensibility/extending-the-editor-and-language-services.md).  
   
 > [!NOTE]
->  To ensure that the Parameter Info tooltip is properly formatted, you must override the properties on the <xref:Microsoft.VisualStudio.Package.Methods> class to supply the appropriate characters. The base <xref:Microsoft.VisualStudio.Package.Methods> class assumes a C#-style method signature. See the <xref:Microsoft.VisualStudio.Package.Methods> class for details on how this can be done.  
+>  Si consiglia di iniziare a utilizzare il nuovo editor API appena possibile. Verrà migliorare le prestazioni del servizio di linguaggio e consentono di sfruttare nuove funzionalità dell'editor.  
   
-## <a name="enabling-support-for-the-parameter-info"></a>Enabling Support for the Parameter Info  
- To support Parameter Info tooltips, you must set the `ShowCompletion` named parameter of the <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> to `true`. The language service reads the value of this registry entry from the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> property.  
+## Implementazione  
+ Il parser deve impostare il valore trigger <xref:Microsoft.VisualStudio.Package.TokenTriggers> viene impostata quando rileva un carattere di inizio elenco parametro \(spesso una parentesi aperta\). Deve essere impostato un <xref:Microsoft.VisualStudio.Package.TokenTriggers> attivare quando rileva un separatore di parametri \(spesso una virgola\). In questo modo una descrizione comando informazioni sul parametro devono essere aggiornati e visualizzare il parametro successivo in grassetto. Il parser deve impostare il valore trigger <xref:Microsoft.VisualStudio.Package.TokenTriggers> quando se rileva il carattere di fine elenco parametro \(spesso una parentesi chiusa\).  
   
- In addition, the <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ParameterInformation%2A> property must be set to `true` for the Parameter Info tooltip to be shown.  
+ Il <xref:Microsoft.VisualStudio.Package.TokenTriggers> valore trigger avvia una chiamata per il <xref:Microsoft.VisualStudio.Package.Source.MethodTip%2A> metodo, che a sua volta chiama il <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> parser di metodo con un motivo di analisi di <xref:Microsoft.VisualStudio.Package.ParseReason>. Se il parser rileva che l'identificatore l'elenco dei parametri prima di carattere è un nome di metodo riconosciuto, viene restituito un elenco di firme del metodo in corrispondenza di <xref:Microsoft.VisualStudio.Package.AuthoringScope> oggetto. Se sono state trovate le firme di metodo e la descrizione comando informazioni sul parametro viene visualizzata con la firma prima nell'elenco. Questa descrizione comandi viene quindi aggiornata di più della firma. Quando si digita il carattere di fine elenco di parametri, la descrizione comando informazioni sul parametro viene rimosso dalla visualizzazione.  
   
-### <a name="example"></a>Example  
- Here is a simplified example of detecting the parameter list characters and setting the appropriate triggers. This example is for illustrative purposes only. It assumes that your scanner contains a method `GetNextToken` that identifies and returns tokens from a line of text. The example code simply sets the triggers whenever it sees the right kind of character.  
+> [!NOTE]
+>  Per garantire che la descrizione comando informazioni sul parametro sia formattata correttamente, è necessario eseguire l'override di proprietà nella <xref:Microsoft.VisualStudio.Package.Methods> classe per fornire i caratteri appropriati. La base <xref:Microsoft.VisualStudio.Package.Methods> presuppone di classe c\#\-firma del metodo stile. Vedere la <xref:Microsoft.VisualStudio.Package.Methods> classe per informazioni dettagliate su come questa operazione può essere eseguita.  
   
-```csharp  
+## Abilita il supporto per le informazioni di parametro  
+ Per supportare le descrizioni comandi informazioni sul parametro, è necessario impostare il `ShowCompletion` del parametro denominato il <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> a `true`. Il servizio di linguaggio legge il valore di questa voce del Registro di sistema dalla <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> proprietà.  
+  
+ Inoltre, il <xref:Microsoft.VisualStudio.Package.LanguagePreferences.ParameterInformation%2A> deve essere impostata su `true` per visualizzare la descrizione comando informazioni sul parametro.  
+  
+### Esempio  
+ Ecco un esempio semplificato di rilevare i caratteri di elenco di parametri e l'impostazione attiva appropriato. Questo esempio è solo a scopo illustrativo. Si presuppone che lo scanner contiene un metodo `GetNextToken` che identifica e restituisce i token da una riga di testo. Nell'esempio di codice imposta semplicemente il trigger quando viene rilevato il tipo di carattere corretto.  
+  
+```c#  
 using Microsoft.VisualStudio.Package;  
 using Microsoft.VisualStudio.TextManager.Interop;  
   
@@ -109,17 +92,17 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="supporting-the-parameter-info-tooltip-in-the-parser"></a>Supporting the Parameter Info ToolTip in the Parser  
- The <xref:Microsoft.VisualStudio.Package.Source> class makes some assumptions about the contents of the <xref:Microsoft.VisualStudio.Package.AuthoringScope> and <xref:Microsoft.VisualStudio.Package.AuthoringSink> classes when the Parameter Info tooltip is displayed and updated.  
+## Supporto della descrizione comando informazioni di parametro nel Parser  
+ La <xref:Microsoft.VisualStudio.Package.Source> classe viene assunto il contenuto di <xref:Microsoft.VisualStudio.Package.AuthoringScope> e <xref:Microsoft.VisualStudio.Package.AuthoringSink> classi quando la descrizione comando informazioni sul parametro viene visualizzata e aggiornata.  
   
--   The parser is given <xref:Microsoft.VisualStudio.Package.ParseReason> when the parameter list start character is typed.  
+-   Il parser ha <xref:Microsoft.VisualStudio.Package.ParseReason> quando viene digitato il carattere di inizio elenco di parametri.  
   
--   The location given in the <xref:Microsoft.VisualStudio.Package.ParseRequest> object is immediately after the parameter list start character. The parser must collect the signatures of all method declarations available at that position and store them in a list in your version of the <xref:Microsoft.VisualStudio.Package.AuthoringScope> object. This list includes the method name, method type (or return type), and a list of possible parameters. This list is later searched for the method signature or signatures to display in the Parameter Info tooltip.  
+-   Il percorso specificato <xref:Microsoft.VisualStudio.Package.ParseRequest> oggetto viene immediatamente dopo che l'elenco di parametri carattere iniziale. Il parser deve raccogliere le firme di tutte le dichiarazioni di metodo disponibile all'indirizzo posizionare e archiviarle nella versione di un elenco di <xref:Microsoft.VisualStudio.Package.AuthoringScope> oggetto. Questo elenco include il nome del metodo, tipo metodo \(o tipo restituito\) e un elenco di possibili parametri. Questo elenco viene eseguita la ricerca in un secondo momento per la firma del metodo o firme da visualizzare nella descrizione comando informazioni sul parametro.  
   
- The parser must then parse the line specified by the <xref:Microsoft.VisualStudio.Package.ParseRequest> object to gather the name of the method being entered as well as how far along the user is in typing parameters. This is accomplished by passing the name of the method to the <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> method on the <xref:Microsoft.VisualStudio.Package.AuthoringSink> object and then calling the <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A> method when the parameter list start character is parsed, calling the <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A> method when the parameter list next character is parsed, and finally calling the <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A> method when the parameter list end character is parsed. The results of these method calls are used by the <xref:Microsoft.VisualStudio.Package.Source> class to update the Parameter Info tooltip appropriately.  
+ Il parser deve analizzare la riga specificata da di <xref:Microsoft.VisualStudio.Package.ParseRequest> oggetto per raccogliere il nome del metodo l'immissione e la distanza lungo l'utente si trova in digitando i parametri. Questa operazione viene eseguita passando il nome del metodo per il <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> metodo sul <xref:Microsoft.VisualStudio.Package.AuthoringSink> e quindi chiamando il <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A> viene analizzato il metodo quando l'elenco di parametri di avvio carattere, la chiamata di <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A> metodo quando viene analizzato il carattere successivo elenco di parametri e infine chiamare il <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A> metodo quando viene analizzato il carattere di fine elenco di parametri. I risultati di queste chiamate al metodo vengono utilizzati per la <xref:Microsoft.VisualStudio.Package.Source> classe per aggiornare la descrizione comando informazioni sul parametro in modo appropriato.  
   
-### <a name="example"></a>Example  
- Here is a line of text the user might enter. The numbers below the line indicate which step is taken by the parser at that position in the line (assuming parsing moves left to right). The assumption here is that everything before the line has already been parsed for method signatures, including the "testfunc" method signature.  
+### Esempio  
+ Ecco una riga di testo, che l'utente può immettere. I numeri sotto la linea indicano quale operazione viene effettuata dal parser in tale posizione nella riga \(presupponendo che l'analisi si sposta da sinistra a destra\). Il presupposto è che tutto ciò che precede la riga è già stato analizzato per le firme di metodo, tra cui la firma del metodo "testfunc".  
   
 ```  
 testfunc("a string",3);  
@@ -127,12 +110,12 @@ testfunc("a string",3);
      12          3 4  
 ```  
   
- The steps that the parser takes are outlined below:  
+ Di seguito è illustrata la procedura che accetta il parser:  
   
-1.  The parser calls <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> with the text "testfunc".  
+1.  Le chiamate di parser <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartName%2A> con il testo "testfunc".  
   
-2.  The parser calls <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A>.  
+2.  Le chiamate di parser <xref:Microsoft.VisualStudio.Package.AuthoringSink.StartParameters%2A>.  
   
-3.  The parser calls <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A>.  
+3.  Le chiamate di parser <xref:Microsoft.VisualStudio.Package.AuthoringSink.NextParameter%2A>.  
   
-4.  The parser calls <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A>.
+4.  Le chiamate di parser <xref:Microsoft.VisualStudio.Package.AuthoringSink.EndParameters%2A>.

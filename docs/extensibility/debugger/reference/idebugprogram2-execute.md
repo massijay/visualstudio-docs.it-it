@@ -1,70 +1,53 @@
 ---
-title: IDebugProgram2::Execute | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugProgram2::Execute
-helpviewer_keywords:
-- IDebugProgram2::Execute
+title: "IDebugProgram2::Execute | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugProgram2::Execute"
+helpviewer_keywords: 
+  - "IDebugProgram2::Execute"
 ms.assetid: f7205ce8-0ac6-4fcd-b6ec-b720b4fcaccf
 caps.latest.revision: 9
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: e9f7b21134d6c71d18b4ebd567136aa8af5fd9f8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 9
 ---
-# <a name="idebugprogram2execute"></a>IDebugProgram2::Execute
-Continues running this program from a stopped state. Any previous execution state (such as a step) is cleared, and the program starts executing again.  
+# IDebugProgram2::Execute
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Continua a eseguire il programma da uno stato interrotto.  Tutto lo stato precedente di esecuzione \(ad esempio un passaggio\) viene cancellato e l'avvio del programma che esegue nuovamente.  
   
 > [!NOTE]
->  This method is deprecated. Use the [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md) method instead.  
+>  Il metodo è deprecato.  In alternativa, utilizzare il metodo [Esegui](../../../extensibility/debugger/reference/idebugprocess3-execute.md).  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
+```cpp#  
 HRESULT Execute(  
-   void  
+   void  
 );  
 ```  
   
-```csharp  
+```c#  
 int Execute();  
 ```  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- When the user starts execution from a stopped state in some other program's thread, this method is called on this program. This method is also called when the user selects the **Start** command from the **Debug** menu in the IDE. The implementation of this method may be as simple as calling the [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md) method on the current thread in the program.  
+## Note  
+ Quando l'utente avvia l'esecuzione da uno stato arrestato in thread di un altro programma, questo metodo viene chiamato in questo programma.  Questo metodo viene chiamato quando l'utente seleziona il comando di **Avvia** dal menu Debug dell'IDE.  L'implementazione di questo metodo può essere sufficiente chiamando [Riprendi](../../../extensibility/debugger/reference/idebugthread2-resume.md) il metodo sul thread corrente nel programma.  
   
 > [!WARNING]
->  Do not send a stopping event or an immediate (synchronous) event to [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) while handling this call; otherwise the debugger may hang.  
+>  Non inviare un evento bloccato o un evento \(sincrono\) immediato su [Evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) come gestire questa chiamata, in caso contrario il debugger può bloccare.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
- [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)
+ [Evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
+ [Riprendi](../../../extensibility/debugger/reference/idebugthread2-resume.md)

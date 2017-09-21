@@ -1,5 +1,5 @@
 ---
-title: 'How to: Specify Build Events (C#) | Microsoft Docs'
+title: 'Procedura: Specificare gli eventi di compilazione (C#) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,51 +33,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: cca2a707627c36221a654cf8a06730383492f371
-ms.openlocfilehash: 7c99b10f4bb238e8aca1b96f6990307ee5eec640
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 3058bf7c6714f18291353224a192218c1b59a480
 ms.contentlocale: it-it
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 05/13/2017
 
 ---
-# <a name="how-to-specify-build-events-c"></a>How to: Specify Build Events (C#)
-Use build events to specify commands that run before the build starts or after the build finishes. Build events are executed only if the build successfully reaches those points in the build process.  
+# <a name="how-to-specify-build-events-c"></a>Procedura: specificare eventi di compilazione (C#)
+È possibile usare gli eventi di compilazione per specificare i comandi da eseguire prima dell'inizio o al termine della compilazione. Gli eventi di compilazione vengono eseguiti solo se la compilazione raggiunge correttamente i punti corrispondenti nel processo di compilazione.  
   
- When a project is built, pre-build events are added to a file that is named PreBuildEvent.bat and post-build events are added to a file that is named PostBuildEvent.bat. If you want to ensure error checking, add your own error-checking commands to the build steps.  
+ Quando un progetto viene compilato, gli eventi di pre-compilazione vengono aggiunti a un file denominato PreBuildEvent.bat mentre gli eventi di post-compilazione vengono aggiunti a un file denominato PostBuildEvent.bat. Per garantire il controllo degli errori, aggiungere comandi di controllo degli errori personalizzati alle istruzioni di compilazione.  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## <a name="how-to-specify-pre-build-and-post-build-events"></a>How to Specify Pre-Build and Post-Build Events  
+## <a name="how-to-specify-pre-build-and-post-build-events"></a>Come specificare eventi di pre e post-compilazione  
   
-#### <a name="to-specify-a-build-event"></a>To specify a build event  
+#### <a name="to-specify-a-build-event"></a>Per specificare un evento di compilazione  
   
-1.  In **Solution Explorer**, select the project for which you want to specify the build event.  
+1.  In **Esplora soluzioni** selezionare il progetto per il quale si vuole specificare l'evento di compilazione.  
   
-2.  On the **Project** menu, click **Properties**.  
+2.  Scegliere **Proprietà** dal menu **Progetto**.  
   
-3.  Select the **Build Events** tab.  
+3.  Selezionare la scheda **Eventi di compilazione**.  
   
-4.  In the **Pre-build event command line** box, specify the syntax of the build event.  
-  
-    > [!NOTE]
-    >  Pre-build events do not run if the project is up to date and no build is triggered.  
-  
-5.  In the **Post-build event command line** box, specify the syntax of the build event.  
+4.  Nella casella **Riga di comando eventi pre-compilazione** specificare la sintassi per l'evento di compilazione.  
   
     > [!NOTE]
-    >  Add a `call` statement before all post-build commands that run .bat files. For example, `call C:\MyFile.bat` or `call C:\MyFile.bat call C:\MyFile2.bat`.  
+    >  Gli eventi di pre-compilazione non vengono eseguiti se il progetto è aggiornato e non viene attivata alcuna compilazione.  
   
-6.  In the **Run the post-build event** box, specify under what conditions to run the post-build event.  
+5.  Nella casella **Riga di comando eventi post-compilazione** specificare la sintassi per l'evento di compilazione.  
   
     > [!NOTE]
-    >  To add lengthy syntax, or to select any build macros from the [Pre-build Event/Post-build Event Command Line Dialog Box](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md), click the Ellipsis button (**...**) to display an edit box.  
+    >  Aggiungere un'istruzione `call` prima di tutti gli eventi di compilazione che eseguono file con estensione BAT. Ad esempio, `call C:\MyFile.bat` o `call C:\MyFile.bat call C:\MyFile2.bat`.  
   
-     The build event syntax can include any command that is valid at a command prompt or in a .bat file. The name of a batch file should be preceded by `call` to ensure that all subsequent commands are executed.  
+6.  Nella casella **Esegui evento post-compilazione** specificare con quali condizioni eseguire l'evento di post-compilazione.  
   
-     **Note** If your pre-build or post-build event does not complete successfully, you can terminate the build by having your event action exit with a code other than zero (0), which indicates a successful action.  
+    > [!NOTE]
+    >  Per aggiungere una sintassi più lunga o per selezionare macro di compilazione dalla [finestra di dialogo Riga di comando eventi pre-compilazione/post-compilazione](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md), fare clic sul pulsante con i puntini di sospensione (**...** ) per visualizzare una casella di modifica.  
   
-## <a name="example-how-to-change-manifest-information-by-using-a-post-build-event"></a>Example: How to Change Manifest Information by Using a Post-Build Event  
- The following procedure shows how to set the minimum operating system version in the application manifest by using an .exe command that is called from a post-build event (the .exe.manifest file in the project directory). The minimum operating system version is a four-part number such as 4.10.0.0. To do this, the command will change the `<dependentOS>` section of the manifest:  
+     La sintassi dell'evento di compilazione può includere qualsiasi comando che sia valido in un prompt dei comandi o in un file bat. Perché vengano sicuramente eseguiti tutti i comandi successivi, il nome di un file batch deve essere preceduto da `call`.  
+  
+     **Nota** Se l'evento di pre-compilazione o di post-compilazione non viene completato correttamente, è possibile terminare la compilazione forzando l'uscita dell'azione dell'evento con un codice diverso da zero (0), che indica un esito positivo.  
+  
+## <a name="example-how-to-change-manifest-information-by-using-a-post-build-event"></a>Esempio: come modificare le informazioni di un manifesto usando un evento di post-compilazione  
+ La procedura seguente illustra come impostare la versione minima del sistema operativo nel manifesto dell'applicazione usando un comando exe chiamato da un evento di post-compilazione (il file exe.manifest nella directory del progetto). La versione minima del sistema operativo è un numero composto da quattro parti, ad esempio 4.10.0.0. A tale scopo, il comando modificherà la sezione `<dependentOS>` del manifesto:  
   
 ```  
 <dependentOS>  
@@ -87,19 +87,19 @@ Use build events to specify commands that run before the build starts or after t
 </dependentOS>  
 ```  
   
-#### <a name="to-create-an-exe-command-to-change-the-application-manifest"></a>To create an .exe command to change the application manifest  
+#### <a name="to-create-an-exe-command-to-change-the-application-manifest"></a>Per creare un comando exe per modificare il manifesto dell'applicazione  
   
-1.  Create a console application for the command. From the **File** menu, point to **New**, and then click **Project**.  
+1.  Creare un'applicazione console per il comando. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.  
   
-2.  In the **New Project** dialog box, expand **Visual C#**, click **Windows**, and then click the **Console Application** template. Name the project `ChangeOSVersionCS`.  
+2.  Nella finestra di dialogo **Nuovo progetto** espandere **Visual C#**, fare clic su **Windows** e quindi scegliere il modello **Applicazione console**. Denominare il progetto `ChangeOSVersionCS`.  
   
-3.  In Program.cs, add the following line to the other `using` statements at the top of the file:  
+3.  In Program.cs aggiungere la riga seguente alle altre istruzioni `using` all'inizio del file:  
   
     ```  
     using System.Xml;  
     ```  
   
-4.  In the `ChangeOSVersionCS` namespace, replace the `Program` class implementation with the following code:  
+4.  Nello spazio dei nomi `ChangeOSVersionCS` sostituire l'implementazione della classe `Program` con il codice seguente:  
   
     ```  
     class Program  
@@ -151,56 +151,56 @@ Use build events to specify commands that run before the build starts or after t
     }  
     ```  
   
-     The command takes two arguments: the path of the application manifest (that is, the folder in which the build process creates the manifest, typically Projectname.publish), and the new operating system version.  
+     Il comando accetta due argomenti: il percorso del manifesto dell'applicazione, ovvero la cartella in cui il processo di compilazione crea il manifesto (in genere Projectname.publish), e la versione del nuovo sistema operativo.  
   
-5.  Build the project. On the **Build** menu, click **Build Solution**.  
+5.  Compilare il progetto. Scegliere **Compila soluzione** dal menu **Compila**.  
   
-6.  Copy the .exe file to a directory such as `C:\TEMP\ChangeOSVersionVB.exe`.  
+6.  Copiare il file EXE in una directory, ad esempio `C:\TEMP\ChangeOSVersionVB.exe`.  
   
- Next, invoke this command in a post-build event to modify the application manifest.  
+ Richiamare quindi questo comando in un evento di post-compilazione per modificare il manifesto dell'applicazione.  
   
-#### <a name="to-invoke-a-post-build-event-to-modify-the-application-manifest"></a>To invoke a post-build event to modify the application manifest  
+#### <a name="to-invoke-a-post-build-event-to-modify-the-application-manifest"></a>Per richiamare un evento di post-compilazione per modificare il manifesto dell'applicazione  
   
-1.  Create a Windows application for the project to be published. From the **File** menu, point to **New**, and then click **Project**.  
+1.  Creare un'applicazione Windows per il progetto da pubblicare. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.  
   
-2.  In the **New Project** dialog box, expand **Visual C#**, click **Windows Classic Desktop**, and then click the **Windows Forms App** template. Name the project `CSWinApp`.  
+2.  Nella finestra di dialogo **Nuovo progetto** espandere **Visual C#**, fare clic su **Windows** e quindi fare clic sul modello **Applicazione Windows Form**. Denominare il progetto `CSWinApp`.  
   
-3.  With the project selected in **Solution Explorer**, on the **Project** menu, click **Properties**.  
+3.  Con il progetto selezionato in **Esplora soluzioni**, scegliere **Proprietà** dal menu **Progetto**.  
   
-4.  In the Project Designer, locate the **Publish** page and set **Publishing location** to `C:\TEMP\`.  
+4.  In Creazione progetti, individuare la pagina **Pubblica** e impostare **Posizione di pubblicazione** su `C:\TEMP\`.  
   
-5.  Publish the project by clicking **Publish Now**.  
+5.  Pubblicare il progetto facendo clic su **Pubblica**.  
   
-     The manifest file will be built and put in `C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe.manifest`. To view the manifest, right-click the file, click **Open with**, select **Select the program from a list**, and then click **Notepad**.  
+     Il file manifesto verrà compilato e salvato in `C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe.manifest`. Per visualizzare il manifesto, fare clic con il pulsante destro del mouse sul file, scegliere **Apri con**, selezionare **Seleziona il programma da un elenco** e quindi fare clic su **Blocco note**.  
   
-     Search in the file for the `<osVersionInfo>` element. For example, the version might be:  
+     Ricercare nel file l'elemento `<osVersionInfo>`. Ad esempio, la versione potrebbe essere:  
   
     ```  
     <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />  
     ```  
   
-6.  In the Project Designer, click the **Build Events** tab and click the **Edit Post-build** button.  
+6.  In Creazione progetti fare clic sulla scheda **Eventi di compilazione** e fare clic sul pulsante **Modifica post-compilazione**.  
   
-7.  In the **Post-build Event Command Line** box, type the following command:  
+7.  Nella casella **Riga di comando eventi post-compilazione** digitare il comando seguente:  
   
      `C:\TEMP\ChangeOSVersionCS.exe "$(TargetPath).manifest" 5.1.2600.0`  
   
-     When you build the project, this command will change the minimum operating system version in the application manifest to 5.1.2600.0.  
+     Quando si compila il progetto, questo comando imposterà la versione minima del sistema operativo nel manifesto dell'applicazione su 5.1.2600.0.  
   
-     Because the `$(TargetPath)` macro expresses the full path for the executable being created,  the `$(TargetPath)`.manifest will specify the application manifest created in the bin directory. Publishing will copy this manifest to the publishing location that you set earlier.  
+     Poiché la macro `$(TargetPath)` esprime il percorso completo del file eseguibile in corso di creazione, il file `$(TargetPath)`.manifest specificherà il manifesto dell'applicazione creato nella directory bin. La pubblicazione copierà questo manifesto nel percorso di pubblicazione impostato in precedenza.  
   
-8.  Publish the project again. Go to the **Publish** page and click **Publish Now**.  
+8.  Pubblicare nuovamente il progetto. Passare alla pagina **Pubblica** e fare clic su **Pubblica**.  
   
-     View the manifest again. To view the manifest, open the publish directory, right-click the file, click **Open with**, select **Select the program from a list**, and then click **Notepad**.  
+     Visualizzare nuovamente il manifesto. Per visualizzare il manifesto, aprire la directory di pubblicazione, fare clic con il pulsante destro del mouse sul file, scegliere **Apri con**, selezionare **Seleziona il programma da un elenco** e quindi fare clic su **Blocco note**.  
   
-     The version should now read:  
+     Adesso la versione dovrebbe essere:  
   
     ```  
     <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />  
     ```  
   
-## <a name="see-also"></a>See Also  
- [Build Events Page, Project Designer (C#)](../ide/reference/build-events-page-project-designer-csharp.md)   
- [Pre-build Event/Post-build Event Command Line Dialog Box](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)   
- [How to: Specify Build Events (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)   
- [Compiling and Building](../ide/compiling-and-building-in-visual-studio.md)
+## <a name="see-also"></a>Vedere anche  
+ [Pagina Eventi di compilazione, Creazione progetti (C#)](../ide/reference/build-events-page-project-designer-csharp.md)   
+ [Finestra di dialogo Riga di comando eventi pre-compilazione/post-compilazione](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)   
+ [Procedura: Specificare gli eventi di compilazione (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)   
+ [Compiling and Building](../ide/compiling-and-building-in-visual-studio.md) (Compilazione e creazione)

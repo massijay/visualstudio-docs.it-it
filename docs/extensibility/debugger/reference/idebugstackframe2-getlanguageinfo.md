@@ -1,67 +1,50 @@
 ---
-title: IDebugStackFrame2::GetLanguageInfo | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugStackFrame2::GetLanguageInfo
-helpviewer_keywords:
-- IDebugStackFrame2::GetLanguageInfo
+title: "IDebugStackFrame2::GetLanguageInfo | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugStackFrame2::GetLanguageInfo"
+helpviewer_keywords: 
+  - "IDebugStackFrame2::GetLanguageInfo"
 ms.assetid: 0e12fd92-f155-46a7-8272-cda279388cfb
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 460979d28bfc9244726ea3345c8a435de87a6c29
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugstackframe2getlanguageinfo"></a>IDebugStackFrame2::GetLanguageInfo
-Gets the language associated with this stack frame.  
+# IDebugStackFrame2::GetLanguageInfo
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Ottiene il linguaggio associato a questo stack frame.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-HRESULT GetLanguageInfo (   
-   BSTR* pbstrLanguage,  
-   GUID* pguidLanguage  
+```cpp#  
+HRESULT GetLanguageInfo (   
+   BSTR* pbstrLanguage,  
+   GUID* pguidLanguage  
 );  
 ```  
   
-```csharp  
-int GetLanguageInfo (   
-   ref string pbstrLanguage,  
-   ref Guid   pguidLanguage  
+```c#  
+int GetLanguageInfo (   
+   ref string pbstrLanguage,  
+   ref Guid   pguidLanguage  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `pbstrLanguage`  
- [out] Returns the name of the language that implements the method associated with this stack frame.  
+ \[out\]  Restituisce il nome del linguaggio che implementa il metodo associato a questo stack frame.  
   
  `pguidLanguage`  
- [out] Returns the `GUID` of the language. For the [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] languages, for example, the following can be returned:  
+ \[out\]  Restituisce `GUID` del linguaggio.  Per i linguaggi di [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] , ad esempio, di seguito può essere restituito:  
   
 -   `guidVBScriptLang`  
   
@@ -75,8 +58,8 @@ int GetLanguageInfo (
   
 -   `guidScriptLang`  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Step 8: Write Code for the Show a Picture Button Event Handler | Microsoft Docs'
+title: 'Passaggio 8: scrivere il codice per il gestore dell&quot;evento del pulsante Mostra immagine | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,95 +27,95 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: eb5c9550fd29b0e98bf63a7240737da4f13f3249
-ms.openlocfilehash: 52bd309ce320c3fbce265a3906a2606a3f10157d
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
+ms.openlocfilehash: 7e062ca977a85416d2e0bf0b7c2cef46b8f93cce
 ms.contentlocale: it-it
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 05/13/2017
 
 ---
-# <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>Step 8: Write Code for the Show a Picture Button Event Handler
-In this step, you make the **Show a picture** button work like this:  
+# <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>Passaggio 8: scrivere il codice per il gestore dell'evento del pulsante Visualizza immagine
+In questo passaggio si imposta il funzionamento del pulsante **Mostra immagine** nel modo seguente:  
   
--   When a user chooses that button, the program opens an **Open File** dialog box.  
+-   Quando un utente sceglie il pulsante, il programma visualizza una finestra di dialogo **Apri file**.  
   
--   If a user opens a picture file, the program shows that picture in the PictureBox.  
+-   Se l'utente apre un file di immagine, tale immagine viene visualizzata nel controllo PictureBox.  
   
- The IDE has a powerful tool called IntelliSense that helps you write code. As you enter code, the IDE opens a box with suggested completions for partial words that you enter. It tries to determine what you want to do next, and automatically jumps to the last item you choose from the list. You can use the up or down arrows to move in the list, or you can keep typing letters to narrow the choices. When you see the choice you want, choose the TAB key to select it. Or, you can ignore the suggestions, if not needed.  
+ Nell'IDE è disponibile uno strumento potente denominato IntelliSense che agevola la scrittura del codice. A mano a mano che si immette il codice, l'IDE apre una casella con completamenti suggeriti per le parole parziali immesse. Il programma tenta di determinare l'operazione successiva che l'utente desidera eseguire e passa automaticamente all'ultimo elemento che si sceglie dall'elenco. È possibile utilizzare le frecce su o giù per spostarsi nell'elenco oppure continuare a digitare lettere per limitare le scelte. Quando viene visualizzata la scelta desiderata, premere TAB per selezionarla. In alternativa, è possibile ignorare i suggerimenti, se non si ritengono necessari.  
   
- ![link to video](../data-tools/media/playvideo.gif "PlayVideo")For a video version of this topic, see [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 4](http://go.microsoft.com/fwlink/?LinkId=205215) or [Tutorial 1: Create a Picture Viewer in C# - Video 4](http://go.microsoft.com/fwlink/?LinkId=205203). These videos use an earlier version of Visual Studio, so there are slight differences in some menu commands and other user interface elements. However, the concepts and procedures work similarly in the current version of Visual Studio.  
+ ![link to video](~/data-tools/media/playvideo.gif "PlayVideo")Per una versione video di questo argomento, vedere [Tutorial 1: Create a Picture Viewer in Visual Basic - Video 4](http://go.microsoft.com/fwlink/?LinkId=205215) (Esercitazione 1: Creare un visualizzatore di immagini in Visual Basic) o [Tutorial 1: Create a Picture Viewer in C# - Video 4](http://go.microsoft.com/fwlink/?LinkId=205203) (Esercitazione 1: Creare un visualizzatore di immagini in C# - Video 4). In questi video viene usata una versione precedente di Visual Studio, pertanto vi sono piccole differenze in alcuni comandi di menu e altri elementi dell'interfaccia utente. Tuttavia, i concetti e le procedure funzionano in modo analogo nella versione corrente di Visual Studio.  
   
-### <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>To write code for the Show a picture button event handler  
+### <a name="to-write-code-for-the-show-a-picture-button-event-handler"></a>Per scrivere il codice per il gestore dell'evento del pulsante Visualizza immagine  
   
-1.  Go to Windows Forms Designer and double-click the **Show a picture** button. The IDE immediately goes to the code designer and moves your cursor so it's inside the `showButton_Click()` method that you added previously.  
+1.  Passare a Progettazione Windows Form e fare doppio clic sul pulsante **Mostra immagine**. L'IDE passa immediatamente alla finestra di progettazione del codice e sposta il cursore all'interno del metodo `showButton_Click()` aggiunto precedentemente.  
   
-2.  Type an `i` on the empty line between the two braces { }. (In Visual Basic, type on the empty line between Private Sub... and End Sub.) An **IntelliSense** window opens, as shown in the following picture.  
+2.  Digitare una `i` nella riga vuota tra le due parentesi graffe { }. In Visual Basic digitare nella riga vuota tra Private Sub... ed End Sub. Viene visualizzata una finestra di **IntelliSense** come illustrato nell'immagine seguente.  
   
-     ![IntelliSense with Visual C&#35; code](../ide/media/express_ifintellisense.png "Express_IfIntellisense")  
-IntelliSense with Visual C# code  
+     ![IntelliSense con codice Visual C&#35;](../ide/media/express_ifintellisense.png "Express_IfIntellisense")  
+IntelliSense con codice Visual C#  
   
-3.  The **IntelliSense** window should be highlighting the word **if**. (If not, enter a lowercase `f`, and it will.) Notice how a little *tooltip* box next to the **IntelliSense** window appears with the description, **Code snippet for if statement**. (In Visual Basic, the tooltip also states that this is a snippet, but with slightly different wording.) You want to use that snippet, so choose the TAB key to insert **if** into your code. Then choose the TAB key again to use the **if** snippet. (If you chose somewhere else and your **IntelliSense** window disappeared, backspace over the **i** and retype it, and the **IntelliSense** window opens again.)  
+3.  Nella finestra di **IntelliSense** dovrebbe essere evidenziata la parola **if**. In caso contrario, immettere una `f` minuscola per visualizzarla. Si noti che viene visualizzato un piccolo *tooltip* accanto alla finestra di **IntelliSense** con la descrizione **Frammento di codice per l'istruzione if**. Anche in Visual Basic la descrizione comando dichiara che si tratta di un frammento, ma con una formulazione leggermente diversa. Poiché si vuole usare il frammento di codice, premere TAB per inserire **if** nel codice. Premere quindi di nuovo TAB per usare il frammento **if**. Se si è fatto clic in un altro punto e la finestra di **IntelliSense** non è più visualizzata, tornare alla **i** e ridigitarla. Verrà nuovamente visualizzata la finestra di **IntelliSense**.  
   
-     ![Visual C&#35; code](../ide/media/express_highlighttrue.png "Express_HighlightTrue")  
-Visual C# code  
+     ![Codice Visual C&#35;](~/ide/media/express_highlighttrue.png "Express_HighlightTrue")  
+Codice Visual C#  
   
-4.  Next, you use IntelliSense to enter more code to open an **Open File** dialog box. If the user chose the **OK** button, the PictureBox loads the file that the user selected. The following steps show how to enter the code, and although it's numerous steps, it's just a few keystrokes:  
+4.  Viene quindi usato IntelliSense per immettere altro codice per aprire una finestra **Apri file**. Se l'utente ha fatto clic sul pulsante **OK**, il controllo PictureBox carica il file selezionato dall'utente. Nei passaggi seguenti viene illustrato come immettere il codice. Sebbene i passaggi siano numerosi, si tratta solo di poche sequenze di tasti:  
   
-    1.  Start with the selected text **true** in the snippet. Type `op` to overwrite it. (In Visual Basic, you start with an initial cap, so type `Op`.)  
+    1.  Iniziare con il testo **true** selezionato nel frammento. Digitare `op` per sovrascriverlo. In Visual Basic l'iniziale è maiuscola, pertanto digitare `Op`.  
   
-    2.  The **IntelliSense** window opens and displays **openFileDialog1**. Choose the TAB key to select it. (In Visual Basic, it starts with an initial cap, so you see **OpenFileDialog1**. Ensure that **OpenFileDialog1** is selected.)  
+    2.  Viene visualizzata la finestra di **IntelliSense** con **openFileDialog1**. Premere TAB per selezionarlo. In Visual Basic l'iniziale è maiuscola, pertanto viene visualizzato **OpenFileDialog1**. Assicurarsi che **OpenFileDialog1** sia selezionato.  
   
-         To learn more about `OpenFileDialog`, see [OpenFileDialog](http://msdn.microsoft.com/library/system.windows.forms.openfiledialog.aspx).  
+         Per altre informazioni su `OpenFileDialog`, vedere [OpenFileDialog](http://msdn.microsoft.com/library/system.windows.forms.openfiledialog.aspx).  
   
-    3.  Type a period (`.`) (Many programmers call this a dot.) Because you typed a dot right after **openFileDialog1**, an **IntelliSense** window opens, filled in with all of the **OpenFileDialog** component's properties and methods. These are the same properties that appear in the **Properties** window when you choose it in Windows Forms Designer. You can also choose methods that tell the component to do things (like open a dialog box).  
-  
-        > [!NOTE]
-        >  The **IntelliSense** window can show you both properties and methods. To determine what is being shown, look at the icon on the left side of each item in the **IntelliSense** window. You see a picture of a block next to each method, and a picture of a wrench (or spanner) next to each property. There's also a lightning bolt icon next to each event. These pictures display as follows.  
-  
-         ![Method icon](../ide/media/express_iconmethod.png "Express_IconMethod")  
-Method icon  
-  
-         ![Property icon](../ide/media/express_iconproperty.png "Express_IconProperty")  
-Property icon  
-  
-         ![Event icon](../ide/media/express_iconevent.png "Express_IconEvent")  
-Event icon  
-  
-    4.  Start to type `ShowDialog` (capitalization is unimportant to IntelliSense). The `ShowDialog()` method will show the **Open File** dialog box. After the window has highlighted **ShowDialog**, choose the TAB key. You can also highlight "ShowDialog" and choose the F1 key to get help for it.  
-  
-         To learn more about the `ShowDialog()` method, see [ShowDialog Method](http://msdn.microsoft.com/library/c7ykbedk.aspx).  
-  
-    5.  When you use a method on a control or a component (referred to as *calling a method*), you need to add parentheses. So enter opening and closing parentheses immediately after the "g" in `ShowDialog`: `()` It should now look like "openFileDialog1.ShowDialog()".  
+    3.  Digitare un punto (`.`). Poiché è stato digitato un punto subito dopo **openFileDialog1**, viene visualizzata una finestra di **IntelliSense** contenente tutte le proprietà e i metodi del componente **OpenFileDialog**. Si tratta delle stesse proprietà visualizzate nel finestra **Proprietà** quando si sceglie la finestra in Progettazione Windows Form. È inoltre possibile scegliere metodi che indicano al componente di eseguire operazioni (ad esempio, aprire una finestra di dialogo).  
   
         > [!NOTE]
-        >  Methods are an important part of any program, and this tutorial has shown several ways to use methods. You can call a component's method to tell it to do something, like how you called the **OpenFileDialog** component's `ShowDialog()` method. You can create your own methods to make your program do things, like the one you're building now, called the `showButton_Click()` method, which opens a dialog box and a picture when a user chooses a button.  
+        >  Nella finestra di **IntelliSense** possono essere visualizzati sia proprietà che metodi. Per determinare gli elementi visualizzati, osservare l'icona a sinistra di ogni elemento nella finestra **IntelliSense**. È visualizzata l'immagine di un blocco accanto a ogni metodo e l'immagine di una chiave inglese (o di una chiave fissa) accanto a ogni proprietà. È anche visualizzata un'icona a forma di saetta accanto a ogni evento. Queste immagini vengono visualizzate nel modo seguente.  
   
-    6.  For Visual C#, add a space, and then add two equal signs (`==`). For Visual Basic, add a space, and then use a single equal sign (`=`). (Visual C# and Visual Basic use different equality operators.)  
+         ![Icona del metodo](~/ide/media/express_iconmethod.png "Express_IconMethod")  
+Icona del metodo  
   
-    7.  Add another space. As soon as you do, another **IntelliSense** window opens. Start to type `DialogResult` and choose the TAB key to add it.  
+         ![Icona della proprietà](~/ide/media/express_iconproperty.png "Express_IconProperty")  
+Icona della proprietà  
+  
+         ![Icona dell'evento](~/ide/media/express_iconevent.png "Express_IconEvent")  
+Icona dell'evento  
+  
+    4.  Iniziare a digitare `ShowDialog` (l'uso di maiuscole non viene considerato in IntelliSense). Il metodo `ShowDialog()` visualizzerà la finestra di dialogo **Apri file**. Dopo che nella finestra è stato evidenziato **ShowDialog**, premere TAB. È anche possibile evidenziare "ShowDialog" e premere il tasto F1 per ottenere informazioni.  
+  
+         Per altre informazioni sul metodo `ShowDialog()`, vedere [Metodo ShowDialog](http://msdn.microsoft.com/library/c7ykbedk.aspx).  
+  
+    5.  Quando si usa un metodo in un controllo o un componente, ovvero si effettua una *chiamata a un metodo*, è necessario aggiungere le parentesi. Immettere quindi le parentesi di apertura e chiusura immediatamente dopo la "g" di `ShowDialog`: `()` Viene visualizzato "openFileDialog1.ShowDialog()".  
   
         > [!NOTE]
-        >  When you write code to call a method, sometimes it returns a value. In this case, the **OpenFileDialog** component's `ShowDialog()` method returns a DialogResult value. DialogResult is a special value that tells you what happened in a dialog box. An **OpenFileDialog** component can result in the user choosing **OK** or **Cancel**, so its `ShowDialog()` method returns either DialogResult.OK or DialogResult.Cancel.  
+        >  I metodi sono una parte importante di qualsiasi programma e in questa esercitazione ne sono stati illustrate diverse modalità di utilizzo. È possibile chiamare un metodo di un componente per indicare l'esecuzione di un'operazione, come è stato fatto quando si è chiamato il metodo `ShowDialog()` del componente **OpenFileDialog**. È possibile creare metodi personalizzati per fare eseguire operazioni al programma, come quello che si sta compilando, denominato metodo `showButton_Click()`, che apre una finestra di dialogo e un'immagine quando l'utente sceglie un pulsante.  
   
-    8.  Type a dot to open the DialogResult value **IntelliSense** window. Enter the letter `O` and choose the TAB key to insert **OK**.  
+    6.  Per Visual C#, aggiungere uno spazio e quindi aggiungere due segni di uguale (`==`). Per Visual Basic, aggiungere uno spazio e quindi usare un solo segno di uguale (`=`). Visual C# e Visual Basic utilizzano operatori di uguaglianza diversi.  
   
-         To learn more about `DialogResult`, see [DialogResult](http://msdn.microsoft.com/library/system.windows.forms.dialogresult.aspx).  
+    7.  Aggiungere un altro spazio. Viene immediatamente visualizzata un'altra finestra di **IntelliSense**. Iniziare a digitare `DialogResult` e premere TAB per aggiungerlo.  
   
         > [!NOTE]
-        >  The first line of code should be complete. For Visual C#, it should be the following.  
+        >  Quando si scrive codice per chiamare un metodo, a volte viene restituito un valore. In questo caso il metodo `ShowDialog()` del componente **OpenFileDialog** restituisce un valore DialogResult. DialogResult è un valore speciale che fornisce informazioni sulle operazioni eseguite in una finestra di dialogo. Un componente **OpenFileDialog** può far sì che l'utente scelga **OK** o **Annulla**, pertanto il relativo metodo `ShowDialog()` restituisce DialogResult.OK o DialogResult.Cancel.  
+  
+    8.  Digitare un punto per aprire la finestra di **IntelliSense** del valore DialogResult. Immettere la lettera `O` e premere TAB per inserire **OK**.  
+  
+         Per altre informazioni su `DialogResult`, vedere [DialogResult](http://msdn.microsoft.com/library/system.windows.forms.dialogresult.aspx).  
+  
+        > [!NOTE]
+        >  La prima riga di codice è stata completata. Per Visual C#, il codice è analogo al seguente.  
         >   
         >  `if (openFileDialog1.ShowDialog() == DialogResult.OK)`  
         >   
-        >  For Visual Basic, it should be the following.  
+        >  Per Visual Basic, il codice è analogo al seguente.  
         >   
         >  `If OpenFileDialog1.ShowDialog() = DialogResult.OK Then`  
   
-    9. Now add one more line of code. You can type it (or copy and paste it), but consider using IntelliSense to add it. The more familiar you are with IntelliSense, the more quickly you can write your own code. Your final `showButton_Click()` method looks like the following. (Choose the **VB** tab to view the Visual Basic version of the code.)  
+    9. Aggiungere ora l'ultima riga di codice. È possibile digitarlo (o copiarlo e incollarlo), ma è consigliabile utilizzare IntelliSense per aggiungerlo. Più si ha dimestichezza con IntelliSense, più rapidamente si scriverà il codice. L'aspetto del metodo `showButton_Click()` finale sarà simile al seguente. Scegliere la scheda **VB** per visualizzare la versione Visual Basic del codice.  
   
-         [!code-csharp[VbExpressTutorial1Step8#1](../ide/codesnippet/CSharp/step-8-write-code-for-the-show-a-picture-button-event-handler_1.cs)]   [!code-vb[VbExpressTutorial1Step8#1](../ide/codesnippet/VisualBasic/step-8-write-code-for-the-show-a-picture-button-event-handler_1.vb)]  
+         [!code-cs[VbExpressTutorial1Step8#1](../ide/codesnippet/CSharp/step-8-write-code-for-the-show-a-picture-button-event-handler_1.cs)]   [!code-vb[VbExpressTutorial1Step8#1](../ide/codesnippet/VisualBasic/step-8-write-code-for-the-show-a-picture-button-event-handler_1.vb)]  
   
-### <a name="to-continue-or-review"></a>To continue or review  
+### <a name="to-continue-or-review"></a>Per continuare o rivedere l'esercitazione  
   
--   To go to the next tutorial step, see [Step 9: Review, Comment, and Test Your Code](../ide/step-9-review-comment-and-test-your-code.md).  
+-   Per andare al passaggio successivo dell'esercitazione, vedere [Passaggio 9: rivedere, commentare e testare il codice](../ide/step-9-review-comment-and-test-your-code.md).  
   
--   To return to the previous tutorial step, see [Step 7: Add Dialog Components to Your Form](../ide/step-7-add-dialog-components-to-your-form.md).
+-   Per tornare al passaggio precedente dell'esercitazione, vedere [Passaggio 7: aggiungere componenti di finestra di dialogo al form](../ide/step-7-add-dialog-components-to-your-form.md).

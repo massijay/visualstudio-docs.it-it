@@ -1,48 +1,31 @@
 ---
-title: MODULE_SYMBOL_SEARCH_INFO | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- MODULE_SYMBOL_SEARCH_INFO
-helpviewer_keywords:
-- MODULE_SYMBOL_SEARCH_INFO structure
+title: "MODULE_SYMBOL_SEARCH_INFO | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "MODULE_SYMBOL_SEARCH_INFO"
+helpviewer_keywords: 
+  - "Struttura MODULE_SYMBOL_SEARCH_INFO"
 ms.assetid: 432aff03-08a5-4c5a-b2d5-e212090fc70a
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 21a413a3e2d17d77fd83d5109587a96f323a0511
-ms.openlocfilehash: fedabeb205fb57d2265cab81a7699c30c36b99bb
-ms.contentlocale: it-it
-ms.lasthandoff: 08/30/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="modulesymbolsearchinfo"></a>MODULE_SYMBOL_SEARCH_INFO
-Contains status information about symbol search paths that have been searched.  
+# MODULE_SYMBOL_SEARCH_INFO
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Contiene informazioni sui percorsi di ricerca di simboli che alcuno.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintassi  
   
-```cpp  
+```cpp#  
 typedef struct _tagSYMBOL_SEARCH_INFO  
 {  
    SYMBOL_SEARCH_INFO_FIELDS dwValidFields;  
@@ -50,30 +33,30 @@ typedef struct _tagSYMBOL_SEARCH_INFO
 } MODULE_SYMBOL_SEARCH_INFO;  
 ```  
   
-```csharp  
+```c#  
 public struct MODULE_SYMBOL_SEARCH_INFO {  
    public uint   dwValidFields;  
    public string bstrVerboseSearchInfo;  
 }  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### <a name="parameters"></a>Parametri  
  `dwValidFields`  
- A combination of flags from the [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) enumeration specifying the kind of search information described in this structure.  
+ Una combinazione di flag dal [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) enumerazione che specifica il tipo di informazioni di ricerca descritte in questa struttura.  
   
  `bstrVerboseSearchInfo`  
- Search path and results concatenated into a single string.  
+ Percorso di ricerca e risultati concatenati in una singola stringa.  
   
-## <a name="remarks"></a>Remarks  
- This structure is returned from a call to the [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) method.  
+## <a name="remarks"></a>Note  
+ Questa struttura viene restituita da una chiamata al [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) metodo.  
   
- If the `bstrVerboseSearchInfo` field is not empty, then it contains a list of paths searched and the results of that search. The list is formatted with a path, followed by an ellipsis ("..."), followed by the result. If there is more than one path result pair, then each pair is separated by a "\r\n" (carriage-return/linefeed) pair. The pattern looks like this:  
+ Se il `bstrVerboseSearchInfo` campo non è vuoto, quindi contiene un elenco di percorsi di ricerca e i risultati della ricerca. L'elenco viene formattato con un percorso, seguito da puntini di sospensione ("..."), seguite dal risultato. Se è presente più di una coppia di risultati di percorso, ogni coppia è separato da una coppia di "\r\n" (ritorno a capo-ritorno/avanzamento riga). Il modello è simile al seguente:  
   
- \<path>...\<result>\r\n\<path>...\<result>\r\n\<path>...\<result>  
+ \< percorso>... \< risultato>\r\n \< percorso>... \< risultato>\r\n \< percorso>... \< risultato>  
   
- Note that the last entry does not have a \r\n sequence.  
+ Si noti che l'ultima voce non dispone di una sequenza \r\n.  
   
- Here is a possible `bstrVerboseSearchInfo` string that has been sent to standard out.  
+ Ecco un possibile `bstrVerboseSearchInfo` stringa che è stato inviato a un output standard.  
   
  `c:\symbols\user32.pdb... File not found.`  
   
@@ -81,13 +64,13 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
   
  `\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.pdb... Symbols loaded.`  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## <a name="requirements"></a>Requisiti  
+ Intestazione: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Structures and Unions](../../../extensibility/debugger/reference/structures-and-unions.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Strutture e unioni](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)

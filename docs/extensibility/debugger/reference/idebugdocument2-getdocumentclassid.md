@@ -1,68 +1,51 @@
 ---
-title: IDebugDocument2::GetDocumentClassID | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- IDebugDocument2::GetDocumentClassID
-helpviewer_keywords:
-- IDebugDocument2::GetDocumentClassID
+title: "IDebugDocument2::GetDocumentClassID | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "IDebugDocument2::GetDocumentClassID"
+helpviewer_keywords: 
+  - "IDebugDocument2::GetDocumentClassID"
 ms.assetid: 111c2b85-ebfa-487f-b896-2ec4a3eac4d1
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2e214bcde4161c676c8f312d607732077e79c56f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="idebugdocument2getdocumentclassid"></a>IDebugDocument2::GetDocumentClassID
-Gets the class identifier of the document.  
+# IDebugDocument2::GetDocumentClassID
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+Ottiene l'identificatore di classe del documento.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-HRESULT GetDocumentClassID(   
-   CLSID* pclsid  
+```cpp#  
+HRESULT GetDocumentClassID(   
+   CLSID* pclsid  
 );  
 ```  
   
-```csharp  
-int GetDocumentClassID(   
-   out Guid pclsid  
+```c#  
+int GetDocumentClassID(   
+   out Guid pclsid  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameters  
+#### Parametri  
  `pclsid`  
- [out] Returns a GUID that is the class ID of the document.  
+ \[out\]  Restituisce un GUID che rappresenta l'ID della classe del documento.  
   
-## <a name="return-value"></a>Return Value  
- If successful, returns `S_OK`; otherwise, returns an error code.  
+## Valore restituito  
+ Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## <a name="remarks"></a>Remarks  
- The class GUID can be used to instantiate individual classes each of which represents a document.  
+## Note  
+ La classe GUID può essere utilizzata per creare un'istanza delle singole classi ognuno dei quali rappresenta un documento.  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

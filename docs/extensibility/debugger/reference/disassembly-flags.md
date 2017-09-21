@@ -1,101 +1,84 @@
 ---
-title: DISASSEMBLY_FLAGS | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- DISASSEMBLY_FLAGS
-helpviewer_keywords:
-- DISASSEMBLY_FLAGS enumeration
+title: "DISASSEMBLY_FLAGS | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/04/2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "DISASSEMBLY_FLAGS"
+helpviewer_keywords: 
+  - "Enumerazione DISASSEMBLY_FLAGS"
 ms.assetid: c1ec5a4d-5d42-4660-932c-7348550140cb
 caps.latest.revision: 10
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: c2e591340d80d2c17b214a0328cbdb0f0c121d81
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.author: "gregvanl"
+manager: "ghogen"
+caps.handback.revision: 10
 ---
-# <a name="disassemblyflags"></a>DISASSEMBLY_FLAGS
-Specifies the flags for disassembly.  
+# DISASSEMBLY_FLAGS
+[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+
+specifica i flag per disassembly.  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```cpp  
-enum enum_DISASSEMBLY_FLAGS {   
-   DF_DOCUMENTCHANGE     = 0x00000001,  
-   DF_DISABLED           = 0x00000002,  
-   DF_INSTRUCTION_ACTIVE = 0x00000004,  
-   DF_DATA               = 0x00000008,  
-   DF_HASSOURCE          = 0x00000010,  
-   DF_DOCUMENT_CHECKSUM  = 0x00000020  
+```cpp#  
+enum enum_DISASSEMBLY_FLAGS {   
+   DF_DOCUMENTCHANGE     = 0x00000001,  
+   DF_DISABLED           = 0x00000002,  
+   DF_INSTRUCTION_ACTIVE = 0x00000004,  
+   DF_DATA               = 0x00000008,  
+   DF_HASSOURCE          = 0x00000010,  
+   DF_DOCUMENT_CHECKSUM  = 0x00000020  
 };  
 typedef DWORD DISASSEMBLY_FLAGS;  
 ```  
   
-```csharp  
-public enum enum_DISASSEMBLY_FLAGS {   
-   DF_DOCUMENTCHANGE     = 0x00000001,  
-   DF_DISABLED           = 0x00000002,  
-   DF_INSTRUCTION_ACTIVE = 0x00000004,  
-   DF_DATA               = 0x00000008,  
-   DF_HASSOURCE          = 0x00000010,  
-   DF_DOCUMENT_CHECKSUM  = 0x00000020  
+```c#  
+public enum enum_DISASSEMBLY_FLAGS {   
+   DF_DOCUMENTCHANGE     = 0x00000001,  
+   DF_DISABLED           = 0x00000002,  
+   DF_INSTRUCTION_ACTIVE = 0x00000004,  
+   DF_DATA               = 0x00000008,  
+   DF_HASSOURCE          = 0x00000010,  
+   DF_DOCUMENT_CHECKSUM  = 0x00000020  
 };  
 ```  
   
-## <a name="members"></a>Members  
- DF_DOCUMENTCHANGE  
- Indicates that this instruction is in a different document than the previous one.  
+## Membri  
+ DF\_DOCUMENTCHANGE  
+ Indica che questa istruzione è in un documento diverso da quello precedente.  
   
- DF_DISABLED  
- Indicates that this instruction will not be executed.  
+ DF\_DISABLED  
+ Indica che questa istruzione non verrà eseguita.  
   
- DF_INSTRUCTION_ACTIVE  
- Indicates that this instruction is one of the next instructions to be executed (there may be more than one).  
+ DF\_INSTRUCTION\_ACTIVE  
+ Indica che questa istruzione è una delle istruzioni seguenti essere eseguita \(possono essere presenti più di uno\).  
   
- DF_DATA  
- Indicates that this instruction is really data (not code).  
+ DF\_DATA  
+ Indica che questa istruzione è effettivamente dati \(non codice.  
   
- DF_HASSOURCE  
- Indicates that this instruction has source. Some instructions, such as profiling or garbage collection code, have no corresponding source.  
+ DF\_HASSOURCE  
+ indica che questa istruzione ha database di origine.  Alcune istruzioni, come codice di Garbage Collection o profilare, non dispongono di origine corrispondente.  
   
- DF_DOCUMENT_CHECKSUM  
- Indicates that `bstrDocumentUrl` field contains checksum data after the document URL. See the Remarks section for the [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) structure for how the checksum data is stored.  
+ DF\_DOCUMENT\_CHECKSUM  
+ indica che il campo di `bstrDocumentUrl` contiene i dati di checksum dopo il documento URL.  Vedere la sezione relativa alle osservazioni per [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) la struttura per l'aggiornamento dei dati di checksum sono archiviati.  
   
-## <a name="remarks"></a>Remarks  
- Used as the `dwFlags` member of the [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) structure.  
+## Note  
+ Utilizzato come membro di `dwFlags` [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) della struttura.  
   
- These flags may be combined with a bitwise `OR`.  
+ Questi flag possono essere combinate con `OR`bit per bit.  
   
-## <a name="requirements"></a>Requirements  
- Header: msdbg.h  
+## Requisiti  
+ intestazione: msdbg.h  
   
- Namespace: Microsoft.VisualStudio.Debugger.Interop  
+ Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="see-also"></a>See Also  
- [Enumerations](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+## Vedere anche  
+ [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)

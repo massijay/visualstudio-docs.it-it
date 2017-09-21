@@ -1,55 +1,39 @@
 ---
-title: AsyncTaskMethodBuilder.ObjectIdForDebugger Property | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- ObjectForDebugger property, AsyncTaskMethodBuilder structure [.NET Framework debug engines]
+title: "Propriet&#224; AsyncTaskMethodBuilder.ObjectIdForDebugger | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "vs-ide-sdk"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Proprietà ObjectForDebugger, AsyncTaskMethodBuilder struttura [motori di debug di .NET Framework]"
 ms.assetid: 78338537-b451-4655-9f04-a21f6fe197a3
 caps.latest.revision: 4
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 5c08371548bad4831b430425f1fa1221257aeb48
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+caps.handback.revision: 4
+ms.author: "gregvanl"
+manager: "ghogen"
 ---
-# <a name="asynctaskmethodbuilderobjectidfordebugger-property"></a>AsyncTaskMethodBuilder.ObjectIdForDebugger Property
-Gets an object that may be used to uniquely identify this builder to the debugger.  
+# Propriet&#224; AsyncTaskMethodBuilder.ObjectIdForDebugger
+[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
+
+Ottiene un oggetto che può essere utilizzato per identificare in modo univoco questo generatore al debugger.  
   
- **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ **Spazio dei nomi:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
- **Assembly:** mscorlib (in mscorlib.dll)  
+ **Assembly:** mscorlib \(in mscorlib. dll\)  
   
- Because you cannot access this internal member from the .NET Framework, the following syntax is provided in Common Intermediate Language (CIL).  
+ Poiché è possibile accedere a questo membro interno di .NET Framework, la sintassi seguente viene fornita in comune Intermediate Language \(CIL\).  
   
-## <a name="syntax"></a>Syntax  
+## Sintassi  
   
-```csharp  
+```c#  
 private object ObjectIdForDebugger  
 ```  
   
-## <a name="see-also"></a>See Also  
+## Vedere anche  
  <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>   
- [Parallel Extension Internals for the .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+ [Elementi interni di estensione parallela per .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

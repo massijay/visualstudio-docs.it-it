@@ -1,59 +1,40 @@
 ---
-title: The objects you are adding to the designer use a different data connection than the designer is currently using | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+title: "Gli oggetti in corso di aggiunta alla finestra di progettazione utilizzano una connessione dati diversa da quella utilizzata per la finestra di progettazione | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
 ms.assetid: 332ed2f3-3377-4d51-8e3b-fdb98231978e
 caps.latest.revision: 3
-author: gewarren
-ms.author: gewarren
-manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 33a857c2d8585e2e8da9bcd9158190366a3b6830
-ms.openlocfilehash: 23013d72dae524453b87031476d95ed33022f1ae
-ms.contentlocale: it-it
-ms.lasthandoff: 09/07/2017
-
+caps.handback.revision: 1
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
 ---
-# <a name="the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer-is-currently-using"></a>The objects you are adding to the designer use a different data connection than the designer is currently using
-The objects you are adding to the designer use a different data connection than the designer is currently using. Do you want to replace the connection used by the designer?  
+# Gli oggetti in corso di aggiunta alla finestra di progettazione utilizzano una connessione dati diversa da quella utilizzata per la finestra di progettazione
+Gli oggetti in corso di aggiunta alla finestra di progettazione utilizzano una connessione dati diversa da quella utilizzata per la finestra di progettazione.Sostituire la connessione utilizzata per la finestra di progettazione?  
   
- When you add items to the [!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] ([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]), all items use one shared data connection. (The design surface represents the <xref:System.Data.Linq.DataContext>, which uses a single connection for all objects on the surface.) If you add an object to the designer that uses a data connection that differs from the data connection currently being used by the designer, this message appears. To resolve this error, you can choose to maintain the existing connection. If you make this choice, the selected object will not be added. Alternatively, you can choose to add the object and reset the <xref:System.Data.Linq.DataContext> connection to the new connection.  
+ Quando si aggiungono elementi a [!INCLUDE[vs_ordesigner_long](../data-tools/includes/vs_ordesigner_long_md.md)] \([!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]\), tutti gli elementi utilizzano un'unica connessione dati condivisa\(l'area di progettazione rappresenta l'oggetto <xref:System.Data.Linq.DataContext>, che utilizza una sola connessione per tutti gli oggetti nell'area\). Questo messaggio viene visualizzato se si aggiunge alla finestra di progettazione un oggetto che utilizza una connessione dati differente da quella attualmente utilizzata per la finestra di progettazione.Per correggere l'errore, è possibile scegliere di mantenere la connessione esistente.In questo caso, l'oggetto selezionato non verrà aggiunto.In alternativa, è possibile scegliere di aggiungere l'oggetto e reimpostare la connessione di <xref:System.Data.Linq.DataContext> sulla nuova connessione.  
   
 > [!NOTE]
->  If you click **Yes**, all entity classes on the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] are mapped to the new connection.  
+>  Se si fa clic su **Sì**, viene eseguito il mapping di tutte le classi di entità in [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] alla nuova connessione.  
   
-### <a name="to-replace-the-existing-connection-with-the-connection-used-by-the-selected-object"></a>To replace the existing connection with the connection used by the selected object  
+### Per sostituire la connessione esistente con quella utilizzata per l'oggetto selezionato  
   
--   Click **Yes**.  
+-   Scegliere **Sì**.  
   
-     The selected object is added to the [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], and the DataContext.Connection is set to the new connection.  
+     L'oggetto selezionato viene aggiunto a [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]e l'oggetto DataContext.Connection viene impostato sulla nuova connessione.  
   
-### <a name="to-continue-to-use-the-existing-connection-and-cancel-adding-the-selected-object"></a>To continue to use the existing connection and cancel adding the selected object  
+### Per continuare a utilizzare la connessione esistente e annullare l'aggiunta dell'oggetto selezionato  
   
--   Click **No**.  
+-   Scegliere **No**.  
   
-     The action is canceled. The DataContext.Connection remains set to the existing connection.  
+     L'azione viene annullatae l'oggetto DataContext.Connection resta impostato sulla connessione esistente.  
   
-## <a name="see-also"></a>See Also  
- [LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)   
- 
+## Vedere anche  
+ [Progettazione relazionale oggetti](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
+ [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
+ [Connessione ai dati in Visual Studio](../data-tools/connecting-to-data-in-visual-studio.md)
