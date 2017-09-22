@@ -1,5 +1,5 @@
 ---
-title: Impostazione delle opzioni dell&quot;editor specifiche del linguaggio | Microsoft Docs
+title: Impostazione delle opzioni dell'editor specifiche del linguaggio | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,8 +14,8 @@ helpviewer_keywords:
 - editor settings
 ms.assetid: ba64d517-a60d-409b-9860-5d75065a5bb7
 caps.latest.revision: 16
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz

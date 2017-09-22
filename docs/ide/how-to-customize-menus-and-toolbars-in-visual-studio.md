@@ -29,8 +29,8 @@ helpviewer_keywords:
 - toolbars [Visual Studio], customizing in the IDE
 ms.assetid: b570ae2f-5302-45dc-9cc9-8d4d1ad50603
 caps.latest.revision: 28
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -46,9 +46,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 0ca0020fa9025e57df874f8fa8b5eb41e63a8c29
+ms.contentlocale: it-it
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -78,7 +79,7 @@ ms.lasthandoff: 02/22/2017
   
     -   Per aggiungere un menu, selezionare il pulsante **Aggiungi nuovo menu** e il pulsante **Modifica selezione** e quindi assegnare un nome al menu che si vuole aggiungere.  
   
-         ![Finestra di dialogo Personalizza che illustra come aggiungere un menu](~/ide/media/addmenu.png "AddMenu")  
+         ![Finestra di dialogo Personalizza che illustra come aggiungere un menu](../ide/media/addmenu.png "AddMenu")  
   
     -   Per rimuovere un menu, selezionarlo nell'elenco **Controlli** e fare clic sul pulsante **Elimina**.  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 02/22/2017
   
     -   Per aggiungere una barra degli strumenti, selezionare il pulsante **Nuovo**, specificare un nome per la barra degli strumenti da aggiungere e quindi fare clic sul pulsante **OK**.  
   
-         ![Finestra di dialogo Personalizza che illustra come aggiungere una barra degli strumenti](~/ide/media/addtoolbar.png "AddToolbar")  
+         ![Finestra di dialogo Personalizza che illustra come aggiungere una barra degli strumenti](../ide/media/addtoolbar.png "AddToolbar")  
   
     -   Per rimuovere una barra degli strumenti personalizzata, selezionarla nell'elenco **Barre degli strumenti**e fare clic sul pulsante **Elimina**.  
   
@@ -122,7 +123,7 @@ ms.lasthandoff: 02/22/2017
   
          Nella finestra di dialogo **Aggiungi comando** scegliere un elemento dall'elenco **Categorie**, scegliere un elemento dall'elenco **Comandi** e quindi fare clic sul pulsante **OK**.  
   
-         ![Finestra di dialogo Aggiungi comando in Visual Studio](~/ide/media/addcommand.png "AddCommand")  
+         ![Finestra di dialogo Aggiungi comando in Visual Studio](../ide/media/addcommand.png "AddCommand")  
   
     -   Per eliminare un comando, selezionarlo nell'elenco **Controlli** e fare clic sul pulsante **Elimina**.  
   
