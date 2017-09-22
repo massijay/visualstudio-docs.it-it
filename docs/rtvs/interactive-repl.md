@@ -2,7 +2,6 @@
 title: REPL interattivo con R Tools per Visual Studio | Microsoft Docs
 ms.custom: 
 ms.date: 6/28/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:

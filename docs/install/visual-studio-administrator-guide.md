@@ -1,9 +1,8 @@
 ---
-title: Guida dell&quot;amministratore di Visual Studio | Microsoft Docs
+title: Guida dell'amministratore di Visual Studio | Microsoft Docs
 description: Altre informazioni su come distribuire Visual Studio in un ambiente aziendale.
 ms.custom: 
 ms.date: 05/15/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:

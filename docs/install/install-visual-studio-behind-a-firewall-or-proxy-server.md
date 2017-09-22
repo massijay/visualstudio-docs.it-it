@@ -3,7 +3,6 @@ title: Installazione di Visual Studio protetto da un firewall o un server proxy 
 description: 
 ms.custom: 
 ms.date: 08/01/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:

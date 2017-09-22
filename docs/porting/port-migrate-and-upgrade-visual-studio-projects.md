@@ -2,7 +2,6 @@
 title: Conversione, migrazione e aggiornamento dei progetti di Visual Studio | Microsoft Docs
 ms.custom: 
 ms.date: 7/24/2017
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
