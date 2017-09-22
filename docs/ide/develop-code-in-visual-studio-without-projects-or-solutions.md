@@ -28,8 +28,8 @@ helpviewer_keywords:
 - code
 ms.assetid: cb53bb9b-5b76-4759-b9b8-7bf32298bcbb
 caps.latest.revision: 44
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -46,9 +46,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a42f5a30375192c89c9984e40ba0104da98d7253
 ms.openlocfilehash: 3a8be04b4d2c927dc296753420ff736b993343c9
+ms.contentlocale: it-it
 ms.lasthandoff: 03/07/2017
 
 ---
@@ -73,7 +74,7 @@ L'esempio seguente mostra come clonare un repository GitHub e quindi aprire il r
 1. Passare al repository da clonare.
 1. Nella pagina di GitHub del repository, scegliere il pulsante **Clone or download** (Clona o scarica) e quindi scegliere il pulsante **Copy to clipboard** (Copia negli appunti) nel menu a discesa per copiare l'URL sicuro per il sito GitHub.
 
-  ![Pulsante per clonare in GitHub](~/ide/media/VSIDE_Code_Clone.png)
+  ![Pulsante per clonare in GitHub](./media/VSIDE_Code_Clone.png)
 
     > [!NOTE]
     >  Anche se è possibile aprire il progetto sul desktop o scaricare un file ZIP del progetto, questo esempio illustra come clonare il repository usando il metodo dell'URL sicuro.
@@ -81,12 +82,12 @@ L'esempio seguente mostra come clonare un repository GitHub e quindi aprire il r
 1. In Visual Studio scegliere la scheda **Team Explorer** per aprire Team Explorer.
 1. In Team Explorer, nella sezione **Repository Git locali**, scegliere il comando **Clona** e quindi incollare l'URL della pagina GitHub nella casella di testo.
 
-  ![Clonare il progetto](~/ide/media/VSIDE_Code_Clone2.png)
+  ![Clonare il progetto](./media/VSIDE_Code_Clone2.png)
 
 1. Scegliere il pulsante **Clona** per clonare i file del progetto in un repository Git locale. L'operazione potrebbe richiedere diversi minuti a seconda delle dimensioni del repository.
 1. Dopo aver clonato il repository nel sistema, in Team Explorer, scegliere il comando **Apri** nel menu di scelta rapida (pulsante destro del mouse) del progetto appena clonato.
 
-  ![Progetto clonato](~/ide/media/VSIDE_Code_Clone3.png)
+  ![Progetto clonato](./media/VSIDE_Code_Clone3.png)
 
 1. Scegliere il comando **Mostra visualizzazione cartelle** per visualizzare i file in Esplora soluzioni.
 
@@ -94,7 +95,7 @@ L'esempio seguente mostra come clonare un repository GitHub e quindi aprire il r
 
   È ora possibile esplorare le cartelle e i file nel progetto clonato e visualizzare il codice ed eseguire ricerche al suo interno nell'editor del codice di Visual Studio, usufruendo della colorazione della sintassi e di altre funzionalità.
 
-    ![Ricerca nel codice del progetto clonato](~/ide/media/VSIDE_Code_Clone4.png)
+    ![Ricerca nel codice del progetto clonato](./media/VSIDE_Code_Clone4.png)
 
 
 ## <a name="debug-your-code"></a>Eseguire il debug del codice
@@ -102,7 +103,7 @@ L'esempio seguente mostra come clonare un repository GitHub e quindi aprire il r
 
 Nella casella di riepilogo a discesa accanto al pulsante Avvia sulla barra degli strumenti sono elencati tutti gli elementi di avvio rilevati da Visual Studio, oltre agli elementi scelti in modo specifico in una cartella.
 
-![Pulsante Esegui](~/ide/media/VSIDE_Code_Run_Button.png)
+![Pulsante Esegui](./media/VSIDE_Code_Run_Button.png)
 
 Visual Studio riconosce automaticamente i progetti, ma gli script (ad esempio Python e JavaScript) devono essere selezionati esplicitamente come elemento di avvio prima che compaiano in questo elenco.
 Alcuni elementi di avvio, inoltre, come MSBuild e CMake, possono avere più configurazioni di compilazione che vengono visualizzate nell'elenco a discesa del pulsante Esegui.
@@ -138,11 +139,11 @@ Se la codebase usa strumenti di compilazione personalizzati non riconosciuti da 
 
 1. Scegliere il file o la cartella del progetto in Esplora soluzioni in cui si vuole includere l'attività e nel menu di scelta rapida (pulsante destro del mouse) del file o della cartella scegliere **Configura attività**.
 
-  ![Configura attività](~/ide/media/VSIDE_Code_Config_Task.png)
+  ![Configura attività](./media/VSIDE_Code_Config_Task.png)
 
   Quando si sceglie **Configura attività** viene aperto un file denominato tasks.vs.json. Se questo file non esiste, viene creato. Questo file contiene le attività di compilazione per la cartella o il file selezionato.
 
-  ![File Tasks.vs.json](~/ide/media/VSIDE_Code_Tasks_JSON.png)
+  ![File Tasks.vs.json](./media/VSIDE_Code_Tasks_JSON.png)
 
 1. Aggiungere l'attività di compilazione seguente al file tasks.vs.json. Per questo esempio, si aggiungerà una semplice attività denominata "List outputs" che elenca i file e le sottocartelle della cartella selezionata nella finestra di output. La nuova attività deve essere aggiunta all'interno della matrice "tasks" esistente.
 
@@ -159,12 +160,12 @@ Se la codebase usa strumenti di compilazione personalizzati non riconosciuti da 
   ```
   L'aspetto dell'attività di compilazione completa dovrebbe essere simile al seguente.
 
-  ![Attività di compilazione arbitraria](~/ide/media/VSIDE_Code_Tasks_ArbTask.png)
+  ![Attività di compilazione arbitraria](./media/VSIDE_Code_Tasks_ArbTask.png)
 
 1. Salvare il progetto.
 1. Aprire il menu di scelta rapida per la cartella selezionata. La nuova attività di compilazione arbitraria dovrebbe essere visualizzata nella parte inferiore del menu di scelta rapida.
 
-  ![Comando per l'attività di compilazione arbitraria](~/ide/media/VSIDE_Code_Tasks_ArbTask2.png)
+  ![Comando per l'attività di compilazione arbitraria](./media/VSIDE_Code_Tasks_ArbTask2.png)
 
 1. Scegliere il nuovo comando **List outputs** per eseguire l'attività.
 
@@ -174,7 +175,7 @@ Questa procedura illustra come aggiungere due attività di compilazione personal
 
 1. Scegliere un file del progetto in Esplora soluzioni che si vuole designare in seguito come elemento di avvio. Nel menu di scelta rapida (pulsante destro del mouse) del file scegliere **Configura attività**.
 
-  ![Comando per l'attività di compilazione personalizzata](~/ide/media/VSIDE_Code_Tasks_CustTask1.png)
+  ![Comando per l'attività di compilazione personalizzata](./media/VSIDE_Code_Tasks_CustTask1.png)
 
 1. Aggiungere le attività di compilazione seguenti al file tasks.vs.json. Per questo esempio verranno aggiunte due attività: una denominata "makefile-build" che usa il comando nMake per compilare il progetto e l'altra denominata makefile-clean che chiama il comando nMake con l'argomento "clean". Queste attività devono essere aggiunte all'interno della matrice "tasks" esistente. Si noti che questi sono solo esempi di attività di compilazione. Per consentirne il funzionamento, è necessario che nel sistema sia installato il carico di lavoro contenente [nMake](https://docs.microsoft.com/en-us/cpp/build/nmake-reference).
 
@@ -199,12 +200,12 @@ Questa procedura illustra come aggiungere due attività di compilazione personal
   ```
   L'aspetto dell'attività di compilazione personalizzata completa dovrebbe essere simile al seguente.
 
-  ![Attività di compilazione personalizzata](~/ide/media/VSIDE_Code_Tasks_CustTask2.png)
+  ![Attività di compilazione personalizzata](./media/VSIDE_Code_Tasks_CustTask2.png)
 
 1. Salvare il progetto.
 1. Aprire il menu di scelta rapida per il file selezionato. Le nuove attività di compilazione personalizzate dovrebbero essere visualizzate al centro del menu di scelta rapida.
 
-  ![Comando per l'attività di compilazione personalizzata](~/ide/media/VSIDE_Code_Tasks_CustTask3.png)
+  ![Comando per l'attività di compilazione personalizzata](./media/VSIDE_Code_Tasks_CustTask3.png)
 
   > [!NOTE]
   > I comandi vengono visualizzati sotto il comando **Configura attività** a causa delle impostazioni `contextType`. "build" e "clean" sono comandi di compilazione, pertanto vengono visualizzati nella sezione della compilazione al centro il menu di scelta rapida.
@@ -213,11 +214,11 @@ Questa procedura illustra come aggiungere due attività di compilazione personal
 
 1. Nel menu di scelta rapida del file scegliere **Imposta come elemento di avvio**.
 
-  ![Comando per l'attività di compilazione personalizzata](~/ide/media/VSIDE_Code_Tasks_CustTask4.png)
+  ![Comando per l'attività di compilazione personalizzata](./media/VSIDE_Code_Tasks_CustTask4.png)
 
 1. Sulla barra degli strumenti scegliere la freccia in giù accanto al pulsante Avvia. L'elemento di avvio viene ora visualizzato come opzione.
 
-  ![Comando per l'attività di compilazione personalizzata](~/ide/media/VSIDE_Code_Tasks_CustTask5.png)
+  ![Comando per l'attività di compilazione personalizzata](./media/VSIDE_Code_Tasks_CustTask5.png)
 
 È ora possibile scegliere il pulsante Avvia o il tasto F5 per eseguire la codebase. È possibile modificare la codebase ed eseguirne il debug in Visual Studio anche se Visual Studio non riconosce gli strumenti di compilazione della codebase. L'output dall'attività di compilazione viene visualizzato nella **finestra di output** e gli errori di compilazione vengono visualizzati nell'**elenco errori**. Il file dell'attività di compilazione tasks.vs.json associa il ciclo di sviluppo interno di Visual Studio agli strumenti di compilazione personalizzati usati dalla codebase.
 
@@ -237,7 +238,7 @@ La specifica del percorso di output consente di indicare a Visual Studio dove tr
 
 Per impostazione predefinita, il file tasks.vs.json si trova in una cartella nascosta denominata `.vs`. Per visualizzare i file nascosti in Visual Studio, scegliere il pulsante **Mostra tutti i file** sulla barra degli strumenti di Esplora soluzioni.
 
-![Comando per l'attività di compilazione arbitraria](~/ide/media/VSIDE_Code_Tasks_FileLocation.png)
+![Comando per l'attività di compilazione arbitraria](./media/VSIDE_Code_Tasks_FileLocation.png)
 
 Il file tasks.vs.json è nascosto in quanto la maggior parte degli utenti preferisce in genere non archiviarlo nel controllo del codice sorgente. Se, tuttavia, si vuole avere la possibilità di archiviarlo nel controllo del codice sorgente, trascinare il file nella radice del progetto dove sarà visibile.
 

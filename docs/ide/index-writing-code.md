@@ -1,13 +1,16 @@
 ---
 layout: LandingPage
-author: jasongroce
-ms.author: apexprodleads
+author: gewarren
+ms.author: gewarren
 ms.topic: landing-page
 title: Documentazione per la scrittura e la gestione del codice con Visual Studio
-description: Informazioni su come usare l&quot;editor del codice e altri strumenti in Visual Studio per scrivere, esplorare, gestire e migliorare il codice.
-translationtype: Human Translation
+description: Informazioni su come usare l'editor del codice e altri strumenti in Visual Studio per scrivere, esplorare, gestire e migliorare il codice.
+ms.technology:
+- vs-ide-general
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 91fde66abf2f325ef0a6a0a2fd30e36981f44033
 ms.openlocfilehash: 041e8ca9989b88d4d237e1ae64a051483bc09fb2
+ms.contentlocale: it-it
 ms.lasthandoff: 03/08/2017
 
 ---

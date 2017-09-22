@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc929a81-b20c-4802-92a7-388fd15aec3c
-author: BrianPeek
-ms.author: brpeek
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -26,9 +26,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
 ms.openlocfilehash: 59ed01aa24468dd7b08a10389f91580321fe9b82
+ms.contentlocale: it-it
 ms.lasthandoff: 03/27/2017
 
 ---
@@ -51,7 +52,7 @@ Visual Studio genera automaticamente parti di codice sorgente, consentendo agli 
 
 <a name="#quick-actions"></a>
 ## <a name="quick-actions"></a>Azioni rapide
-Le azioni rapide consentono di generare codice, effettuarne il refactoring o modificarlo in altro modo con facilità tramite un'unica azione.  Queste azioni possono essere applicate tramite l'icona Lampadina ![Icona Lampadina piccola](~/ide/media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall") o premendo **Ctrl + .** quando il cursore si trova sulla riga di codice appropriata.
+Le azioni rapide consentono di generare codice, effettuarne il refactoring o modificarlo in altro modo con facilità tramite un'unica azione.  Queste azioni possono essere applicate tramite l'icona Lampadina ![Icona Lampadina piccola](media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall") o premendo **Ctrl + .** quando il cursore si trova sulla riga di codice appropriata.
 
 * [Azioni rapide](quick-actions.md)
 * [Stili di codice e azioni rapide](code-styles-and-quick-actions.md)

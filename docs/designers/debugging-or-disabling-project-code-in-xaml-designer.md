@@ -8,8 +8,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ac600581-8fc8-49e3-abdf-1569a3483d74
 caps.latest.revision: 5
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -26,9 +26,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 138f318b84044a1ed8a92f9b2ee7b47b2211cdb7
+ms.contentlocale: it-it
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -47,7 +48,7 @@ In molti casi, le eccezioni non gestite nella finestra di progettazione XAML pos
   
  Quando il codice del progetto è disabilitato, Visual Studio visualizza segnaposto, ad esempio il nome della proprietà per un'associazione in cui i dati non sono più disponibili o un segnaposto per un controllo che non è più in esecuzione.  
   
- ![Finestra di dialogo Eccezione non gestita](~/designers/media/xaml_unhandledexception.png "XAML_UnhandledException")  
+ ![Finestra di dialogo Eccezione non gestita](../designers/media/xaml_unhandledexception.png "XAML_UnhandledException")  
   
 #### <a name="to-determine-if-project-code-is-causing-an-exception"></a>Per determinare se il codice del progetto sta causando un'eccezione  
   
@@ -63,7 +64,7 @@ In molti casi, le eccezioni non gestite nella finestra di progettazione XAML pos
   
 2.  In Gestione attività di Windows fare clic sul pulsante **Termina attività** per chiudere tutte le istanze della finestra di progettazione XAML di Visual Studio attualmente in esecuzione.  
   
-     ![Istanze della finestra di progettazione XAML in TaskManager](~/designers/media/xaml_taskmanager.png "XAML_TaskManager")  
+     ![Istanze della finestra di progettazione XAML in TaskManager](../designers/media/xaml_taskmanager.png "XAML_TaskManager")  
   
 3.  In Visual Studio aprire la pagina XAML che contiene il codice o il controllo di cui si vuole eseguire il debug.  
   
@@ -75,7 +76,7 @@ In molti casi, le eccezioni non gestite nella finestra di progettazione XAML pos
   
 7.  Nella finestra di dialogo **Connetti a processo** scegliere **XDesProc.exe** nell'elenco **Processi disponibili**e quindi fare clic sul pulsante **Connetti** .  
   
-     ![Processo della finestra di progettazione XAML](~/designers/media/xaml_attach.png "XAML_Attach")  
+     ![Processo della finestra di progettazione XAML](../designers/media/xaml_attach.png "XAML_Attach")  
   
      Questo è il processo per la finestra di progettazione XAML nella prima istanza di Visual Studio.  
   
@@ -89,7 +90,7 @@ In molti casi, le eccezioni non gestite nella finestra di progettazione XAML pos
   
 -   In alternativa, sulla barra degli strumenti nella finestra di progettazione XAML fare clic sul pulsante **Disabilita il codice del progetto** .  
   
-     ![Pulsante Disabilita il codice del progetto](~/designers/media/xaml_disablecode.png "XAML_DisableCode")  
+     ![Pulsante Disabilita il codice del progetto](../designers/media/xaml_disablecode.png "XAML_DisableCode")  
   
      È possibile attivare di nuovo il pulsante per riabilitare il codice del progetto.  
   

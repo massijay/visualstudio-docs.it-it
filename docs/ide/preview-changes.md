@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e15c00f6-3e22-49b8-8269-69e4c8be8040
-author: BrianPeek
-ms.author: brpeek
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 f1_keywords:
 - vs.codefix.previewchanges
@@ -28,9 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 14e6961d6db557e77687eef17aae9b16f5a4d706
 ms.openlocfilehash: eb49815ed120ee4ff65dfc04764282f1ac6d1ff8
+ms.contentlocale: it-it
+ms.lasthandoff: 02/22/2017
 
 ---
 
@@ -38,7 +40,7 @@ ms.openlocfilehash: eb49815ed120ee4ff65dfc04764282f1ac6d1ff8
 
 Quando si usano vari strumenti *Azioni rapide* o *Refactoring* in Visual Studio, spesso è possibile visualizzare in anteprima le modifiche che stanno per essere apportate al progetto prima di accettarle.  Questa operazione viene eseguita nella finestra **Anteprima modifiche**.  Ecco ad esempio la finestra **Anteprima modifiche** con le modifiche apportate durante un refactoring di ridenominazione in un progetto C#:
 
-![Anteprima modifiche](~/ide/media/previewchanges.png)
+![Anteprima modifiche](media/previewchanges.png)
 
 Nella metà superiore della finestra vengono visualizzate le righe specifiche che verranno modificate, ognuna con una casella di controllo.  È possibile selezionare o deselezionare ogni casella di controllo se si vuole applicare in modo selettivo il refactoring solo a righe specifiche.
 
@@ -48,9 +50,4 @@ Dopo aver verificato le modifiche, fare clic sul pulsante **Applica** per salvar
 
 ## <a name="see-also"></a>Vedere anche  
 [Refactoring in Visual Studio](../ide/refactoring-in-visual-studio.md) (Effettuare il refactoring in Visual Studio)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

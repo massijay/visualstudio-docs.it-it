@@ -1,5 +1,5 @@
 ---
-title: "Uso dell&quot;elenco attività | Microsoft Docs"
+title: "Uso dell'elenco attività | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,8 +17,8 @@ helpviewer_keywords:
 - Visual Studio, task list
 ms.assetid: f46a75a8-47b3-4cb6-bb59-b72e3356a664
 caps.latest.revision: 29
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
 translation.priority.ht:
 - de-de
@@ -35,9 +35,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
 ms.openlocfilehash: 01e8f3cc1bbcc2bc4b2fc94df1dad7d248b67290
+ms.contentlocale: it-it
 ms.lasthandoff: 02/22/2017
 
 ---
@@ -65,7 +66,7 @@ Usare **Elenco attività** per tenere traccia dei commenti di codice che usano t
   
 -   Nel menu **Visualizza** scegliere **Elenco attività** (tastiera: CTRL+\\,T).  
   
-     ![Finestra Elenco attività](~/ide/media/vs2015_task_list.png "vs2015_task_list")  
+     ![Finestra Elenco attività](../ide/media/vs2015_task_list.png "vs2015_task_list")  
   
 #### <a name="to-change-the-sort-order-of-the-list"></a>Per modificare l'ordinamento dell'elenco  
   
@@ -114,7 +115,7 @@ Usare **Elenco attività** per tenere traccia dei commenti di codice che usano t
   
      È così possibile visualizzare [Elenco attività, Ambiente, finestra di dialogo Opzioni](../ide/reference/task-list-environment-options-dialog-box.md).  
   
-     ![Elenco attività di Visual Studio](~/ide/media/vs2015_task_list_options.png "vs2015_task_list_options")  
+     ![Elenco attività di Visual Studio](../ide/media/vs2015_task_list_options.png "vs2015_task_list_options")  
   
 3.  Nella casella di testo **Nome** della categoria **Token** immettere il nome del token, ad esempio "BUG".  
   
@@ -134,7 +135,7 @@ Usare **Elenco attività** per tenere traccia dei commenti di codice che usano t
 ##  <a name="shortcuts"></a> Collegamenti  
  Un *collegamento* è un segnalibro nel codice che viene rilevato nell' **Elenco attività**. Ha un'icona diversa rispetto a un segnalibro normale. Fare doppio clic sul collegamento in **Elenco attività** per passare alla posizione corrispondente nel codice.  
   
- ![Icona di collegamento Elenco attività di Visual Studio](~/ide/media/vs2015_task_list_bookmark.png "vs2015_task_list_bookmark")  
+ ![Icona di collegamento Elenco attività di Visual Studio](../ide/media/vs2015_task_list_bookmark.png "vs2015_task_list_bookmark")  
   
 #### <a name="to-create-a-shortcut"></a>Per creare un collegamento  
   

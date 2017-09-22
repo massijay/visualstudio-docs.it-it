@@ -1,19 +1,39 @@
 ---
-title: "Gestire pi&#249; account utente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Usare più account utente | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b73c865c-74e0-420e-89cc-43524f4aafd0
 caps.latest.revision: 13
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 13
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
+ms.openlocfilehash: 592cde9dac7ea7b49934200469e85caf1fd58f82
+ms.contentlocale: it-it
+ms.lasthandoff: 02/22/2017
+
 ---
 # <a name="work-with-multiple-user-accounts"></a>Work with multiple user accounts
 Se si dispone di più account Microsoft e/o di account aziendali o dell’istituto di istruzione è possibile aggiungerli tutti a Visual Studio in modo che le risorse di tutti gli account siano accessibili Da tutti gli account senza dover autenticarsi separatamente. I servizi di Azure, Application Insights, Team Foundation Server e Office 365 attualmente supportano l'esperienza di accesso semplificato. Servizi aggiuntivi possono diventare disponibili come passare del tempo.
@@ -31,11 +51,11 @@ Se si dispone di più account Microsoft e/o di account aziendali o dell’istitu
 ### <a name="access-your-azure-account-in-server-explorer"></a>Accedere all'account Azure in Esplora server  
  Premere **CTRL+ALT+S** per aprire **Esplora server**. Scegliere l'icona di Azure per espanderla e visualizzare le risorse disponibili nell'account Azure associato all'ID usato per accedere a Visual Studio. Dovrebbe apparire una struttura simile a quella seguente, che però contiene le risorse dell'utente.
 
- ![Esplora server con nodo Strumenti di Azure espanso](~/ide/media/vs2015_serverexplorer.png "VS2015_ServerExplorer")  
+ ![Esplora server con nodo Strumenti di Azure espanso](../ide/media/vs2015_serverexplorer.png "VS2015_ServerExplorer")  
 
  La prima volta che si usa Visual Studio su qualsiasi dispositivo specifico, la finestra di dialogo visualizzerà solo le sottoscrizioni registrate con l'ID di accesso all'IDE. È possibile accedere alle risorse per tutti gli altri account direttamente da **Esplora Server** facendo clic sul nodo di Azure e scegliendo **Gestisci e filtra sottoscrizioni** e aggiungendo gli account dal controllo selezione account. È possibile scegliere un altro account, se necessario, facendo clic sulla freccia giù, sceglierlo dall'elenco di account collegati. Dopo aver scelto l'account, è possibile scegliere le sottoscrizioni con tale account che si desidera visualizzare in Esplora Server.  
 
- ![Finestra di dialogo Gestisci sottoscrizioni Microsoft Azure](~/ide/media/vs2015_manage_subs.png "vs2015_manage_subs")  
+ ![Finestra di dialogo Gestisci sottoscrizioni Microsoft Azure](../ide/media/vs2015_manage_subs.png "vs2015_manage_subs")  
 
  Alla successiva apertura di Esplora Server, vengono visualizzate le risorse per tale sottoscrizioni.  
 
@@ -48,10 +68,10 @@ Se si dispone di più account Microsoft e/o di account aziendali o dell’istitu
     > [!WARNING]
     >  Se è la prima volta che si sta creando un'app di Store in Visual Studio in un computer specifico, verrà richiesto di abilitare il dispositivo per la modalità di sviluppo passando a **Impostazioni &#124; Aggiornamento e sicurezza &#124; Per sviluppatori** nel proprio computer. Per altre informazioni, vedere [Abilitare il dispositivo per lo sviluppo](https://msdn.microsoft.com/en-us/library/windows/apps/dn706236.aspx).  
 
-###  <a name="a-nameaccessazurea-access-azure-active-directory-in-a-web-project"></a><a name="access_azure"></a> Accedere ad Azure Active Directory in un progetto Web  
+###  <a name="access_azure"></a> Accedere ad Azure Active Directory in un progetto Web  
  Con Azure AD viene abilitato il supporto per end-user Single Sign-On in applicazioni Web ASP.NET o per Autenticazione di AD in servizi API Web. L'autenticazione di dominio è diverso da autenticazione degli account utente singoli; gli utenti che dispongono dell'accesso al dominio Active Directory è possono utilizzare gli account di Windows Azure esistenti per connettersi alle applicazioni web. Le applicazioni di Office 365 inoltre possono utilizzare l'autenticazione di dominio. Per un esempio, creare un'applicazione Web (**File, Nuovo progetto, C#, Cloud, Applicazione Web ASP.NET**). Nella finestra di dialogo Nuovo progetto ASP.NET scegliere **Modifica autenticazione**. Autenticazione guidata viene visualizzata e consente di scegliere il tipo di autenticazione da utilizzare nell'applicazione.  
 
- ![Finestra di dialogo Modifica autenticazione per ASP.NET](~/ide/media/vs2015_change_authentication.png "VS2015_change_authentication")  
+ ![Finestra di dialogo Modifica autenticazione per ASP.NET](../ide/media/vs2015_change_authentication.png "VS2015_change_authentication")  
 
  Per altre informazioni sui diversi tipi di autenticazione in ASP.NET, vedere [Creazione di progetti Web ASP.NET in Visual Studio 2013](http://www.asp.net/visual-studio/overview/2013/creating-web-projects-in-visual-studio#orgauth) (le informazioni sull'autenticazione sono ancora pertinenti per le versioni correnti di Visual Studio).  
 
@@ -61,7 +81,7 @@ Se si dispone di più account Microsoft e/o di account aziendali o dell’istitu
 ## <a name="add-a-second-user-account-to-visual-studio"></a>Aggiungere un secondo account utente a Visual Studio  
  Fare clic sulla freccia GIÙ accanto al nome utente nell'angolo superiore di Visual Studio. Quindi scegliere la voce di menu **Impostazioni account**. Verrà visualizzata la finestra **Gestione account** con l'account usato per accedere. Scegliere il collegamento **Aggiungi nuovo account** in basso nella finestra di dialogo per aggiungere un nuovo account Microsoft oppure un nuovo account aziendale o dell'istituto di istruzione.  
 
- ![Selezione account di Visual Studio](~/ide/media/vs2015_acct_picker.png "VS2015_acct_picker")  
+ ![Selezione account di Visual Studio](../ide/media/vs2015_acct_picker.png "VS2015_acct_picker")  
 
  Seguire i prompt visualizzati per immettere le credenziali del nuovo account. La figura seguente mostra Gestione account dopo che un utente ha aggiunto il proprio account aziendale Contoso.com.  
 
@@ -69,9 +89,4 @@ Se si dispone di più account Microsoft e/o di account aziendali o dell’istitu
 
 ## <a name="revisit-the-add-connected-services-wizard-and-server-explorer"></a>Accedere nuovamente alla procedura guidata Aggiungi servizio connesso e a Esplora server  
  Passare a **Esplora Server** destro del mouse sul nodo di Azure e scegliere Nuovo, **sottoscrizioni Gestisci e filtro**. Scegliere il nuovo account facendo clic sulla freccia accanto al conto corrente a discesa e quindi scegliere le sottoscrizioni che si desidera visualizzare in Esplora Server. Si noterà che tutti i servizi associati alla sottoscrizione specificata. Anche se non attualmente connessi all'IDE di Visual Studio con il secondo account, connesso a tale account servizi e risorse. Lo stesso vale per **Progetto, Aggiungi servizio connesso** e per **Team, Connetti a Team Foundation Server**.
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
