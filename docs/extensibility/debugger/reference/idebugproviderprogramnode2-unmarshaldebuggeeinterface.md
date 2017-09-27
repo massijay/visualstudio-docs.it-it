@@ -1,56 +1,73 @@
 ---
-title: "IDebugProviderProgramNode2::UnmarshalDebuggeeInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProviderProgramNode2::UnmarshalDebuggeeInterface"
-helpviewer_keywords: 
-  - "IDebugProviderProgramNode2::UnmarshalDebuggeeInterface"
+title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
+helpviewer_keywords:
+- IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
 ms.assetid: 2e4653c5-10f1-493c-9973-f31d266c5d48
 caps.latest.revision: 10
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 1801f2df2dfff7667e8a9991892b3218dc3bb71a
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
 
-Ottiene un'interfaccia specificata mediante i limiti dei processi.  
+---
+# <a name="idebugproviderprogramnode2unmarshaldebuggeeinterface"></a>IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
+Ottiene un'interfaccia specificata nell'ambito dei processi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-HRESULT UnmarshalDebuggeeInterface(  
-   REFIID riid,  
-   void** ppvObject  
+HRESULT UnmarshalDebuggeeInterface(  
+   REFIID riid,  
+   void** ppvObject  
 );  
 ```  
   
-```c#  
-int UnmarshalDebuggeeInterface(  
-   ref Guid   riid,  
-   out IntPtr ppvObject  
+```csharp  
+int UnmarshalDebuggeeInterface(  
+   ref Guid   riid,  
+   out IntPtr ppvObject  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `riid`  
- \[in\]  GUID dell'interfaccia da verificare.  
+ [in] GUID dell'interfaccia da ottenere.  
   
  `ppvObject`  
- \[out\]  restituisce l'oggetto che implementa l'interfaccia desiderata.  \[C\+\+\] questo può essere impostato direttamente al tipo di interfaccia desiderato.  \[C\#\] utilizzare il metodo di <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> per ottenere l'interfaccia desiderata.  
+ [out] Restituisce l'oggetto che implementa l'interfaccia desiderata. [C++] questo può essere convertito direttamente al tipo di interfaccia desiderato. [C#] usare il <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> metodo per ottenere l'interfaccia desiderata.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## Note  
- Questo metodo viene utilizzato quando il motore di debug è in esecuzione nello spazio di processo di [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] e il programma sottoposto a debug è in esecuzione nel relativo spazio del processo.  
+## <a name="remarks"></a>Note  
+ Questo metodo viene utilizzato quando il motore di debug è in esecuzione [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] spazio di processo e il programma in fase di debug è in esecuzione nel proprio spazio di processo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDebugProviderProgramNode2](../../../extensibility/debugger/reference/idebugproviderprogramnode2.md)

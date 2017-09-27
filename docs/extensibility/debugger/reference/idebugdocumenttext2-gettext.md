@@ -1,68 +1,85 @@
 ---
-title: "IDebugDocumentText2::GetText | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugDocumentText2::GetText"
-helpviewer_keywords: 
-  - "IDebugDocumentText2::GetText"
+title: IDebugDocumentText2::GetText | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugDocumentText2::GetText
+helpviewer_keywords:
+- IDebugDocumentText2::GetText
 ms.assetid: f8c15a58-da77-473e-a721-7a094e306c63
 caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# IDebugDocumentText2::GetText
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: a7e950fbf8667ee85f992ab8406dfdd9d7442555
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
 
-Recupera il testo nella posizione specificata nel documento.  
+---
+# <a name="idebugdocumenttext2gettext"></a>IDebugDocumentText2::GetText
+Recupera il testo dalla posizione specificata nel documento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
-HRESULT GetText(   
-   TEXT_POSITION pos,  
-   ULONG         cMaxChars,  
-   WCHAR*        pText,  
-   ULONG*        pcNumChars  
+```cpp  
+HRESULT GetText(   
+   TEXT_POSITION pos,  
+   ULONG         cMaxChars,  
+   WCHAR*        pText,  
+   ULONG*        pcNumChars  
 );  
 ```  
   
-```c#  
-int GetText(   
-   eumn_TEXT_POSITION pos,  
-   uint               cMaxChars,  
-   IntPtr             pText,  
-   out uint           pcNumChars  
+```csharp  
+int GetText(   
+   eumn_TEXT_POSITION pos,  
+   uint               cMaxChars,  
+   IntPtr             pText,  
+   out uint           pcNumChars  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pos`  
- \[in\]  [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md) Una struttura che indica la posizione del testo da recuperare.  
+ [in] Oggetto [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struttura che indica la posizione del testo da recuperare.  
   
  `cMaxChars`  
- \[in\]  Il numero massimo di caratteri del testo da recuperare.  
+ [in] Numero massimo di caratteri del testo da recuperare.  
   
  `pText`  
- \[in, out\]  Un puntatore a un buffer che sia compilato con testo desiderato.  Questo buffer deve essere in grado di contenere almeno il numero di `cMaxChars` i caratteri di tipo " wide ".  
+ [in, out] Un puntatore a un buffer che deve essere compilato con il testo desiderato. Questo buffer deve essere in grado di contenere almeno `cMaxChars` numero di caratteri "wide".  
   
  `pcNumChars`  
- \[out\]  Restituisce il numero di caratteri in realtà recuperato.  
+ [out] Restituisce il numero di caratteri effettivamente recuperati.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## Esempio  
- In questo esempio viene illustrato come questo metodo può essere chiamato da c\#.  
+## <a name="example"></a>Esempio  
+ Questo esempio mostra come questo metodo può essere chiamato da c#.  
   
-```c#  
+```csharp  
 using System.Runtime.Interop.Services;  
 using Microsoft.VisualStudio;  
 using Microsoft.VisualStudio.Debugger.Interop;  
@@ -98,6 +115,6 @@ namespace Mynamespace
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)   
- [TEXT\_POSITION](../../../extensibility/debugger/reference/text-position.md)
+ [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md)

@@ -1,5 +1,5 @@
 ---
-title: Get started debugging multithreaded applications | Microsoft Docs
+title: Introduzione al debug di applicazioni multithreading con | Documenti Microsoft
 ms.custom: H1HackMay2017
 ms.date: 06/02/2017
 ms.reviewer: 
@@ -36,46 +36,46 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: 5c5aa0df75451fe829b0d6849d8c9d1672e677b0
+ms.sourcegitcommit: 1d4298d60886d8fe8b402b59b1838a4171532ab1
+ms.openlocfilehash: 3ffb550707280d76756cbd144ed03f4143ce144b
 ms.contentlocale: it-it
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 09/26/2017
 
 ---
-# <a name="get-started-debugging-a-multithreaded-application-in-visual-studio"></a>Get started debugging a multithreaded application in Visual Studio
-Visual Studio provides several tools and user interface elements to help you debug multithreaded applications. This tutorial shows how to use conditional breakpoints and filter breakpoints, the **Parallel Stacks** window, and **Parallel Watch** window. This tutorial takes only a few minutes, but completing it will familiarize you with the features for debugging multithreaded applications.
+# <a name="get-started-debugging-a-multithreaded-application-in-visual-studio"></a>Introduzione al debug di un'applicazione multithreading in Visual Studio
+Visual Studio fornisce numerosi strumenti e gli elementi dell'interfaccia utente per eseguire il debug di applicazioni multithreading. In questa esercitazione viene illustrato come utilizzare gli indicatori dei thread, il **stack in parallelo** finestra il **espressioni di controllo parallelo** finestra punti di interruzione condizionali e i punti di interruzione di filtro. In questa esercitazione richiede solo pochi minuti, ma il suo completamento consentirà di acquisire familiarità con le funzionalità per il debug di applicazioni multithreading.
 
 |         |         |
 |---------|---------|
-| ![Watch a video](../install/media/video-icon.png "WatchVideo") | [Watch a video](#video) on multithreaded debugging that shows similar steps. |
+| ![Guardare un video](../install/media/video-icon.png "WatchVideo") | [Guardare un video](#video) con multithreading di debug che illustra una procedura simile. |
 
-Other topics provide additional information on using other multithreaded debugging tools:
+Altri argomenti forniscono informazioni aggiuntive sull'utilizzo di altri strumenti di debug con multithreading:
 
-- For a similar topic that shows how to use the **Debug Location** toolbar and the **Threads** window, see [Walkthrough: Debug a Multithreaded Application](../debugger/how-to-use-the-threads-window.md).
+- Per un argomento simile in cui viene illustrato come utilizzare il **posizione di Debug** barra degli strumenti e **thread** finestra, vedere [procedura dettagliata: Debug di un'applicazione multithreading](../debugger/how-to-use-the-threads-window.md).
 
-- For a similar topic with a sample that uses <xref:System.Threading.Tasks.Task> (managed code) and the concurrency runtime (C++), see [Walkthrough: Debugging a Parallel Application](../debugger/walkthrough-debugging-a-parallel-application.md). For general debugging tips that apply to most multithreaded application types, read both this topic and the linked topic.
+- Per un argomento simile con un esempio che usa <xref:System.Threading.Tasks.Task> (codice gestito) e il runtime di concorrenza (C++), vedere [procedura dettagliata: debug di un'applicazione parallela](../debugger/walkthrough-debugging-a-parallel-application.md). Per suggerimenti di debug generali che si applicano ai tipi di applicazione più multithreading, leggere questo argomento sia l'argomento collegato.
   
-To begin this tutorial, you need a multithreaded application project. Follow the steps listed here to create that project.  
+Per iniziare questa esercitazione, è necessario un progetto di applicazione multithreading. Per creare tale progetto, attenersi alla procedura qui indicata.  
   
-#### <a name="to-create-the-multithreaded-app-project"></a>To create the multithreaded app project  
+#### <a name="to-create-the-multithreaded-app-project"></a>Per creare il progetto di applicazione multithreading  
   
-1.  On the **File** menu, choose **New** and then click **Project**.  
+1.  Nel **File** menu, scegliere **New** e quindi fare clic su **progetto**.  
   
-     The **New Project** dialog box appears.  
+     Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-2.  In the **Project Type**s box, click the language of your choice: **Visual C#**, **Visual C++**, or **Visual Basic**.  
+2.  Nel **tipo di progetto**s, fare clic sulla lingua di preferenza: **Visual c#**, **Visual C++**, o **Visual Basic**.  
   
-3.  In the **Templates** box, choose **Console App**.  
+3.  Nel **modelli** scegliere **App Console**.  
   
-4.  In the **Name** box, type the name MyThreadWalkthroughApp.  
+4.  Nel **nome** casella, digitare il nome MyThreadWalkthroughApp.  
   
-5.  Click **OK**.  
+5.  Fare clic su **OK**.  
   
-     A new console project appears. When the project has been created, a source file appears. Depending on the language you have chosen, the source file might be called Program.cs, MyThreadWalkthroughApp.cpp, or Module1.vb.  
+     Verrà visualizzato un nuovo progetto console. Dopo aver creato il progetto, viene visualizzato un file di origine. A seconda del linguaggio scelto, il file di origine potrebbe essere chiamato Module1. vb, Program.cs o MyThreadWalkthroughApp.cpp.  
   
-6.  Delete the code that appears in the source file and replace it with the example code shown here.
+6.  Eliminare il codice che viene visualizzato nel file di origine e sostituirlo con il codice di esempio illustrato di seguito.
 
-    ```C#
+    ```csharp
     using System;
     using System.Threading;
 
@@ -208,11 +208,11 @@ To begin this tutorial, you need a multithreaded application project. Follow the
     End Class
     ```
   
-7.  On the **File** menu, click **Save All**.  
+7.  Nel **File** menu, fare clic su **Salva tutto**.  
   
-#### <a name="to-begin-the-tutorial"></a>To begin the tutorial  
+#### <a name="to-begin-the-tutorial"></a>Per iniziare l'esercitazione  
   
--   In the source code editor, look for the following code: 
+-   Nell'editor del codice sorgente, cercare il codice seguente: 
   
     ```CSharp  
     Thread.Sleep(3000);  
@@ -228,20 +228,20 @@ To begin this tutorial, you need a multithreaded application project. Follow the
     Console.WriteLine()
     ```
   
-#### <a name="to-start-debugging"></a>To start debugging  
+#### <a name="to-start-debugging"></a>Per avviare il debug  
   
-1.  Click in the left gutter of the `Thread.Sleep` or `Thread::Sleep` statement to insert a new breakpoint.  
+1.  Fare clic nella barra di navigazione a sinistra del `Thread.Sleep` o `Thread::Sleep` istruzione per inserire un nuovo punto di interruzione.  
   
-     In the gutter on the left side of the source code editor, a red circle appears. This indicates that a breakpoint is now set at this location. 
+     Nella barra di navigazione sul lato sinistro dell'editor del codice sorgente, verrà visualizzato un cerchio rosso. che indica l'impostazione di un punto di interruzione in tale posizione. 
   
-2.  On the **Debug** menu, click **Start Debugging** (**F5**).  
+2.  Nel **Debug** menu, fare clic su **Avvia debug** (**F5**).  
   
-     Visual Studio builds the solution, the app starts to run with the debugger attached, and then the app stops at the breakpoint.  
+     Visual Studio compila la soluzione, l'app viene avviata l'esecuzione con il debugger collegato e quindi l'applicazione si arresta nel punto di interruzione.  
   
     > [!NOTE]
-    > If you switch focus to the console window, click in the [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] window to return focus to [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+    > Se si passa lo stato attivo alla finestra della console, fare clic su di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] finestra per ripristinare lo stato attivo per [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
-4.  In the source code editor, locate the line that contains the breakpoint:  
+4.  Nell'editor del codice sorgente, individuare la riga che contiene il punto di interruzione:  
   
     ```CSharp  
     Thread.Sleep(3000);  
@@ -255,153 +255,153 @@ To begin this tutorial, you need a multithreaded application project. Follow the
     Thread.Sleep(3000)
     ```    
   
-#### <a name="ShowThreadsInSource"></a>To discover the thread marker  
+#### <a name="ShowThreadsInSource"></a>Per individuare il marcatore del thread  
 
-1.  In the Debug Toolbar, click the **Show Threads in Source** button ![Show Threads in Source](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker").
+1.  Nella barra degli strumenti di Debug, fare clic su di **Mostra thread nell'origine** pulsante ![Mostra thread nell'origine](../debugger/media/dbg-multithreaded-show-threads.png "ThreadMarker").
 
-2. Press **F11** once to advance the debugger one line of code.
+2. Premere **F11** una volta per spostare la riga di un debugger del codice.
   
-3.  Look at the gutter on the left side of the window. On this line, you will see a *thread marker* icon  ![Thread Marker](../debugger/media/dbg-thread-marker.png "ThreadMarker") that resembles two cloth threads. The thread marker indicates that a thread is stopped at this location.
+3.  All'estrema sinistra della finestra, In questa riga, verrà visualizzato un *marcatore del thread* icona ![marcatore del Thread](../debugger/media/dbg-thread-marker.png "ThreadMarker") che due fili. Il marcatore del thread indica l'interruzione di un thread in questa posizione.
 
-    Notice that a thread marker may be partially concealed by a breakpoint. 
+    Si noti che un marcatore del thread potrebbe essere parzialmente nascosta da un punto di interruzione. 
   
-4.  Hover the pointer over the thread marker. A DataTip appears. The DataTip tells you the name and thread ID number for each stopped thread. In this case, the name is probably `<noname>`. 
+4.  Posizionare il puntatore del mouse sul marcatore del thread. Viene visualizzato un suggerimento dati. in cui è indicato il nome e il numero ID di ciascun thread interrotto. In questo caso, il nome è probabilmente `<noname>`. 
   
-5.  Right-click the thread marker to see the available options on the shortcut menu.
+5.  Fare clic sul marcatore del thread per visualizzare le opzioni disponibili nel menu di scelta rapida.
     
-## <a name="ParallelStacks"></a>View the Location of Threads
+## <a name="ParallelStacks"></a>Consente di visualizzare il percorso di thread
 
-In the **Parallel Stacks** window, you can switch between a Threads view and (for task-based programming) Tasks view, and you can view call stack information for each thread. In this app, we can use the Threads view.
+Nel **stack in parallelo** finestra, è possibile passare tra una visualizzazione thread e (per la programmazione basata su attività), visualizzazione attività ed è possibile visualizzare informazioni sullo stack di chiamate per ogni thread. In questa app, è possibile usare la visualizzazione dei thread.
 
-1. Open the **Parallel Stacks** window by choosing **Debug > Windows > Parallel Stacks**. You should see something similar to this (the exact information will be different depending on the current location of each thread, your hardware, and your programming language).
+1. Aprire il **stack in parallelo** finestra scegliendo **Debug > Windows > stack in parallelo**. Dovrebbe essere simile al seguente (le informazioni esatte sarà diverse a seconda della posizione corrente di ogni thread, l'hardware e il linguaggio di programmazione).
 
-    ![Parallel Stacks Window](../debugger/media/dbg-multithreaded-parallel-stacks.png "ParallelStacksWindow")
+    ![Finestra Stack in parallelo](../debugger/media/dbg-multithreaded-parallel-stacks.png "ParallelStacksWindow")
 
-    In this example, from left to right we get this information:
+    In questo esempio, da sinistra a destra è ottenere queste informazioni:
     
-    - The Main thread (left side) has stopped on `Thread.Start` (the stop point is indicated by the thread marker icon ![Thread Marker](../debugger/media/dbg-thread-marker.png "ThreadMarker")).
-    - Two threads have entered the `ServerClass.InstanceMethod`, one of which is the current thread (yellow arrow), while the other thread has stopped in `Thread.Sleep`.
-    - A new thread (on the right) is also starting (stopped on `ThreadHelper.ThreadStart`).
+    - Il thread principale (lato sinistro) è stato arrestato sul `Thread.Start` (il punto di interruzione è indicato dall'icona marcatore thread ![marcatore del Thread](../debugger/media/dbg-thread-marker.png "ThreadMarker")).
+    - Due thread di avere immesso il `ServerClass.InstanceMethod`, uno dei quali è il thread corrente (freccia gialla), mentre l'altro thread è stato arrestato `Thread.Sleep`.
+    - Avvio di un nuovo thread (sulla destra) anche (è stato arrestato sul `ThreadHelper.ThreadStart`).
 
-2.  Right-click entries in the **Parallel Stacks** window to see the available options on the shortcut menu.
+2.  Fare doppio clic su voci di **stack in parallelo** finestra per visualizzare le opzioni disponibili nel menu di scelta rapida.
 
-    You can take various actions from these right-click menus, but for this tutorial we will show more of these details in the **Parallel Watch** window (next sections).
+    È possibile eseguire azioni diverse da questi menu di scelta rapida, ma per questa esercitazione verranno illustrati più di questi dettagli di **espressioni di controllo parallelo** finestra (sezioni successive).
 
     > [!NOTE]
-    > If you are more interested in seeing a list view with information on each thread, use the **Threads** window instead. See [Walkthrough: Debug a Multithreaded Application](../debugger/how-to-use-the-threads-window.md).
+    > Se si è più interessati a visualizzare un elenco di visualizzazione con informazioni su ogni thread, utilizzare il **thread** finestra invece. Vedere [procedura dettagliata: Debug di un'applicazione multithreading](../debugger/how-to-use-the-threads-window.md).
 
-## <a name="set-a-watch-on-a-variable"></a>Set a Watch on a Variable
+## <a name="set-a-watch-on-a-variable"></a>Impostare un'espressione di controllo in una variabile
 
-1. Open the **Parallel Watch** window by choosing **Debug > Windows > Parallel Watch > Parallel Watch 1**.
+1. Aprire il **espressioni di controllo parallelo** finestra scegliendo **Debug > Windows > espressioni di controllo parallelo > controllo1 parallelo**.
 
-2. Click in the cell where you see the `<Add Watch>` text (or the empty header cell in the 4th column), type `data`, and press Enter.
+2. Fare clic sulla cella in cui viene visualizzato il `<Add Watch>` testo (o la cella di intestazione vuota nella colonna 4), tipo `data`, e premere INVIO.
 
-    The values for the data variable for each thread appear in the window.
+    I valori per la variabile di dati per ogni thread vengono visualizzati nella finestra.
 
-3. Click again in the cell where you see the `<Add Watch>` text (or the empty header cell in the 5th column), type `count`, and press Enter.
+3. Fare di nuovo clic nella cella in cui viene visualizzato il `<Add Watch>` testo (o la cella di intestazione vuota nella colonna 5), tipo `count`, e premere INVIO.
 
-    The values for the count variable for each thread appear in the window. (If you don't see this much information yet, try pressing F11 a few more times to advance the execution of the threads in the debugger.)
+    I valori per la variabile di conteggio per ogni thread vengono visualizzati nella finestra. (Se non viene visualizzato questo quantità di informazioni ancora, provare a premere F11 alcune altre volte per spostare l'esecuzione dei thread nel debugger.)
 
-    ![Parallel Watch Window](../debugger/media/dbg-multithreaded-parallel-watch.png "ParallelWatchWindow")
+    ![Finestra Espressioni di controllo parallelo](../debugger/media/dbg-multithreaded-parallel-watch.png "ParallelWatchWindow")
 
-4. Right-click one of the rows in the window to see available options.
+4. Fare doppio clic su una delle righe nella finestra per visualizzare le opzioni disponibili.
 
-## <a name="flagging-and-unflagging-threads"></a>Flagging and Unflagging Threads  
-You can flag threads that you want to give special attention. Flagging threads is a good way to keep track of important threads and to ignore threads that you do not care about.  
+## <a name="flagging-and-unflagging-threads"></a>Impostazione e rimozione dei flag dei thread  
+È possibile contrassegnare i thread che si desidera prestare particolare attenzione. Contrassegno di thread è un buon metodo per tenere traccia dei thread importanti e per ignorare i thread che non si desidera eseguire.  
   
-#### <a name="to-flag-threads"></a>To flag threads  
+#### <a name="to-flag-threads"></a>Per impostare i flag dei thread  
 
-1. In the **Parallel Watch** window, hold down the SHIFT key and select multiple rows.
+1. Nel **espressioni di controllo parallelo** finestra, tenere premuto il tasto MAIUSC e selezionare più righe.
 
-2. Right-click and choose **Flag**.
+2. Mouse e scegliere **Flag**.
 
-    Now, all the selected threads are flagged. Now, you can filter to show only flagged threads.
+    A questo punto, tutti i thread selezionati vengono contrassegnati. A questo punto, è possibile filtrare per mostrare solo thread con flag.
   
-3.  In the **Parallel Watch** window, find the **Show Only Flagged Threads** button ![Show Flagged Threads](../debugger/media/dbg-threads-show-flagged.png "ThreadMarker").  
+3.  Nel **espressioni di controllo parallelo** finestra, trovare il **Mostra solo thread con flag** pulsante ![Mostra thread con flag](../debugger/media/dbg-threads-show-flagged.png "ThreadMarker").  
   
-4.  Click the **Show Only Flagged Threads** button.  
+4.  Fare clic su di **Mostra solo thread con flag** pulsante.  
   
-    Only the flagged thread appears in the list now.
+    Nell'elenco viene visualizzato ora solo il thread con flag.
 
     > [!TIP]
-    > When you have flagged some threads, you can right-click a line of code in the code editor and choose **Run Flagged Threads to Cursor** (make sure that you choose code that all flagged threads will reach). This will pause threads on the selected line of code, making it easier to control the order of execution by [freezing and thawing threads](#bkmk_freeze).
+    > Quando si hanno alcuni thread con flag, è possibile fare doppio clic su una riga di codice nell'editor di codice e scegliere **eseguire i thread con flag fino al cursore** (assicurarsi di scegliere codice che tutti i thread con flag raggiungerà). Questo verrà sospendere i thread nella riga selezionata di codice, rendendo più semplice controllare l'ordine di esecuzione da [blocco e sblocco dei thread](#bkmk_freeze).
 
-5.  Click the **Show Only Flagged Threads** button to toggle back to **Show All Threads** mode.
+5.  Fare clic su di **Mostra solo thread con flag** pulsante per tornare alla **Mostra tutti i thread** modalità.
     
-#### <a name="to-unflag-threads"></a>To unflag threads
+#### <a name="to-unflag-threads"></a>Per rimuovere i flag dei thread
 
-To unflag threads, you can right-click one or more flagged threads in the **Parallel Watch** window and choose **Unflag**.
+Per rimuovere i flag dei thread, è possibile fare doppio clic su uno o più thread con flag nel **espressioni di controllo parallelo** finestra e scegliere **Rimuovi flag**.
 
-## <a name="bkmk_freeze"></a> Freezing and thawing thread execution 
+## <a name="bkmk_freeze"></a>Blocco e sblocco dei esecuzione dei thread 
 
 > [!TIP]
-> You can freeze and thaw (suspend and resume) threads to control the order in which threads perform work. This can help you resolve concurrency issues such as deadlocks and race conditions.
+> È possibile bloccare e sbloccare (sospendere e riprendere) i thread per controllare l'ordine in cui i thread di eseguono operazioni. Ciò consente di risolvere i problemi di concorrenza, ad esempio i deadlock e race condition.
   
-#### <a name="to-freeze-and-unfreeze-threads"></a>To freeze and unfreeze threads  
+#### <a name="to-freeze-and-unfreeze-threads"></a>Per bloccare e sbloccare i thread  
   
-1.  In the **Parallel Watch** window, with all the rows selected, right-click and select **Freeze**.
+1.  Nel **espressioni di controllo parallelo** finestra, con tutte le righe selezionate, fare clic e scegliere **bloccare**.
 
-    In the second column, a pause icon now appears for each row. The pause icon indicates that the thread is frozen.
+    Nella seconda colonna, pausa ora viene visualizzata un'icona per ogni riga. L'icona di sospensione indica che il thread è bloccato.
 
-2.  Deselect the rows by clicking one row only.
+2.  Deselezionare le righe, fare clic su una sola riga.
 
-3.  Right-click a row and select **Thaw**.
+3.  Fare doppio clic su una riga e selezionare **Sblocca**.
 
-    The pause icon goes away on this row, indicating that the thread is no longer frozen.
+    L'icona di sospensione è stata risolta in questa riga, che indica che il thread non è bloccato.
 
-4.  Switch to the code editor and click **F11**. Only the unfrozen thread runs.
+4.  Passare all'editor di codice e fare clic su **F11**. Viene eseguito solo il thread non bloccato.
 
-    The app may also instantiate some new threads. Notice that any new threads are unflagged and are not frozen.
+    L'app può anche creare un'istanza di alcuni nuovi thread. Si noti che tutti i nuovi thread senza flag e non sono bloccati.
 
-## <a name="bkmk_follow_a_thread"></a> Follow a Single Thread by using Conditional Breakpoints
+## <a name="bkmk_follow_a_thread"></a>Seguire un Thread singolo con punti di interruzione condizionali
 
-Sometimes, it can be helpful to follow the execution of a single thread in the debugger. One way you can do that is by freezing threads that you are not interested in, but in some scenarios you may wish to follow a single thread without freezing other threads (to repro a particular bug, for example). To follow a thread without freezing other threads, you must avoid breaking into code except on the thread that you are interested in. You can do this by setting a [conditional breakpoint](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression).
+In alcuni casi, può essere utile seguire l'esecuzione di un singolo thread nel debugger. A tale scopo, è possibile bloccare i thread che non si è interessati in, ma in alcuni scenari è consigliabile seguire un singolo thread senza bloccare altri thread (per riprodurre un particolare, ad esempio bug). Per eseguire un thread senza bloccare altri thread, è necessario evitare l'interruzione del codice, ad eccezione nel thread in cui si è interessati. È possibile farlo impostando un [punto di interruzione condizionale](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression).
 
-You can set breakpoints on different conditions, such as the thread name or the thread ID. Another method that may be helpful is to set the condition on data that you know will be unique to each thread. This is a common debugging scenario, in which you are more interested in some particular data value than in any particular thread.
+È possibile impostare i punti di interruzione in condizioni diverse, ad esempio il nome del thread o l'ID del thread. Un altro metodo che può risultare utile consiste nell'impostare la condizione sui dati che si conoscono univoci per ogni thread. Si tratta di uno scenario di debug comune, in cui si è più interessati in alcuni valori di dati specifico di in un particolare thread.
 
-#### <a name="to-follow-a-single-thread"></a>To follow a single thread
+#### <a name="to-follow-a-single-thread"></a>Per eseguire un thread singolo
 
-1. Right-click the breakpoint you previously created and choose **Conditions**.
+1. Il punto di interruzione creato in precedenza di mouse e scegliere **condizioni**.
 
-2. In the **Breakpoint Settings** window, type `data == 5` for the conditional expression.
+2. Nel **impostazioni punto di interruzione** finestra `data == 5` per l'espressione condizionale.
 
-    ![Conditional Breakpoint](../debugger/media/dbg-multithreaded-conditional-breakpoint.png "ConditionalBreakpoint")
+    ![Punto di interruzione condizionale](../debugger/media/dbg-multithreaded-conditional-breakpoint.png "ConditionalBreakpoint")
 
     > [!TIP]
-    > If you are more interested in a specific thread, then use a thread name or thread ID for the condition. To do this in the **Breakpoint Settings** window, select **Filter** instead of **Conditional expression**, and follow the filter tips. You may want to name your threads in your app code (since threads IDs change when you restart the debugger).
+    > Se è più interessati a un thread specifico, utilizzare un nome o ID del thread per la condizione. Per eseguire questa operazione nel **impostazioni punto di interruzione** selezionare **filtro** anziché **espressione condizionale**e seguire i suggerimenti di filtro. Si consiglia di denominare i thread nel codice dell'app (dal momento che gli ID di thread modifichino quando si riavvia il debugger).
 
-3. Close the **Breakpoint Settings** window.
+3. Chiudi il **impostazioni punto di interruzione** finestra.
 
-4. Click the Restart ![Restart App](../debugger/media/dbg-tour-restart.png "RestartApp") button to restart your debugging session.
+4. Fare clic sul riavvio ![riavviare App](../debugger/media/dbg-tour-restart.png "RestartApp") per riavviare la sessione di debug.
 
-    You will break into code on the thread for which the data variable is 5. Look for the yellow arrow (current debugger context) in the **Parallel Watch** window to verify that.
+    Verrà interrotta nel codice sul thread per il quale la variabile di dati è 5. Cercare la freccia gialla (contesto corrente del debugger) **espressioni di controllo parallelo** finestra per verificare che.
 
-5. Now, you can step over code (F10) and step into code (F11) and follow the execution of the single thread.
+5. A questo punto, è possibile saltare il codice (F10) e passaggio al codice (F11) e seguire l'esecuzione del thread singolo.
 
-    As long as the breakpoint condition is unique to the thread, and the debugger doesn't hit any other breakpoints on other threads (you may need to disable them), you can step over code and step into code without switching to other threads.
+    Fino a quando la condizione del punto di interruzione è univoca per il thread e il debugger non raggiunge qualsiasi altro punto di interruzione in altri thread (potrebbe essere necessario disabilitare le), è possibile saltare il codice e passaggio al codice senza dover passare agli altri thread.
 
     > [!NOTE]
-    > When you advance the debugger, all threads will run. However, the debugger won't break into code on other threads unless one of the other threads hits a breakpoint. 
+    > Quando si arriva il debugger, vengono eseguiti tutti i thread. Tuttavia, il debugger non generi un'interruzione nel codice in altri thread, a meno che uno degli altri thread raggiunge un punto di interruzione. 
   
-## <a name="more-about-the-multithreaded-debugging-windows"></a>More about the multithreaded debugging windows 
+## <a name="more-about-the-multithreaded-debugging-windows"></a>Informazioni sulle finestre di debug con multithreading 
 
-#### <a name="to-switch-to-another-thread"></a>To switch to another thread 
+#### <a name="to-switch-to-another-thread"></a>Per passare a un altro thread 
 
-- To switch to another thread, see [How to: Switch to Another Thread While Debugging](../debugger/how-to-switch-to-another-thread-while-debugging.md) 
+- Per passare a un altro thread, vedere [procedura: passare a un altro Thread durante il debug](../debugger/how-to-switch-to-another-thread-while-debugging.md) 
 
-## <a name="video"></a> Watch a video on multithreaded debugging
+## <a name="video"></a>Guardare un video sul debug con multithreading
 
 <div style="padding-top: 56.25%; position: relative; width: 100%;">
 <iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugging-Multi-threaded-Apps-in-Visual-Studio-2017-MoZPKMD6D_111787171" frameborder="0" allowfullscreen></iframe>
 </div>
 
-#### <a name="to-learn-more-about-the-parallel-stack-and-parallel-watch-windows"></a>To learn more about the Parallel Stack and Parallel Watch windows  
+#### <a name="to-learn-more-about-the-parallel-stack-and-parallel-watch-windows"></a>Per ulteriori informazioni sulle finestre Stack paralleli ed espressioni di controllo parallelo  
   
-- See [How to: Use the Parallel Stack Window](../debugger/using-the-parallel-stacks-window.md) 
+- Vedere [procedura: utilizzare la finestra Stack paralleli](../debugger/using-the-parallel-stacks-window.md) 
 
-- See [How to: Use the Parallel Watch Window](../debugger/how-to-use-the-parallel-watch-window.md) 
+- Vedere [procedura: utilizzare la finestra Espressioni di controllo parallelo](../debugger/how-to-use-the-parallel-watch-window.md) 
   
-## <a name="see-also"></a>See Also  
- [Debug Multithreaded Applications](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
- [How to: Switch to Another Thread While Debugging](../debugger/how-to-switch-to-another-thread-while-debugging.md)
+## <a name="see-also"></a>Vedere anche  
+ [Debug di applicazioni multithreading](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [Procedura: Passare a un altro thread durante il debug](../debugger/how-to-switch-to-another-thread-while-debugging.md)
 

@@ -1,56 +1,73 @@
 ---
-title: "IDebugBreakpointUnboundEvent2::GetReason | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugBreakpointUnboundEvent2::GetReason"
-helpviewer_keywords: 
-  - "IDebugBreakpointUnboundEvent2::GetReason"
+title: IDebugBreakpointUnboundEvent2::GetReason | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugBreakpointUnboundEvent2::GetReason
+helpviewer_keywords:
+- IDebugBreakpointUnboundEvent2::GetReason
 ms.assetid: 0f8a4fec-d3eb-417d-8516-4f7b51904033
 caps.latest.revision: 12
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# IDebugBreakpointUnboundEvent2::GetReason
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 73fdb52435b4aa727b19786c99774f455bca579d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
 
-ottiene il motivo che il punto di interruzione è stato separato.  
+---
+# <a name="idebugbreakpointunboundevent2getreason"></a>IDebugBreakpointUnboundEvent2::GetReason
+Ottiene il motivo che è stato dissociato il punto di interruzione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
-HRESULT GetReason(   
-   BP_UNBOUND_REASON* pdwUnboundReason  
+```cpp  
+HRESULT GetReason(   
+   BP_UNBOUND_REASON* pdwUnboundReason  
 );  
 ```  
   
-```c#  
-int GetReason(   
-   out enum_ BP_UNBOUND_REASON pdwUnboundReason  
+```csharp  
+int GetReason(   
+   out enum_ BP_UNBOUND_REASON pdwUnboundReason  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pdwUnboundReason`  
- \[out\]  Restituisce un valore [BP\_UNBOUND\_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md) dell'enumerazione che specifica il motivo che il punto di interruzione è stato separato.  
+ [out] Restituisce un valore di [BP_UNBOUND_REASON](../../../extensibility/debugger/reference/bp-unbound-reason.md) enumerazione che specifica il motivo è stato dissociato il punto di interruzione.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## Note  
- I motivi includono un punto di interruzione che è riassociata a una posizione diversa dopo un'operazione di Modifica e continuazione, o una definizione di un punto di interruzione è stato associato per errore.  
+## <a name="remarks"></a>Note  
+ I motivi includono un punto di interruzione viene riassociato in una posizione diversa dopo un'operazione di modifica e continuazione o determinare che un punto di interruzione è stato associato nell'errore.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto **di CBreakpointUnboundDebugEventBase** che espone [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) l'interfaccia.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un **CBreakpointUnboundDebugEventBase** oggetto che espone il [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md) interfaccia.  
   
-```cpp#  
+```cpp  
 STDMETHODIMP CBreakpointUnboundDebugEventBase::GetReason(  
     BP_UNBOUND_REASON* pdwUnboundReason)  
 {  
@@ -69,5 +86,5 @@ STDMETHODIMP CBreakpointUnboundDebugEventBase::GetReason(
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDebugBreakpointUnboundEvent2](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2.md)

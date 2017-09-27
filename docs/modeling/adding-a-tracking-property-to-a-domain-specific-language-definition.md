@@ -33,7 +33,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: ef5f86cb3b41af6cc9e7432cdbfb7365471320b8
 ms.contentlocale: it-it
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>Aggiunta di una proprietà di rilevamento alla definizione di un linguaggio specifico di dominio
@@ -120,7 +120,7 @@ Questa procedura dettagliata viene illustrato come aggiungere una proprietà di 
   
 3.  Per il **ExampleElement** dominio classe, aggiungere una proprietà di dominio denominata `Namespace`.  
   
-     Nel **proprietà** finestra per la nuova proprietà, impostare **è esplorabile** a **False**e impostare **tipo** a **CustomStorage** .  
+     Nel **proprietà** finestra per la nuova proprietà, impostare **è esplorabile** a **False**e impostare **tipo** a **CustomStorage **.  
   
 4.  Per il **ExampleElement** dominio classe, aggiungere una proprietà di dominio denominata `IsNamespaceTracking`.  
   
@@ -748,7 +748,7 @@ Questa procedura dettagliata viene illustrato come aggiungere una proprietà di 
   
 4.  Trascinare un **ExampleElement** elemento il **della casella degli strumenti** sulla superficie del diagramma.  
   
-5.  Nel **proprietà** finestra per l'elemento, seleziona il **elemento Namespace** , proprietà e modificare il valore da **DefaultNamespace** a  **OtherNamespace**.  
+5.  Nel **proprietà** finestra per l'elemento, seleziona il **elemento Namespace** , proprietà e modificare il valore da **DefaultNamespace** a ** OtherNamespace**.  
   
      Si noti che il valore di **elemento Namespace** viene ora visualizzato in grassetto.  
   
@@ -766,7 +766,7 @@ Questa procedura dettagliata viene illustrato come aggiungere una proprietà di 
   
 9. Modifica **Default Namespace** per il diagramma da **DefaultNamespace** a **NewNamespace**.  
   
-     Il **Namespace** delle tracce elemento prima di **Default Namespace** proprietà, mentre il **Namespace** del secondo elemento mantiene il valore aggiornato utente  **OtherNamespace**.  
+     Il **Namespace** delle tracce elemento prima di **Default Namespace** proprietà, mentre il **Namespace** del secondo elemento mantiene il valore aggiornato utente ** OtherNamespace**.  
   
 10. Salvare la soluzione e quindi chiudere la build sperimentale.  
   
