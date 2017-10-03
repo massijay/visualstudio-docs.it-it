@@ -2,7 +2,6 @@
 title: Sviluppo di app per dispositivi mobili multipiattaforma in Visual Studio | Microsoft Docs
 ms.custom: 
 ms.date: 12/06/2016
-ms.prod: visual-studio-dev15
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -98,7 +97,7 @@ ms.lasthandoff: 05/13/2017
 |Scegliere se condividere il codice usando i progetti condivisi, i progetti della Libreria di classi portabile o entrambi.<br /><br /> [Condivisione del codice tra piattaforme diverse](http://blogs.msdn.com/b/dotnet/archive/2014/04/21/sharing-code-across-platforms.aspx) (blog di .NET Framework)<br /><br /> [Opzioni di condivisione del codice](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/sharing_code_options/) (Xamarin)<br /><br /> [Opzioni di condivisione del codice con .NET Framework](http://msdn.microsoft.com/library/dn720832.aspx) (MSDN Library)|
 
 ###  <a name="WindowsHTML"></a>Sviluppare per dispositivi Windows 10
- ![Dispositivi Windows](~/cross-platform/media/windowsdevices.png "WindowsDevices")
+ ![Dispositivi Windows](../cross-platform/media/windowsdevices.png "WindowsDevices")
 
  Se si vuole creare una singola app destinata all'intera gamma dei dispositivi Windows 10, creare un'app di Windows universale. L'app verrà progettata usando un progetto singolo e il rendering delle pagine verrà eseguito correttamente, indipendentemente dal dispositivo usato per visualizzarle.
 
@@ -139,13 +138,13 @@ ms.lasthandoff: 05/13/2017
 |[Informazioni sull'emulatore di Visual Studio per Android](http://www.visualstudio.com/explore/msft-android-emulator-vs) (VisualStudio.com)|
 
 ##  <a name="CPP"></a>Compilare un'app per Android e Windows (C++)
- ![Usare C&#43;&#43; per creare app per Windows, iOS e Android](~/cross-platform/media/cross_plat_cpp_intro_image.png "Cross_Plat_CPP_Intro_Image")
+ ![Usare C&#43;&#43; per creare app per Windows, iOS e Android](../cross-platform/media/cross_plat_cpp_intro_image.png "Cross_Plat_CPP_Intro_Image")
 
  Installare prima Visual Studio 2015 e gli strumenti di sviluppo di app per dispositivi mobili multipiattaforma di Visual C++. Quindi, è possibile compilare un'applicazione NativeActivity per Android o un'app per Windows. I modelli C++ per iOS non sono ancora disponibili. Se si vuole, è possibile includere Android e Windows nella stessa soluzione e quindi condividere il codice tra le piattaforme usando una libreria condivisa statica o dinamica multipiattaforma.
 
  Se si vuole compilare un'app per Android che richiede manipolazioni grafiche avanzate, ad esempio un videogioco, è possibile usare C++ a tale scopo. Iniziare con il progetto **Applicazione NativeActivity (Android)** . Questo progetto contiene il supporto completo per la toolchain Clang.
 
- ![Modello di progetto di attività nativa](~/cross-platform/media/cross-plat_cpp_native.png "Cross-Plat_CPP_Native")
+ ![Modello di progetto di attività nativa](../cross-platform/media/cross-plat_cpp_native.png "Cross-Plat_CPP_Native")
 
  Quando si è pronti per eseguire l'app e verificarne l'aspetto, è possibile usare Visual Studio Emulator for Android. È veloce, affidabile e facile da installare e configurare.
 
@@ -173,7 +172,7 @@ ms.lasthandoff: 05/13/2017
 ##  <a name="Unity"></a> Creare un gioco multipiattaforma per Android, iOS e Windows usando Visual Studio Tools per Unity
  Visual Studio Tools per Unity è un'estensione gratuita di Visual Studio che integra gli strumenti efficienti di Visual Studio per la modifica del codice, la produttività e il debug con *Unity*, il motore grafico e per videogiochi multipiattaforma più diffuso nonché un ambiente di sviluppo di app immersive per Windows, iOS, Android e altre piattaforme, incluso il Web.
 
- ![Ambiente di sviluppo VSTU](~/cross-platform/media/vstu_overview.png "VSTU_Overview")
+ ![Ambiente di sviluppo VSTU](../cross-platform/media/vstu_overview.png "VSTU_Overview")
 
  Con Visual Studio Tools per Unity (VSTU) è possibile usare Visual Studio per scrivere script di giochi ed editor in C# e quindi usarne il potente debugger per individuare e correggere gli errori. La versione più recente di VSTU include il supporto di Unity 5 e la colorazione della sintassi per il linguaggio ShaderLab di Unity, una migliore sincronizzazione con Unity, funzionalità di debug più complete e un miglioramento nella generazione del codice per la procedura guidata MonoBehavior. VSTU integra anche i file di progetto Unity, i messaggi della console e la possibilità di iniziare il gioco in Visual Studio evitando in tal modo di dover passare dall'editor di Unity a Visual Studio e viceversa durante la scrittura del codice.
 

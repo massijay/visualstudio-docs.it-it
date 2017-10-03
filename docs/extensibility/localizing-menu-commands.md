@@ -37,7 +37,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 13910907c6041884cc0a1414fd0bfd82757a7639
 ms.contentlocale: it-it
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="localizing-menu-commands"></a>Localizzazione dei comandi di Menu
@@ -52,11 +52,11 @@ ms.lasthandoff: 09/06/2017
   
 2.  Creare una copia di *filename*. en-US.vsct per ogni lingua localizzata.  
   
-     Nome di ogni copia *filename*. *Impostazioni locali*vsct, in cui *internazionali* è un nome di impostazioni cultura specifiche. Per un elenco di valori di nome delle impostazioni cultura, vedere [ID impostazioni locali assegnati da Microsoft](https://msdn.microsoft.com/en-us/library/windows/apps/jj657969.aspx).  
+     Nome di ogni copia *filename*.* Impostazioni locali*vsct, in cui *internazionali* è un nome di impostazioni cultura specifiche. Per un elenco di valori di nome delle impostazioni cultura, vedere [ID impostazioni locali assegnati da Microsoft](https://msdn.microsoft.com/en-us/library/windows/apps/jj657969.aspx).  
   
-     Questi *filename*. *Impostazioni locali*file vsct conterrà il testo del menu localizzata per il pacchetto.  
+     Questi *filename*.* Impostazioni locali*file vsct conterrà il testo del menu localizzata per il pacchetto.  
   
-3.  Aprire ogni *filename*. *Impostazioni locali*file vsct per localizzare il testo.  
+3.  Aprire ogni *filename*.* Impostazioni locali*file vsct per localizzare il testo.  
   
     1.  Modificare il [ButtonText](../extensibility/buttontext-element.md) elemento i valori come appropriato per la lingua particolare.  
   

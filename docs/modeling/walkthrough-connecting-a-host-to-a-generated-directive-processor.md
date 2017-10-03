@@ -23,7 +23,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
 ms.openlocfilehash: 5bfeb8ea94b457114d7ba6ab74b783972e64350c
 ms.contentlocale: it-it
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>Procedura dettagliata: connessione di un host a un processore di direttiva generato
@@ -96,7 +96,7 @@ ms.lasthandoff: 09/06/2017
   
 1.  Aprire la soluzione CustomHost.  
   
-2.  Nel **progetto** menu, fare clic su **Aggiungi riferimento**.  
+2.  Scegliere **Aggiungi riferimento** dal menu **Progetto**.  
   
      Il **Aggiungi riferimento** verrà visualizzata la finestra di dialogo con la **.NET** visualizzata la scheda.  
   

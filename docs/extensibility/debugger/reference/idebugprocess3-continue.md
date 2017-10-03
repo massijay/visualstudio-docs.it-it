@@ -1,58 +1,75 @@
 ---
-title: "IDebugProcess3::Continue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProcess3::Continue"
-helpviewer_keywords: 
-  - "IDebugProcess3::Continue"
+title: IDebugProcess3::Continue | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProcess3::Continue
+helpviewer_keywords:
+- IDebugProcess3::Continue
 ms.assetid: 57506242-5763-4c08-adb9-8a78ce02cebb
 caps.latest.revision: 7
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# IDebugProcess3::Continue
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: c112a29d6b936b53aef5be5366f4066a66265e4f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
 
-Continua a eseguire questo processo in stato di interruzione.  Tutto lo stato precedente di esecuzione \(ad esempio un passaggio\) viene mantenuto einizio del processo che esegue nuovamente.  
+---
+# <a name="idebugprocess3continue"></a>IDebugProcess3::Continue
+Continua l'esecuzione di questo processo da uno stato di arresto. Qualsiasi stato di esecuzione precedente (ad esempio un passaggio) viene mantenuto, e il processo inizia a eseguire di nuovo.  
   
 > [!NOTE]
->  Questo metodo deve essere utilizzato al posto di [Continua](../../../extensibility/debugger/reference/idebugprogram2-continue.md).  
+>  Questo metodo deve essere utilizzato al posto di [continua](../../../extensibility/debugger/reference/idebugprogram2-continue.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HRESULT Continue(  
-   IDebugThread2* pThread  
+   IDebugThread2* pThread  
 );  
 ```  
   
-```c#  
+```csharp  
 int Continue(  
-   IDebugThread2 pThread  
+   IDebugThread2 pThread  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pThread`  
- \[in\]  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) Un oggetto che rappresenta il thread per continuare.  
+ [in] Un [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) oggetto che rappresenta il thread possa proseguire.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, codice di errore restituito.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce il codice di errore.  
   
-## Note  
- Questo metodo viene chiamato su questo processo indipendentemente dal numero di processi sono eseguire il debug, o quali processo ha generato l'evento bloccato.  L'implementazione di deve mantenere lo stato precedente di esecuzione \(ad esempio un passaggio\) e continuare l'esecuzione come se non fosse stata interrotta mai prima del completamento dell'esecuzione precedente.  Ovvero se un thread in questo processo stesse tramite un'operazione di esegui istruzione\/routine e è stato arrestato perché un altro processo interrotto e quindi `Continue` sono stati chiamati, il thread specificato deve completare originale esegue l'operazione.  
+## <a name="remarks"></a>Note  
+ Questo metodo viene chiamato su questo processo, indipendentemente dal numero di processi in fase di debug o il processo che ha generato l'evento di arresto. L'implementazione deve mantenere lo stato di esecuzione precedente (ad esempio un passaggio) e continuare l'esecuzione come se non fosse mai arrestata prima del completamento dell'esecuzione precedente. Vale a dire, se un thread in questo processo stava eseguendo un'operazione del passaggio ed è stato arrestato perché è stato arrestato un altro processo e quindi `Continue` è stato chiamato, il thread deve essere completata l'operazione di passaggio su originale.  
   
- **Avviso** non invia un evento bloccato o un evento \(sincrono\) immediato a [Evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) contempo questa chiamata, in caso contrario il debugger può bloccare.  
+ **Avviso** non inviare un evento di arresto o di un evento (sincrono) immediato [evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) durante la gestione di questa chiamata; in caso contrario il debugger potrebbe bloccarsi.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [Evento](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

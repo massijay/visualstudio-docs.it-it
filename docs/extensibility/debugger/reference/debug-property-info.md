@@ -1,5 +1,5 @@
 ---
-title: DEBUG_PROPERTY_INFO | Documenti di Microsoft
+title: DEBUG_PROPERTY_INFO | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,10 +30,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: fe8f51fb1d5100fbefc0982157498f5772847c30
-ms.lasthandoff: 02/22/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 3c1ce8a931ca8687056fcf161d78b7e40260e15f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="debugpropertyinfo"></a>DEBUG_PROPERTY_INFO
@@ -41,7 +42,7 @@ Contiene informazioni su una proprietà di debug.
   
 ## <a name="syntax"></a>Sintassi  
   
-```cpp#  
+```cpp  
 typedef struct tagDEBUG_PROPERTY_INFO {   
    DEBUGPROP_INFO_FLAGS dwValidFields;  
    BSTR                 bstrFullName;  
@@ -53,7 +54,7 @@ typedef struct tagDEBUG_PROPERTY_INFO {
 } DEBUG_PROPERTY_INFO;  
 ```  
   
-```c#  
+```csharp  
 public struct DEBUG_PROPERTY_INFO {   
    public uint            dwValidFields;  
    public string          bstrFullName;  
@@ -76,7 +77,7 @@ public struct DEBUG_PROPERTY_INFO {
  Il nome della proprietà all'interno di un contesto.  
   
  bstrType  
- Il tipo di proprietà come una stringa formattata.  
+ Il tipo della proprietà come una stringa formattata.  
   
  bstrValue  
  Il valore della proprietà come una stringa formattata.  
@@ -88,9 +89,9 @@ public struct DEBUG_PROPERTY_INFO {
  Una combinazione di flag dal [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) enumerazione che descrive gli attributi di questa proprietà.  
   
 ## <a name="remarks"></a>Note  
- Una proprietà è un oggetto di una struttura gerarchica con un nome, tipo e valore. Ad esempio, una proprietà può descrivere le variabili locali, i parametri, le variabili di controllo e le espressioni e registri.  
+ Una proprietà è un oggetto di una struttura gerarchica con un nome, tipo e valore. Ad esempio, una proprietà può descrivere le variabili locali, parametri, le variabili di controllo e le espressioni e registri.  
   
- Questa struttura viene passata per la [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) in cui viene compilato nel metodo. Questa struttura viene anche restituita come parte di un elenco di questa struttura dal [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) interfaccia che, a sua volta, viene restituito da una chiamata al [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) e [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) metodi.  
+ Questa struttura viene passata per il [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) (metodo) in cui viene compilato. Questa struttura viene anche restituita come parte di un elenco di questa struttura dal [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) interfaccia che, a sua volta, viene restituito da una chiamata al [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) e [ EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) metodi.  
   
 ## <a name="requirements"></a>Requisiti  
  Intestazione: msdbg.h  

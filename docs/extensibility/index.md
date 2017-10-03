@@ -2,14 +2,14 @@
 layout: LandingPage
 author: jasongroce
 ms.author: apexprodleads
-ms.prod: visual-studio-dev15
 ms.technology: vs-ide-sdk
 ms.topic: landing-page
-title: "Documentazione sull&quot;estendibilità di Visual Studio"
-description: "Informazioni sull&quot;estendibilità di Visual Studio."
-translationtype: Machine Translation
+title: "Documentazione sull'estendibilità di Visual Studio"
+description: "Informazioni sull'estendibilità di Visual Studio."
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 1f20a1f524efcd6f16b33ce6fd6887a6ed83c422
 ms.openlocfilehash: 814072a253d17466f270afa63629dd61d5868133
+ms.contentlocale: it-it
 ms.lasthandoff: 05/02/2017
 
 ---

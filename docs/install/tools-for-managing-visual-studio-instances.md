@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: f23906933add1f4706d8786b2950fb3b5d2e6781
 ms.openlocfilehash: 1e81071d8a67fd5b8c38bcf87629604efe6fa4a5
 ms.contentlocale: it-it
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 
@@ -53,7 +53,7 @@ Questi elementi non vengono archiviati nel Registro di sistema globale ed è qui
 1. Se si ha un'istanza aperta di Visual Studio 2017, chiuderla.
 2. Avviare `regedit.exe`.
 3. Selezionare il nodo `HKEY_LOCAL_MACHINE`.
-4. Nel menu principale di Regedit selezionare **File -> Carica hive...**  e quindi selezionare il file di registro privato archiviato nella cartella **AppData\Local**. Ad esempio:
+4. Nel menu principale di Regedit selezionare **File -> Carica hive... ** e quindi selezionare il file di registro privato archiviato nella cartella **AppData\Local**. Ad esempio:
    ```
    %localappdata%\Microsoft\VisualStudio\<config>\privateregistry.bin
    ```

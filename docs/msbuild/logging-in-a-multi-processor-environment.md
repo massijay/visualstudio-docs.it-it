@@ -1,55 +1,72 @@
 ---
-title: "Logging in a Multi-Processor Environment | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSBuild, multi-processor logging"
-  - "MSBuild, logging"
+title: Registrazione in un ambiente multiprocessore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSBuild, multi-processor logging
+- MSBuild, logging
 ms.assetid: dd4dae65-ed04-4883-b48d-59bcb891c4dc
 caps.latest.revision: 9
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Logging in a Multi-Processor Environment
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
+author: kempb
+ms.author: kempb
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: e78d6c35fa294d2f1a39c91af5e278e9e4519d2d
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
 
-La capacità di MSBuild di utilizzare più processori può ridurre notevolmente i tempi di compilazione del progetto, ma aggiunge complessità alla registrazione.  In un ambiente a processore singolo, il logger è in grado di gestire eventi, messaggi, avvisi ed errori in ingresso in modo prevedibile e sequenziale.  In un ambiente multiprocessore, invece, eventi di origini diverse possono verificarsi contemporaneamente o fuori sequenza.  MSBuild fornisce un nuovo logger compatibile con più processori e consente la creazione di "logger di inoltro" personalizzati.  
+---
+# <a name="logging-in-a-multi-processor-environment"></a>Registrazione in un ambiente a più processori
+La possibilità di MSBuild di utilizzare più processori può ridurre notevolmente i tempi di compilazione del progetto, ma aggiunge complessità alla registrazione. In un ambiente a processore singolo, il logger può gestire gli eventi in ingresso, messaggi, avvisi ed errori in modo prevedibile e sequenza. In un ambiente multiprocessore, tuttavia, gli eventi da diverse origini possono arrivare contemporaneamente o fuori sequenza. MSBuild fornisce un nuovo logger compatibile con più processori e consente di creare "logger di inoltro personalizzati."  
   
-## Registrazione di compilazioni a più processori  
- Quando si compila uno o più progetti in un sistema a più processori o a più core, MSBuild compila gli eventi contemporaneamente per tutti i progetti che vengono generati.  Il logger può ricevere una notevole quantità di dati di evento contemporaneamente o fuori sequenza.  Ciò può sovraccaricare il logger e causare un aumento dei tempi di compilazione, un output non corretto del logger, o persino interrompere la compilazione.  Per affrontare tali problemi, il logger di MSBuild può elaborare eventi fuori sequenza e correlare gli eventi e le loro fonti.  
+## <a name="logging-multiple-processor-builds"></a>Compila la registrazione di più processori  
+ Quando si compilano uno o più progetti in un sistema a più processori o multicore, gli eventi di compilazione di MSBuild per tutti i progetti vengono generati contemporaneamente. Una grande quantità di dati dell'evento potrebbero arrivare al logger contemporaneamente o fuori sequenza. Questo può sovraccaricare il logger e causare tempi di compilazione aumentino, output del logger non corretto o compilazione non funzionante. Per risolvere questi problemi, il logger di MSBuild è possibile elaborare gli eventi fuori sequenza e correlare gli eventi e le relative origini.  
   
- È possibile migliorare ulteriormente l'efficienza della registrazione creando un logger di inoltro personalizzato.  Un logger di inoltro personalizzato agisce come un filtro consentendo di scegliere, prima della compilazione, gli eventi che si desidera controllare.  Quando si utilizza un logger di inoltro personalizzato, gli eventi indesiderati non possono sovraccaricare il logger, ingombrare i log, o rallentare i tempi di compilazione.  
+ È possibile migliorare ulteriormente creando un logger di inoltro personalizzato l'efficienza di registrazione. Un logger di inoltro personalizzato funge da filtro in quanto consente di scegliere, prima della compilazione, gli eventi che si desidera monitorare. Quando si utilizza un logger di inoltro personalizzato, gli eventi indesiderati non sovraccaricare il logger, ingombrare i log o rallentare i tempi di compilazione.  
   
-### Modello di registrazione centrale  
- Per le compilazioni a più processori, MSBuild utilizza un "modello di registrazione centrale". Nel modello di registrazione centrale, un'istanza di MSBuild.exe agisce come processo di compilazione primario, o "nodo centrale". Le istanze secondarie di MSBuild.exe, o "nodi secondari", sono associate al nodo centrale.  I logger basati su ILogger e associati al nodo centrale sono noti come "logger centrali" e i logger associati ai nodi secondari sono noti come "logger secondari".  
+### <a name="central-logging-model"></a>Modello di registrazione centrale  
+ Per le compilazioni multiprocessore, MSBuild Usa "modello di registrazione centrale". Nel modello di registrazione centrale, un'istanza di MSBuild.exe agisce come il processo di compilazione primaria, o "nodo centrale". Le istanze secondarie di MSBuild.exe o "nodi secondari", vengono collegate al nodo centrale. Tutti i logger basati su ILogger associati al nodo centrale sono noti come "logger centrale" e i logger associati ai nodi secondari sono note come "logger secondario".  
   
- Quando si verifica una compilazione, i logger secondari indirizzano il traffico eventi ai logger centrali.  Poiché gli eventi originano molti nodi secondari, i dati arrivano simultaneamente al nodo centrale ma con interfoliazione.  Per risolvere i riferimenti tra evento e progetti e tra evento e destinazione, gli argomenti dell'evento includono informazioni di contesto aggiuntive sugli eventi di compilazione.  
+ Quando si verifica una compilazione, il logger secondari indirizzano il traffico eventi per il logger centrale. Poiché gli eventi hanno origine in più nodi secondari, arrivano al nodo centrale contemporaneamente i dati ma con interfoliazione. Per risolvere i riferimenti al progetto di eventi e di destinazione di eventi, gli argomenti dell'evento includono informazioni sul contesto di eventi di compilazione aggiuntive.  
   
- Anche se è richiesta l'implementazione solo di <xref:Microsoft.Build.Framework.ILogger> da parte del logger centrale, è consigliabile implementare anche <xref:Microsoft.Build.Framework.INodeLogger> in modo che il logger centrale venga inizializzato con il numero di nodi parte della compilazione.  L'overload seguente del metodo <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> viene richiamato quando il motore inizializza il logger.  
+ Anche se solo <xref:Microsoft.Build.Framework.ILogger> è richiesta l'implementazione da parte del logger centrale, è consigliabile implementare anche <xref:Microsoft.Build.Framework.INodeLogger> se si desidera che il logger centrale venga inizializzato con il numero di nodi che fanno parte della compilazione. L'overload seguente del <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> metodo viene richiamato quando il motore inizializza il logger:  
   
-```  
+```csharp
 public interface INodeLogger: ILogger  
 {  
     public void Initialize(IEventSource eventSource, int nodeCount);  
 }  
 ```  
   
-### Modello di registrazione distribuito  
- Nel modello di registrazione centrale, il traffico in eccesso dei messaggi in ingresso può sovraccaricare il nodo centrale, ad esempio, in caso di compilazione di più progetti contemporaneamente. Il sistema può risultare sovraccarico e le prestazioni di compilazione ridotte.  
+### <a name="distributed-logging-model"></a>Modello di registrazione distribuita  
+ Nel modello di registrazione centrale, una quantità eccessiva traffico di messaggi in ingresso, ad esempio quando compilazione di più progetti in una sola volta, può sovraccaricare il nodo centrale, che un aumento delle dimensioni del sistema e si ridotta le prestazioni di compilazione.  
   
- Per ridurre il problema, MSBuild offre anche un "modello di registrazione distribuito" che estende il modello di registrazione centrale consentendo di creare logger di inoltro.  Un logger di inoltro viene associato a un nodo secondario e riceve eventi di compilazione in ingresso da tale nodo.  Il logger di inoltro è simile a un logger normale salvo che può filtrare gli eventi e quindi inoltrare al nodo centrale solo quelli desiderati.  Il traffico di messaggi al nodo centrale risulta ridotto e pertanto le prestazioni sono migliori.  
+ Per ridurre questo problema, MSBuild offre anche un "modello di registrazione distribuito" che consente di estendere il modello di registrazione centrale consentendo la creazione di logger di inoltro. Un logger di inoltro è collegato a un nodo secondario e riceve eventi di compilazione in ingresso da tale nodo. Il logger di inoltro è analogo a un logger normale ad eccezione del fatto che sia possibile filtrare gli eventi e quindi inoltrare solo quelli desiderati per il nodo centrale. Ciò riduce il traffico dei messaggi in corrispondenza del nodo centrale e consente pertanto prestazioni migliori.  
   
- È possibile creare un logger di inoltro implementando l'interfaccia <xref:Microsoft.Build.Framework.IForwardingLogger> che deriva da <xref:Microsoft.Build.Framework.ILogger>.  L'interfaccia viene definita come segue:  
+ È possibile creare un logger di inoltro mediante l'implementazione di <xref:Microsoft.Build.Framework.IForwardingLogger> interfaccia, che deriva da <xref:Microsoft.Build.Framework.ILogger>. L'interfaccia è definita come segue:  
   
-```  
+```csharp
 public interface IForwardingLogger: INodeLogger  
 {  
     public IEventRedirector EventRedirector { get; set; }  
@@ -57,12 +74,12 @@ public interface IForwardingLogger: INodeLogger
 }  
 ```  
   
- Per inoltrare gli eventi in un logger di inoltro, chiamare il metodo <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> dell'interfaccia <xref:Microsoft.Build.Framework.IEventRedirector>.  Come parametro, passare l'oggetto <xref:Microsoft.Build.Framework.BuildEventArgs> appropriato, o un derivato.  
+ Per inoltrare gli eventi in un logger di inoltro, chiamare il <xref:Microsoft.Build.Framework.IEventRedirector.ForwardEvent%2A> metodo il <xref:Microsoft.Build.Framework.IEventRedirector> interfaccia. Passare il valore <xref:Microsoft.Build.Framework.BuildEventArgs>, o un derivato, come parametro.  
   
- Per ulteriori informazioni, vedere [Creating Forwarding Loggers](../msbuild/creating-forwarding-loggers.md).  
+ Per ulteriori informazioni, vedere [la creazione di logger di inoltro](../msbuild/creating-forwarding-loggers.md).  
   
-### Associazione di un logger distribuito  
- Per associare un logger distribuito su una compilazione da riga di comando, utilizzare l'opzione `/distributedlogger` \(o `/dl` in breve\).  Il formato per la specifica dei nomi dei tipi di logger e delle classi è lo stesso di quello per l'opzione `/logger`, ma un logger distribuito presenta due classi di registrazione: un logger di inoltro e un logger centrale.  Di seguito è riportato un esempio di associazione di un logger distribuito:  
+### <a name="attaching-a-distributed-logger"></a>Associare un Logger distribuito  
+ Per associare un logger distribuito su una compilazione da riga di comando, utilizzare il `/distributedlogger` (o, `/dl` breve) passare. Il formato per specificare i nomi delle classi e tipi di logger sono identici a quelli per il `/logger` commutatore, ad eccezione del fatto che un logger distribuito è costituito da due classi di registrazione: un logger di inoltro e un logger centrale. Ecco un esempio di associare un logger distribuito:  
   
 ```  
 msbuild.exe *.proj /distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,  
@@ -70,8 +87,8 @@ Culture=neutral*XMLForwardingLogger,MyLogger,Version=1.0.2,
 Culture=neutral  
 ```  
   
- I due nomi dei logger nell'opzione `/dl` sono separati da un asterisco \(\*\).  
+ Un asterisco (*) separa i due nomi dei logger nel `/dl` passare.  
   
-## Vedere anche  
- [Build Loggers](../msbuild/build-loggers.md)   
- [Creating Forwarding Loggers](../msbuild/creating-forwarding-loggers.md)
+## <a name="see-also"></a>Vedere anche  
+ [Logger di compilazione](../msbuild/build-loggers.md)   
+ [Creazione di logger di inoltro](../msbuild/creating-forwarding-loggers.md)

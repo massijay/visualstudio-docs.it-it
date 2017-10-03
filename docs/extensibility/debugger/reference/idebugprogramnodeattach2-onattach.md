@@ -1,52 +1,69 @@
 ---
-title: "IDebugProgramNodeAttach2::OnAttach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugProgramNodeAttach2::OnAttach"
-helpviewer_keywords: 
-  - "IDebugProgramNodeAttach2::OnAttach"
+title: IDebugProgramNodeAttach2::OnAttach | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDebugProgramNodeAttach2::OnAttach
+helpviewer_keywords:
+- IDebugProgramNodeAttach2::OnAttach
 ms.assetid: 5fe52761-a508-4ab5-abdb-334fb6590334
 caps.latest.revision: 3
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# IDebugProgramNodeAttach2::OnAttach
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
+ms.author: gregvanl
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
+ms.openlocfilehash: 5e0162d17fc81b1304213d0259863f35523a833f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/26/2017
 
-Si connette al programma associato o ripianificare il processo di connessione [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) al metodo.  
+---
+# <a name="idebugprogramnodeattach2onattach"></a>IDebugProgramNodeAttach2::OnAttach
+Collega al programma associato o rinvia il collegamento del processo di [collegamento](../../../extensibility/debugger/reference/idebugengine2-attach.md) metodo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
+```cpp  
 HRESULT OnAttach(  
-   [in] REFGUID guidProgramId  
+   [in] REFGUID guidProgramId  
 );  
 ```  
   
-```c#  
+```csharp  
 int OnAttach(  
-   ref Guid guidProgramId  
+   ref Guid guidProgramId  
 };  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `guidProgramId`  
- \[in\]  `GUID` da assegnare al programma associato.  
+ [in] `GUID` da assegnare al programma associato.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`.  Restituisce `S_FALSE` se [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) viene chiamato il metodo.  In caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`. Restituisce `S_FALSE` se il [collegamento](../../../extensibility/debugger/reference/idebugengine2-attach.md) metodo non deve essere chiamato. In caso contrario, verrà restituito un codice di errore.  
   
-## Note  
- Questo metodo viene chiamato durante il processo di connessione, prima che [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) venga chiamato il metodo.  Il metodo di `OnAttach` possibile eseguire il processo stesso della connessione \(in questo caso, questo metodo restituisce `S_FALSE`\) o rinviare il processo di connessione al metodo di `IDebugEngine2::Attach` \(il metodo di `OnAttach` restituisce `S_OK`\).  In qualsiasi evento, il metodo di `OnAttach` possibile impostare `GUID` del programma sottoposto a debug a `GUID`specificato.  
+## <a name="remarks"></a>Note  
+ Questo metodo viene chiamato durante il processo di collegamento, prima di [collegamento](../../../extensibility/debugger/reference/idebugengine2-attach.md) metodo viene chiamato. Il `OnAttach` metodo può eseguire il processo di collegamento (in questo caso, questo metodo restituisce `S_FALSE`) o rinviare il processo di collegamento per il `IDebugEngine2::Attach` metodo (il `OnAttach` restituisce `S_OK`). In entrambi i casi il `OnAttach` metodo può impostare il `GUID` del programma in fase di debug per il dato `GUID`.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md)   
  [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)
