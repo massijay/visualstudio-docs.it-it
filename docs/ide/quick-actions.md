@@ -16,20 +16,6 @@ manager: ghogen
 dev_langs:
 - CSharp
 - VB
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
 ms.openlocfilehash: ec2ae70312c7cb5f26630246046cadc7c210e1c2
@@ -62,7 +48,7 @@ Ecco alcune delle azioni rapide comuni applicabili sia a codice C# che a codice 
 ### <a name="add-missing-casesdefault-caseboth"></a>Aggiungere elementi case mancanti, un'istruzione case predefinita o entrambi
 Quando si crea un'istruzione `switch` in C# o un'istruzione `Select Case` in Visual Basic, è possibile usare un'azione codice per aggiungere automaticamente elementi case mancanti, un'istruzione case predefinita o entrambi.  Per un'istruzione vuota come la seguente:
 
-```CSharp
+```csharp
 enum MyEnum
 {
     Item1,
@@ -78,8 +64,7 @@ switch(myEnum)
 {
 }
 ```
-
-```VB
+```vb
 Enum MyEnum
     Item1
     Item2
@@ -96,7 +81,7 @@ End Select
 
 l'uso dell'azione rapida **Aggiungi entrambi** per inserire sia elementi case mancanti che un'istruzione case predefinita consente di creare quanto segue:
 
-```CSharp
+```csharp
 switch(myEnum)
 {
     case MyEnum.Item1:
@@ -109,8 +94,7 @@ switch(myEnum)
         break;
 }
 ```
-
-```VB
+```vb
 Select Case myEnum
     Case MyEnum.Item1
         Exit Select
@@ -124,7 +108,7 @@ End Select
 ### <a name="correct-misspelled-type"></a>Correggere un tipo con errori di ortografia
 Se si digita accidentalmente un tipo con errori di ortografia in Visual Studio, questa azione rapida consente di correggerlo automaticamente.  Questi elementi vengono visualizzati nel menu Lampadina come **"Modifica '*tipo con errore*' in '*tipo corretto*'**.  Ad esempio:
 
-```CSharp
+```csharp
 // Before
 private viod MyMethod()
 {
@@ -137,8 +121,7 @@ private void MyMethod()
 {
 }
 ```
-
-```VB
+```vb
 ' Before
 Function MyFunction as Intger
 End Function
@@ -153,7 +136,7 @@ End Function
 ### <a name="remove-unnecessary-cast"></a>Rimuovere un cast non necessario
 Se si esegue il cast di un tipo a un altro tipo che non richiede un cast, l'azione rapida **Rimuovi cast non necessario** consente di rimuovere il cast dal codice.
 
-```CSharp
+```csharp
 // before
 int number = (int)3;
 
@@ -162,8 +145,7 @@ int number = (int)3;
 // after
 int number = 3;
 ```
-
-```VB
+```vb
 ' Before
 Dim number as Integer = CType(3, Integer)
 
@@ -176,7 +158,7 @@ Dim number as Integer = 3
 ### <a name="replace-method-with-property--replace-property-with-method"></a>Sostituire un metodo con una proprietà o una proprietà con un metodo
 Queste azioni rapide consentono di convertire un metodo in una proprietà o viceversa.  L'esempio seguente illustra la modifica da un metodo a una proprietà.  Nel caso opposto è sufficiente invertire le sezioni *Prima* e *Dopo*.
 
-```CSharp
+```csharp
 private int MyValue;
 
 // Before
@@ -193,8 +175,7 @@ public int MyValue
     get { return MyValue; }
 }
 ```
-
-```VB
+```vb
 Dim MyValue As Integer
 
 ' Before
@@ -215,7 +196,7 @@ End Property
 ### <a name="make-method-synchronous"></a>Rendere sincrono un metodo
 Quando si usa la parola chiave `async` / `Async` su un metodo, si prevede che venga usata anche la parola chiave `await` / `Await` in un punto all'interno del metodo stesso.  Se tuttavia ciò non avviene, viene visualizzata un'azione rapida che consente di impostare il metodo come sincrono rimuovendo la parola chiave `async` / `Async` e modificando il tipo restituito.  Usare l'opzione **Imposta il metodo come sincrono** dal menu Azioni rapide.
 
-```CSharp
+```csharp
 // Before
 async Task<int> MyAsyncMethod()
 {
@@ -230,8 +211,7 @@ int MyAsyncMethod()
     return 3;
 }
 ```
-
-```VB
+```vb
 ' Before
 Async Function MyAsyncMethod() As Task(Of Integer)
     Return 3
@@ -248,7 +228,7 @@ End Function
 ### <a name="make-method-asynchronous"></a>Rendere asincrono un metodo
 Quando si usa la parola chiave `await`/`Await` all'interno di un metodo, si prevede che il metodo stesso sia contrassegnato dalla parola chiave `async`/`Async`.  Se tuttavia ciò non avviene, viene visualizzata un'azione rapida che consente di impostare il metodo come asincrono.  Usare l'opzione **Rendi asincrono il metodo/Rendi asincrona la funzione** dal menu Azioni rapide.
 
-```CSharp
+```csharp
 // Before
 int MyAsyncMethod()
 {
@@ -263,8 +243,7 @@ async Task<int> MyAsyncMethod()
     return await Task.Run(...);
 }
 ```
-
-```VB
+```vb
 ' Before
 Function MyAsyncMethod() as Integer
     Return  Await Task.Run(...)
@@ -289,7 +268,7 @@ Se si usano tipi situati in altri progetti della soluzione, l'azione rapida vien
 
 Dopo l'abilitazione, se si usa un tipo in uno spazio dei nomi non ancora importato, ma esistente in un assembly di riferimento o in un pacchetto NuGet, l'istruzione using/Imports viene creata.
 
-```CSharp
+```csharp
 // Before
 Debug.WriteLine("Hello");
 
@@ -300,8 +279,7 @@ using System.Diagnostics;
 
 Debug.WriteLine("Hello");
 ```
-
-```VB
+```vb
 ' Before
 Debug.WriteLine("Hello")
 
@@ -316,7 +294,7 @@ Debug.WriteLine("Hello")
 ### <a name="convert-to-interpolated-string"></a>Convertire in una stringa interpolata
 Le [stringhe interpolate](/dotnet/csharp/language-reference/keywords/interpolated-strings) rappresentano un modo semplice, simile al metodo **[String.Format](https://msdn.microsoft.com/library/system.string.format.aspx)**, per esprimere stringhe con variabili incorporate.  Questa azione rapida riconosce i casi in cui le stringhe sono concatenate o usano **String.Format** e ne modifica l'utilizzo in quello di una stringa interpolata.
 
-```CSharp
+```csharp
 // Before
 int num = 3;
 string s = string.Format("My string with {0} in the middle", num);
@@ -327,8 +305,7 @@ string s = string.Format("My string with {0} in the middle", num);
 int num = 3;
 string s = $"My string with {num} in the middle";
 ```
-
-```VB
+```vb
 ' Before
 Dim num as Integer = 3
 Dim s as String = String.Format("My string with {0} in the middle", num)
@@ -382,7 +359,7 @@ Questa azione rapida consente di aggiungere caratteri separatori nei valori lett
 ### <a name="convert-if-construct-to-switch"></a>Convertire il costrutto **if** in **switch**
 Questa azione rapida consente di convertire un costrutto **if-then-else** in un costrutto **switch**. Disponibile solo in Visual Studio 2017 (versione 15.3 - anteprima)
 
-```CSharp
+```csharp
 // Before
 if (obj is string s)
 {
@@ -407,8 +384,7 @@ switch (obj)
     break;
 }
 ```
-
-```VB
+```vb
 ' Before
 If TypeOf obj Is String s Then
     Console.WriteLine("obj is a string: " + s)
