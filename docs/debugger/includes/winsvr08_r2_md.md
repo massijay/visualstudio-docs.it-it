@@ -13,10 +13,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 47e69178fa001fb4bb57d189150a25362dbb4e09
+ms.openlocfilehash: c2eb6aa8a693169c78f07c980cc840d922b3f1b2
 ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/27/2017
 ---
-Visual Studio Professional
+Windows Server 2008 R2

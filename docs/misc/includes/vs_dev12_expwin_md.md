@@ -13,10 +13,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 47e69178fa001fb4bb57d189150a25362dbb4e09
+ms.openlocfilehash: 740b2827beaaf53cc0614f0bde361c972578b59e
 ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/27/2017
 ---
-Visual Studio Professional
+Visual Studio 2013 Express per Windows

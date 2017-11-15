@@ -103,4 +103,3 @@
 #### [<PackageFiles> Elemento (programma di avvio automatico)](packagefiles-element-bootstrapper.md)
 #### [<Strings> Elemento (programma di avvio automatico)](strings-element-bootstrapper.md)
 #### [<Schedules> Elemento (programma di avvio automatico)](schedules-element-bootstrapper.md)
-## [InstallShield Limited Edition](installshield-limited-edition.md)
