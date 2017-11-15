@@ -4,40 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- msvse_settingsdesigner.err.nameblank
-helpviewer_keywords:
-- application settings [Visual Studio]
+f1_keywords: msvse_settingsdesigner.err.nameblank
+helpviewer_keywords: application settings [Visual Studio]
 ms.assetid: 35254321-ad14-47d9-b8c6-39ab3203c5d9
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 924d62f31ae073f3b832507182aa511abc484011
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
-ms.openlocfilehash: 09baef8c468ac8a165587ec8c143ad5c184d4a05
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="managing-application-settings-net"></a>Gestione delle impostazioni di un'applicazione (.NET)
 Le impostazioni dell'applicazione consentono di archiviare le informazioni sull'applicazione in modo dinamico. Le impostazioni consentono di archiviare nel computer client le informazioni che non devono essere incluse nel codice dell'applicazione (ad esempio una stringa di connessione), le preferenze dell'utente e altre informazioni necessarie in fase di esecuzione.  
@@ -112,4 +93,3 @@ Properties.Settings.Default.Save();
   
 ## <a name="see-also"></a>Vedere anche  
  [Accesso alle impostazioni dell'applicazione](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings)
-

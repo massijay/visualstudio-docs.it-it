@@ -4,34 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0fa335fd-e442-448f-913f-25a19df90a93
-caps.latest.revision: 6
+caps.latest.revision: "6"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 0488f42c64c3079b671e046055112f8366d2c2bf
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 1a723104cdd350dcc2c5fac80eef4e98b178df4c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="using-microsoftvisualstudiotesttoolsunittesting-members-in-unit-tests"></a>Uso di membri Microsoft.VisualStudio.TestTools.UnitTesting in unit test
 Il framework di unit test supporta gli unit test in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Usare le classi e membri dello spazio dei nomi Microsoft.VisualStudio.TestPlatform.UnitTestFramework quando si esegue la codifica di unit test. È possibile usarli sia quando si scrive uno unit test da zero che per la modifica di uno unit test generato dal codice sottoposto a test.  
@@ -145,4 +129,3 @@ Il framework di unit test supporta gli unit test in [!INCLUDE[vsprvs](../code-qu
   
 ## <a name="see-also"></a>Vedere anche  
  Microsoft.VisualStudio.TestPlatform.UnitTestFramework
-

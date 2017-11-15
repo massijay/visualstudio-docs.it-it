@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ExportTemplateWizard
+f1_keywords: VS.ExportTemplateWizard
 helpviewer_keywords:
 - Visual Studio templates, creating project templates
 - project templates, metadata files
@@ -17,30 +15,15 @@ helpviewer_keywords:
 - project templates, custom template locations
 - project templates, creating
 ms.assetid: a1a6999d-a34c-48a8-b1cf-027eb5c76398
-caps.latest.revision: 19
-author: kempb
-ms.author: kempb
+caps.latest.revision: "19"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9713f09b7379b14b9362e3853a910948935c501e
-ms.openlocfilehash: 279a123088308a54dccfa9abe0bfbcdb18e5aaf1
-ms.contentlocale: it-it
-ms.lasthandoff: 05/31/2017
-
+ms.openlocfilehash: a473ac2be65acc9b08455fe687b52468f5ca9fa6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-create-project-templates"></a>Procedura: creare modelli di progetto
 Questa procedura consente di creare un modello tramite l'**Esportazione guidata modelli**, che crea il pacchetto del modello in un file con estensione zip. Per una distribuzione più efficiente, è anche possibile creare modelli in formato VSIX tramite l'estensione Esportazione guidata modelli o con i modelli inclusi in [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]. In alternativa è possibile creare modelli manualmente.  
@@ -75,4 +58,3 @@ Questa procedura consente di creare un modello tramite l'**Esportazione guidata 
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di modelli di progetti e di elementi](../ide/creating-project-and-item-templates.md)   
  [Procedura: Creare modelli di elementi](../ide/how-to-create-item-templates.md)
-

@@ -4,34 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2a34de2-6527-4c21-8b93-2f268ee894b7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b95b4754af66c39d741b7df8a74a433ff812f834
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 9e27f528abfa41621b840756f11bc139e82708d0
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>Uso di shim per isolare l'applicazione da altri assembly per gli unit test
 I **tipi shim** sono una delle due tecnologie che il framework Microsoft Fakes usa per permettere agli utenti di isolare dall'ambiente i componenti sottoposti a test. Gli shim deviano le chiamate ai metodi specifici al codice scritto come parte del test. Molti metodi restituiscono risultati diversi dipendenti dalle condizioni esterne, ma uno shim si trova sotto il controllo del test e può restituire risultati coerenti a ogni chiamata. Ciò rende i test più semplici da scrivere.  
@@ -569,4 +553,3 @@ ShimFile.WriteAllTextStringString = shim;
  [Isolamento del codice sottoposto a test con Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)   
  [Blog di Peter Provost sugli shim in Visual Studio 2012](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)   
  [Video (durata: 1 ora e 16 minuti) su come testare codice non testabile con Fakes in Visual Studio 2012](http://go.microsoft.com/fwlink/?LinkId=261837)
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 03/10/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.devlang: csharp
@@ -16,28 +15,12 @@ manager: ghogen
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Code_Style.General
 - VS.ToolsOptionsPages.Text_Editor.Basic.Code_Style.General
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 46846db26bee30841e6cb35913d533b512d01ba0
-ms.openlocfilehash: acc01617fffd7465cee01267482112aac5e352fc
-ms.contentlocale: it-it
-ms.lasthandoff: 03/27/2017
-
+ms.openlocfilehash: d42bb9165748b7282aa42f062b545add62ad1c93
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="code-styles-and-quick-actions"></a>Stili di codice e azioni rapide
 È possibile impostare le preferenze relative allo stile di codice per i progetti C# e Visual Basic nella finestra **Strumenti > Opzioni** selezionando **Editor di testo > C#/Base > Stile codice > Generale**.  Le opzioni impostate in questa finestra sono valide per il computer locale.  Quando viene selezionata, ogni voce dell'elenco visualizza un'anteprima delle preferenze corrispondenti, come illustrato di seguito.
 
@@ -47,5 +30,5 @@ Per ogni voce è possibile impostare **Preferenza** e **Gravità** dal menu a di
 
 Per .NET è possibile gestire le impostazioni relative agli stili di codice anche con un file [EditorConfig](editorconfig-code-style-settings-reference.md).  In questo caso, le impostazioni selezionate nella finestra Opzioni rappresentano le impostazioni di fallback, mentre il file EditorConfig ha la precedenza.  È possibile usare questo file per applicare e configurare lo stile di codifica per l'intero archivio o per tutto il team.
 
-# <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedere anche
 * [Azioni rapide](quick-actions.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.classdesigner.diagram
+f1_keywords: vs.classdesigner.diagram
 helpviewer_keywords:
 - Class Designer [Visual Studio]
 - Class Designer, about Class Designer
@@ -17,30 +15,15 @@ helpviewer_keywords:
 - classes [Visual Studio], viewing
 - class designer
 ms.assetid: 40ed2c9d-0ce0-4b95-ad78-5dec2065ccea
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 4cf663beb18731b40c7ac754d98d327835f91a45
-ms.contentlocale: it-it
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 0354b32a4289dceec58db1fe27bc50ddd44068c4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="designing-and-viewing-classes-and-types"></a>Progettazione e visualizzazione di classi e tipi
 Con Progettazione classi di Visual Studio è possibile progettare, visualizzare ed effettuare il refactoring di classi e altri tipi all'interno del codice. Usare i diagrammi classi per creare e modificare le classi nel progetto di Visual C# .NET, Visual Basic .NET o C++, comprendere meglio la struttura del progetto o riorganizzare il codice.  

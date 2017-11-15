@@ -1,44 +1,45 @@
 ---
-title: "Funzione CvWriteMessage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cvmarkers/CvWriteMessageW"
-  - "cvmarkers/CvWriteMessageExW"
-  - "cvmarkers/CvWriteMessageVA"
-  - "cvmarkers/CvWriteMessageExVW"
-  - "cvmarkers/CvWriteMessageExA"
-  - "cvmarkers/CvWriteMessageA"
-  - "cvmarkers/CvWriteMessageExVA"
-  - "cvmarkers/CvWriteMessageVW"
-helpviewer_keywords: 
-  - "CvWriteMessageExVA (metodo)"
-  - "CvWriteMessageW (metodo)"
-  - "CvWriteMessageVW (metodo)"
-  - "CvWriteMessageExVW (metodo)"
-  - "CvWriteMessageExW (metodo)"
-  - "CvWriteMessageA (metodo)"
-  - "CvWriteMessageVA (metodo)"
-  - "CvWriteMessageExA (metodo)"
+title: Funzione CvWriteMessage | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cvmarkers/CvWriteMessageW
+- cvmarkers/CvWriteMessageExW
+- cvmarkers/CvWriteMessageVA
+- cvmarkers/CvWriteMessageExVW
+- cvmarkers/CvWriteMessageExA
+- cvmarkers/CvWriteMessageA
+- cvmarkers/CvWriteMessageExVA
+- cvmarkers/CvWriteMessageVW
+helpviewer_keywords:
+- CvWriteMessageExVA method
+- CvWriteMessageW method
+- CvWriteMessageVW method
+- CvWriteMessageExVW method
+- CvWriteMessageExW method
+- CvWriteMessageA method
+- CvWriteMessageVA method
+- CvWriteMessageExA method
 ms.assetid: e20ae7be-bfa7-437a-b8c1-fa0f1baa7f83
-caps.latest.revision: 3
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 6559ed85c44e262d00965be7e173b0c6257f696c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Funzione CvWriteMessage
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Scrive un messaggio nel file di traccia del Visualizzatore di concorrenza.  
+# <a name="cvwritemessage-function"></a>Funzione CvWriteMessage
+Scrive un messaggio nel file di traccia del visualizzatore di concorrenza.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 HRESULT CvWriteMessageW(  
@@ -94,31 +95,31 @@ HRESULT CvWriteMessageExVA(
     _In_ va_list argList);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `argList`  
  Elenco di argomenti.  
   
  `category`  
- Categoria dell'intervallo  
+ Categoria della sezione  
   
  `level`  
- Livello di importanza dell'intervallo.  
+ Livello di importanza della sezione.  
   
  `pMarkerSeries`  
- Contesto di una serie di marcatori validi.  Non può essere NULL.  
+ Contesto della serie di marcatori valido. Non può essere NULL.  
   
  `pMessage`  
- Stringa di formato del messaggio.  Non può essere NULL.  
+ Stringa di formato del messaggio. Non può essere NULL.  
   
-## Valore restituito  
- S\_OK quando il messaggio è scritto correttamente.  Codice di errore nel caso siano alcuni errori.  Utilizzare le macro SUCCEEDED\/FAILED per verificare la condizione di errore.  
+## <a name="return-value"></a>Valore restituito  
+ S_OK quando il messaggio è stato scritto correttamente. Codice dell'errore nel caso in cui si siano verificati errori. Usare le macro SUCCEEDED/FAILED per controllare la condizione di errore.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** cvmarkers.h  
   
  **Unicode:** CvWriteMessageW, CvWriteMessageVW, CvWriteMessageExW, CvWriteMessageExVW  
   
  **ANSI:** CvWriteMessageA, CvWriteMessageVA, CvWriteMessageExA, CvWriteMessageExVA  
   
-## Vedere anche  
- [riferimento alla libreria C\+\+](../profiling/cpp-library-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [C++ Library Reference](../profiling/cpp-library-reference.md) (Riferimento alla libreria C++)

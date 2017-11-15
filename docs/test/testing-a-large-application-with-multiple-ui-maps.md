@@ -1,40 +1,24 @@
 ---
-title: "Test di un&quot;applicazione di grandi dimensioni con più mappe dell&quot;interfaccia utente | Microsoft Docs"
+title: "Test di un'applicazione di grandi dimensioni con più mappe dell'interfaccia utente | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - coded UI tests, multiple UI maps
 - coded UI tests, for large applications
 ms.assetid: 6e1ae9ec-e9b1-458a-bd96-0eb15e46f1d5
-caps.latest.revision: 22
+caps.latest.revision: "22"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 846860b7d61d9fbda6ca10793420b66fdab4a01f
-ms.contentlocale: it-it
-ms.lasthandoff: 05/19/2017
-
+ms.openlocfilehash: 0be707ec592265c75ce6e0c36954010e496ac91c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="testing-a-large-application-with-multiple-ui-maps"></a>Test di un'applicazione di grandi dimensioni con più mappe dell'interfaccia utente
 In questo argomento viene illustrato l'uso dei test codificati dell'interfaccia utente per il test di un'applicazione di grandi dimensioni con più mappe dell'interfaccia utente.  
@@ -160,4 +144,3 @@ namespace ContosoProject
  [Usare l'automazione dell'interfaccia utente per testare il codice](../test/use-ui-automation-to-test-your-code.md)   
  [Creazione di test codificati dell'interfaccia utente](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
  [Composizione di un test codificato dell'interfaccia utente](../test/anatomy-of-a-coded-ui-test.md)
-

@@ -1,23 +1,26 @@
 ---
-title: "Procedura: specificare l&#39;icona di un&#39;applicazione (Visual Basic, C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "icone [Visual Studio], applicazione"
-  - "proprietà dell'applicazione [Visual Studio], le icone"
-  - "applicazione (icone) [Visual Studio]"
+title: 'Procedura: Specificare l''icona di un''applicazione (Visual Basic, C#) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- icons [Visual Studio], application
+- application properties [Visual Studio], icons
+- application icons [Visual Studio]
 ms.assetid: ad8e14ed-adc2-45b6-a0be-818b16d5616f
-caps.latest.revision: 18
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 17cce04dd94829225823de676e286b7d0158abec
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-specify-an-application-icon-visual-basic-c"></a>Procedura: specificare l'icona di un'applicazione (Visual Basic, C#)
 La proprietà `Icon` per un progetto specifica il file icona (.ico) che verrà visualizzato per l'applicazione compilata in Esplora file e nella barra delle applicazioni di Windows.  
@@ -44,8 +47,3 @@ La proprietà `Icon` per un progetto specifica il file icona (.ico) che verrà v
  [Application Page, Project Designer (C#)](../ide/reference/application-page-project-designer-csharp.md)  (Applicazione (pagina), Creazione progetti (C#))  
  [Managing Application Properties](../ide/application-properties.md)(Gestione delle proprietà delle applicazioni)  
  [Procedura: Aggiungere o rimuovere risorse](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -4,34 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ef1188f-89dc-413d-801d-0efdaf9b0427
-caps.latest.revision: 22
+caps.latest.revision: "22"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0d9e28ee58dde41703f2149534f542b08d55b9ec
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 00f7cd1d45bca63387acc7f38b39b1cb51b4b2be
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="enable-coded-ui-testing-of-your-controls"></a>Abilitare il test codificato dell'interfaccia utente per i controlli
 Il controllo può essere testato più facilmente se si implementa il supporto per il framework dei test codificati dell'interfaccia utente. È possibile aggiungere gradualmente livelli crescenti di supporto. Si può iniziare supportando la registrazione, la riproduzione e la convalida delle proprietà. Sarà quindi possibile consentire al generatore di test codificati dell'interfaccia utente di riconoscere le proprietà personalizzate del controllo, nonché specificare classi personalizzate per accedere a tali proprietà dal codice generato. È anche possibile consentire al generatore di test codificati dell'interfaccia utente di acquisire le azioni nella modalità che più si avvicina di più allo scopo dell'azione registrata.  
@@ -238,4 +222,3 @@ Il controllo può essere testato più facilmente se si implementa il supporto pe
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Windows.Forms.AccessibleObject>   
  [Usare l'automazione dell'interfaccia utente per testare il codice](../test/use-ui-automation-to-test-your-code.md)
-

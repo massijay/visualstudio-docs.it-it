@@ -4,40 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
+ms.technology: tgt-pltfrm-cross-plat
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-caps.latest.revision: 15
-author: BrianPeek
-ms.author: brpeek
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: d284309b0243f8d551d06c53d50d5df5de8f3f3c
-ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: b2d86a6025e2ec9c2ba92870939248cf2dffb5b5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="install-visual-c-for-cross-platform-mobile-development"></a>Install Visual C++ for Cross-Platform Mobile Development
+# <a name="install-visual-c-for-cross-platform-mobile-development"></a>Installare Visual C++ per Sviluppo app per dispositivi mobili multipiattaforma
 [Visual C++ per Sviluppo app per dispositivi mobili multipiattaforma](http://go.microsoft.com/fwlink/p/?LinkId=536383) è un componente installabile di Visual Studio 2015. Include modelli multipiattaforma di Visual Studio e installa gli SDK e gli strumenti multipiattaforma per iniziare rapidamente, senza doverli individuare, scaricare e configurare manualmente. Con questi strumenti di Visual Studio è possibile creare, modificare, eseguire il debug e testare facilmente i progetti multipiattaforma. Questo argomento descrive come installare gli strumenti e il software di terze parti necessari per sviluppare app multipiattaforma mediante Visual Studio. Per una panoramica del componente, vedere [Visual C++ per dispositivi mobili multipiattaforma](http://go.microsoft.com/fwlink/p/?LinkId=536387)  
   
  [Requisiti](#Requirements)   

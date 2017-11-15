@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 02/01/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,30 +16,15 @@ helpviewer_keywords:
 - customizing Start Page [Visual Studio]
 - Visual Studio Start page
 ms.assetid: 925d42eb-ec34-426e-ad81-19db8630e536
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 102091f8214b822a5b6be1c93f913d6ddbcd8d9b
-ms.contentlocale: it-it
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 178c20c9c4c3af8f5252e70ca603cdf8f8335e52
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="customize-the-start-page-for-visual-studio"></a>Personalizzazione della pagina iniziale per Visual Studio
 È possibile personalizzare la pagina iniziale di Visual Studio con diverse modalità predefinite, ad esempio facendo in modo che visualizzi la finestra di dialogo **Apri progetto** o che apra la soluzione caricata più di recente. È inoltre possibile visualizzare una pagina iniziale personalizzata, ovvero una pagina XAML Windows Presentation Foundation (WPF) che viene eseguita in una finestra dello strumento e che può eseguire comandi interni a Visual Studio.  
@@ -76,4 +60,3 @@ ms.lasthandoff: 05/24/2017
 
 ## <a name="see-also"></a>Vedere anche  
  [Personalizzare l'IDE di Visual Studio](../ide/personalizing-the-visual-studio-ide.md)   
-

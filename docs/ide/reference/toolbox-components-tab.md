@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Toolbox, Components tab
+helpviewer_keywords: Toolbox, Components tab
 ms.assetid: 332fafab-a763-4244-b388-15d1b5b5cc04
-caps.latest.revision: 14
-author: kempb
-ms.author: kempb
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d32d11a430227800cb3ed53831a9565eb6adeb3
-ms.openlocfilehash: 3a1ae20e3aca94339621546ac69bbfffd3a75ab3
-ms.contentlocale: it-it
-ms.lasthandoff: 05/30/2017
-
+ms.openlocfilehash: bb474e832f815453fd84ba35bc3680b961e17954
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="toolbox-components-tab"></a>Casella degli strumenti, Scheda Componenti
 Consente di visualizzare i componenti che è possibile aggiungere alle finestre di progettazione di [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] e [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]. Oltre ai componenti [!INCLUDE[dnprdnshort](../../code-quality/includes/dnprdnshort_md.md)] inclusi in [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], ad esempio i componenti <xref:System.Messaging.MessageQueue> e <xref:System.Diagnostics.EventLog>, in questa scheda è possibile aggiungere componenti personalizzati o di terze parti. Per altre informazioni, vedere [Procedura: modificare le schede della Casella degli strumenti](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db).  

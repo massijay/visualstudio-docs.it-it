@@ -4,33 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d08de69-c32e-4f0b-89aa-75347b15fb82
-caps.latest.revision: 11
+caps.latest.revision: "11"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: badc5d3077ddfe8f76f24cbbf7a52869fde8f318
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 665e16720466faff5dd52635066198e36d58d117
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="unit-testing-existing-c-applications-with-test-explorer"></a>Testing unità delle applicazioni C++ esistenti con Esplora test
 È consigliabile, prima di modificare un'applicazione esistente, assicurarsi di avere una buona copertura con unit test. Questo permette di avere la certezza che le modifiche non abbiano introdotto bug. Se l'applicazione non dispone di unit test, si possono aggiungere usando le tecniche illustrate in questo argomento. In questo argomento viene descritto come aggiungere unit test per codice esistente in Visual C++, partendo dalla decisione di come verificare il codice per la creazione, la scrittura e infine eseguire i test.  
@@ -182,4 +167,3 @@ ms.lasthandoff: 04/04/2017
 2.  In Esplora test scegliere **Esegui tutto**.  
   
  Per altre informazioni, vedere [Guida introduttiva allo sviluppo basato su test con Esplora test](../test/quick-start-test-driven-development-with-test-explorer.md).
-

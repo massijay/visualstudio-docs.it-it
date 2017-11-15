@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.classdesigner.CannotShowBaseType
+f1_keywords: vs.classdesigner.CannotShowBaseType
 helpviewer_keywords:
 - class diagrams
 - types [Visual Studio], visualizing
@@ -17,30 +15,15 @@ helpviewer_keywords:
 - types [Visual Studio], class diagrams
 - relationships, visualizing
 ms.assetid: c4f46d94-9972-42ac-ae63-6ff306369965
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e4d056e8e2819c89eec52ebb29747acc49a08654
-ms.contentlocale: it-it
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 78d7dba3bb799e15b1a609cd5f7bd50e2089195c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="viewing-types-and-relationships-class-designer"></a>Visualizzazione dei tipi e delle relazioni (Progettazione classi)
 Progettazione classi usa i diagrammi classi per visualizzare i dettagli dei tipi, ad esempio i membri che li costituiscono e le relazioni che condividono. La visualizzazione di queste entità è effettivamente una visualizzazione dinamica nel codice. Ciò significa che è possibile modificare i tipi nella finestra di progettazione e quindi visualizzare le modifiche riflesse nel codice sorgente dell'entità. Analogamente, il diagramma classi viene mantenuto sincronizzato con le modifiche apportate alle entità nel codice.  

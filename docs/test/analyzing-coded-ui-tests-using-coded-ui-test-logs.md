@@ -1,37 +1,21 @@
 ---
-title: Analisi dei test codificati dell&quot;interfaccia utente utilizzando i log dei test codificati dell&quot;interfaccia utente | Microsoft Docs
+title: Analisi dei test codificati dell'interfaccia utente utilizzando i log dei test codificati dell'interfaccia utente | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e795873-1d4b-4a13-a52a-a411d87fb759
-caps.latest.revision: 13
+caps.latest.revision: "13"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 5f32c2bc9f289a69a5ef9e7acfc1a973017fec0f
-ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 39ed1ba397fd1c0a9ff1f30acea1cff4a38529a2
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="analyzing-coded-ui-tests-using-coded-ui-test-logs"></a>Analisi dei test codificati dell'interfaccia utente utilizzando i log dei test codificati dell'interfaccia utente
 I log dei test codificati dell'interfaccia utente filtrano e registrano informazioni importanti sulle esecuzioni dei test codificati dell'interfaccia utente.  
@@ -100,7 +84,7 @@ I log dei test codificati dell'interfaccia utente filtrano e registrano informaz
   
      Verrà visualizzato l'output del test in cui è incluso un collegamento al log azioni.  
   
-     ![Collegamenti dei risultati e dell'output del codificato dell'interfaccia utente](~/test/media/cuit_htmlactionlog2.png "CUIT_HTMLActionLog2")  
+     ![Collegamenti dei risultati e dell'output del codificato dell'interfaccia utente](../test/media/cuit_htmlactionlog2.png "CUIT_HTMLActionLog2")  
   
 5.  Scegliere il collegamento UITestActionLog.html.  
   
@@ -126,4 +110,3 @@ I log dei test codificati dell'interfaccia utente filtrano e registrano informaz
 ## <a name="see-also"></a>Vedere anche  
  [Usare l'automazione dell'interfaccia utente per testare il codice](../test/use-ui-automation-to-test-your-code.md)   
  [Procedura: Eseguire test da Microsoft Visual Studio](http://msdn.microsoft.com/Library/1a1207a9-2a33-4a1e-a1e3-ddf0181b1046)
-

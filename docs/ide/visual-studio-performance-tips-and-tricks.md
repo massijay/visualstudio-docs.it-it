@@ -3,38 +3,20 @@ title: Suggerimenti sulle prestazioni di Visual Studio | Microsoft Docs
 ms.date: 08/31/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- debugger
+helpviewer_keywords: debugger
 ms.assetid: 2fbcb59e-e981-4b40-8b7a-c1140d31ec4b
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 173811a4f2d9974755e2432822c801388403ab7c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 4306111cd49a5299bfa5d4e5e22b212bc7799fe2
-ms.openlocfilehash: fbaa543564506a99d3ed6833ec4d1f692fae43f7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Suggerimenti sulle prestazioni di Visual Studio
 
@@ -61,7 +43,7 @@ In caso di una soluzione molto grande con molti progetti, possono essere utili l
 
     Per abilitare **Caricamento leggero soluzioni**, selezionare **Strumenti > Opzioni > Progetti e soluzioni > Caricamento leggero soluzioni**.
 
-    Alcune funzionalità dell'ambiente di sviluppo integrato non sono abilitate in questa modalità. Per determinare se questa scelta può essere utile, vedere [Tempo di caricamento più breve della soluzione](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15/) e [Ottimizzare il caricamento delle soluzioni](../ide/optimize-solution-loading-in-visual-studio).
+    Alcune funzionalità dell'ambiente di sviluppo integrato non sono abilitate in questa modalità. Per determinare se questa scelta può essere utile, vedere [Tempo di caricamento più breve della soluzione](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15/) e [Ottimizzare il caricamento delle soluzioni](../ide/optimize-solution-loading-in-visual-studio.md).
 
 - **Scaricare progetti**
 
@@ -152,4 +134,3 @@ Per una descrizione dettagliata del Garbage Collector di CLR, vedere [Nozioni fo
 
 ## <a name="see-also"></a>Vedere anche  
  [IDE di Visual Studio](../ide/index.md)
-

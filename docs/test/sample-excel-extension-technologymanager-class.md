@@ -4,35 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8a7b760d-b5ac-4451-9593-6ac1a0b95cdb
-caps.latest.revision: 9
+caps.latest.revision: "9"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 07e37b1a1d7b02992bb4da69bd158878095dd789
-ms.contentlocale: it-it
-ms.lasthandoff: 05/19/2017
-
+ms.openlocfilehash: 1932646809cba6c6211f87965ffee82e918c6882
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="sample-excel-extension-technologymanager-class"></a>Estensione Excel di esempio: classe TechnologyManager
 Questa classe, che estende la classe <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyManager>, è responsabile di fornire i servizi di base per l'estensione [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)]. Benché la classe di base disponga di numerosi metodi, in questo esempio ne viene usato solo un sottoinsieme.  
@@ -84,4 +67,3 @@ Questa classe, che estende la classe <xref:Microsoft.VisualStudio.TestTools.UITe
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
  <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement.QueryId%2A>   
  [Estensione di test codificati dell'interfaccia utente e registrazioni delle azioni per supportare Microsoft Excel](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
-

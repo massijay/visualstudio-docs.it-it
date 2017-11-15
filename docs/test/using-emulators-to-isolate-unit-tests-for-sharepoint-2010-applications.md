@@ -4,34 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b681164c-c87a-4bd7-be48-ed77e1578471
-caps.latest.revision: 15
+caps.latest.revision: "15"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1a7692176545f341fa753aa8838a089639a7b753
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 478415dee5bcf1b37277f84ad0a49240bfc21a16
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications"></a>Uso di emulatori per isolare gli unit test per le applicazioni di SharePoint 2010
 Il pacchetto Microsoft.SharePoint.Emulators fornisce un set di librerie che consentono di creare unit test isolati per le applicazioni di Microsoft SharePoint 2010. Gli emulatori usano [shim](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md) del framework di isolamento di [Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) per creare oggetti in memoria leggeri che simulano gli oggetti e i metodi più comuni dell'API di SharePoint. Quando un metodo di SharePoint non viene emulato o quando si desidera modificare il comportamento predefinito di un emulatore, è possibile creare shim Fakes per fornire i risultati desiderati.  
@@ -608,4 +592,3 @@ namspace MySPAppTests
  [Test delle applicazioni di SharePoint 2010 con test codificati dell'interfaccia utente](../test/testing-sharepoint-2010-applications-with-coded-ui-tests.md)   
  [Esecuzione di test di carico e delle prestazioni Web nelle applicazioni di SharePoint 2010 e 2013](/devops-test-docs/test/web-performance-and-load-testing-sharepoint-2010-and-2013-applications)   
  [Sviluppo di soluzioni SharePoint](/office-dev/office-dev/developing-sharepoint-solutions)
-

@@ -4,35 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a608bfba-1a43-4a60-b73a-1fe53ef58098
-caps.latest.revision: 8
+caps.latest.revision: "8"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: a5d365df024b8847fbbd9df4be1aa7053f6f7634
-ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: a5ed96f71b928cdfd3845a81830adaa8de65c054
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="create-a-unit-test-project"></a>Creare un progetto di unit test
 Gli unit test spesso simulano la struttura del codice sottoposto a test. Ad esempio, si crea un progetto unit test per ogni progetto di codice del prodotto. Il progetto test può essere nella stessa soluzione del codice di produzione o in una soluzione separata. È possibile avere più progetti unit test in una soluzione.  
@@ -70,4 +53,3 @@ Gli unit test spesso simulano la struttura del codice sottoposto a test. Ad esem
  **Esecuzione di unit test**  
   
  [Eseguire unit test con Esplora test](../test/run-unit-tests-with-test-explorer.md)
-

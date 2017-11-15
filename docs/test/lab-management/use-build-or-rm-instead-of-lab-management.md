@@ -1,39 +1,22 @@
 ---
-title: Usare Build and Release Management per l&quot;esecuzione di test automatizzati | Microsoft Docs
+title: Usare Build and Release Management per l'esecuzione di test automatizzati | Microsoft Docs
 ms.custom: 
 ms.date: 05/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- automated testing, lab management, test lab
+helpviewer_keywords: automated testing, lab management, test lab
 ms.assetid: F34B0D19-B430-4C01-B402-62A861007E71
-caps.latest.revision: 56
+caps.latest.revision: "56"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 45d36934cf1c46902cac566203cddf4a118b7fe4
-ms.openlocfilehash: 77a0339e1aae3036990f0d9d133a1fcb68844486
-ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
-
+ms.openlocfilehash: 8d843800666ae53a686a18fcab28d02eb4c16743
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="use-build-and-release-management-instead-of-lab-management-for-automated-testing"></a>Usare Build and Release Management per l'esecuzione di test automatizzati
 
@@ -102,4 +85,3 @@ Se è necessario adottare l'isolamento rete, è consigliabile prendere in consid
 * Uno dei motivi per l'adozione dell'isolamento rete è la facilità di configurazione di più cloni. Poiché ogni clone è una replica esatta dell'originale, il nome computer e le impostazioni di configurazione vengono mantenute esattamente come sono. Questo facilita la configurazione di nuovi ambienti. Questo vantaggio, tuttavia causa problemi più avanti nel ciclo di vita (ad esempio, nell'ambiente di produzione), perché il modo in cui le applicazioni vengono infine distribuite non è lo stesso. **In alternativa**, prendere in considerazione la possibilità di configurare i nuovi ambienti nello stesso modo dell'ambiente di produzione, evitando l'uso dell'isolamento rete.
 
 * Usare un'infrastruttura di cloud pubblico, ad esempio [Microsoft Azure](https://azure.microsoft.com/) per le esigenze di test. È possibile usare facilmente [modelli di Azure Resource Manager](https://azure.microsoft.com/documentation/templates/) da [Azure Marketplace](https://azure.microsoft.com/marketplace/) o dai [modelli di avvio rapido di Azure](https://azure.microsoft.com/documentation/templates/) per impostare gruppi di macchine virtuali connessi tramite una rete privata ed esposti alla rete pubblica solo tramite un proxy o un 'jumpbox'.
-

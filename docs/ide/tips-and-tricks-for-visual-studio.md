@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 06/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 20489db9-7441-4f8b-97de-c72070d569b1
-caps.latest.revision: 10
-author: kempb
-ms.author: kempb
+caps.latest.revision: "10"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d2f4eba36e9069a35cf279ccf1c78f72a51d77a1
-ms.openlocfilehash: 27dc4d56a0608ddf031b47775bd9aaef20e24194
-ms.contentlocale: it-it
-ms.lasthandoff: 06/23/2017
-
+ms.openlocfilehash: 40172defbd56f31de9aedbb4cc422c10d1a68dfd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="tips-and-tricks-for-visual-studio"></a>Suggerimenti su Visual Studio
 È possibile spostarsi più facilmente in [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] utilizzando i tasti di scelta rapida descritti in questo argomento. Questo argomento include solo un sottoinsieme dei tasti di scelta rapida disponibili. Per un elenco completo, vedere [Tasti di scelta rapida predefiniti in Visual Studio](../ide/default-keyboard-shortcuts-in-visual-studio.md). Per informazioni su come ottimizzare Visual Studio per l'accessibilità, vedere [Suggerimenti sull'accessibilità](../ide/reference/accessibility-tips-and-tricks.md).  
@@ -90,19 +73,18 @@ ms.lasthandoff: 06/23/2017
 |-|-|  
 |Modalità di suggerimento di IntelliSense|CTRL+ALT+BARRA SPAZIATRICE (Attiva/Disattiva)|  
 |Forzare la visualizzazione di IntelliSense|CTRL+J|  
-|Smart tag|CTRL+.|  
+|Azioni rapide|CTRL+.|  
 |Selezione frammento di codice|CTRL+K,X o ?,TAB (VB)|  
 |Racchiudi tra|CTRL+K,S|  
 |Visualizzare informazioni rapide|CTRL+K,I|  
 |Passa a|CTRL+,|  
-|Vai a definizione|F12|  
-|Visualizza definizione|ALT+F12|  
-|Stack Vai a definizione|CTRL+MAIUSC+8 (Indietro), CTRL+MAIUSC+7 (Avanti)|  
 |Esplorare i riferimenti evidenziati|CTRL+MAIUSC+freccia SU (Precedente), CTRL+MAIUSC+freccia GIÙ (Successivo)|  
 |Zoom dell'editor|CTRL+MAIUSC> (In), CTRL+MAIUSC+< (Out)|  
 |Selezione blocco|Tenere premuto ALT e trascinare il mouse, SHIFT+ALT+tasti di direzione|  
 |Spostare la riga verso l'alto o il basso|ALT+freccia SU o GIÙ|  
+|Vai a definizione|F12|  
 |Visualizza definizione|ALT+F12|  
+|Stack Vai a definizione|CTRL+MAIUSC+8 (Indietro), CTRL+MAIUSC+7 (Avanti)|  
 |Chiudere la finestra Visualizza definizione|ESC|  
 |Alzare di livello la finestra Visualizza definizione a una scheda di documento normale|CTRL+ALT+HOME|  
 |Spostarsi tra più finestre Visualizza definizione|CTRL+ALT+- e CTRL+ALT+=|  
@@ -146,4 +128,3 @@ ms.lasthandoff: 06/23/2017
  [Casella degli strumenti di Visual Studio su Channel 9](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox)   
  [Visual Studio UserVoice](http://visualstudio.uservoice.com/forums/121579-visual-studio)   
  [Bug di connessione di Visual Studio](http://connect.microsoft.com/VisualStudio)
-

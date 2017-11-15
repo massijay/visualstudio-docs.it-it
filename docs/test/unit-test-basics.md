@@ -4,37 +4,19 @@ ms.custom:
 ms.date: 2016-01-07
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.UnitTest.CreateUnitTest
+f1_keywords: vs.UnitTest.CreateUnitTest
 ms.assetid: a80ba9cd-4575-483c-b957-af7ed8dc7e20
-caps.latest.revision: 27
+caps.latest.revision: "27"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 14e31328aade21e8f181b7c81138c1d1181a394c
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: ff2a1dc934083bb237189a1ebdfa25d42612433e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="unit-test-basics"></a>Nozioni di base sugli unit test
 Per controllare che il codice funzioni come previsto, creare ed eseguire unit test. Si parla di unit test in quanto le funzionalità del programma vengono scomposte in comportamenti discreti testabili come singole *unità*. Esplora test di Visual Studio offre un modo flessibile ed efficiente per eseguire gli unit test e visualizzarne i risultati in Visual Studio. Visual Studio installa i framework per unit test Microsoft per codice gestito e nativo. Usare un *framework di unit test* per creare unit test, eseguirli e creare report con i relativi risultati. Eseguire nuovamente gli unit test quando si apportano modifiche per verificare che il codice funzioni ancora correttamente. Quando si usa Visual Studio Enterprise, è possibile eseguire automaticamente i test dopo ogni compilazione.  
@@ -361,4 +343,3 @@ public void AddIntegerHelper_DataDrivenValues_AllShouldPass()
  ![Selezionare altri framework di unit test installati](../test/media/createunittestsdialogextensions.png "CreateUnitTestsDialogExtensions")  
   
  Gli stub di unit test verranno creati usando il framework selezionato.
-

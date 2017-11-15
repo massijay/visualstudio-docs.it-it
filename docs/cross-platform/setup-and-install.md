@@ -7,31 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cfcad00-352c-4161-814c-f5ae32d8ada8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: d353d8a0a41ad487191b79aa68f26585cf9902b4
-ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: dba101890bd2f27c85e8e6053944d8781fa03ed4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="setup-and-install"></a>Configurazione e installazione
 Per creare app native per iOS, Android e Windows da una codebase C#/.NET comune con Xamarin, è necessario quanto segue:  
@@ -74,13 +58,13 @@ In caso di problemi con Xamarin dopo l'esecuzione della procedura di configurazi
   
 2.  All'interno del programma di installazione fare clic sul pulsante **Altre opzioni** (icona con tre barrette) _accanto ad_ **Avvio** e quindi scegliere **Modifica**:  
   
-     ![Scelta dell'opzione Modifica nell'installazione di Visual Studio](~/cross-platform/media/cross-plat-xamarin-setup-1a.png "Cross-Plat Xamarin Setup 1")  
+     ![Scelta dell'opzione Modifica nell'installazione di Visual Studio](../cross-platform/media/cross-plat-xamarin-setup-1a.png "Cross-Plat Xamarin Setup 1")  
   
 3.  Selezionare le caselle seguenti:  
   
     1.  **Dispositivi mobili e giochi > Sviluppo di applicazioni per dispositivi mobili con .NET**. In questo modo verranno selezionati automaticamente anche vari strumenti Android in Strumenti comuni e Software Development Kit. Questa opzione eseguirà inoltre l'aggiornamento di eventuali installazioni esistenti di Xamarin.  
   
-         ![Selezione dell'opzione Sviluppo di applicazioni per dispositivi mobili in Dispositivi mobili e giochi](~/cross-platform/media/cross-plat-xamarin-setup-2a.png "Cross-Plat Xamarin Setup 2")  
+         ![Selezione dell'opzione Sviluppo di applicazioni per dispositivi mobili in Dispositivi mobili e giochi](../cross-platform/media/cross-plat-xamarin-setup-2a.png "Cross-Plat Xamarin Setup 2")  
   
     2. (Facoltativo) **Windows > Sviluppo di app per la piattaforma UWP (Universal Windows Platform)**. Sono incluse opzioni per l'installazione di immagini di emulatori che richiederanno più tempo per il download. È sempre possibile tornare al programma di installazione di Visual Studio per aggiungerle in un secondo momento. 
   

@@ -11,23 +11,20 @@ dev_langs:
 - CSharp
 - C++
 - aspx
-helpviewer_keywords:
-- editor
+helpviewer_keywords: editor
 ms.assetid: 2263956f-3ae0-4bdc-9d3a-4991dfaf4ddb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.technology:
-- vs-ide-general
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b5f39ea962f6b4dcc0e2c6947b2eeabf53d3329a
-ms.openlocfilehash: ba0a0aacc68e2eb9a5cd9b5b672808a71e8c09eb
-ms.contentlocale: it-it
-ms.lasthandoff: 03/01/2017
-
+ms.technology: vs-ide-general
+ms.openlocfilehash: 8750d16a485de062e66041e66e28fa591e957efd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# <a name="visual-studio-unrecoverable-process-error"></a>Errore irreversibile del processo di Visual Studio
+# Errore irreversibile del processo di Visual Studio
 
 Visual Studio 2017 usa diversi processi out-of-process per svolgere le attività necessarie in background, ad esempio testing unità in tempo reale, analizzatori di codice e altro ancora. Questi processi vengono eseguiti out-of-process per offrire vantaggi in termini di prestazioni di Visual Studio, consentendo ad esempio a Visual Studio per rispondere più rapidamente durante l'esecuzione di processi a lunga durata e con uso intensivo di risorse. E poiché Visual Studio è un processo a 32 bit, l'esecuzione di processi out-of-process rende disponibile uno spazio di memoria più grande dove svolgere le attività con uso intensivo della memoria.
 
@@ -37,7 +34,7 @@ in un processo usato da Visual Studio si è verificato un errore irreversibile e
 
 Se viene visualizzato questo messaggio, salvare immediatamente il lavoro, quindi chiudere e riavviare Visual Studio. Se non si esegue questa operazione, Visual Studio può arrestarsi in modo anomalo in qualsiasi momento.
 
-## <a name="list-of-processes"></a>Elenco dei processi
+## Elenco dei processi
 
 Di seguito è riportato un elenco di processi out-of-process usati da Visual Studio che devono essere in esecuzione perché Visual Studio funzioni correttamente.
 
@@ -53,4 +50,3 @@ Di seguito è riportato un elenco di processi out-of-process usati da Visual Stu
 - WindowsAzureGuestAgent.exe
 - WindowsAzureTelemetryService.exe
 - WaAppAgent.exe
-

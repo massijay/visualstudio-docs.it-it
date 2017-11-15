@@ -1,5 +1,5 @@
 ---
-title: Aggiunta del supporto di altri linguaggi all&quot;editor di Visual Studio | Microsoft Docs
+title: Aggiunta del supporto di altri linguaggi all'editor di Visual Studio | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - TextMate language grammar
 - language support
 ms.assetid: d78c43ee-4ef2-42e5-984e-d137de4e7e92
-caps.latest.revision: 13
-author: kempb
-ms.author: kempb
+caps.latest.revision: "13"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 65cb324c1a7ed91ad5209da7826a1899657a414f
-ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
-
+ms.technology: vs-ide-general
+ms.openlocfilehash: 2dfdf4f5a722bf4fea0c4bd3175e33799aa8b8df
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="adding-visual-studio-editor-support-for-other-languages"></a>Aggiunta del supporto di altri linguaggi all'editor di Visual Studio
 Informazioni su come l'editor di Visual Studio supporti la lettura e il passaggio da un linguaggio di programmazione a un altro e su come aggiungere il supporto per altri linguaggi all'editor di Visual Studio.  

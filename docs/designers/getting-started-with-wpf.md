@@ -1,24 +1,22 @@
 ---
 title: Introduzione a WPF | Microsoft Docs
 ms.custom: 
-ms.date: 7/17/2017
+ms.date: 07/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-designers
+ms.technology: vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f3be98cb-870f-472c-9da5-cb815e4f6598
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
+ms.openlocfilehash: 2c1f81d33e4efb5cc084001b2b754cfa845c91d4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 0387b9a656f97d9354f95f121cad8422e93a69bc
-ms.openlocfilehash: b1d99a132c6e29239862e9bd7629eb47a679138f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="getting-started-with-wpf"></a>Introduzione a WPF
 Windows Presentation Foundation (WPF) è un framework dell'interfaccia utente che crea applicazioni client desktop. La piattaforma di sviluppo WPF supporta un'ampia serie di funzionalità di sviluppo di applicazioni, incluso un modello dell'applicazione, le risorse, i controlli, la grafica, il layout, l'associazione dati, i documenti e la sicurezza. È un subset di .NET Framework, pertanto se in precedenza si sono sviluppate applicazioni con .NET Framework usando ASP.NET o Windows Form, l'esperienza di programmazione dovrebbe essere familiare. In WPF viene usato il linguaggio Extensible Application Markup Language (XAML) per fornire un modello dichiarativo per la programmazione di applicazioni. Questa sezione contiene argomenti introduttivi all'uso di WPF.  
@@ -27,7 +25,7 @@ Windows Presentation Foundation (WPF) è un framework dell'interfaccia utente ch
   
 |||  
 |-|-|  
-|Passare subito a...|[Procedura dettagliata: Applicazione desktop WPF](../designers/walkthrough-my-first-wpf-desktop-application2.md)<br /><br /> [Procedura dettagliata: creare un'applicazione desktop WPF connessa a un servizio mobile di Azure](../designers/walkthrough-create-a-wpf-desktop-application-connected-to-an-azure-mobile-service.md)|  
+|Passare subito a...|[Procedura dettagliata: Applicazione desktop WPF](../designers/walkthrough-my-first-wpf-desktop-application2.md)|  
 | Voglio confrontare strumenti di progettazione XAML... |[Progettazione di XAML in Visual Studio e Blend per Visual Studio](../designers/designing-xaml-in-visual-studio.md)|  
 |Nuovi utenti di .NET?|[Cenni preliminari su .NET Framework](https://msdn.microsoft.com/en-us/library/zw4w595w\(v=vs.140\).aspx)<br /><br /> [Concetti di base sulle applicazioni](/dotnet/standard/application-essentials)<br /><br /> [Guida introduttiva a Visual C# e Visual Basic](../ide/getting-started-with-visual-csharp-and-visual-basic.md)|  
 |Altre informazioni su WPF...|[Introduzione a WPF](../designers/introduction-to-wpf.md)<br /><br /> [Cenni preliminari su XAML (WPF)](https://docs.microsoft.com/dotnet/framework/wpf/advanced/xaml-overview-wpf)<br /><br /> [Controlli](https://docs.microsoft.com/dotnet/framework/wpf/controls/)<br /><br /> [Cenni preliminari sull'associazione dati](https://docs.microsoft.com/dotnet/framework/wpf/data/data-binding-overview)<br /><br /> [Data binding WPF con LINQ to XML](../designers/wpf-data-binding-with-linq-to-xml.md)|  
@@ -38,4 +36,3 @@ Windows Presentation Foundation (WPF) è un framework dell'interfaccia utente ch
  [Panoramica sullo sviluppo di applicazioni](https://docs.microsoft.com/dotnet/framework/wpf/app-development/index)   
  [Documentazione di .NET](https://docs.microsoft.com/dotnet/index)   
  [Create Modern Desktop Applications with Windows Presentation Foundation](../designers/create-modern-desktop-applications-with-windows-presentation-foundation.md) (Creare moderne applicazioni desktop con Windows Presentation Foundation)
-

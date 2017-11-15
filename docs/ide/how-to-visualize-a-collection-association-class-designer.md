@@ -1,11 +1,10 @@
 ---
-title: 'Procedura: Visualizzare un&quot;associazione di raccolte (Progettazione classi) | Microsoft Docs'
+title: 'Procedura: Visualizzare un''associazione di raccolte (Progettazione classi) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,29 +15,15 @@ helpviewer_keywords:
 - collections, collection associations
 - Class Designer [Visual Studio], collection associations
 ms.assetid: 54e39838-2fc9-4dc2-85b6-7e88a743108e
-caps.latest.revision: 6
-author: kempb
-ms.author: kempb
+caps.latest.revision: "6"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 3297f3a610df3480dbaaff0d3d0be2c8952d7a56
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 53eb6ed7e8025ee6cc9a9a3ee8161078accbc457
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-visualize-a-collection-association-class-designer"></a>Procedura: visualizzare un'associazione di raccolte (Progettazione classi)
 Le proprietà e i campi che sono raccolte di altri tipi possono essere visualizzati nel diagramma classi come associazione di raccolte. A differenza di un'associazione normale che visualizza un campo o una proprietà come linea che collega la classe proprietaria al tipo di campo, un'associazione di raccolte viene visualizzata come una linea che collega la classe proprietaria al tipo raccolto.  

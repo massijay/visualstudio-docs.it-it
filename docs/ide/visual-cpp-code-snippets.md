@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74e26fd4-e5ca-4611-a816-0a521b4947a0
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ca7c86466fa23fb21a932f26dc24e37c71cf29b4
-ms.openlocfilehash: b4d0801f9e3924fd801f30b750d0f5dbfca634fd
-ms.contentlocale: it-it
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 0d9a34e371797317d3163f8288474e7a902b4f82
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="visual-c-code-snippets"></a>Frammenti di codice Visual C#
 In Visual Studio, è possibile usare frammenti di codice per aggiungere il codice usato comunemente per file di codice C++. In generale, è possibile usare frammenti di codice in modo molto simile a C#, ma il set predefinito di frammenti di codice è diverso.  
@@ -128,7 +111,7 @@ private:
 ## <a name="for-vs-foreach-vs-forr-vs-rfor"></a>For, foreach, forr e rfor  
  Sono disponibili quattro diversi frammenti for che forniscono tipi diversi di cicli for.  
   
- Il frammento **for`size_t` rende disponibile un ciclo** in cui la condizione è basata sulla lunghezza (in `for`) di un oggetto:  
+ Il frammento **for`size_t` rende disponibile un ciclo**  in cui la condizione è basata sulla lunghezza (in `for`) di un oggetto:  
   
 ```cpp  
 for (size_t i = 0; i < length; i++)  

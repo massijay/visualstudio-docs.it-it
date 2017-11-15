@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,31 +15,15 @@ helpviewer_keywords:
 - task list
 - Visual Studio, task list
 ms.assetid: f46a75a8-47b3-4cb6-bb59-b72e3356a664
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: 01e8f3cc1bbcc2bc4b2fc94df1dad7d248b67290
-ms.contentlocale: it-it
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: a380d0e1503a0a0a0683d6088a1ca2f9c085184d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="using-the-task-list"></a>Utilizzo dell'elenco attività
 Usare **Elenco attività** per tenere traccia dei commenti di codice che usano token quali `TODO` e `HACK`, o token personalizzati, e per gestire i collegamenti che indirizzano direttamente a una posizione predefinita nel codice. Fare clic sull'elemento nell'elenco per passare alla relativa posizione nel codice sorgente.  

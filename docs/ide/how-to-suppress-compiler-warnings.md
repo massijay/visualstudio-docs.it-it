@@ -4,36 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 31827b17-f933-413d-b28a-b19f903b64ca
-caps.latest.revision: 5
-author: kempb
-ms.author: kempb
+caps.latest.revision: "5"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: 0c4c9c5a885b6f71b8531d4b04baecaec7f45949
-ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
-
+ms.openlocfilehash: 77230702bf8dc582e176e4dd0f17eab3385966c6
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>Procedura: non visualizzare avvisi del compilatore
 È possibile evitare informazioni inutili nel log di compilazione specificando uno o più tipi di avvisi del compilatore che non devono essere contenuti nel log. È ad esempio possibile usare questa tecnica per rivedere alcune ma non tutte le informazioni generate automaticamente quando il livello di dettaglio del log di compilazione viene impostato su Normale, Dettagliato o Diagnostico. Per altre informazioni sul livello di dettaglio, vedere [How to: View, Save, and Configure Build Log Files](../ide/how-to-view-save-and-configure-build-log-files.md) (Procedura: Visualizzare, salvare e configurare file di log di compilazione)  
@@ -127,4 +110,3 @@ ms.lasthandoff: 05/13/2017
  [Walkthrough: Building an Application](../ide/walkthrough-building-an-application.md)  (Procedura dettagliata: compilazione di un'applicazione)  
  [How to: View, Save, and Configure Build Log Files](../ide/how-to-view-save-and-configure-build-log-files.md)  (Procedura: Visualizzare, salvare e configurare file di log di compilazione)  
  [Compiling and Building](../ide/compiling-and-building-in-visual-studio.md) (Compilazione e creazione)
-

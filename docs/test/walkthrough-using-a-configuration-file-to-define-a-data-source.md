@@ -1,11 +1,10 @@
 ---
-title: 'Procedura dettagliata: Uso di un file di configurazione per definire un&quot;origine dati | Microsoft Docs'
+title: 'Procedura dettagliata: Uso di un file di configurazione per definire un''origine dati | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-test
+ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,28 +12,14 @@ helpviewer_keywords:
 - unit tests, walkthrough
 - data sources, defining with configuration files
 ms.assetid: 95fa5214-b12e-4e1f-84e5-cc4c2d86b0d7
-caps.latest.revision: 32
+caps.latest.revision: "32"
 ms.author: douge
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5ab78b6b8eaa8156ed2c8a807b1d8a80e75afa84
-ms.openlocfilehash: 212b8bd6e6c6e695bcc7a4486cbcde59e7309446
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 3f7ea8032efa4b35603568afd8b17107c293f2e6
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>Procedura dettagliata: Uso di un file di configurazione per definire un'origine dati
 Questa procedura dettagliata illustra come usare un'origine dati definita in un file app.config per gli unit test. Viene mostrato come creare un file app.config che definisce un'origine dati che può essere usata dalla classe <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>. Le attività incluse nella procedura dettagliata sono le seguenti:  
@@ -47,7 +32,7 @@ Questa procedura dettagliata illustra come usare un'origine dati definita in un 
   
 -   Definizione di origini dati.  
   
--   Accesso alle origini dati mediante la classe <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>.  
+-   Accesso alle origini dati tramite la classe <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare questa procedura dettagliata, è necessario disporre di:  
@@ -288,4 +273,3 @@ Questa procedura dettagliata illustra come usare un'origine dati definita in un 
  [Creazione ed esecuzione di unit test per il codice esistente](http://msdn.microsoft.com/en-us/e8370b93-085b-41c9-8dec-655bd886f173)   
  [Test dell'applicazione](/devops-test-docs/test/test-apps-early-and-often)   
  [Procedura: Creare uno unit test basato sui dati](../test/how-to-create-a-data-driven-unit-test.md)
-
