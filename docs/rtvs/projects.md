@@ -1,28 +1,24 @@
 ---
 title: Progetti in R Tools per Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 6/29/2017
-ms.prod: visual-studio-dev15
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 732b73cf-2014-4f98-838e-4141ef9dedac
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: a7e4311ba042ad00a65f071ea7a735d70b5732d9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 00ccd6319f13fc6be32ca7bde4e2c5f76a5cbc49
-ms.contentlocale: it-it
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="creating-r-projects-in-visual-studio"></a>Creazione di progetti R in Visual Studio
 
 Un progetto R (un file `.rxproj`) identifica tutti i file di origine e di contenuto associati al progetto,  contiene le informazioni di compilazione relative a ogni file, gestisce le informazioni per l'integrazione con sistemi di controllo del codice sorgente e consente di organizzare l'applicazione in componenti logici. Le informazioni relative all'area di lavoro, ad esempio l'elenco dei pacchetti installati, vengono gestite, tuttavia, separatamente nell'area di lavoro stessa.
@@ -127,4 +123,3 @@ Il progetto evidenziato in grassetto è il progetto di "avvio" per la soluzione.
 > Al momento, a differenza di quanto avviene con Python (vedere [Creazione di un'estensione C++ per Python](../python/cpp-and-python.md)) non esiste alcuna integrazione esplicita tra R e i linguaggi C#/C++.  Sono tuttavia disponibili librerie che consentono di creare punti di comunicazione tra R e i linguaggi C# e C++.
 
 Per altre informazioni sulla gestione di progetti e soluzioni in generale, vedere [Soluzioni e progetti in Visual Studio](../ide/solutions-and-projects-in-visual-studio.md).
-

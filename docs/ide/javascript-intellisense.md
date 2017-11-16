@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 06/28/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,30 +25,15 @@ helpviewer_keywords:
 - IntelliSense extensibility [JavaScript]
 - XML documentation comments [JavaScript]
 ms.assetid: af1a3171-c9d8-45a3-9c96-a763e3b163ef
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 694e747f09e38a2dc363057ccdb43ac55f4c61ee
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 359e1eb5df8f19774d352ace631802367b6dd8c9
-ms.openlocfilehash: 759ffc281b8c673f5987afc6512b225434b69dec
-ms.contentlocale: it-it
-ms.lasthandoff: 07/11/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="javascript-intellisense"></a>IntelliSense per JavaScript
 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] offre funzionalità di modifica complete di JavaScript, implementabili all'istante. Visual Studio, gestito da un servizio di linguaggio basato su TypeScript, offre una modalità IntelliSense più completa, il supporto di funzionalità JavaScript aggiornate e funzioni di produttività migliorate quali Vai a definizione, il refactoring e altro ancora.
@@ -150,6 +134,5 @@ Per impostazione predefinita il servizio di linguaggio Salsa prova a rilevare le
 Attualmente il rilevamento automatico funziona per le dipendenze scaricate da npm (mediante la lettura del file `package.json`), Bower (mediante la lettura del file `bower.json`) e per singoli file del progetto corrispondenti a un elenco contenente circa 400 tra le librerie JavaScript più diffuse. Se ad esempio nel progetto è presente `jquery-1.10.min.js`, verrà recuperato e caricato il file `jquery.d.ts` per garantire una funzionalità di modifica più completa. Tale file `.d.ts` non avrà alcun impatto sul progetto. 
 
 Se non si vuole usare l'acquisizione automatica, disattivarla mediante l'aggiunta di un file di configurazione, come descritto di seguito. È comunque possibile inserire manualmente file di definizione da usare direttamente nel progetto.
-
 
 

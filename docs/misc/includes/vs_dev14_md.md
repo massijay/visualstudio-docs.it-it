@@ -13,10 +13,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: b0d54ce52adac12569cc4662af2d637af05cff8e
+ms.openlocfilehash: a2e260a646b8da0e3348d5d912fe3ed683c5c5b8
 ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/27/2017
 ---
-Microsoft SQL Server 2005
+Visual Studio 2015

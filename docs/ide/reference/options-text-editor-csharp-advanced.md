@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,30 +19,15 @@ helpviewer_keywords:
 - outlining options [J#]
 - XML documentation, creating
 ms.assetid: 947f9d9a-b0f3-408d-9866-d82895bcee31
-caps.latest.revision: 22
-author: kempb
-ms.author: kempb
+caps.latest.revision: "22"
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ea9179ad37514ffad4876177b05150eecc22def
-ms.openlocfilehash: 61a061b6a58b18451fc53c8d53f77889cc1ea253
-ms.contentlocale: it-it
-ms.lasthandoff: 05/24/2017
-
+ms.openlocfilehash: 7537b4fc3fec90808c6bdc4a982fe3b7ff37a1d5
+ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="options-text-editor-c-advanced"></a>Opzioni, Editor di testo, C#, Avanzate
 Usare questa finestra di dialogo per modificare le impostazioni di formattazione dell'editor, di refactoring del codice e dei commenti della documentazione XML per Visual C#. Per accedere a questa finestra di dialogo, fare clic su **Opzioni** nel menu **Strumenti**, spandere la cartella **Editor di testo**, espandere **C#** e quindi fare clic su **Avanzate**.  
@@ -67,13 +51,13 @@ Usare questa finestra di dialogo per modificare le impostazioni di formattazione
   
 -   Le modifiche [Modifica e continuazione](../../debugger/edit-and-continue.md) non valide sono visualizzate in viola.  
   
- Spostare il puntatore sul segmento di codice sottolineato per visualizzare una descrizione comando con informazioni sull'errore.  
+Spostare il puntatore sul segmento di codice sottolineato per visualizzare una descrizione comando con informazioni sull'errore.  
   
- Mostra errori di semantica in tempo reale  
- Identifica alcuni errori di compilazione senza compilazione esplicita, ad esempio la dichiarazione e l'uso di un tipo sconosciuto o il riferimento a una proprietà sconosciuta.  
+Mostra errori di semantica in tempo reale  
+Identifica alcuni errori di compilazione senza compilazione esplicita, ad esempio la dichiarazione e l'uso di un tipo sconosciuto o il riferimento a una proprietà sconosciuta.  
   
- Evidenzia riferimenti a simbolo sotto il cursore  
- Quando il cursore viene posizionato all'interno di un simbolo o quando si fa clic su un simbolo, vengono evidenziate tutte le istanze del simbolo nel file di codice.  
+Evidenzia riferimenti a simbolo sotto il cursore  
+Quando il cursore viene posizionato all'interno di un simbolo o quando si fa clic su un simbolo, vengono evidenziate tutte le istanze del simbolo nel file di codice.  
   
 ## <a name="refactoring"></a>Refactoring  
  Verifica risultati del refactoring  

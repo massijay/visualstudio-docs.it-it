@@ -13,10 +13,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: b0d54ce52adac12569cc4662af2d637af05cff8e
+ms.openlocfilehash: aa19fa7139a35ad423ffc148ca9be174a673d745
 ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 10/27/2017
 ---
-Microsoft SQL Server 2005
+Visual Studio Express 2012 per Windows 8

@@ -1,27 +1,24 @@
 ---
 title: Integrazione di SQL Server con R Tools per Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 6/30/2017
+ms.date: 06/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 919dfc34-234a-489e-91bf-74a4cefae26c
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 8c26ad4d9df3fb8b84c5d8c93e213858bc2ccb67
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: fa4f6a27eeacd2f016a248daa74074392b1137f2
-ms.openlocfilehash: b7afc0b2e62245e30814a0bc00d455400ae1b2d8
-ms.contentlocale: it-it
-ms.lasthandoff: 07/20/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="working-with-sql-server-and-r"></a>Uso di SQL Server ed R
 
 L'ottimo supporto di Visual Studio per SQL Server consente agli esperti di dati di lavorare con database R e SQL attraverso la possibilità di creare ed eseguire query SQL e di usare le stored procedure.
@@ -159,4 +156,3 @@ WITH RESULT SETS ((medallion NVARCHAR(max), hack_license NVARCHAR(max)));
 
 > [!Tip]
 > Se Esplora oggetti di SQL Server è aperto in Visual Studio, la stored procedure pubblicata viene visualizzata nella cartella **Programmabilità > Stored procedure** del database. È anche possibile eseguirla da Esplora oggetti facendo clic con il pulsante destro del mouse e selezionando **Esegui procedura**, o chiamandola in modo interattivo da una finestra Query `.sql`.
-

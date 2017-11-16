@@ -1,27 +1,24 @@
 ---
 title: Modello di progetto Web Django per Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 7/13/2017
+ms.date: 07/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c479be58-13eb-4d77-9a27-c97ddc290963
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: fb051c025f0d1f62a4ff3c5ef4dc5dace48c0400
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 242203505dc80c9cdfe6041fbf97308a16ccd2c8
-ms.contentlocale: it-it
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="django-web-project-template"></a>Modello di progetti Web Django
 
 [Django](https://www.djangoproject.com/) è un framework Python di alto livello progettato per lo sviluppo rapido, sicuro e scalabile di applicazioni Web. Il supporto di Python in Visual Studio include un modello di progetto per configurare la struttura di un'applicazione Web basato su Django. Per usare il modello in Visual Studio, scegliere **File > Nuovo > Progetto**, cercare "Django" e selezionare il modello "Progetto Web Django". Il progetto risultante include il codice boilerplate, nonché un database SQLite predefinito. Il modello "Progetto Web Django vuoto" è simile ma non include il database.

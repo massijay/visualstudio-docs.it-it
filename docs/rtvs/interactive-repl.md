@@ -1,27 +1,24 @@
 ---
 title: REPL interattivo con R Tools per Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 6/28/2017
+ms.date: 06/28/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45d7c6ff-abd3-42a4-8376-0e9c8f7226d5
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: f6dc59ef35c468e746ce183aaf131eed14e56038
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 50d5a1e4ae1eaf5bd680a1709876962feeeb3548
-ms.contentlocale: it-it
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="working-with-the-r-interactive-window"></a>Uso della finestra R interattivo
 
 R Tools per Visual Studio (RTVS) offre una finestra R interattivo, nota anche come finestra **REPL** (Read-Evaluate-Print-Loop), in cui è possibile immettere codice R e vedere immediatamente i risultati. Tutti i moduli, la sintassi e le variabili, così come IntelliSense, sono disponibili nella finestra interattiva.

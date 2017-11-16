@@ -1,28 +1,24 @@
 ---
 title: Modifica del codice con R Tools per Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 6/29/2017
-ms.prod: visual-studio-dev15
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a198ccc3-5506-48e7-b3b2-9399661b80d5
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 5c856bb02ca33f999273fd6da782226be5f0f2d2
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 261cced8583b751d74701a8903a10a4584928940
-ms.contentlocale: it-it
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="editing-r-code-in-visual-studio"></a>Modifica del codice R in Visual Studio
  
 R Tools per Visual Studio (RTVS) si adatta allo strumento di modifica di Visual Studio in particolare per quanto riguarda il codice R, mantenendo tutte le funzionalità e la possibilità di usare le estensioni. Se si preferiscono i tasti di scelta rapida VIM, è ad esempio possibile installare l'[estensione VsVim](https://visualstudiogallery.msdn.microsoft.com/59ca71b3-a4a3-46ca-8fe1-0e90e3f79329) gratuita da Visual Studio Gallery.
@@ -150,4 +146,3 @@ Le opzioni nella scheda **R > Avanzate** sono specifiche di RTVS:
 | Finestra interattiva | Controllo della sintassi nella console R | Disattivato | Applica il controllo della sintassi nella finestra interattiva. Il controllo della sintassi non funziona correttamente se viene applicato a istruzioni su più righe. | 
 | struttura | Struttura del codice | Attivato | Crea automaticamente aree comprimibili in caso di istruzioni su più righe. | 
 | Controllo della sintassi | Mostra errori di sintassi | Attivato | Abilita il controllo automatico della sintassi del codice. |
-

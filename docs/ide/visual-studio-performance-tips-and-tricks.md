@@ -12,11 +12,11 @@ caps.latest.revision: "1"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 173811a4f2d9974755e2432822c801388403ab7c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 936d0df8c838227c5d6c99b0f04f1069eae8a277
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Suggerimenti sulle prestazioni di Visual Studio
 
@@ -36,14 +36,6 @@ I suggerimenti per le prestazioni di Visual Studio si riferiscono a situazioni d
 ## <a name="configure-solution-and-projects"></a>Configurare soluzione e progetti
 
 In caso di una soluzione molto grande con molti progetti, possono essere utili le ottimizzazioni seguenti:
-
-- **Abilitare il caricamento leggero soluzioni**
-
-    L'uso del **Caricamento leggero soluzioni** può migliorare le prestazioni di memoria e CPU rinviando il caricamenti di alcuni progetti all'interno della soluzione. È anche possibile abilitare questa funzionalità per una soluzione specifica. Questa opzione è disattivata per impostazione predefinita.
-
-    Per abilitare **Caricamento leggero soluzioni**, selezionare **Strumenti > Opzioni > Progetti e soluzioni > Caricamento leggero soluzioni**.
-
-    Alcune funzionalità dell'ambiente di sviluppo integrato non sono abilitate in questa modalità. Per determinare se questa scelta può essere utile, vedere [Tempo di caricamento più breve della soluzione](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15/) e [Ottimizzare il caricamento delle soluzioni](../ide/optimize-solution-loading-in-visual-studio.md).
 
 - **Scaricare progetti**
 

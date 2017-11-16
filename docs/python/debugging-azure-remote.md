@@ -1,27 +1,24 @@
 ---
 title: Debug remoto in Azure con Python in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 7/12/2017
+ms.date: 07/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d68fdc53-65a1-423c-8964-9815dbb3387e
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 1ce80ecdc38075b048c8ae0a7f5773de965355f5
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: a4ddd2d52aa1a1e4437c0d1f7821761700c2a91e
-ms.contentlocale: it-it
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="remotely-debugging-python-code-on-azure"></a>Debug remoto di codice Python in Azure
 
 Il [supporto per Python in Visual Studio](installation.md) include la possibilità di eseguire il debug in remoto del codice Python in esecuzione in Servizio app di Azure. Diversamente dal semplice debug remoto, il computer di destinazione in questo scenario non è accessibile direttamente tramite TCP, quindi Visual Studio fornisce un proxy che espone il protocollo del debugger tramite HTTP. I progetti creati con il modello Web configurano automaticamente questo proxy nel file `web.debug.config` generato. Il debug remoto viene abilitato anche quando si pubblica una configurazione per il debug del progetto, come descritto in [Publishing to Azure App Service](template-web.md#publishing-to-azure-app-service) (Pubblicazione in Servizio app di Azure).
@@ -55,4 +52,3 @@ L'URL ora necessario è nel formato `wss://<secret>@<site_name>.azurewebsites.ne
 Per collegare il debugger, selezionare **Debug > Connetti a processo**, selezionare **Debug remoto Python** nell'elenco a discesa **Trasporto**, immettere l'URL nella casella di testo **Qualificatore** e premere INVIO. Se Visual Studio riesce a connettersi correttamente al servizio app, viene visualizzato un singolo processo Python nell'elenco. Selezionarlo e quindi selezionare **Associa** per avviare il debug:
 
 ![Uso della finestra di dialogo Connetti a processo per collegarsi a un sito Web di Azure](media/azure-remote-debugging-manual-attach.png)
-

@@ -4,24 +4,21 @@ ms.custom:
 ms.date: 3/7/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d30fddae-8e2f-4f50-90d3-8ed2cd35c7a6
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 6a91f4d54ce2ef96816787afe1ae8c589f862630
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: c00adbbabf0d3b82acb17f4a269dfc693246bc69
-ms.openlocfilehash: 89de0d11791dbf13b9d4fcfcea8168b443d2777b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/01/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="azure-sdk-for-python"></a>Azure SDK per Python
 
 Azure SDK per Python semplifica l'uso e la gestione dei servizi di Microsoft Azure dalle applicazioni eseguite in Windows, Mac, OSX e Linux.
@@ -65,4 +62,3 @@ Per le API pubbliche senza documentazione, gli unit test nel [repository GitHub 
 Il repository GIT per l'SDK è disponibile all'indirizzo [https://github.com/Azure/azure-sdk-for-python](https://github.com/Azure/azure-sdk-for-python).
 
 Per qualsiasi problema o domanda relativi all'uso dell'SDK, [registrare i problemi nel repository](https://github.com/Azure/azure-sdk-for-python/issues).
-

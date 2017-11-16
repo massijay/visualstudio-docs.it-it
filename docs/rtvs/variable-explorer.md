@@ -1,27 +1,24 @@
 ---
 title: Esplora variabili in R Tools per Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 6/30/2017
+ms.date: 06/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c669434-40d8-4970-92cc-502a98c8b5ab
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 1d86bca24d9e8d4d1bde8d62cd0be25c485b9253
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 712cc780388acc5e373f71d51fc8f1f42adb5bed
-ms.openlocfilehash: 92396808161886cf3b15f7e8e0ab23a0a35e26b9
-ms.contentlocale: it-it
-ms.lasthandoff: 07/12/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="variable-explorer"></a>Esplora variabili
 
 La finestra **Esplora variabili**, che è possibile aprire tramite **R Tools > Finestre > Esplora variabili** (o CTRL+8 se si usa **R Tools > Impostazioni di Data Science**), mostra tutte le variabili di un ambito specifico nella sessione di R corrente. Se, ad esempio, dopo aver aperto Esplora variabili si immettono le righe seguenti nella [finestra interattiva](interactive-repl.md):
@@ -82,4 +79,3 @@ Due comandi sulla barra degli strumenti di Esplora variabili, disponibili anche 
 Dopo avere identificato il file CSV da importare, Visual Studio visualizza la finestra di dialogo **Importa set di dati**, in cui sono disponibili opzioni per controllare la modalità di analisi del file di dati, ovvero per definire il separatore di campo e stabilire come gestire le virgolette. È anche possibile visualizzare un'anteprima del dataframe importato e del file di dati originale:
 
 ![Finestra di dialogo Importa set di dati](media/variable-explorer-import-dataset-dialog.png)
-

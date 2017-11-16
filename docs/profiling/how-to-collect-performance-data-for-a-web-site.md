@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,31 +18,15 @@ helpviewer_keywords:
 - web sites, performance profiling
 - ASP.NET, performance profilng
 ms.assetid: a62d27fd-a966-4065-bebe-6874195a71fb
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6acfbee87e64e71ae85290ba74f1464af7181228
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 9e6c28d42bec272c6fd6107b4baf0109ff29197e
-ms.openlocfilehash: 7fe6230d86e79b6540b35d358ac9af2a3b4760a7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="how-to-collect-performance-data-for-a-web-site"></a>Procedura: Raccogliere dati sulle prestazioni per un sito Web
 Per raccogliere dati sulle prestazioni di un'applicazione Web di **, è possibile usare la** Creazione guidata sessione di prestazioni [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . È possibile profilare un'applicazione Web aperta in [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]oppure un sito Web di [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] presente nel computer locale e non aperto nell'IDE di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .  
@@ -83,7 +66,7 @@ Per raccogliere dati sulle prestazioni di un'applicazione Web di **, è possibil
   
 8.  Verrà creata una sessione di prestazioni per l'applicazione di [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] e il sito Web verrà avviato nel browser. Verificare la funzionalità che si vuole profilare e quindi chiudere il browser.  
   
-     Il profiler genera il file di dati e apre la visualizzazione Riepilogo dei dati nella finestra principale di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+     Il profiler genera il file di dati e apre la visualizzazione Riepilogo dei dati nella finestra principale di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .  
   
 ### <a name="to-profile-a-web-site-without-opening-a-project-in-visual-studio"></a>Per profilare un sito Web senza aprire un progetto in Visual Studio  
   
@@ -124,4 +107,3 @@ Per raccogliere dati sulle prestazioni di un'applicazione Web di **, è possibil
  [Configuring Performance Sessions](../profiling/configuring-performance-sessions.md)  (Configurazione di sessioni di prestazioni)  
  [Informazioni sui valori dei dati di strumentazione](../profiling/understanding-instrumentation-data-values.md)   
  [Informazioni sui valori dei dati di campionamento](../profiling/understanding-sampling-data-values.md)
-

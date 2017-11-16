@@ -1,11 +1,10 @@
 ---
 title: Opzioni di R Tools in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 6/29/2017
+ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-r
+ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 f1_keywords:
@@ -14,18 +13,16 @@ f1_keywords:
 - vs.toolsoptionspages.r_tools.#150
 ms.topic: article
 ms.assetid: 554dc602-ecad-4cd0-8e6f-a60bb8a2328f
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 82e17109ff595ae566ea326dae9237274ee5ad15
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 1e017806ca7bf3d23410ba3a2f999dca0b78f240
-ms.openlocfilehash: 5777be7df1256d4fe4d34be41fb10eb546d4a0ac
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="r-tools-for-visual-studio-options"></a>Opzioni di R Tools per Visual Studio
  
 Le impostazioni sono accessibili tramite il menu **R Tools > Opzioni** o tramite **Strumenti > Opzioni** e quindi scorrendo fino a **R Tools**:
@@ -112,4 +109,3 @@ Queste opzioni controllano la gestione dei valori in [Esplora variabili](variabl
 | Salva area di lavoro alla chiusura di un progetto | `No` | L'impostazione `Yes` consente il salvataggio dell'ambiente globale nel file `.RData` quando il progetto viene chiuso. |
 | Mostra finestra di conferma prima di passare da un'area di lavoro all'altra | `Yes` | L'impostazione `No` disabilita la richiesta di conferma all'utente prima del passaggio da un'area di lavoro all'altra. Vedere [Passaggio da un'area di lavoro all'altra](workspaces.md#switching-between-workspaces) |
  
-

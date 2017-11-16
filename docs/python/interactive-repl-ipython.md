@@ -1,27 +1,24 @@
 ---
 title: REPL IPython in Visual Studio | Microsoft Docs
 ms.custom: 
-ms.date: 7/13/2017
+ms.date: 07/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c9bd06b0-2021-4e55-b933-8346476224a8
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: fce859ff47d28a7de44c63f5dd4e52cfb58478f1
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 9553aa4944f652c7b8505b0d99d5c2b88167f872
-ms.contentlocale: it-it
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="using-ipython-in-the-interactive-window"></a>Uso di IPython nella finestra interattiva
 
 La finestra interattiva di Visual Studio in modalità IPython costituisce un ambiente di sviluppo interattivo avanzato e al contempo intuitiva avanzato e semplice da usare che include funzionalità di elaborazione parallela interattiva. In questo argomento viene illustrato l'uso di IPython nella finestra interattiva di Visual Studio, in cui sono anche disponibili tutte le funzionalità della [finestra interattiva](interactive-repl.md) normale.
@@ -87,4 +84,3 @@ In IPython sono disponibili molte altre funzionalità utili, ad esempio l'escape
 - Per usare Jupyter facilmente e senza installazione, provare la versione gratuita del [servizio ospitato Azure Notebooks](https://notebooks.azure.com/) che consente di mantenere e condividere i blocchi appunti con altri utenti.
 
 - È anche possibile eseguire Jupyter (precedentemente noto come IPython) nella propria macchina virtuale Windows o Linux in Azure. Per informazioni dettagliate, vedere [Creazione di una macchina virtuale di Azure, installazione di Jupyter ed esecuzione di Jupyter Notebook in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-jupyter-notebook).
-

@@ -1,28 +1,24 @@
 ---
 title: "Simboli per il debug in modalità mista con Python/C++ in Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 7/12/2017
-ms.prod: visual-studio-dev15
+ms.date: 07/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-python
+ms.technology: devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be5fdf2f-b55f-488a-9772-58adfe07a7ab
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
+ms.openlocfilehash: 365131bf30f57c90715bd04cded0f7c4c5761797
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: 6d25db4639f2c8391c1e32542701ea359f560178
-ms.openlocfilehash: 1be4e28055f0501433f85325870654671c12f961
-ms.contentlocale: it-it
-ms.lasthandoff: 07/18/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-
 # <a name="installing-debugging-symbols-for-python-interpreters"></a>Installazione dei simboli di debug per interpreti Python
 
 Per offrire un'esperienza di debug completa, il [debugger in modalità mista di Python](debugging-mixed-mode.md) in Visual Studio ha bisogno dei simboli di debug per l'interprete Python in uso per analizzare numerose strutture dei dati interne. Per python27.dll, ad esempio, il file di simboli corrispondente è python27.pdb, per python36.dll il file di simboli è python36.pdb. Per ogni versione dell'interprete sono disponibili anche i file di simboli per un'ampia gamma di moduli.

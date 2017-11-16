@@ -4,39 +4,24 @@ ms.custom:
 ms.date: 03/02/2017
 ms.reviewer: 
 ms.suite: 
+ms.technology:
+- vs-ide-general
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- msdnstart
+f1_keywords: msdnstart
 helpviewer_keywords:
 - Visual Studio
 - Visual Studio 2017
 ms.assetid: ba237712-f8c4-4d13-854b-ab4a16afa309
-caps.latest.revision: 125
-author: kempb
-ms.author: kempb
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8bf0b097be929b30627e0f1139c6e0b145933ab4
-ms.openlocfilehash: 2cf7d1e79ccf79b652dbb730e7ac7fd6a9c984b5
-ms.contentlocale: it-it
-ms.lasthandoff: 05/26/2017
-
+ms.openlocfilehash: 81942228cd8ee30ac8ea990af072ace0ce626c5b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="welcome-to-visual-studio-2017"></a>Visual Studio 2017
 offre tutto il necessario per creare eccezionali desktop o per dispositivi, sia per il Web che nel cloud. È possibile scrivere codice per iOS, Android, Linux, Windows e altri sistemi in un singolo ambiente di sviluppo integrato (IDE). Ottime funzionalità di supporto interattive per il codice (*IntelliSense*), spostamenti facili nel codice e debug semplice, compilazioni rapide e distribuzione veloce. Visual Studio consente di aumentare la produttività e semplifica le attività sia per chi lavora singolarmente sia per chi fa parte di un team più grande.  
@@ -120,4 +105,3 @@ Per trovare la versione più recente degli strumenti di estendibilità di Visual
 È possibile usare .NET Compiler Platform (Roslyn) per scrivere i propri analizzatori di codice e generatori di codice. Tutto ciò che serve è disponibile nella pagina di [Roslyn](https://github.com/dotnet/Roslyn).  
 
 Cercare le [estensioni esistenti per l'ambiente IDE di Visual Studio](https://visualstudiogallery.msdn.microsoft.com/) create dagli sviluppatori Microsoft, nonché dalla community di sviluppo.  
-
