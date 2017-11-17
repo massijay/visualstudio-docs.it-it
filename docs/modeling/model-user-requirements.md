@@ -1,5 +1,5 @@
 ---
-title: Modellare i requisiti dell&quot;utente | Documenti di Microsoft
+title: Modellare i requisiti utente | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,35 +10,20 @@ helpviewer_keywords:
 - requirements
 - stories
 ms.assetid: 359900f8-6d69-493d-bfdf-2c9069c74a26
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 08aabdfe0e268f93ef7723076375b7f65b15ccf3
-ms.openlocfilehash: 60866c46920bb85927498992082763f9e34b4137
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: 064d2819a9a7bd3e72539ff7624299e3619f4e94
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="model-user-requirements"></a>Modellare i requisiti utente
 Visual Studio facilita la comprensione, la discussione e la comunicazione delle esigenze degli utenti mediante la creazione di diagrammi delle attività e del ruolo che il sistema svolge per il raggiungimento degli obiettivi. Un modello di requisiti è un set di tali diagrammi, ognuno dei quali è incentrato su un aspetto diverso delle esigenze degli utenti. Per una dimostrazione video, vedere: [Modellazione del dominio aziendale](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-3-Modeling-the-Business-Domain/).  
   
- Per informazioni sulle versioni di Visual Studio supportano ogni tipo di modello, vedere [supporto della versione per l'architettura e strumenti di modellazione](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
+ Per vedere quali versioni di Visual Studio supportano ogni tipo di modello, vedere [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
   
  Un modello di requisiti consente di:  
   
@@ -56,7 +41,7 @@ Visual Studio facilita la comprensione, la discussione e la comunicazione delle 
   
 -   Usare i modelli come base per i test di sistema, evidenziando una chiara relazione tra test e requisiti. Quando i requisiti cambiano, questa relazione consente di aggiornare i test correttamente, garantendo in tal modo che il sistema soddisfi i nuovi requisiti.  
   
- Un modello di requisiti offre un vantaggio maggiore se viene usato per concentrare le discussioni con gli utenti o i relativi rappresentanti e se viene riesaminato all'inizio di ogni iterazione. Non è necessario completarlo in dettaglio prima di scrivere il codice. Un'applicazione parzialmente funzionante, anche se molto semplificata, crea in genere una base di discussione dei requisiti con gli utenti molto più stimolante. Il modello consente di riepilogare in modo efficace i risultati di tali discussioni. Per ulteriori informazioni, vedere [utilizza i modelli nel processo di sviluppo](../modeling/use-models-in-your-development-process.md).  
+ Un modello di requisiti offre un vantaggio maggiore se viene usato per concentrare le discussioni con gli utenti o i relativi rappresentanti e se viene riesaminato all'inizio di ogni iterazione. Non è necessario completarlo in dettaglio prima di scrivere il codice. Un'applicazione parzialmente funzionante, anche se molto semplificata, crea in genere una base di discussione dei requisiti con gli utenti molto più stimolante. Il modello consente di riepilogare in modo efficace i risultati di tali discussioni. Per ulteriori informazioni, vedere [utilizzare i modelli nel processo di sviluppo](../modeling/use-models-in-your-development-process.md).  
   
 > [!NOTE]
 >  In questi argomenti con "sistema" si intende il sistema o l'applicazione che si sta sviluppando. Potrebbe essere un'ampia raccolta di molti componenti software e hardware, una singola applicazione o un componente software all'interno di un sistema più grande. In ogni caso il modello di requisiti descrive il comportamento visibile dall'esterno del sistema, che sia tramite un'interfaccia utente o tramite un'API.  
@@ -67,12 +52,12 @@ Visual Studio facilita la comprensione, la discussione e la comunicazione delle 
 |Diagramma o documento|Informazioni descritte in un modello di requisiti|Sezione|  
 |-------------------------|-----------------------------------------------|-------------|  
 |Diagramma classi concettuali|Glossario dei tipi usati per descrivere i requisiti, ovvero dei tipi visibili nell'interfaccia del sistema.||  
-|Documenti o elementi di lavoro aggiuntivi|Criteri di prestazioni, sicurezza, usabilità e affidabilità.|[Che descrivono requisiti di qualità del servizio](#QoSRequirements)|  
+|Documenti o elementi di lavoro aggiuntivi|Criteri di prestazioni, sicurezza, usabilità e affidabilità.|[Descrizione dei requisiti di qualità del servizio](#QoSRequirements)|  
 |Documenti o elementi di lavoro aggiuntivi|Regole e vincoli non specifici di un particolare caso di utilizzo|[Visualizzazione delle regole di business](#BusinessRules)|  
   
- La maggior parte dei tipi di diagrammi può essere usata per altri scopi. Per una panoramica dei tipi di diagrammi, vedere [creare modelli per app](../modeling/create-models-for-your-app.md).
+ La maggior parte dei tipi di diagrammi può essere usata per altri scopi. Per una panoramica dei tipi di diagramma, vedere [creare modelli per l'app](../modeling/create-models-for-your-app.md).
   
-##  <a name="a-namebusinessrulesa-showing-business-rules"></a><a name="BusinessRules"></a>Visualizzazione delle regole di Business  
+##  <a name="BusinessRules"></a> Showing Business Rules  
  Una regola di business è un requisito non associato a un particolare caso di utilizzo e deve essere osservata in tutto il sistema.  
   
  Molte regole di business sono vincoli sulle relazioni tra le classi concettuali. È possibile scrivere queste *statico**regole business* come commenti associati alle relative classi di un diagramma classi concettuali. Ad esempio:  
@@ -91,7 +76,7 @@ Visual Studio facilita la comprensione, la discussione e la comunicazione delle 
 |--------------------|----------|  
 |Come sviluppare codice che soddisfi le regole di business|[Modellare l'architettura dell'app](../modeling/model-your-app-s-architecture.md)|  
   
-##  <a name="a-nameqosrequirementsa-describing-quality-of-service-requirements"></a><a name="QoSRequirements"></a>Che descrivono requisiti di qualità del servizio  
+##  <a name="QoSRequirements"></a> Describing Quality of Service Requirements  
  Esistono diverse categorie di requisiti per la qualità del servizio. Di seguito vengono forniti alcuni esempi:  
   
 -   Prestazioni  
@@ -112,10 +97,9 @@ Visual Studio facilita la comprensione, la discussione e la comunicazione delle 
   
 |Informazioni|Lettura|  
 |--------------------|----------|  
-|Altre informazioni sulla registrazione dei requisiti di qualità del servizio|[Linee guida per la definizione di requisiti qualità del servizio](http://msdn.microsoft.com/en-us/9677a437-c2cb-4ac4-8c2d-4e3350005f06)|  
+|Altre informazioni sulla registrazione dei requisiti di qualità del servizio|[Linee guida per la definizione dei requisiti di qualità del servizio](http://msdn.microsoft.com/en-us/9677a437-c2cb-4ac4-8c2d-4e3350005f06)|  
 |Come sviluppare codice che soddisfi i requisiti di qualità del servizio|[Modellare l'architettura dell'app](../modeling/model-your-app-s-architecture.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzare i modelli nel processo di sviluppo](../modeling/use-models-in-your-development-process.md)   
  [Modellare l'architettura dell'app](../modeling/model-your-app-s-architecture.md)   
-

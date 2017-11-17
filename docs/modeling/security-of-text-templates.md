@@ -1,35 +1,36 @@
 ---
-title: "Security of Text Templates | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "text templates, security"
+title: Sicurezza dei modelli di testo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: text templates, security
 ms.assetid: 567a2383-7d43-4acc-af4a-cd70b7a0151e
-caps.latest.revision: 23
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 7c99f0a519ec62a2b9946baba072b0256a78697a
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
-# Security of Text Templates
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Di seguito sono elencati i problemi di sicurezza associati all'utilizzo dei modelli di testo:  
+# <a name="security-of-text-templates"></a>Sicurezza dei modelli di testo
+Modelli di testo sono i seguenti problemi di protezione:  
   
--   I modelli di testo sono vulnerabili agli inserimenti di codice arbitrario.  
+-   Modelli di testo sono vulnerabili a inserimenti di codice arbitrario.  
   
--   Se il meccanismo utilizzato dall'host per trovare un processore di direttiva non è sicuro, potrebbe essere eseguito un processore di direttiva dannoso.  
+-   Se il meccanismo utilizzato dall'host per trovare un processore di direttiva non è protetto, è possibile eseguire un processore di direttiva dannoso.  
   
-## Codice arbitrario  
- Quando si scrive un modello, è possibile inserire qualsiasi codice all'interno dei tag \< \#\#\>.  Questo consente l'esecuzione di codice arbitrario dall'interno di un modello di testo.  
+## <a name="arbitrary-code"></a>Codice arbitrario  
+ Quando si scrive un modello, è possibile inserire qualsiasi codice all'interno di \<# # > tag. In questo modo il codice non autorizzato per l'esecuzione da all'interno di un modello di testo.  
   
- È importante assicurarsi di ottenere modelli da fonti attendibili.  Assicurarsi di avvertire gli utenti finali dell'applicazione di non eseguire modelli che non provengono da fonti attendibili.  
+ Assicurarsi di ottenere modelli da origini attendibili. Assicurarsi di avvertire gli utenti finali dell'applicazione non eseguire modelli che non provengono da origini attendibili.  
   
-## Processore di direttiva dannoso  
- Il motore del modello di testo interagisce con un host di trasformazione e uno o più processori di direttiva per trasformare il testo del modello in un file di output.  Per ulteriori informazioni, vedere [The Text Template Transformation Process](../modeling/the-text-template-transformation-process.md).  
+## <a name="malicious-directive-processor"></a>Processore di direttiva dannoso  
+ Il motore del modello di testo interagisce con un host di trasformazione e uno o più processori di direttive per trasformare il testo del modello in un file di output. Per ulteriori informazioni, vedere [il processo di trasformazione di modello di testo](../modeling/the-text-template-transformation-process.md).  
   
- Se il meccanismo utilizzato dall'host per trovare un processore di direttiva non è sicuro, si corre il rischio che venga eseguito un processore di direttiva dannoso.  Il processore di direttiva dannoso potrebbe fornire codice che viene eseguito nella modalità `FullTrust` quando viene eseguito il modello.  Se si crea un host di trasformazione del modello di testo personalizzato, è necessario utilizzare un meccanismo sicuro, quale il Registro di sistema, per consentire al motore di individuare dei processori di direttiva.
+ Se il meccanismo utilizzato dall'host per trovare un processore di direttiva non è protetto, viene eseguito il rischio di eseguire un processore di direttiva dannoso. Il processore di direttiva dannoso potrebbe fornire codice che viene eseguito in `FullTrust` modalità quando viene eseguito il modello. Se si crea un host di trasformazione del modello testo personalizzato, è necessario utilizzare un meccanismo protetto, ad esempio il Registro di sistema per il motore per individuare i processori di direttiva.

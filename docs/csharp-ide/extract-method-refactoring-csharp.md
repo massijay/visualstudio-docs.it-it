@@ -1,52 +1,50 @@
 ---
-title: "Refactoring Estrai Metodo (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.csharp.refactoring.extractmethod"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "refactoring [C#], Estrai metodo"
-  - "Estrai metodo (operazione di refactoring) [C#]"
+redirect_url: /visualstudio/csharp-ide/refactoring/extract-method
+title: (C#) Refactoring Estrai metodo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: CSharp
+helpviewer_keywords:
+- refactoring [C#], Extract Method
+- Extract Method refactoring operation [C#]
 ms.assetid: eeba11df-a815-4bec-9c21-8a831891b783
-caps.latest.revision: 29
-caps.handback.revision: 29
-author: "BillWagner"
-ms.author: "wiwagn"
-manager: "wpickett"
+caps.latest.revision: "29"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: e85e745241d8fa880098b73a6306cbca3f19da70
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Refactoring Estrai Metodo (C#)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-**Estrai metodo** è un'operazione di refactoring che consente di creare facilmente un nuovo metodo da un frammento di codice in un membro esistente.  
+# <a name="extract-method-refactoring-c"></a>Refactoring Estrai Metodo (C#)
+**Estrai metodo** è un'operazione di refactoring che fornisce un modo semplice per creare un nuovo metodo da un frammento di codice in un membro esistente.  
   
- Con **Estrai metodo** è possibile creare un nuovo metodo tramite l'estrazione di una selezione di codice dal blocco di codice di un membro esistente.  Il nuovo metodo estratto contiene il codice selezionato, mentre il codice selezionato nel membro esistente viene sostituito con una chiamata al nuovo metodo.  Se si trasforma un frammento di codice in un metodo corrispondente, sarà possibile riorganizzare il codice in modo rapido e accurato per migliorarne il riutilizzo e la leggibilità.  
+ Utilizzando **Estrai metodo**, è possibile creare un nuovo metodo estraendo una selezione di codice all'interno del blocco di codice di un membro esistente. Il nuovo metodo estratto contiene il codice selezionato e il codice selezionato nel membro esistente viene sostituito con una chiamata al metodo di nuovo. Trasformare un frammento di codice in un proprio metodo consente di rapidamente e con precisione riorganizzare il codice per migliorarne il riutilizzo e la leggibilità.  
   
- L'utilizzo di **Estrai metodo** comporta i seguenti vantaggi:  
+ **Estrai metodo** offre i vantaggi seguenti:  
   
--   Fornisce procedure di codifica migliori presentando metodi distinti e riutilizzabili.  
+-   Promuove codifica migliori sottolineando metodi distinti e riutilizzabili.  
   
--   Fornisce codice autodocumentato mediante una buona organizzazione.  
+-   Fornisce codice mediante una buona organizzazione autodocumentato.  
   
-     Quando si utilizzano nomi descrittivi, i metodi di alto livello possono fornire maggiori informazioni, come una serie di commenti.  
+     Quando i nomi descrittivi sono metodi di alto livello possono ulteriori come una serie di commenti.  
   
--   Favorisce la creazione di metodi più controllati per semplificare l'override.  
+-   Favorisce la creazione di metodi di granularità per semplificare l'override.  
   
--   Riduce la duplicazione del codice.  
+-   Consente di ridurre la duplicazione del codice.  
   
-### Per utilizzare Estrai metodo  
+### <a name="to-use-extract-method"></a>Per utilizzare Estrai metodo  
   
-1.  Creare un'applicazione console denominata `ExtractMethod` quindi sostituire `Program` con il codice di esempio riportato di seguito.  
+1.  Creare un'applicazione console denominata `ExtractMethod` quindi sostituire `Program` con il codice di esempio seguente.  
   
-    ```c#  
+    ```csharp  
     class A  
     {  
         const double PI = 3.141592;  
@@ -68,44 +66,43 @@ manager: "wpickett"
     }  
     ```  
   
-2.  Consente di selezionare il frammento di codice da estrarre:  
+2.  Selezionare il frammento di codice che si desidera estrarre:  
   
-    ```c#  
+    ```csharp  
     double area = PI * radius * radius;  
-  
     ```  
   
-3.  Scegliere **Estrai metodo** dal menu **Effettua refactoring**.  
+3.  Nel **refactoring** menu, fare clic su **Estrai metodo**.  
   
-     Viene visualizzata la finestra di dialogo **Estrai metodo**.  
+     Il **Estrai metodo** viene visualizzata la finestra di dialogo.  
   
-     In alternativa, è anche possibile premere i tasti di scelta rapida CTRL\+R, M per visualizzare la finestra di dialogo **Estrai metodo**.  
+     In alternativa, è anche possibile premere il tasto di scelta rapida CTRL + R, M per visualizzare il **Estrai metodo** la finestra di dialogo.  
   
-     Inoltre è possibile fare clic con il pulsante destro del mouse sul codice selezionato, scegliere **Effettua refactoring**, quindi fare clic su **Estrai metodo** per visualizzare la finestra di dialogo **Estrai metodo**.  
+     È possibile anche fare doppio clic al codice, scegliere **refactoring**e quindi fare clic su **Estrai metodo** per visualizzare il **Estrai metodo** la finestra di dialogo.  
   
-4.  Specificare un nome per il nuovo metodo, ad esempio `CircleArea`, nella casella **Nuovo nome metodo**.  
+4.  Specificare un nome per il nuovo metodo, ad esempio `CircleArea`nella **nuovo nome del metodo** casella.  
   
-     Verrà visualizzata un'anteprima della firma del nuovo metodo in **Anteprima firma del metodo**.  
+     Verrà visualizzata un'anteprima della firma del metodo di nuovo in **Anteprima firma del metodo**.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
-## Note  
- Quando si utilizza il comando **Estrai metodo**, il nuovo metodo viene inserito dopo il membro di origine nella stessa classe.  
+## <a name="remarks"></a>Note  
+ Quando si utilizza il **Estrai metodo** comando, viene inserito il nuovo metodo dopo il membro di origine nella stessa classe.  
   
-## Tipi parziali  
- Se la classe è un tipo parziale, **Estrai metodo** genera il nuovo metodo immediatamente dopo il membro di origine.  **Estrai metodo** determina la firma del nuovo metodo, creando un metodo statico quando il codice all'interno del nuovo metodo non fa riferimento a dati di istanza.  
+## <a name="partial-types"></a>Tipi parziali  
+ Se la classe è un tipo parziale, quindi **Estrai metodo** genera il nuovo metodo immediatamente dopo il membro di origine. **Estrai metodo** determina la firma del nuovo metodo, la creazione di un metodo statico quando nessun dato istanza fa riferimento il codice nel nuovo metodo.  
   
-## Parametri di tipo generico  
- Quando si estrae un metodo con un parametro di tipo generico non vincolato, il codice generato non aggiungerà il modificatore `ref` a tale parametro, a meno che non gli venga assegnato un valore.  Se il metodo estratto supporta tipi di riferimento come l'argomento di tipo generico, sarà necessario aggiungere manualmente il modificatore `ref` al parametro nella firma del metodo.  
+## <a name="generic-type-parameters"></a>Parametri di tipo generico  
+ Quando si estrae un metodo che presenta un parametro di tipo generico non vincolato, il codice generato non verrà aggiunto il `ref` modificatore a tale parametro a meno che non venga assegnato un valore. Se il metodo estratto supporta tipi di riferimento come argomento di tipo generico, è necessario aggiungere manualmente il `ref` modificatore al parametro nella firma del metodo.  
   
-## Metodi anonimi  
- Se si tenta di estrarre una parte di un metodo anonimo che include un riferimento a una variabile locale dichiarata o a cui si fa riferimento al di fuori del metodo anonimo, Visual Studio genererà un avviso sulle potenziali modifiche della semantica.  
+## <a name="anonymous-methods"></a>Metodi anonimi  
+ Se si tenta di estrarre una parte di un metodo anonimo che include un riferimento a una variabile locale dichiarata o a cui fa riferimento all'esterno del metodo anonimo, quindi Visual Studio notificherà eventuali modifiche nella semantica.  
   
- Quando un metodo anonimo utilizza il valore di una variabile locale, il valore viene restituito al momento dell'esecuzione del metodo anonimo.  Quando si estrae un metodo anonimo in un altro metodo, il valore della variabile locale viene restituito al momento della chiamata al metodo estratto.  
+ Quando un metodo anonimo viene utilizzato il valore di una variabile locale, il valore viene ottenuto al momento che viene eseguito il metodo anonimo. Quando un metodo anonimo viene estratto in un altro metodo, il valore della variabile locale viene ottenuto al momento della chiamata al metodo estratto.  
   
- Questa modifica della semantica viene illustrata nell'esempio riportato di seguito.  Se si esegue il codice, nella console verrà stampato **11**.  Se si utilizza **Estrai metodo** per estrarre l'area di codice contrassegnata da commenti nel relativo metodo e si esegue il codice di cui è stato effettuato il refactoring, nella console verrà stampato **10**.  
+ Nell'esempio seguente viene illustrata questa modifica semantica. Se si esegue questo codice, quindi **11** verranno stampati sulla console. Se si utilizza **Estrai metodo** per estrarre l'area di codice contrassegnata da commenti del codice nel relativo metodo e quindi eseguire il codice sottoposto a refactoring, quindi **10** verranno stampati sulla console.  
   
-```c#  
+```csharp  
 class Program  
 {  
     delegate void D();  
@@ -123,7 +120,7 @@ class Program
 }  
 ```  
   
- Per ovviare a questo problema, trasformare le variabili locali utilizzate nei campi del metodo anonimo della classe.  
+ Per risolvere questo problema, verificare le variabili locali che vengono utilizzate nei campi di un metodo anonimo della classe.  
   
-## Vedere anche  
- [Refactoring \(C\#\)](../csharp-ide/refactoring-csharp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Refactoring (C#)](refactoring-csharp.md)

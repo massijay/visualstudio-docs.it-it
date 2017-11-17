@@ -1,51 +1,51 @@
 ---
-title: "Search Tools for Spy++ Views | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "searching, Spy++"
-  - "Spy++, searching"
+title: Ricerca di strumenti per le visualizzazioni di Spy + + | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- searching, Spy++
+- Spy++, searching
 ms.assetid: db0c32cf-8e50-4e1b-9a9f-4c07fd6a2163
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 4fe030aef4ba755b9a147bcc1430d2e6046c9dbf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Search Tools for Spy++ Views
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Utilizzare queste finestre di dialogo per specificare i dati che saranno visualizzati in una finestra Visualizzazione di Spy\+\+:  
+# <a name="search-tools-for-spy-views"></a>Strumenti di ricerca per le visualizzazioni di Spy++
+Utilizzare queste finestre di dialogo per specificare quali dati verrà visualizzati una finestra visualizzazioni di Spy + +:  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Finestra di dialogo Trova finestra](../debugger/find-window-dialog-box.md)  
- Utilizzata per visualizzare le proprietà o i messaggi di una finestra specifica.  
+ Consente di visualizzare le proprietà o i messaggi da una finestra specifica.  
   
  [Finestra di dialogo Ricerca finestre](../debugger/window-search-dialog-box.md)  
- Utilizzata per individuare il nodo relativo a una finestra specifica nella visualizzazione finestre.  
+ Utilizzato per trovare il nodo per una specifica finestra nella visualizzazione di Windows.  
   
  [Finestra di dialogo Ricerca messaggi](../debugger/message-search-dialog-box.md)  
- Utilizzata per individuare il nodo relativo a un messaggio specifico nella visualizzazione messaggi.  
+ Utilizzato per individuare il nodo per un messaggio specifico nella visualizzazione dei messaggi.  
   
  [Finestra di dialogo Ricerca processi](../debugger/process-search-dialog-box.md)  
- Utilizzata per individuare il nodo relativo a un processo specifico nella visualizzazione processi.  
+ Utilizzato per individuare il nodo per un processo specifico nella vista del processo.  
   
  [Finestra di dialogo Ricerca thread](../debugger/thread-search-dialog-box.md)  
- Utilizzata per individuare il nodo relativo a un thread specifico nella visualizzazione thread.  
+ Utilizzato per individuare il nodo per un thread specifico nella visualizzazione thread.  
   
-## Sezioni correlate  
- [Visualizzazioni di Spy\+\+](../debugger/spy-increment-views.md)  
- Vengono illustrate le visualizzazioni struttura ad albero di Spy\+\+ relative a finestre, messaggi, processi e thread.  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Visualizzazioni di Spy++](../debugger/spy-increment-views.md)  
+ Vengono illustrate le visualizzazioni ad albero Spy + + di windows, i messaggi, thread e processi.  
   
- [Utilizzo di Spy\+\+](../debugger/using-spy-increment.md)  
- Vengono illustrati lo strumento Spy\+\+ e il relativo utilizzo.  
+ [Uso di Spy++](../debugger/using-spy-increment.md)  
+ Vengono presentati lo strumento Spy + + e come può essere usato.  
   
- [Riferimenti per Spy\+\+](../debugger/spy-increment-reference.md)  
- Sono incluse le sezioni in cui vengono descritti tutti i menu e le finestre di dialogo di Spy\+\+.
+ [riferimenti per Spy++](../debugger/spy-increment-reference.md)  
+ Include le sezioni che descrivono ogni Spy + + menu e finestra di dialogo.

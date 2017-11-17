@@ -19,30 +19,15 @@ helpviewer_keywords:
 - MSBuild, dependency diagrams
 - MSBuild, validating code
 ms.assetid: 70cbe55d-4b33-4355-b0a7-88c770a6f75c
-caps.latest.revision: 82
+caps.latest.revision: "82"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5581224b17a7b42f65b69f741f984a144d78fc26
-ms.openlocfilehash: 53c623ce7ab7126c22aaab856a439862252a5d56
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: c6c5954cdb4979ede5e43d2052801ca399f128fd
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>Convalidare il codice con diagrammi di dipendenza
 
@@ -72,7 +57,7 @@ Per assicurarsi che non siano in conflitto con la progettazione codice, è possi
   
 -   Una soluzione che include un progetto di modellazione con un diagramma di dipendenze. Questo diagramma dipendenza deve essere collegato agli elementi nei progetti Visual c# .NET o Visual Basic .NET che si desidera convalidare. Vedere [creare diagrammi dipendenza dal codice](../modeling/create-layer-diagrams-from-your-code.md).  
   
- Per le versioni di Visual Studio che supportano questa funzionalità, vedere [supporto della versione per l'architettura e strumenti di modellazione](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
+ Per individuare le versioni di Visual Studio che supportano questa funzionalità, vedere [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
   
  È possibile convalidare il codice manualmente da un diagramma di dipendenza aperto in Visual Studio o da un prompt dei comandi. È inoltre possibile convalidare il codice automaticamente quando sono in esecuzione compilazioni locali o Team Foundation Build. Vedere [Video di Channel 9: progettazione e convalidare l'architettura con diagrammi di dipendenza](http://go.microsoft.com/fwlink/?LinkID=252073).  
   
@@ -115,7 +100,7 @@ In questa versione di Visual Studio, convalida della dipendenza si verifica in t
 2.  In **Esplora livello**, esaminare il **supporta la convalida** colonna. Se il valore è false, l'elemento non supporta la convalida.  
   
 ##  <a name="IncludeReferences"></a>Includere altri progetti per la convalida e l'assembly .NET  
- Quando si trascinano elementi nel diagramma di dipendenza, i riferimenti agli assembly .NET corrispondente o progetti vengono aggiunti automaticamente al **riferimenti livello** cartella nel progetto di modellazione. Questa cartella contiene i riferimenti agli assembly e ai progetti analizzati durante la convalida. È possibile includere altri assembly .NET e progetti per la convalida senza trascinarli manualmente nel diagramma di dipendenza.  
+ Quando si trascinano elementi nel diagramma di dipendenza, i riferimenti a progetti o assembly di .NET corrispondenti vengono aggiunti automaticamente al **riferimenti livello** cartella nel progetto di modellazione. Questa cartella contiene i riferimenti agli assembly e ai progetti analizzati durante la convalida. È possibile includere altri assembly .NET e progetti per la convalida senza trascinarli manualmente nel diagramma di dipendenza.  
   
 1.  In **Esplora**, fare clic sul progetto di modellazione o **riferimenti livello** cartella e quindi fare clic su **Aggiungi riferimento**.  
   
@@ -240,7 +225,7 @@ In questa versione di Visual Studio, convalida della dipendenza si verifica in t
   
 -   [Modificare una compilazione Legacy che si basa sull'UpgradeTemplate.xaml](http://msdn.microsoft.com/Library/ee1a8259-1dd1-4a10-9563-66c5446ef41c)  
   
--   [Personalizzare il modello di processo di compilazione](http://msdn.microsoft.com/Library/b94c58f2-ae6f-4245-bedb-82cd114f6039)  
+-   [Personalizzare il modello del processo di compilazione](http://msdn.microsoft.com/Library/b94c58f2-ae6f-4245-bedb-82cd114f6039)  
   
 -   [Monitorare lo stato di una compilazione in esecuzione](http://msdn.microsoft.com/Library/e51e3bad-2d1d-4b7b-bfcc-c43439c6c8ef)  
   
@@ -282,4 +267,3 @@ In questa versione di Visual Studio, convalida della dipendenza si verifica in t
 ## <a name="see-also"></a>Vedere anche  
  [Convalidare il sistema durante lo sviluppo](../modeling/validate-your-system-during-development.md)   
  [Video: Convalidare le dipendenze di architettura in tempo reale](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)   
-

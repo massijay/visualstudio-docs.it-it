@@ -1,44 +1,42 @@
 ---
-title: "Procedura dettagliata: debug in fase di progettazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "punti di interruzione, debug in fase di progettazione"
-  - "debug [Visual Studio], fase di progettazione"
-  - "debug in fase di progettazione"
-  - "Controllo immediato (finestra), debug in fase di progettazione"
+title: 'Procedura dettagliata: Debug in fase di progettazione | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords:
+- debugging [Visual Studio], design-time
+- breakpoints, design-time debugging
+- Immediate window, design-time debugging
+- design-time debugging
 ms.assetid: 35bfdd2c-6f60-4be1-ba9d-55fce70ee4d8
-caps.latest.revision: 20
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 1d497535f8511c3f9e6c55e80157507ed36184b0
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Procedura dettagliata: debug in fase di progettazione
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-È possibile utilizzare la finestra di **controllo immediato** di Visual Studio per eseguire una funzione o una subroutine quando l'applicazione non è in esecuzione.  Se la funzione o la subroutine contiene un punto di interruzione, l'esecuzione verrà interrotta nel punto appropriato.  È quindi possibile utilizzare le finestre del debugger per esaminare lo stato del programma.  Questa funzionalità è denominata debug in fase di progettazione.  
+# <a name="walkthrough-debugging-at-design-time"></a>Procedura dettagliata: debug in fase di progettazione
+È possibile utilizzare Visual Studio **immediato** finestra per eseguire una funzione o una subroutine quando l'applicazione non è in esecuzione. Se la funzione o subroutine contiene un punto di interruzione, Visual Studio interromperà l'esecuzione al momento appropriato. È quindi possibile utilizzare le finestre del debugger per esaminare lo stato del programma. Questa funzionalità è denominata debug in fase di progettazione.  
   
- Nella procedura riportata di seguito viene descritto come utilizzare questa funzionalità.  
+ La procedura seguente viene illustrato come utilizzare questa funzionalità.  
   
-### Per raggiungere punti di interruzione dalla finestra di controllo immediato  
+### <a name="to-hit-breakpoints-from-the-immediate-window"></a>Per raggiungere punti di interruzione dalla finestra controllo immediato  
   
-1.  Incollare il seguente codice in un'applicazione console Visual Basic:  
+1.  Incollare il codice seguente in un'applicazione console Visual Basic:  
   
     ```  
     Module Module1  
@@ -62,24 +60,24 @@ caps.handback.revision: 20
     End Module  
     ```  
   
-2.  Impostare un punto di interruzione nella riga `s="Add BreakPoint Here"`.  
+2.  Impostare un punto di interruzione sulla riga che legge, `s="Add BreakPoint Here"`.  
   
-3.  Nella finestra **Controllo immediato** digitare quanto segue: `?<enter>`  
+3.  Digitare il comando seguente nel **immediato** finestra:`?MyFunction<enter>`  
   
-4.  Verificare che il punto di interruzione sia stato raggiunto e che lo stack di chiamate sia corretto.  
+4.  Verificare che lo stack di chiamate è accurato e che è stato raggiunto il punto di interruzione.  
   
-5.  Scegliere **Continua** dal menu **Debug** e verificare che sia ancora attivata la modalità di progettazione.  
+5.  Nel **Debug** menu, fare clic su **continua**e verificare che sia ancora in modalità progettazione.  
   
-6.  Nella finestra **Controllo immediato** digitare quanto segue: `?<enter>`  
+6.  Digitare il comando seguente nel **immediato** finestra:`?MyFunction<enter>`  
   
-7.  Nella finestra **Controllo immediato** digitare quanto segue: `?MySub<enter>`  
+7.  Digitare il comando seguente nel **immediato** finestra:`?MySub<enter>`  
   
-8.  Verificare che il punto di interruzione sia stato raggiunto e controllare il valore della variabile statica `i` nella finestra **Variabili locali**.  Il valore dovrebbe essere 3.  
+8.  Verificare che il punto di interruzione e controllare il valore della variabile statica `i` nel **variabili locali** finestra. Deve essere il valore 3.  
   
-9. Verificare che lo stack di chiamate sia corretto.  
+9. Verificare che lo stack di chiamate sia accurato.  
   
-10. Scegliere **Continua** dal menu **Debug** e verificare che sia ancora attivata la modalità di progettazione.  
+10. Nel **Debug** menu, fare clic su **continua**e verificare che sia ancora in modalità progettazione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Sicurezza del debugger](../debugger/debugger-security.md)   
- [Nozioni di base sul debugger](../debugger/debugger-basics.md)
+ [Debugger Basics](../debugger/debugger-basics.md) (Nozioni di base sul debugger)

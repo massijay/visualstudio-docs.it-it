@@ -11,30 +11,15 @@ helpviewer_keywords:
 - Domain-Specific Language Tools, walkthroughs
 - walkthroughs [Domain-Specific Language Tools]
 ms.assetid: 4aa47777-de75-4897-a423-a3c4426b4125
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a126524672b0b827d278d2d76c01d907c9d403a1
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: ef5f86cb3b41af6cc9e7432cdbfb7365471320b8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>Aggiunta di una proprietà di rilevamento alla definizione di un linguaggio specifico di dominio
 Questa procedura dettagliata viene illustrato come aggiungere una proprietà di rilevamento per un modello di dominio.  
@@ -120,7 +105,7 @@ Questa procedura dettagliata viene illustrato come aggiungere una proprietà di 
   
 3.  Per il **ExampleElement** dominio classe, aggiungere una proprietà di dominio denominata `Namespace`.  
   
-     Nel **proprietà** finestra per la nuova proprietà, impostare **è esplorabile** a **False**e impostare **tipo** a **CustomStorage **.  
+     Nel **proprietà** finestra per la nuova proprietà, impostare **è esplorabile** a **False**e impostare **tipo** a **CustomStorage** .  
   
 4.  Per il **ExampleElement** dominio classe, aggiungere una proprietà di dominio denominata `IsNamespaceTracking`.  
   
@@ -748,7 +733,7 @@ Questa procedura dettagliata viene illustrato come aggiungere una proprietà di 
   
 4.  Trascinare un **ExampleElement** elemento il **della casella degli strumenti** sulla superficie del diagramma.  
   
-5.  Nel **proprietà** finestra per l'elemento, seleziona il **elemento Namespace** , proprietà e modificare il valore da **DefaultNamespace** a ** OtherNamespace**.  
+5.  Nel **proprietà** finestra per l'elemento, seleziona il **elemento Namespace** , proprietà e modificare il valore da **DefaultNamespace** a  **OtherNamespace**.  
   
      Si noti che il valore di **elemento Namespace** viene ora visualizzato in grassetto.  
   
@@ -766,7 +751,7 @@ Questa procedura dettagliata viene illustrato come aggiungere una proprietà di 
   
 9. Modifica **Default Namespace** per il diagramma da **DefaultNamespace** a **NewNamespace**.  
   
-     Il **Namespace** delle tracce elemento prima di **Default Namespace** proprietà, mentre il **Namespace** del secondo elemento mantiene il valore aggiornato utente ** OtherNamespace**.  
+     Il **Namespace** delle tracce elemento prima di **Default Namespace** proprietà, mentre il **Namespace** del secondo elemento mantiene il valore aggiornato utente  **OtherNamespace**.  
   
 10. Salvare la soluzione e quindi chiudere la build sperimentale.  
   
@@ -778,4 +763,3 @@ Questa procedura dettagliata viene illustrato come aggiungere una proprietà di 
  <xref:Microsoft.VisualStudio.Modeling.Design.ElementTypeDescriptor>   
  [Come definire un linguaggio specifico di dominio](../modeling/how-to-define-a-domain-specific-language.md)   
  [Procedura: Creare una soluzione per un linguaggio specifico di dominio](../modeling/how-to-create-a-domain-specific-language-solution.md)   
-
