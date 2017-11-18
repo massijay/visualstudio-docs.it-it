@@ -1,150 +1,150 @@
 ---
-title: "Uso di dati di metrica del codice | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.codemetrics.output"
-helpviewer_keywords: 
-  - "risultati metrica codice"
-  - "finestra Risultati metrica codice"
-  - "finestra Risultati, metrica codice"
+title: Utilizzo di dati di metrica codice | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.codemetrics.output
+helpviewer_keywords:
+- code metrics results
+- code metrics results window
+- results window, code metrics
 ms.assetid: 988193ec-b4a3-4e11-b5a1-7334979807d5
-caps.latest.revision: 17
-author: "erickson-doug"
-ms.author: "douge"
-manager: "douge"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 39d45f5d43819dc418b6378d34a19e6af1d8ee12
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Uso di dati di metrica del codice
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-La finestra **Risultati metrica codice** visualizza i dati generati dall'analisi della metrica del codice.  Per ulteriori informazioni sui valori dei dati di metrica del codice, vedere [Valori della metrica del codice](../code-quality/code-metrics-values.md).  
+# <a name="working-with-code-metrics-data"></a>Uso di dati di metrica del codice
+Il **risultati metrica codice** finestra Visualizza i dati generati dall'analisi della metrica del codice. Per ulteriori informazioni sui valori di dati di metrica codice, vedere [valori della metrica del codice](../code-quality/code-metrics-values.md).  
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
--   [Finestra Risultati metrica codice](../code-quality/working-with-code-metrics-data.md#BKMK_CodeMetricsResultsWindow)  
+-   [Code Metrics Results Window](../code-quality/working-with-code-metrics-data.md#BKMK_CodeMetricsResultsWindow)  
   
--   [Visualizzazione dei risultati di metrica del codice](../code-quality/working-with-code-metrics-data.md#BKMK_DisplayingCodeMetricsResults)  
+-   [Visualizzazione risultati metrica codice](../code-quality/working-with-code-metrics-data.md#BKMK_DisplayingCodeMetricsResults)  
   
--   [Filtro dei risultati di metrica del codice](../code-quality/working-with-code-metrics-data.md#BKMK_FilteringCodeMetricsResults)  
+-   [Filtro risultati metrica codice](../code-quality/working-with-code-metrics-data.md#BKMK_FilteringCodeMetricsResults)  
   
--   [Aggiunta, rimozione e ridisposizione delle colonne di dati](../code-quality/working-with-code-metrics-data.md#BKMK_AddingRemovingandRearrangingDataColumns)  
+-   [Aggiungere, rimuovere e ridisporre le colonne di dati](../code-quality/working-with-code-metrics-data.md#BKMK_AddingRemovingandRearrangingDataColumns)  
   
--   [Copiare dati negli Appunti o in Excel](../code-quality/working-with-code-metrics-data.md#BKMK_Copying_Data_to_the_Clipboard_or_Excel)  
+-   [Copia dei dati negli Appunti o Excel](../code-quality/working-with-code-metrics-data.md#BKMK_Copying_Data_to_the_Clipboard_or_Excel)  
   
--   [Creazione di un elemento di lavoro in base ai risultati metrici del codice](../code-quality/working-with-code-metrics-data.md#BKMK_Creating_a_Work_Item_Based_on_Code_Metric_Results)  
+-   [Creazione di un elemento di lavoro in base ai risultati metrica codice](../code-quality/working-with-code-metrics-data.md#BKMK_Creating_a_Work_Item_Based_on_Code_Metric_Results)  
   
-##  <a name="BKMK_CodeMetricsResultsWindow"></a> Finestra Risultati metrica codice  
- Nella finestra **Risultati metrica codice** è presente una barra degli strumenti nella parte superiore e colonne per la visualizzazione dei risultati calcolati.  
+##  <a name="BKMK_CodeMetricsResultsWindow"></a> Code Metrics Results Window  
+ Il **risultati metrica codice** finestra dispone di una barra degli strumenti nella parte superiore e le colonne da visualizzare i risultati calcolati.  
   
 |Colonna|Descrizione|  
-|-------------|-----------------|  
-|**Gerarchia**|La colonna **Gerarchia** contiene una visualizzazione della struttura ad albero della gerarchia del codice, che è possibile espandere o comprimere per visualizzare il livello di dettaglio desiderato.  Nelle colonne rimanenti vengono visualizzati i risultati calcolati.  È possibile nascondere o disporre le colonne del risultato come si preferisce.|  
-|**Gestibilità**|La colonna **Gestibilità** contiene un'icona oltre al risultato numerico.  Un'icona verde indica un livello di gestibilità relativamente alto.  Un'icona gialla indica un grado moderato di gestibilità.  Un'icona rossa indica bassa gestibilità e un potenziale punto problematico.  Questi indicatori di colore corrispondono a categorie di gravità utilizzate dalla regola FxCop AvoidUnmaintainableCode.  Questa regola genera un errore se l'indice di manutenibilità è inferiore a 10, un avviso se l'indice è compreso tra 10 e 20, né un errore né un avviso se l'indice e superiore a 20.  L'indice di manutenibilità è una sintesi di tre metriche: complessità ciclomatica, righe di codice e complessità computazionale.  I valori non sono espressi in unità.|  
+|------------|-----------------|  
+|**Gerarchia**|Il **gerarchia** colonna viene visualizzata la struttura della gerarchia di codice che è possibile espandere o comprimere per visualizzare il livello di dettaglio desiderato. Le colonne rimanenti mostrano i risultati calcolati. È possibile nascondere o disporre le colonne di risultati desiderato.|  
+|**Manutenibilità**|Il **manutenibilità** colonna contiene un'icona oltre al risultato numerico. Un'icona verde indica un livello relativamente elevato di gestibilità. Un'icona gialla indica un grado moderato di gestibilità. Un'icona rossa indica un potenziale punto problematico e gestibilità basso. Questi indicatori colore corrispondono alle categorie di gravità che vengono usate dalla regola FxCop AvoidUnmaintainableCode. Questa regola genera un errore se l'indice di manutenibilità è inferiore a 10, un avviso se l'indice è compreso tra 10 e 20 e non un errore né un avviso se l'indice è superiore a 20. L'indice di manutenibilità è una sintesi delle tre metriche: complessità ciclomatica, righe di codice e complessità del calcolo. I valori non sono espressi come unità.|  
   
-##  <a name="BKMK_DisplayingCodeMetricsResults"></a> Visualizzazione dei risultati di metrica del codice  
- La finestra Risultati metrica codice viene visualizzata automaticamente quando vengono generati i risultati della metrica del codice.  È inoltre possibile visualizzarla in qualsiasi momento.  
+##  <a name="BKMK_DisplayingCodeMetricsResults"></a>Visualizzazione risultati metrica codice  
+ La finestra Risultati metrica codice viene visualizzata automaticamente quando si generano risultati metrica codice. È inoltre possibile visualizzare la finestra in qualsiasi momento.  
   
-#### Per visualizzare la finestra Risultati metrica codice  
+#### <a name="to-display-the-code-metrics-results-window"></a>Per visualizzare la finestra Risultati metrica codice  
   
--   Scegliere **Finestre** dal menu **Analizza** , quindi fare clic su **Risultati metrica codice**.  
+-   Nel **Analizza** menu, fare clic su **Windows** e quindi fare clic su **risultati metrica codice**.  
   
-     \-oppure\-  
+     \- oppure -  
   
--   Scegliere **Altre finestre** dal menu **Visualizza**, quindi selezionare  **Risultati metrica codice**.  
+-   Nel **vista** dal menu **altre finestre** e quindi fare clic su **risultati metrica codice**.  
   
-     La finestra Risultati metrica codice viene visualizzata anche quando non contiene risultati.  
+     Anche quando non contiene risultati, verrà visualizzata la finestra Risultati metrica codice.  
   
-#### Per visualizzare i dettagli sulla metrica del codice  
+#### <a name="to-view-code-metrics-details"></a>Per visualizzare i dettagli sulla metrica del codice  
   
--   Se i risultati della metrica del codice sono stati generati, espandere la struttura ad albero nella colonna **Gerarchia**.  
+-   Se sono stati generati risultati metrica codice, espandere l'albero di **gerarchia** colonna.  
   
-##  <a name="BKMK_FilteringCodeMetricsResults"></a> Filtro dei risultati di metrica del codice  
- È possibile filtrare i risultati visualizzati nella finestra **Risultati metrica codice** mediante la barra degli strumenti che si trova nella parte superiore della finestra.  Ad esempio, può essere necessario visualizzare solo i risultati che presentano un indice di manutenibilità inferiore a 65.  
+##  <a name="BKMK_FilteringCodeMetricsResults"></a>Filtro risultati metrica codice  
+ È possibile filtrare i risultati vengono visualizzati di **risultati metrica codice** finestra utilizzando la barra degli strumenti nella parte superiore. Potrebbe ad esempio, si desidera visualizzare solo i risultati che includono un indice di manutenibilità inferiore a 65.  
   
- La casella a discesa **Filtro** contiene i nomi delle colonne dei risultati.  Quando un filtro è definito, viene aggiunto con un rientro in fondo dell'elenco.  L'elenco può contenere gli ultimi dieci filtri definiti.  
+ Il **filtro** casella di riepilogo a discesa contiene i nomi delle colonne di risultati. Quando viene definito un filtro, aggiungerlo alla fine dell'elenco con un rientro. L'elenco può contenere gli ultimi dieci filtri che sono stati definiti.  
   
-#### Per filtrare i risultati della metrica del codice  
+#### <a name="to-filter-the-code-metrics-results"></a>Per filtrare i risultati della metrica codice  
   
-1.  Dall'elenco **Filtro**, selezionare il nome della colonna.  
+1.  Dal **filtro** , selezionare il nome della colonna.  
   
-2.  In **Min** digitare il valore minimo da visualizzare.  
+2.  In **Min**, digitare il valore minimo da visualizzare.  
   
-3.  In **Max** digitare il valore massimo da visualizzare.  
+3.  In **Max**, digitare il valore massimo deve essere visualizzato.  
   
-4.  Scegliere il pulsante **Applica filtro**.  
+4.  Fare clic su di **Applica filtro** pulsante.  
   
-5.  Per visualizzare i dettagli del risultato, espandere l'albero della gerarchia.  
+5.  Per visualizzare i dettagli dei risultati, espandere l'albero gerarchico.  
   
-##  <a name="BKMK_AddingRemovingandRearrangingDataColumns"></a> Aggiunta, rimozione e ridisposizione delle colonne di dati  
- È possibile aggiungere o rimuovere le colonne dei risultati dalla finestra **Risultati metrica codice**.  Inoltre, è possibile ridisporre le colonne dei risultati in modo che vengano visualizzate in base all'ordine desiderato.  
+##  <a name="BKMK_AddingRemovingandRearrangingDataColumns"></a>Aggiungere, rimuovere e ridisporre le colonne di dati  
+ È possibile aggiungere o rimuovere risultati le colonne di **risultati metrica codice** finestra. Inoltre, è possibile riorganizzare le colonne dei risultati in modo che vengano visualizzati nell'ordine in cui si desidera.  
   
-#### Per rimuovere una colonna  
+#### <a name="to-remove-a-column"></a>Per rimuovere una colonna  
   
-1.  Fare clic sul pulsante **Aggiungi\/Rimuovi colonne**  
+1.  Fare clic su di **Aggiungi/Rimuovi colonne** pulsante.  
   
-     \-oppure\-  
+     \- oppure -  
   
-     Fare clic con il pulsante destro del mouse sull'intestazione di una colonna qualsiasi, quindi scegliere **Aggiungi\/Rimuovi colonne**.  
+     Fare doppio clic su qualsiasi intestazione di colonna e quindi fare clic su **Aggiungi/Rimuovi colonne**.  
   
-2.  Nella finestra di dialogo **Aggiungi\/Rimuovi colonne**, deselezionare la casella di controllo relativa alla colonna che si desidera rimuovere, quindi fare clic su **OK**.  
+2.  Nel **Aggiungi/Rimuovi colonne** la finestra di dialogo, deselezionare il casella di controllo per la colonna che si desidera rimuovere e quindi fare clic su **OK**.  
   
-#### Per aggiungere una colonna rimossa in precedenza  
+#### <a name="to-add-a-previously-removed-column"></a>Per aggiungere una colonna rimossa in precedenza  
   
-1.  Fare clic sul pulsante **Aggiungi\/Rimuovi colonne**  
+1.  Fare clic su di **Aggiungi/Rimuovi colonne** pulsante.  
   
-     \-oppure\-  
+     \- oppure -  
   
-     Fare clic con il pulsante destro del mouse sull'intestazione di una colonna qualsiasi, quindi scegliere **Aggiungi\/Rimuovi colonne**.  
+     Fare doppio clic su qualsiasi intestazione di colonna e quindi fare clic su **Aggiungi/Rimuovi colonne**.  
   
-2.  Nella finestra di dialogo **Aggiungi\/Rimuovi colonne**, selezionare la casella di controllo relativa alla colonna che si desidera aggiungere, quindi fare clic su **OK**.  
+2.  Nel **Aggiungi/Rimuovi colonne** finestra di dialogo, selezionare la casella di controllo per la colonna che si desidera aggiungere e quindi fare clic su **OK**.  
   
-#### Per ridisporre le colonne  
+#### <a name="to-rearrange-columns"></a>Per riordinare le colonne  
   
-1.  Fare clic sul pulsante **Aggiungi\/Rimuovi colonne**  
+1.  Fare clic su di **Aggiungi/Rimuovi colonne** pulsante.  
   
-     \-oppure\-  
+     \- oppure -  
   
-     Fare clic con il pulsante destro del mouse sull'intestazione di una colonna qualsiasi, quindi scegliere **Aggiungi\/Rimuovi colonne**.  
+     Fare doppio clic su qualsiasi intestazione di colonna e quindi fare clic su **Aggiungi/Rimuovi colonne**.  
   
-2.  Nella finestra di dialogo **Aggiungi\/Rimuovi colonne**, selezionare la colonna che si desidera spostare, quindi fare clic sulla freccia su o sulla freccia giù.  
+2.  Nel **Aggiungi/Rimuovi colonne** finestra di dialogo, selezionare la colonna che si desidera spostare e quindi fare clic sulla freccia in su o freccia in giù.  
   
-3.  Quando la colonna si trova nella posizione desiderata, fare clic su **OK**.  
+3.  Quando la colonna si trova in cui si desidera, fare clic su **OK**.  
   
-##  <a name="BKMK_Copying_Data_to_the_Clipboard_or_Excel"></a> Copiare dati negli Appunti o in Excel  
- È possibile selezionare e copiare una riga selezionata di dati metrici del codice negli Appunti come stringa di testo che contiene una riga per il nome e il valore di ciascuna colonna di dati.  È inoltre possibile fare clic su **Apri elenco in Microsoft Excel** per esportare tutti i risultati metrici nel codice in un foglio di calcolo di Excel  
+##  <a name="BKMK_Copying_Data_to_the_Clipboard_or_Excel"></a>Copia dei dati negli Appunti o Excel  
+ È possibile selezionare e copiare una riga selezionata di dati di metrica codice negli Appunti come una stringa di testo che contiene una riga per il nome e il valore di ogni colonna di dati. È anche possibile fare clic su **Apri elenco in Microsoft Excel** per esportare tutti i risultati della metrica codice in un foglio di calcolo di Excel  
   
-##  <a name="BKMK_Creating_a_Work_Item_Based_on_Code_Metric_Results"></a> Creazione di un elemento di lavoro in base ai risultati metrici del codice  
- È possibile creare un [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] elemento di lavoro basato sui risultati nella finestra **Risultati metrici del codice**.  Quando viene creato l'elemento di lavoro, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] fornisce automaticamente un titolo nel campo **Titolo** e i dati metrici nella sezione **Cronologia**.  
+##  <a name="BKMK_Creating_a_Work_Item_Based_on_Code_Metric_Results"></a>Creazione di un elemento di lavoro in base ai risultati metrica codice  
+ È possibile creare un [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] elemento di lavoro che si basa sul comporta il **risultati metrica codice** finestra. Quando viene creato l'elemento di lavoro, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] inserisce automaticamente un titolo nel **titolo** dati di metrica del campo e il codice sotto il **cronologia** scheda.  
   
- Per ulteriori informazioni sulla creazione di elementi di lavoro, vedere [Create a work item &#91;redirected&#93;](http://msdn.microsoft.com/it-it/24b2e064-16ac-4bf0-8de4-98a1f48b8c4b).  
+ Per ulteriori informazioni su come creare elementi di lavoro, vedere [creare un elemento di lavoro &#91; reindirizzato &#93;](http://msdn.microsoft.com/en-us/24b2e064-16ac-4bf0-8de4-98a1f48b8c4b).  
   
-#### Per creare un elemento di lavoro basato su un risultato  
+#### <a name="to-create-a-work-item-based-on-a-result"></a>Per creare un elemento di lavoro basato su un risultato  
   
-1.  Fare clic con il pulsante destro del mouse sul risultato.  
+1.  Fare clic sul risultato.  
   
-2.  Selezionare **Crea elemento di lavoro**, quindi fare clic sul tipo di elemento di lavoro che si desidera creare. Ad esempio **Bug**, **Attività**e così via.  
+2.  Scegliere **Crea elemento di lavoro**, quindi fare clic sul tipo di elemento di lavoro che si desidera creare (**Bug**, **attività**e così via).  
   
-3.  Compilare il form dell'elemento di lavoro specificando tutti i campi obbligatori.  
+3.  Completare il form elemento di lavoro con l'inserimento di tutti i campi obbligatori.  
   
-4.  Scegliere **Salva tutto** dal menu **File** per salvare l'elemento di lavoro.  
+4.  Nel **File** menu, fare clic su **Salva tutto** per salvare l'elemento di lavoro.  
   
-#### Per creare un bug basato su un risultato  
+#### <a name="to-create-a-bug-based-on-a-result"></a>Per creare un bug basato su un risultato  
   
 1.  Fare clic sul risultato per selezionarlo.  
   
-2.  Fare clic sul pulsante **Crea elemento di lavoro**.  
+2.  Fare clic su di **Crea elemento di lavoro** pulsante.  
   
-3.  Compilare il form dell'elemento di lavoro specificando tutti i campi obbligatori.  
+3.  Completare il form elemento di lavoro con l'inserimento di tutti i campi obbligatori.  
   
-4.  Scegliere **Salva tutto** dal menu **File** per salvare l'elemento di lavoro.  
+4.  Nel **File** menu, fare clic su **Salva tutto** per salvare l'elemento di lavoro.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Misurazione della complessità e della manutenibilità del codice gestito](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)   
- [Procedura: generare dati di metrica codice](../code-quality/how-to-generate-code-metrics-data.md)
+ [Procedura: Generare dati di metrica codice](../code-quality/how-to-generate-code-metrics-data.md)

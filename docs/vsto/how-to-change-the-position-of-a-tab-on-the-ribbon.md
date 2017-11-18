@@ -1,68 +1,69 @@
 ---
-title: "Procedura: modificare la posizione di una scheda nella barra multifunzione"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "barra multifunzione [sviluppo per Office in Visual Studio], schede"
+title: 'Procedura: modificare la posizione di una scheda della barra multifunzione | Documenti Microsoft'
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords: Ribbon [Office development in Visual Studio], tabs
 ms.assetid: 3f0906e3-9708-4136-ac49-986bc4c92ea4
-caps.latest.revision: 26
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "26"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 40907d71bae8c8c25f06b3b1f3d4af8b9f79c385
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Procedura: modificare la posizione di una scheda nella barra multifunzione
-  È possibile modificare l'ordine delle schede personalizzate in una barra multifunzione utilizzando l'**Editor della raccolta Tab**.  È possibile posizionare le schede personalizzate prima o dopo una scheda incorporata nella barra multifunzione.  Una scheda incorporata rappresenta una scheda già presente sulla barra multifunzione di un'applicazione Microsoft Office.  Ad esempio, la scheda **Dati** è una scheda incorporata in Excel.  
+# <a name="how-to-change-the-position-of-a-tab-on-the-ribbon"></a>Procedura: modificare la posizione di una scheda nella barra multifunzione
+  È possibile modificare l'ordine delle schede personalizzate in una barra multifunzione utilizzando il **scheda Editor della raccolta**. È possibile posizionare le schede personalizzate prima o dopo una scheda incorporata nella barra multifunzione. Una scheda incorporata rappresenta una scheda già presente sulla barra multifunzione di un'applicazione di Microsoft Office. Ad esempio, il **dati** scheda è una scheda incorporata in Excel.  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
   
-### Per modificare l'ordine delle schede nella barra multifunzione  
+### <a name="to-change-the-order-of-tabs-on-the-ribbon"></a>Per modificare l'ordine delle schede sulla barra multifunzione  
   
-1.  In **Esplora soluzioni** selezionare il file di codice \(.vb o .cs\) della barra multifunzione.  
+1.  Selezionare il file di codice della barra multifunzione (file con estensione vb o cs) in **Esplora**.  
   
-2.  Scegliere **Finestra di progettazione** dal menu **Visualizza**.  
+2.  Nel **vista** menu, fare clic su **progettazione**.  
   
-3.  Fare clic con il pulsante destro del mouse sulla finestra di progettazione della barra multifunzione, quindi scegliere **Proprietà**.  
+3.  Fare clic sulla finestra di progettazione della barra multifunzione e quindi fare clic su **proprietà**.  
   
-4.  Nella finestra **Proprietà** selezionare la proprietà **Tabs**, quindi fare clic sul pulsante con i puntini di sospensione \(![Ellisse di ASP.NET Mobile Designer](~/sharepoint/media/mwellipsis.gif "Ellisse di ASP.NET Mobile Designer")\).  
+4.  Nel **proprietà** finestra, seleziona il **schede** , proprietà e quindi fare clic sul pulsante con puntini di sospensione (![ellisse di ASP.NET Mobile Designer](../sharepoint/media/mwellipsis.gif "ASP.NET per dispositivi mobili Ellisse progettazione")).  
   
-     Verrà visualizzato l'**Editor della raccolta Tab**.  
+     Il **scheda Editor della raccolta** viene visualizzato.  
   
-5.  Nell'elenco **Membri** dell'**editor della raccolta Tab** selezionare la scheda che si desidera spostare e fare clic sulle frecce in su o in giù per modificare l'ordine delle schede.  
+5.  Nel **scheda Editor della raccolta**nella **membri** elenco, selezionare la scheda che si desidera spostare e fare clic sulla freccia in giù per modificare l'ordine di tabulazione.  
   
-### Per posizionare una scheda prima o dopo una scheda incorporata nella barra multifunzione  
+### <a name="to-position-a-tab-before-or-after-a-built-in-tab-on-the-ribbon"></a>Per posizionare una scheda prima o dopo una scheda incorporata nella barra multifunzione  
   
-1.  Selezionare una scheda personalizzata nella finestra di progettazione della barra multifunzione.  
+1.  Nella finestra di progettazione della barra multifunzione, selezionare una scheda personalizzata.  
   
-2.  Nella finestra **Proprietà**, espandere la proprietà **ControlId** quindi assicurarsi che il valore della proprietà **ControlIdType** sia impostato su **Personalizzata**.  
+2.  Nel **proprietà** finestra, espandere il **ControlId** proprietà, quindi assicurarsi che il valore del **ControlIdType** è impostata su **personalizzato**.  
   
-3.  Nella finestra **Proprietà** espandere la proprietà **Position**.  
+3.  Nel **proprietà** finestra, espandere il **posizione** proprietà.  
   
-4.  Impostare la proprietà **PositionType** sul valore appropriato:  
+4.  Impostare il **PositionType** proprietà sul valore appropriato:  
   
-    -   **BeforeOfficeId** consente di posizionare il gruppo prima di una determinata scheda incorporata.  
+    -   **BeforeOfficeId** posiziona il gruppo prima di una determinata scheda incorporata.  
   
-    -   **AfterOfficeId** consente di posizionare il gruppo dopo una determinata scheda incorporata.  
+    -   **AfterOfficeId** posiziona il gruppo dopo una determinata scheda incorporata.  
   
-5.  Impostare la proprietà **OfficeId** sull'ID di controllo di una scheda incorporata.  
+5.  Impostare il **OfficeId** proprietà ID di controllo di una scheda incorporata.  
   
-     Per un elenco degli ID di controllo, vedere [File della Guida di Office 2010: Identificatori del controllo fluenti dell'interfaccia utente di Office](http://go.microsoft.com/fwlink/?LinkID=181052).  
+     Per un elenco ID di controllo, vedere [file della Guida di Office 2010: identificatori utente Office Fluent interfaccia controllo](http://go.microsoft.com/fwlink/?LinkID=181052).  
   
-## Vedere anche  
- [Cenni preliminari sulla barra multifunzione](../vsto/ribbon-overview.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica della barra multifunzione](../vsto/ribbon-overview.md)   
  [Finestra di progettazione della barra multifunzione](../vsto/ribbon-designer.md)   
- [Elemento XML della barra multifunzione](../vsto/ribbon-xml.md)   
- [Procedura dettagliata: creazione di una scheda personalizzata utilizzando la finestra di progettazione della barra multifunzione](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
- [Procedura dettagliata: creazione di una scheda personalizzata utilizzando l'elemento XML della barra multifunzione](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)  
+ [Barra multifunzione XML](../vsto/ribbon-xml.md)   
+ [Procedura dettagliata: Creazione di una scheda personalizzata utilizzando la finestra di progettazione della barra multifunzione](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)   
+ [Procedura dettagliata: creazione di una scheda personalizzata mediante l'XML della barra multifunzione](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)  
   
   
