@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- CONNECTION_PROTOCOL
-helpviewer_keywords:
-- CONNECTION_PROTOCOL enumeration
+f1_keywords: CONNECTION_PROTOCOL
+helpviewer_keywords: CONNECTION_PROTOCOL enumeration
 ms.assetid: 99df5865-8b36-486d-9f4c-d10ae2bc688a
-caps.latest.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 498090c71abb41fa7b0837bd608715db30df5e86
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 2be5678704e9a5899c4ce7f5caba8cec1d8a21e6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# CONNECTION_PROTOCOL
+# <a name="connectionprotocol"></a>CONNECTION_PROTOCOL
 Indica il protocollo utilizzato per la comunicazione tra un server di debug e il pacchetto di debug (DE).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 typedef enum tagCONNECTION_PROTOCOL {  
@@ -66,7 +49,7 @@ public enum CONNECTION_PROTOCOL {
 };  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  CONNECTION_NONE  
  Non è è stata stabilita alcuna connessione a un server.  
   
@@ -88,16 +71,16 @@ public enum CONNECTION_PROTOCOL {
  CONNECTION_OTHER  
  Un altro tipo di connessione è stato stabilito (questo valore non viene attualmente utilizzato).  
   
-## Note  
+## <a name="remarks"></a>Note  
  Questi valori sono restituiti dal [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) metodo.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Intestazione: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Enumerazioni](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md)
