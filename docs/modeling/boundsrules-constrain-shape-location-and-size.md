@@ -1,28 +1,29 @@
 ---
-title: "Le regole associate (BoundsRules) vincolano posizione e dimensione delle forme | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Linguaggio specifico di dominio, eventi"
+title: BoundsRules vincolare posizione e dimensione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Domain-Specific Language, events
 ms.assetid: 4d08e541-fc67-4e68-bf31-30d346aa2aa0
-caps.latest.revision: 18
-author: "alancameronwills"
-ms.author: "awills"
-manager: "douge"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: alancameronwills
+ms.author: awills
+manager: douge
+ms.openlocfilehash: 8a611bd18cb06b712f671d370bfc26d4dc8cf4f3
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
-# Le regole associate (BoundsRules) vincolano posizione e dimensione delle forme
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-In *regola limiti* è una classe che definisce i limiti della dimensione e la posizione di una forma.  Fornisce un metodo che viene chiamato ripetutamente mentre l'utente sta trascinando una forma o gli angoli o i lati della forma.  
+# <a name="boundsrules-constrain-shape-location-and-size"></a>Le regole associate (BoundsRules) vincolano posizione e dimensione delle forme
+Oggetto *limiti regola* è una classe che definisce i limiti alle dimensioni e posizione di una forma. Fornisce un metodo che viene chiamato ripetutamente quando un utente sta trascinando una forma o negli angoli o ai lati della forma.  
   
- Nell'esempio vincola una forma rettangolare sia una barra di dimensione fissa, orizzontale o verticale.  Quando l'utente trascina gli angoli o i lati, le vibrazioni struttura tra le due configurazioni consentite di altezza e larghezza.  
+ Nell'esempio seguente viene vincola una forma rettangolare a una barra di dimensioni fisse, orizzontale o verticale. Quando l'utente trascina l'angoli o ai lati, la struttura consente di capovolgere tra le due configurazioni consentite dell'altezza e larghezza.  
   
- La regola limiti è una classe derivata da <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>.  Un'istanza della regola verrà creata nella forma:  
+ I limiti della regola è una classe derivata da <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>. Viene creata un'istanza della regola nella forma:  
   
 ```  
 using Microsoft.VisualStudio.Modeling.Diagrams; ...  
@@ -62,8 +63,8 @@ public class BarBoundsRule: BoundsRules
 } } }  
 ```  
   
- Si noti che di posizione e le dimensioni possono essere vincolate se lo si desidera.  
+ Si noti che può essere vincolati sia la posizione e dimensioni se si desidera.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.VisualStudio.Modeling.Diagrams.BoundsRules>   
  [Risposta alle modifiche e propagazione delle modifiche](../modeling/responding-to-and-propagating-changes.md)

@@ -1,24 +1,25 @@
 ---
-title: "File XSD di esempio: schema semplice | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'File XSD di esempio: Semplice Schema | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f7e1dde1-b4f6-4371-add4-935b68ec77d7
-caps.latest.revision: 4
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: b0178c64c72584ad2a3fe4692294a4877990423e
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# File XSD di esempio: schema semplice
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Il file XSD seguente viene utilizzato in vari esempi nella documentazione relativa alla progettazione di schemi XSD.Questo file è uno schema di ordine di acquisto semplice.  
+# <a name="sample-xsd-file-simple-schema"></a>File XSD di esempio: schema semplice
+Il file XSD seguente viene usato in vari esempi nella documentazione relativa alla progettazione di schemi XSD. Questo file è uno schema di ordine di acquisto semplice.  
   
 ```xml  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

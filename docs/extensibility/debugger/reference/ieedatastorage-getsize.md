@@ -1,52 +1,52 @@
 ---
-title: "IEEDataStorage::GetSize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IEEDataStorage::GetSize"
-helpviewer_keywords: 
-  - "IEEDataStorage::GetSize"
+title: IEEDataStorage::GetSize | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IEEDataStorage::GetSize
+helpviewer_keywords: IEEDataStorage::GetSize
 ms.assetid: 33d232c4-1239-4abc-922b-e1bc5b908169
-caps.latest.revision: 11
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: dd0ec398877a581109f864411ede684147e86ebd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# IEEDataStorage::GetSize
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
+# <a name="ieedatastoragegetsize"></a>IEEDataStorage::GetSize
 Restituisce il numero di byte contenuti in questo oggetto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
+```cpp  
 HRESULT GetSize(  
-   ULONG* size  
+   ULONG* size  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetSize(  
-   out uint size  
+   out uint size  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `size`  
- \[out\]  Il numero di byte contenuti in questo oggetto.  
+ [out] Il numero di byte contenuti in questo oggetto.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## Note  
- Utilizzare [GetData](../Topic/IEEDataStorage::GetData.md) il metodo per recuperare i byte di dati.  
+## <a name="remarks"></a>Note  
+ Utilizzare il [GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md) metodo per recuperare i byte di dati effettivi.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md)   
- [GetData](../Topic/IEEDataStorage::GetData.md)
+ [GetData](../../../extensibility/debugger/reference/ieedatastorage-getdata.md)

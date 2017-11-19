@@ -1,56 +1,55 @@
 ---
-title: "IDiaReadExeAtRVACallback::ReadExecutableAtRVA | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaReadExeAtRVACallback::ReadExecutableAtRVA (metodo)"
+title: IDiaReadExeAtRVACallback::ReadExecutableAtRVA | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaReadExeAtRVACallback::ReadExecutableAtRVA method
 ms.assetid: 3c1e965f-8f05-41a8-86d8-01830b2377c9
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 907b75c6021a739ebbe52cbef1ec3e4714360072
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaReadExeAtRVACallback::ReadExecutableAtRVA
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-Legge il numero di byte che iniziano all'indirizzo virtuale relativo specificato \(RVA\) nel file eseguibile.  
+# <a name="idiareadexeatrvacallbackreadexecutableatrva"></a>IDiaReadExeAtRVACallback::ReadExecutableAtRVA
+Legge il numero specificato di byte a partire specificato indirizzo virtuale relativo (RVA) dal file eseguibile.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
-HRESULT ReadExecutableAtRVA (   
-   DWORD  relativeVirtualAddress,  
-   DWORD  cbData,  
-   DWORD* pcbData,  
-   BYTE   data[]  
+```C++  
+HRESULT ReadExecutableAtRVA (   
+   DWORD  relativeVirtualAddress,  
+   DWORD  cbData,  
+   DWORD* pcbData,  
+   BYTE   data[]  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `relativeVirtualAddress`  
- \[in\]  Il gli indirizzi RVA nel file eseguibile da avviare lettura.  
+ [in] RVA nel file eseguibile per iniziare la lettura.  
   
  `cbData`  
- \[in\]  Numero di byte da leggere.  
+ [in] Numero di byte da leggere.  
   
  `pcbData`  
- \[out\]  Restituisce il numero di byte letti.  
+ [out] Restituisce il numero di byte letti.  
   
  `data[]`  
- \[in, out\]  Una matrice che viene soddisfatta di byte ha indicato dal file.  
+ [in, out] Matrice che viene riempita con byte letti dal file.  
   
-## Note  
- Questo metodo viene chiamato dal codice di supporto di diametro per caricare i byte di dati da un eseguibile utilizzando un indirizzo virtuale relativo.  Questo metodo viene chiamato a supporto di [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metodo.  
+## <a name="remarks"></a>Note  
+ Questo metodo viene chiamato dal codice di supporto di DIA per caricare i byte di dati da un eseguibile usando un indirizzo virtuale relativo. Questo metodo viene chiamato supportano il [idiadatasource:: Loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metodo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md)   
  [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)

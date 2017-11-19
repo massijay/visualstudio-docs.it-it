@@ -1,32 +1,34 @@
 ---
-title: "Risoluzione dei problemi relativi alle soluzioni Office"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "applicazioni di Office [sviluppo per Office in Visual Studio], risoluzione dei problemi"
-  - "sviluppo per Office in Visual Studio, risoluzione dei problemi"
-  - "risoluzione dei problemi [sviluppo per Office in Visual Studio]"
+title: Risoluzione dei problemi delle soluzioni Office | Documenti Microsoft
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- Office applications [Office development in Visual Studio], troubleshooting
+- Office development in Visual Studio, troubleshooting
+- troubleshooting [Office development in Visual Studio]
 ms.assetid: 0518ffa9-97e5-4596-8ff2-8a24aef42b9e
-caps.latest.revision: 27
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 26
+caps.latest.revision: "27"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: d4e93509595dc9bd576bc1f3f427ef222df11abd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Risoluzione dei problemi relativi alle soluzioni Office
+# <a name="troubleshooting-office-solutions"></a>Risoluzione dei problemi relativi alle soluzioni Office
   Questa sezione contiene suggerimenti per la risoluzione di problemi comuni che si potrebbero incontrare quando si creano soluzioni usando gli strumenti di sviluppo per Office in Visual Studio.  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Risoluzione degli errori nelle soluzioni Office](../vsto/troubleshooting-errors-in-office-solutions.md)  
  Descrive i problemi comuni che potrebbero verificarsi durante la progettazione, l'esecuzione e il test di soluzioni Office in Visual Studio.  
   
@@ -36,7 +38,7 @@ caps.handback.revision: 26
  [Supporto aggiuntivo per gli errori nelle soluzioni Office](../vsto/additional-support-for-errors-in-office-solutions.md)  
  Descrive altre risorse per la risoluzione dei problemi relativi a errori e avvisi in soluzioni Office.  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [Risoluzione dei problemi relativi alla sicurezza delle soluzioni Office](../vsto/troubleshooting-office-solution-security.md)  
  Vengono descritti problemi comuni che possono verificarsi durante l'applicazione di misure di sicurezza delle soluzioni Office.  
   
@@ -49,7 +51,7 @@ caps.handback.revision: 26
  [Sicurezza delle soluzioni Office](../vsto/securing-office-solutions.md)  
  Contiene argomenti che illustrano come le soluzioni Office includano le funzioni di sicurezza disponibili in .NET Framework.  
   
- [Attività comuni nella programmazione con Office](../vsto/common-tasks-in-office-programming.md)  
+ [Attività comuni nella programmazione Office](../vsto/common-tasks-in-office-programming.md)  
  Elenca domande frequenti sulla programmazione di soluzioni Office e fornisce collegamenti che possono consentire la risoluzione di problemi comuni.  
   
   

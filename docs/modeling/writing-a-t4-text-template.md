@@ -11,30 +11,15 @@ helpviewer_keywords:
 - text templates, guide
 - text templates, functions that generate text
 ms.assetid: 94328da7-953b-4e92-9587-648543d1f732
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c5e60ada4489e12312df92ecceab8bc268a6cfac
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 4a36302d80f4bc397128e3838c9abf858a0b5fe8
-ms.openlocfilehash: 97a9b5ce0237d9a06289e52e6db86ca33b901fc6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="writing-a-t4-text-template"></a>Scrittura di un modello di testo T4
 Un modello di testo contiene il testo che verrà generato dal modello stesso. Ad esempio, un modello che crea una pagina web conterrà "\<html > …" e tutte le altre parti standard di una pagina HTML. Inserito nel modello sono *blocchi di controllo*, che sono frammenti di codice programma. forniscono i valori variabili e consentono ad alcune parti del testo di essere ripetute e usate in modo condizionale.  
@@ -294,4 +279,3 @@ Content of MyFile.txt is:
 |Eseguire la generazione di testo all'esterno di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|[Generazione di file con l'utilità TextTransform](../modeling/generating-files-with-the-texttransform-utility.md)|  
 |Trasformare i dati nel formato di un linguaggio specifico di dominio.|[Generazione di codice da un linguaggio specifico di dominio](../modeling/generating-code-from-a-domain-specific-language.md)|  
 |Scrivere processori di direttive per trasformare le origini dati.|[Personalizzazione della trasformazione del testo T4](../modeling/customizing-t4-text-transformation.md)|
-

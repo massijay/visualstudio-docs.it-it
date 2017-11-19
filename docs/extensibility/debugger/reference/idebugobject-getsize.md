@@ -1,52 +1,52 @@
 ---
-title: "IDebugObject::GetSize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugObject::GetSize"
-helpviewer_keywords: 
-  - "Metodo IDebugObject::GetSize"
+title: IDebugObject::GetSize | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugObject::GetSize
+helpviewer_keywords: IDebugObject::GetSize method
 ms.assetid: 89af423b-36eb-479d-b2de-2693455eca15
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: ab3903526ed9dc8e516520603966ea1936e46fbe
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugObject::GetSize
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-Ottiene la dimensione dell'oggetto in byte.  
+# <a name="idebugobjectgetsize"></a>IDebugObject::GetSize
+Ottiene le dimensioni dell'oggetto in byte.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
-HRESULT GetSize(   
-   UINT* pnSize  
+```cpp  
+HRESULT GetSize(   
+   UINT* pnSize  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetSize(  
-   out uint pnSize  
+   out uint pnSize  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pnSize`  
- \[out\]  Restituisce le dimensioni in byte.  
+ [out] Restituisce le dimensioni in byte.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce S\_OK, in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce S_OK; in caso contrario, restituisce un codice di errore.  
   
-## Note  
- utilizzare [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md) il metodo per recuperare il valore come sequenza di byte.  
+## <a name="remarks"></a>Note  
+ Utilizzare il [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md) metodo per recuperare il valore come una sequenza di byte.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md)

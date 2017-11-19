@@ -1,134 +1,50 @@
 ---
-title: "Procedura: associare controlli Windows Form ai dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "aspx"
-helpviewer_keywords: 
-  - "dati [Windows Form], visualizzazione"
-  - "origini dati, visualizzazione"
-  - "visualizzazione di dati, controlli Windows Form"
-  - "Windows Form, visualizzazione di dati"
-ms.assetid: 0163a34a-38cb-40b9-8f38-3058a90caf21
-caps.latest.revision: 28
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+redirect_url: /visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio
+ms.openlocfilehash: 5ba8ada294275a99aab27ff9c249d6c3d8e17da3
+ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/09/2017
 ---
-# Procedura: associare controlli Windows Form ai dati
-Associare dati ai controlli Windows Form trascinando oggetti dalla [Origini dati \(finestra\)](../Topic/Data%20Sources%20Window.md).  Prima di trascinare elementi dalla finestra **Origini dati**, è possibile impostare il tipo di controllo della tabella su **Dettagli** per i controlli singoli oppure su **DataGridView** per un oggetto <xref:System.Windows.Forms.DataGridView>.  Per ulteriori informazioni, vedere [Impostare il controllo da creare durante il trascinamento dalla finestra Origini dati](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).  
+titolo: "controlli Windows Form di associazione a dati | Ms.custom Microsoft Docs":" "ms. date: Reviewer" 11/04/2016":" "ms.suite:" "ms. tgt_pltfrm:" "ms. topic: helpviewer_keywords" articolo": 
+  - "la visualizzazione dei dati, controlli Windows Form"
+  - "Windows Form, visualizzazione di dati"
+  - "origini dati, la visualizzazione"
+  - ms. AssetID "dati [Windows Form], visualizzazione": 0163a34a-38cb-40b9-8f38-3058a90caf21 caps.latest.revision: autore 28: author "gewarren": "gewarren" manager: ms. Technology ghogen: "strumenti di dati Visual Studio"
+---
+# <a name="bind-windows-forms-controls-to-data"></a>Associare controlli Windows Form ai dati
+È possibile associare le origini dati ai controlli trascinando gli oggetti dal **origini dati** finestra in un Windows Form o in un controllo esistente in un form. Prima di trascinare elementi, è possibile impostare il tipo di controllo che si desidera associare. Valori diversi visualizzati a seconda se si scelga la tabella stessa, o una singola colonna.  È inoltre possibile impostare valori personalizzati. Per una tabella, "Dettagli" significa che ogni colonna è associato a un controllo separato.  
+
+![Associare l'origine dati a DataGridView](../data-tools/media/raddata-bind-data-source-to-datagridview.png "raddata origine dati di associazione di DataGridView")  
   
- Se i controlli necessari dall'applicazione non sono disponibili dalla finestra **Origini dati**, è possibile aggiungere controlli.  Per ulteriori informazioni, vedere [Aggiungere controlli personalizzati alla finestra Origini dati](../data-tools/add-custom-controls-to-the-data-sources-window.md).  
+[!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
+## <a name="bind-to--data-in-a-datagridview-control"></a>Associazione a dati in un controllo DataGridView  
+Per DataGridView, l'intera tabella è associato a tale controllo singolo. Quando si trascina un controllo DataGridView al form, uno strumento striscia per l'esplorazione dei record (<xref:System.Windows.Forms.BindingNavigator>) viene inoltre visualizzato. Oggetto [DataSet](../data-tools/dataset-tools-in-visual-studio.md), [TableAdapter](../data-tools/create-and-configure-tableadapters.md), <xref:System.Windows.Forms.BindingSource>, e <xref:System.Windows.Forms.BindingNavigator> vengono visualizzati nella barra dei componenti. Nella figura seguente, viene inoltre aggiunto un TableAdapterManager perché la tabella Customers è una relazione con la tabella Orders. Queste variabili sono tutti dichiarate nel codice generato automaticamente come membri privati nella classe del modulo. Il codice generato automaticamente per la compilazione di DataGridView si trova nel gestore eventi form_load. Il codice per il salvataggio dei dati per aggiornare il database si trova nel gestore dell'evento Save di BindingNavigator. È possibile spostare o modificare il codice in base alle esigenze.  
   
-## Visualizzazione di un'intera tabella di dati nei singoli controlli  
- È possibile visualizzare un'intera tabella di dati in singoli controlli trascinando la tabella, o un nodo che rappresenti una raccolta se si utilizza un'origine dati oggetto, dalla finestra **Origini dati** in un form di un'applicazione Windows.  
+ ![GridView con BindingNavigator](../data-tools/media/raddata-gridview-with-bindingnavigator.png "raddata GridView con BindingNavigator")  
   
-#### Per visualizzare un'intera tabella di dati  
+ È possibile personalizzare il comportamento di DataGridView e BindingNavigator facendo clic sullo smart tag nell'angolo superiore destro di ogni:  
   
-1.  Aprire la finestra **Origini dati**.  Per ulteriori informazioni, vedere [Procedura: Aprire la finestra Origini dati](../data-tools/how-to-open-the-data-sources-window.md).  
+ ![DataGridView e associazione Navigator smart tag](../data-tools/media/raddata-datagridview-and-binding-navigator-smart-tags.png "raddata DataGridView e associazione Navigator smart tag")  
   
-    > [!NOTE]
-    >  Se la finestra **Origini dati** è vuota, aggiungervi un'origine dati.  Per ulteriori informazioni, vedere la classe [Cenni preliminari sulle origini dati](../data-tools/add-new-data-sources.md).  
+ Se i controlli dell'applicazione è necessario non è disponibile dall'interno di **origini dati** finestra, è possibile aggiungere controlli. Per ulteriori informazioni, vedere [aggiungere controlli personalizzati alla finestra Origini dati](../data-tools/add-custom-controls-to-the-data-sources-window.md).  
   
-2.  Aprire il form in **Progettazione Windows Form**.  
+ È anche possibile trascinare elementi dal **origini dati** finestra controlli già presenti in un form per associare il controllo ai dati. Un controllo che è già associato a dati con i dati di binding reimpostati sull'elemento trascinato più di recente. Per essere destinazioni di rilascio valide, i controlli devono essere in grado di visualizzare il tipo di dati sottostante dell'elemento trascinato su di esso dal **origini dati** finestra. Ad esempio, non è a trascinare un elemento che ha un tipo di dati <xref:System.DateTime> su un <xref:System.Windows.Forms.CheckBox>, in quanto il <xref:System.Windows.Forms.CheckBox> non è in grado di visualizzare una data.  
   
-3.  Selezionare una tabella nella finestra **Origini dati**, fare clic sulla freccia a discesa, quindi selezionare **Dettagli**.  
+## <a name="bind-to--data-in-individual-controls"></a>Associazione a dati in singoli controlli  
+ Quando si associa un'origine dati per "Dettagli", ogni colonna nel set di dati è associato a un controllo separato.  
   
-4.  Trascinare la tabella dalla finestra **Origini dati** in un form.  
+ ![Associare l'origine dati per i dettagli](../data-tools/media/raddata-bind-data-source-to-details.png "raddata origine dati di associazione per i dettagli")  
   
-     Sul form viene creato un singolo controllo associato a dati per ciascuna colonna o proprietà, insieme a un controllo Label denominato in modo appropriato.  
+> [!IMPORTANT]
+>  Si noti che nella figura precedente, si trascina dalla proprietà ordini della tabella Customers, non dalla tabella Orders. Tramite l'associazione alla proprietà Orders, i comandi di spostamento apportati in DataGridView vengono riflesse immediatamente nei controlli di dettagli. Se è stata trascinata dalla tabella Orders, i controlli sarebbero comunque essere associati al set di dati, ma non potrebbe non essere sincronizzati con il controllo DataGridView.  
   
-## Visualizzazione di colonne di dati selezionate nei singoli controlli  
- Visualizzare singole colonne di dati in singoli controlli trascinando le colonne, o le proprietà se si utilizza un'origine dati oggetto, dalla finestra **Origini dati** in un form di un'applicazione Windows.  
+ La figura seguente mostra l'impostazione predefinita i controlli con associazione a dati che vengono aggiunti al modulo dopo che la proprietà di ordini nella tabella Customers è associata a "Dettagli" nel **origini dati** finestra.  
   
-#### Per visualizzare le colonne di dati selezionate  
+ ![Tabella Orders associata ai dettagli](../data-tools/media/raddata-orders-table-bound-to-details.png "tabella Orders raddata associata ai dettagli")  
   
-1.  Aprire la finestra **Origini dati**.  Per ulteriori informazioni, vedere [Procedura: Aprire la finestra Origini dati](../data-tools/how-to-open-the-data-sources-window.md).  
+ Si noti inoltre che ogni controllo dispone di uno smart tag. Questo tag consente personalizzazioni che si applicano a solo a tale controllo.  
   
-    > [!NOTE]
-    >  Se la finestra **Origini dati** è vuota, aggiungervi un'origine dati.  Per ulteriori informazioni, vedere la classe [Cenni preliminari sulle origini dati](../data-tools/add-new-data-sources.md).  
-  
-2.  Espandere la tabella per visualizzare le singole colonne.  
-  
-    > [!TIP]
-    >  Per impostare il controllo creato per ciascuna colonna, selezionare la colonna nella finestra **Origini dati**, fare clic sulla freccia a discesa e scegliere un  controllo dall'elenco dei controlli disponibili.  Per ulteriori informazioni, vedere [Impostare il controllo da creare durante il trascinamento dalla finestra Origini dati](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).  
-  
-3.  Aprire il form in **Progettazione Windows Form**.  
-  
-4.  Trascinare le colonne desiderate dalla finestra **Origini dati** in un form.  
-  
-     Per ciascuna colonna o proprietà trascinata, sul form viene creato un singolo controllo associato a dati, insieme a un controllo Label denominato in maniera appropriata.  
-  
- È inoltre possibile trascinare elementi dalla finestra **Origini dati** ai controlli esistenti \(già presenti in un form\) per associare il controllo ai dati.  Se un controllo è già associato a dei dati, le associazioni a dati vengono reimpostate sull'elemento trascinato nel controllo più di recente.  
-  
-> [!NOTE]
->  Per essere considerate destinazioni di trascinamento valide, i controlli devono consentire la visualizzazione del tipo di dati sottostante dell'elemento trascinato dalla finestra **Origini dati**.  Non è consentito ad esempio trascinare un elemento il cui tipo di dati è <xref:System.DateTime> in un controllo <xref:System.Windows.Forms.CheckBox> perché <xref:System.Windows.Forms.CheckBox> non è in grado di visualizzare una data.  
-  
-#### Per associare un controllo esistente ai dati  
-  
-1.  Aprire la finestra **Origini dati**.  Per ulteriori informazioni, vedere [Procedura: Aprire la finestra Origini dati](../data-tools/how-to-open-the-data-sources-window.md).  
-  
-2.  Aprire il form in [Windows Forms Designer](http://msdn.microsoft.com/it-it/3c3d61f8-f36c-4d41-b9c3-398376fabb15).  
-  
-3.  Espandere una tabella o un oggetto nella finestra **Origini dati** per visualizzarne le singole colonne o proprietà.  
-  
-4.  Trascinare l'elemento desiderato dalla finestra **Origini dati** in un controllo esistente.  
-  
-     Il controllo è ora associato all'elemento selezionato.  
-  
-## Visualizzazione di dati in un controllo DataGridView  
-  
-#### Per visualizzare i dati in un nuovo controllo DataGridView di Windows Form  
-  
-1.  Aprire la finestra **Origini dati**.  Per ulteriori informazioni, vedere [Procedura: Aprire la finestra Origini dati](../data-tools/how-to-open-the-data-sources-window.md).  
-  
-    > [!NOTE]
-    >  Se la finestra **Origini dati** è vuota, aggiungerle un'origine dati.  Per ulteriori informazioni, vedere la classe [Cenni preliminari sulle origini dati](../data-tools/add-new-data-sources.md).  
-  
-2.  Aprire il form in **Progettazione Windows Form**.  
-  
-3.  Selezionare una tabella nella finestra **Origini dati**, fare clic sulla freccia a discesa, quindi selezionare **DataGridView**.  
-  
-4.  Trascinare la tabella dalla finestra **Origini dati** in un form.  
-  
-     Sul form vengono visualizzati un controllo <xref:System.Windows.Forms.DataGridView> e un controllo Toolstrip \(<xref:System.Windows.Forms.BindingNavigator>\) per lo spostamento all'interno dei record.  Nella barra dei componenti sono visualizzati gli oggetti [DataSet](../data-tools/dataset-tools-in-visual-studio.md), [TableAdapter](../data-tools/tableadapter-overview.md), <xref:System.Windows.Forms.BindingSource> e <xref:System.Windows.Forms.BindingNavigator>.  
-  
-#### Per visualizzare i dati in un controllo DataGridView esistente di Windows Form  
-  
-1.  Aprire la finestra **Origini dati**.  Per ulteriori informazioni, vedere [Procedura: Aprire la finestra Origini dati](../data-tools/how-to-open-the-data-sources-window.md).  
-  
-    > [!NOTE]
-    >  Se la finestra **Origini dati** è vuota, aggiungerle un'origine dati.  Per ulteriori informazioni, vedere la classe [Cenni preliminari sulle origini dati](../data-tools/add-new-data-sources.md).  
-  
-2.  Aprire il form in **Progettazione Windows Form**.  
-  
-3.  Selezionare una tabella nella finestra **Origini dati**, fare clic sulla freccia a discesa, quindi selezionare **DataGridView**.  
-  
-4.  Trascinare la tabella dalla finestra **Origini dati** in un controllo <xref:System.Windows.Forms.DataGridView> sul form.  
-  
-     Il controllo <xref:System.Windows.Forms.DataGridView> è ora associato alla tabella trascinata al suo interno.  Sulla barra dei componenti vengono visualizzati gli oggetti [DataSet](../data-tools/dataset-tools-in-visual-studio.md), [TableAdapter](../data-tools/tableadapter-overview.md) e <xref:System.Windows.Forms.BindingSource>.  
-  
-## Vedere anche  
- [Procedura dettagliata: visualizzazione di dati in un Windows Form](../data-tools/walkthrough-displaying-data-on-a-windows-form.md)   
- [Creazione e modifica di dataset tipizzati](../data-tools/creating-and-editing-typed-datasets.md)   
- [Cenni preliminari sul componente BindingSource](../Topic/BindingSource%20Component%20Overview.md)   
- [Cenni preliminari sul controllo BindingNavigator](../Topic/BindingNavigator%20Control%20Overview%20\(Windows%20Forms\).md)   
- [Connessione ai dati in Visual Studio](../data-tools/connecting-to-data-in-visual-studio.md)   
- [Preparazione dell'applicazione al ricevimento di dati](../Topic/Preparing%20Your%20Application%20to%20Receive%20Data.md)   
- [Recupero di dati nell'applicazione](../data-tools/fetching-data-into-your-application.md)   
- [Associazione di controlli ai dati in Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)   
- [Modifica di dati nell'applicazione](../data-tools/editing-data-in-your-application.md)   
- [Convalida dei dati](../Topic/Validating%20Data.md)   
- [Salvataggio di dati](../data-tools/saving-data.md)   
- [Strumenti per l'utilizzo delle origini dati in Visual Studio](../Topic/Tools%20for%20Working%20with%20Data%20Sources%20in%20Visual%20Studio.md)
+## <a name="see-also"></a>Vedere anche  
+ [Associare controlli Windows Form ai dati in Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)

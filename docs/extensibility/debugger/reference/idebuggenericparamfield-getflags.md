@@ -1,55 +1,57 @@
 ---
-title: "IDebugGenericParamField::GetFlags | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GetFlags"
-  - "IDebugGenericParamField::GetFlags"
+title: IDebugGenericParamField::GetFlags | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GetFlags
+- IDebugGenericParamField::GetFlags
 ms.assetid: adcbbca1-8960-4c88-86b0-8b9467056c97
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 5241889fc3a64a251295504a3d491168f725beac
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugGenericParamField::GetFlags
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-recupera i flag per questo parametro generico.  
+# <a name="idebuggenericparamfieldgetflags"></a>IDebugGenericParamField::GetFlags
+Recupera i flag per il parametro generico.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
+```cpp  
 HRESULT GetFlags(  
-   DWORD* pdwFlags  
+   DWORD* pdwFlags  
 );  
 ```  
   
-```c#  
+```csharp  
 int GetFlags(  
-   ref uint pdwFlags  
+   ref uint pdwFlags  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pdwFlags`  
- \[out\]  restituisce i flag per questo parametro generico.  
+ [out] Restituisce i flag per il parametro generico.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## Note  
- Questi flag contengono informazioni sui diversi vincoli speciali.  
+## <a name="remarks"></a>Note  
+ Questi flag contengono informazioni sui vari vincoli speciali.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto **di CDebugGenericParamFieldType** che espone [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) l'interfaccia.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un **CDebugGenericParamFieldType** oggetto che espone il [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) interfaccia.  
   
-```cpp#  
+```cpp  
 HRESULT CDebugGenericParamFieldType::GetFlags(DWORD *pdwFlags)  
 {  
     HRESULT hr = S_OK;  
@@ -67,5 +69,5 @@ Error:
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md)

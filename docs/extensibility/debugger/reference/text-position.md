@@ -1,55 +1,55 @@
 ---
-title: "TEXT_POSITION | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TEXT_POSITION"
-helpviewer_keywords: 
-  - "Struttura TEXT_POSITION"
+title: TEXT_POSITION | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: TEXT_POSITION
+helpviewer_keywords: TEXT_POSITION structure
 ms.assetid: 6dcec574-a852-49fa-8c2e-2e71cbb5e3c6
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 178acde6dbadeb9d87b672582efebe8dcbd71408
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# TEXT_POSITION
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-Viene descritta la posizione di riga nel testo specificato.  
+# <a name="textposition"></a>TEXT_POSITION
+Descrive la posizione di riga e colonna in testo specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
-typedef struct _tagTEXT_POSITION {   
-   DWORD dwLine;  
-   DWORD dwColumn;  
+```cpp  
+typedef struct _tagTEXT_POSITION {   
+   DWORD dwLine;  
+   DWORD dwColumn;  
 } TEXT_POSITION;  
 ```  
   
-```c#  
-public struct TEXT_POSITION {   
-   public uint dwLine;  
-   public uint dwColumn;  
+```csharp  
+public struct TEXT_POSITION {   
+   public uint dwLine;  
+   public uint dwColumn;  
 };  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
  dwLine  
  Indice della riga nel file di origine.  
   
  dwColumn  
- Offset del carattere della riga.  
+ Offset carattere nella riga.  
   
-## Note  
- Questa struttura viene utilizzata in [CONTEXT\_INFO](../../../extensibility/debugger/reference/context-info.md) e [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) strutture.  
+## <a name="remarks"></a>Note  
+ Questa struttura viene utilizzata la [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) e [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) strutture.  
   
- Questa struttura viene soddisfatta da una chiamata ai metodi seguenti:  
+ Questa struttura viene compilata da una chiamata ai metodi seguenti:  
   
 -   [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)  
   
@@ -57,9 +57,9 @@ public struct TEXT_POSITION { 
   
 -   [GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)  
   
--   [GetOffset](../Topic/IDebugFunctionPosition2::GetOffset.md)  
+-   [GetOffset](../../../extensibility/debugger/reference/idebugfunctionposition2-getoffset.md)  
   
- Questa struttura passata come parametro ai seguenti metodi:  
+ Questa struttura viene passata come parametro per i metodi seguenti:  
   
 -   [GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)  
   
@@ -71,20 +71,20 @@ public struct TEXT_POSITION { 
   
 -   [onUpdateTextAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatetextattributes.md)  
   
-## Requisiti  
- intestazione: msdbg.h  
+## <a name="requirements"></a>Requisiti  
+ Intestazione: msdbg.h  
   
- Spazio dei nomi: Microsoft.VisualStudio.Debugger.Interop  
+ Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
  Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Strutture e unioni](../../../extensibility/debugger/reference/structures-and-unions.md)   
  [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)   
  [GetSourceRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getsourcerange.md)   
  [GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)   
- [GetOffset](../Topic/IDebugFunctionPosition2::GetOffset.md)   
+ [GetOffset](../../../extensibility/debugger/reference/idebugfunctionposition2-getoffset.md)   
  [GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)   
  [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)   
- [CONTEXT\_INFO](../../../extensibility/debugger/reference/context-info.md)   
+ [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)   
  [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md)

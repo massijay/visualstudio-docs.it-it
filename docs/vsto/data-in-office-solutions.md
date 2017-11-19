@@ -1,36 +1,38 @@
 ---
-title: "Dati nelle soluzioni Office"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "dati [sviluppo per Office in Visual Studio]"
-  - "applicazioni di Office [sviluppo per Office in Visual Studio], dati"
-  - "dataset [sviluppo per Office in Visual Studio]"
+title: Dati nelle soluzioni Office | Documenti Microsoft
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- data [Office development in Visual Studio]
+- Office applications [Office development in Visual Studio], data
+- datasets [Office development in Visual Studio]
 ms.assetid: 8478c095-864b-4ed3-8a70-1fc19b411c6a
-caps.latest.revision: 25
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 24
+caps.latest.revision: "25"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 34ba644d94ab24c4967bea6e64b5e70fdd582237
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Dati nelle soluzioni Office
+# <a name="data-in-office-solutions"></a>Dati nelle soluzioni Office
   Molte soluzioni Office consentono agli utenti di recuperare o modificare dati. Quando si creano soluzioni Office usando Visual Studio, esistono molti modalità di uso dei dati.  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Associazione di dati ai controlli nelle soluzioni Office](../vsto/binding-data-to-controls-in-office-solutions.md)  
  Descrive come associare i dati ai controlli nelle soluzioni Office.  
   
- [Cenni preliminari sulle web part XML personalizzate](../vsto/custom-xml-parts-overview.md)  
+ [Panoramica sulle Web part XML personalizzate](../vsto/custom-xml-parts-overview.md)  
  Descrive come usare parti XML personalizzate per usare dati in soluzioni Office.  
   
  [Dati memorizzati nella cache nelle personalizzazioni a livello di documento](../vsto/cached-data-in-document-level-customizations.md)  
@@ -39,14 +41,14 @@ caps.handback.revision: 24
  [XML Schema e dati nelle personalizzazioni a livello di documento](../vsto/xml-schemas-and-data-in-document-level-customizations.md)  
  Descrive come usare schemi XML nelle personalizzazioni a livello di documento per creare controlli associati a dati XML.  
   
- [Cenni preliminari sull'utilizzo di file di un database locale nelle soluzioni Office](../vsto/using-local-database-files-in-office-solutions-overview.md)  
+ [Panoramica sull'uso di file di un database locale nelle soluzioni Office](../vsto/using-local-database-files-in-office-solutions-overview.md)  
  Descrive come importare i file di database nei progetti e quando è possibile memorizzare i dati nella cache per l'uso offline.  
   
-## Sezioni correlate  
- [Accesso ai dati in Visual Studio](../data-tools/accessing-data-in-visual-studio.md)  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Accesso ai dati in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
  Elenca gli argomenti che illustrano come usare i dati in Visual Studio.  
   
- [Salvataggio di dati](../data-tools/saving-data.md)  
+ [Salvataggio di dati](/visualstudio/data-tools/saving-data)  
  Fornisce i collegamenti ad argomenti sull'uso dei dataset, inclusa la modifica dei dati in un dataset e la scrittura delle modifiche nell'origine dati.  
   
  [Progettazione e creazione di soluzioni Office](../vsto/designing-and-creating-office-solutions.md)  

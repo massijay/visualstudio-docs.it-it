@@ -6,33 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- text templates, custom directive processors
+helpviewer_keywords: text templates, custom directive processors
 ms.assetid: 422b47af-5441-4b02-b5ad-1b8b328457e3
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: alancameronwills
 ms.author: awills
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e288ccfd0e59f95c521d605c34e04240c94a1848
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
-ms.sourcegitcommit: 47057e9611b824c17077b9127f8d2f8b192d6eb8
-ms.openlocfilehash: a8f56201528b15da04c5861be5c9afdd9a9b379e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="creating-custom-t4-text-template-directive-processors"></a>Creazione di processori di direttiva di modelli di testo T4 personalizzati
 Il *processo di trasformazione del modello testo* accetta un *modello di testo* file come input e produce un file di testo come output. Il *motore di trasformazione del modello di testo* il processo e il motore interagisce con un host di trasformazione del modello di testo e il modello di testo di uno o più controlli *processori di direttiva* per completare il processo. Per ulteriori informazioni, vedere [il processo di trasformazione di modello di testo](../modeling/the-text-template-transformation-process.md).  

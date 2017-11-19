@@ -1,44 +1,42 @@
 ---
-title: "Encapsulate Field Refactoring (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.csharp.refactoring.encapsulatefield"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Encapsulate Field refactoring operation [C#]"
-  - "refactoring [C#], Encapsulate Field"
+redirect_url: /visualstudio/csharp-ide/refactoring/encapsulate-field
+title: Incapsula campo Refactoring (c#) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: CSharp
+helpviewer_keywords:
+- Encapsulate Field refactoring operation [C#]
+- refactoring [C#], Encapsulate Field
 ms.assetid: bf714a04-ab1e-49ce-99ce-dda1ebb1a17f
-caps.latest.revision: 26
-caps.handback.revision: 26
-author: "BillWagner"
-ms.author: "wiwagn"
-manager: "wpickett"
+caps.latest.revision: "26"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 7bd9e255b35ffb843c15d5ffa9c1547891bf437d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Encapsulate Field Refactoring (C#)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-L'operazione di refactoring **Incapsula campo** consente di creare rapidamente una proprietà da un campo esistente e di aggiornare facilmente il codice con riferimenti alla nuova proprietà.  
+# <a name="encapsulate-field-refactoring-c"></a>Refactoring Incapsula campo (C#)
+Il **Incapsula campo** operazione di refactoring consente di creare rapidamente una proprietà da un campo esistente e quindi aggiornare facilmente il codice con riferimenti nella nuova proprietà.  
   
- Quando un [campo](/dotnet/csharp/programming-guide/classes-and-structs/fields) è [public](/dotnet/csharp/language-reference/keywords/public), altri oggetti possono accedere direttamente a tale campo e modificarlo, senza essere rilevati dall'oggetto a cui appartiene il campo.  Usando le [proprietà](/dotnet/csharp/programming-guide/classes-and-structs/properties) per incapsulare il campo, è possibile disattivare l'accesso diretto ai campi.  
+ Quando un [campo](/dotnet/csharp/programming-guide/classes-and-structs/fields) è [pubblica](/dotnet/csharp/language-reference/keywords/public), altri oggetti possono accedere direttamente a tale campo e modificarlo, senza essere rilevati dall'oggetto a cui appartiene il campo. Utilizzando [proprietà](/dotnet/csharp/programming-guide/classes-and-structs/properties) per incapsulare quel campo, è possibile impedire l'accesso diretto ai campi.  
   
- Per creare la nuova proprietà, l'operazione **Incapsula campo** imposta il modificatore di accesso relativo al campo che si vuole incapsulare su [private](/dotnet/csharp/language-reference/keywords/private), quindi genera le funzioni di accesso [get](/dotnet/csharp/language-reference/keywords/get) e [set](/dotnet/csharp/language-reference/keywords/set) per tale campo.  In alcuni casi, viene generata una sola funzione di accesso `get`, ad esempio quando il campo viene dichiarato di sola lettura.  
+ Per creare la nuova proprietà, il **Incapsula campo** operazione cambia il modificatore di accesso per il campo che si desidera incapsulare su [privata](/dotnet/csharp/language-reference/keywords/private), quindi genera [ottenere](/dotnet/csharp/language-reference/keywords/get)e [impostare](/dotnet/csharp/language-reference/keywords/set) funzioni di accesso per tale campo. In alcuni casi, viene generata una sola funzione di accesso `get`, ad esempio quando il campo viene dichiarato di sola lettura.  
   
- Il motore di refactoring consente di aggiornare il codice con i riferimenti alla nuova proprietà nelle aree specificate nella sezione **Aggiorna riferimenti** della finestra di dialogo **Incapsula campo**.  
+ Il motore di refactoring di aggiornare il codice con i riferimenti alla nuova proprietà nelle aree specificate nella **Aggiorna riferimenti** sezione la **Incapsula campo** la finestra di dialogo.  
   
-### Per creare una proprietà da un campo  
+### <a name="to-create-a-property-from-a-field"></a>Per creare una proprietà da un campo  
   
 1.  Creare un'applicazione console denominata `EncapsulateFieldExample` quindi sostituire `Program` con il codice di esempio seguente.  
   
-    ```c#  
+    ```csharp  
     class Square  
     {  
         // Select the word 'width' and then use Encapsulate Field.  
@@ -58,29 +56,29 @@ L'operazione di refactoring **Incapsula campo** consente di creare rapidamente u
     }  
     ```  
   
-2.  Nell'[editor di codice](../ide/writing-code-in-the-code-and-text-editor.md) posizionare il cursore nella dichiarazione, sul nome del campo che si vuole incapsulare.  Nell'esempio seguente, posizionare il cursore sulla parola `width`:  
+2.  Nel [Editor di codice](../ide/writing-code-in-the-code-and-text-editor.md), posizionare il cursore nella dichiarazione, il nome del campo che si desidera incapsulare. Nell'esempio seguente, posizionare il cursore sulla parola `width`:  
   
-    ```c#  
+    ```csharp  
     public int width, height;  
     ```  
   
-3.  Nel menu **Refactoring** fare clic su **Incapsula campo**.  
+3.  Nel **refactoring** menu, fare clic su **Incapsula campo**.  
   
-     Viene visualizzata la finestra di dialogo **Incapsula campo**.  
+     Il **Incapsula campo** viene visualizzata la finestra di dialogo.  
   
-     È inoltre possibile digitare il tasto di scelta rapida CTRL \+ R, E per visualizzare la finestra di dialogo **Incapsula campo**.  
+     È anche possibile premere il tasto di scelta rapida CTRL + R, E per visualizzare il **Incapsula campo** la finestra di dialogo.  
   
-     È inoltre possibile fare clic sul tasto destro del mouse del cursore, scegliere **Refactoring**, quindi fare clic su **Incapsula campo** per visualizzare la finestra di dialogo **Incapsula campo**.  
+     È anche possibile fare doppio clic sul cursore, scegliere **refactoring**, quindi fare clic su **Incapsula campo** per visualizzare il **Incapsula campo** la finestra di dialogo.  
   
 4.  Specificare le impostazioni.  
   
-5.  Premere INVIO o fare clic sul pulsante **OK**.  
+5.  Premere INVIO oppure fare clic su di **OK** pulsante.  
   
-6.  Se è stata selezionata l'opzione **Anteprima modifiche riferimento** opzione, viene visualizzata la finestra **Anteprima modifiche riferimento**.  Fare clic sul pulsante **Applica**.  
+6.  Se si seleziona il **Anteprima modifiche riferimento** opzione, il **Anteprima modifiche riferimento** verrà visualizzata la finestra. Fare clic su di **applica** pulsante.  
   
      Nel file di origine verrà visualizzato il codice delle funzioni di accesso `get` e `set` seguenti:  
   
-    ```c#  
+    ```csharp  
     public int Width  
     {  
         get { return width; }  
@@ -90,7 +88,7 @@ L'operazione di refactoring **Incapsula campo** consente di creare rapidamente u
   
      Anche il codice nel metodo `Main` viene aggiornato in base al nuovo nome della proprietà `Width`.  
   
-    ```c#  
+    ```csharp  
     Square mySquare = new Square();  
     mySquare.Width = 110;  
     mySquare.height = 150;  
@@ -98,13 +96,13 @@ L'operazione di refactoring **Incapsula campo** consente di creare rapidamente u
     Console.WriteLine("width = {0}", mySquare.Width);  
     ```  
   
-## Note  
- L'operazione **Incapsula campo** può essere eseguita solo quando il cursore è posizionato sulla stessa riga della dichiarazione di campo.  
+## <a name="remarks"></a>Note  
+ Il **Incapsula campo** operazione è possibile solo quando il cursore viene posizionato sulla stessa riga della dichiarazione di campo.  
   
- Per le dichiarazioni relative a più campi, **Incapsula campo** usa la virgola come limite tra i campi e avvia il refactoring nel campo più vicino al cursore e sulla stessa riga del cursore.  È inoltre possibile specificare il campo che si desidera incapsulare selezionandone il nome nella dichiarazione.  
+ Per più campi, le dichiarazioni **Incapsula campo** utilizza la virgola come limite tra i campi e avvia l'operazione di refactoring nel campo più vicino al cursore e sulla stessa riga del cursore. È inoltre possibile specificare il campo che si desidera incapsulare selezionandone il nome nella dichiarazione.  
   
- Il codice generato da questa operazione di refactoring viene modellato dalla funzionalità di frammenti di codice per Incapsula campo.  I frammenti di codice sono modificabili.  Per altre informazioni, vedere [Frammenti di codice](../ide/code-snippets.md).  
+ Il codice generato da questa operazione di refactoring viene modellato dalla funzionalità di frammenti di codice per Incapsula campo. I frammenti di codice sono modificabili. Per altre informazioni, vedere [Code Snippets](../ide/visual-csharp-code-snippets.md) (Frammenti di codice).  
   
-## Vedere anche  
- [Refactoring \(C\#\)](../csharp-ide/refactoring-csharp.md)   
- [Frammenti di codice Visual C\#](../ide/visual-csharp-code-snippets.md)
+## <a name="see-also"></a>Vedere anche  
+ [Refactoring (C#)](refactoring-csharp.md)   
+ [Frammenti di codice Visual C#](../ide/visual-csharp-code-snippets.md)

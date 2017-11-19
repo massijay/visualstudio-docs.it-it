@@ -1,31 +1,32 @@
 ---
-title: "Utilit&#224; VSSDK | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Architettura di integrazione di Visual Studio"
+title: "Utilità VSSDK | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Architecture, Visual Studio Integration
 ms.assetid: a469208a-cb70-4d87-a79b-d2086fc4fae4
-caps.latest.revision: 8
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: d74f0a7978ab0e06cfc7289c827c458487aa630c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Utilit&#224; VSSDK
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-Negli argomenti di questa sezione vengono descritti gli strumenti forniti con VSSDK.  
+# <a name="vssdk-utilities"></a>Utilità VSSDK
+Negli argomenti di questa sezione vengono descritti gli strumenti forniti con Visual Studio SDK.  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Utilità RegPkg](../../extensibility/internals/regpkg-utility.md)  
   [Utilità CreatePkgDef](../../extensibility/internals/createpkgdef-utility.md)  
   [Utilità CreateExpInstance](../../extensibility/internals/createexpinstance-utility.md)  
   [Strumenti dei temi di colore](../../extensibility/internals/color-theming-tools.md)  
-  [Strumenti di servizio di immagini](../../extensibility/internals/image-service-tools.md)  
+  [Strumenti per il servizio immagini](../../extensibility/internals/image-service-tools.md)  
   
-## Sezioni correlate
+## <a name="related-sections"></a>Sezioni correlate

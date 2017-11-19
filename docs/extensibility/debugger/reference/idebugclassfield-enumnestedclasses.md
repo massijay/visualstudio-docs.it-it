@@ -1,53 +1,53 @@
 ---
-title: "IDebugClassField::EnumNestedClasses | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDebugClassField::EnumNestedClasses"
-helpviewer_keywords: 
-  - "Metodo IDebugClassField::EnumNestedClasses"
+title: IDebugClassField::EnumNestedClasses | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDebugClassField::EnumNestedClasses
+helpviewer_keywords: IDebugClassField::EnumNestedClasses method
 ms.assetid: 2ba5ef0c-395e-4006-9e3c-9b06e1d711d0
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 51b8c582d221ced72380cf5450fc0af9b014d148
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugClassField::EnumNestedClasses
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-crea un enumeratore per le classi annidate in questa classe.  
+# <a name="idebugclassfieldenumnestedclasses"></a>IDebugClassField::EnumNestedClasses
+Crea un enumeratore per le classi annidate in questa classe.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
-HRESULT EnumNestedClasses(   
-   IEnumDebugFields** ppEnum  
+```cpp  
+HRESULT EnumNestedClasses(   
+   IEnumDebugFields** ppEnum  
 );  
 ```  
   
-```c#  
+```csharp  
 int EnumNestedClasses(  
-   out IEnumDebugFields ppEnum  
+   out IEnumDebugFields ppEnum  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `ppEnum`  
- \[out\]  Restituisce [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) un oggetto che rappresenta l'elenco delle classi annidate.  Restituisce un valore null se non sono disponibili classi annidate.  
+ [out] Restituisce un [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) oggetto che rappresenta l'elenco di classi annidate. Restituisce un valore null se esistono classi nidificate.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce S\_OK o restituisce S\_FALSE se non sono disponibili classi annidate.  In caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce S_OK o S_FALSE se esistono classi nidificate. In caso contrario, verrà restituito un codice di errore.  
   
-## Note  
- Ogni elemento dell'enumerazione è [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) un oggetto che descrive una classe annidata.  
+## <a name="remarks"></a>Note  
+ Ogni elemento dell'enumerazione è un [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) oggetto che descrive una classe annidata.  
   
- Una classe annidata è una classe definita in un'altra classe.  Di seguito è riportato un esempio:  
+ Una classe annidata è una classe definita all'interno di un'altra classe. Ad esempio:  
   
 ```  
 class RootClass {  
@@ -55,8 +55,8 @@ class RootClass {
 };  
 ```  
   
- [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) L'enumerazione contiene un oggetto che rappresenta la classe di `NestedClass` .  
+ Il [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumerazione contiene un oggetto che rappresenta la `NestedClass` classe.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)

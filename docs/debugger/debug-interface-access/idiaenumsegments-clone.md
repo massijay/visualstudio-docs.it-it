@@ -1,43 +1,42 @@
 ---
-title: "IDiaEnumSegments::Clone | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumSegments::Clone (metodo)"
+title: IDiaEnumSegments::Clone | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumSegments::Clone method
 ms.assetid: 93deaac6-72ab-4408-ba14-66174a618757
-caps.latest.revision: 7
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 868921194036b9c5c5162e759e750bed7f6a0882
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumSegments::Clone
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-Crea un enumeratore che contiene lo stesso stato di enumerazione dell'enumeratore corrente.  
+# <a name="idiaenumsegmentsclone"></a>IDiaEnumSegments::Clone
+Crea un enumeratore che contiene lo stesso stato di enumerazione come enumerazione corrente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
-HRESULT Clone (   
-   IDiaEnumSegments** ppenum  
+```C++  
+HRESULT Clone (   
+   IDiaEnumSegments** ppenum  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  ppenum  
- \[out\]  restituisce [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md) oggetto che contiene un duplicato dell'enumeratore.  I segmenti non siano duplicati, solo enumeratore.  
+ [out] Restituisce un [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md) oggetto che contiene un duplicato dell'enumeratore. I segmenti non vengono duplicati, solo l'enumeratore.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)

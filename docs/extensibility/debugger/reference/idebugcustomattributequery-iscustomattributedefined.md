@@ -1,52 +1,54 @@
 ---
-title: "IDebugCustomAttributeQuery::IsCustomAttributeDefined | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugCustomAttributeQuery::IsCustomAttributeDefined"
-  - "IsCustomAttributeDefined"
+title: IDebugCustomAttributeQuery::IsCustomAttributeDefined | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugCustomAttributeQuery::IsCustomAttributeDefined
+- IsCustomAttributeDefined
 ms.assetid: c7425db6-4347-4f69-8f88-337ddaa34fa6
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 1b3a98d0d2b1ade880004f8c4853f8609bed76d4
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugCustomAttributeQuery::IsCustomAttributeDefined
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-Determina se l'attributo personalizzato specificato non è definito.  
+# <a name="idebugcustomattributequeryiscustomattributedefined"></a>IDebugCustomAttributeQuery::IsCustomAttributeDefined
+Determina se l'attributo personalizzato specificato è definito.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
+```cpp  
 HRESULT IsCustomAttributeDefined(  
-   LPCOLESTR pszCustomAttributeName  
+   LPCOLESTR pszCustomAttributeName  
 );  
 ```  
   
-```c#  
+```csharp  
 int IsCustomAttributeDefined(  
-   string pszCustomAttributeName  
+   string pszCustomAttributeName  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pszCustomAttributeName`  
- \[in\]  Nome dell'attributo personalizzato.  
+ [in] Nome dell'attributo personalizzato.  
   
-## Valore restituito  
- se l'attributo personalizzato è definito, restituisce `S_OK`; in caso contrario, restituisce `S_FALSE`.  
+## <a name="return-value"></a>Valore restituito  
+ Se l'attributo personalizzato viene definito, restituisce `S_OK`; in caso contrario, restituisce `S_FALSE`.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come implementare questo metodo per un oggetto **di CDebugClassFieldSymbol** che espone [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) l'interfaccia.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come implementare questo metodo per un **CDebugClassFieldSymbol** oggetto che espone il [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) interfaccia.  
   
-```cpp#  
+```cpp  
 HRESULT CDebugClassFieldSymbol::IsCustomAttributeDefined(  
     LPCOLESTR pszCustomAttribute  
 )  
@@ -83,5 +85,5 @@ Error:
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md)

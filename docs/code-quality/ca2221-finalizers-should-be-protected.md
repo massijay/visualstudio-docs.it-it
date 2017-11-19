@@ -1,51 +1,51 @@
 ---
-title: "CA2221: I finalizzatori devono essere protetti | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CA2221"
-  - "FinalizersShouldBeProtected"
-helpviewer_keywords: 
-  - "CA2221"
-  - "FinalizersShouldBeProtected"
+title: 'CA2221: I finalizzatori devono essere protetti. | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CA2221
+- FinalizersShouldBeProtected
+helpviewer_keywords:
+- FinalizersShouldBeProtected
+- CA2221
 ms.assetid: bda03aee-4cce-45d3-907d-17f4ee030acc
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
+caps.latest.revision: "14"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: 8ff2d5cd64a77f09437a07b446f486e1c2dd5024
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# CA2221: I finalizzatori devono essere protetti
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="ca2221-finalizers-should-be-protected"></a>CA2221: I finalizzatori devono essere protetti
 |||  
 |-|-|  
 |TypeName|FinalizersShouldBeProtected|  
 |CheckId|CA2221|  
-|Category|Microsoft.Usage|  
-|Breaking Change|Non sostanziale|  
+|Categoria|Microsoft. Usage|  
+|Breaking Change|Non importante|  
   
-## Causa  
- Un tipo pubblico implementa un finalizzatore che non specifica l'accesso a livello di famiglia \(protetto\).  
+## <a name="cause"></a>Causa  
+ Un tipo pubblico implementa un finalizzatore che non specifica della famiglia di accesso (protetto).  
   
-## Descrizione della regola  
- I finalizzatori devono utilizzare il modificatore di accesso a livello di famiglia.  Questa regola è applicata dai compilatori C\#, Visual Basic e Visual C\+\+.  
+## <a name="rule-description"></a>Descrizione della regola  
+ I finalizzatori devono utilizzare il modificatore di accesso a livello di famiglia. Questa regola viene applicata dai compilatori di c#, Visual Basic e Visual C++.  
   
-## Come correggere le violazioni  
- Per correggere una violazione di questa regola, modificare il finalizzatore affinché sia accessibile a livello di famiglia.  
+## <a name="how-to-fix-violations"></a>Come correggere le violazioni  
+ Per correggere una violazione di questa regola, modificare il finalizzatore per essere accessibili a famiglia.  
   
-## Esclusione di avvisi  
+## <a name="when-to-suppress-warnings"></a>Esclusione di avvisi  
  Non escludere un avviso da questa regola.  
   
-## Esempio  
- Questa regola non può essere violata in alcun linguaggio .NET di livello elevato; può essere violata se si scrive in MSIL \(Microsoft Intermediate Language\).  
+## <a name="example"></a>Esempio  
+ Questa regola non può essere violata in qualsiasi linguaggio .NET di alto livello; può essere violata se si sta scrivendo Microsoft Intermediate Language.  
   
 ```  
 // =============== CLASS MEMBERS DECLARATION ===================  
@@ -80,5 +80,5 @@ manager: "wpickett"
 } // end of namespace  
 ```  
   
-## Vedere anche  
- [Modello Dispose](../Topic/Dispose%20Pattern.md)
+## <a name="see-also"></a>Vedere anche  
+ [Modello Dispose](/dotnet/standard/design-guidelines/dispose-pattern)

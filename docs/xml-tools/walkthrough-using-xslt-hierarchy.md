@@ -1,32 +1,33 @@
 ---
-title: "Procedura dettagliata: utilizzo della gerarchia XSLT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura dettagliata: Utilizzo di gerarchia XSLT | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5e60c8ec-cd05-4597-b856-55038218acf4
-caps.latest.revision: 2
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: b0cd7d0567f12a7f1d57bdea765cbf9eb555dd8d
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Procedura dettagliata: utilizzo della gerarchia XSLT
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-Lo strumento di gerarchia XSLT semplifica molte attività di sviluppo XML.Un foglio di stile XSLT spesso utilizza istruzioni `includes` e `imports`.La compilazione viene avviata dal foglio di stile principale, ma quando viene visualizzato un errore come risultato della compilazione di un foglio di stile XSLT, è possibile che l'errore provenga da un'origine diversa dal foglio di stile principale.È possibile che la correzione dell'errore o la modifica del foglio di stile richieda accesso ai fogli di stile inclusi o importati.Scorrendo il foglio di stile nel debugger è possibile che vengano visualizzati i fogli di stile inclusi e importati ed è necessario aggiungere un punto di interruzione in una determinata posizione di uno o più fogli di stile inclusi.  
+# <a name="walkthrough-using-xslt-hierarchy"></a>Procedura dettagliata: utilizzo della gerarchia XSLT
+Lo strumento di gerarchia XSLT semplifica molte attività di sviluppo XML. Un foglio di stile XSLT spesso usa istruzioni `includes` e `imports`. La compilazione viene avviata dal foglio di stile principale, ma quando viene visualizzato un errore come risultato della compilazione di un foglio di stile XSLT, è possibile che l'errore provenga da un'origine diversa dal foglio di stile principale. È possibile che la correzione dell'errore o la modifica del foglio di stile richieda accesso ai fogli di stile inclusi o importati. Scorrendo il foglio di stile nel debugger è possibile che vengano visualizzati i fogli di stile inclusi e importati ed è necessario aggiungere un punto di interruzione in una determinata posizione di uno o più fogli di stile inclusi.  
   
- Un altro scenario in cui può essere utile lo strumento di gerarchia XSLT è l'inserimento di punti di interruzione sulle regole del modello incorporato.Le regole del modello sono modelli speciali generati per ogni modalità del foglio di stile e sono chiamate da `xsl:apply-templates` quando nessun altro modello corrisponde al nodo.Per implementare il debug nelle regole dei modelli incorporati, il debugger XSLT genera il file con le regole nella cartella temporanea e le compila insieme al foglio di stile principale.Senza eseguire istruzioni di codice da alcuni `xsl:apply-template`, può essere difficile individuare i fogli di stile inclusi nel foglio di stile principale o trovare e aprire il foglio di stile con le regole del modello incorporate.  
+ Un altro scenario in cui può essere utile lo strumento di gerarchia XSLT è l'inserimento di punti di interruzione sulle regole del modello incorporato. Le regole del modello sono modelli speciali generati per ogni modalità del foglio di stile e sono chiamate da `xsl:apply-templates` quando nessun altro modello corrisponde al nodo. Per implementare il debug nelle regole dei modelli incorporati, il debugger XSLT genera il file con le regole nella cartella temporanea e le compila insieme al foglio di stile principale. Senza eseguire istruzioni di codice da alcuni `xsl:apply-template`, può essere difficile individuare i fogli di stile inclusi nel foglio di stile principale o trovare e aprire il foglio di stile con le regole del modello incorporate.  
   
  Nell'esempio riportato in questo argomento viene dimostrata l'esecuzione del debug in un foglio di stile a cui si fa riferimento.  
   
-### Titolo della procedura  
+### <a name="procedure-title"></a>Titolo della procedura  
   
-1.  Aprire un documento XML in Visual Studio.Nel presente esempio viene utilizzato il seguente documento `collection.xml`.  
+1.  Aprire un documento XML in Visual Studio. Nel presente esempio viene usato il seguente documento `collection.xml`.  
   
     ```  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -111,7 +112,7 @@ Lo strumento di gerarchia XSLT semplifica molte attività di sviluppo XML.Un fog
   
 5.  Avviare il debug.  
   
-6.  Quando il debugger viene arrestato all'istruzione `<xsl:include href="xslincludefile.xsl" />`, premere il pulsante di esecuzione dell'istruzione.Notare che l'esecuzione del debug può proseguire nel foglio di stile a cui si fa riferimento.La gerarchia è visibile e nella finestra di progettazione viene visualizzato il percorso corretto.  
+6.  Quando il debugger viene arrestato all'istruzione `<xsl:include href="xslincludefile.xsl" />`, premere il pulsante di esecuzione dell'istruzione. Notare che l'esecuzione del debug può proseguire nel foglio di stile a cui si fa riferimento. La gerarchia è visibile e nella finestra di progettazione viene visualizzato il percorso corretto.  
   
-## Vedere anche  
- [Procedura dettagliata: XSLT Profiler](../xml-tools/walkthrough-xslt-profiler.md)
+## <a name="see-also"></a>Vedere anche  
+ [Procedura dettagliata: Profiler XSLT](../xml-tools/walkthrough-xslt-profiler.md)

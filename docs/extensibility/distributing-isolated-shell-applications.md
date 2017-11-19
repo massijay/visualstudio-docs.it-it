@@ -1,33 +1,36 @@
 ---
-title: "Distribuzione di applicazioni Shell isolata | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+redirect_url: shell/distributing-isolated-shell-applications
+title: Distribuzione di applicazioni Shell isolata | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c503a985-d67a-4ef8-9123-7744a78f2f17
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: a40d2b8c108d7180ffc68ac2eee6811d49b21c08
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Distribuzione di applicazioni Shell isolata
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
-È necessario installare Visual Studio e Visual Studio SDK per creare un'applicazione shell isolata. Per distribuire l'applicazione per le macchine di altri utenti o clienti, è necessario includere un pacchetto ridistribuibile speciale per la shell isolata.  
+# <a name="distributing-isolated-shell-applications"></a>Distribuzione di applicazioni Shell isolata
+Per creare un'applicazione shell isolata, è necessario installare Visual Studio e Visual Studio SDK. Per distribuire l'applicazione per le macchine di altri utenti o clienti, è necessario includere un pacchetto ridistribuibile speciale per la shell isolata.  
   
-## Prerequisiti per la distribuzione di applicazioni Shell isolata  
+## <a name="prerequisites-for-distributing-isolated-shell-applications"></a>Prerequisiti per la distribuzione di applicazioni Isolated Shell  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|Visual Studio SDK|il SDK è necessario per sviluppare e testare le estensioni di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Inoltre, è possibile utilizzare il SDK per creare un'istanza personalizzata della shell di Visual Studio isolato.<br /><br /> Visual Studio è un prerequisito per il SDK.|  
-|Microsoft Visual Studio isolato Shell Redistributable|Il pacchetto ridistribuibile di includere nel programma di installazione quando si compila un ambiente con strumenti di Visual Studio isolati shell. Il pacchetto ridistribuibile di Shell isolato include .NET Framework 4.5.|  
+|Visual Studio SDK|il SDK è necessario per sviluppare e testare le estensioni di [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. È anche possibile utilizzare il SDK per creare un'istanza personalizzata della shell di Visual Studio isolated.<br /><br /> Visual Studio è un prerequisito per il SDK.|  
+|Shell Redistributable isolata di Microsoft Visual Studio|Il pacchetto ridistribuibile di includere nel programma di installazione quando si compila un ambiente di strumenti di Visual Studio shell isolata. Il pacchetto ridistribuibile di Shell isolato include .NET Framework 4.5.|  
   
-## Creazione di un programma di installazione per l'applicazione  
- È necessario creare un programma di installazione speciali per l'applicazione di shell integrata o isolato. Per altre informazioni, vedere [Installazione di un'applicazione Shell isolata](../extensibility/installing-an-isolated-shell-application.md).  
+## <a name="creating-an-installation-program-for-the-application"></a>Creazione di un programma di installazione per l'applicazione  
+ È necessario creare un programma di installazione speciali per l'applicazione shell isolata o integrata. Per ulteriori informazioni, vedere [l'installazione di un'applicazione Shell isolata](../extensibility/installing-an-isolated-shell-application.md).  
   
-## Che consente gli aggiornamenti dell'applicazione  
- Il programma di installazione è necessario considerare la possibilità che l'applicazione verrà aggiornata per gli aggiornamenti di Microsoft o per gli aggiornamenti della società. Per ulteriori informazioni sugli aggiornamenti, vedere [Linee guida per la manutenzione per applicazioni Shell isolata](../extensibility/servicing-guidelines-for-isolated-shell-applications.md).
+## <a name="allowing-for-updates-to-your-application"></a>Consentire gli aggiornamenti per l'applicazione  
+ Il programma di installazione deve consentire la possibilità che l'applicazione verrà aggiornata per gli aggiornamenti Microsoft o per gli aggiornamenti della società. Per ulteriori informazioni sugli aggiornamenti, vedere [linee guida per la manutenzione di applicazione Shell isolata](../extensibility/servicing-guidelines-for-isolated-shell-applications.md).

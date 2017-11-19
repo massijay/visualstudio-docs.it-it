@@ -1,44 +1,45 @@
 ---
-title: "Procedura: Eliminare gli avvisi tramite una voce di menu | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-devops-test"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "avvisi, eliminazione"
-  - "analisi codice, eliminazione di avvisi"
+title: 'Procedura: esclusione di avvisi tramite la voce di Menu | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-code-analysis
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- warnings, suppressing
+- code analysis, suppressing warnings
 ms.assetid: 36bd1850-dcde-4ed0-9bc3-0b83df434362
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: a197170285a8f8a9d3f0cc01638557f30fd1f126
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Procedura: Eliminare gli avvisi tramite una voce di menu
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="how-to-suppress-warnings-by-using-the-menu-item"></a>Procedura: Eliminare gli avvisi tramite una voce di menu
 > [!NOTE]
->  L'eliminazione nell'origine non è supportata per progetti di siti Web.  
+>  Nell'origine eliminazione non è supportata per i progetti di sito web.  
   
- È possibile utilizzare la finestra Analisi codice per non visualizzare gli avvisi dell'analisi del codice.  Eliminare un avviso non equivale a disabilitarlo.  La mancata visualizzazione infatti si applica solo a una determinata istanza della violazione.  Altre violazioni dello stesso avviso vengono comunque riportate nella finestra Elenco errori.  
+ È possibile utilizzare la finestra Analisi codice per eliminare gli avvisi di analisi codice. Eliminare un avviso non è lo stesso come disabilitarlo. Quando si elimina un messaggio di avviso, si applica solo a una particolare istanza della violazione. Altre violazioni dello stesso avviso saranno ancora riportati nella finestra Elenco errori.  
   
- Dopo avere eseguito l'analisi codice, è possibile determinare che uno o più avvisi di analisi del codice visualizzati nella finestra Analisi codice non sono validi per l'applicazione.  È possibile, ad esempio, è possibile determinare che il codice è corretto così com'è.  Talvolta invece vengono rilevate violazioni con priorità bassa che non verranno corrette nel ciclo di sviluppo corrente.  Indipendentemente dal motivo, è spesso utile indicare che l'avviso non è valido in modo da informare i membri del team che è stato esaminato il codice e che è stato stabilito di non visualizzare l'avviso.  L'eliminazione nell'origine è utile in quanto consente di apportare un'eliminazione in corrispondenza della posizione in cui è stato generato l'avviso.  
+ Dopo aver eseguito l'analisi del codice, è possibile che uno o più avvisi dell'analisi codice che vengono visualizzati nella finestra Analisi codice non sono applicabili all'applicazione. Ad esempio, è possibile che il codice sia corretto così com'è. In alternativa, potrebbe essere il caso in cui alcune violazioni bassa priorità e non verranno risolto nel ciclo di sviluppo corrente. A prescindere dal motivo, è spesso utile indicare che l'avviso non è applicabile per consentire i membri del team di sapere che il codice è stato rivisto e che è stato stabilito che è possibile eliminare l'avviso. Eliminazione nell'origine è utile perché consente di inserire un'eliminazione vicina in cui viene generato l'avviso.  
   
- È possibile scegliere se l'eliminazione apparirà nel codice sorgente o nel file di eliminazione globale.  Alcune eliminazioni devono essere posizionate nel file di eliminazione globale.  Se questo è il caso, l'opzione **In origine** sarà disabilitata.  
+ È possibile scegliere se l'eliminazione verrà visualizzati nel codice sorgente o nel file di eliminazione globale. Alcune eliminazioni devono essere inseriti nel file di eliminazione globale. In questo caso, il **In origine** opzione sarà disabilitata.  
   
-### Procedura: non visualizzare un avviso utilizzando una voce di menu  
+### <a name="to-suppress-a-warning-by-using-menu-item"></a>Per eliminare un avviso usando la voce di menu  
   
-1.  Dal menu **Analizza**, scegliere **Windows** e quindi scegliere **Analisi codice**.  
+1.  Nel **Analizza** menu, scegliere **Windows** e quindi scegliere **analisi del codice**.  
   
-2.  Nella finestra **Analisi Codice**, selezionare l'eliminazione dell'avviso.  
+2.  Nel **analisi del codice** finestra, selezionare Elimina l'avviso.  
   
-3.  Selezionare Azioni, quindi scegliere **Elimina messaggio\(i\)**, e quindi scegliere **In origine** o **File di eliminazione in progetto**.  
+3.  Scegliere le azioni, quindi scegliere **Elimina messaggi**, quindi scegliere **In origine** o **File di eliminazione In progetto**.  
   
-     L'avviso specifico non viene visualizzato e appare barrato nella finestra Analisi codice.  
+     Viene eliminato l'avviso specifico, e viene visualizzato l'avviso nella finestra Analisi codice barrato.  
   
 > [!NOTE]
->  Le eliminazioni senza una destinazione vengono visualizzate nel file di eliminazioni globali.
+>  Le eliminazioni che non dispone di una destinazione vengono visualizzati nel file di eliminazione globale.

@@ -1,48 +1,47 @@
 ---
-title: "IDiaSession::symsAreEquiv | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSession::symsAreEquiv (metodo)"
+title: IDiaSession::symsAreEquiv | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSession::symsAreEquiv method
 ms.assetid: 9941d520-e203-46c0-83c3-b3a967f4fc59
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 776e3868e8529657fb77cc9fac1d42eb04cdd722
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSession::symsAreEquiv
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-Verifica se due simboli sono equivalenti.  
+# <a name="idiasessionsymsareequiv"></a>IDiaSession::symsAreEquiv
+Controlla se due simboli sono equivalenti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
-HRESULT symsAreEquiv (   
-   IDiaSymbol* symbolA,  
-   IDiaSymbol* symbolB  
+```C++  
+HRESULT symsAreEquiv (   
+   IDiaSymbol* symbolA,  
+   IDiaSymbol* symbolB  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `symbolA`  
- \[in\]  il primo [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) oggetto utilizzato nel confronto.  
+ [in] Il primo [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) oggetto utilizzato nel confronto.  
   
  `symbolB`  
- \[in\]  il secondo `IDiaSymbol` oggetto utilizzato nel confronto.  
+ [in] Il secondo `IDiaSymbol` oggetto utilizzato nel confronto.  
   
-## Valore restituito  
- Se i simboli sono equivalenti, restituisce `S_OK`; in caso contrario, restituisce  `S_FALSE`, i simboli non sono equivalenti.  In caso contrario, restituire un codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Se i simboli sono equivalenti, restituisce `S_OK`; in caso contrario, restituisce `S_FALSE`, i simboli non sono equivalenti. In caso contrario, restituisce un codice di errore.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

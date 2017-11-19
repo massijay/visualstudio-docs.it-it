@@ -1,39 +1,35 @@
 ---
-title: "Riferimenti dell&#39;interfaccia utente di debug | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.uiref"
-dev_langs: 
-  - "FSharp"
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "JScript"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "debugger, riferimento all'interfaccia utente"
+title: Riferimento all'interfaccia utente di debug | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.debug.uiref
+dev_langs:
+- CSharp
+- VB
+- FSharp
+- C++
+- JScript
+helpviewer_keywords: debugger, user interface reference
 ms.assetid: 57f1cad8-c908-42bf-8ec5-6eb567df08e9
-caps.latest.revision: 10
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: b2187f115b9b3bc9705eb313068e155c999768ae
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Riferimenti dell&#39;interfaccia utente di debug
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="debugging-user-interface-reference"></a>Riferimenti dell'interfaccia utente di debug
 Quando si esegue il debug di un'applicazione è possibile che vengano visualizzate le finestre di dialogo elencate di seguito.  
   
- È possibile rendere automatiche numerose funzionalità di debug mediante il modello di estensibilità di Visual Studio.  Per ulteriori informazioni, vedere Visual Studio Debugging SDK.  
+ È possibile rendere automatiche numerose funzionalità di debug mediante il modello di estensibilità di Visual Studio. Per ulteriori informazioni, vedere Visual Studio Debugging SDK.  
   
 -   [Finestra di dialogo Seleziona punti di interruzione](../debugger/choose-breakpoints-dialog-box.md)  
   
@@ -47,6 +43,7 @@ Quando si esegue il debug di un'applicazione è possibile che vengano visualizza
   
 -   [Finestre di dialogo di errore e di avviso per il debug](../debugger/debugging-errors-and-warning-dialog-boxes.md)  
   
-## Vedere anche  
- [Debug in Visual Studio](../debugger/debugging-in-visual-studio.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Debug in Visual Studio](../debugger/index.md)  
+ [Debugger Feature Tour](../debugger/debugger-feature-tour.md)  (Tour delle funzionalità del debugger)  
  [Finestra di comando](../ide/reference/command-window.md)

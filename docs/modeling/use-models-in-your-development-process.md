@@ -1,53 +1,37 @@
 ---
-title: Utilizzare i modelli nel processo di sviluppo | Documenti di Microsoft
+title: Utilizzare i modelli nel processo di sviluppo | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-devops-techdebt
+ms.technology: vs-devops-techdebt
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords:
-- UML, using models
+helpviewer_keywords: UML, using models
 ms.assetid: a33ac8fc-4ba0-4850-b71b-014dc8674e54
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3d07f82ea737449fee6dfa04a61e195654ba35fa
-ms.openlocfilehash: 080f77253c886550dad4a10ae46409e5ac2c9506
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: c9871a767ae8e2a9c77edecda19c986c4ee85f26
+ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="use-models-in-your-development-process"></a>Usare modelli nel processo di sviluppo
 In Visual Studio è possibile usare un modello che consenta di comprendere e modificare un sistema, un'applicazione o un componente. Un modello consente di visualizzare l'ambiente in cui opera il sistema, chiarire le esigenze degli utenti, definire l'architettura del sistema, analizzare il codice e assicurarsi che soddisfi i requisiti. Vedere [Video di Channel 9: migliorare l'architettura tramite la modellazione](http://go.microsoft.com/fwlink/?LinkID=252078).  
   
- Per informazioni sulle versioni di Visual Studio supportano ogni tipo di modello, vedere [supporto della versione per l'architettura e strumenti di modellazione](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
+ Per vedere quali versioni di Visual Studio supportano ogni tipo di modello, vedere [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).  
   
 ## <a name="how-to-use-models"></a>Come usare i modelli  
  I modelli possono essere di supporto all'utente in vari modi:  
   
--   La creazione dei diagrammi di modellazione consente di chiarire i concetti coinvolti nei requisiti, nell'architettura e nella progettazione di alto livello. Per ulteriori informazioni, vedere [modello requisiti utente](../modeling/model-user-requirements.md).  
+-   La creazione dei diagrammi di modellazione consente di chiarire i concetti coinvolti nei requisiti, nell'architettura e nella progettazione di alto livello. Per ulteriori informazioni, vedere [modellare i requisiti utente](../modeling/model-user-requirements.md).  
   
 -   L'utilizzo di modelli consente di mettere in evidenza le incoerenze dei requisiti.  
   
--   La comunicazione con i modelli consente di comunicare concetti importanti in modo meno ambiguo rispetto al linguaggio naturale. Per ulteriori informazioni, vedere [l'architettura dell'applicazione del modello](../modeling/model-your-app-s-architecture.md).  
+-   La comunicazione con i modelli consente di comunicare concetti importanti in modo meno ambiguo rispetto al linguaggio naturale. Per ulteriori informazioni, vedere [modellare l'architettura dell'app](../modeling/model-your-app-s-architecture.md).  
   
 -   In alcuni casi, è possibile usare modelli per generare codice o altri elementi quali documenti o schemi di database. Ad esempio, i componenti di modellazione di [!INCLUDE[vsUltShort](../code-quality/includes/vsultshort_md.md)] generati da un modello.  Per ulteriori informazioni, vedere [generare e configurare l'app da modelli](../modeling/generate-and-configure-your-app-from-models.md).  
   
@@ -60,14 +44,14 @@ In Visual Studio è possibile usare un modello che consenta di comprendere e mod
   
  Se il progetto è grandi dimensioni e coinvolge team in diverse parti del mondo, è possibile usare i modelli per comunicare i requisiti e l'architettura in modo molto più efficace rispetto all'uso di testo normale.  
   
- In entrambi i casi la creazione di un modello quasi sempre comporta una riduzione significativa di incoerenze e ambiguità. Le diverse parti interessate frequentemente hanno percezioni diverse del mondo aziendale in cui funziona il sistema e sviluppatori diversi spesso hanno percezioni diverse della modalità di funzionamento del sistema. L'utilizzo di un modello come elemento attivo di una discussione generalmente rivela queste differenze. Per ulteriori informazioni su come utilizzare un modello per ridurre le incoerenze, vedere [modello requisiti utente](../modeling/model-user-requirements.md).  
+ In entrambi i casi la creazione di un modello quasi sempre comporta una riduzione significativa di incoerenze e ambiguità. Le diverse parti interessate frequentemente hanno percezioni diverse del mondo aziendale in cui funziona il sistema e sviluppatori diversi spesso hanno percezioni diverse della modalità di funzionamento del sistema. L'utilizzo di un modello come elemento attivo di una discussione generalmente rivela queste differenze. Per ulteriori informazioni sull'utilizzo di un modello per ridurre le incoerenze, vedere [modellare i requisiti utente](../modeling/model-user-requirements.md).  
   
 ### <a name="use-models-with-other-artifacts"></a>Usare i modelli con altri elementi  
  Un modello non è da solo una specifica dei requisiti o un'architettura. È uno strumento per esprimere alcuni aspetti di questi elementi in modo più chiaro, ma non è possibile esprimere tutti i concetti necessari durante la progettazione del software. I modelli devono perciò essere usati con altri mezzi di comunicazione, ad esempio paragrafi o pagine di OneNote, documenti di Microsoft Office, elementi di lavoro in [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] o Sticky Notes sulla bacheca della stanza del progetto. Tranne l'ultimo elemento, tutti i tipi di oggetto possono essere collegati alle parti di elementi del modello.  
   
  Di seguito sono riportati altri aspetti della specifica che in genere vengono usati con i modelli. A seconda della scala e dello stile del progetto, è possibile usare diversi di questi aspetti o non usarli affatto:  
   
--   Storie utente. Una storia utente è una breve descrizione, discussa con utenti e altre parti interessate, di un aspetto del comportamento del sistema che verrà recapitata in una delle iterazioni del progetto. Una storia utente tipica inizia nel modo seguente: "Il cliente sarà in grado di..." Una storia utente potrebbe presentare un gruppo di casi di utilizzo o definire estensioni di casi di utilizzo che sono stati sviluppati in precedenza. La definizione o l'estensione di casi di utilizzo consente di rendere la storia utente più chiara.  
+-   Storie utente. Una storia utente è una breve descrizione, discussa con utenti e altre parti interessate, di un aspetto del comportamento del sistema che verrà recapitata in una delle iterazioni del progetto. Una storia utente tipica inizia "il cliente sarà in grado..." Una storia utente potrebbe presentare un gruppo di casi di utilizzo o definire estensioni di casi di utilizzo che sono stati sviluppati in precedenza. La definizione o l'estensione di casi di utilizzo consente di rendere la storia utente più chiara.  
   
 -   Richieste di modifica. Una richiesta di modifica in un progetto più formale è molto simile a una storia utente in un progetto agile. Nell'approccio agile tutti i requisiti vengono considerati modifiche a ciò che è stato sviluppato in iterazioni precedenti.  
   
@@ -108,16 +92,16 @@ In Visual Studio è possibile usare un modello che consenta di comprendere e mod
 -   Le parti interessate non tecniche in genere non hanno problemi a comprendere i diagrammi UML con alcune indicazioni da parte dell'utente.  
   
 #### <a name="link-model-to-work-items"></a>Collegare il modello agli elementi di lavoro  
- Dopo il workshop di requisiti, elaborare i dettagli del modello requisiti e collegare il modello alle attività di sviluppo. A tale scopo è possibile collegare gli elementi di lavoro in [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] agli elementi del modello. Per informazioni su come eseguire questa operazione, vedere [collegare elementi di modello ed elementi di lavoro](../modeling/link-model-elements-and-work-items.md).  
+ Dopo il workshop di requisiti, elaborare i dettagli del modello requisiti e collegare il modello alle attività di sviluppo. A tale scopo è possibile collegare gli elementi di lavoro in [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] agli elementi del modello.
   
  È possibile collegare qualsiasi elemento agli elementi di lavoro, ma quelli più utili sono i seguenti:  
   
--   Commenti che descrivono i requisiti delle regole di business o della qualità del servizio. Per ulteriori informazioni, vedere [modello requisiti utente](../modeling/model-user-requirements.md).  
+-   Commenti che descrivono i requisiti delle regole di business o della qualità del servizio. Per ulteriori informazioni, vedere [modellare i requisiti utente](../modeling/model-user-requirements.md).  
   
 #### <a name="link-model-to-tests"></a>Collegare un modello ai test  
  Usare il modello requisiti per guidare la progettazione dei test di accettazione. Creare questi test contemporaneamente al lavoro di sviluppo.  
   
- Per ulteriori informazioni su questa tecnica, vedere [sviluppare i test da un modello](../modeling/develop-tests-from-a-model.md).  
+ Per ulteriori informazioni su questa tecnica, vedere [sviluppare test da un modello](../modeling/develop-tests-from-a-model.md).  
   
 #### <a name="estimate-remaining-work"></a>Stimare il lavoro rimanente  
  Un modello requisiti può agevolare la stima delle dimensioni totali del progetto rispetto alle dimensioni di ogni iterazione. La valutazione del numero e della complessità delle classi e dei casi di utilizzo agevolano la stima del lavoro di sviluppo che sarà necessario. Quando sono state completate le prime iterazioni, un confronto dei requisiti analizzati e di quelli ancora da analizzare può fornire un'indicazione approssimativa del costo e dell'ambito della parte restante del progetto.  
@@ -127,33 +111,32 @@ In Visual Studio è possibile usare un modello che consenta di comprendere e mod
 ## <a name="levels-of-abstraction"></a>Livelli di astrazione  
  I modelli dispongono di un intervallo di astrazione in relazione al software. I modelli più concreti rappresentano direttamente il codice di programma e quelli più astratti rappresentano i concetti di business che possono o non possono essere rappresentati nel codice.  
   
- È possibile visualizzare un modello tramite diversi tipi di diagrammi. Per informazioni sui modelli e diagrammi, vedere [creare modelli per app](../modeling/create-models-for-your-app.md).  
+ È possibile visualizzare un modello tramite diversi tipi di diagrammi. Per informazioni sui modelli e diagrammi, vedere [creare modelli per l'app](../modeling/create-models-for-your-app.md).  
   
  Diversi tipi di diagramma sono utili per descrivere la progettazione a diversi livelli di astrazione. Molti tipi di diagramma sono utili più livelli. Questa tabella mostra come usare ogni tipo di diagramma.  
   
 |Livello di progettazione|Tipi di diagramma|  
 |------------------|-------------------|  
-|Processo aziendale<br /><br /> Le informazioni sul contesto in cui verrà usato il sistema consentono di comprendere quali sono le esigenze degli utenti.|-Diagrammi classi concettuali descrivono i concetti aziendali usati all'interno del processo di business.|  
-|Requisiti utente<br /><br /> La definizione di ciò che gli utenti richiedono al sistema.|-Regole di business e requisiti qualità del servizio possono essere descritti in documenti separati.|  
-|Progettazione ad alto livello<br /><br /> La struttura generale del sistema: i componenti principali e la modalità con cui vengono accoppiati.|-Diagrammi di dipendenza viene descritto come il sistema viene strutturato in parti interdipendenti. È possibile convalidare il codice di programma in base ai diagrammi di dipendenza per assicurarsi che sia conforme all'architettura.|  
-|Analisi codice<br /><br /> Diagrammi possono essere generati dal codice.|-Dipendenza diagrammi mostrano le dipendenze tra classi. Codice aggiornato può essere convalidato in base a un diagramma di dipendenza.<br />-Diagrammi classi mostrano le classi nel codice.|  
+|Processo aziendale<br /><br /> Le informazioni sul contesto in cui verrà usato il sistema consentono di comprendere quali sono le esigenze degli utenti.|-Diagrammi classi concettuale descrivono i concetti di business utilizzati all'interno del processo di business.|  
+|Requisiti utente<br /><br /> La definizione di ciò che gli utenti richiedono al sistema.|-Le regole di business e requisiti qualità del servizio possono essere descritti nei documenti separati.|  
+|Progettazione ad alto livello<br /><br /> La struttura generale del sistema: i componenti principali e la modalità con cui vengono accoppiati.|-Diagrammi dipendenza descrivono come il sistema è strutturato in parti indipendenti. È possibile convalidare il codice programma in base ai diagrammi di dipendenza per assicurarsi che sia conforme all'architettura.|  
+|Analisi codice<br /><br /> I diagrammi possono essere generati dal codice.|-Diagrammi dipendenza mostrano le dipendenze tra le classi. Codice aggiornato può essere convalidato in base a un diagramma di dipendenza.<br />-Diagrammi classi mostrano le classi nel codice.|  
   
 ## <a name="external-resources"></a>Risorse esterne  
   
 |**Categoria**|**Collegamenti**|  
 |------------------|---------------|  
-|**Video**|![collegamento a video](~/data-tools/media/playvideo.gif "PlayVideo") [MSDN How Do I video: come creare e utilizzare modelli e diagrammi UML (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![collegamento a video](~/data-tools/media/playvideo.gif "PlayVideo") [Channel 9: UML con Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![collegamento a video](~/data-tools/media/playvideo.gif "PlayVideo") [MSDN come serie di video: strumenti UML e l'estensibilità (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkID=214467)|  
-|**Forum**|-   [Visualizzazione di Visual Studio / strumenti di modellazione](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visualizzazione di Visual Studio / Modeling SDK (strumenti DSL)](http://go.microsoft.com/fwlink/?LinkId=184721)|  
-|**Blog**|[Visual Studio ALM e Team Foundation Server Blog](http://go.microsoft.com/fwlink/?LinkID=201340)|  
-|**Registrazioni e articoli tecnici**|[MSDN Architecture Center](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Documentazione Visual Studio Architecture Tooling Guidance](../modeling/visual-studio-architecture-tooling-guidance.md)|  
+|**Video**|![collegamento a video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN How Do I video: come creare e utilizzare i modelli UML e diagrammi (Visual Studio 2010 Ultimate)](http://go.microsoft.com/fwlink/?LinkId=214460)<br /><br /> ![collegamento a video](../data-tools/media/playvideo.gif "PlayVideo") [Channel 9: UML con Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkID=201106)<br /><br /> ![collegamento a video](../data-tools/media/playvideo.gif "PlayVideo") [MSDN come serie di video: strumenti ed estendibilità (Visual Studio 2010 Ultimate) ULM](http://go.microsoft.com/fwlink/?LinkID=214467)|  
+|**Forum**|-   [Visual Studio Visualization and Modeling Tools](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio Visualization and Modeling SDK (strumenti DSL)](http://go.microsoft.com/fwlink/?LinkId=184721)|  
+|**Blog**|[Blog di Visual Studi ALM + Team Foundation Server](http://go.microsoft.com/fwlink/?LinkID=201340)|  
+|**Articoli e pubblicazioni tecniche**|[MSDN Architecture Center](http://go.microsoft.com/fwlink/?LinkId=201343)<br /><br /> [Documentazione Visual Studio Architecture Tooling Guidance](../modeling/visual-studio-architecture-tooling-guidance.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzare i modelli in Agile development](http://msdn.microsoft.com/en-us/592ac27c-3d3e-454a-9c38-b76658ed137f)   
+ [Utilizzare i modelli in fase di sviluppo Agile](http://msdn.microsoft.com/en-us/592ac27c-3d3e-454a-9c38-b76658ed137f)   
  [Creare modelli per l'app](../modeling/create-models-for-your-app.md)   
- [Modello dei requisiti utente](../modeling/model-user-requirements.md)   
- [L'architettura dell'applicazione del modello](../modeling/model-your-app-s-architecture.md)   
- [Sviluppare i test da un modello](../modeling/develop-tests-from-a-model.md)   
+ [Modellare i requisiti utente](../modeling/model-user-requirements.md)   
+ [Architettura dell'applicazione del modello](../modeling/model-your-app-s-architecture.md)   
+ [Sviluppare test da un modello](../modeling/develop-tests-from-a-model.md)   
  [Strutturare la soluzione di modellazione](../modeling/structure-your-modeling-solution.md)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
-

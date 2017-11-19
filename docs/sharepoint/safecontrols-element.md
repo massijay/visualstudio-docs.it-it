@@ -1,30 +1,31 @@
 ---
-title: "SafeControls Element"
-ms.custom: ""
-ms.date: "02/02/2017"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "office-development"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "SafeControls element"
+title: SafeControls (elemento) | Documenti Microsoft
+ms.custom: 
+ms.date: 02/02/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: office-development
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords: SafeControls element
 ms.assetid: f5ffdbbe-cf85-4e5a-9d39-3cd4462f2a0e
-caps.latest.revision: 11
-author: "kempb"
-ms.author: "kempb"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.openlocfilehash: f1588c7f20b0187557a1bfc993ba57657cbc52cd
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# SafeControls Element
-  Rappresenta una raccolta di controlli ASPX e Web part definite come sicure per l'accesso di un utente in qualsiasi pagina ASPX del sito di SharePoint.  
+# <a name="safecontrols-element"></a>Elemento SafeControls
+  Rappresenta una raccolta di controlli ASPX e Web part che sono definiti come sicuri per tutti gli utenti di accedere in qualsiasi pagina ASPX nel sito di SharePoint.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 <SafeControls>  
@@ -32,38 +33,38 @@ caps.handback.revision: 10
 </SafeControls>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[SafeControl](../sharepoint/safecontrol-element.md)|Elemento facoltativo.<br /><br /> Rappresenta un controllo ASPX o una Web part definita come sicura per l'accesso di un utente in qualsiasi pagina ASPX del sito di SharePoint.|  
+|-------------|-----------------|  
+|[SafeControl](../sharepoint/safecontrol-element.md)|Elemento facoltativo.<br /><br /> Rappresenta un controllo ASPX o una Web Part che è designato come protetto per qualsiasi utente di accedere in qualsiasi pagina ASPX nel sito di SharePoint.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[ProjectItem](../sharepoint/projectitem-element.md)|Rappresenta un elemento di progetto SharePoint.  Si tratta dell'elemento radice obbligatorio del file spdata.|  
+|-------------|-----------------|  
+|[ProjectItem](../sharepoint/projectitem-element.md)|Rappresenta un elemento di progetto SharePoint. Questo è l'elemento radice obbligatorio del file con estensione spdata.|  
   
-## Note  
- Per ulteriori informazioni sui controlli sicuri, vedere [Specifica delle informazioni sui pacchetti e sulla distribuzione negli elementi di progetto](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).  
+## <a name="remarks"></a>Note  
+ Per ulteriori informazioni sui controlli sicuri, vedere [che fornisce informazioni sui pacchetti e distribuzione negli elementi di progetto](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).  
   
-## Informazioni sull'elemento  
+## <a name="element-information"></a>Informazioni sull'elemento  
   
 |||  
 |-|-|  
-|**Spazio dei nomi**|http:\/\/schemas.microsoft.com\/VisualStudio\/2010\/SharePointTools\/SharePointProjectItemModel|  
-|**Nome schema**|Schema dell'elemento di progetto SharePoint|  
+|**Namespace**|http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel|  
+|**Nome dello schema**|Schema di elemento di progetto SharePoint|  
 |**File di convalida**|ProjectItemModelSchema.xsd|  
 |**Può essere vuoto**|No|  
   
-## Vedere anche  
- [SharePoint Project Item Schema Reference](../sharepoint/sharepoint-project-item-schema-reference.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento allo Schema elemento di progetto SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)   
  [Specifica delle informazioni sui pacchetti e sulla distribuzione negli elementi di progetto](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)  
   
   

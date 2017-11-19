@@ -1,43 +1,42 @@
 ---
-title: "IDiaSectionContrib::get_relativeVirtualAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSectionContrib::get_relativeVirtualAddress (metodo)"
+title: IDiaSectionContrib::get_relativeVirtualAddress | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSectionContrib::get_relativeVirtualAddress method
 ms.assetid: 32f9674d-94f1-4590-99de-a2eb60da4af8
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: 10f5dfb8831fe3b28bd9f3c867f47fdc73b4e6bc
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSectionContrib::get_relativeVirtualAddress
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-Recupera indirizzo \(RVA\) virtuale di immagine di supporto.  
+# <a name="idiasectioncontribgetrelativevirtualaddress"></a>IDiaSectionContrib::get_relativeVirtualAddress
+Recupera l'immagine indirizzo virtuale relativo (RVA) del contributo dell'indicatore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
-HRESULT get_relativeVirtualAddress (   
-   DWORD* pRetVal  
+```C++  
+HRESULT get_relativeVirtualAddress (   
+   DWORD* pRetVal  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pRetVal`  
- \[out\]  Restituisce l'immagine gli indirizzi RVA di supporto.  
+ [out] Restituisce l'immagine RVA del contributo dell'indicatore.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`.  Restituisce `S_FALSE` se questa proprietà non è supportata.  In caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`. Restituisce `S_FALSE` se questa proprietà non è supportata. In caso contrario, verrà restituito un codice di errore.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

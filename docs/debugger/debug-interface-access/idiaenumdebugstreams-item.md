@@ -1,51 +1,50 @@
 ---
-title: "IDiaEnumDebugStreams::Item | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaEnumDebugStreams::Item (metodo)"
+title: 'Idiaenumdebugstreams:: Item | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaEnumDebugStreams::Item method
 ms.assetid: 6b388fe1-eabc-4720-9d59-dc09b0ceaeac
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: fefec4989c649e7b4113f78948c1ce30d42f050f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaEnumDebugStreams::Item
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-Recupera un flusso di debug per l'utilizzo di un indice o di un nome.  
+# <a name="idiaenumdebugstreamsitem"></a>IDiaEnumDebugStreams::Item
+Recupera un flusso di debug tramite un indice o al nome.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
-HRESULT Item (   
-   VARIANT                   index,  
-   IDiaEnumDebugStreamData** stream  
+```C++  
+HRESULT Item (   
+   VARIANT                   index,  
+   IDiaEnumDebugStreamData** stream  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  indice  
- \[in\]  Indice o il nome del flusso di debug da recuperare.  Se una variabile Integer viene utilizzata, deve essere compreso tra 0 e `count`\-1, dove  `count` viene restituito da  [IDiaEnumDebugStreams::get\_Count](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md) metodo.  
+ [in] Indice o al nome del flusso di debug da recuperare. Se si utilizza una variante dell'intero, deve essere compreso tra 0 e `count`-1, dove `count` è restituito dal [idiaenumdebugstreams:: Get_count](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md) metodo.  
   
  flusso  
- \[out\]  restituisce [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) oggetto che rappresenta il flusso specificato di debug.  
+ [out] Restituisce un [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) oggetto che rappresenta il flusso di debug specificata.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```cpp#  
+```C++  
 IDiaEnumDebugStreamData *GetStreamData(IDiaEnumDebugStreams *pStreamList,  
                                        LONG whichStream)  
 {  
@@ -69,6 +68,6 @@ IDiaEnumDebugStreamData *GetStreamData(IDiaEnumDebugStreams *pStreamList,
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)   
  [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

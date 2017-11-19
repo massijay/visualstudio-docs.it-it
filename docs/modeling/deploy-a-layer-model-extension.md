@@ -1,5 +1,5 @@
 ---
-title: Distribuire un&quot;estensione di modelli di livello | Documenti di Microsoft
+title: Distribuire un'estensione del modello di livello | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,29 +10,15 @@ helpviewer_keywords:
 - dependency diagrams, deploying extensions
 - layer models, deploying extensions
 ms.assetid: 00a4675b-d20e-487e-8fd5-be2b1e0ba238
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8f84f22444a5df5b9f4f4af44cd8ee9136403467
-ms.openlocfilehash: 03164fe80a0b8f4dbc321a7e57b7db9e38e405d5
-ms.lasthandoff: 02/22/2017
-
+ms.openlocfilehash: d019e602c5bf198df03a50034c2ed29519d16e53
+ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="deploy-a-layer-model-extension"></a>Distribuire un'estensione del modello di livello
 Altri utenti di Visual Studio possono installare estensioni di modellazione del livello creati tramite Visual Studio.  
@@ -42,9 +28,9 @@ Altri utenti di Visual Studio possono installare estensioni di modellazione del 
   
 #### <a name="to-install-the-extension"></a>Per installare l'estensione  
   
-1.  Nel progetto che contiene **source.vsix.manifest**, aprire **bin\\ \* ** in Esplora File.  
+1.  Nel progetto che contiene **source.vsix.manifest**aprire **bin\\ \***  in Esplora File.  
   
-2.  Copia il ** \*. VSIX** file nel computer in cui si desidera installare l'estensione.  
+2.  Copia il  **\*VSIX** file nel computer in cui si desidera installare l'estensione.  
   
 3.  Nel computer di destinazione fare doppio clic sul file con estensione VSIX in Esplora risorse.  
   
@@ -52,7 +38,7 @@ Altri utenti di Visual Studio possono installare estensioni di modellazione del 
   
 #### <a name="to-uninstall-the-extension"></a>Per disinstallare l'estensione  
   
-1.  In Visual Studio, nel **strumenti** menu, fare clic su **estensioni e aggiornamenti**.  
+1.  In Visual Studio, sul **strumenti** menu, fare clic su **estensioni e aggiornamenti**.  
   
 2.  Fare clic sul nome dell'estensione e quindi fare clic su **Disinstalla**.  
   
@@ -61,7 +47,7 @@ Altri utenti di Visual Studio possono installare estensioni di modellazione del 
   
 #### <a name="to-install-your-layer-extension-on-a-includeesprbuildmiscincludesesprbuildmdmd-server"></a>Per installare l'estensione del livello in un server [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]  
   
-1.  Copia il **. VSIX** file dal computer di sviluppo per il [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] computer.  
+1.  Copia il **VSIX** file dal computer di sviluppo per la [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] computer.  
   
      Inserire il file VSIX in uno dei percorsi seguenti:  
   
@@ -78,15 +64,14 @@ Altri utenti di Visual Studio possono installare estensioni di modellazione del 
          %LocalAppData%\Microsoft\VisualStudio\\\Extensions\Microsoft [versione]  
   
         > [!NOTE]
-        >  % LocalAppData % corrisponde in genere *DriveName*: gli utenti*nome utente*AppDataLocal.  
+        >  % LocalAppData % è in genere *DriveName*: gli utenti*UserName*AppDataLocal.  
   
 2.  Espandere ogni file VSIX in una cartella nello stesso percorso:  
   
-    1.  Modificare l'estensione del nome file da **. VSIX** a **. zip**.  
+    1.  Modificare l'estensione del nome di file da **VSIX** a **zip**.  
   
     2.  Estrarre il contenuto del file ZIP in una cartella.  
   
     3.  Eliminare il file ZIP.  
   
 3.  Riavviare [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)].
-

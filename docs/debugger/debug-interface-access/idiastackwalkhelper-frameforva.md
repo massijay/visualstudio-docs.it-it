@@ -1,48 +1,47 @@
 ---
-title: "IDiaStackWalkHelper::frameForVA | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaStackWalkHelper2::frameForVA (metodo)"
+title: IDiaStackWalkHelper::frameForVA | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaStackWalkHelper2::frameForVA method
 ms.assetid: f35fc61b-f8dd-473a-b583-82c304059422
-caps.latest.revision: 9
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: f2ea7272c3a01680e1776c15f945e2d10ed973a9
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaStackWalkHelper::frameForVA
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-Recupera lo stack frame contenente l'indirizzo virtuale specificato.  
+# <a name="idiastackwalkhelperframeforva"></a>IDiaStackWalkHelper::frameForVA
+Recupera lo stack frame che contiene l'indirizzo virtuale specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
-HRESULT frameForVA(   
-   ULONGLONG        va,  
-   IDiaFrameData**  ppFrame  
+```C++  
+HRESULT frameForVA(   
+   ULONGLONG        va,  
+   IDiaFrameData**  ppFrame  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `va`  
- \[in\]  Indirizzo virtuale per i dati del frame.  
+ [in] L'indirizzo virtuale per i frame di dati.  
   
  `ppFrame`  
- \[out\]   [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) oggetto che rappresenta lo stack frame all'indirizzo specificato.  
+ [out] Un [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) oggetto che rappresenta lo stack frame all'indirizzo specificato.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce un codice di errore.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

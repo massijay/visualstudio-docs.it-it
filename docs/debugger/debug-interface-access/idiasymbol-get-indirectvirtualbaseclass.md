@@ -1,53 +1,52 @@
 ---
-title: "IDiaSymbol::get_indirectVirtualBaseClass | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-debug"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDiaSymbol::get_indirectVirtualBaseClass (metodo)"
+title: IDiaSymbol::get_indirectVirtualBaseClass | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-debug
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: IDiaSymbol::get_indirectVirtualBaseClass method
 ms.assetid: 853b5c6f-e1cb-4675-ad36-9ee16e3341c3
-caps.latest.revision: 8
-author: "mikejo5000"
-ms.author: "mikejo"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikejo5000
+ms.author: mikejo
+manager: ghogen
+ms.openlocfilehash: d9ed9a0893d88178cf7d335dad028050ecf30d9c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# IDiaSymbol::get_indirectVirtualBaseClass
-[!INCLUDE[vs2017banner](../../code-quality/includes/vs2017banner.md)]
-
-Recupera un flag che indica se il tipo di dati definito dall'utente è una classe base virtuale indiretta.  
+# <a name="idiasymbolgetindirectvirtualbaseclass"></a>IDiaSymbol::get_indirectVirtualBaseClass
+Recupera un flag che specifica se il tipo di dati definito dall'utente è una classe base virtuale indiretta.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```cpp#  
-HRESULT get_indirectVirtualBaseClass (   
-   BOOL* pRetVal  
+```C++  
+HRESULT get_indirectVirtualBaseClass (   
+   BOOL* pRetVal  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pRetVal`  
- \[out\]  Restituisce `TRUE` se il tipo di dati definito dall'utente è una classe base virtuale indiretta; in caso contrario, restituisce  `FALSE`.  
+ [out] Restituisce `TRUE` se il tipo di dati definito dall'utente è una classe base virtuale indiretta; in caso contrario, restituisce `FALSE`.  
   
-## Valore restituito  
- Se l'operazione riesce, restituisce `S_OK`; in caso contrario, restituisce  `S_FALSE` o codice di errore.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, restituisce `S_OK`; in caso contrario, restituisce `S_FALSE` o codice di errore.  
   
 > [!NOTE]
->  un valore restituito di `S_FALSE` indica che la proprietà non è disponibile per il simbolo.  
+>  Valore restituito di `S_FALSE` significa che la proprietà non è disponibile per il simbolo.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Requisiti|Descrizione|  
-|---------------|-----------------|  
-|intestazione:|dia2.h|  
-|versione:|DIA SDK v7.0|  
+|Requisito|Descrizione|  
+|-----------------|-----------------|  
+|Intestazione:|DIA2.h|  
+|Versione:|Versione 7.0 DIA SDK|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
