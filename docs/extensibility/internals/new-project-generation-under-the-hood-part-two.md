@@ -4,37 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - projects [Visual Studio], new project dialog
 - projects [Visual Studio], new project generation
 ms.assetid: 73ce91d8-0ab1-4a1f-bf12-4d3c49c01e13
-caps.latest.revision: 14
+caps.latest.revision: "14"
+author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5581224b17a7b42f65b69f741f984a144d78fc26
-ms.openlocfilehash: 859eeac9c2fd322dcf231e9c70fe83b92b099111
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: f7dc04752b034f666dfcb1d72b500f2c12f54fba
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>Nuova generazione del progetto: Dietro le quinte, parte 2
 In [nuova generazione progetto: in parte integrante, parte 1](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) abbiamo visto come **nuovo progetto** inserite nella finestra di dialogo. Si supponga di aver selezionato un **applicazione Windows di Visual c#**, compilati il **nome** e **percorso** caselle di testo e si fa clic su OK.  
@@ -63,7 +48,7 @@ namespace $safeprojectname$
 }  
 ```  
   
- Se si crea un nuovo progetto applicazione Windows denominato "semplice", il modello sostituisce il `$safeprojectname$` parametro con il nome del progetto.  
+ Se si crea un nuovo progetto applicazione Windows denominato "semplice", il modello sostituisce la `$safeprojectname$` parametro con il nome del progetto.  
   
 ```  
 using System;  
@@ -93,7 +78,7 @@ namespace Simple
 </VSTemplate>  
 ```  
   
- È stato esaminato il \<TemplateData > sezione la [nuova generazione di progetto: in parte integrante, parte 1](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md). I tag in questa sezione consentono di controllare l'aspetto del **nuovo progetto** la finestra di dialogo.  
+ È stato esaminato il \<TemplateData > sezione di [nuova generazione progetto: in parte integrante, parte 1](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md). I tag in questa sezione consentono di controllare l'aspetto del **nuovo progetto** la finestra di dialogo.  
   
  I tag di \<TemplateContent > sezione la generazione di nuovi progetti ed elementi di progetto di controllo. Ecco il \<TemplateContent > sezione dal file nella cartella \Programmi\Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip cswindowsapplication.vstemplate.  
   
@@ -129,7 +114,7 @@ namespace Simple
 </TemplateContent>  
 ```  
   
- Il \<progetto > tag controlla la generazione di un progetto e \<ProjectItem > tag controlla la generazione di un elemento di progetto. Se il parametro ReplaceParameters è true, il modello verrà personalizzare tutti i parametri di modello nel file di progetto o dell'elemento. In questo caso, tutti gli elementi di progetto personalizzati, ad eccezione di Settings. Settings.  
+ Il \<progetto > tag controlla la generazione di un progetto e \<ProjectItem > tag controlla la generazione di un elemento di progetto. Se il parametro ReplaceParameters è true, il modello verrà personalizzare tutti i parametri di modello nel file di progetto o elemento. In questo caso, tutti gli elementi di progetto personalizzati, ad eccezione di Settings. Settings.  
   
  Il parametro TargetFileName specifica il nome e percorso relativo del file di progetto risultante o dell'elemento. Ciò consente di creare una struttura di cartelle per il progetto. Se non si specifica questo argomento, l'elemento del progetto avrà lo stesso nome di modello di elemento di progetto.  
   
@@ -161,7 +146,7 @@ namespace Simple
 </ItemGroup>  
 ```  
   
- È possibile visualizzare sono i riferimenti al sei progetto che vengono visualizzati in Esplora soluzioni. Ecco una sezione da un altro \<ItemGroup >. Numero di righe di codice sia stata eliminata per maggiore chiarezza. In questa sezione viene Settings.Designer.cs dipende Settings:  
+ È possibile visualizzare sono i riferimenti al sei progetto che vengono visualizzati in Esplora soluzioni. Ecco una sezione da un altro \<ItemGroup >. Numero di righe di codice sia stata eliminata per maggiore chiarezza. In questa sezione rende Settings.Designer.cs dipendente Settings:  
   
 ```  
 <ItemGroup>  

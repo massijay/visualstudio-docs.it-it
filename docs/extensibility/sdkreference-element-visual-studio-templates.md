@@ -1,25 +1,27 @@
 ---
-title: "Elemento SDKReference (modelli di Visual Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento SDKReference (modelli di Visual Studio) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-general
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 72c8b352-0b7a-42b3-ba5d-2a2d1e90c34b
-caps.latest.revision: 5
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: a6ca0159d522d7890452a54986093f4062803faf
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Elemento SDKReference (modelli di Visual Studio)
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="sdkreference-element-visual-studio-templates"></a>Elemento SDKReference (modelli di Visual Studio)
 Specifica che il modello di elemento usa un riferimento all'SDK.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```xml  
 <VSTemplate>      
@@ -29,25 +31,25 @@ Specifica che il modello di elemento usa un riferimento all'SDK.
                 <SDKReference>SDKname</SDKReference>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |[Reference](../extensibility/reference-element-visual-studio-templates.md)|Specifica il riferimento all'assembly da aggiungere quando l'elemento viene aggiunto a un progetto.|  
   
-## Valore di testo  
+## <a name="text-value"></a>Valore di testo  
  È necessario specificare un valore di testo.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Questo testo indica il riferimento all'SDK da aggiungere a un progetto quando viene creata un'istanza del modello di elemento.  
   
 ```xml  
@@ -60,8 +62,8 @@ Specifica che il modello di elemento usa un riferimento all'SDK.
 ...  
 ```  
   
-## Vedere anche  
- [Elemento References \(modelli di Visual Studio\)](../extensibility/references-element-visual-studio-templates.md)   
- [Elemento Reference \(modelli di Visual Studio\)](../extensibility/reference-element-visual-studio-templates.md)   
- [Creazione di un progetto e di modelli di elemento personalizzati](../ide/creating-project-and-item-templates.md)   
- [Riferimenti allo schema dei modelli di Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Elemento References (modelli di Visual Studio)](../extensibility/references-element-visual-studio-templates.md)   
+ [Elemento Reference (modelli di Visual Studio)](../extensibility/reference-element-visual-studio-templates.md)   
+ [Creazione di modelli di progetti e di elementi](../ide/creating-project-and-item-templates.md)   
+ [Riferimenti sullo schema dei modelli di Visual Studio](../extensibility/visual-studio-template-schema-reference.md)

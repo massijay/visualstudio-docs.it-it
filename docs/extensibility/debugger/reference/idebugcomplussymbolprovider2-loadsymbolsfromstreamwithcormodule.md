@@ -1,30 +1,32 @@
 ---
-title: "IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule"
-  - "LoadSymbolsFromStreamWithCorModule"
+title: IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
+- LoadSymbolsFromStreamWithCorModule
 ms.assetid: f79b894f-52c4-43c2-9a68-c71536451f6c
-caps.latest.revision: 13
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: 13edb3af701c1f1c7dbcd17cc10cc02cb5d90fc3
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
-[!INCLUDE[vs2017banner](../../../code-quality/includes/vs2017banner.md)]
-
-Caricare i simboli di debug da un flusso di dati assegnato il **ICorDebugModule** oggetto.  
+# <a name="idebugcomplussymbolprovider2loadsymbolsfromstreamwithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
+Caricare i simboli di debug da un flusso di dati specificato di **ICorDebugModule** oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```cpp#  
+```cpp  
 HRESULT LoadSymbolsFromStreamWithCorModule(  
    ULONG32   ulAppDomainID,  
    GUID      guidModule,  
@@ -35,7 +37,7 @@ HRESULT LoadSymbolsFromStreamWithCorModule(
 );  
 ```  
   
-```c#  
+```csharp  
 int LoadSymbolsFromStreamWithCorModule(  
    uint    ulAppDomainID,  
    Guid    guidModule,  
@@ -60,7 +62,7 @@ int LoadSymbolsFromStreamWithCorModule(
  [in] Oggetto che contiene i metadati del simbolo.  
   
  `pUnkCorDebugModule`  
- [in] Oggetto che implementa il [interfaccia ICorDebugModule](ICorDebugModule%20Interface.xml).  
+ [in] Oggetto che implementa il [interfaccia ICorDebugModule](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).  
   
  `pStream`  
  [in] Flusso di dati che contiene i simboli di debug da caricare.  
@@ -71,7 +73,7 @@ int LoadSymbolsFromStreamWithCorModule(
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come implementare questo metodo per un **CDebugSymbolProvider** oggetto che espone il [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) interfaccia.  
   
-```cpp#  
+```cpp  
 HRESULT CDebugSymbolProvider::LoadSymbolsFromStreamWithCorModule(  
     ULONG32 ulAppDomainID,  
     GUID guidModule,  
