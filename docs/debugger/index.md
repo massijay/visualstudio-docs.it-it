@@ -1,15 +1,17 @@
 ---
 layout: LandingPage
-title: Debug in Visual Studio
-translationtype: Human Translation
-ms.sourcegitcommit: dac3cb1d7767c2ff76ac25f6a486ad30a8d54831
-ms.openlocfilehash: cf5f50b1e02fa87a6302e1cf9d0b8d9a5ef91b77
-ms.lasthandoff: 03/03/2017
-
+title: Debug delle app in Visual Studio | Microsoft Docs
+description: Informazioni su come usare Visual Studio 2017 per eseguire il debug di applicazioni, servizi e strumenti nel linguaggio preferito per le piattaforme e i dispositivi desiderati.
+ms.technology: vs-ide-debug
+ms.openlocfilehash: d00ef04d3d8f73b607c91f33f9af53429666ba5f
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="debugging-in-visual-studio"></a>Debug in Visual Studio
 
-Il debugger di Visual Studio consente di osservare il comportamento del programma in fase di esecuzione e di  individuazione di errori logici. Il debugger può essere usato con tutti i linguaggi di programmazione di Visual Studio e con le relative librerie associate. Mediante questo strumento è possibile sospendere l'esecuzione del programma per analizzare il codice, valutare e modificare le variabili, visualizzare i registri, esaminare le istruzioni create a partire dal codice sorgente e controllare lo spazio di memoria usato dall'applicazione.
+Il debugger di Visual Studio consente di osservare il comportamento del programma in fase di esecuzione e di individuazione di errori logici. Il debugger può essere usato con tutti i linguaggi di programmazione di Visual Studio e con le relative librerie associate. Mediante questo strumento è possibile sospendere l'esecuzione del programma per analizzare il codice, valutare e modificare le variabili, visualizzare i registri, esaminare le istruzioni create a partire dal codice sorgente e controllare lo spazio di memoria usato dall'applicazione.
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -67,7 +69,7 @@ Il debugger di Visual Studio consente di osservare il comportamento del programm
         </a>
     </li>
         <li>
-        <a href="https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6">
+        <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/getting-started-with-the-debugger#video">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -132,6 +134,24 @@ Il debugger di Visual Studio consente di osservare il comportamento del programm
                     </div>
                     <div class="cardText">
                         <h3>Informazioni su IntelliTrace (Visual Studio Enterprise)</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/debugger-tips-and-tricks">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/en-us/media/common/i_debug.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Trucchi e suggerimenti per il debugger</h3>
                     </div>
                 </div>
             </div>

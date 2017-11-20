@@ -3,16 +3,14 @@ layout: LandingPage
 author: gewarren
 ms.author: gewarren
 ms.topic: landing-page
-title: Documentazione dell'IDE di Visual Studio
+title: Documentazione dell'IDE di Visual Studio | Microsoft Docs
 description: Informazioni su come l'IDE di Visual Studio consente di sviluppare app usando quasi tutti i linguaggi di codice.
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
+ms.openlocfilehash: 7bb2f4ef10f4d209c4c4e2c70b10b3a70fdf5c6c
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
 ms.translationtype: HT
-ms.sourcegitcommit: ea1e787c1d509123a650cf2bd20e5fa8bffd5b4e
-ms.openlocfilehash: 55a6cd52972758c82f2f03a51d34b601352bbb38
-ms.contentlocale: it-it
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="visual-studio-ide-documentation"></a>Documentazione dell'IDE di Visual Studio
 
@@ -184,4 +182,3 @@ Le esercitazioni, i video e altra documentazione illustrano i modi per creare co
         </div>
     </li>
 </ul>
-
