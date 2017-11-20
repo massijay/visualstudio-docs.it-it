@@ -1,103 +1,79 @@
 ---
-title: Carico soluzione semplificata (LSL) | Documenti di Microsoft
-ms.custom: 
-ms.date: 01/17/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- VSPackages, lightweight solution load
-- VSPackages, fast solution load
-ms.assetid: 0a71d91e-dc71-4d6b-bbfe-9e4ecd9e5fd1
-caps.latest.revision: 1
-ms.author: gregvanl
-manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 221f4911981deec0330f76a82c0cc8a1b968e56e
-ms.openlocfilehash: 28957abccc03001546038da10cf4ff7bbe21f63e
-ms.lasthandoff: 02/22/2017
-
+redirect_url: /visualstudio/extensibility/what-s-new-in-the-visual-studio-2017-sdk/
+ms.openlocfilehash: 5706797ed88dce5b2f481b17d99e9501b960ddca
+ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/15/2017
 ---
-# <a name="lightweight-solution-load-lsl"></a>Carico soluzione semplificata (LSL)
+titolo: "caricamento della soluzione Lightweight (LSL) | Documenti di Microsoft"ms.custom:" "ms. date: Reviewer" 17/01/2017":" "ms.suite:" "ms. Technology: 
+  - ms. tgt_pltfrm "vs ide-sdk": "" ms. topic: helpviewer_keywords "articolo": 
+  - "VSPackage, caricamento della soluzione leggero"
+  - "VSPackage, fast caricamento della soluzione" ms. AssetID: 0a71d91e-dc71-4d6b-bbfe-9e4ecd9e5fd1 caps.latest.revision: 1 autore: author "gregvanl": "gregvanl" manager: ghogen
+---
+# <a name="lightweight-solution-load-lsl"></a>Caricamento della soluzione semplice (LSL)
 
 ## <a name="background-information-on-lsl"></a>Informazioni generali su LSL
 
-Carico soluzione semplice è una nuova funzionalità di Visual Studio 2017 che riduce significativamente il tempo di caricamento di soluzione, che consente di essere più produttivi rapidamente. Quando è necessario LSL è abilitato, Visual Studio non verrà completamente caricato progetti fino a quando non si inizia a utilizzarli.
+Semplice soluzione caricata è una nuova funzionalità di Visual Studio 2017 che consentiranno di ridurre significativamente il tempo di caricamento di soluzioni, che consente di essere più produttivi rapidamente. Quando LSL è abilitato, Visual Studio non completamente carica progetti fino a quando non si inizia a utilizzarli.
 
-LSL può influire sul estensioni di Visual Studio. Le cui funzionalità dipendono da un progetto da caricare le estensioni potrebbero non funzionare o funzionare nel modo corretto senza seguendo le istruzioni disponibili in questo documento.
+LSL può influire sulle estensioni di Visual Studio. Le cui funzionalità dipendono da un progetto da caricare le estensioni potrebbero non funziona o funziona in modo non corretto senza seguendo le istruzioni dettagliate in questo documento.
 
 Per ulteriori informazioni sugli LSL, utilizzare i collegamenti seguenti:
 
-* [Blog del carico soluzione semplificata](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15)
-* Domande? È possibile contattare[lslsupport@microsoft.com](mailto:lslsupport@microsoft.com)
+* [Blog di carico soluzione semplificata](https://blogs.msdn.microsoft.com/visualstudio/2016/10/11/shorter-solution-load-time-in-visual-studio-15)
+* Domande? Contattare Microsoft all'indirizzo[lslsupport@microsoft.com](mailto:lslsupport@microsoft.com)
 
-## <a name="enable-the-setting-to-load-projects-in-deferred-mode"></a>Abilitare l'impostazione caricare i progetti in modalità "differito"
+## <a name="enable-the-setting-to-load-projects-in-deferred-mode"></a>Abilitare l'impostazione caricare i progetti in modalità "posticipata"
 
 1. Chiudere qualsiasi soluzione attualmente aperta.
-2. Passare a **strumenti** > **opzione** > **progetti e soluzioni** > **generale** pagina Impostazioni.
-3. Controllare il **carico soluzione semplificata** casella per abilitare l'impostazione.
+2. Passare a **strumenti** > **opzione** > **progetti e soluzioni** > **generale** impostazioni pagina.
+3. Controllare il **caricamento della soluzione Lightweight** casella per abilitare l'impostazione.
 
-Quando viene aperta una soluzione con l'impostazione precedente attivata, l'IDE viene illustrata una visualizzazione normale dei progetti ma non sono stati caricati i progetti.
+Quando viene aperta una soluzione con l'impostazione precedente attivata, l'IDE mostra una visualizzazione normale dei progetti ma i progetti non sono stati caricati.
 
-## <a name="differences-between-deferred-load-and-regular-load-of-projects"></a>Differenze tra caricamento posticipato e carico normale dei progetti
+## <a name="differences-between-deferred-load-and-regular-load-of-projects"></a>Differenze tra caricamento posticipato e il carico normale di progetti
 
-Quando si apre una soluzione con carico soluzione Lightweight, progetti non vengono caricati. Per questi "progetti posticipati", viene creata una gerarchia di stub. Esplora soluzioni Mostra la vista prevista con le icone e i nomi dei progetti, sarà presente alcuna indicazione dell'interfaccia utente che alcuni o tutti i progetti sono in "modalità differita".
+Quando si apre una soluzione con Lightweight caricamento della soluzione, progetti non vengono caricati. Per questi "progetti posticipati", viene creata una gerarchia di stub. Esplora soluzioni Mostra la vista prevista con icone e i nomi dei progetti, sarà presente alcuna indicazione dell'interfaccia utente di alcuni o tutti i progetti in "modalità differita".
 
-Con LSL abilitato, estensioni non è più probabile che i progetti necessari sono già completamente caricati quando viene attivata un'operazione. I chiamanti devono controllare se hanno una dipendenza caricata progetti. Se un'estensione richiede informazioni da un progetto posticipata, l'estensione per eseguire le operazioni seguenti:
+Con LSL abilitata, le estensioni non è più probabile che i progetti necessari sono già completamente caricati quando viene attivata un'operazione. I chiamanti devono verificare se hanno una dipendenza su progetti caricati. Se un'estensione richiede informazioni da un progetto posticipata, l'estensione per eseguire le operazioni seguenti:
 
 1. Caricare i progetti in base alle esigenze.
-2. Utilizzare il nuovo **area di lavoro API** per ottenere informazioni da un progetto posticipato senza caricamento.
+2. Usare il nuovo **API dell'area di lavoro** per ottenere informazioni da un progetto posticipato senza caricamento.
 
-Il nuovo **area di lavoro API** consentono alle estensioni ottenere informazioni, ad esempio il progetto di un file di origine e di tutti i file di origine per il progetto specificato da un progetto posticipato. In alcuni casi, è necessario caricare solo un set limitato di progetti. La scelta ottimale è un equilibrio tra la frequenza delle operazioni, facilità di approcci alternativi e soddisfazione degli utenti.
+Il nuovo **API dell'area di lavoro** consente alle estensioni di ottenere informazioni, ad esempio il progetto di un file di origine e di tutti i file di origine per il progetto specificato, da un progetto posticipato. In alcuni casi, è necessario caricare solo un set limitato di progetti. L'opzione di destra è un equilibrio tra la frequenza delle operazioni e la facilità di approcci alternativi e soddisfazione degli utenti.
 
-Tutti del progetto e carico soluzione correlati nella modalità LSL vengono ancora generati eventi. In questo modo i componenti ottenere il comportamento previsto da Visual Studio e si comportano esattamente come quando vengono caricati i progetti. Il caricamento del progetto correlati ridotto drasticamente tuttavia eseguite durante una soluzione aperta.
+Tutti i progetti e caricamento della soluzione correlati vengono ancora generati eventi in modalità LSL. In questo modo i componenti ottenere il comportamento previsto da Visual Studio e si comportano esattamente come quando vengono caricati i progetti. Il caricamento del progetto correlato ridotto drasticamente tuttavia eseguite durante una soluzione aperta.
 
 ## <a name="ui-requirements-and-changes"></a>Le modifiche e i requisiti dell'interfaccia utente
 
-L'interfaccia utente devono essere gestiti caricati e posticipati progetti come uguali. Questo significa che qualsiasi azione che può essere eseguita su un progetto caricato deve essere applicabile ai progetti differiti, con alcune eccezioni. Per facilitare lo svolgimento di questa funzionalità, sono state apportate modifiche di alcune API della piattaforma esistente, nonché l'introduzione di nuove API.
+L'interfaccia utente deve considerare progetti caricati e posticipati come uguali. Ciò significa che qualsiasi azione che può essere eseguita su un progetto caricato deve essere applicabile ai progetti differiti, con alcune eccezioni. Per eseguire questa funzionalità, sono presenti modifiche di alcune API della piattaforma esistente, nonché l'introduzione di nuove API.
 
-### <a name="expectations-for-ui"></a>Aspettative per l'interfaccia utente
+### <a name="expectations-for-ui"></a>Previsioni per l'interfaccia utente
 
-1. Le funzionalità devono presentare che alcuna visual non differenze a seconda se i progetti vengono caricati o posticipati.
-2. Qualsiasi elenco o enumerazione tramite i progetti della soluzione caricato deve includere progetti posticipati.
-3. Le azioni disponibili rispetto a un progetto caricato dovrebbero essere disponibile rispetto a un progetto posticipato.
-4. Funzionalità deve richiesta di caricamento progetto solo quando:
-  * È l'interazione diretta dell'utente con una funzionalità. Non caricare preventivamente i progetti.
-  * Un'azione "Ulteriori risultati" viene effettuata dall'utente. Per questa linea guida dell'interfaccia utente, vedere di seguito.
-  * Nell'azione, è possibile utilizzare solo il progetto caricato completamente. Utilizzare LSL e API aperte di progetto ogni volta che è possibile inviare una richiesta di funzionalità richiesto quando non è presente la funzionalità.
+1. Funzionalità devono essere visualizzato che alcun visual non differenze a seconda se i progetti vengono caricati o posticipati.
+2. Qualsiasi elenco o un'enumerazione tramite i progetti della soluzione caricato deve includere progetti posticipati.
+3. Le azioni disponibili rispetto a un progetto caricato devono essere disponibile rispetto a un progetto posticipato.
+4. Funzionalità deve richiesta di caricamento di progetti solo quando:
+  * È una funzionalità di interazione diretta dell'utente. Non caricare progetti modalità preemptive.
+  * Un movimento "Vedere più risultati" viene eseguito dall'utente. Per questa linea guida dell'interfaccia utente, vedere di seguito.
+  * Nell'azione, è possibile utilizzare solo il progetto caricato completamente. Utilizzare LSL e aprire le API di progetto ogni volta che è possibile inviare una richiesta di funzionalità richiesto quando la funzionalità è manca.
 
-### <a name="changes-in-platform-apis-to-help-drive-ui"></a>Modifiche nella piattaforma API per unità dell'interfaccia utente
+### <a name="changes-in-platform-apis-to-help-drive-ui"></a>Modifiche nella piattaforma API per l'unità dell'interfaccia utente
 
-1. Nuove API sono disponibili per porre la soluzione se è stato aperto in modalità di caricamento della soluzione Lightweight e quanti progetti si trovano nello stato posticipato.
-2. Nuovo evento è disponibile per quando vengono caricati tutti i progetti posticipati nella soluzione.
-3. Nuove API sono disponibili per chiedere a un progetto se è stata rinviata.
-4. Le API esistenti vengono aggiornate per includere progetti posticipati quando si richiede progetti caricati.
-5. Le API esistenti vengono aggiornate in express la soluzione venga caricata completamente dopo l'apertura della soluzione.
+1. Per porre la soluzione se è stato aperto in modalità di caricamento della soluzione Lightweight e quanti progetti si trovano nello stato posticipato, sono disponibili nuove API.
+2. Nuovo evento viene fornita per quando vengono caricati tutti i progetti posticipati nella soluzione.
+3. Nuove API vengono fornite per chiedere a un progetto viene posticipata.
+4. Le API esistenti vengono aggiornate per includere progetti posticipati quando richiede per progetti caricati.
+5. Le API esistenti vengono aggiornate per esprimere la soluzione è stata caricata completamente dopo l'apertura della soluzione.
 
-### <a name="how-to-add-see-more-results-for-a-feature"></a>Procedura: aggiungere "Ulteriori risultati" per una funzionalità.
+### <a name="how-to-add-see-more-results-for-a-feature"></a>Come aggiungere "Vedere più risultati" per una funzionalità.
 
-Funzionalità che esegue una query sul contenuto dei progetti è consigliabile valutare l'impatto di progetti posticipati. In alcune situazioni, funzionalità possono ottenere i risultati della query da LSL e le API dell'area di lavoro per un progetto posticipato. In altri casi, le limitazioni delle funzionalità di un richiedono dei progetti da caricare. Entrambi i casi deve fornire un nuovo movimento "Ulteriori risultati" che consente agli utenti di caricare completamente i progetti e ripetere la query. Questa azione Abilita le funzionalità offrire una migliore approssimazione quando sono presenti progetti posticipati offrendo all'utente un modo per ottenere il risultato perfetto quando i progetti sono effettivamente caricati.
+Funzionalità che esegue una query sul contenuto dei progetti è consigliabile valutare l'impatto dei progetti posticipati. In alcuni casi, le funzionalità possono ottenere i risultati della query da LSL e le API dell'area di lavoro per un progetto posticipato. In altri casi, le limitazioni delle funzionalità di un richiedono dei progetti da caricare. Entrambe le situazioni deve fornire un nuovo movimento "Vedere più risultati" che consente agli utenti di caricare completamente i progetti e nuovo eseguita una query. Questa azione Abilita le funzionalità fornire una migliore approssimazione quando sono presenti progetti posticipati offrendo all'utente un modo per ottenere il risultato perfetto quando i progetti sono effettivamente caricati.
 
 L'algoritmo generale per la funzionalità deve essere:
 
-### <a name="when-the-query-is-performed-over-a-single-project"></a>Quando viene eseguita la Query su un singolo progetto
+### <a name="when-the-query-is-performed-over-a-single-project"></a>Quando la Query viene eseguita su un unico progetto
 
 ```csharp
 // IsInDeferredState() and EnsureProjectIsLoadedHelper() in this sample can be found in the "Helpful code snippets" section of this document
@@ -134,7 +110,7 @@ public void OnClick_SeeMoreResults()
 }
 ```
 
-### <a name="when-the-query-is-performed-over-the-whole-solution"></a>Quando viene eseguita la Query tramite l'intera soluzione
+### <a name="when-the-query-is-performed-over-the-whole-solution"></a>Quando la Query viene eseguita tramite l'intera soluzione
 
 ```csharp
 // Requires Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime.dll
@@ -150,7 +126,7 @@ public void Query()
     var solution = // the solution
     object deferredCount = 0;
     int hr = ((IVsSolution)solution).GetProperty((int)__VSPROPID7.VSPROPID_DeferredProjectCount, out deferredCount);
-    if (ErrorHandler.Succeeded(hr) && ((uint)deferredCount > 0))
+    if (ErrorHandler.Succeeded(hr) && ((int)deferredCount > 0))
     {
         ShowSeeMoreResults();
     }
@@ -179,7 +155,7 @@ public void OnClick_SeeMoreResults()
 
 IVsSolution7.IsSolutionLoadDeferred (out bool posticipata)
 
-Restituisce true se la soluzione corrente è stata caricata in modalità differita. Si noti che se la soluzione inizialmente è stata caricata in modalità differita, anche se tutti i progetti posticipati alla fine vengono caricati nella sessione corrente (a causa di movimenti esplicita dell'utente o forzata dalle operazioni), questa proprietà restituirà true.
+Restituisce true se la soluzione corrente è stata caricata in modalità differita. Si noti che se la soluzione è stata caricata inizialmente in modalità differita, anche se tutti i progetti posticipati sono infine caricati nella sessione corrente (a causa di azioni dell'utente esplicita o forzata da operazioni), questa proprietà ancora restituirà true.
 
 __VSPROPID7. VSPROPID_DeferredProjectCount
 
@@ -187,28 +163,28 @@ Restituisce il numero di progetti attualmente in modalità differita. Questa pro
 
 __VSHPROPID9. VSHPROPID_IsDeferred
 
-Restituisce true se una gerarchia di progetto si trova in stato di caricamento posticipato.
+Restituisce true se lo stato di caricamento posticipato è una gerarchia del progetto.
 
-__VSENUMPROJFLAGS3 con i valori EPF_DEFERRED ed EPF_NOTDEFERRED
+__VSENUMPROJFLAGS3 con valori EPF_DEFERRED ed EPF_NOTDEFERRED
 
-Questi flag possono essere passati a [IVsSolution.GetProjectEnum()](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivssolution.getprojectenum.aspx) per scorrere i progetti non rinviata e posticipati.
+Questi flag possono essere passati a [IVsSolution.GetProjectEnum()](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivssolution.getprojectenum.aspx) per scorrere i progetti posticipati e non posticipata.
 
 ### <a name="new-events"></a>Nuovi eventi
 
 IVsSolutionEvents7.OnAfterLoadAllDeferredProjects()
 
-Questo evento viene generato dopo il caricamento di tutti i progetti posticipati. A questo punto, VSPROPID_DeferredProjectCount è uguale a 0. Si noti che questo evento non viene generato come parte del carico soluzione e non possono essere generato in una sessione. Viene generato solo se e quando vengono caricati tutti i progetti posticipati.
+Questo evento viene generato dopo il caricamento di tutti i progetti posticipati. A questo punto, VSPROPID_DeferredProjectCount è uguale a 0. Si noti che questo evento non viene generato come parte del caricamento della soluzione e non possono essere generato a una sessione. Viene generato solo se e quando vengono caricati tutti i progetti posticipati.
 
-### <a name="changes-to-existing-api"></a>Modifiche a un'API esistente
+### <a name="changes-to-existing-api"></a>Modifiche all'API esistente
 
 * Il passaggio di [__VSENUMPROJFLAGS](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.__vsenumprojflags.aspx). EPF_LOADEDINSOLUTION a [IVsSolution.GetProjectEnum()](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.ivssolution.getprojectenum.aspx) restituisce posticipata progetti.
 * Il passaggio di [__VSENUMPROJFLAGS](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.__vsenumprojflags.aspx). EPF_UNLOADEDINSOLUTION non restituisce progetti posticipati.
-* [KnownUIContexts.SolutionExistsAndFullyLoadedContext](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.knownuicontexts.solutionexistsandfullyloadedcontext.aspx) è impostato su true nella soluzione aperta. Progetti posticipati vengono considerati come caricato in modo da questo contesto viene impostato gran parte anteriore in modalità non LSL.
-* [__VSPROPID](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.__vspropid.aspx). VSPROPID_ProjectCount restituisce la somma dei progetti caricati e posticipati.
+* [KnownUIContexts.SolutionExistsAndFullyLoadedContext](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.knownuicontexts.solutionexistsandfullyloadedcontext.aspx) è impostata su true nella soluzione aperta. Progetti posticipati vengono trattati come caricato in modo da questo contesto viene impostato gran parte anteriore in modalità non LSL.
+* [__VSPROPID](https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.shell.interop.__vspropid.aspx). VSPROPID_ProjectCount restituisce la somma di progetti caricati e posticipati.
 
-## <a name="helpful-code-snippets"></a>Frammenti di codice utile
+## <a name="helpful-code-snippets"></a>Frammenti di codice utili
 
-### <a name="check-if-a-solution-was-opened-in-deferred-load-mode"></a>Controllare se una soluzione è stato aperto in modalità di caricamento posticipato
+### <a name="check-if-a-solution-was-opened-in-deferred-load-mode"></a>Verificare se una soluzione è stato aperto in modalità di caricamento posticipato
 
 ```csharp
 /// <summary>
@@ -223,7 +199,7 @@ Questo evento viene generato dopo il caricamento di tutti i progetti posticipati
 }
 ```
 
-### <a name="check-if-a-project-is-deferred"></a>Controllare se un progetto viene posticipato
+### <a name="check-if-a-project-is-deferred"></a>Controllare se un progetto è posticipato
 
 ```csharp
 /// <summary>
@@ -231,11 +207,11 @@ Questo evento viene generato dopo il caricamento di tutti i progetti posticipati
 /// </summary>
 /// <param name="projectsToLoad">A set of deferred and/or loaded projects to ensure are loaded.</param>
 /// <returns>True if the project is deferred. False if it is any other state, such as loaded, unloaded, or virtual.</returns>
-/// <remarks>Requires Microsoft.VisualStudio.Shell.15.0.dll</remarks>
+/// <remarks>Requires Microsoft.VisualStudio.Shell.Interop.15.0.DesignTime.dll</remarks>
 public static bool IsInDeferredState(IVsHierarchy vsHierarchy)
 {
     object deferred;
-    int hr = vsHierarchy.GetProperty((int)VSConstants.VSITEMID.Root, (uint)__VSHPROPID9.VSHPROPID_IsDeferred, out deferred);
+    int hr = vsHierarchy.GetProperty((uint)VSConstants.VSITEMID.Root, (int)__VSHPROPID9.VSHPROPID_IsDeferred, out deferred);
 
     if (ErrorHandler.Succeeded(hr))
     {
@@ -341,19 +317,19 @@ public static bool SolutionHasDeferredProjects()
 }
 ```
 
-## <a name="getting-detailed-information-with-workspace-apis"></a>Ottenere informazioni dettagliate con le API dell'area di lavoro
+## <a name="getting-detailed-information-with-workspace-apis"></a>Ottenere informazioni dettagliate, con le API dell'area di lavoro
 
-### <a name="how-to-get-detailed-info-on-a-lsl-solution"></a>Procedura: ottenere informazioni dettagliate su una soluzione LSL
+### <a name="how-to-get-detailed-info-on-a-lsl-solution"></a>Come ottenere informazioni dettagliate su una soluzione LSL
 
 Nuove API di area di lavoro vengono esposte tramite IVsSolutionWorkspaceService per recuperare informazioni dettagliate su una soluzione.
 
-Queste API possono essere utilizzate per ottenere l'area di lavoro corrente, la soluzione attiva, le informazioni della riga di comando gestito, nonché il servizio di indicizzazione per l'area di lavoro. Queste API possono sfruttare ulteriormente il servizio di indicizzazione per ottenere dati dettagliati, ad esempio, tutti i file sorgente in un progetto, il progetto di un file di origine, tutti i progetti contenuti nella soluzione corrente, tutti i riferimenti P2P in un progetto e così via.
+Queste API possono essere utilizzate per ottenere l'area di lavoro corrente, la soluzione attiva, le informazioni sulla riga di comando gestito, così come il servizio di indicizzazione per l'area di lavoro. Queste API ulteriormente possono sfruttare il servizio di indicizzazione per ottenere dati dettagliati, ad esempio, tutti i file di origine in un progetto, il progetto di un file di origine, tutti i progetti contenuti nella soluzione corrente, tutti i riferimenti P2P in un progetto e così via.
 
 I frammenti di codice seguente viene illustrato l'utilizzo delle API di area di lavoro.
 
 ### <a name="get-ivssolutionworkspaceservice-initially"></a>Ottenere inizialmente IVsSolutionWorkspaceService
 
->**Nota:** ottenere IVsSolutionWorkspaceService solo in scenari LSL per evitare di caricare il pacchetto dell'API dell'area di lavoro.
+>**Nota:** ottenere IVsSolutionWorkspaceService solo in scenari LSL per evitare il caricamento del pacchetto di API dell'area di lavoro.
 
 ```csharp
 private readonly Lazy<IVsSolutionWorkspaceService> _solutionWorkspaceService;
@@ -366,9 +342,9 @@ public DeferredProjectWorkspaceService(SVsServiceProvider serviceProvider)
 }
 ```
 
->**Nota:** i frammenti di codice seguente si supponga che _solutionWorkspaceService è già inizializzate.
+>**Nota:** i frammenti di codice seguente si supponga _solutionWorkspaceService è già inizializzate.
 
-### <a name="get-managed-command-line-info-for-deferred-projects-for-active-solution-configuration"></a>Recupero di informazioni sulla riga di comando gestito progetti posticipati per configurazione soluzione attiva
+### <a name="get-managed-command-line-info-for-deferred-projects-for-active-solution-configuration"></a>Recupero di informazioni sulla riga di comando gestiti progetti posticipati per configurazione soluzione attiva
 
 ```csharp
 /// <summary>
@@ -472,14 +448,14 @@ public async Task<IEnumerable<string>> GetProjectsInSolutionAsync(string solutio
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-A causa della natura del LSL, è intenzionale che gli utenti non possono visualizzare una differenza tra i progetti caricati e posticipati. In questo modo lo sviluppo di funzionalità e testing difficile.
+A causa della natura dei LSL, è intenzionale che gli utenti non è possibile visualizzare una differenza tra i progetti caricati e posticipati. Ciò può ostacolare funzionalità sviluppo e test.
 
-È possibile abilitare visual suggerimenti nell'interfaccia utente per i progetti posticipati effettuando le operazioni seguenti:
+È possibile abilitare visual hint dell'interfaccia utente per i progetti posticipati effettuando le seguenti operazioni:
 
 1. Chiudere Visual Studio.
 2. Regedit.exe
 3. Selezionare HKLM
-4. File > carica Hive
+4. File > Carica Hive
 5. `%localappdata%\microsoft\visualstudio\15.0_<instance ID>\privateregistry.bin`
 6. Immettere "VisualStudio" come nome di una chiave
 7. Impostare `HKLM\VisualStudio\Software\Microsoft\VisualStudio\15.0_<instanceID>\FeatureFlags\Solution\Loading\Deferred\Hint\Value=1` (DWORD)
@@ -487,8 +463,7 @@ A causa della natura del LSL, è intenzionale che gli utenti non possono visuali
 9. File > Scarica Hive
 10. Avviare Visual Studio
 
-Per ulteriori domande, visitare per [ lslsupport@microsoft.com ](mailto:lslsupport@microsoft.com).
-
+Per altre domande, per raggiungere [ lslsupport@microsoft.com ](mailto:lslsupport@microsoft.com).
 
 
 
