@@ -1,28 +1,30 @@
 ---
-title: "Elemento Group | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "vs-ide-sdk"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Elementi dello schema XML VSCT, gruppi"
-  - "Elemento Groups (VSCT XML schema)"
+title: Elemento Group | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: vs-ide-sdk
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- VSCT XML schema elements, Groups
+- Groups element (VSCT XML schema)
 ms.assetid: 69faee18-cbf4-470a-b952-c1919c583df8
-caps.latest.revision: 9
-ms.author: "gregvanl"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: gregvanl
+ms.author: gregvanl
+manager: ghogen
+ms.openlocfilehash: acdc524b00baaf0de52ad30ea7abad82dc57651b
+ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
-# Elemento Group
-[!INCLUDE[vs2017banner](../code-quality/includes/vs2017banner.md)]
-
+# <a name="group-element"></a>Elemento Group
 Definisce un gruppo di comando di VSPackage.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 <Group guid="guidMyCommandSet" id="MyGroup" priority="0x101">  
@@ -30,36 +32,38 @@ Definisce un gruppo di comando di VSPackage.
 </Group>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|GUID|Obbligatorio. GUID dell'identificatore di comando\/ID GUID.|  
-|ID|Obbligatorio. ID dell'identificatore di comando\/ID GUID.|  
-|priority|Facoltativo. Un valore numerico che specifica la priorità.|  
-|Condizione|Facoltativo. Vedere [Attributi condizionali](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|guid|Obbligatorio. GUID dell'identificatore di comando/ID GUID.|  
+|ID|Obbligatorio. ID dell'identificatore di comando/ID GUID.|  
+|priority|Parametro facoltativo. Un valore numerico che specifica la priorità.|  
+|Condizione|Parametro facoltativo. Vedere [attributi condizionali](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|Padre|Facoltativo. L'elemento padre del pulsante.|  
+|-------------|-----------------|  
+|Padre|Parametro facoltativo. L'elemento padre del pulsante.|  
 |Annotazione|Commento facoltativo.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[Elemento Groups](../extensibility/groups-element.md)|Contiene le voci che definiscono i gruppi di comando di un package VS.|  
+|-------------|-----------------|  
+|[Elemento Groups](../extensibility/groups-element.md)|Contiene le voci che definiscono i gruppi di comando di un VSPackage.|  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
-<Group guid="cmdSetGuidWidgetCommands" id="groupIDFileEdit"> <Parent guid="guidSHLMainMenu" id="IDM_VS_TOOL_MAINMENU"/> </Group>  
+<Group guid="cmdSetGuidWidgetCommands" id="groupIDFileEdit">  
+  <Parent guid="guidSHLMainMenu" id="IDM_VS_TOOL_MAINMENU"/>  
+</Group>  
 ```  
   
-## Vedere anche  
- [Tabella di comandi di Visual Studio \(. File Vsct\)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Vedere anche  
+ [File Visual Studio Command Table (VSCT)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
