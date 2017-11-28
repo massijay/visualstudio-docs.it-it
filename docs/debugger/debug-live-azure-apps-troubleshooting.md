@@ -12,11 +12,11 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5e111159029710684a1a49be2859f6ac5699a70a
-ms.sourcegitcommit: 2c7f48ad6073a81fa927568793633f26cc1f0b15
+ms.openlocfilehash: 307e32587a7aac6e2595f35488ad057995c04f4b
+ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Risoluzione dei problemi e problemi noti per il debug di snapshot in Visual Studio
 
@@ -30,8 +30,7 @@ Se viene visualizzata un'icona di avviso ![icona di avviso Snappoint](../debugge
 
 Eseguire la procedura seguente:
 
-1. Accertarsi di avere la stessa versione del codice sorgente utilizzato per compilare e distribuire l'app.
-1. Verificare che il caricamento di simboli corretti per la distribuzione. A tale scopo, è possibile visualizzare il **moduli** finestra durante il debug di Snapshot e verificare la colonna del File di simboli viene illustrato un file con estensione pdb caricato per il modulo a cui si esegue il debug. Si noti che il Debugger Snapshot tenterà automaticamente di scaricare e usare i simboli per la distribuzione.
+1. Accertarsi di avere la stessa versione del codice sorgente utilizzato per compilare e distribuire il app.isua1. Verificare che il caricamento di simboli corretti per la distribuzione. A tale scopo, è possibile visualizzare il **moduli** finestra durante il debug di Snapshot e verificare la colonna del File di simboli viene illustrato un file con estensione pdb caricato per il modulo a cui si esegue il debug. Si noti che il Debugger Snapshot tenterà automaticamente di scaricare e usare i simboli per la distribuzione.
 
 ## <a name="issue-symbols-do-not-load-when-i-open-a-snapshot"></a>Problema: I simboli non vengono caricati quando si apre uno Snapshot
 
@@ -70,9 +69,10 @@ Eseguire la procedura seguente:
 - Ottimizzazioni IL Roslyn non sono completamente supportate nei progetti ASP.NET Core. Per alcuni progetti ASP.NET Core, potrebbe non essere in grado di visualizzare alcune variabili o utilizzare alcune variabili nelle istruzioni condizionali. 
 - Variabili speciali, ad esempio *$FUNCTION* o *$CALLER*, non può essere valutato nelle istruzioni condizionali o logpoints per i progetti ASP.NET Core.
 - Debug di snapshot non funziona in servizi di App che hanno [memorizzazione nella cache locale](https://docs.microsoft.com/en-us/azure/app-service/app-service-local-cache) acceso.
+- Debug di App per le API di snapshot non è attualmente supportato.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Debug in Visual Studio](../debugger/index.md)  
 [Eseguire il debug in tempo reale App ASP.NET utilizzando il Debugger di Snapshot](../debugger/debug-live-azure-applications.md)  
-[Domande frequenti relative al debug di snapshot](../debugger/debug-live-azure-apps-faq.md)  
+[Domande frequenti sul debug di snapshot](../debugger/debug-live-azure-apps-faq.md)  

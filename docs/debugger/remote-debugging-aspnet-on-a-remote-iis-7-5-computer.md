@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 730a69894c8e38dd7b9d191fa7fe3396509148d4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: a279b1eddf80a78ad20d137c288e6ee49c1993b9
+ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>Eseguire il Debug remoto ASP.NET in un Computer remoto con IIS
 Per eseguire il debug di un'applicazione ASP.NET che è stata distribuita a IIS, installare e quindi collegare all'App in esecuzione da Visual Studio eseguire remote tools sul computer in cui è distribuita l'app.
@@ -26,7 +26,7 @@ Per eseguire il debug di un'applicazione ASP.NET che è stata distribuita a IIS,
 Questa guida viene illustrato come impostare e configurare un'applicazione di Visual Studio 2017 ASP.NET MVC 4.5.2, distribuirlo in IIS e collegare il debugger remoto da Visual Studio. Eseguire il debug remoto ASP.NET Core, vedere [remoto il Debug di ASP.NET Core in un Computer IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md). È anche possibile distribuire ed eseguire il debug in IIS utilizzando Azure. Per ulteriori informazioni, vedere [eseguire il debug remoto in Azure](../debugger/remote-debugging-azure.md).
 
 Queste procedure sono state testate su queste configurazioni del server:
-* Windows Server 2012 R2 e IIS 10 (per Windows Server 2008 R2, i passaggi di server sono diversi)
+* Windows Server 2012 R2 e IIS 8.5 (per Windows Server 2008 R2, i passaggi di server sono diversi)
 
 ## <a name="requirements"></a>Requisiti
 

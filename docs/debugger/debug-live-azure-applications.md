@@ -12,11 +12,11 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 71facc3515bf90d378b19242bb804ce825131b4e
-ms.sourcegitcommit: 2c7f48ad6073a81fa927568793633f26cc1f0b15
+ms.openlocfilehash: 02f91441c493d65e8abcdc80bd85b01f2bd423bf
+ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>Debug in tempo reale delle app di Azure ASP.NET utilizzando il Debugger di Snapshot
 
@@ -29,7 +29,7 @@ Raccolta di snapshot è disponibile per le seguenti App web in esecuzione in Azu
 - Le applicazioni ASP.NET in esecuzione in .NET Framework 4.6.1 o versioni successive.
 - Applicazioni ASP.NET Core in esecuzione su .NET Core 2.0 o versione successiva in Windows.
 
-Inoltre, il Debugger dello Snapshot è disponibile solo per Visual Studio 2017 Enterprise 15,5 o versione successiva. 
+Inoltre, il Debugger dello Snapshot è disponibile solo per Visual Studio 2017 Enterprise 15,5 o versione successiva e piani di servizio App di base o versione successiva. 
 
 ## <a name="start-the-snapshot-debugger"></a>Avviare il Debugger di Snapshot
 
