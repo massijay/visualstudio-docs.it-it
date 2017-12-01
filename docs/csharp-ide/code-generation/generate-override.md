@@ -11,18 +11,19 @@ ms.assetid: b3c8cfc4-7c1f-4606-970e-3f7651604bab
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d2972cfe2ea4481ab8f5eab6284277615d1d64a8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: f7193722e7ec1bee7c63e2495ed2d07155cc663b
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="generate-an-override-in-c"></a>Generare una sostituzione in c# #
-**Novità:** consente di generare immediatamente il codice per un qualsiasi metodo che può essere sottoposto a override da una classe base. 
 
-**Quando:** che si desidera eseguire l'override di un metodo della classe base e generare automaticamente la firma.  
+**Novità:** consente di generare immediatamente il codice per qualsiasi metodo che può essere sottoposto a override da una classe base.
 
-**Motivo:** è possibile scrivere la firma del metodo, tuttavia questa funzionalità genera automaticamente la firma. 
+**Quando:** che si desidera eseguire l'override di un metodo della classe base e generare automaticamente la firma.
+
+**Motivo:** è possibile scrivere la firma del metodo, tuttavia questa funzionalità genera automaticamente la firma.
 
 **Procedura:**
 
@@ -34,11 +35,12 @@ ms.lasthandoff: 10/31/2017
 
    >[!TIP]
    >* Utilizzare l'icona delle proprietà ![Icona della proprietà](media/override_property.png) Per mostrare o nascondere le proprietà nell'elenco.
-   >* Utilizzare l'icona del metodo ![Icona della proprietà](media/override_method.png) Per mostrare o nascondere i metodi nell'elenco.
+   >* Utilizzare l'icona del metodo ![Icona del metodo](media/override_method.png) Per mostrare o nascondere i metodi nell'elenco.
 
 1. Il metodo selezionato o la proprietà verrà aggiunto alla classe come una sostituzione, pronta per essere implementato.
 
    ![Eseguire l'override di risultati](media/override_result.png)
 
-## <a name="see-also"></a>Vedere anche  
-[Code Generation (C#)](../code-generation-csharp.md) (Generazione di codice (C#))  
+## <a name="see-also"></a>Vedere anche
+
+[Code Generation (C#)](../code-generation-csharp.md) (Generazione di codice (C#))

@@ -12,11 +12,11 @@ caps.latest.revision: "1"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 89591535b232317abf395c237fdc267c847ca699
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: bb00d2c338ac1ef9e2be6d77d68ebfe2a246d807
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2017"></a>Procedura: eseguire la migrazione di progetti di estendibilità di Visual Studio 2017
 
@@ -102,11 +102,6 @@ Invece di modificare direttamente il codice XML del manifesto, è possibile util
   ![aggiungere il prerequisito roslyn](media/add-roslyn-prerequisite.png)
 
 * Press **OK**.
-
-## <a name="if-migrating-from-preview-4-or-preview-5"></a>Se la migrazione da Preview 4 o 5 di anteprima
-
-* Sostituire `SetupDependencies` con `Prerequisites` e spostare gli elementi fuori il `Installer` elemento. `Prerequisites`ora risiede direttamente all'interno di `PackageManifest` elemento.
-* [Facoltativo] Rimuovere il `GenerateVsixV3` elemento. (Questa impostazione era richiesta anteprima 5 solo.) Il `GenerateVsixV3` elemento verrà ignorato nelle versioni superiori a 5 di anteprima.
 
 ## <a name="update-debug-settings-for-project"></a>Aggiornare le impostazioni di Debug per il progetto
 
@@ -197,3 +192,15 @@ Esempi:
 
 * Se si dispone di un'estensione del debugger e che il progetto ha un riferimento a VSDebugEng.dll e VSDebug.dll, fare clic sul pulsante del filtro nel **file binari o nomi di file** intestazione.  Cercare "VSDebugEng.dll" e selezionare OK.  Successivamente fare clic sul pulsante del filtro nel **file binari o nomi di file** intestazione nuovamente e cercare "VSDebug.dll".  Selezionare la casella di controllo "Aggiungi selezione corrente al filtro" e selezionare OK.  Ora esaminare il **nome componente** per trovare un componente che è la maggior parte delle relative al tipo di estensione. In questo esempio scelto Just-In-Time del debugger e verrà aggiunto il vsixmanifest.
 * Se si sa che il progetto si occupa elementi debugger, è possibile cercare "debugger" nella casella di ricerca di filtro per visualizzare i componenti contengono debugger nel nome.
+
+## <a name="specifying-a-visual-studio-2017-release"></a>Specificare una versione di Visual Studio 2017
+
+Se l'estensione richiede una versione specifica di Visual Studio 2017, ad esempio, una funzionalità rilasciata in 15.3 dipende, è necessario specificare il numero di build in un progetto VSIX del **la destinazione di installazione**. Ad esempio, versione 15.3 presenta un numero di build di '15.0.26730.3'. È possibile visualizzare il mapping delle versioni per i numeri di build [qui](../install/visual-studio-build-numbers-and-release-dates.md). Utilizzando il numero di versione '15.3' non funzionerà correttamente.
+
+Se l'estensione richiede 15.3 o versioni successive, è necessario dichiarare il **la destinazione di installazione versione** come [15.0.26730.3, 16.0):
+
+```xml
+<Installation>
+  <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0.26730.3, 16.0)" />
+</Installation>
+```

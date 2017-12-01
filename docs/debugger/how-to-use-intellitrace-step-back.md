@@ -12,11 +12,11 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fc7ad92e708666baf1ab0429c041ca9b7d2e0f95
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.openlocfilehash: 2e8da202cf8ae5680bede1ec4b2f2c8984624e4e
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="view-snapshots-using-intellitrace-step-back"></a>Visualizzare gli snapshot utilizzando IntelliTrace passaggio-back
 Passaggio di IntelliTrace-back automaticamente un'istantanea dell'applicazione in ogni punto di interruzione e il debugger evento di passaggio. Gli snapshot registrati consentono di tornare indietro per i punti di interruzione precedente o passaggi e visualizzare lo stato dell'applicazione è stato in precedenza. Passaggio back IntelliTrace è possibile risparmiare tempo quando si desidera visualizzare lo stato applicazione precedente ma si desidera riavviare il debug o ricreare lo stato dell'app desiderata.
@@ -38,7 +38,7 @@ Per motivi di prestazioni gli snapshot non vengono intraprese quando esegue l'is
 
 ## <a name="navigate-and-view-snapshots"></a>Esplorare e visualizzare gli snapshot
 
-È possibile spostarsi tra gli eventi utilizzando il **passo indietro** e **passo avanti** pulsanti sulla barra degli strumenti di Debug. Questi pulsanti passare gli eventi che vengono visualizzati di **eventi** nella scheda il **finestra Strumenti di diagnostica**. L'accesso in avanti o indietro a un evento automaticamente Attiva debug cronologico dell'evento selezionato.
+È possibile spostarsi tra gli eventi utilizzando il **passo indietro (Alt + [)** e **passo avanti (Alt +])** pulsanti sulla barra degli strumenti di Debug. Questi pulsanti passare gli eventi che vengono visualizzati di **eventi** nella scheda il **finestra Strumenti di diagnostica**. L'accesso in avanti o indietro a un evento automaticamente Attiva debug cronologico dell'evento selezionato.
 
 ![Passo indietro pulsanti Avanti e indietro](../debugger/media/intellitrace-step-back-icons-description.png "pulsanti passo indietro e Avanti di un passaggio")
 

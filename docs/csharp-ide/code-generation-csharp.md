@@ -13,11 +13,11 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 98202db8e59957bfafe81b4a7d611b79c642daf4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 773fecba4b3a635d86d6b06937151e38ad94912e
+ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="code-generation-features-for-c"></a>Funzionalità di generazione del codice per c# #
 Visual Studio genera automaticamente parti di codice sorgente, consentendo agli sviluppatori di concentrarsi su attività più impegnative.  Le funzionalità di generazione di codice seguenti sono disponibili in Visual Studio per c#:
@@ -26,7 +26,8 @@ Visual Studio genera automaticamente parti di codice sorgente, consentendo agli 
 * [Genera metodo](code-generation/generate-method.md)
 * [Genera campo/proprietà/elemento locale](code-generation/generate-field-property-local.md)
 * [Genera costruttore](code-generation/generate-constructor.md)
-* [Generazione di override](code-generation/generate-override.md)
+* [Generare un Override](code-generation/generate-override.md)
+* [Generare override dei metodi Equals e GetHashCode](code-generation/generate-overrides.md)
 * [Genera commenti relativi alla documentazione XML](code-generation/generate-xml-documentation-comments.md)
 * [Implementa classe astratta](code-generation/implement-abstract-class.md)
 * [Implementa interfaccia](code-generation/implement-interface.md)
@@ -34,4 +35,3 @@ Visual Studio genera automaticamente parti di codice sorgente, consentendo agli 
  
 ## <a name="see-also"></a>Vedere anche  
  [Using the Visual Studio Development Environment for C#](using-the-visual-studio-development-environment-for-csharp.md) (Uso dell'ambiente di sviluppo di Visual Studio per C#)   
- 
