@@ -10,7 +10,7 @@
 ### [Uso di codici Product Key](product-keys.md)
 ### Come attivare i vantaggi
 #### Strumenti
-##### [Visual Studio Enterprise](vs-ide-benefit.md) 
+##### [IDE di Visual Studio](vs-ide-benefit.md) 
 ##### [Visual Studio Team Services](vs-vsts.md)
 ##### [Microsoft Azure](vs-azure.md) 
 ##### [Parasoft](vs-parasoft.md)
@@ -33,7 +33,7 @@
 ##### [Supporto tecnico](vs-tech-support.md)
 
 ## Amministratori
-### [Ruoli e responsabilità degli amministratori](admin-responsibilities.md)
+### [Panoramica dell'amministratore](admin-responsibilities.md)
 ### [Accesso al portale per gli amministratori](access-admin-portal.md)
 ### [Uso del portale per gli amministratori](using-admin-portal.md)
 ### [Assegnare una sottoscrizione](assign-license.md)
