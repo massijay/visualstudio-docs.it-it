@@ -15,11 +15,11 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ae50f2d537836501ec4c9c29e50d86aa3e325661
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 076b48d5526c0cefffb5f18daed9aaaebb031aad
+ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="options-page-environment-node-properties"></a>Pagina delle opzioni, Proprietà del nodo Ambiente
 Questo documento descrive le pagine, o raccolte di proprietà, associate alla categoria **Ambiente**, `DTE.Properties("Environment", <Property Page>)`, della finestra di dialogo **Opzioni**. Il titolo di ogni sottosezione rappresenta la chiamata usata per accedere alla raccolta Proprietà e la tabella di ogni sottosezione elenca le proprietà della raccolta.  
@@ -71,7 +71,7 @@ Questo documento descrive le pagine, o raccolte di proprietà, associate alla ca
 |Nome degli elementi delle proprietà|Valore|Descrizione|  
 |------------------------|-----------|-----------------|  
 |EnableAdminExtensions|Get/Set (Boolean)|Carica le estensioni per utente quando Visual Studio viene eseguito con credenziali di amministratore. Dopo la modifica di questo valore, è necessario riavviare Visual Studio.|  
-|EnableOnline|Get/Set (Boolean)|Consente l'accesso alle estensioni di Visual Studio Gallery.|  
+|EnableOnline|Get/Set (Boolean)|Consente l'accesso alle estensioni di Visual Studio Marketplace.|  
 |AutomaticallyCheckForUpdates|Get/Set (Boolean)|Controlla automaticamente la presenza di aggiornamenti per le estensioni installate.|  
   
 ## <a name="find-and-replace"></a>Trova e sostituisci  

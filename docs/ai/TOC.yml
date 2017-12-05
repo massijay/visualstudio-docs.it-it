@@ -17,10 +17,26 @@
           href: tensorflow-vm.md
     - name: Guide pratiche
       items:
-        - name: Creare un nuovo progetto
-          href: create-project.md
+        - name: Creare un progetto
+          items:
+            - name: Creare un progetto dalla raccolta di esempi
+              href: create-project-gallery.md
+            - name: Creare un progetto da codice esistente
+              href: create-project-existing.md
+            - name: Creare un progetto da un modello
+              href: create-project.md
+            - name: Creare un progetto da un repository GitHub
+              href: create-project-repo.md
         - name: Eseguire il training del modello
           href: train-model.md
+        - name: Visualizzare i dettagli di un processo
+          href: job-details.md
+        - name: Monitorare l'utilizzo della GPU
+          href: monitor-gpu.md
+        - name: Monitorare TensorBoard
+          href: monitor-tensorboard.md
+        - name: Gestire l'archiviazione
+          href: manage-storage.md
     - name: Esempi
       items:
         - name: GitHub
