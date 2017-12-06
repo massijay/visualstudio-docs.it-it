@@ -8,16 +8,15 @@ ms.technology: devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 919dfc34-234a-489e-91bf-74a4cefae26c
 caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 8c26ad4d9df3fb8b84c5d8c93e213858bc2ccb67
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: a12e7cedd407b0bcf0fe05069ee998519aa521d6
+ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="working-with-sql-server-and-r"></a>Uso di SQL Server ed R
 
@@ -68,7 +67,7 @@ Il video seguente (6 minuti 9 secondi) offre una panoramica di queste funzionali
 ### <a name="add-a-database-connection"></a>Aggiungere una connessione di database
 
 1. Selezionare **Strumenti R > Dati > Aggiungi connessione di database...** per visualizzare la finestra di dialogo **Proprietà connessione**. In questa finestra viene specificato il nome dell'origine dati (SQL Server in questo caso), il nome del server, la modalità di autenticazione e il nome del database. Selezionare **Test connessione** per verificare l'input prima di chiudere la finestra di dialogo.
- 
+
     ![Finestra di dialogo di connessione SQL](media/sql-connection-string-dialog.png)
 
 1. Dopo avere verificato che la connessione sia valida, selezionare **OK**. Visual Studio genera una stringa di connessione denominata `dbConnection` in un nuovo file `settings.R`. RTVS origina (esegue) automaticamente questo file. È quindi possibile usare immediatamente la connessione da script R:
@@ -78,7 +77,7 @@ Il video seguente (6 minuti 9 secondi) offre una panoramica di queste funzionali
 ### <a name="write-and-test-a-sql-stored-procedure"></a>Scrivere e testare una stored procedure SQL
 
 Per aggiungere una nuova stored procedure SQL, fare clic con il pulsante destro del mouse sul progetto, selezionare **Aggiungi > Nuovo elemento...**, selezionare **Stored Procedure SQL con R** dall'elenco di modelli, assegnare un nome al file (`StoredProcedure.R` in questo esempio) e selezionare **OK**.
- 
+
 RTVS crea tre file per la stored procedure, un file `.R` per il codice R, un file `.Query.sql` per il codice SQL e un file `.Template.sql` che combina i due file precedenti. Gli ultimi due sono visualizzati in Esplora soluzioni come elementi figlio del file `.R`:
 
 ![Visualizzazione espansa della stored procedure SQL con R in Esplora soluzioni](media/sql-solution-explorer-expanded.png)
