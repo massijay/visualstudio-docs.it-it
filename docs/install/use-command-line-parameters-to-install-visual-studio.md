@@ -106,7 +106,7 @@ Per un elenco degli ID di componenti e carichi di lavoro ordinati per prodotto V
 | ----------------------- | --------------- |
 | cs-CZ | Ceco |
 | de-DE | Tedesco |
-| it-IT | Inglese |
+| en-US | Inglese |
 | es-ES | Spagnolo |
 | fr-FR | Francese |
 | it-IT | Italiano |
